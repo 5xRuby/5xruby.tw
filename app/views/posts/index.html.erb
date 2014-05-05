@@ -1,0 +1,84 @@
+<section id="sub-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 text-center">
+      <h1><%= t('.5xruby_blog') %></h1>
+        <p class="lead boxed">Ex utamur fierent tacimates nam, his duis choro an.</p>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. 
+        </p>
+      </div>
+    </div><!-- End row -->
+  </div><!-- End container -->
+  <div class="divider_top"></div>
+</section><!-- End sub-header -->
+
+<section id="main_content">
+
+  <div class="container">
+   <div class="row">
+     <aside class="col-md-4">
+      <div class=" box_style_1">
+        <div class="widget" style="margin-top:15px;">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" style="margin-left:0;"><i class="icon-search"></i></button>
+            </span>
+          </div><!-- /input-group -->
+        </div><!-- End Search -->
+
+        <div class="widget">
+          <h4>Text widget</h4>
+          <p>
+           Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+         </p>
+       </div><!-- End widget -->
+
+
+       <div class="widget">
+        <h4>Recent post</h4>
+
+        <ul class="recent_post">
+          <li>
+            <i class="icon-calendar-empty"></i> 16th July, 2020
+            <div><a href="#">It is a long established fact that a reader will be distracted </a></div>
+          </li>
+          <li>
+            <i class="icon-calendar-empty"></i> 16th July, 2020
+            <div><a href="#">It is a long established fact that a reader will be distracted </a></div>
+          </li>
+          <li>
+            <i class="icon-calendar-empty"></i> 16th July, 2020
+            <div><a href="#">It is a long established fact that a reader will be distracted </a></div>
+          </li>
+        </ul>
+      </div><!-- End widget -->
+
+      <div class="widget tags add_bottom_30">
+        <h4>Tags</h4>
+        <a href="#">Lorem ipsum</a>
+        <a href="#">Dolor</a>
+        <a href="#">Long established</a>
+        <a href="#">Sit amet</a>
+        <a href="#">Latin words</a>
+        <a href="#">Excepteur sint</a>
+      </div><!-- End widget -->
+
+    </div><!-- End box-sidebar -->
+  </aside><!-- End aside -->
+
+  <div class="col-md-8">
+    <%= render @posts %>
+
+    <hr>
+
+    <div class="text-center">
+      <%= paginate @posts %>
+    </div>
+  </div><!-- End col-md-8-->   
+  
+  
+</div>  <!-- End row-->    
+</div><!-- End container -->
+</section><!-- End main_content-->
