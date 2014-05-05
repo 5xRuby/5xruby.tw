@@ -1,6 +1,7 @@
 <%= simple_form_for(@admin_post, wrapper: :horizontal_form, html: {class: 'form-horizontal'}) do |f| %>
 
   <div class="form-inputs">
+    <%= f.input :image %>
     <%= f.input :title %>
     <%= f.input :content %>
   </div>

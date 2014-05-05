@@ -44,7 +44,7 @@ gem 'carrierwave'
 gem 'simple_form', '3.1.0.rc1'
 gem 'settingslogic'
 gem 'rails-i18n'
-gem 'rmagick'
+gem 'rmagick', require: 'RMagick'
 
 group :development, :test do
   gem 'rspec'

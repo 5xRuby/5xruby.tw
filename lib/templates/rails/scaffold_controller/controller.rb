@@ -9,7 +9,7 @@ class <%= controller_class_name %>Controller < AdminController
   # GET <%= route_url %>
   # GET <%= route_url %>.json
   def index
-    @<%= plural_table_name %> = <%= orm_class.all(class_name) %>.page(params[:page])
+    @<%= plural_table_name %> = <%= orm_class.all(class_name) %>.order('id DESC').page(params[:page])
   end
 
   # GET <%= route_url %>/1
@@ -33,7 +33,7 @@ class <%= controller_class_name %>Controller < AdminController
 
     respond_to do |format|
       if @<%= orm_instance.save %>
-        format.html { redirect_to @<%= singular_table_name %>, notice: t('crud.created_successfully!', resource: <%= class_name %>.model_name_human) }
+        format.html { redirect_to @<%= singular_table_name %>, notice: t('crud.created_successfully!', name: <%= class_name %>.model_name.human) }
         format.json { render :show, status: :created, location: <%= "@#{singular_table_name}" %> }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class <%= controller_class_name %>Controller < AdminController
   def update
     respond_to do |format|
       if @<%= orm_instance.update("#{singular_table_name}_params") %>
-        format.html { redirect_to @<%= singular_table_name %>, notice: t('crud.updated_successfully!', resource: <%= class_name %>.model_name_human) }
+        format.html { redirect_to @<%= singular_table_name %>, notice: t('crud.updated_successfully!', name: <%= class_name %>.model_name.human) }
         format.json { render :show, status: :ok, location: <%= "@#{singular_table_name}" %> }
       else
         format.html { render :edit }

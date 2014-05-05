@@ -4,7 +4,7 @@ class Admin::PostsController < AdminController
   # GET /admin/posts
   # GET /admin/posts.json
   def index
-    @admin_posts = Admin::Post.all.page(params[:page])
+    @admin_posts = Admin::Post.all.order('id DESC').page(params[:page])
   end
 
   # GET /admin/posts/1
@@ -28,7 +28,7 @@ class Admin::PostsController < AdminController
 
     respond_to do |format|
       if @admin_post.save
-        format.html { redirect_to @admin_post, notice: t('crud.created_successfully!', resource: Admin::Post.model_name_human) }
+        format.html { redirect_to @admin_post, notice: t('crud.created_successfully!', name: Admin::Post.model_name.human) }
         format.json { render :show, status: :created, location: @admin_post }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Admin::PostsController < AdminController
   def update
     respond_to do |format|
       if @admin_post.update(admin_post_params)
-        format.html { redirect_to @admin_post, notice: t('crud.updated_successfully!', resource: Admin::Post.model_name_human) }
+        format.html { redirect_to @admin_post, notice: t('crud.updated_successfully!', name: Admin::Post.model_name.human) }
         format.json { render :show, status: :ok, location: @admin_post }
       else
         format.html { render :edit }
@@ -69,6 +69,6 @@ class Admin::PostsController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_post_params
-      params.require(:admin_post).permit(:title, :content)
+      params.require(:admin_post).permit(:image, :title, :content)
     end
 end
