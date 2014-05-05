@@ -1,6 +1,6 @@
 <% content_for :append_head do %>
-  <!-- REVOLUTION BANNER CSS SETTINGS -->
-  <link href="rs-plugin/css/settings.css" media="screen" rel="stylesheet">
+<!-- REVOLUTION BANNER CSS SETTINGS -->
+<link href="rs-plugin/css/settings.css" media="screen" rel="stylesheet">
 <% end %>
 
 <%= render 'slider' %>
@@ -13,20 +13,20 @@
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <script type="text/javascript">
-    var revapi;
+  var revapi;
 
-    jQuery(document).ready(function() {
+  jQuery(document).ready(function() {
 
-         revapi = jQuery('.tp-banner').revolution(
-        {
-          delay:9000,
-          startwidth:1170,
-          startheight:500,
-          hideThumbs:true,
-          navigationType:"none",
-          fullWidth:"on",
-          forceFullWidth:"on"
-        });
+   revapi = jQuery('.tp-banner').revolution(
+   {
+    delay:9000,
+    startwidth:1170,
+    startheight:500,
+    hideThumbs:true,
+    navigationType:"none",
+    fullWidth:"on",
+    forceFullWidth:"on"
+  });
 
     }); //ready
 </script>

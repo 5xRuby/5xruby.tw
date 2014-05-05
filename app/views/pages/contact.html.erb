@@ -1,0 +1,110 @@
+<section id="map"></section><!-- end map-->
+<section id="directions">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+       <form action="http://maps.google.com/maps" method="get" target="_blank">
+        <div class="input-group">
+          <input type="text" name="saddr" placeholder="Enter your starting point" class="form-control style-2" />
+          <input type="hidden" name="daddr" value="<%= t('company.address') %>"/><!-- Write here your end point -->
+          <span class="input-group-btn">
+            <button class="btn" type="submit" value="Get directions" style="margin-left:0;">GET DIRECTIONS</button>
+          </span>
+        </div><!-- /input-group -->
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="main_content" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3><%= t('.address') %></h3>
+        <ul id="contact-info">
+          <li><i class="icon-home"></i> <%= t('company.address') %></li>
+          <li><i class="icon-phone"></i> + 61 (2) 8093 3400 / + 61 (2) 8093 3402</li>
+          <li><i class=" icon-email"></i> <%= mail_to t('company.email') %></a></li>
+        </ul>
+        <hr>
+        <h3><%= t('.follow_us') %></h3>
+        <p>
+          Cu affert populo neglegentur has, labore nostrum periculis ius in, singulis electram ad vel labore.
+        </p>
+        <ul id="follow_us_contacts">
+          <li><a href="#"><i class="icon-facebook"></i>fb.com/username</a></li>
+          <li><a href="#"><i class="icon-twitter"></i>twitter.com/#username</a></li>
+          <li><a href="#"><i class=" icon-google"></i>googleplus.com/username</a></li>
+        </ul>
+        <hr>
+        <h3>Apply for a course</h3>
+        <p>
+          Cu affert populo neglegentur has, labore nostrum periculis ius in, singulis electram ad vel labore.
+        </p>
+        <a href="#" class="button_medium_outline">Apply</a>
+      </div>
+      <div class="col-md-8">
+        <div class=" box_style_2">
+          <span class="tape"></span>
+          <div class="row">
+            <div class="col-md-12">
+              <h3>General Enquire</h3>
+            </div>
+          </div>
+          <div id="message-contact"></div>
+          <form method="post" action="assets/contact.php" id="contactform">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input type="text" class="form-control style_2" id="name_contact" name="name_contact" placeholder="Enter Name">
+                  <span class="input-icon"><i class="icon-user"></i></span>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input type="text" class="form-control style_2" id="lastname_contact" name="lastname_contact" placeholder="Enter Last Name">
+                  <span class="input-icon"><i class="icon-user"></i></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input type="email" id="email_contact" name="email_contact" class="form-control style_2" placeholder="Enter Email">
+                  <span class="input-icon"><i class="icon-email"></i></span>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input type="text" id="phone_contact" name="phone_contact" class="form-control style_2" placeholder="Enter Phone number">
+                  <span class="input-icon"><i class="icon-phone"></i></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <textarea rows="5" id="message_contact" name="message_contact" class="form-control" placeholder="Write your message" style="height:200px;"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" id="verify_contact" class=" form-control" placeholder="Are you human? 3 + 1 =">
+                <input type="submit" value="Submit" class=" button_medium" id="submit-contact"/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% content_for :append_body do %>
+  <!-- GOOGLE MAP -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src="js/mapmarker.jquery.js"></script>
+  <script type="text/javascript" src="js/mapmarker_func.jquery.js"></script>
+<% end %>

@@ -1,13 +1,12 @@
-		//set up markers 
-		var myMarkers = {"markers": [
-				{"latitude": "51.511732", "longitude":"-0.123270", "icon": "img/map-marker2.png"}
-			]
-		};
-		
-		//set up map options
-		$("#map").mapmarker({
-			zoom	: 14,
-			center	: 'Covent Garden London',
-			markers	: myMarkers
-		});
+//set up markers 
+var myMarkers = {"markers": [
+    {"latitude": "25.051103", "longitude":"121.514198", "icon": "img/map-marker2.png"}
+  ]
+};
 
+//set up map options
+$("#map").mapmarker({
+  zoom  : 15,
+  center  : '103 台灣台北市大同區華陰街 227 巷 7 號',
+  markers  : myMarkers
+});
