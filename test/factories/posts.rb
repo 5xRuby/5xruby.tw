@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :post do
+    image { Faker::Image.image }
     title { Faker::Name.title }
     content { Faker::Lorem.paragraph }
   end
