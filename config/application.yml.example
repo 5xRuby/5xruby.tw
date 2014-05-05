@@ -9,5 +9,5 @@ test:
 production:
   <<: *defaults
   http_basic_auth:
-    name: 5xruby
-    password: 5xruby
+    :name: 5xruby
+    :password: 5xruby
