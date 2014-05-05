@@ -4,6 +4,8 @@ zh-TW:
       5xruby_blog: 五倍部落格
     post:
       read_more: 更多內容
+    sidebar:
+      recent_post: 近期文章
   pages:
     main_features:
       why_join_5xruby: 加入五倍紅寶石
