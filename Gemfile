@@ -51,7 +51,3 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
 end
-
-group :development do
-  gem 'capistrano-rails'
-end
