@@ -47,7 +47,7 @@ gem 'rails-i18n'
 gem 'rmagick', require: 'RMagick'
 
 group :development, :test do
-  gem 'rspec'
+  gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'
 end
