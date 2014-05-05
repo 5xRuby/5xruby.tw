@@ -1,0 +1,24 @@
+zh-TW:
+  action:
+    back: 返回
+  message:
+    are_you_sure: 你確定？
+  crud:
+    new!: 新增%{resource}
+    new: 新增
+    create!: 新增%{resource}
+    create: 新增
+    show!: 檢視%{resource}
+    show: 檢視
+    read!: 檢視%{resource}
+    read: 檢視
+    edit!: 編輯%{resource}
+    edit: 編輯
+    update!: 編輯%{resource}
+    update: 編輯
+    delete!: 刪除%{resource}
+    delete: 刪除
+    destroy!: 刪除%{resource}
+    destroy: 刪除
+    created_successfully!: 成功新增%{name}
+    updated_successfully!: 成功更新%{name}

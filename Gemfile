@@ -43,6 +43,7 @@ gem 'kaminari'
 gem 'carrierwave'
 gem 'simple_form', '3.1.0.rc1'
 gem 'settingslogic'
+gem 'rails-i18n'
 
 group :development, :test do
   gem 'rspec'
