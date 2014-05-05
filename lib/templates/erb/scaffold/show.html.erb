@@ -1,0 +1,13 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <th>屬性</th>
+    <th>值</th>
+  </thead>
+  <tbody>
+    <%%= tr_for @<%= singular_table_name %>, :id, <%= attributes.reject(&:password_digest?).map{|a| ":#{a.name}"}.join(', ') %> %>
+  </tbody>
+</table>
+<div class="btn-group">
+  <%%= link_to t('crud.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: 'btn btn-info btn-lg' %>
+  <%%= link_to t('action.back'), <%= index_helper %>_path, class: 'btn btn-default btn-lg' %>
+</div>

@@ -1,0 +1,8 @@
+<h1><%%= t('crud.edit!', resource: <%= class_name %>.model_name.human) %></h1>
+
+<%%= render 'form' %>
+
+<div class="btn-group">
+  <%%= link_to t('crud.show'), @<%= singular_table_name %>, class: 'btn btn-info btn-lg' %>
+  <%%= link_to t('action.back'), <%= index_helper %>_path, class: 'btn btn-default btn-lg' %>
+</div>
