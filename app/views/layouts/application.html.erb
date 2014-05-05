@@ -23,14 +23,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <!-- REVOLUTION BANNER CSS SETTINGS -->
-    <link href="rs-plugin/css/settings.css" media="screen" rel="stylesheet">
     
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
+    <%= yield :append_head if content_for? :append_head %>
   </head>
   <body>
     <%= render 'layouts/header' %>
@@ -42,28 +40,6 @@
 
     <div id="toTop">Back to top</div>
 
-    <!-- jQuery REVOLUTION Slider  -->
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript">
-        var revapi;
-
-        jQuery(document).ready(function() {
-
-             revapi = jQuery('.tp-banner').revolution(
-            {
-              delay:9000,
-              startwidth:1170,
-              startheight:500,
-              hideThumbs:true,
-              navigationType:"none",
-              fullWidth:"on",
-              forceFullWidth:"on"
-            });
-
-        }); //ready
-    </script>
-
     <!-- OTHER JS --> 
     <script src="js/superfish.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -74,5 +50,6 @@
     <script src="js/classie.js"></script>
     <script src="js/uisearch.js"></script>
     <script>new UISearch( document.getElementById( 'sb-search' ) );</script>
+    <%= yield :append_body if content_for? :append_body %>
   </body>
 </html>

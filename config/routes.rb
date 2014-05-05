@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#index'
+  controller :pages do
+    get :about
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
