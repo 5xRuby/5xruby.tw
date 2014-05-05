@@ -1,0 +1,13 @@
+defaults: &defaults
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  http_basic_auth:
+    name: 5xruby
+    password: 5xruby
