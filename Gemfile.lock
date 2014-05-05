@@ -109,6 +109,7 @@ GEM
     rdiscount (2.1.7.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    rmagick (2.13.2)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -177,6 +178,7 @@ DEPENDENCIES
   rails (= 4.1.0)
   rails-i18n
   rdiscount
+  rmagick
   rspec
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
