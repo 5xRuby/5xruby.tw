@@ -10,26 +10,33 @@ module AdminHelper
     }.join.html_safe
   end
 
+  def attribute_appearance record, attribute
+    case attribute
+    when Array
+      association = record.send(attribute[0])
+      link_to association.send(attribute[1]), association rescue association.send(attribute[1])
+    when Symbol
+      case val = record.send(attribute)
+      when CarrierWave::Uploader::Base
+        uploader = if val.version_exists?(:preview) && val.preview.present? then val.preview
+                   elsif val.version_exists?(:thumb) && val.thumb.present? then val.thumb
+                   else val end
+        link_to image_tag(uploader, height: 100), val.url
+      else val
+      end
+    end
+  end
+
   def td_for record, *attributes
     attributes.map{ |attribute|
-      text = case attribute
-      when Array
-        association = record.send(attribute[0])
-        link_to association.send(attribute[1]), association rescue association.send(attribute[1])
-      else record.send(attribute)
-      end
+      text = attribute_appearance record, attribute
       content_tag :td, text
     }.join.html_safe
   end
 
   def tr_for record, *attributes
     attributes.map{ |attribute|
-      text = case attribute
-      when Array
-        association = record.send(attribute[0])
-        link_to association.send(attribute[1]), association rescue association.send(attribute[1])
-      else record.send(attribute)
-      end
+      text = attribute_appearance record, attribute
       content_tag(:tr, content_tag(:td, record.class.human_attribute_name(Array === attribute ? attribute[0] : attribute)) + content_tag(:td, text))
     }.join.html_safe
   end

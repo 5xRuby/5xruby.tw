@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
   # Constants
   
   # Attributes related macros
+  mount_uploader :image, PostImageUploader
 
   # association macros
 

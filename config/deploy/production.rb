@@ -1,13 +1,12 @@
 # Simple Role Syntax
+set :stage, :production
 # ==================
 # Supports bulk-adding hosts to roles, the primary server in each group
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
-
-role :app, %w{deploy@example.com}
-role :web, %w{deploy@example.com}
-role :db,  %w{deploy@example.com}
-
+role :app, %w{deploy@jy365.tomlan.tw}
+role :web, %w{deploy@jy365.tomlan.tw}
+role :db,  %w{deploy@jy365.tomlan.tw}
 
 # Extended Server Syntax
 # ======================
@@ -15,7 +14,6 @@ role :db,  %w{deploy@example.com}
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
 
 
 # Custom SSH Options

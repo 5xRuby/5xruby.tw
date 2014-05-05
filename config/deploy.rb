@@ -1,8 +1,15 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, '5xruby_tw'
+set :repo_url, 'git@github.com:5xRuby/5xruby.tw.git'
+set :branch, 'master'
+
+set :deploy_to, '/home/deploy/5xruby.tw'
+set :linked_files, %w{config/database.yml config/application.yml}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
+
+set :default_env, { path: "/usr/local/ruby21/bin:$PATH" }
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -23,10 +30,10 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml}
+# set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -34,25 +41,27 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+after :'deploy:publishing', :'deploy:restart'
 namespace :deploy do
 
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
+      execute :touch, release_path.join('tmp/restart.txt')
+#      execute "cd #{release_path} && (PATH=/usr/local/ruby20/bin:$PATH RAILS_ENV=#{fetch(:rails_env)} bundle exec rake resque:restart > /dev/null)"
     end
   end
-
-  after :publishing, :restart
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
+#      within release_path do
+#        with rails_env: fetch(:rails_env) do
+#          execute :rake, 'flowdock:notify'
+#        end
+#      end
     end
   end
+
+  after :finishing, 'deploy:cleanup'
 
 end

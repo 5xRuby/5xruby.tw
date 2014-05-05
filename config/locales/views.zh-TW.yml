@@ -1,4 +1,11 @@
 zh-TW:
+  posts:
+    index:
+      5xruby_blog: 五倍部落格
+    post:
+      read_more: 更多內容
+    sidebar:
+      recent_post: 近期文章
   pages:
     main_features:
       why_join_5xruby: 加入五倍紅寶石
@@ -71,3 +78,10 @@ zh-TW:
       course: 課程
       blog: 部落格
       contacts: 聯絡我們
+    footer:
+      browse: 瀏覽
+      courses: 課程
+      blog: 部落格
+      contacts: 聯絡我們
+      about_5xruby: 關於五倍紅寶石
+      about_us: 關於我們

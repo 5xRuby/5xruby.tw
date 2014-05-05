@@ -1,0 +1,16 @@
+<div class="post">
+  <%= link_to image_tag(post.image.thumb, class: 'img-responsive'), post, title: post.title %>
+  <div class="post_info clearfix">
+    <div class="post-left">
+      <ul>
+        <li><i class="icon-calendar-empty"></i><!-- On  --><span><%= l post.created_at, format: :short %></span></li>
+        <li><i class="icon-user"></i>By <a href="#">John Smith</a></li>
+        <li><i class="icon-tags"></i>Tags <a href="#">Works</a> <a href="#">Personal</a></li>
+      </ul>
+    </div>
+    <div class="post-right"><i class="icon-comment"></i><a href="#">25 </a>Comments</div>
+  </div>
+  <h2><%= link_to post.title, post, title: post.title %></h2>
+  <p><%= post.content %></p>
+  <%= link_to t('.read_more'), post, class: 'button_medium', title: post.title if defined?(read_more) %>
+</div><!-- end post -->

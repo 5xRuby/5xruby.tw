@@ -1,7 +1,7 @@
 <h1><%= t('crud.edit!', resource: Admin::Post.model_name.human) %></h1>
 
 <%= render 'form' %>
-
+<br>
 <div class="btn-group">
   <%= link_to t('crud.show'), @admin_post, class: 'btn btn-info btn-lg' %>
   <%= link_to t('action.back'), admin_posts_path, class: 'btn btn-default btn-lg' %>

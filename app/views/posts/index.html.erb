@@ -1,0 +1,29 @@
+<section id="sub-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 text-center">
+        <h1><%= t('.5xruby_blog') %></h1>
+        <p class="lead boxed">Ex utamur fierent tacimates nam, his duis choro an.</p>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. 
+        </p>
+      </div>
+    </div><!-- End row -->
+  </div><!-- End container -->
+  <div class="divider_top"></div>
+</section><!-- End sub-header -->
+
+<section id="main_content">
+  <div class="container">
+    <div class="row">
+      <%= render 'sidebar' %>
+      <div class="col-md-8">
+        <%= render @posts, read_more: true %>
+        <hr>
+        <div class="text-center">
+          <%= paginate @posts %>
+        </div>
+      </div><!-- End col-md-8-->   
+    </div>  <!-- End row-->    
+  </div><!-- End container -->
+</section><!-- End main_content-->
