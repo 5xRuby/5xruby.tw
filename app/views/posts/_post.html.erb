@@ -1,5 +1,5 @@
 <div class="post">
-  <a href="blog_post.html" title="single_post.html"><%= image_tag post.image.thumb, class: 'img-responsive' %></a>
+  <%= link_to image_tag(post.image.thumb, class: 'img-responsive'), post, title: post.title %>
   <div class="post_info clearfix">
     <div class="post-left">
       <ul>
