@@ -40,3 +40,15 @@ gem 'spring',        group: :development
 
 gem 'rdiscount'
 gem 'kaminari'
+gem 'carrierwave'
+gem 'simple_form'
+gem 'settingslogic'
+
+group :development, :test do
+  gem 'rspec'
+  gem 'factory_girl_rails'
+end
+
+group :development do
+  gem 'capistrano-rails'
+end
