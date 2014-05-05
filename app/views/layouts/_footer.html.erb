@@ -17,12 +17,12 @@
   <div class="container" id="nav-footer">
     <div class="row text-left">
       <div class="col-md-3 col-sm-3">
-        <h4>Browse</h4>
+        <h4><%= t('.browse') %></h4>
         <ul>
           <li><a href="prices_plans.html">Prices</a></li>
-          <li><a href="courses_grid.html">Courses</a></li>
+          <li><%= link_to t('.courses'), courses_path %></li>
           <li><%= link_to t('.blog'), posts_path %></li>
-          <li><a href="contacts.html">Contacts</a></li>
+          <li><%= link_to t('.contacts'), contacts_path %></li>
         </ul>
       </div><!-- End col-md-4 -->
       <div class="col-md-3 col-sm-3">
@@ -35,9 +35,9 @@
         </ul>
       </div><!-- End col-md-4 -->
       <div class="col-md-3 col-sm-3">
-        <h4>About Learn</h4>
+        <h4><%= t('.about_5xruby') %></h4>
         <ul>
-          <li><a href="/about">About Us</a></li>
+          <li><%= link_to t('.about_us'), about_path %></li>
           <li><a href="apply_2.html">Apply</a></li>
           <li><a href="#">Terms and conditions</a></li>
           <li><a href="register.html">Register</a></li>

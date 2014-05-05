@@ -4,17 +4,7 @@
       <div class="col-md-12">
         <div id="mobnav-btn"></div>
         <ul class="sf-menu">
-          <li>
-            <%= link_to t('.home'), root_path %>
-            <div class="mobnav-subarrow">
-            </div>
-            <ul>
-              <li><a href="/">LayerSlider version</a></li>
-              <li><a href="index_2.html">Subscription version</a></li>
-              <li><a href="index_3.html">With Ajax Search bar</a></li>
-              <li><a href="index_4.html">With Video</a></li>
-            </ul>
-          </li>
+          <li><%= link_to t('.home'), root_path %></li>
           <li>
             <a href="#">Course</a>
             <div class="mobnav-subarrow"></div>
@@ -27,22 +17,7 @@
               <li><a href="course_timeline.html">Course timeline</a></li>
             </ul>
           </li>
-          <li><a href="prices_plans.html">Prices &amp; Plans</a></li>
           <li><%= link_to t('.blog'), posts_path %></li>
-          <li>
-            <a href="#">Pages</a>
-            <div class="mobnav-subarrow"></div>
-            <ul>
-              <li><a href="/about">About us</a></li>
-              <li><%= link_to t('.blog'), posts_path %></li>
-              <li><a href="blog_post.html">Blog post</a></li>
-              <li><a href="course_timeline.html">Timeline</a></li>
-              <li><a href="apply.html">PHP working wizard apply</a></li>
-              <li><a href="apply_2.html">PHP working apply</a></li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="register.html">Register</a></li>
-            </ul>
-          </li>
           <li><%= link_to t('.contacts'), contacts_path %></li>
         </ul>
 
