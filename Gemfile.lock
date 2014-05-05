@@ -158,8 +158,6 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.2.2)
-      coffee-rails
     tzinfo (1.1.0)
       thread_safe (~> 0.1)
     uglifier (2.5.0)
@@ -189,5 +187,4 @@ DEPENDENCIES
   settingslogic
   simple_form (= 3.1.0.rc1)
   spring
-  turbolinks
   uglifier (>= 1.3.0)
