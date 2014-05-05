@@ -41,7 +41,7 @@ gem 'spring',        group: :development
 gem 'rdiscount'
 gem 'kaminari'
 gem 'carrierwave'
-gem 'simple_form'
+gem 'simple_form', '3.1.0.rc1'
 gem 'settingslogic'
 
 group :development, :test do
