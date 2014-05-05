@@ -5,7 +5,7 @@
         <div id="mobnav-btn"></div>
         <ul class="sf-menu">
           <li>
-            <a href="#">Home</a>
+            <%= link_to t('.home'), root_path %>
             <div class="mobnav-subarrow">
             </div>
             <ul>
@@ -43,7 +43,7 @@
               <li><a href="register.html">Register</a></li>
             </ul>
           </li>
-          <li><a href="contacts.html">Contacts</a></li>
+          <li><%= link_to t('.contacts'), contacts_path %></li>
         </ul>
 
         <div class="col-md-4 pull-right hidden-sm hidden-xs">

@@ -3,3 +3,13 @@ zh-TW:
     contact:
       follow_us: 粉絲頁
       address: 地址
+      enter_your_starting_point: 輸入你的起點
+      get_directions: 規劃路線
+  layouts:
+    header:
+      about: 關於
+    nav:
+      home: 首頁
+      course: 課程
+      blog: 部落格
+      contacts: 聯絡我們

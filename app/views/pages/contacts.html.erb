@@ -5,10 +5,10 @@
       <div class="col-md-8 col-md-offset-2">
        <form action="http://maps.google.com/maps" method="get" target="_blank">
         <div class="input-group">
-          <input type="text" name="saddr" placeholder="Enter your starting point" class="form-control style-2" />
+          <input type="text" name="saddr" placeholder="<%= t('.enter_your_starting_point') %>" class="form-control style-2" />
           <input type="hidden" name="daddr" value="<%= t('company.address') %>"/><!-- Write here your end point -->
           <span class="input-group-btn">
-            <button class="btn" type="submit" value="Get directions" style="margin-left:0;">GET DIRECTIONS</button>
+            <button class="btn" type="submit" value="Get directions" style="margin-left:0;"><%= t('.get_directions') %></button>
           </span>
         </div><!-- /input-group -->
       </form>

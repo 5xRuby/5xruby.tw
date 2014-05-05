@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#index'
   controller :pages do
-    get :about, :contact
+    get :about, :contacts
   end
 
   # Example of regular route:
