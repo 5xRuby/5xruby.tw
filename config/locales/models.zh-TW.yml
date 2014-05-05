@@ -1,0 +1,8 @@
+zh-TW:
+  activerecord:
+    models:
+      post: 文章
+    attributes:
+      post:
+        title: 標題
+        content: 內容

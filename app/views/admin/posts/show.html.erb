@@ -1,0 +1,13 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <th>屬性</th>
+    <th>值</th>
+  </thead>
+  <tbody>
+    <%= tr_for @admin_post, :id, :title, :content %>
+  </tbody>
+</table>
+<div class="btn-group">
+  <%= link_to t('crud.edit'), edit_admin_post_path(@admin_post), class: 'btn btn-info btn-lg' %>
+  <%= link_to t('action.back'), admin_posts_path, class: 'btn btn-default btn-lg' %>
+</div>
