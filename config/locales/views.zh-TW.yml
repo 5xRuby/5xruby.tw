@@ -56,18 +56,20 @@ zh-TW:
           facebook: https://www.facebook.com/eddiekao
           twitter: https://twitter.com/eddiekao
           google: https://plus.google.com/u/0/102669323697108172752/about
-          about: WebConf Taiwan 主辦人、PHPConf Taiwan 發起兼主辦人、Rails Girls Taipei 主辦人.
+          experience: WebConf Taiwan 主辦人、PHPConf Taiwan 發起兼主辦人、Rails Girls Taipei 主辦人.
+          about: 「待補充」
           blog: http://blog.eddie.com.tw
-          skills: Ruby / Rails, iOS app 開發
+          skills: Ruby / Rails、iOS app 開發
 
         - name: 鄧慕凡
           title: 紅寶石商人
           avatar: ryudoawaru.jpg
           facebook: https://www.facebook.com/ryudoawaru
           twitter: https://twitter.com/ryudoawaru
-          about: RubyConf Taiwan 主辦人、Rails Girls Taipei 主辦人.
+          experience: RubyConf Taiwan 主辦人、Rails Girls Taipei 主辦人.
+          about: 「待補充」
           blog: http://ryudo.tw/
-          skills: Ruby / Rails, 系統管理
+          skills: Ruby / Rails、系統管理
 
         - name: 簡煒航
           title: 鐵道工人
@@ -75,9 +77,10 @@ zh-TW:
           facebook: http://fb.me/tonytonyjan
           twitter: https://twitter.com/tonytonyjan
           google: https://plus.google.com/u/0/+%E7%B0%A1%E7%85%92%E8%88%AATJ/posts
-          about: Lorem i. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
+          experience:
+          about: 「我是工程師，右手寫程式；我是鋼琴手，左手寫音樂。」
           blog: http://tonytonyjan.net/
-          skills: Ruby / Rails, 室友經營
+          skills: Ruby / Rails
 
     contacts:
       follow_us: 粉絲頁
