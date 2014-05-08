@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h3>Subscribe to our Newsletter for latest news.</h3>
+        <h3>訂閱Subscribe to our Newsletter for latest news.</h3>
         <div id="message-newsletter"></div>
         <form method="post" action="assets/newsletter.php" name="newsletter" id="newsletter" class="form-inline">
           <input name="email_newsletter" id="email_newsletter" type="email" value="" placeholder="Your Email" class="form-control">
@@ -19,42 +19,36 @@
       <div class="col-md-3 col-sm-3">
         <h4><%= t('.browse') %></h4>
         <ul>
-          <li><a href="prices_plans.html">Prices</a></li>
           <li><%= link_to t('.courses'), courses_path %></li>
           <li><%= link_to t('.blog'), posts_path %></li>
-          <li><%= link_to t('.contacts'), contacts_path %></li>
         </ul>
       </div><!-- End col-md-4 -->
       <div class="col-md-3 col-sm-3">
-        <h4>Next Courses</h4>
+        <h4>課程</h4>
         <ul>
-          <li><a href="course_details_1.html">Biology</a></li>
-          <li><a href="course_details_2.html">Management</a></li>
-          <li><a href="course_details_2.html">History</a></li>
-          <li><a href="course_details_3.html">Litterature</a></li>
+          <li><a href="course_details_1.html">Git</a></li>
+          <li><a href="course_details_1.html">Ruby Core</a></li>
+          <li><a href="course_details_1.html">Ruby on Rails</a></li>
         </ul>
       </div><!-- End col-md-4 -->
       <div class="col-md-3 col-sm-3">
         <h4><%= t('.about_5xruby') %></h4>
         <ul>
           <li><%= link_to t('.about_us'), about_path %></li>
-          <li><a href="apply_2.html">Apply</a></li>
-          <li><a href="#">Terms and conditions</a></li>
-          <li><a href="register.html">Register</a></li>
+          <li><%= link_to t('.contacts'), contacts_path %></li>
         </ul>
       </div><!-- End col-md-4 -->
       <div class="col-md-3 col-sm-3">
         <ul id="follow_us">
-          <li><a href="#"><i class="icon-facebook"></i></a></li>
-          <li><a href="#"><i class="icon-twitter"></i></a></li>
-          <li><a href="#"><i class=" icon-google"></i></a></li>
+          <li><a href="https://www.facebook.com/5xruby" target="_blank"><i class="icon-facebook"></i></a></li>
+          <li><a href="https://twitter.com/5xruby" target="_blank"><i class="icon-twitter"></i></a></li>
         </ul>
         <ul>
-          <li><strong class="phone">+0034 43244 44</strong><br><small>Mon - Fri / 9.00AM - 06.00PM</small></li>
-          <li>Questions? <a href="#">questions@domain.com</a></li>
+          <li><strong class="phone">+886 928 617 687</strong><br><small>Mon - Fri / 9.00AM - 10.00PM</small></li>
+          <li>有任何問題? <a href="#">hi@5xruby.tw</a></li>
         </ul>
       </div><!-- End col-md-4 -->
     </div><!-- End row -->
   </div>
-  <div id="copy_right">© 1998-2014</div>
+  <div id="copy_right">© 2014</div>
 </footer>
