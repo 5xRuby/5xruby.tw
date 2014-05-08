@@ -27,7 +27,9 @@ zh-TW:
         ## 關於五倍紅寶石
         ### 由來
 
-        我們一直在想，為什麼台灣使用 Ruby 的公司這麼少?
+        我們是一群 Ruby 程式語言的愛好者，每天的工作都是跟 Ruby/Rails 相關。
+
+        我們一直在想，為什麼在台灣實際有使用 Ruby 的公司這麼少?
         於是，幾位台灣 Ruby 圈的同好，便開始討論「也許我們應該來成立一間專門提供 Ruby 相關的技術諮詢或是教育訓練的公司」。
 
         至於公司名稱為什麼是「五倍紅寶石」，不是三倍也不是一百倍?
@@ -36,16 +38,17 @@ zh-TW:
 
         ### 為什麼選我們？
         #### 服務
-
         Cum copiosae pertinacia ei, admodum volumus cum ut, erat nonumy his te. Iudico praesent sed id, nam error consequat reprehendunt no. Nostrud nostrum tacimates mei ut, debet facilisi in ius, dolor accusam omittam eu sea. His harum verterem ocurreret ei.
 
         #### 專業師資
 
-        An per ancillae concludaturque, senserit rationibus referrentur ne pro, ius omnis complectitur ex. Per ut vocibus contentiones. Oporteat vituperata ut nec, an dicit accusamus definiebas est, ne vix mentitum luptatum. Duo in wisi justo aperiam. Reprimique consectetuer pro ea, civibus commune oportere pri id.
+        在五倍紅寶石的每位講師，均有在業界多年實戰工作經驗，.
 
         #### Trusted Certification
 
         Impedit epicurei intellegam an eos, id fierent consequat definitiones est. Ne his primis invenire. Ea fugit tantas noster vis, scripta ornatus voluptua quo an. Nusquam salutatus duo ei, semper maiorum eu mea.
+
+      speciality: 專長
       members:
         - name: 高見龍
           title: 紅寶石鑑定商
@@ -55,6 +58,7 @@ zh-TW:
           google: https://plus.google.com/u/0/102669323697108172752/about
           about: WebConf Taiwan 主辦人、PHPConf Taiwan 發起兼主辦人、Rails Girls Taipei 主辦人.
           blog: http://blog.eddie.com.tw
+          skills: Ruby / Rails, iOS app 開發
 
         - name: 鄧慕凡
           title: 紅寶石商人
@@ -63,6 +67,7 @@ zh-TW:
           twitter: https://twitter.com/ryudoawaru
           about: RubyConf Taiwan 主辦人、Rails Girls Taipei 主辦人.
           blog: http://ryudo.tw/
+          skills: Ruby / Rails, 系統管理
 
         - name: 簡煒航
           title: 鐵道工人
@@ -72,6 +77,7 @@ zh-TW:
           google: https://plus.google.com/u/0/+%E7%B0%A1%E7%85%92%E8%88%AATJ/posts
           about: Lorem i. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
           blog: http://tonytonyjan.net/
+          skills: Ruby / Rails, 室友經營
 
     contacts:
       follow_us: 粉絲頁

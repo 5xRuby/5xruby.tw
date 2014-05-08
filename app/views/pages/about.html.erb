@@ -81,11 +81,20 @@
       <div class=" box_style_3">
         <p><img src="<%= image_path(member['avatar']) %>" alt="Teacher" class="img-circle styled" width="150px"></p>
         <h4 class="p-title"><%= member['name'] %> <small><%= member['title'] %></small></h4>
+        <%= t('.speciality') %>: <small><%= member['skills'] %></small>
         <p><%= member['about'] %></p>
         <ul class="social_team">
-          <li><a href="<%= member['facebook'] %>"><i class="icon-facebook"></i></a></li>
-          <li><a href="<%= member['twitter'] %>"><i class="icon-twitter"></i></a></li>
-          <li><a href="<%= member['google'] %>"><i class=" icon-google"></i></a></li>
+          <% if member['facebook'] %>
+            <li><a href="<%= member['facebook'] %>"><i class="icon-facebook"></i></a></li>
+          <% end %>
+
+          <% if member['twitter'] %>
+            <li><a href="<%= member['twitter'] %>"><i class="icon-twitter"></i></a></li>
+          <% end %>
+
+          <% if member['google'] %>
+            <li><a href="<%= member['google'] %>"><i class=" icon-google"></i></a></li>
+          <% end %>
         </ul>
         <hr>
         <a href="<%= member['blog'] %>" target="_blank" class=" button_medium_outline">Blog</a>
