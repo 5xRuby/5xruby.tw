@@ -5,7 +5,7 @@
         <h1>Inside Learn</h1>
         <p class="lead boxed ">Ex utamur fierent tacimates nam, his duis choro an.</p>
         <p class="lead">
-          Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. 
+          Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
         </p>
       </div>
     </div><!-- End row -->
@@ -81,14 +81,14 @@
       <div class=" box_style_3">
         <p><img src="<%= image_path(member['avatar']) %>" alt="Teacher" class="img-circle styled" width="150px"></p>
         <h4 class="p-title"><%= member['name'] %> <small><%= member['title'] %></small></h4>
-        <p><%= member['about'] %></p>   
+        <p><%= member['about'] %></p>
         <ul class="social_team">
           <li><a href="<%= member['facebook'] %>"><i class="icon-facebook"></i></a></li>
           <li><a href="<%= member['twitter'] %>"><i class="icon-twitter"></i></a></li>
           <li><a href="<%= member['google'] %>"><i class=" icon-google"></i></a></li>
         </ul>
         <hr>
-        <a href="#" class=" button_medium_outline">View cousres</a>                         
+        <a href="<%= member['blog'] %>" target="_blank" class=" button_medium_outline">Blog</a>
       </div>
     </div>
     <% end %>
