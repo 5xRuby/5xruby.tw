@@ -13,8 +13,9 @@ zh-TW:
       course:
         image: 主圖
         title: 標題
+        subtitle: 副標
         summary: 簡介
-        what_will_learn: 學習內容
+        what_will_learn: 將會學到
         description: 詳細介紹
       stage:
         sort_id: 順序
