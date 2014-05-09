@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'courses/index'
-
-  get 'courses/show'
-
-  namespace :admin do
-    resources :courses
-  end
-
   root 'pages#index'
   controller :pages do
     get :about, :contacts
@@ -16,6 +8,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: :dashboard
-    resources :posts, :courses 
+    resources :posts, :courses
   end
 end
