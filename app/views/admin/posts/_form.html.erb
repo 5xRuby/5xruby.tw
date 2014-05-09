@@ -4,7 +4,7 @@
     <%= f.input :image %>
     <%= f.input :remove_image, as: :boolean %>
     <%= f.input :title %>
-    <%= f.input :content %>
+    <%= f.input :content, input_html: {class: :redactor} %>
   </div>
 
   <div class="form-actions">
