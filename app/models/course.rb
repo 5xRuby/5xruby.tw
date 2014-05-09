@@ -9,7 +9,7 @@ class Course < ActiveRecord::Base
   mount_uploader :image, CourseImageUploader
 
   # association macros
-  has_many :stages
+  has_many :stages, -> { order('sort_id') }
   accepts_nested_attributes_for :stages, allow_destroy: true, reject_if: proc { |attributes| attributes[:title].blank? }
 
   # validation macros

@@ -7,16 +7,16 @@
       <%= th_for Stage, :sort_id, :title, :description %>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="sortable" data-items=".stage">
     <%= f.simple_fields_for :stages, wrapper: false do |ff| %>
-      <tr class="fields">
-        <td><i class="icon-move"></i></td>
-        <td><%= ff.link_to_remove content_tag(:i, nil, class: 'icon-trash') %></td>
+      <%= content_tag_for :tr, ff.object, nil, class: 'fields' do %>
+        <td><i class="glyphicon glyphicon-move"></i></td>
+        <td><%= ff.link_to_remove content_tag(:i, nil, class: 'glyphicon glyphicon-trash') %></td>
         <td><%= ff.input_field :sort_id, class: 'form-control', label: false %></td>
         <td><%= ff.input_field :title, class: 'form-control', label: false %></td>
         <td><%= ff.input_field :description, class: 'form-control', label: false %></td>
-      </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
-<%= f.link_to_add content_tag(:i, nil, class: 'icon-plus'), :stages, class: 'btn btn-xs btn-success', data: {target: '#stages'} %>
+<%= f.link_to_add content_tag(:i, nil, class: 'glyphicon glyphicon-plus'), :stages, class: 'btn btn-xs btn-success', data: {target: '#stages'} %>
