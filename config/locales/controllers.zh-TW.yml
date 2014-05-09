@@ -1,0 +1,5 @@
+zh-TW:
+  contacts:
+    create:
+      something_went_wrong: 出錯了
+      mail_sent_successfully: 成功寄出

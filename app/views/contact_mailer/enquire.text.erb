@@ -1,0 +1,5 @@
+<%= @contact.message %>
+
+<% %i[first_name last_name phone].each do |attribute| %>
+<%= Contact.human_attribute_name attribute %>：<%= @contact.send(attribute) %>
+<% end %>

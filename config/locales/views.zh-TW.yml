@@ -97,10 +97,12 @@ zh-TW:
           skills: Ruby / Rails
 
     contacts:
+      general_enquire: 歡迎諮詢
       follow_us: 社群連結
       address: 聯絡資訊
       enter_your_starting_point: 輸入你的起點
       get_directions: 規劃路線
+      write_your_message: 留下你的訊息
   layouts:
     header:
       about: 關於

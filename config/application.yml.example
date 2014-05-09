@@ -2,6 +2,18 @@ defaults: &defaults
 
 development:
   <<: *defaults
+  recipient: tonytonyjan@gmail.com
+  action_mailer:
+    default_url_options:
+      :host: localhost:3000
+    delivery_method: :smtp
+    smtp_settings:
+      :address: smtp.gmail.com
+      :port: 587
+      :user_name: tonytonyjan@gmail.com
+      :password: PASSWORD
+      :authentication: plain
+      :enable_starttls_auto: true
 
 test:
   <<: *defaults
