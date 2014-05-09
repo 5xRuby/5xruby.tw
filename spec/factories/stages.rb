@@ -2,8 +2,9 @@
 
 FactoryGirl.define do
   factory :stage do
+    sequence :sort_id, 0
     course nil
-    title "MyString"
-    description "MyText"
+    title { Faker::Name.title }
+    description { Faker::Lorem.paragraph }
   end
 end
