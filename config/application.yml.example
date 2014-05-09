@@ -2,6 +2,13 @@ defaults: &defaults
 
 development:
   <<: *defaults
+  flowdock:
+    flowdock_api_token: FLOWDOCK_API_TOKEN
+    flowdock_project_name: 5xruby_tw
+    flowdock_deploy_tags: [deploy, website]
+  recaptcha:
+    public_key: PUBLIC_KEY
+    private_key: PRIVATE_KEY
   recipient: tonytonyjan@gmail.com
   action_mailer:
     default_url_options:
@@ -23,3 +30,17 @@ production:
   http_basic_auth:
     :name: 5xruby
     :password: 5xruby
+  recaptcha:
+    public_key: PUBLIC_KEY
+    private_key: PRIVATE_KEY
+  action_mailer:
+    default_url_options:
+      :host: localhost:3000
+    delivery_method: :smtp
+    smtp_settings:
+      :address: smtp.gmail.com
+      :port: 587
+      :user_name: tonytonyjan@gmail.com
+      :password: PASSWORD
+      :authentication: plain
+      :enable_starttls_auto: true
