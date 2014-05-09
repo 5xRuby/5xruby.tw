@@ -14,7 +14,9 @@
 <section id="main_content">
   <div class="container">
     <div class="row">
-      <%= render 'sidebar' %>
+      <aside class="col-md-4">
+        <%= render 'sidebar' %>
+      </aside>
       <div class="col-md-8">
         <%= render @posts %>
         <hr>
