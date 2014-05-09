@@ -1,5 +1,7 @@
 $(document).on 'ready page:change', () ->
   $('.redactor').redactor
-    imageUpload: '/images'
-    imageUploadParam: 'image[image]'
+    imageUpload: '/redactor_images',
+    imageUploadParam: 'redactor_image[image]',
     lang: 'zh_tw'
+    uploadFields:
+      'authenticity_token': $('meta[name="csrf-token"]').attr('content')
