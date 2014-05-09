@@ -17,5 +17,6 @@ zh-TW:
         what_will_learn: 學習內容
         description: 詳細介紹
       stage:
+        sort_id: 順序
         title: 標題
         description: 介紹

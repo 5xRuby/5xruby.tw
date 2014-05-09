@@ -7,6 +7,24 @@
     <%= tr_for @admin_course, :id, :image, :title, :summary, :description, :what_will_learn %>
   </tbody>
 </table>
+
+<div class="page-header"><h2><%= Stage.model_name.human %></h2></div>
+
+<table class="table">
+  <thead>
+    <%= th_for Stage, :sort_id, :title, :description %>
+  </thead>
+  <tbody>
+    <% @admin_course.stages.each_with_index do |stage, i| %>
+      <tr>
+        <td><%= i + 1 %></td>
+        <td><%= stage.title %></td>
+        <td><%= stage.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <div class="btn-group">
   <%= link_to t('crud.edit'), edit_admin_course_path(@admin_course), class: 'btn btn-info btn-lg' %>
   <%= link_to t('action.back'), admin_courses_path, class: 'btn btn-default btn-lg' %>
