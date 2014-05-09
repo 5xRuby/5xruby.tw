@@ -13,6 +13,6 @@ module ApplicationHelper
   def help_block record, attribute
     @contact.errors.messages[attribute].map do |msg|
       content_tag :p, msg, class: 'help-block'
-    end.join.html_safe
+    end.join.html_safe if record.errors[attribute].present?
   end
 end
