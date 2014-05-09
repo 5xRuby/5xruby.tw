@@ -33,9 +33,6 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
-
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
@@ -51,6 +48,11 @@ gem 'rmagick', require: 'RMagick'
 # assets
 gem 'rails-assets-bootstrap'
 gem 'rails-assets-jquery-ui'
+
+group :development do
+  gem 'capistrano-rails'
+  gem 'capistrano-flowdock'
+end
 
 group :development, :test do
   gem 'rspec-rails'

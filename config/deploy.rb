@@ -1,6 +1,13 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
+require 'yaml'
+settings = YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))['development']
+
+set :flowdock_api_token, settings['flowdock']['flowdock_api_token']
+set :flowdock_project_name, settings['flowdock']['flowdock_project_name']
+set :flowdock_deploy_tags, settings['flowdock']['flowdock_deploy_tags']
+
 set :application, '5xruby_tw'
 set :repo_url, 'git@github.com:5xRuby/5xruby.tw.git'
 set :branch, 'master'
