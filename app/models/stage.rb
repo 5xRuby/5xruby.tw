@@ -1,4 +1,4 @@
-class Course < ActiveRecord::Base
+class Stage < ActiveRecord::Base
   # scope macros
 
   # Concerns macros
@@ -6,11 +6,9 @@ class Course < ActiveRecord::Base
   # Constants
   
   # Attributes related macros
-  mount_uploader :image, CourseImageUploader
 
   # association macros
-  has_many :stages
-  accepts_nested_attributes_for :stages, allow_destroy: true, reject_if: proc { |attributes| attributes[:title].blank? }
+  belongs_to :course
 
   # validation macros
   validates :title, presence: true

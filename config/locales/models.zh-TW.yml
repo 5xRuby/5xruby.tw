@@ -3,6 +3,7 @@ zh-TW:
     models:
       post: 文章
       course: 課程
+      stage: 階段
     attributes:
       post:
         title: 標題
@@ -15,3 +16,6 @@ zh-TW:
         summary: 簡介
         what_will_learn: 學習內容
         description: 詳細介紹
+      stage:
+        title: 標題
+        description: 介紹
