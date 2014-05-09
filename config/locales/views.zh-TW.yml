@@ -3,7 +3,7 @@ zh-TW:
     index:
       title: 各種課程
       subtitle: Ex utamur fierent tacimates nam, his duis choro an.
-      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. 
+      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
     show:
       summary: 簡介
       what_you_will_learn: 你會學到
@@ -11,7 +11,7 @@ zh-TW:
     index:
       title: 部落格
       subtitle: Ex utamur fierent tacimates nam, his duis choro an.
-      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. 
+      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
     post:
       read_more: 更多內容
     sidebar:
@@ -34,8 +34,8 @@ zh-TW:
           description: Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
     about:
       title: 關於
-      subtitle: Ex utamur fierent tacimates nam, his duis choro an.
-      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. 
+      subtitle: 五倍的祝福，五倍的紅寶石...
+      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
       description: |
         ## 關於「五倍紅寶石」
         ### 由來
@@ -47,6 +47,8 @@ zh-TW:
         但少了實際
 
         於是，幾位台灣 Ruby 圈的同好，便開始討論「也許我們應該來成立一間專門提供 Ruby 相關的技術諮詢或是教育訓練的公司」。
+
+        我們最終的目的，是希望台灣越來越多的企業能採用 Ruby 這個優雅、有趣的程式語言做為主要開發程式語言。
 
         至於公司名稱為什麼是「五倍紅寶石」，不是三倍也不是一百倍? 這又是另一個有趣的故事了 :)
 
