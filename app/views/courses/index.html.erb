@@ -1,0 +1,55 @@
+<section id="sub-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 text-center">
+        <h1><%= t('.title') %></h1>
+        <p class="lead boxed"><%= t('.subtitle') %></p>
+        <p class="lead"><%= t('.summary') %></p>
+      </div>
+    </div><!-- End row -->
+  </div><!-- End container -->
+  <div class="divider_top"></div>
+</section><!-- End sub-header -->
+
+<section id="main_content">
+  <div class="container">
+    <div class="row">
+      <aside class="col-lg-3 col-md-4 col-sm-4">
+        <div class="box_style_1">
+          <h4>Categories</h4>
+          <ul class="submenu-col">
+            <li><a href="#" id="active">All Courses</a></li>
+            <li><a href="course_details_2.html">Administration (10)</a></li>
+            <li><a href="course_details_2.html">Business (08)</a></li>
+            <li><a href="course_details_2.html">Communication (05) <img src="/img/new.png" alt="New" class="hidden-"></a></li>
+            <li><a href="course_details_2.html">Computing (08) </a></li>
+            <li><a href="course_details_2.html">Counseling (04)</a></li>
+            <li><a href="course_details_2.html">Education (06)</a></li>
+            <li><a href="course_details_2.html">Engineering (08)</a></li>
+          </ul>
+
+          <hr>
+
+          <h5>Upcoming Courses</h5>
+          <p>Suspendisse quis risus turpis, ut pharetra arcu. Donec adipiscing, quam non faucibus luctus, mi arcu blandit diam, at faucibus mi ante vel augue.</p>
+        </div>
+      </aside>
+
+      <div class="col-lg-9 col-md-8 col-sm-8">
+        <div class="row">
+          <%= render @courses %>
+        </div><!-- End row -->
+      </div><!-- End col-lg-9-->
+
+
+
+    </div><!-- End row -->
+
+    <hr>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <%= paginate @courses %>
+      </div>
+    </div>
+  </div><!-- End container -->
+</section><!-- End main_content -->

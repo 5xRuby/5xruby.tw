@@ -1,4 +1,9 @@
 zh-TW:
+  courses:
+    index:
+      title: 各種課程
+      subtitle: Ex utamur fierent tacimates nam, his duis choro an.
+      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. 
   posts:
     index:
       5xruby_blog: 五倍部落格
