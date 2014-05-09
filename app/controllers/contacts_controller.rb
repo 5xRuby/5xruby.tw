@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
       ContactMailer.enquire(@contact).deliver
       redirect_to contacts_path, notice: t('.mail_sent_successfully')
     else
+      flash.now[:alert] = t('.something_went_wrong')
       render 'pages/contacts'
     end
   end

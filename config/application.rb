@@ -31,5 +31,6 @@ module PentaRuby
     config.generators.assets = false
     config.generators.helper = false
     config.generators.jbuilder = false
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
   end
 end

@@ -6,6 +6,7 @@ zh-TW:
         last_name: 姓氏
         email: 信箱
         phone: 手機
+        message: 訊息
   attributes:
     image: 主圖
     remove_image: 刪除圖片

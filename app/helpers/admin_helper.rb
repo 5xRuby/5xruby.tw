@@ -46,7 +46,4 @@ module AdminHelper
     content_tag(:td, link_to(t('crud.edit'), [:edit, record])) +
     content_tag(:td, link_to(t('crud.destroy'), record, method: :delete, data: { confirm: t('message.are_you_sure') }))
   end
-
-  def notice_message
-  end
 end

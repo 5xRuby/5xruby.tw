@@ -55,36 +55,41 @@
           <%= form_for @contact, id: :contactform do |f| %>
             <div class="row">
               <div class="col-md-6 col-sm-6">
-                <div class="form-group">
+                <div class="form-group <%= has_error_class @contact, :first_name %>">
                   <%= f.text_field :first_name, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:first_name) %>
+                  <%= help_block @contact, :first_name %></p>
                   <span class="input-icon"><i class="icon-user"></i></span>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6">
-                <div class="form-group">
+                <div class="form-group <%= has_error_class @contact, :last_name %>">
                   <%= f.text_field :last_name, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:last_name) %>
+                  <%= help_block @contact, :last_name %></p>
                   <span class="input-icon"><i class="icon-user"></i></span>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 col-sm-6">
-                <div class="form-group">
+                <div class="form-group <%= has_error_class @contact, :email %>">
                   <%= f.text_field :email, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:email) %>
+                  <%= help_block @contact, :email %></p>
                   <span class="input-icon"><i class="icon-email"></i></span>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6">
-                <div class="form-group">
+                <div class="form-group <%= has_error_class @contact, :phone %>">
                   <%= f.text_field :phone, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:phone) %>
+                  <%= help_block @contact, :phone %></p>
                   <span class="input-icon"><i class="icon-phone"></i></span>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <div class="form-group">
+                <div class="form-group <%= has_error_class @contact, :message %>">
                   <%= f.text_area :message, rows: 5, class: 'form-control', placeholder: t('.write_your_message'), style: 'height:200px;' %>
+                  <%= help_block @contact, :message %></p>
                 </div>
               </div>
             </div>
