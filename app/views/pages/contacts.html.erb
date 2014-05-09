@@ -57,14 +57,14 @@
               <div class="col-md-6 col-sm-6">
                 <div class="form-group <%= has_error_class @contact, :first_name %>">
                   <%= f.text_field :first_name, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:first_name) %>
-                  <%= help_block @contact, :first_name %></p>
+                  <%= help_block @contact, :first_name %>
                   <span class="input-icon"><i class="icon-user"></i></span>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="form-group <%= has_error_class @contact, :last_name %>">
                   <%= f.text_field :last_name, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:last_name) %>
-                  <%= help_block @contact, :last_name %></p>
+                  <%= help_block @contact, :last_name %>
                   <span class="input-icon"><i class="icon-user"></i></span>
                 </div>
               </div>
@@ -73,14 +73,14 @@
               <div class="col-md-6 col-sm-6">
                 <div class="form-group <%= has_error_class @contact, :email %>">
                   <%= f.text_field :email, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:email) %>
-                  <%= help_block @contact, :email %></p>
+                  <%= help_block @contact, :email %>
                   <span class="input-icon"><i class="icon-email"></i></span>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="form-group <%= has_error_class @contact, :phone %>">
                   <%= f.text_field :phone, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:phone) %>
-                  <%= help_block @contact, :phone %></p>
+                  <%= help_block @contact, :phone %>
                   <span class="input-icon"><i class="icon-phone"></i></span>
                 </div>
               </div>
@@ -89,14 +89,17 @@
               <div class="col-md-12">
                 <div class="form-group <%= has_error_class @contact, :message %>">
                   <%= f.text_area :message, rows: 5, class: 'form-control', placeholder: t('.write_your_message'), style: 'height:200px;' %>
-                  <%= help_block @contact, :message %></p>
+                  <%= help_block @contact, :message %>
                 </div>
               </div>
             </div>
+
             <div class="row">
               <div class="col-md-12">
-                <input type="text" id="verify_contact" class=" form-control" placeholder="Are you human? 3 + 1 =">
-                <input type="submit" value="Submit" class=" button_medium" id="submit-contact"/>
+                <%= render 'layouts/recaptcha' %>
+                <div class="has-error"><%= help_block @contact, :base %></div>
+                <hr>
+                <%= f.submit t('.submit'), class: 'button_medium' %>
               </div>
             </div>
           <% end %>

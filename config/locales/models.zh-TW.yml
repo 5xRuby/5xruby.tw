@@ -1,5 +1,11 @@
 zh-TW:
   activemodel:
+    errors:
+      models:
+        contact:
+          attributes:
+            base:
+              captcha_not_passed: 圖靈測試沒過，為避免被猴子或機器人搗亂，請再試一次
     attributes:
       contact:
         first_name: 名字
