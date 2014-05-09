@@ -48,21 +48,21 @@
           <span class="tape"></span>
           <div class="row">
             <div class="col-md-12">
-              <h3>General Enquire</h3>
+              <h3><%= t('.general_enquire') %></h3>
             </div>
           </div>
           <div id="message-contact"></div>
-          <form method="post" action="assets/contact.php" id="contactform">
+          <%= form_for @contact, id: :contactform do |f| %>
             <div class="row">
               <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                  <input type="text" class="form-control style_2" id="name_contact" name="name_contact" placeholder="First Name">
+                  <%= f.text_field :first_name, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:first_name) %>
                   <span class="input-icon"><i class="icon-user"></i></span>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                  <input type="text" class="form-control style_2" id="lastname_contact" name="lastname_contact" placeholder="Last Name">
+                  <%= f.text_field :last_name, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:last_name) %>
                   <span class="input-icon"><i class="icon-user"></i></span>
                 </div>
               </div>
@@ -70,13 +70,13 @@
             <div class="row">
               <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                  <input type="email" id="email_contact" name="email_contact" class="form-control style_2" placeholder="Email">
+                  <%= f.text_field :email, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:email) %>
                   <span class="input-icon"><i class="icon-email"></i></span>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                  <input type="text" id="phone_contact" name="phone_contact" class="form-control style_2" placeholder="Phone number">
+                  <%= f.text_field :phone, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:phone) %>
                   <span class="input-icon"><i class="icon-phone"></i></span>
                 </div>
               </div>
@@ -84,7 +84,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <textarea rows="5" id="message_contact" name="message_contact" class="form-control" placeholder="Write your message" style="height:200px;"></textarea>
+                  <%= f.text_area :message, rows: 5, class: 'form-control', placeholder: t('.write_your_message'), style: 'height:200px;' %>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@
                 <input type="submit" value="Submit" class=" button_medium" id="submit-contact"/>
               </div>
             </div>
-          </form>
+          <% end %>
         </div>
       </div>
     </div>

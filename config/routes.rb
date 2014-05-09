@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
   resources :posts, :courses, only: %i[index show]
-  resources :redactor_images, only: :create
+  resources :redactor_images, :contacts, only: :create
 
   namespace :admin do
     root to: :dashboard
