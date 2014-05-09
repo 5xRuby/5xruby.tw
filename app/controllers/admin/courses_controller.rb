@@ -72,7 +72,7 @@ class Admin::CoursesController < AdminController
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_course_params
       params.require(:admin_course).permit(
-        :image, :title, :subtitle, :summary, :description, :what_will_learn,
+        :image, :remove_image, :title, :subtitle, :summary, :description, :what_will_learn,
         stages_attributes: %i[id _destroy sort_id title description]
       )
     end
