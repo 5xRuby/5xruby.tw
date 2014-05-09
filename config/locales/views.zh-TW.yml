@@ -36,6 +36,12 @@ zh-TW:
         - icon: icon-video
           title: +1,200 影音課程
           description: Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+    main_content_gray:
+      view_all_courses: 瀏覽所有課程
+      latest_courses: 最新課程
+      latest_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
+    recent_course:
+      detail: 詳細
     about:
       title: 關於
       subtitle: 五倍的祝福，五倍的紅寶石...
