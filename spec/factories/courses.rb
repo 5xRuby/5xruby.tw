@@ -12,8 +12,10 @@ FactoryGirl.define do
       stages_count 6
     end
 
-    after(:create) do |course, evaluator|
-      create_list(:stage, evaluator.stages_count, course: course)
+    after(:build) do |course, evaluator|
+      stages = build_list(:stage, evaluator.stages_count, course: course)
+      stages.each_with_index{|s, i| s.sort_id = i}
+      course.stages = stages
     end
   end
 end
