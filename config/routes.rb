@@ -1,21 +1,14 @@
 Rails.application.routes.draw do
-  get 'courses/index'
-
-  get 'courses/show'
-
-  namespace :admin do
-    resources :courses
-  end
-
   root 'pages#index'
   controller :pages do
     get :about, :contacts
   end
 
   resources :posts, :courses, only: %i[index show]
+  resources :redactor_images, only: :create
 
   namespace :admin do
     root to: :dashboard
-    resources :posts, :courses 
+    resources :posts, :courses
   end
 end

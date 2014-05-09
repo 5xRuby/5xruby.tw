@@ -11,6 +11,6 @@
     <div class="post-right"><i class="icon-comment"></i><a href="#">25 </a>Comments</div>
   </div>
   <h2><%= link_to post.title, post, title: post.title %></h2>
-  <p><%= post.content %></p>
+  <p><%= sanitize post.content %></p>
   <%= link_to t('.read_more'), post, class: 'button_medium', title: post.title if action_name == 'index' %>
 </div><!-- end post -->
