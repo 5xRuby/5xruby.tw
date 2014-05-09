@@ -4,6 +4,7 @@ FactoryGirl.define do
   factory :course do
     image { Faker::Image.image }
     title { Faker::Name.title }
+    subtitle { Faker::Lorem.stentence }
     summary { Faker::Lorem.paragraph }
     description { Faker::Lorem.paragraph }
     what_will_learn { Faker::Lorem.paragraph }
