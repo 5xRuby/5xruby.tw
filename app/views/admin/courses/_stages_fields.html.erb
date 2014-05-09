@@ -1,0 +1,22 @@
+<div class="page-header"><h2><%= Stage.model_name.human %></h2></div>
+<table id="stages" class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <%= th_for Stage, :title, :description %>
+    </tr>
+  </thead>
+  <tbody class="sortable" data-items=".stage">
+    <%= f.simple_fields_for :stages, wrapper: false do |ff| %>
+      <%= content_tag_for :tr, ff.object, nil, class: 'fields' do %>
+        <%= ff.hidden_field :sort_id %>
+        <td><i class="glyphicon glyphicon-move"></i></td>
+        <td><%= ff.link_to_remove content_tag(:i, nil, class: 'glyphicon glyphicon-trash') %></td>
+        <td><%= ff.input_field :title, class: 'form-control', label: false %></td>
+        <td><%= ff.input_field :description, class: 'form-control', label: false %></td>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+<%= f.link_to_add content_tag(:i, nil, class: 'glyphicon glyphicon-plus'), :stages, class: 'btn btn-xs btn-success', data: {target: '#stages'} %>

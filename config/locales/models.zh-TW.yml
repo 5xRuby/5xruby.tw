@@ -1,10 +1,23 @@
 zh-TW:
+  attributes:
+    image: 主圖
+    remove_image: 刪除圖片
   activerecord:
     models:
       post: 文章
+      course: 課程
+      stage: 階段
     attributes:
       post:
         title: 標題
         content: 內容
-        image: 主圖
-        remove_image: 刪除圖片
+      course:
+        title: 標題
+        subtitle: 副標
+        summary: 簡介
+        what_will_learn: 將會學到
+        description: 詳細介紹
+      stage:
+        sort_id: 順序
+        title: 標題
+        description: 介紹

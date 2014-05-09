@@ -5,23 +5,13 @@
         <div id="mobnav-btn"></div>
         <ul class="sf-menu">
           <li><%= link_to t('.home'), root_path %></li>
-          <li>
-            <a href="#">Course</a>
-            <div class="mobnav-subarrow"></div>
-            <ul>
-              <li><a href="courses_grid.html">Courses grid</a></li>
-              <li><a href="courses_list.html">Courses list</a></li>
-              <li><a href="course_details_1.html">Course details v1</a></li>
-              <li><a href="course_details_2.html">Course details v2</a></li>
-              <li><a href="course_details_3.html">Course details v2</a></li>
-              <li><a href="course_timeline.html">Course timeline</a></li>
-            </ul>
-          </li>
+          <li><%= link_to t('.course'), courses_path %></li>
           <li><%= link_to t('.blog'), posts_path %></li>
           <li><%= link_to t('.contacts'), contacts_path %></li>
+          <li><%= link_to t('.about'), about_path %></li>
         </ul>
 
-        <div class="col-md-4 pull-right hidden-sm hidden-xs">
+        <%#div class="col-md-4 pull-right hidden-sm hidden-xs">
           <div id="sb-search" class="sb-search">
             <form>
               <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
@@ -29,7 +19,7 @@
               <span class="sb-icon-search"></span>
             </form>
           </div>
-        </div><!-- End search -->
+        </div%><!-- End search -->
       </div>
     </div><!-- End row -->
   </div><!-- End container -->

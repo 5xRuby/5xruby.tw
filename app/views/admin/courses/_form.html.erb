@@ -1,0 +1,18 @@
+<%= simple_nested_form_for(@admin_course, wrapper: :horizontal_form, html: {class: 'form-horizontal'}) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :image %>
+    <%= f.input :remove_image, as: :boolean %>
+    <%= f.input :title %>
+    <%= f.input :subtitle %>
+    <%= f.input :summary %>
+    <%= f.input :what_will_learn %>
+    <%= f.input :description %>
+  </div>
+
+  <%= render 'stages_fields', f: f %>
+  <hr>
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
+  </div>
+<% end %>

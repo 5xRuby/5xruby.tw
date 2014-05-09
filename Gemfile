@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -42,16 +43,17 @@ gem 'rdiscount'
 gem 'kaminari'
 gem 'carrierwave'
 gem 'simple_form', '3.1.0.rc1'
+gem 'nested_form'
 gem 'settingslogic'
 gem 'rails-i18n'
 gem 'rmagick', require: 'RMagick'
+
+# assets
+gem 'rails-assets-bootstrap'
+gem 'rails-assets-jquery-ui'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'
-end
-
-group :development do
-  gem 'capistrano-rails'
 end
