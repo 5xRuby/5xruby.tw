@@ -6,7 +6,9 @@ zh-TW:
       summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. 
   posts:
     index:
-      5xruby_blog: 五倍部落格
+      title: 部落格
+      subtitle: Ex utamur fierent tacimates nam, his duis choro an.
+      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. 
     post:
       read_more: 更多內容
     sidebar:
@@ -28,6 +30,9 @@ zh-TW:
           title: +1,200 影音課程
           description: Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
     about:
+      title: 關於
+      subtitle: Ex utamur fierent tacimates nam, his duis choro an.
+      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. 
       description: |
         ## 關於「五倍紅寶石」
         ### 由來
@@ -97,7 +102,8 @@ zh-TW:
       home: 首頁
       course: 課程
       blog: 部落格
-      contacts: 聯絡我們
+      contacts: 聯絡
+      about: 關於
     footer:
       browse: 瀏覽
       courses: 課程
