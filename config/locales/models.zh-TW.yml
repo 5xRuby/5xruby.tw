@@ -38,6 +38,7 @@ zh-TW:
         duration: 時數
         description: 介紹
         course: 所屬課程
+        schedules: 開課日期
       schedule:
         stage: 課程階段
         date: 開課日期
