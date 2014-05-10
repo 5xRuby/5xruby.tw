@@ -4,11 +4,14 @@ Rails.application.routes.draw do
     get :about, :contacts
   end
 
+  get 'select2/tags', format: :json
+  get 'select2/results', format: :json
+
   resources :posts, :courses, only: %i[index show]
   resources :redactor_images, :contacts, only: :create
 
   namespace :admin do
     root to: :dashboard
-    resources :posts, :courses
+    resources :posts, :courses, :schedules
   end
 end

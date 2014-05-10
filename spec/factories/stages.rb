@@ -6,5 +6,13 @@ FactoryGirl.define do
     course nil
     title { Faker::Name.title }
     description { Faker::Lorem.paragraph }
+
+    ignore do
+      schedules_count 3
+    end
+
+    after(:build) do |stage, evaluator|
+      stage.schedules = build_list(:schedule, evaluator.schedules_count)
+    end
   end
 end

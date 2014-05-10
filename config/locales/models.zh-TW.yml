@@ -21,6 +21,7 @@ zh-TW:
       post: 文章
       course: 課程
       stage: 階段
+      schedule: 行程
     attributes:
       post:
         title: 標題
@@ -35,4 +36,10 @@ zh-TW:
         sort_id: 順序
         title: 標題
         duration: 時數
+        description: 介紹
+        course: 所屬課程
+        schedules: 開課日期
+      schedule:
+        stage: 課程階段
+        date: 開課日期
         description: 介紹

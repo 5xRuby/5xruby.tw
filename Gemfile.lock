@@ -120,6 +120,8 @@ GEM
     rails-assets-jquery (2.1.1)
     rails-assets-jquery-ui (1.10.4)
       rails-assets-jquery (>= 1.6)
+    rails-assets-select2 (3.4.8)
+      rails-assets-jquery (>= 1.7.1)
     rails-i18n (4.0.2)
       i18n (~> 0.6)
       rails (>= 4.0)
@@ -205,6 +207,7 @@ DEPENDENCIES
   rails (~> 4.1.0)
   rails-assets-bootstrap
   rails-assets-jquery-ui
+  rails-assets-select2
   rails-i18n
   rdiscount
   rmagick

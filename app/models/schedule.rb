@@ -1,20 +1,17 @@
-class Stage < ActiveRecord::Base
+class Schedule < ActiveRecord::Base
   # scope macros
+  scope :available, -> { order(:date).where('date > ?', Time.now) }
 
   # Concerns macros
-  include Select2Concern
 
   # Constants
   
   # Attributes related macros
 
   # association macros
-  belongs_to :course
-  has_many :schedules, -> { available }
+  belongs_to :stage
 
   # validation macros
-  validates :title, presence: true
-  select2_white_list :title
 
   # callbacks
 

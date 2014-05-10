@@ -14,6 +14,8 @@ zh-TW:
   stages:
     stage:
       stage_no: 第 %{stage} 堂
+      available_dates: 開課日期
+      next_dates: 下一堂
   posts:
     index:
       title: 部落格

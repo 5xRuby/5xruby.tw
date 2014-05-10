@@ -1,0 +1,18 @@
+<%= simple_form_for(@admin_schedule, wrapper: :horizontal_form, html: {class: 'form-horizontal'}) do |f| %>
+
+  <div class="form-inputs">
+    <div class="form-group">
+      <label for="course" class="control-label col-sm-1"><%= Course.model_name.human %></label>
+      <div class="col-sm-9">
+        <%= text_field_tag :course, (@admin_schedule.stage.course.id rescue nil), class: 'select2-single', data: {model: :Course, column: :title, text: (@admin_schedule.stage.course.title rescue '')} %>
+      </div>
+    </div>
+    <%= f.association :stage, as: :string, input_html: {class: '', data: {text: @admin_schedule.stage.try(:title).to_s}} %>
+    <%= f.input :date %>
+    <%= f.input :description, input_html: {class: 'redactor'} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
+  </div>
+<% end %>

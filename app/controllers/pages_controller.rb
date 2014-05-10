@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @next_courses = Course.order('id DESC').limit(4)
+    @next_schedules = Schedule.available.limit(4)
   end
 
   def contacts
