@@ -11,6 +11,9 @@ zh-TW:
     show:
       summary: 簡介
       what_you_will_learn: 你會學到
+  stages:
+    stage:
+      stage_no: 第 %{stage} 堂
   posts:
     index:
       title: 部落格

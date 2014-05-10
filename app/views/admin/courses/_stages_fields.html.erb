@@ -4,7 +4,7 @@
     <tr>
       <th></th>
       <th></th>
-      <%= th_for Stage, :title, :description %>
+      <%= th_for Stage, :title, :duration, :description %>
     </tr>
   </thead>
   <tbody class="sortable" data-items=".stage">
@@ -14,6 +14,7 @@
         <td><i class="glyphicon glyphicon-move"></i></td>
         <td><%= ff.link_to_remove content_tag(:i, nil, class: 'glyphicon glyphicon-trash') %></td>
         <td><%= ff.input_field :title, class: 'form-control', label: false %></td>
+        <td><%= ff.input_field :duration, class: 'form-control', label: false %></td>
         <td><%= ff.input_field :description, class: 'form-control', label: false %></td>
       <% end %>
     <% end %>
