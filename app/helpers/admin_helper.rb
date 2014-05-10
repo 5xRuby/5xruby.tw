@@ -14,7 +14,12 @@ module AdminHelper
     case attribute
     when Array
       association = record.send(attribute[0])
-      link_to association.send(attribute[1]), association rescue association.send(attribute[1])
+      case attribute[1]
+      when Proc
+        attribute[1].call(record)
+      when Symbol
+        link_to association.send(attribute[1]), association rescue association.send(attribute[1])
+      end
     when Symbol
       case val = record.send(attribute)
       when CarrierWave::Uploader::Base

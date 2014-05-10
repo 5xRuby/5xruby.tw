@@ -1,19 +1,16 @@
-class Stage < ActiveRecord::Base
+class Admin::Schedule < Schedule
   # scope macros
 
   # Concerns macros
-  include Select2Concern
 
   # Constants
   
   # Attributes related macros
 
   # association macros
-  belongs_to :course
+  belongs_to :stage
 
   # validation macros
-  validates :title, presence: true
-  select2_white_list :title
 
   # callbacks
 

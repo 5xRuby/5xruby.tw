@@ -48,6 +48,7 @@ gem 'rmagick', require: 'RMagick'
 # assets
 gem 'rails-assets-bootstrap'
 gem 'rails-assets-jquery-ui'
+gem 'rails-assets-select2'
 
 group :development do
   gem 'capistrano-rails'

@@ -2,6 +2,7 @@ class Course < ActiveRecord::Base
   # scope macros
 
   # Concerns macros
+  include Select2Concern
 
   # Constants
   
@@ -14,6 +15,7 @@ class Course < ActiveRecord::Base
 
   # validation macros
   validates :title, presence: true
+  select2_white_list :title
 
   # callbacks
 

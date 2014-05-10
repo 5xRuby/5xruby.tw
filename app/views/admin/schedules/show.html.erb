@@ -1,0 +1,14 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <th>屬性</th>
+    <th>值</th>
+  </thead>
+  <tbody>
+    <%= tr_for @admin_schedule, :id, [:stage, ->(s){ link_to(s.stage.course.title, admin_course_path(s.stage.course)) + " -> #{s.stage.title}" }], :date, :description %>
+  </tbody>
+</table>
+
+<div class="btn-group">
+  <%= link_to t('crud.edit'), edit_admin_schedule_path(@admin_schedule), class: 'btn btn-info btn-lg' %>
+  <%= link_to t('action.back'), admin_schedules_path, class: 'btn btn-default btn-lg' %>
+</div>
