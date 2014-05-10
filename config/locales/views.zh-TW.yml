@@ -44,7 +44,7 @@ zh-TW:
       detail: 詳細
     about:
       title: 關於
-      subtitle: 五倍的祝福，五倍的紅寶石...
+      subtitle: 五倍的祝福，五倍的紅寶石⋯⋯
       summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
       description: |
         ## 關於「五倍紅寶石」
@@ -64,7 +64,7 @@ zh-TW:
 
         我們最終的目的，是希望台灣越來越多的企業能了解，更多的採用 Ruby 這個優雅、有趣，並且極具生產力的程式語言做為主要開發工具，協助更多更好的想法與商業模式快速打造實現。
 
-        至於公司名稱為什麼是「五倍紅寶石」，不是三倍也不是一百倍? 這又是另一個有趣的故事了 :)
+        至於公司名稱為什麼是「五倍紅寶石」，不是三倍也不是一百倍? 這又是另一個有趣的故事了：）
 
         ### 我們的服務
         #### 技術諮詢
@@ -74,8 +74,6 @@ zh-TW:
         原本使用其它程式語言平台(例如 PHP、Java 或 ASP.net)，正考慮轉換到具備高速生產力的 Ruby/Rails 平台，但企業內部無相關技術能力可進行開發，我們有針對企業內部需求設計的一系列培訓計劃，將企業內部現有人才快速打造為專業 Ruby/Rails 開發團隊，可免去員工忠誠度以及企業文化磨合之困擾。
 
         #### 教育訓練
-        
-
       speciality: 專長
       members:
         - name: 高見龍
@@ -134,3 +132,5 @@ zh-TW:
       contacts: 聯絡我們
       about_5xruby: 關於五倍紅寶石
       about_us: 關於我們
+    application:
+      back_to_top: 至頂
