@@ -27,3 +27,7 @@
     </div>  <!-- End row-->    
   </div><!-- End container -->
 </section><!-- End main_content-->
+
+<% content_for :append_body do %>
+<%= render 'layouts/disqus_count' %>
+<% end %>

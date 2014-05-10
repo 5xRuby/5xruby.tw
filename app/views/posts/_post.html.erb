@@ -8,9 +8,9 @@
         <li><i class="icon-tags"></i>Tags <a href="#">Works</a> <a href="#">Personal</a></li>
       </ul>
     </div>
-    <div class="post-right"><i class="icon-comment"></i><a href="#">25 </a>Comments</div>
+    <% if action_name == 'index' %><div class="post-right"><i class="icon-comment"></i><%= link_to '', post_url(post, anchor: :disqus_thread) %></div><% end %>
   </div>
   <h2><%= link_to post.title, post, title: post.title %></h2>
-  <p><%= sanitize post.content %></p>
+  <%= sanitize post.content %>
   <%= link_to t('.read_more'), post, class: 'button_medium', title: post.title if action_name == 'index' %>
 </div><!-- end post -->
