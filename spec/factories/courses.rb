@@ -4,10 +4,10 @@ FactoryGirl.define do
   factory :course do
     image { Faker::Image.image }
     title { Faker::Name.title }
-    subtitle { Faker::Lorem.stentence }
-    summary { Faker::Lorem.paragraph }
-    description { Faker::Lorem.paragraph }
-    what_will_learn { Faker::Lorem.paragraph }
+    subtitle { Faker::Lorem.sentence }
+    summary { "<p>#{Faker::Lorem.paragraph}</p>" }
+    description { "<p>#{Faker::Lorem.paragraph}</p>" }
+    what_will_learn { "<p>#{Faker::Lorem.paragraph}</p>" }
 
     ignore do
       stages_count 6
