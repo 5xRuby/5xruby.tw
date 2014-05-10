@@ -1,5 +1,6 @@
 class Schedule < ActiveRecord::Base
   # scope macros
+  scope :available, -> { order(:date).where('date > ?', Time.now) }
 
   # Concerns macros
 
