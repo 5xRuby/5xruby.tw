@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :schedule do
     stage nil
-    date "2014-05-11"
-    description "MyText"
+    date { rand(1.month).from_now }
+    description { "<p>#{Faker::Lorem.paragraph}</p>" }
   end
 end

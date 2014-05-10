@@ -10,6 +10,7 @@ class Stage < ActiveRecord::Base
 
   # association macros
   belongs_to :course
+  has_many :schedules, -> { order(:date) }
 
   # validation macros
   validates :title, presence: true
