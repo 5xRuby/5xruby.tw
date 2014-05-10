@@ -3,10 +3,10 @@
     <div class="row">
       <div class="col-md-3 col-sm-3 hidden-xs text-center"><img src="/img/number_<%= index %>_small.png" alt="" ></div>
       <div class="col-md-9 col-sm-9">
-      <h3><em>Stage <%= number_to_human index %></em> <%= stage.title %></h3>
+      <h3><em>Stage <%= index  %></em> <%= stage.title %></h3>
         <%= stage.description %>
-        <%#ul class="data-lessons">
-          <li class="po-markup">
+        <ul class="data-lessons">
+          <%#li class="po-markup">
             <a class="po-link" href="javascript:void(0)" ><i class="icon-calendar"></i> Available dates</a>
             <div class="po-content hidden">
               <div class="po-title"><strong>Next dates</strong></div> <!-- ./po-title -->
@@ -14,17 +14,17 @@
                 <ul class="list_po_body"><li><i class="icon-ok"></i> 25 April 2014</li><li><i class="icon-ok"></i> 27 May 2014</li><li><i class="icon-ok"></i>28 August 2014</li></ul>
               </div><!-- ./po-body -->
             </div><!-- ./po-content -->
-          </li>
+          </li%>
           <li class="po-markup">
-            <a class="po-link" href="javascript:void(0)" ><i class="icon-clock"></i>Duration: 6 hours</a>
-            <div class="po-content hidden">
+            <a class="po-link" href="javascript:void(0)" ><i class="icon-clock"></i><%= Stage.human_attribute_name(:duration) %>： <%= '%.1f' % stage.duration %></a>
+            <%#div class="po-content hidden">
               <div class="po-title"><strong>Duration: 6 hours</strong></div> <!-- ./po-title -->
               <div class="po-body">
                 <p class="no_margin">Lorem ipsum dolor sit amet, has at illum dictas definitiones, ei primis indoctum torquatos nec. Vis te velit probatus, natum atomorum tincidunt nec an.</p>
               </div><!-- ./po-body -->
-            </div><!-- ./po-content -->
+            </div%><!-- ./po-content -->
           </li>
-          <li class="po-markup">
+          <%#li class="po-markup">
             <a class="po-link" href="javascript:void(0)" ><i class="icon-mic"></i>Audio doc</a>
             <div class="po-content hidden">
               <div class="po-title"><strong>Audio doc</strong></div> <!-- ./po-title -->
@@ -40,8 +40,8 @@
                 <p class="no_margin">Lorem ipsum dolor sit amet, has at illum dictas definitiones, ei primis indoctum torquatos nec. Vis te velit probatus, natum atomorum tincidunt nec an.</p>
               </div><!-- ./po-body -->
             </div><!-- ./po-content -->
-          </li>
-        </ul%>
+          </li%>
+        </ul>
         <%#a href="course_timeline.html" class="button_medium">Schedule</a%>
       </div>
 
