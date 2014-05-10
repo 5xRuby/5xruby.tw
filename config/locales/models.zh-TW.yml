@@ -34,4 +34,5 @@ zh-TW:
       stage:
         sort_id: 順序
         title: 標題
+        duration: 時數
         description: 介紹

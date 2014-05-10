@@ -73,7 +73,7 @@ class Admin::CoursesController < AdminController
     def admin_course_params
       params.require(:admin_course).permit(
         :image, :remove_image, :title, :subtitle, :summary, :description, :what_will_learn,
-        stages_attributes: %i[id _destroy sort_id title description]
+        stages_attributes: %i[id _destroy sort_id title duration description]
       )
     end
 end
