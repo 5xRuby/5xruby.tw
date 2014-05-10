@@ -44,6 +44,9 @@ zh-TW:
       view_all_courses: 瀏覽所有課程
       latest_courses: 最新課程
       latest_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
+    main_content:
+      next_courses: 近期課程
+      next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
     recent_course:
       detail: 詳細
     about:
