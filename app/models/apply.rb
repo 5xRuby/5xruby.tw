@@ -2,6 +2,7 @@ class Apply < ActiveRecord::Base
   # scope macros
 
   # Concerns macros
+  extend Enumerize
 
   # Constants
   
@@ -13,6 +14,7 @@ class Apply < ActiveRecord::Base
   belongs_to :schedule
 
   # validation macros
+  enumerize :gender, in: %i[male female]
 
   # callbacks
 

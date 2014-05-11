@@ -57,6 +57,8 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     diff-lcs (1.2.5)
+    enumerize (0.8.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.4.0)
@@ -197,6 +199,7 @@ DEPENDENCIES
   capistrano-rails
   carrierwave
   coffee-rails (~> 4.0.0)
+  enumerize
   factory_girl_rails
   faker
   jbuilder (~> 2.0)

@@ -20,6 +20,17 @@ zh-TW:
       stage_no: 第 %{stage} 堂
       available_dates: 開課日期
       next_dates: 下一堂
+  applies:
+    new:
+      progress: 進度
+      backward: 上一步
+      forward: 下一步
+    personal:
+      enter_your_personal_info: 輸入你的個人資料
+      enter_your_personal_info_detail: Lorem ipsum dolor sit amet, quidam semper duo ea. Modo menandri molestiae ad pri, ut nec falli consetetur.<br> Call the admission departement for support <strong>+0034 9423444</strong>
+    preferences:
+    message:
+      additional_message: 有想告訴我們的嗎？
   posts:
     index:
       title: 部落格

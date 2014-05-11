@@ -44,6 +44,7 @@ gem 'nested_form'
 gem 'settingslogic'
 gem 'rails-i18n'
 gem 'rmagick', require: 'RMagick'
+gem 'enumerize'
 
 # assets
 gem 'rails-assets-bootstrap'
