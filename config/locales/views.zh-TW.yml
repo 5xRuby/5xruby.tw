@@ -10,7 +10,7 @@ zh-TW:
       upcoming_courses_detail: Suspendisse quis risus turpis, ut pharetra arcu. Donec adipiscing, quam non faucibus luctus, mi arcu blandit diam, at faucibus mi ante vel augue.
     show:
       summary: 簡介
-      what_you_will_learn: 你會學到
+      what_you_will_learn: 你將會學到
   stages:
     stage:
       stage_no: 第 %{stage} 堂
@@ -20,11 +20,11 @@ zh-TW:
     index:
       title: 部落格
       subtitle: Ex utamur fierent tacimates nam, his duis choro an.
-      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
+      summary: Lorem ipsu ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
     show:
       title: 部落格
       subtitle: Ex utamur fierent tacimates nam, his duis choro an.
-      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
+      summary: Lorem ipsuen ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
     post:
       read_more: 更多內容
     sidebar:
@@ -35,16 +35,16 @@ zh-TW:
       items:
         - icon: icon-trophy
           title: 專業師資
-          description: Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+          description: 五倍紅寶石之成員及講師均是在業界或台灣 Ruby 社群的資深成員[待補充]
         - icon: icon-ok
-          title: Trusted Certifications
-          description: Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+          title: 技術諮詢、顧問
+          description: 從系統設計、規劃到開發，甚至到系統架設，我們都可以提供專業的建議與諮詢。
         - icon: icon-mic
-          title: +500 語音課程
-          description: Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+          title: 實戰課程
+          description: 從 Ruby 到 Rails，或是協同工作的工具 Git
         - icon: icon-video
-          title: +1,200 影音課程
-          description: Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.
+          title: 企業培訓
+          description: 我們針對企業內部原有開發人員設計了一系列培訓計劃，將企業內部現有人力快速打造為專業的 Ruby/Rails 開發團隊，可免去新進員工忠誠度以及企業文化磨合之困擾。
     main_content_gray:
       view_all_courses: 瀏覽所有課程
       latest_courses: 最新課程
@@ -56,7 +56,7 @@ zh-TW:
       detail: 詳細
     about:
       title: 關於
-      subtitle: 五倍的祝福，五倍的紅寶石⋯⋯
+      subtitle: 五倍祝福，五倍的紅寶石
       summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
       description: |
         ## 關於「五倍紅寶石」
