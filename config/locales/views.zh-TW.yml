@@ -11,6 +11,9 @@ zh-TW:
     show:
       summary: 簡介
       what_you_will_learn: 你將會學到
+    course:
+      apply: 我想報名
+      detail: 詳細資料
   stages:
     stage:
       stage_no: 第 %{stage} 堂
