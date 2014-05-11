@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :applies
+  end
+
   root 'pages#index'
   controller :pages do
     get :about, :contacts
