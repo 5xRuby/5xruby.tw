@@ -5,9 +5,9 @@ Rails.application.routes.draw do
     get :about, :contacts
   end
 
-  resources :posts, :courses, only: %i[index show]
-  resources :applies, only: %i[new create create] do
-    get :course, :message, :finish, on: :member
+  resources :posts
+  resources :courses, only: %i[index show] do
+    resources :applies, only: %i[new create]
   end
 
   # back
