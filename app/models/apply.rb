@@ -35,7 +35,6 @@ class Apply < ActiveRecord::Base
   # validation macros
   enumerize :gender, in: %i[male female]
   validates :first_name, :last_name, :email, presence: true
-  validates :message, format: {with: /xxx/}
 
   # callbacks
 
