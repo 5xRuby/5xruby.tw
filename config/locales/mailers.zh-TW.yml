@@ -2,3 +2,8 @@ zh-TW:
   contact_mailer:
     enquire:
       subject: 聯絡通知
+  apply_mailer:
+    notify_user:
+      subject: 感謝你的報名
+    notify_5xruby:
+      subject: 報名通知

@@ -8,6 +8,8 @@ class AppliesController < ApplicationController
   def create
     @apply = @course.applies.new(apply_params)
     if @apply.valid? && recaptcha? && @apply.save
+      ApplyMailer.notify_user(@apply).deliver
+      ApplyMailer.notify_5xruby(@apply).deliver
       redirect_to submit_course_applies_path(@course)
     else
       if recaptcha?
