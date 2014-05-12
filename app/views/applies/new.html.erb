@@ -18,11 +18,11 @@
 
       <%= form_for [@course, @apply], html: {id: :wrapped} do |f| %>
       <div id="middle-wizard">
-      <%#= render 'personal', f: f %>
+      <%= render 'personal', f: f %>
 
-      <%#= render 'preferences', f: f %>
+      <%= render 'preferences', f: f %>
 
-      <%#= render 'message', f: f %>
+      <%= render 'message', f: f %>
 
       <div class="submit step" id="complete">
         <i class="icon-check"></i>
