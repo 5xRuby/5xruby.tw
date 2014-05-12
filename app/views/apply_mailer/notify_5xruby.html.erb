@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th><%= Apply.human_attribute_name(:course) %></th>
+    <td><%= link_to @apply.course.title, course_url(@apply.course) %></td>
+  </tr>
+  <tr>
+    <th><%= Apply.human_attribute_name(:stage) %></th>
+    <td><%= @apply.stage.try(:title) %></td>
+  </tr>
+  <tr>
+    <th><%= Apply.human_attribute_name(:schedule) %></th>
+    <td><%= @apply.schedule.try(:date) %></td>
+  </tr>
+  <% %i[first_name last_name phone email age gender message].each do |attr_name| %>
+  <tr>
+    <th><%= Apply.human_attribute_name(attr_name) %></th>
+    <td><%= @apply.send(attr_name) %></td>
+  </tr>
+  <% end %>
+</table>
+
+<hr>
+
+<%= link_to '在後台檢視', admin_apply_url(@apply) %>
