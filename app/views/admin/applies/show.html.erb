@@ -1,0 +1,13 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <th>屬性</th>
+    <th>值</th>
+  </thead>
+  <tbody>
+    <%= tr_for @admin_apply, :id, [:course, :title], [:stage, :title], [:schedule, :date], :first_name, :last_name, :phone, :email, :age, :gender, :message %>
+  </tbody>
+</table>
+<div class="btn-group">
+  <%= link_to t('crud.edit'), edit_admin_apply_path(@admin_apply), class: 'btn btn-info btn-lg' %>
+  <%= link_to t('action.back'), admin_applies_path, class: 'btn btn-default btn-lg' %>
+</div>

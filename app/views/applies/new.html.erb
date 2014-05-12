@@ -1,0 +1,53 @@
+<% content_for :append_head do %>
+<!-- Toggle Switch -->
+<link rel="stylesheet" href="/css/jquery.switch.css">
+<link href="/check_radio/skins/square/aero.css" rel="stylesheet">
+<% end %>
+
+<section id="wizard_bg">
+  <div class="container">
+    <!-- Start Survey container -->
+    <div id="survey_container">
+
+
+      <div id="top-wizard">
+        <strong><%= t('.progress') %> </strong>
+        <div id="progressbar"></div>
+        <div class="shadow"></div>
+      </div><!-- end top-wizard -->
+
+      <%= form_for [@course, @apply], html: {id: :wrapped} do |f| %>
+      <div id="middle-wizard">
+      <%= render 'personal', f: f %>
+
+      <%= render 'preferences', f: f %>
+
+      <%= render 'message', f: f %>
+
+      <div class="submit step" id="complete">
+        <i class="icon-check"></i>
+        <h3><%= t('.apply_complete_thank_you_for_you_time') %></h3>
+        <%= f.button t('.submit_your_apply'), name: 'process', class: 'submit' %>
+      </div><!-- end submit step -->
+
+    </div><!-- end middle-wizard -->
+
+    <div id="bottom-wizard">
+      <button type="button" name="backward" class="backward"><%= t('.backward') %></button>
+      <button type="button" name="forward" class="forward"><%= t('.forward') %></button>
+    </div><!-- end bottom-wizard -->
+    <% end %>
+
+  </div><!-- end Survey container -->
+
+</div>
+</section><!-- end section main container -->
+
+<% content_for :append_body do %>
+<!-- Wizard-->
+<script src="/js/jquery-ui-1.8.12.min.js"></script>
+<script src="/js/jquery.wizard.js"></script>
+<script src="/js/jquery.validate.js"></script>
+<script src="/check_radio/jquery.icheck.js"></script>
+<script src="/js/wizard_func.js"></script>
+<% end %>

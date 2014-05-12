@@ -44,6 +44,7 @@ gem 'nested_form'
 gem 'settingslogic'
 gem 'rails-i18n'
 gem 'rmagick', require: 'RMagick'
+gem 'enumerize'
 
 # assets
 gem 'rails-assets-bootstrap'
@@ -53,6 +54,7 @@ gem 'rails-assets-select2'
 group :development do
   gem 'capistrano-rails'
   gem 'capistrano-flowdock'
+  gem 'annotate'
 end
 
 group :development, :test do

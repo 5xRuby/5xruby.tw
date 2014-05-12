@@ -28,6 +28,9 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    annotate (2.6.3)
+      activerecord (>= 2.3.0)
+      rake (>= 0.8.7)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
     capistrano (3.2.1)
@@ -57,6 +60,8 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     diff-lcs (1.2.5)
+    enumerize (0.8.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.4.0)
@@ -193,10 +198,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
   capistrano-flowdock
   capistrano-rails
   carrierwave
   coffee-rails (~> 4.0.0)
+  enumerize
   factory_girl_rails
   faker
   jbuilder (~> 2.0)

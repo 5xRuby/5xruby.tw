@@ -1,0 +1,55 @@
+<div class="step">
+  <div class="row">
+    <h3 class="col-md-10"><%= t('.enter_your_personal_info') %></h3>
+    <p class="col-md-12"><%= raw t('.enter_your_personal_info_detail') %></p>
+    <div class="col-md-6">
+      <ul class="data-list">
+      <li><div class="form-group"><%= f.text_field :first_name, class: 'required form-control', placeholder: Apply.human_attribute_name(:first_name) %><span class="input-icon"><i class="icon-user"></i></span></div></li>
+        <li><div class="form-group"><%= f.text_field :last_name, class: 'required form-control', placeholder: Apply.human_attribute_name(:last_name) %><span class="input-icon"><i class="icon-user"></i></span></div></li>
+        <li><div class="form-group"><%= f.text_field :email, class: 'required form-control', placeholder: Apply.human_attribute_name(:email) %><span class="input-icon"><i class="icon-email"></i></span></div></li>
+      </ul>
+    </div><!-- end col-md-6 -->
+
+    <div class="col-md-6">
+      <ul class="data-list" style="margin:0; padding:0;">
+        <li> <div class="form-group"> <%= f.text_field :phone, class: 'required form-control', placeholder: Apply.human_attribute_name(:phone) %><span class="input-icon"><i class="icon-phone"></i></span> </div> </li>
+        <%#li>
+          <div class="styled-select">
+            <select class="form-control required" name="country">
+              <option value="" selected>Select your country</option>
+              <option value="Europe">Europe</option>
+              <option value="Asia">Asia</option>
+              <option value="North America">North America</option>
+              <option value="South America">South America</option>
+            </select>
+          </div>
+        </li%>
+      </ul>
+
+      <ul class="data-list floated clearfix">
+        <li id="age"><%= f.number_field :age, class: 'form-control', placeholder: Apply.human_attribute_name(:age) %></li>
+        <li><%= f.radio_button :gender, :male, class: 'check_radio' %><label class="label_gender"> Male</label></li>
+        <li><%= f.radio_button :gender, :female, class: 'check_radio' %><label class="label_gender"> Female</label></li>
+      </ul>
+
+    </div><!-- end col-md-6 -->
+  </div><!-- end row -->
+
+  <%#div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <ul class="data-list" id="terms">
+        <li>
+          <strong>Do you accept <a href="#" data-toggle="modal" data-target="#terms-txt">terms and conditions</a> ?</strong>
+          <label class="switch-light switch-ios ">
+            <input type="checkbox" name="terms" class="required fix_ie8" value="yes">
+            <span>
+              <span class="ie8_hide">No</span>
+              <span>Yes</span>
+            </span>
+            <a></a>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div%>
+</div><!-- end step-->

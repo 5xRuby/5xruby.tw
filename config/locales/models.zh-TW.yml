@@ -11,7 +11,7 @@ zh-TW:
         first_name: 名字
         last_name: 姓氏
         email: 信箱
-        phone: 手機
+        phone: 電話
         message: 訊息
   attributes:
     image: 主圖
@@ -22,6 +22,7 @@ zh-TW:
       course: 課程
       stage: 階段
       schedule: 行程
+      apply: 報名
     attributes:
       post:
         title: 標題
@@ -43,3 +44,14 @@ zh-TW:
         stage: 課程階段
         date: 開課日期
         description: 介紹
+      apply:
+        course: 課程
+        stage: 課程階段
+        schedule: 課程日期
+        first_name: 名字
+        last_name: 姓氏
+        phone: 電話
+        email: 信箱
+        age: 年齡
+        gender: 性別
+        message: 訊息
