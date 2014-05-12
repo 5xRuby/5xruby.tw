@@ -1,0 +1,5 @@
+<h1><%= t('crud.new!', resource: Admin::Speaker.model_name.human) %></h1>
+
+<%= render 'form' %>
+<hr>
+<%= link_to t('action.back'), admin_speakers_path, class: 'btn btn-default btn-lg' %>

@@ -26,7 +26,7 @@ module AdminHelper
         uploader = if val.version_exists?(:preview) && val.preview.present? then val.preview
                    elsif val.version_exists?(:thumb) && val.thumb.present? then val.thumb
                    else val end
-        link_to image_tag(uploader, height: 100), uploader.url if uploader.present?
+        link_to image_tag(uploader, height: 100), val.url if uploader.present?
       else val
       end
     end

@@ -1,0 +1,8 @@
+<h1><%= t('crud.edit!', resource: Admin::Speaker.model_name.human) %></h1>
+
+<%= render 'form' %>
+<hr>
+<div class="btn-group">
+  <%= link_to t('crud.show'), @admin_speaker, class: 'btn btn-info btn-lg' %>
+  <%= link_to t('action.back'), admin_speakers_path, class: 'btn btn-default btn-lg' %>
+</div>
