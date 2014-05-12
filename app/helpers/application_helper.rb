@@ -29,7 +29,7 @@ module ApplicationHelper
   end
 
   def help_block record, attribute
-    @contact.errors.messages[attribute].map do |msg|
+    record.errors.messages[attribute].map do |msg|
       content_tag :p, msg, class: 'help-block'
     end.join.html_safe if record.errors[attribute].present?
   end

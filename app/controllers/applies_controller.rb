@@ -10,6 +10,7 @@ class AppliesController < ApplicationController
     if @apply.save
       redirect_to @course, notice: t('.your_apply_has_been_sent')
     else
+      flash.now[:alert] = t('.something_went_wrong')
       render :new
     end
   end

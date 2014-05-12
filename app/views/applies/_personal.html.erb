@@ -4,15 +4,15 @@
     <p class="col-md-12"><%= raw t('.enter_your_personal_info_detail') %></p>
     <div class="col-md-6">
       <ul class="data-list">
-      <li><div class="form-group"><%= f.text_field :first_name, class: 'required form-control', placeholder: Apply.human_attribute_name(:first_name) %><span class="input-icon"><i class="icon-user"></i></span></div></li>
-        <li><div class="form-group"><%= f.text_field :last_name, class: 'required form-control', placeholder: Apply.human_attribute_name(:last_name) %><span class="input-icon"><i class="icon-user"></i></span></div></li>
-        <li><div class="form-group"><%= f.text_field :email, class: 'required form-control', placeholder: Apply.human_attribute_name(:email) %><span class="input-icon"><i class="icon-email"></i></span></div></li>
+      <li><div class="form-group <%= has_error_class @apply, :first_name %>"><%= f.input_field :first_name, class: 'form-control', placeholder: Apply.human_attribute_name(:first_name) %><%= help_block @apply, :first_name %><span class="input-icon"><i class="icon-user"></i></span></div></li>
+        <li><div class="form-group <%= has_error_class @apply, :last_name %>"><%= f.input_field :last_name, class: 'form-control', placeholder: Apply.human_attribute_name(:last_name) %><%= help_block @apply, :last_name %><span class="input-icon"><i class="icon-user"></i></span></div></li>
+        <li><div class="form-group <%= has_error_class @apply, :email %>"><%= f.input_field :email, class: 'form-control', placeholder: Apply.human_attribute_name(:email) %><%= help_block @apply, :email %><span class="input-icon"><i class="icon-email"></i></span></div></li>
       </ul>
     </div><!-- end col-md-6 -->
 
     <div class="col-md-6">
       <ul class="data-list" style="margin:0; padding:0;">
-        <li> <div class="form-group"> <%= f.text_field :phone, class: 'required form-control', placeholder: Apply.human_attribute_name(:phone) %><span class="input-icon"><i class="icon-phone"></i></span> </div> </li>
+        <li> <div class="form-group <%= has_error_class @apply, :phone %>"> <%= f.input_field :phone, class: 'form-control', placeholder: Apply.human_attribute_name(:phone) %><%= help_block @apply, :phone %><span class="input-icon"><i class="icon-phone"></i></span> </div> </li>
         <%#li>
           <div class="styled-select">
             <select class="form-control required" name="country">
@@ -27,7 +27,7 @@
       </ul>
 
       <ul class="data-list floated clearfix">
-        <li id="age"><%= f.number_field :age, class: 'form-control', placeholder: Apply.human_attribute_name(:age) %></li>
+        <li id="age"><%= f.input_field :age, as: :integer, class: 'form-control', placeholder: Apply.human_attribute_name(:age) %></li>
         <li><%= f.radio_button :gender, :male, class: 'check_radio' %><label class="label_gender"> Male</label></li>
         <li><%= f.radio_button :gender, :female, class: 'check_radio' %><label class="label_gender"> Female</label></li>
       </ul>
