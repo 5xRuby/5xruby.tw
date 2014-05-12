@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :courses, only: %i[index show] do
-    resources :applies, only: %i[new create]
+    resources :applies, only: %i[new create] do
+      get :submit, on: :collection
+    end
   end
 
   # back

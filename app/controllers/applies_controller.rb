@@ -8,7 +8,7 @@ class AppliesController < ApplicationController
   def create
     @apply = @course.applies.new(apply_params)
     if @apply.valid? && recaptcha? && @apply.save
-      redirect_to @course, notice: t('.your_apply_has_been_sent')
+      redirect_to submit_course_applies_path(@course)
     else
       if recaptcha?
         flash.now[:alert] = t('.something_went_wrong')
@@ -18,6 +18,9 @@ class AppliesController < ApplicationController
       end
       render :new
     end
+  end
+
+  def submit
   end
 
   private

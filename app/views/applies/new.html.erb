@@ -18,35 +18,22 @@
 
       <%= simple_form_for [@course, @apply], html: {id: :wrapped} do |f| %>
       <div id="middle-wizard">
-      <%= render 'personal', f: f %>
+        <%= render 'personal', f: f %>
 
-      <%= render 'preferences', f: f %>
+        <%= render 'preferences', f: f %>
 
-      <%= render 'message', f: f %>
+        <%= render 'message', f: f %>
+      </div><!-- end middle-wizard -->
 
-      <div class="submit step" id="complete">
-        <i class="icon-check"></i>
-        <h3><%= t('.apply_complete_thank_you_for_you_time') %></h3>
-        <div class="row">
-          <div class="col-sm-offset-3 col-sm-6">
-            <%= render 'layouts/recaptcha' %>
-          </div>
-        </div>
-        <div class="has-error"><%= help_block @apply, :base %></div>
-        <%= f.button :button, t('.submit_your_apply'), name: 'process', class: 'submit' %>
-      </div><!-- end submit step -->
+      <div id="bottom-wizard">
+        <button type="button" name="backward" class="backward"><%= t('.backward') %></button>
+        <button type="button" name="forward" class="forward"><%= t('.forward') %></button>
+      </div><!-- end bottom-wizard -->
+      <% end %>
 
-    </div><!-- end middle-wizard -->
+    </div><!-- end Survey container -->
 
-    <div id="bottom-wizard">
-      <button type="button" name="backward" class="backward"><%= t('.backward') %></button>
-      <button type="button" name="forward" class="forward"><%= t('.forward') %></button>
-    </div><!-- end bottom-wizard -->
-    <% end %>
-
-  </div><!-- end Survey container -->
-
-</div>
+  </div>
 </section><!-- end section main container -->
 
 <% content_for :append_body do %>
