@@ -20,6 +20,7 @@ zh-TW:
       stage: 階段
       schedule: 行程
       apply: 報名
+      speaker: 講師
     attributes:
       post:
         title: 標題
@@ -52,3 +53,9 @@ zh-TW:
         age: 年齡
         gender: 性別
         message: 訊息
+      speaker:
+        name: 名字
+        summary: 簡介
+        avatar: 照片
+        is_online: 上線
+        remove_avatar: 刪除圖片

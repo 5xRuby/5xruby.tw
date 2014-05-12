@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :speakers
+  end
+
   # front
   root 'pages#index'
   controller :pages do
@@ -15,7 +19,7 @@ Rails.application.routes.draw do
   # back
   namespace :admin do
     root to: :dashboard
-    resources :posts, :courses, :schedules, :applies
+    resources :posts, :courses, :schedules, :applies, :speakers
   end
 
   # plugins

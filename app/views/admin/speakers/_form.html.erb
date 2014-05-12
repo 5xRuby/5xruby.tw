@@ -1,0 +1,14 @@
+<%= simple_form_for(@admin_speaker, wrapper: :horizontal_form, html: {class: 'form-horizontal'}) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :avatar %>
+    <%= f.input :remove_avatar, as: :boolean %>
+    <%= f.input :name %>
+    <%= f.input :summary %>
+    <%= f.input :is_online %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
+  </div>
+<% end %>
