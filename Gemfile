@@ -54,6 +54,7 @@ gem 'rails-assets-select2'
 group :development do
   gem 'capistrano-rails'
   gem 'capistrano-flowdock'
+  gem 'annotate'
 end
 
 group :development, :test do
