@@ -18,7 +18,7 @@ module AdminHelper
       when Proc
         attribute[1].call(record)
       when Symbol
-        link_to association.send(attribute[1]), association rescue association.send(attribute[1])
+        link_to association.send(attribute[1]), association rescue association.send(attribute[1]) if association.present?
       end
     when Symbol
       case val = record.send(attribute)
