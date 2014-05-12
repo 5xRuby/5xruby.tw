@@ -12,6 +12,7 @@ class Course < ActiveRecord::Base
   # association macros
   has_many :stages, -> { order('sort_id') }, dependent: :destroy
   accepts_nested_attributes_for :stages, allow_destroy: true, reject_if: proc { |attributes| attributes[:title].blank? }
+  has_many :schedules, through: :stages
   has_many :applies
 
   # validation macros

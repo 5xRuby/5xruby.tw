@@ -6,17 +6,14 @@
       <ul class="data-list">
       <li><div class="form-group"><%= f.text_field :first_name, class: 'required form-control', placeholder: Apply.human_attribute_name(:first_name) %><span class="input-icon"><i class="icon-user"></i></span></div></li>
         <li><div class="form-group"><%= f.text_field :last_name, class: 'required form-control', placeholder: Apply.human_attribute_name(:last_name) %><span class="input-icon"><i class="icon-user"></i></span></div></li>
+        <li><div class="form-group"><%= f.text_field :email, class: 'required form-control', placeholder: Apply.human_attribute_name(:email) %><span class="input-icon"><i class="icon-email"></i></span></div></li>
       </ul>
     </div><!-- end col-md-6 -->
 
     <div class="col-md-6">
       <ul class="data-list" style="margin:0; padding:0;">
-        <li><div class="form-group"><%= f.text_field :email, class: 'required form-control', placeholder: Apply.human_attribute_name(:email) %><span class="input-icon"><i class="icon-email"></i></span></div></li>
-      </ul>
-
-      <%#ul class="data-list" style="margin:0; padding:0;">
-        <li> <div class="form-group"> <input type="text" name="phone2" class="required form-control" placeholder="Your phone number"><span class="input-icon"><i class="icon-phone"></i></span> </div> </li>
-        <li>
+        <li> <div class="form-group"> <%= f.text_field :phone, class: 'required form-control', placeholder: Apply.human_attribute_name(:phone) %><span class="input-icon"><i class="icon-phone"></i></span> </div> </li>
+        <%#li>
           <div class="styled-select">
             <select class="form-control required" name="country">
               <option value="" selected>Select your country</option>
@@ -26,8 +23,8 @@
               <option value="South America">South America</option>
             </select>
           </div>
-        </li>
-      </ul%>
+        </li%>
+      </ul>
 
       <ul class="data-list floated clearfix">
         <li id="age"><%= f.number_field :age, class: 'form-control', placeholder: Apply.human_attribute_name(:age) %></li>

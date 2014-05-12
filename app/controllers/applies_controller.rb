@@ -8,7 +8,7 @@ class AppliesController < ApplicationController
   def create
     @apply = @course.applies.new(apply_params)
     if @apply.save
-      redirect_to @course
+      redirect_to @course, notice: t('.your_apply_has_been_sent')
     else
       render :new
     end
