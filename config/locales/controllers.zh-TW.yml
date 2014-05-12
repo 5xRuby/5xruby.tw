@@ -5,4 +5,4 @@ zh-TW:
       mail_sent_successfully: 成功寄出
   applies:
     create:
-      your_apply_has_been_sent: 你的報名已成功送出，感謝你的填寫
+      something_went_wrong: 出錯了

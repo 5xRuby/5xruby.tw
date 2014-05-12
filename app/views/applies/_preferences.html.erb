@@ -32,9 +32,10 @@
       var stage_class = '.stage_' + stage_id;
       $(stage_class).show();
       $('#schedules li').not(stage_class).hide();
+      if(stage_id.length == 0) $('#schedules input').iCheck('uncheck');
     }
-    $('#stages input:radio').on('ifChecked', update_schedules)
-    update_schedules()
+    $('#stages input:radio').on('ifChecked', update_schedules);
+    $(update_schedules);
   }).call()
 </script>
 <% end %>
