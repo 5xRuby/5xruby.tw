@@ -29,8 +29,8 @@ zh-TW:
       apply_complete_thank_you_for_you_time: 表單已送出，感謝你的填寫！
       back_to_course: 回到課程頁
     personal:
-      enter_your_personal_info: 輸入你的個人資料
-      enter_your_personal_info_detail: Lorem ipsum dolor sit amet, quidam semper duo ea. Modo menandri molestiae ad pri, ut nec falli consetetur.<br> Call the admission departement for support <strong>+0034 9423444</strong>
+      enter_your_personal_info: 請填寫報名資料
+      enter_your_personal_info_detail: 請填寫您的個人資料，我們對您的Lorem ipsum dolor sit amet, quidam semper duo ea. Modo menandri molestiae ad pri, ut nec falli consetetur.<br> 如有任何疑問歡迎來信詢問，或是來電 <strong>+886 928 617 687</strong>
     preferences:
     message:
       additional_message: 有想告訴我們的嗎？
