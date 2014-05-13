@@ -7,23 +7,23 @@
     <meta charset="utf-8">
     <title><%= t('company.name') %></title>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
+
     <!-- Favicons-->
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
     <link rel="apple-touch-icon" type="image/x-icon" href="/img/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="/img/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="/img/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="/img/apple-touch-icon-144x144-precomposed.png">
-    
+
     <!-- CSS -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/superfish.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/fontello/css/fontello.css" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -40,7 +40,7 @@
 
     <div id="toTop"><%= t('.back_to_top') %></div>
 
-    <!-- OTHER JS --> 
+    <!-- OTHER JS -->
     <script src="/js/superfish.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/retina.min.js"></script>

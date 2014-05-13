@@ -1,5 +1,5 @@
 /*
-Theme Name: 
+Theme Name:
 Theme URI: http://www.ansonika.com/learn/
 Author: Ansonika
 Author URI: http://themeforest.net/user/Ansonika/
@@ -15,12 +15,12 @@ CSS STRUCTURE:
 /*============================================================================================*/
 /* 1.  SITE STRUCTURE and TYPOGRAPHY */
 /*============================================================================================*/
-/* Fonts and Icons */
+/* Fonts and Icons
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 @import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
 @import url('http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
 @import url('http://fonts.googleapis.com/css?family=Lato:400,700,900');
-
+*/
 
 /* Structure */
 body {
@@ -349,11 +349,11 @@ a.button_top {
 	color:#fff;
 	font-size:11px;
 	padding:5px 16px 2px 16px;
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
-	-o-transition: background .5s ease; 
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
 	display:inline-block;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -368,7 +368,7 @@ a.button_top#apply {
 	border:none;
 	margin-top:5px;
 	background: #F66;
-	
+
 }
 a.button_top:hover {background:#30d9a4; color:#fff;}
 
@@ -377,11 +377,11 @@ a.button_medium, .button_medium {
 	background:#30d9a4;
 	color:#fff;
 	padding:7px 12px;
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
-	-o-transition: background .5s ease; 
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
 	display:inline-block;
 	cursor:pointer;
 	outline:none;
@@ -397,11 +397,11 @@ a.button_subscribe, .button_subscribe {
 	background:#ffd200;
 	color:#fff;
 	padding:12px 20px;
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
-	-o-transition: background .5s ease; 
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
 	display:inline-block;
 	cursor:pointer;
 	outline:none;
@@ -417,11 +417,11 @@ a.button_subscribe_green, .button_subscribe_green {
 	background:#30d9a4;
 	color:#fff;
 	padding:12px 20px;
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
-	-o-transition: background .5s ease; 
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
 	display:inline-block;
 	cursor:pointer;
 	outline:none;
@@ -438,11 +438,11 @@ a.button_medium_outline, .button_medium_outline {
 	color:#1dd7b2;
 	border:2px solid #1dd7b2;
 	padding:5px 10px;
-	text-decoration:none; 
-	transition: .5s ease; 
-	-moz-transition: .5s ease; 
-	-webkit-transition:.5s ease; 
-	-o-transition: .5s ease; 
+	text-decoration:none;
+	transition: .5s ease;
+	-moz-transition: .5s ease;
+	-webkit-transition:.5s ease;
+	-o-transition: .5s ease;
 	display:inline-block;
 	cursor:pointer;
 	outline:none;
@@ -460,11 +460,11 @@ a.button_big, .button_big{
 	font-size:30px;
 	line-height:32px;
 	padding:20px 50px;
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
-	-o-transition: background .5s ease; 
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
 	display:inline-block;
 	cursor:pointer;
 	outline:none;
@@ -480,11 +480,11 @@ a.button_big:hover, .button_big:hover {background:#262c2d;}
 	color:#fff;
 	outline:none;
 	padding:2px 8px;
-	margin-bottom:15px; 
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
+	margin-bottom:15px;
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
 	-o-transition: background .5s ease;
 	display:inline-block;
 	cursor:pointer;
@@ -500,11 +500,11 @@ a.button_fullwidth, .button_fullwidth {
 	color:#fff;
 	outline:none;
 	padding:7px 12px;
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
-	-o-transition: background .5s ease; 
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
 	display:block;
 	width:100%;
 	cursor:pointer;
@@ -523,11 +523,11 @@ a.button_fullwidth-2, .button_fullwidth-2 {
 	outline:none;
 	text-align:center;
 	padding:7px 12px;
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
-	-o-transition: background .5s ease; 
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
 	display:block;
 	width:100%;
 	cursor:pointer;
@@ -544,10 +544,10 @@ a.button_fullwidth-2:hover, .button_fullwidth-2:hover  {background:#262c2d; colo
 	color:#1dd7b2;
 	outline:none;
 	padding:13px 24px 13px 24px;
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
 	-o-transition: background .5s ease;
 	display:inline-block;
 	cursor:pointer;
@@ -556,7 +556,7 @@ a.button_fullwidth-2:hover, .button_fullwidth-2:hover  {background:#262c2d; colo
 	text-transform:uppercase;
 	-webkit-font-smoothing: antialiased;
 	outline:none;
-	
+
 }
 .button_outline:hover, a.button_outline:hover {background:#1dd7b2; color:#fff;}
 
@@ -570,10 +570,10 @@ a.button_fullwidth-2:hover, .button_fullwidth-2:hover  {background:#262c2d; colo
 	color:#fff;
 	outline:none;
 	padding:2px 8px 0 8px;
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
 	-o-transition: background .5s ease;
 	cursor:pointer;
 	font-weight:600;
@@ -588,11 +588,11 @@ a.button_fullwidth-2:hover, .button_fullwidth-2:hover  {background:#262c2d; colo
 	border:none;
 	color:#fff;
 	padding:7px 20px;
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
-	-o-transition: background .5s ease; 
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
 	display:inline-block;
 	cursor:pointer;
 	font-weight:600;
@@ -600,9 +600,9 @@ a.button_fullwidth-2:hover, .button_fullwidth-2:hover  {background:#262c2d; colo
 	outline:none;
 	background:#282828;
 	position:relative;
-   } 
-   
-.backward {padding:7px 20px 7px 30px;} 
+   }
+
+.backward {padding:7px 20px 7px 30px;}
 
  button[disabled].backward, button[disabled].forward {
 	border:none;
@@ -611,7 +611,7 @@ a.button_fullwidth-2:hover, .button_fullwidth-2:hover  {background:#262c2d; colo
 }
 
 .backward:before {
-	 content: "\f053"; 
+	 content: "\f053";
     font-family: FontAwesome;
     text-decoration: inherit;
     position: absolute;
@@ -620,11 +620,11 @@ a.button_fullwidth-2:hover, .button_fullwidth-2:hover  {background:#262c2d; colo
     left: 20px;
 	text-transform:none;
 	font-size:9px
-   } 
- 
-.forward {padding:7px 30px 7px 20px;}  
+   }
+
+.forward {padding:7px 30px 7px 20px;}
    .forward:before {
-	 content: "\f054"; 
+	 content: "\f054";
     font-family: FontAwesome;
     text-decoration: inherit;
     position: absolute;
@@ -633,8 +633,8 @@ a.button_fullwidth-2:hover, .button_fullwidth-2:hover  {background:#262c2d; colo
     right: 20px;
 	text-transform:none;
 	font-size:9px
-   } 
-   
+   }
+
 .backward:hover, .forward:hover {background:#00aeef; color:#fff;}
 
 /*============================================================================================*/
@@ -684,7 +684,7 @@ a.button_fullwidth-2:hover, .button_fullwidth-2:hover  {background:#262c2d; colo
 }
 .feature i{
 	margin:0;
-	position:absolute; 
+	position:absolute;
 	top:0;
 	left:0;
 	padding:0;
@@ -703,7 +703,7 @@ a.button_fullwidth-2:hover, .button_fullwidth-2:hover  {background:#262c2d; colo
 
 #main-features_green .feature i{
 	margin:0;
-	position:absolute; 
+	position:absolute;
 	top:0;
 	left:0;
 	padding:0;
@@ -867,7 +867,7 @@ a.button_fullwidth-2:hover, .button_fullwidth-2:hover  {background:#262c2d; colo
 	margin-left:5px;
 	margin-right:5px;
 	}
-.adv_search a{ 
+.adv_search a{
  -webkit-border-top-left-radius: 3px;-webkit-border-top-right-radius: 3px; -moz-border-radius-topleft: 3px;-moz-border-radius-topright: 3px;border-top-left-radius: 3px;border-top-right-radius: 3px;
 position:absolute; left:10px; top:-15px; background-color:#f8f8f8; padding:0px 10px; font-size:11px; color:#333; margin:0;}
 .adv_search a:hover{ color:#fff; background:#488dc6;}
@@ -1064,10 +1064,10 @@ ul.social_team li{
 	display: block;
 	height: 40px;
 	}
-.widget_nav_menu {	
+.widget_nav_menu {
 	min-height:100%;
 	height:100%;
-	text-align:center;	
+	text-align:center;
 }
 .project-item-image-container {
 	border: none;
@@ -1100,7 +1100,7 @@ ul.social-bookmarks.team {float:none; margin:0; padding:0; margin:auto; display:
 	margin-bottom:30px;
 }
 .question_box:before {
-    content: "\ec7e"; 
+    content: "\ec7e";
    font-family: 'fontello';
     font-style: normal;
     font-weight: normal;
@@ -1249,11 +1249,11 @@ border-radius: 0;
 	border:2px solid  #8dc63f;
 	color:#8dc63f;
 	padding:15px 35px;
-	text-decoration:none; 
-	transition: background .5s ease; 
-	-moz-transition: background .5s ease; 
-	-webkit-transition: background .5s ease; 
-	-o-transition: background .5s ease; 
+	text-decoration:none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
 	display:inline-block;
 	cursor:pointer;
 	font-weight:600;
@@ -1263,35 +1263,35 @@ border-radius: 0;
 }
 #complete button:hover{background:#00aeef; color:#fff; border:2px solid  #00aeef;}
 
-/** Floated inputs: ex the gender radio ==================== **/   
+/** Floated inputs: ex the gender radio ==================== **/
 ul.floated {
 	padding:0;
 	margin:0 0 0 0;
-   }   
+   }
 ul.floated li {
 	float:left;
 	margin:0; padding:0;
 	width:27%;
-   } 
+   }
  label.label_gender {padding-left:50px; line-height:42px;}
- 
+
  ul.floated li#age {
 	 width:100px;
 	 margin-right:55px;
-   } 
+   }
 
 ul.data-list{
 	padding:0;
 	margin:0;
 	list-style:none;
 	margin-bottom:30px;
-	} 
+	}
 ul.data-list-2{
 	list-style:none;
 	padding-left:0;
 	margin-left:0;
-	} 
-ul.data-list li {position:relative;  } 
+	}
+ul.data-list li {position:relative;  }
 
 ul.data-list-2 li {
 	   position:relative;
@@ -1300,7 +1300,7 @@ ul.data-list-2 li {
 	   width:100%;
 	   display:block;
    }
-   
+
 ul.data-list-2 li label {
 	float:left;
 	margin-left:60px;
@@ -1308,7 +1308,7 @@ ul.data-list-2 li label {
 	font-weight:400;
 	margin-top:9px;
 	line-height:22px;
-   }  
+   }
 
 ul.data-list#terms  {
 	font-weight:400;
@@ -1317,12 +1317,12 @@ ul.data-list#terms  {
 	font-size:12px;
 	padding:0;
 	text-align:center;
-   }  
+   }
 
 
-/** Errors validation styles and position ==================== **/   
+/** Errors validation styles and position ==================== **/
 
-/** Common style**/   
+/** Common style**/
 label.error{
 	font-size:11px;
 	position: absolute;
@@ -1335,7 +1335,7 @@ label.error{
 	color:#fff;
 	font-weight:normal;
 	padding:0 6px;
-   } 
+   }
   label.error:after {
 	content: '';
 	position: absolute;
@@ -1347,21 +1347,21 @@ label.error{
 	z-index: 1;
 	bottom: -6px;
 	left: 20%;
-   } 
-   
+   }
+
 .styled-select label.error{overflow:visible;}
 
-ul.floated li#age label.error {right:-15px;} 
+ul.floated li#age label.error {right:-15px;}
 
-ul.floated li label.error{right:-50px;} 
+ul.floated li label.error{right:-50px;}
 
 ul.data-list#terms li label.error {
 	left:45%;
 	display:inline-block;
 	width:80px;
-   } 
+   }
 
-/** Error styles for survey questions**/   
+/** Error styles for survey questions**/
 ul.data-list-2 li label.error {
 	   	font-size:11px;
 	   	position: absolute;
@@ -1375,7 +1375,7 @@ ul.data-list-2 li label.error {
 		color:#fff;
 		font-weight:normal;
 		padding:0 6px;
-   }  
+   }
 
 /* #course details
 ================================================ */
@@ -1443,14 +1443,14 @@ ul.data-lessons li a.button_red_small{
 	line-height:33px;
 	background: #ededed url(../img/tag_bg.png) no-repeat 91% center;
 	padding:0 28px 0 11px;
-	color:#646464;	
+	color:#646464;
 	-webkit-border-top-right-radius: 20px;
 	-webkit-border-bottom-right-radius: 20px;
 	-moz-border-radius-topright: 20px;
 	-moz-border-radius-bottomright: 20px;
 	border-top-right-radius: 20px;
 	border-bottom-right-radius: 20px;
-	transition: background .5s ease; 
+	transition: background .5s ease;
 }
 .tags a:hover {
 	background-color:#099ad1;
@@ -1514,12 +1514,12 @@ ul.recent_post li:last-child{
 }
 #comments {
 	padding:10px 0 0px 0;
-	margin-bottom:15px;	
+	margin-bottom:15px;
 }
 #comments ul {
 	padding:0;
 	margin:0;
-	list-style:none;	
+	list-style:none;
 }
 #comments ol {
 	padding:0;
@@ -1533,12 +1533,12 @@ ul.recent_post li:last-child{
 .avatar {
 	float:left;
 	margin-right:11px;
-	
+
 }
 .avatar img {
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
-	border-radius:3px;	
+	border-radius:3px;
 }
 .comment_right {display:table;	}
 .comment_info {padding-bottom:7px;}
@@ -1632,8 +1632,8 @@ ul#follow_us_contacts  li a:hover i{
 	border:1px solid #ededed;
 	margin-bottom:25px;
 
-   } 
-   
+   }
+
    .styled-select select::-ms-expand, .styled-select-2 select::-ms-expand {
     display: none;
 	}
@@ -1688,7 +1688,7 @@ input.form-control:focus, textarea.form-control:focus, select.form-control:focus
 }
 /* Newsletter */
 input.form-control#email_newsletter {
-margin-bottom:0; 
+margin-bottom:0;
 background-color:#262626;
 border:none;
 height:52px;
@@ -1719,7 +1719,7 @@ label.error{
 	color:#fff;
 	font-weight:600;
 	padding:0 6px;
-   } 
+   }
   label.error:after {
 	content: '';
 	position: absolute;
@@ -1731,7 +1731,7 @@ label.error{
 	z-index: 1;
 	bottom: -6px;
 	left: 20%;
-   } 
+   }
   .login-or {
     position: relative;
     font-size: 18px;
@@ -1897,7 +1897,7 @@ ul.plan-features{
 .ribbon {
 	width:99px;
 	height:97px;
-	position:absolute; 
+	position:absolute;
 	left:-7px;
 	top:-7px;
 	display:block;
@@ -2059,7 +2059,7 @@ img.speaker {
 /* End carousel */
 
 .item blockquote {
-    border-left: none; 
+    border-left: none;
     margin: 0;
 }
 
@@ -2076,18 +2076,18 @@ img.speaker {
 
 
 #toTop {width:100px;border:1px solid #ccc;background:#f7f7f7;text-align:center;padding:5px;position:fixed; bottom:10px;right:10px;cursor:pointer; display:none;color:#333;font-size:11px;}
-.img-circle.styled { 
+.img-circle.styled {
 	background-color:#ededed;
-	-moz-box-shadow: 0px 0px 0px 5px #ededed; 
-	-webkit-box-shadow: 0px 0px 0px 5px #ededed; 
+	-moz-box-shadow: 0px 0px 0px 5px #ededed;
+	-webkit-box-shadow: 0px 0px 0px 5px #ededed;
 	box-shadow: 0px 0px 0px 5px #ededed;
 	margin:auto;
 }
 
-/** Collapse **/   
+/** Collapse **/
 .panel-title a {display:block;}
 
-/** List styles **/ 
+/** List styles **/
 ul.latest_news {
 	list-style:none;
 	margin:0 0 0 0;
@@ -2306,12 +2306,12 @@ html #boxed  {width:760px;}
     }
 
 }
-	
+
 /* From tablet portrait to mobile */
 @media (max-width: 767px)  {
 	html #boxed  {width:100%}
     #quote-carousel .carousel-indicators {
-        bottom: -20px !important;  
+        bottom: -20px !important;
     }
     #quote-carousel .carousel-indicators li {
         display: inline-block;
@@ -2327,7 +2327,7 @@ html #boxed  {width:760px;}
 input.form-control#email_newsletter {
 width:80%;
 margin:auto;
-margin-bottom:15px; 
+margin-bottom:15px;
 }
 #apply{margin-right:40px;}
 #login_top{margin-right:40px;}
@@ -2335,15 +2335,15 @@ margin-bottom:15px;
 #top-wizard {padding:15px 6s0px;}
 #middle-wizard {padding: 20px 30px 20px 30px;}
 
-ul.floated li#age {margin-bottom:-10px; } 
-   
+ul.floated li#age {margin-bottom:-10px; }
+
 ul.floated li {
 	float:none;
 	margin:0; padding:0;
 	width:50%;
 	padding-bottom:10px;
    }
-.col-md-4.plan:first-child, 
+.col-md-4.plan:first-child,
 .col-md-4.plan:last-child {
 		margin-right: 0px;
 		margin-left: 0px;
@@ -2385,7 +2385,7 @@ p.lead.boxed{
 	font-size:50px;
 	margin-top:0;
 }
-}	
+}
 
 /* Mobile portrait */
 @media (max-width: 480px) {
@@ -2441,12 +2441,12 @@ footer h3 {
 	width:50px;
 	padding:0;
 	height:40px;
-   } 
+   }
 .backward:before, .forward:before, button[disabled].backward:before, button[disabled].forward:before {
 	text-indent:0;
 	top:12px;
 	font-size:16px;
-   } 
+   }
 #complete{padding: 0 25px 15px 25px;}
 #complete h3{ font-size:18px; margin-bottom:20px}
 #complete i {font-size:80px;padding:0;}
