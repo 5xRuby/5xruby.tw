@@ -24,7 +24,11 @@
         <td class="col-sm-2">
           <ul>
             <% stage.schedules.each do |schedule| %>
-            <li><%= link_to schedule.date, [:admin, schedule] %></li>
+            <li>
+              <%= link_to [:admin, schedule] do %>
+                <%= schedule.date %> <span class="badge"><%= schedule.applies.size %></span>
+              <% end %>
+            </li>
             <% end %>
           </ul>
         </td>

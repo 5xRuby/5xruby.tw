@@ -20,6 +20,7 @@ FactoryGirl.define do
     course nil
     title { Faker::Name.title }
     description { Faker::Lorem.paragraph }
+    duration { rand(20) / 10.0 }
 
     ignore do
       schedules_count 3

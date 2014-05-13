@@ -13,7 +13,7 @@
     <h3 id="stage_title"></h3>
     <p id="stage_description"></p>
     <ul id="schedules" class="data-list-2 clearfix">
-      <% @course.schedules.available.each do |schedule| %>
+      <% @course.schedules.includes(:stage).available.each do |schedule| %>
       <%= content_tag :li, class: "stage_#{schedule.stage.id}" do %>
       <%= f.radio_button :schedule_id, schedule.id, class: 'check_radio' %><label> <%= schedule.date %></label>
       <% end %>

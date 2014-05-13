@@ -45,12 +45,12 @@ gem 'settingslogic'
 gem 'rails-i18n'
 gem 'rmagick', require: 'RMagick'
 gem 'enumerize'
+gem 'rack-mini-profiler'
 
 # assets
 gem 'rails-assets-bootstrap'
 gem 'rails-assets-jquery-ui'
 gem 'rails-assets-select2'
-
 gem 'font-awesome-sass'
 
 group :development do

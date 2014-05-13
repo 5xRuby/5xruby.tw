@@ -4,7 +4,7 @@ class Admin::SchedulesController < AdminController
   # GET /admin/schedules
   # GET /admin/schedules.json
   def index
-    @admin_schedules = Admin::Schedule.all.order('id DESC').page(params[:page])
+    @admin_schedules = Admin::Schedule.includes(:applies, stage: :course).order('id DESC').page(params[:page])
   end
 
   # GET /admin/schedules/1

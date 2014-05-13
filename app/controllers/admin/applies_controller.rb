@@ -4,7 +4,7 @@ class Admin::AppliesController < AdminController
   # GET /admin/applies
   # GET /admin/applies.json
   def index
-    @admin_applies = Admin::Apply.all.order('id DESC').page(params[:page])
+    @admin_applies = Admin::Apply.includes(:course, :stage, :schedule).order('id DESC').page(params[:page])
   end
 
   # GET /admin/applies/1

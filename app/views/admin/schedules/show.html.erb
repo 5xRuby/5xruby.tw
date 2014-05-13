@@ -8,6 +8,30 @@
   </tbody>
 </table>
 
+<div class="page-header"><h2><%= Apply.model_name.human %></h2></div>
+
+<table class="table">
+  <thead>
+    <th></th>
+    <%= th_for Apply, :id, :first_name, :last_name, :phone, :email, :age, :gender, :message %>
+  </thead>
+  <tbody>
+    <% @admin_schedule.applies.each do |apply| %>
+      <tr>
+        <td><%= link_to content_tag(:i, nil, class: 'glyphicon glyphicon-link'), apply %></td>
+        <td><%= apply.id %></td>
+        <td><%= apply.first_name %></td>
+        <td><%= apply.last_name %></td>
+        <td><%= apply.phone %></td>
+        <td><%= apply.email %></td>
+        <td><%= apply.age %></td>
+        <td><%= apply.gender %></td>
+        <td><%= apply.message %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <div class="btn-group">
   <%= link_to t('crud.edit'), edit_admin_schedule_path(@admin_schedule), class: 'btn btn-info btn-lg' %>
   <%= link_to t('action.back'), admin_schedules_path, class: 'btn btn-default btn-lg' %>

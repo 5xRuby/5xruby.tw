@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :speakers
-  end
-
   # front
   root 'pages#index'
   controller :pages do
@@ -17,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   # back
-  namespace :admin do
+  namespace :admin, path: Settings.admin_path_prefix do
     root to: :dashboard
     resources :posts, :courses, :schedules, :applies, :speakers
   end

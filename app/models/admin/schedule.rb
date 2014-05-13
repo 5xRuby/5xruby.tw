@@ -21,6 +21,7 @@ class Admin::Schedule < Schedule
 
   # association macros
   belongs_to :stage
+  has_many :applies
 
   # validation macros
 

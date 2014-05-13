@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @next_schedules = Schedule.available.limit(4)
+    @next_schedules = Schedule.includes(stage: :course).available.limit(4)
   end
 
   def contacts

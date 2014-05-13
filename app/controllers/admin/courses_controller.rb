@@ -1,5 +1,5 @@
 class Admin::CoursesController < AdminController
-  before_action :set_admin_course, only: [:show, :edit, :update, :destroy]
+  before_action :set_admin_course, only: [:edit, :update, :destroy]
 
   # GET /admin/courses
   # GET /admin/courses.json
@@ -10,6 +10,7 @@ class Admin::CoursesController < AdminController
   # GET /admin/courses/1
   # GET /admin/courses/1.json
   def show
+    @admin_course = Admin::Course.includes(stages: [schedules: [:applies]]).find(params[:id])
   end
 
   # GET /admin/courses/new
