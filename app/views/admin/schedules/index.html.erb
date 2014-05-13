@@ -16,7 +16,7 @@
   <tbody>
     <% @admin_schedules.each do |admin_schedule| %>
       <tr>
-        <td><span class="badge"><%= admin_schedule.applies.count %></span></td>
+        <td><span class="badge"><%= admin_schedule.applies.size %></span></td>
         <%= td_for admin_schedule, :id, [:stage, ->(s){ link_to(s.stage.course.title, admin_course_path(s.stage.course)) + " -> #{s.stage.title}" }], :date, :description %>
         <%= td_action_for admin_schedule %>
       </tr>
