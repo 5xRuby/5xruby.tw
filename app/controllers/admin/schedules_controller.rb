@@ -15,10 +15,12 @@ class Admin::SchedulesController < AdminController
   # GET /admin/schedules/new
   def new
     @admin_schedule = Admin::Schedule.new
+    @admin_schedule.events.new if @admin_schedule.events.empty?
   end
 
   # GET /admin/schedules/1/edit
   def edit
+    @admin_schedule.events.new if @admin_schedule.events.empty?
   end
 
   # POST /admin/schedules
@@ -69,6 +71,9 @@ class Admin::SchedulesController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_schedule_params
-      params.require(:admin_schedule).permit(:stage_id, :date, :description)
+      params.require(:admin_schedule).permit(
+        :stage_id, :date, :description,
+        events_attributes: %i[id _destroy title description speaker_id start_at]
+      )
     end
 end

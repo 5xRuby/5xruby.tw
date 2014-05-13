@@ -15,6 +15,7 @@ class Speaker < ActiveRecord::Base
   # scope macros
 
   # Concerns macros
+  include Select2Concern
 
   # Constants
   
@@ -22,9 +23,11 @@ class Speaker < ActiveRecord::Base
   mount_uploader :avatar, SpeakerAvatarUploader
 
   # association macros
+  has_many :events
 
   # validation macros
   validates :name, presence: true
+  select2_white_list :name
 
   # callbacks
 

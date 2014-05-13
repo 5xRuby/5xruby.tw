@@ -1,4 +1,4 @@
-<%= simple_form_for(@admin_schedule, wrapper: :horizontal_form, html: {class: 'form-horizontal'}) do |f| %>
+<%= simple_nested_form_for(@admin_schedule, wrapper: :horizontal_form, html: {class: 'form-horizontal'}) do |f| %>
 
   <div class="form-inputs">
     <div class="form-group">
@@ -10,8 +10,9 @@
     <%= f.association :stage, as: :string, input_html: {class: '', data: {text: @admin_schedule.stage.try(:title).to_s}} %>
     <%= f.input :date %>
     <%= f.input :description, input_html: {class: 'redactor'} %>
+    <%= render 'events_fields', f: f %>
   </div>
-
+  <hr>
   <div class="form-actions">
     <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
   </div>

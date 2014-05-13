@@ -22,6 +22,8 @@ class Schedule < ActiveRecord::Base
 
   # association macros
   belongs_to :stage
+  has_many :events, -> { order(:start_at) }, dependent: :destroy
+  accepts_nested_attributes_for :events, allow_destroy: true, reject_if: proc { |attributes| attributes[:title].blank? }
 
   # validation macros
 
