@@ -1,4 +1,9 @@
 namespace :dev do
+  desc "Initialize development data"
+  task :init, :fake do
+    Rake::Task[:my_task].invoke(3, 4)
+  end
+
   desc "Generate fake data"
   task :fake, %i[model_name count] => :environment do |task, args|
     args.with_defaults(count: 20)
@@ -6,7 +11,9 @@ namespace :dev do
     if model_name = args[:model_name]
       FactoryGirl.create_list(model_name.underscore, count)
     else
-      %i[post].each{ |name| FactoryGirl.create_list(name, 20) }
+      %i[post speaker course].each do |name|
+        FactoryGirl.create_list(name, 20)
+      end
     end
   end
 end
