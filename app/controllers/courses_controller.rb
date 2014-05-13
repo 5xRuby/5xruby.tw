@@ -4,6 +4,6 @@ class CoursesController < ApplicationController
   end
 
   def show
-    @course = Course.find(params[:id])
+    @course = Course.includes(:schedules).find(params[:id])
   end
 end
