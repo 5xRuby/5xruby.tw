@@ -1,7 +1,7 @@
 zh-TW:
   courses:
     index:
-      title: 各種課程
+      title: 課程動態
       subtitle: Ex utamur fierent tacimates nam, his duis choro an.
       summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
     sidebar:
@@ -102,13 +102,13 @@ zh-TW:
         ---
         ### 我們的服務
         #### 技術諮詢
-        __五倍紅寶石__的每位成員、講師，均在業界有多年 Ruby/Rails 實戰工作經驗，在台灣的 Ruby 程式社群亦是相當活躍的成員。 從系統規劃到開發，我們都可以提供專業的建議與諮詢。
+        __五倍紅寶石__的每位成員、講師，均在業界有多年 Ruby/Rails 實戰工作經驗，且目前都還在使用 Ruby/Rails 進行開發，在台灣的 Ruby 程式社群亦是相當活躍的成員。從系統規劃到開發，我們都可以提供您專業的建議與諮詢。
 
         #### 企業內部培訓
-        貴單位之網站或系統原本是使用其它程式語言(例如 PHP、Java 或 ASP.net)開發，正考慮轉換到高速生產力的 Ruby/Rails 平台，但企業內部無相關技術能力可進行開發。我們針對這類的需求設計了一系列培訓計劃，將企業內部現有人力快速打造為專業的 Ruby/Rails 開發團隊，可免去新進員工忠誠度以及企業文化磨合之困擾。
+        貴單位之網站或系統原本是使用其它程式語言(例如 PHP、Java 或 ASP.net)開發，正考慮轉換到高速生產力的 Ruby/Rails 平台，但企業內部目前無相關技術能力可進行開發。我們針對這類的需求設計了一系列培訓計劃，將企業內部現有人力快速打造為專業的 Ruby/Rails 開發團隊，可免去面試新人或新進員工企業文化磨合之困擾。
 
         #### 教育訓練
-        如果您對程式設計是完全的新手，或是本身已有其它程式語言的基礎也沒問題，我們有一系列的課程是從入門到中、高階的課程，引導您有效率的掌握 Ruby/Rails 的重點。
+        如果您對程式設計是完全的新手，或是本身已有其它程式語言的基礎也沒問題，我們一系列從入門到中、高階的課程，將引導您有效率的掌握 Ruby/Rails 的重點。
 
       speciality: 專長
       members:

@@ -1,3 +1,10 @@
+/*
+  *= require font-awesome
+  *= require additional
+  *= require_self
+*/
+
 #bottom-wizard > button.forward[disabled]{
   display: none;
 }
+

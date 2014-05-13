@@ -74,6 +74,8 @@ GEM
     flowdock (0.3.1)
       httparty (~> 0.7)
       multi_json
+    font-awesome-sass (4.0.3.1)
+      sass (~> 3.2)
     grit (2.5.0)
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
@@ -206,6 +208,7 @@ DEPENDENCIES
   enumerize
   factory_girl_rails
   faker
+  font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
   kaminari

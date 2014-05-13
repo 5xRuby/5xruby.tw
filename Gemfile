@@ -51,6 +51,8 @@ gem 'rails-assets-bootstrap'
 gem 'rails-assets-jquery-ui'
 gem 'rails-assets-select2'
 
+gem 'font-awesome-sass'
+
 group :development do
   gem 'capistrano-rails'
   gem 'capistrano-flowdock'
