@@ -24,12 +24,12 @@ FactoryGirl.define do
     course nil
     stage nil
     schedule nil
-    first_name "MyString"
-    last_name "MyString"
-    phone "MyString"
-    email "MyString"
-    age 1
-    gender "MyString"
-    message "MyText"
+    first_name { Faker::Name.first_name }
+    last_name { Faker::Name.last_name }
+    phone { Faker::PhoneNumber.cell_phone }
+    email { Faker::Internet.email }
+    age { 20 + rand(81) }
+    gender { Apply.gender.values.sample }
+    message { Faker::Lorem.paragraph }
   end
 end
