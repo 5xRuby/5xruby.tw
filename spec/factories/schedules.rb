@@ -17,5 +17,13 @@ FactoryGirl.define do
     stage nil
     date { rand(1.month).from_now }
     description { "<p>#{Faker::Lorem.paragraph}</p>" }
+
+    ignore do
+      events_count 4
+    end
+
+    after(:build) do |schedule, evaluator|
+      schedule.events = build_list(:event, evaluator.events_count)
+    end
   end
 end

@@ -17,7 +17,7 @@
 FactoryGirl.define do
   factory :event do
     schedule nil
-    speaker nil
+    speaker { Speaker.order('RANDOM()').first }
     start_at { rand(1.day).from_now }
     title { Faker::Name.title }
     description { Faker::Lorem.paragraph }
