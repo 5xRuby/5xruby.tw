@@ -18,8 +18,8 @@ FactoryGirl.define do
   factory :event do
     schedule nil
     speaker nil
-    start_at "2014-05-13 13:40:44"
-    title "MyString"
-    description "MyText"
+    start_at { rand(1.day).from_now }
+    title { Faker::Name.title }
+    description { Faker::Lorem.paragraph }
   end
 end
