@@ -26,7 +26,7 @@
             <% stage.schedules.each do |schedule| %>
             <li>
               <%= link_to [:admin, schedule] do %>
-                <%= schedule.date %> <span class="badge"><%= schedule.applies.count %></span>
+                <%= schedule.date %> <span class="badge"><%= schedule.applies.size %></span>
               <% end %>
             </li>
             <% end %>
