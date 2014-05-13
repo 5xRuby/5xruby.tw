@@ -20,3 +20,20 @@ $(document).on 'ready page:change', () ->
             column: 'title'
           results: (data, page) -> data
     .trigger('change')
+
+$(document).on 'nested:fieldAdded:events', (e) ->
+  e.field.find('input[name$="[speaker_id]"]').select2
+    width: '100%'
+    initSelection: (element, callback) ->
+      callback
+        id: element.val()
+        text: element.data('text')
+    ajax:
+      url: '/select2/results'
+      dataType: 'json'
+      data: (term, page) ->
+        term: term
+        page: page
+        model: $(this).data('model')
+        column: $(this).data('column')
+      results: (data, page) -> data

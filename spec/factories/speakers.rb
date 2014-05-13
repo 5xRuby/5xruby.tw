@@ -15,9 +15,9 @@
 
 FactoryGirl.define do
   factory :speaker do
-    avatar "MyString"
-    name "MyString"
-    summary "MyText"
-    is_online false
+    avatar { Faker::Image.image }
+    name { Faker::Name.name }
+    summary { Faker::Lorem.paragraph }
+    is_online { [true, false].sample }
   end
 end

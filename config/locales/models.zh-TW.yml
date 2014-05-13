@@ -21,6 +21,7 @@ zh-TW:
       schedule: 行程
       apply: 報名
       speaker: 講師
+      event: 事件
     attributes:
       post:
         title: 標題
@@ -59,3 +60,8 @@ zh-TW:
         avatar: 照片
         is_online: 上線
         remove_avatar: 刪除圖片
+      event:
+        start_at: 開始時間
+        title: 標題
+        description: 內容
+        speaker: 講師
