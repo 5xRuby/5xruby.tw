@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :speakers
-  end
-
   # front
   root 'pages#index'
   controller :pages do
