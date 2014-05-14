@@ -1,4 +1,7 @@
 zh-TW:
+  schedules:
+    show:
+      start_learning: 我想報名
   courses:
     index:
       title: 課程動態
@@ -50,6 +53,8 @@ zh-TW:
     sidebar:
       recent_post: 近期文章
   pages:
+    next_schedule:
+      hours: 小時
     main_features:
       why_join_5xruby: 五倍紅寶石
       items:
@@ -129,9 +134,9 @@ zh-TW:
           facebook: https://www.facebook.com/ryudoawaru
           twitter: https://twitter.com/ryudoawaru
           experience: RubyConf Taiwan 主辦人、Rails Girls Taipei 主辦人.
-          about: 「天下武功，無堅不破，唯快不破！」
+          about: 「非典型網站維運者」
           blog: http://ryudo.tw/
-          skills: Ruby / Rails、系統管理
+          skills: Ruby / Rails / Sinatra、系統管理
 
         - name: 簡煒航
           title: 鐵道工人

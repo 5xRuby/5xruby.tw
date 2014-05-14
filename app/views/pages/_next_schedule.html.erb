@@ -1,8 +1,10 @@
 <% stage = next_schedule.stage; course = stage.course %>
 <div class="media">
+  <%= link_to next_schedule do %>
   <div class="circ-wrapper red pull-left">
     <h3><%= l next_schedule.date, format: '%B' %><br><%= next_schedule.date.day %></h3>
   </div>
+  <% end %>
   <div class="media-body">
     <h4 class="media-heading"><%= link_to course.title, course %> <span class="label label-warning">NEW</span></h4>
     <%= sanitize course.summary %>
@@ -10,10 +12,10 @@
       <li class="po-markup">
         <a class="po-link" href="javascript:void(0)" ><i class="icon-clock"></i><%= Stage.human_attribute_name(:duration) %>： <%= '%.1f' % stage.duration %></a>
         <div class="po-content hidden">
-          <div class="po-title"><strong>Duration: 6 hours</strong></div>
+          <div class="po-title"><strong><%= Stage.human_attribute_name(:duration) %>： <%= '%.1f' % stage.duration %> <%= t('.hours') %></strong></div>
           <!-- ./po-title -->
           <div class="po-body">
-            <p class="no_margin">Lorem ipsum dolor sit amet, has at illum dictas definitiones, ei primis indoctum torquatos nec. Vis te velit probatus, natum atomorum tincidunt nec an.</p>
+            <div class="no_margin"><%= sanitize next_schedule.description %></div>
           </div>
           <!-- ./po-body -->
         </div>

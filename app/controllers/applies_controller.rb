@@ -2,7 +2,7 @@ class AppliesController < ApplicationController
   before_action :set_course
 
   def new
-    @apply = @course.applies.new
+    @apply = @course.applies.new (params[:apply] && apply_params)
   end
 
   def create

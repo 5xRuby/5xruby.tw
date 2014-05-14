@@ -1,5 +1,5 @@
 class Admin::SchedulesController < AdminController
-  before_action :set_admin_schedule, only: [:show, :edit, :update, :destroy]
+  before_action :set_admin_schedule, only: [:edit, :update, :destroy]
 
   # GET /admin/schedules
   # GET /admin/schedules.json
@@ -10,6 +10,7 @@ class Admin::SchedulesController < AdminController
   # GET /admin/schedules/1
   # GET /admin/schedules/1.json
   def show
+    @admin_schedule = Admin::Schedule.includes(events: :speaker).find(params[:id])
   end
 
   # GET /admin/schedules/new

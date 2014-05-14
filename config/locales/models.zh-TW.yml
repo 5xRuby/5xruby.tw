@@ -53,6 +53,7 @@ zh-TW:
         email: 信箱
         age: 年齡
         gender: 性別
+        gender_text: 性別
         message: 訊息
       speaker:
         name: 名字
@@ -65,3 +66,8 @@ zh-TW:
         title: 標題
         description: 內容
         speaker: 講師
+  enumerize:
+    apply:
+      gender:
+        male: 男生
+        female: 女生
