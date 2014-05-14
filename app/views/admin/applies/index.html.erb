@@ -15,7 +15,7 @@
   <tbody>
     <% @admin_applies.each do |admin_apply| %>
       <tr>
-        <%= td_for admin_apply, :id, [:course, :title], [:stage, :title], [:schedule, :date], :first_name, :last_name, :phone, :email, :age, :gender, :message %>
+        <%= td_for admin_apply, :id, [:course, :title], [:stage, :title], [:schedule, :date], :first_name, :last_name, :phone, :email, :age, :gender_text, :message %>
         <%= td_action_for admin_apply %>
       </tr>
     <% end %>
