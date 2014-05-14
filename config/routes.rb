@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'schedules/show'
+
   # front
   root 'pages#index'
   controller :pages do
@@ -11,6 +13,7 @@ Rails.application.routes.draw do
       get :submit, on: :collection
     end
   end
+  resources :schedules, only: %i[show]
 
   # back
   namespace :admin, path: Settings.admin_path_prefix do

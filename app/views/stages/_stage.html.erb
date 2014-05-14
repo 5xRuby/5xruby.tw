@@ -45,7 +45,9 @@
             </div><!-- ./po-content -->
           </li%>
         </ul>
-        <%#a href="course_timeline.html" class="button_medium">Schedule</a%>
+        <% stage.schedules.each do |schedule| %>
+        <%= link_to schedule.date, schedule, class: 'button_medium' %>
+        <% end %>
       </div>
 
     </div><!-- End row  -->

@@ -1,0 +1,161 @@
+<% content_for :append_head do %>
+<link href="/css/timeline.css" rel="stylesheet">
+<% end %>
+
+<section id="sub-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 text-center">
+        <h1><%= @schedule.stage.title %></h1>
+        <p class="lead boxed"><%= l @schedule.date, format: :long %></p>
+        <p class="lead"><%= @schedule.stage.description %></p>
+      </div>
+    </div><!-- End row -->
+  </div><!-- End container -->
+  <div class="divider_top"></div>
+</section><!-- End sub-header -->
+
+<section id="main_content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="lead add_bottom_60"><%= sanitize @schedule.description %></div>
+      </div>
+    </div>
+    <ul class="cbp_tmtimeline">
+      <% @schedule.events.each do |event| %>
+        <li>
+          <time class="cbp_tmtime" datetime="<%= l event.start_at, format: '%H:%M' %>"><span>2 hours</span> <span><%= l event.start_at, format: '%H:%M' %></span></time>
+          <div class="cbp_tmicon timeline_icon_audio"></div>
+          <div class="cbp_tmlabel">
+          <div class="pull-right hidden-xs"><% if event.speaker %><%= Speaker.model_name.human %> <strong><%= event.speaker.name %></strong><%= image_tag event.speaker.avatar.preview, class: 'img-circle speaker' %><% end %></div>
+            <h2><span>Lorem ipsum</span><%= event.title %></h2>
+
+            <p><%= event.description %></p>
+          </div>
+        </li>
+      <% end %>
+      <%#li>
+        <time class="cbp_tmtime" datetime="11:30"><span>2 hours</span> <span>11:30</span></time>
+        <div class="cbp_tmicon timeline_icon_video"></div>
+        <div class="cbp_tmlabel">
+        <div class="pull-right hidden-xs">Speaker <strong>John Doe</strong><img src="/img/teacher_2.jpg" alt="" class="img-circle speaker"></div>
+          <h2><span>Lorem ipsum</span>Chapter one</h2>
+          <p>Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi.</p>
+        </div>
+      </li>
+      <li>
+        <time class="cbp_tmtime" datetime="13:30"><span>1 hour</span> <span>13:30</span></time>
+        <div class="cbp_tmicon timeline_icon_break"></div>
+        <div class="cbp_tmlabel">
+          <h2><span>Lorem ipsum</span>Lunch and coffee break</h2>
+          <p>Parsnip lotus root celery yarrow seakale tomato collard greens tigernut epazote ricebean melon tomatillo soybean chicory broccoli beet greens peanut salad. </p>
+        </div>
+      </li>
+      <li>
+        <time class="cbp_tmtime" datetime="14:30"><span>2 hours</span> <span>14:30</span></time>
+        <div class="cbp_tmicon timeline_icon_doc"></div>
+        <div class="cbp_tmlabel">
+        <div class="pull-right hidden-xs">Speaker <strong>John Doe</strong><img src="/img/teacher_1.jpg" alt="" class="img-circle speaker"></div>
+          <h2><span>Lorem ipsum</span>Chapter two</h2>
+          <p>Peanut gourd nori welsh onion rock melon mustard jícama. Desert raisin amaranth kombu aubergine kale seakale brussels sprout pea. Black-eyed pea celtuce bamboo shoot salad kohlrabi leek squash prairie turnip catsear rock melon chard taro broccoli turnip greens. Fennel quandong potato watercress ricebean swiss chard garbanzo. Endive daikon brussels sprout lotus root silver beet epazote melon shallot.</p>
+        </div>
+      </li>
+      <li>
+        <time class="cbp_tmtime" datetime="16:30"><span>2 hours</span> <span>16:30</span></time>
+        <div class="cbp_tmicon timeline_icon_test"></div>
+        <div class="cbp_tmlabel">
+        <div class="pull-right hidden-xs">Speaker <strong>John Doe</strong><img src="/img/teacher_2.jpg" alt="" class="img-circle speaker"></div>
+          <h2><span>Lorem ipsum</span>Exercises</h2>
+          <p>Parsley amaranth tigernut silver beet maize fennel spinach. Ricebean black-eyed pea maize scallion green bean spinach cabbage jícama bell pepper carrot onion corn plantain garbanzo. Sierra leone bologi komatsuna celery peanut swiss chard silver beet squash dandelion maize chicory burdock tatsoi dulse radish wakame beetroot.</p>
+        </div>
+      </li%>
+    </ul>
+
+    <hr class="add_bottom_45">
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="box_style_1">
+          <h4>Pdf <i class="icon-acrobat pull-right hidden-xs"></i></h4>
+          <p>Parsnip lotus root celery yarrow seakale tomato collard greens tigernut epazote ricebean melon tomatillo soybean chicory broccoli beet greens peanut salad. </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="box_style_1">
+          <h4>Documentation <i class="icon-doc pull-right hidden-xs"></i></h4>
+          <p>Parsnip lotus root celery yarrow seakale tomato collard greens tigernut epazote ricebean melon tomatillo soybean chicory broccoli beet greens peanut salad. </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="box_style_1">
+          <h4>Questions <i class=" icon-help pull-right hidden-xs"></i></h4>
+          <p>Parsnip lotus root celery yarrow seakale tomato collard greens tigernut epazote ricebean melon tomatillo soybean chicory broccoli beet greens peanut salad. </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Faq</h3>
+        <p>Parsnip lotus root celery yarrow seakale tomato collard greens tigernut epazote ricebean melon tomatillo soybean chicory broccoli beet greens peanut salad. </p>
+      </div>
+      <div class="col-md-8">
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Anim pariatur cliche reprehenderit?<i class="indicator icon-plus pull-right"></i></a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Parsnip lotus root celery?<i class="indicator icon-plus pull-right"></i></a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Beet greens peanut salad?<i class="indicator icon-plus pull-right"></i></a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End col-md-8 -->
+    </div>
+  </div><!-- End container -->
+
+</section>
+
+<section id="join">
+ <div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 text-center">
+      <div class="row">
+      <div class="col-md-2 hidden-sm hidden-xs"><img src="/img/arrow_hand_1.png" alt="Arrow" > </div>
+        <div class="col-md-8"><%= link_to t('.start_learning'), new_course_apply_path(@schedule.stage.course, apply: {stage_id: @schedule.stage.id, schedule_id: @schedule.id}), class: 'button_big' %></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

@@ -1,4 +1,7 @@
 zh-TW:
+  schedules:
+    show:
+      start_learning: 我想報名
   courses:
     index:
       title: 課程動態
