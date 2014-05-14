@@ -53,6 +53,8 @@ zh-TW:
     sidebar:
       recent_post: 近期文章
   pages:
+    next_schedule:
+      hours: 小時
     main_features:
       why_join_5xruby: 五倍紅寶石
       items:
