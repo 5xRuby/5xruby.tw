@@ -28,8 +28,9 @@
 
       <ul class="data-list floated clearfix">
         <li id="age"><%= f.input_field :age, as: :integer, class: 'form-control', placeholder: Apply.human_attribute_name(:age) %></li>
-        <li><%= f.radio_button :gender, :male, class: 'check_radio' %><label class="label_gender"> 男</label></li>
-        <li><%= f.radio_button :gender, :female, class: 'check_radio' %><label class="label_gender"> 女</label></li>
+        <% Apply.gender.options.each do |label, value| %>
+        <li><%= f.radio_button :gender, value, class: 'check_radio' %><label class="label_gender"> <%= label %></label></li>
+        <% end %>
       </ul>
 
     </div><!-- end col-md-6 -->
