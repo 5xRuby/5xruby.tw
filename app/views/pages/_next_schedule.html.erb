@@ -1,6 +1,6 @@
 <% stage = next_schedule.stage; course = stage.course %>
 <div class="media">
-  <%= link_to next_schedule do %>
+  <%= link_to next_schedule.stage.course do %>
   <div class="circ-wrapper red pull-left">
     <h3><%= l next_schedule.date, format: '%B' %><br><%= next_schedule.date.day %></h3>
   </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513054044) do
+ActiveRecord::Schema.define(version: 20140515175439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,11 +85,17 @@ ActiveRecord::Schema.define(version: 20140513054044) do
 
   create_table "speakers", force: true do |t|
     t.string   "avatar"
-    t.string   "name",                       null: false
+    t.string   "name",                                null: false
     t.text     "summary"
-    t.boolean  "is_online",  default: false, null: false
+    t.boolean  "is_online",    default: false,        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "role",         default: "consultant", null: false
+    t.string   "title"
+    t.string   "facebook_url"
+    t.string   "twitter_url"
+    t.string   "google_url"
+    t.string   "blog_url"
   end
 
   create_table "stages", force: true do |t|

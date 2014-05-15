@@ -69,6 +69,6 @@ class Admin::SpeakersController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_speaker_params
-      params.require(:admin_speaker).permit(:avatar, :remove_avatar, :name, :summary, :is_online)
+      params.require(:admin_speaker).permit(:avatar, :remove_avatar, :name, :summary, :is_online, :role, :title, :facebook_url, :twitter_url, :google_url, :blog_url)
     end
 end

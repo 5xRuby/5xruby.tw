@@ -1,5 +1,4 @@
 defaults: &defaults
-
 development:
   <<: *defaults
   admin_path_prefix: admin

@@ -61,6 +61,13 @@ zh-TW:
         avatar: 照片
         is_online: 上線
         remove_avatar: 刪除圖片
+        role: 身份
+        role_text: 身份
+        title: 頭銜
+        facebook_url: FB
+        twitter_url: Twitter
+        google_url: G+
+        blog_url: 網誌
       event:
         start_at: 開始時間
         title: 標題
@@ -71,3 +78,7 @@ zh-TW:
       gender:
         male: 男生
         female: 女生
+    speaker:
+      role:
+        author: 特約作者
+        consultant: 課程顧問
