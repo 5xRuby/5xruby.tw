@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'schedules/show'
-
   # front
   root 'pages#index'
   controller :pages do
