@@ -6,16 +6,16 @@
       <h3><em><%= t('.stage_no', stage: index) %></em> <%= stage.title %></h3>
         <%= stage.description %>
         <ul class="data-lessons">
-          <li class="po-markup">
-            <a class="po-link" href="javascript:void(0)" ><i class="icon-calendar"></i> <%= t('.available_dates') %></a>
+          <%#li class="po-markup">
+            <a class="po-link" href="javascript:void(0)" ><i class="icon-calendar"></i> <%= t('.available_dates') %><%#/a>
             <div class="po-content hidden">
-              <div class="po-title"><strong><%= t('.next_dates') %></strong></div> <!-- ./po-title -->
+              <div class="po-title"><strong><%= t('.next_dates') %><%#/strong></div> <!-- ./po-title -->
               <div class="po-body">
                 <ul class="list_po_body">
                   <% stage.schedules.each do |schedule| %>
-                  <li><i class="icon-ok"></i> <%= l schedule.date %></li>
+                  <%#li><i class="icon-ok"></i> <%= l schedule.date %><%#/li>
                   <% end %>
-              </div><!-- ./po-body -->
+              <%#/div><!-- ./po-body -->
             </div><!-- ./po-content -->
           </li%>
           <li class="po-markup">
