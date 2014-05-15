@@ -25,7 +25,7 @@ class Speaker < ActiveRecord::Base
   include Select2Concern
 
   # Constants
-  
+
   # Attributes related macros
   mount_uploader :avatar, SpeakerAvatarUploader
 
@@ -35,7 +35,7 @@ class Speaker < ActiveRecord::Base
   # validation macros
   validates :name, :role, presence: true
   select2_white_list :name
-  enumerize :role, in: %i[author consultant]
+  enumerize :role, in: %i[author consultant speaker parttime-speaker assistant-speaker]
 
   # callbacks
 

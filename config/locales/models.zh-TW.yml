@@ -82,3 +82,6 @@ zh-TW:
       role:
         author: 特約作者
         consultant: 課程顧問
+        speaker: 講師
+        parttime-speaker: 兼任講師
+        assistant-speaker: 助理講師
