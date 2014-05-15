@@ -4,7 +4,7 @@ zh-TW:
       start_learning: 我想報名
   speakers:
     index:
-      title: 講師牆
+      title: 講師
       subtitle: Ex utamur fierent tacimates nam, his duis choro an.
       summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
   courses:
@@ -169,7 +169,7 @@ zh-TW:
       home: 首頁
       course: 課程
       blog: 部落格
-      speakers: 講師牆
+      speakers: 講師
       contacts: 聯絡
       about: 關於
     footer:
