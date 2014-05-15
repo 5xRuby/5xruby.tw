@@ -62,6 +62,7 @@ zh-TW:
         is_online: 上線
         remove_avatar: 刪除圖片
         role: 身份
+        role_text: 身份
         title: 頭銜
         facebook_url: FB
         twitter_url: Twitter
