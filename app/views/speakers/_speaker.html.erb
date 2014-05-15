@@ -1,5 +1,7 @@
-<div class="col-xs-6 col-sm-4 col-md-2">
-  <a href="javascript:void(0)" class="thumbnail">
-    <%= image_tag speaker.avatar, alt: speaker.name %>
-  </a>
+<div class="col-md-4 col-sm-6">
+  <div class="box_style_3">
+    <p><%= image_tag speaker.avatar, alt: speaker.name, class: 'img-circle styled', width: 150 %></p>
+    <h4 class="p-title"><%= speaker.name %> <small><%= speaker.name %></small></h4>
+    <p><%= speaker.summary %></p>
+  </div>
 </div>

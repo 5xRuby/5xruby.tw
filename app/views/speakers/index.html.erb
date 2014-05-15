@@ -13,8 +13,10 @@
 
 <section id="speakers">
   <div class="container">
+    <% @speakers.each_slice(3) do |speakers| %>
     <div class="row">
-      <%= render @speakers %>
+      <%= render speakers %>
     </div>
+    <% end %>
   </div>
 </section>
