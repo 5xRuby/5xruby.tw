@@ -10,23 +10,23 @@
         <div class="carousel slide" data-ride="carousel" id="quote-carousel">
           <!-- Bottom Carousel Indicators -->
           <ol class="carousel-indicators">
-            <%(Settings.testimonials.size).times do |x|%>
+            <% (t('testimonials').size).times do |x| %>
               <li data-target="#quote-carousel" data-slide-to="<%=x%>" class="<%=x == 0 ? :active : nil%>" ></li>
-            <%end%>
+            <% end %>
           </ol>
           <!-- Carousel Slides / Quotes -->
           <div class="carousel-inner">
             <!-- Quote start -->
-            <%Settings.testimonials.map(&:to_hash).each_with_index do |tm, idx|%>
-              <div class="item <%=idx == 0 ? :active : nil %>">
+            <% t('testimonials').each_with_index do |tm, idx| %>
+              <div class="item <%= :active if idx == 0 %>">
                 <blockquote>
                   <div class="row">
                     <div class="col-sm-3 text-center">
-                      <img class="img-circle" src="img/<%=tm[:img]%>" alt="Victor Lam">
+                      <%= image_tag "/img/#{tm[:img]}", class: 'img-circle', alt: tm[:name] %>
                     </div>
                     <div class="col-sm-9">
-                      <p><%=tm[:content]%></p>
-                      <small><%=tm[:title]%></small>
+                      <p><%= tm[:content] %></p>
+                      <small><%= tm[:title] %></small>
                     </div>
                   </div>
                 </blockquote>
