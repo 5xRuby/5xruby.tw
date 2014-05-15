@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     get :about, :contacts
   end
 
-  resources :posts
+  resources :posts, only: %i[index show]
   resources :courses, only: %i[index show] do
     resources :applies, only: %i[new create] do
       get :submit, on: :collection
