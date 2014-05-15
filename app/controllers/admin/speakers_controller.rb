@@ -4,7 +4,7 @@ class Admin::SpeakersController < AdminController
   # GET /admin/speakers
   # GET /admin/speakers.json
   def index
-    @admin_speakers = Admin::Speaker.all.order('id DESC').page(params[:page])
+    @admin_speakers = Admin::Speaker.order(:sort_id)
   end
 
   # GET /admin/speakers/1
@@ -49,6 +49,11 @@ class Admin::SpeakersController < AdminController
         format.json { render json: @admin_speaker.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def sort
+    params.require(:sort).each{|speaker_id, attributes| Speaker.update(speaker_id, sort_id: attributes[:sort_id]) }
+    redirect_to Admin::Speaker
   end
 
   # DELETE /admin/speakers/1
