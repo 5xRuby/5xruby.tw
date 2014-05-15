@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :posts, only: %i[index show]
+  resources :speakers, only: :index
   resources :courses, only: %i[index show] do
     resources :applies, only: %i[new create] do
       get :submit, on: :collection
