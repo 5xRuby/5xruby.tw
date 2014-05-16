@@ -16,8 +16,8 @@
         <li><a href="<%= speaker.google_url %>" target="_blank"><i class=" icon-google"></i></a></li>
       <% end %>
     </ul>
-    <hr>
     <% if speaker.blog_url %>
+      <hr>
       <%= link_to 'Blog', speaker.blog_url, target: :_blank, class: 'button_medium_outline' %>
     <% end %>
   </div>
