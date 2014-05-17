@@ -1,22 +1,23 @@
 <div class="col-md-4 col-sm-6">
   <div class=" box_style_3">
     <p><%= image_tag speaker.avatar, alt: speaker.name, class: 'img-circle styled', width: 150 %></p>
-    <h4 class="p-title"><%= speaker.name %> <small><%= speaker.title %></small></h4>
+    <h4 class="p-title"><small><%= t(speaker.role) %></small><br /><%= speaker.name %> <small><%= speaker.title %></small>
+      <br /></h4>
     <p><%= speaker.summary %></p>
     <ul class="social_team">
-      <% if speaker.facebook_url %>
+      <% if speaker.facebook_url.present? %>
         <li><a href="<%= speaker.facebook_url %>" target="_blank"><i class="icon-facebook"></i></a></li>
       <% end %>
 
-      <% if speaker.twitter_url %>
+      <% if speaker.twitter_url.present? %>
         <li><a href="<%= speaker.twitter_url %>" target="_blank"><i class="icon-twitter"></i></a></li>
       <% end %>
 
-      <% if speaker.google_url %>
+      <% if speaker.google_url.present? %>
         <li><a href="<%= speaker.google_url %>" target="_blank"><i class=" icon-google"></i></a></li>
       <% end %>
     </ul>
-    <% if speaker.blog_url %>
+    <% if speaker.blog_url.present? %>
       <hr>
       <%= link_to 'Blog', speaker.blog_url, target: :_blank, class: 'button_medium_outline' %>
     <% end %>
