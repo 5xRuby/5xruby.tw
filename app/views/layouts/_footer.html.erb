@@ -46,11 +46,11 @@
           <li><a href="https://twitter.com/5xruby" target="_blank"><i class="icon-twitter"></i></a></li>
         </ul>
         <ul>
-          <li><strong class="phone">+886 928 617 687</strong><br><small>Mon - Fri / 9.00AM - 10.00PM</small></li>
-          <li>有任何問題? <a href="#">hi@5xruby.tw</a></li>
+          <li><strong class="phone"><%= t('company.contact_phone') %></strong><br><small>Mon - Fri / 9.00AM - 10.00PM</small></li>
+          <li>有任何問題? <a href="mailto:<%= t('company.email') %>"><%= t('company.email') %></a></li>
         </ul>
       </div><!-- End col-md-4 -->
     </div><!-- End row -->
   </div>
-  <div id="copy_right">© 2014 五倍紅寶石股份有限公司</div>
+  <div id="copy_right">© 2014 <%= t('company.name') %></div>
 </footer>
