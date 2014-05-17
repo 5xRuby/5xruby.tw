@@ -1,6 +1,6 @@
 <ul class="nav nav-pills nav-stacked">
   <%= content_tag :li, link_to('總覽', admin_root_path), class: (:active if request.path == admin_root_path) %>
-  <% [Admin::Post, Admin::Course, Admin::Schedule, Admin::Apply, Admin::Speaker].each do |model| %>
+  <% [Admin::Post, Admin::Author, Admin::Course, Admin::Schedule, Admin::Apply, Admin::Speaker, Admin::Faq].each do |model| %>
     <%= nav_li_for model %>
   <% end %>
 </ul>

@@ -1,17 +1,14 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: authors
 #
 #  id         :integer          not null, primary key
-#  title      :string(255)      not null
-#  content    :text             not null
+#  name       :string(255)
 #  created_at :datetime
 #  updated_at :datetime
-#  image      :string(255)
-#  author_id  :integer
 #
 
-class Post < ActiveRecord::Base
+class Admin::Author < Author
   # scope macros
 
   # Concerns macros
@@ -19,10 +16,9 @@ class Post < ActiveRecord::Base
   # Constants
   
   # Attributes related macros
-  mount_uploader :image, PostImageUploader
 
   # association macros
-  belongs_to :author
+  has_many :posts
 
   # validation macros
 

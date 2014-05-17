@@ -1,17 +1,16 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: faqs
 #
 #  id         :integer          not null, primary key
-#  title      :string(255)      not null
-#  content    :text             not null
+#  question   :text             not null
+#  answer     :text             not null
+#  is_online  :boolean          default(FALSE), not null
 #  created_at :datetime
 #  updated_at :datetime
-#  image      :string(255)
-#  author_id  :integer
 #
 
-class Post < ActiveRecord::Base
+class Admin::Faq < Faq
   # scope macros
 
   # Concerns macros
@@ -19,10 +18,8 @@ class Post < ActiveRecord::Base
   # Constants
   
   # Attributes related macros
-  mount_uploader :image, PostImageUploader
 
   # association macros
-  belongs_to :author
 
   # validation macros
 

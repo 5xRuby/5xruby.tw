@@ -15,6 +15,7 @@
 #  twitter_url  :string(255)
 #  google_url   :string(255)
 #  blog_url     :string(255)
+#  sort_id      :integer          default(0), not null
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
