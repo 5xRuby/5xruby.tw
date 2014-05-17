@@ -51,6 +51,7 @@ gem 'rack-mini-profiler'
 gem 'rails-assets-bootstrap'
 gem 'rails-assets-jquery-ui'
 gem 'rails-assets-select2'
+gem 'rails-assets-highlightjs'
 gem 'font-awesome-sass'
 
 group :development do

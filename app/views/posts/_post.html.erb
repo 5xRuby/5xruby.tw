@@ -11,6 +11,6 @@
     <% if action_name == 'index' %><div class="post-right"><i class="icon-comment"></i><%= link_to '', post_url(post, anchor: :disqus_thread) %></div><% end %>
   </div>
   <h2><%= link_to post.title, post, title: post.title %></h2>
-  <%= sanitize post.content %>
+  <div class="highlight"><%= sanitize MarkdownRenderer.render(post.content) %></div>
   <%= link_to t('.read_more'), post, class: 'button_medium', title: post.title if action_name == 'index' %>
 </div><!-- end post -->

@@ -126,6 +126,7 @@ GEM
       sprockets-rails (~> 2.0)
     rails-assets-bootstrap (3.1.1)
       rails-assets-jquery (>= 1.9.0)
+    rails-assets-highlightjs (8.0.0)
     rails-assets-jquery (2.1.1)
     rails-assets-jquery-ui (1.10.4)
       rails-assets-jquery (>= 1.6)
@@ -219,6 +220,7 @@ DEPENDENCIES
   rack-mini-profiler
   rails (~> 4.1.1)
   rails-assets-bootstrap
+  rails-assets-highlightjs
   rails-assets-jquery-ui
   rails-assets-select2
   rails-i18n

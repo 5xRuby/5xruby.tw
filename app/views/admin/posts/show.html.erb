@@ -7,7 +7,10 @@
     <%= tr_for @admin_post, :id, :image, :title, :content, [:author, :name] %>
   </tbody>
 </table>
+
 <div class="btn-group">
   <%= link_to t('crud.edit'), edit_admin_post_path(@admin_post), class: 'btn btn-info btn-lg' %>
   <%= link_to t('action.back'), admin_posts_path, class: 'btn btn-default btn-lg' %>
 </div>
+
+<div class="highlight"><%= MarkdownRenderer.render @admin_post.content %></div>
