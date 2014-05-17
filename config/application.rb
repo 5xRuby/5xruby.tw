@@ -32,5 +32,6 @@ module PentaRuby
     config.generators.helper = false
     config.generators.jbuilder = false
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
+    config.autoload_paths += Dir[Rails.root.join('lib')]
   end
 end

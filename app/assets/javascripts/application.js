@@ -12,3 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require highlightjs
+//= require highlightjs_helper
