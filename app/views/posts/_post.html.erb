@@ -1,4 +1,4 @@
-<div class="post">
+<%= content_tag_for :div, post, class: 'post' do %>
   <%= link_to image_tag(post.image.thumb, class: 'img-responsive'), (action_name == 'index' ? post : post.image.url), title: post.title %>
   <div class="post_info clearfix">
     <div class="post-left">
@@ -13,4 +13,4 @@
   <h2><%= link_to post.title, post, title: post.title %></h2>
   <div class="highlight"><%= sanitize MarkdownRenderer.render(post.content) %></div>
   <%= link_to t('.read_more'), post, class: 'button_medium', title: post.title if action_name == 'index' %>
-</div><!-- end post -->
+<% end %>

@@ -32,4 +32,5 @@
 
 <% content_for :append_body do %>
 <%= render 'layouts/disqus_count' %>
+<%= mathjax_script_tag "post_#{@post.id}" %>
 <% end %>
