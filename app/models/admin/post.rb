@@ -8,6 +8,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  image      :string(255)
+#  author_id  :integer
 #
 
 class Admin::Post < Post
@@ -20,6 +21,7 @@ class Admin::Post < Post
   # Attributes related macros
 
   # association macros
+  belongs_to :author
 
   # validation macros
 

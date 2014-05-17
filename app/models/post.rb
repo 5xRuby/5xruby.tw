@@ -8,6 +8,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  image      :string(255)
+#  author_id  :integer
 #
 
 class Post < ActiveRecord::Base
@@ -21,6 +22,7 @@ class Post < ActiveRecord::Base
   mount_uploader :image, PostImageUploader
 
   # association macros
+  belongs_to :author
 
   # validation macros
 

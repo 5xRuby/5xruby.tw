@@ -23,10 +23,12 @@ zh-TW:
       speaker: 講師
       event: 事件
       faq: 問答
+      author: 作者
     attributes:
       post:
         title: 標題
         content: 內容
+        author: 作者
       course:
         title: 標題
         subtitle: 副標
@@ -78,6 +80,8 @@ zh-TW:
         question: 問題
         answer: 答案
         is_online: 上線
+      author:
+        name: 名字
   enumerize:
     apply:
       gender:

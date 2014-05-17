@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140517063501) do
+ActiveRecord::Schema.define(version: 20140517064450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 20140517063501) do
   add_index "applies", ["course_id"], name: "index_applies_on_course_id", using: :btree
   add_index "applies", ["schedule_id"], name: "index_applies_on_schedule_id", using: :btree
   add_index "applies", ["stage_id"], name: "index_applies_on_stage_id", using: :btree
+
+  create_table "authors", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "courses", force: true do |t|
     t.string   "image"
@@ -73,7 +79,10 @@ ActiveRecord::Schema.define(version: 20140517063501) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.integer  "author_id"
   end
+
+  add_index "posts", ["author_id"], name: "index_posts_on_author_id", using: :btree
 
   create_table "redactor_images", force: true do |t|
     t.string   "image",      null: false
