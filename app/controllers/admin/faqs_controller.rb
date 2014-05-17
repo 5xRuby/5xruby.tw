@@ -1,10 +1,11 @@
 class Admin::FaqsController < AdminController
+  include Sortable
   before_action :set_admin_faq, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/faqs
   # GET /admin/faqs.json
   def index
-    @admin_faqs = Admin::Faq.all.order('id DESC').page(params[:page])
+    @admin_faqs = Admin::Faq.order(:sort_id)
   end
 
   # GET /admin/faqs/1

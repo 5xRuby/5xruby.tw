@@ -1,4 +1,5 @@
 class Admin::SpeakersController < AdminController
+  include Sortable
   before_action :set_admin_speaker, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/speakers
@@ -49,11 +50,6 @@ class Admin::SpeakersController < AdminController
         format.json { render json: @admin_speaker.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-  def sort
-    params.require(:sort).each{|speaker_id, attributes| Speaker.update(speaker_id, sort_id: attributes[:sort_id]) }
-    redirect_to Admin::Speaker
   end
 
   # DELETE /admin/speakers/1

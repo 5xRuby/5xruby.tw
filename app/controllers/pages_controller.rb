@@ -8,6 +8,6 @@ class PagesController < ApplicationController
   end
 
   def faq
-    @faqs = Faq.where(is_online: true)
+    @faqs = Faq.where(is_online: true).order(:sort_id)
   end
 end
