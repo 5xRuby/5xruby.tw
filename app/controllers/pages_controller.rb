@@ -6,4 +6,8 @@ class PagesController < ApplicationController
   def contacts
     @contact = Contact.new
   end
+
+  def faq
+    @faqs = Faq.where(is_online: true)
+  end
 end

@@ -22,6 +22,7 @@ zh-TW:
       apply: 報名
       speaker: 講師
       event: 事件
+      faq: 問答
     attributes:
       post:
         title: 標題
@@ -73,6 +74,10 @@ zh-TW:
         title: 標題
         description: 內容
         speaker: 講師
+      faq:
+        question: 問題
+        answer: 答案
+        is_online: 上線
   enumerize:
     apply:
       gender:

@@ -1,0 +1,12 @@
+<%= simple_form_for(@admin_faq, wrapper: :horizontal_form, html: {class: 'form-horizontal'}) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :question %>
+    <%= f.input :answer %>
+    <%= f.input :is_online %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
+  </div>
+<% end %>
