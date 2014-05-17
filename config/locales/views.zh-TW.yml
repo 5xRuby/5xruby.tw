@@ -5,7 +5,7 @@ zh-TW:
   speakers:
     index:
       title: 講師
-      subtitle: Ex utamur fierent tacimates nam, his duis choro an.
+      subtitle:
       summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
   courses:
     index:
@@ -86,8 +86,8 @@ zh-TW:
       detail: 詳細
     about:
       title: 關於
-      subtitle: 五倍祝福，五倍的紅寶石
-      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
+      subtitle:
+      summary: 五倍專業、五倍祝福，五倍的紅寶石
       description: |
         ## 關於「五倍紅寶石」
         ### 由來
