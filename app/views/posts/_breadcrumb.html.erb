@@ -1,0 +1,9 @@
+<ol class="breadcrumb">
+  <li><%= link_to t('.home'), root_path %></li>
+  <% if @query_tags.present? %>
+    <li><%= link_to t('.posts'), posts_path %></li>
+    <li class="active"><%= @query_tags.map{|t| "##{t}"}.join(', ') %></li>
+  <% else %>
+    <li class="active"><%= t('.posts') %></li>
+  <% end %>
+</ol>

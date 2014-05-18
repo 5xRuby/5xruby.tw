@@ -8,15 +8,14 @@ Development Guide
 ```
 cp config/application.yml.example config/application.yml
 cp config/database.yml.example config/database.yml
-bundle exec rake db:create
-bundle exec rake db:migrate
+bundle exec rake db:setup
 ```
 
 Generate Fake Data in Development Environment
 ---------------------------------------------
 
 1. `rake dev:fake`: Generate all fake data for development environment.
-2. `rake dev:fake[course, 3]`: Generate 3 fake courses.
+2. `rake dev:fake[course,3]`: Generate 3 fake courses.
 
 Generate Admin Pages for Models
 ----------------------------

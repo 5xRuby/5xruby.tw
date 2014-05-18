@@ -1,14 +1,14 @@
 <div class="box_style_1">
   <h4><%= t('.categories') %></h4>
   <ul class="submenu-col">
-    <li><a href="#" id="active">All Courses</a></li>
-    <li><a href="course_details_2.html">Administration (10)</a></li>
-    <li><a href="course_details_2.html">Business (08)</a></li>
-    <li><a href="course_details_2.html">Communication (05) <img src="/img/new.png" alt="New" class="hidden-"></a></li>
-    <li><a href="course_details_2.html">Computing (08) </a></li>
-    <li><a href="course_details_2.html">Counseling (04)</a></li>
-    <li><a href="course_details_2.html">Education (06)</a></li>
-    <li><a href="course_details_2.html">Engineering (08)</a></li>
+    <li><%= link_to t('.all_courses'), Course, id: (:active unless @category) %></li>
+    <% @categories.each do |category| %>
+    <li>
+      <%= link_to courses_path(category_id: category.id), id: (:active if @category == category) do %>
+        <%= "#{category.name} (#{category.courses.size})" %> <%= image_tag '/img/new.png', alt: 'New' %>
+      <% end %>
+    </li>
+    <% end %>
   </ul>
 
   <hr>

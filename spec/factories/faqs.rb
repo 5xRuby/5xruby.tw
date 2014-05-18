@@ -8,6 +8,7 @@
 #  is_online  :boolean          default(FALSE), not null
 #  created_at :datetime
 #  updated_at :datetime
+#  sort_id    :integer          default(0), not null
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl

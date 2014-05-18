@@ -19,5 +19,6 @@ FactoryGirl.define do
     image { Faker::Image.image }
     title { Faker::Name.title }
     content { "<p>#{Faker::Lorem.paragraph}</p>" }
+    tag_list { %w[aaa bbb ccc ddd eee fff ggg hhh iii jjj].sample(3) }
   end
 end

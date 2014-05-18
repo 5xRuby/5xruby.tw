@@ -16,6 +16,7 @@ zh-TW:
   activerecord:
     models:
       post: 文章
+      category: 課程分類
       course: 課程
       stage: 階段
       schedule: 行程
@@ -29,7 +30,11 @@ zh-TW:
         title: 標題
         content: 內容
         author: 作者
+        tag_list: 標籤
+      category:
+        name: 分類名稱
       course:
+        category: 分類
         title: 標題
         subtitle: 副標
         summary: 簡介

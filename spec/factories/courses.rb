@@ -11,12 +11,14 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  subtitle        :string(255)
+#  category_id     :integer
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
   factory :course do
+    category { Category.order('RANDOM()').first }
     image { Faker::Image.image }
     title { Faker::Name.title }
     subtitle { Faker::Lorem.sentence }

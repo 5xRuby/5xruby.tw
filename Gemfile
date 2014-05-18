@@ -46,6 +46,7 @@ gem 'rails-i18n'
 gem 'rmagick', require: 'RMagick'
 gem 'enumerize'
 gem 'rack-mini-profiler'
+gem 'acts-as-taggable-on'
 
 # assets
 gem 'rails-assets-bootstrap'

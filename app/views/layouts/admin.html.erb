@@ -17,8 +17,8 @@
   </head>
   <%= content_tag :body, data: {controller: controller_path, action: action_name} do %>
     <%= render 'layouts/admin/navbar' %>
-    <%= notice_message %>
     <div class="container-fluid">
+      <%= notice_message %>
       <div class="row">
         <div class="col-sm-2"><%= render 'layouts/admin/sidebar' %></div>
         <div class="col-sm-10"><%= yield %></div>

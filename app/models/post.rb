@@ -15,6 +15,7 @@ class Post < ActiveRecord::Base
   # scope macros
 
   # Concerns macros
+  acts_as_taggable
 
   # Constants
   
