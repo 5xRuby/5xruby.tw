@@ -1,7 +1,7 @@
 <%= simple_nested_form_for(@admin_course, wrapper: :horizontal_form, html: {class: 'form-horizontal'}) do |f| %>
 
   <div class="form-inputs">
-    <%= f.association :category %>
+    <%= f.association :category, input_html: {class: 'select2'} %>
     <%= f.input :image %>
     <%= f.input :remove_image, as: :boolean %>
     <%= f.input :title %>
