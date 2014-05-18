@@ -31,7 +31,7 @@ module ApplicationHelper
   end
 
   def nav_li text, url, match: url
-    content_tag :li, class: (:active if request.path[match]) do
+    content_tag :li, class: (:active if request.path == match) do
       link_to text, url
     end
   end
