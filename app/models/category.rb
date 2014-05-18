@@ -11,6 +11,7 @@ class Category < ActiveRecord::Base
   has_many :courses
 
   # validation macros
+  validates :name, presence: true
 
   # callbacks
 
