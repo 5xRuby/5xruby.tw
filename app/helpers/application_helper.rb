@@ -33,4 +33,10 @@ module ApplicationHelper
       content_tag :p, msg, class: 'help-block'
     end.join.html_safe if record.errors[attribute].present?
   end
+
+  def nav_li text, url, match: url
+    content_tag :li, class: (:active if request.path[match]) do
+      link_to text, url
+    end
+  end
 end
