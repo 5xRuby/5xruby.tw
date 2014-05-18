@@ -17,6 +17,7 @@
 
 FactoryGirl.define do
   factory :course do
+    category { Category.order('RANDOM()').first }
     image { Faker::Image.image }
     title { Faker::Name.title }
     subtitle { Faker::Lorem.sentence }
