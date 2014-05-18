@@ -39,6 +39,13 @@ class Course < ActiveRecord::Base
   # callbacks
 
   # other
+  class << self
+    def search params
+      ret = self
+      ret = ret.where(category_id: params[:category_id]) if Category.find_by(id: params[:category_id])
+      ret
+    end
+  end
 
   protected
   # callback methods
