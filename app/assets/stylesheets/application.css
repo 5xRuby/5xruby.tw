@@ -5,6 +5,7 @@
   *= require_self
 */
 
+/* applies#new: Hide forward button */
 #bottom-wizard > button.forward[disabled]{
   display: none;
 }
