@@ -11,7 +11,7 @@ module ApplicationHelper
                       when :alert then 'alert-danger'
                       when :notice then 'alert-success'
                       end
-        ret += content_tag :div, class: "alert #{alert_class} alert-dismissable", style: 'margin-bottom: 0px' do
+        ret += content_tag :div, class: "alert #{alert_class} alert-dismissable" do
                 concat button_tag('×', class: 'close', data: {dismiss: :alert, hidden: true})
                 concat flash[alert_type]
                end
