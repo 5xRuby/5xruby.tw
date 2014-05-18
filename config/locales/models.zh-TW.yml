@@ -30,6 +30,7 @@ zh-TW:
         title: 標題
         content: 內容
         author: 作者
+        tag_list: 標籤
       category:
         name: 分類名稱
       course:
