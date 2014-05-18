@@ -3,7 +3,15 @@
     <span class="ribbon_course"></span>
     <div class="photo">
       <%= link_to image_tag(course.image.thumb), course %>
-      <div class="cat_row"><a href="#">MATH</a><span class="pull-right"><i class=" icon-clock"></i>6 Days</span></div>
+      <div class="cat_row">
+        <% if course.category.present? %>
+          <%= link_to course.category.name, courses_path(category: course.category) %>
+        <% else %>
+          未分類
+        <% end %>
+        <span class="pull-right"><i class=" icon-clock"></i>6 Days</span>
+      </div>
+
     </div>
     <div class="info">
       <div class="row">
