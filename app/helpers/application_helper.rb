@@ -30,8 +30,8 @@ module ApplicationHelper
     end.join.html_safe if record.errors[attribute].present?
   end
 
-  def nav_li text, url, match: url
-    content_tag :li, class: (:active if request.path == match) do
+  def nav_li text, url, match: url, method: :start_with?
+    content_tag :li, class: (:active if request.path.send(method, match)) do
       link_to text, url
     end
   end
