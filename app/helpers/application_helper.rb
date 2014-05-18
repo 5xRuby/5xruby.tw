@@ -18,10 +18,6 @@ module ApplicationHelper
       end
     end
     ret
-    #ret = ''.html_safe
-    #ret += content_tag :div, alert, class: 'alert alert-danger' if alert
-    #ret += content_tag :div, notice, class: 'alert alert-success' if notice
-    #ret
   end
 
   def has_error_class record, attribute
@@ -32,5 +28,11 @@ module ApplicationHelper
     record.errors.messages[attribute].map do |msg|
       content_tag :p, msg, class: 'help-block'
     end.join.html_safe if record.errors[attribute].present?
+  end
+
+  def nav_li text, url, match: url, method: :start_with?
+    content_tag :li, class: (:active if request.path.send(method, match)) do
+      link_to text, url
+    end
   end
 end
