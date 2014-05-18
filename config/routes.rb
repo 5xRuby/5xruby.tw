@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :categories
+  end
+
   # front
   root 'pages#index'
   controller :pages do
