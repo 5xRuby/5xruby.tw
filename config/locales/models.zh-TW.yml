@@ -33,6 +33,7 @@ zh-TW:
       category:
         name: 分類名稱
       course:
+        category: 分類
         title: 標題
         subtitle: 副標
         summary: 簡介
