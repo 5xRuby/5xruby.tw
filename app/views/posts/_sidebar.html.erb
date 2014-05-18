@@ -31,12 +31,9 @@
 
   <div class="widget tags add_bottom_30">
     <h4>Tags</h4>
-    <a href="#">Lorem ipsum</a>
-    <a href="#">Dolor</a>
-    <a href="#">Long established</a>
-    <a href="#">Sit amet</a>
-    <a href="#">Latin words</a>
-    <a href="#">Excepteur sint</a>
+    <% @tags.each do |tag| %>
+      <%= link_to tag.name, posts_path(tags: tag.name) %>
+    <% end %>
   </div><!-- End widget -->
 
 </div><!-- End box-sidebar -->
