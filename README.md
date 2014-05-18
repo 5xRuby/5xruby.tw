@@ -8,8 +8,7 @@ Development Guide
 ```
 cp config/application.yml.example config/application.yml
 cp config/database.yml.example config/database.yml
-bundle exec rake db:create
-bundle exec rake db:migrate
+bundle exec rake db:setup
 ```
 
 Generate Fake Data in Development Environment
