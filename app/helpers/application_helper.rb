@@ -18,10 +18,6 @@ module ApplicationHelper
       end
     end
     ret
-    #ret = ''.html_safe
-    #ret += content_tag :div, alert, class: 'alert alert-danger' if alert
-    #ret += content_tag :div, notice, class: 'alert alert-success' if notice
-    #ret
   end
 
   def has_error_class record, attribute
