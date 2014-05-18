@@ -1,0 +1,9 @@
+<ol class="breadcrumb">
+  <li><%= link_to t('.home'), root_path %></li>
+  <% if @category.respond_to?(:name) %>
+    <li><%= link_to t('.courses'), courses_path %></li>
+    <li class="active"><%= @category.name %></li>
+  <% else %>
+    <li class="active"><%= t('.courses') %></li>
+  <% end %>
+</ol>

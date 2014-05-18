@@ -17,6 +17,9 @@ zh-TW:
       categories: 課程分類
       upcoming_courses: Upcoming Courses
       upcoming_courses_detail: Suspendisse quis risus turpis, ut pharetra arcu. Donec adipiscing, quam non faucibus luctus, mi arcu blandit diam, at faucibus mi ante vel augue.
+    breadcrumb:
+      home: 首頁
+      courses: 課程
     show:
       summary: 簡介
       what_you_will_learn: 你將會學到
