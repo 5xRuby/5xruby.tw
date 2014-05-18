@@ -1,7 +1,7 @@
 class CoursesController < ApplicationController
   def index
-    @category = Category.find_by(id: params[:category_id])
-    @courses = Course.order('id DESC').search(params).page(params[:page]).per(6)
+    @courses = Course.order('id DESC').page(params[:page]).per(6)
+    @courses = @courses.where(category: @category) if @category = Category.find_by(id: params[:category_id])
     @categories = Category.includes(:courses)
   end
 
