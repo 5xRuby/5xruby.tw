@@ -11,6 +11,7 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  subtitle        :string(255)
+#  category_id     :integer
 #
 
 class Course < ActiveRecord::Base
