@@ -29,6 +29,7 @@ class Course < ActiveRecord::Base
   accepts_nested_attributes_for :stages, allow_destroy: true, reject_if: proc { |attributes| attributes[:title].blank? }
   has_many :schedules, through: :stages
   has_many :applies
+  belongs_to :category
 
   # validation macros
   validates :title, presence: true

@@ -8,6 +8,7 @@ class Admin::Category < Category
   # Attributes related macros
 
   # association macros
+  has_many :courses
 
   # validation macros
 

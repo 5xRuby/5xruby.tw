@@ -23,6 +23,9 @@ class Admin::Course < Course
   # Attributes related macros
 
   # association macros
+  has_many :schedules, through: :stages
+  has_many :applies
+  belongs_to :category
 
   # validation macros
 
