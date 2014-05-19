@@ -22,7 +22,7 @@ FactoryGirl.define do
     image { Faker::Image.image }
     title { Faker::Name.title }
     subtitle { Faker::Lorem.sentence }
-    summary { "<p>#{Faker::Lorem.paragraph}</p>" }
+    summary { Faker::Lorem.paragraph }
     description { "<p>#{Faker::Lorem.paragraph}</p>" }
     what_will_learn { "<p>#{Faker::Lorem.paragraph}</p>" }
 
