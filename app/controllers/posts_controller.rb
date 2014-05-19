@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    description = ActionController::Base.helpers.strip_tags(MarkdownRenderer.render(@post.content))
+    description = ActionController::Base.helpers.strip_tags(MarkdownRenderer.render(@post.content)).truncate(150)
     @seo = {
       meta: {
         description: description,
