@@ -7,5 +7,23 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.includes(:schedules).find(params[:id])
+    @seo = {
+      meta: {
+        description: @course.summary
+      },
+      google: {
+        name: @course.title,
+        description: @course.summary,
+        image: @course.image_url,
+        item_type: :Article # ref: https://developers.google.com/+/web/snippet
+      },
+      og: {
+        title: @course.title,
+        url: course_url(@course),
+        type: :website,
+        description: @course.summary,
+        image: @course.image_url
+      }
+    }
   end
 end
