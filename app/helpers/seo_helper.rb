@@ -5,10 +5,12 @@ module SeoHelper
 
   private
 
+  # http://ogp.me/
   def og_meta_tags **hash
     meta_tags(hash){|name, value| tag(:meta, property: "og:#{name}", content: value) }
   end
 
+  # http://schema.org/
   def google_meta_tags **hash
     hash.delete :item_type
     meta_tags(hash){|name, value| tag(:meta, itemprop: name, content: value) }
