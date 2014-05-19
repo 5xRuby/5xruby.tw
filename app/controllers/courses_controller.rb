@@ -15,7 +15,7 @@ class CoursesController < ApplicationController
         name: @course.title,
         description: @course.summary,
         image: @course.image_url,
-        item_type: :Article # ref: https://developers.google.com/+/web/snippet
+        item_type: :Article
       },
       og: {
         title: @course.title,

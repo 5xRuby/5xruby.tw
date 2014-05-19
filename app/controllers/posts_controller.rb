@@ -18,7 +18,7 @@ class PostsController < ApplicationController
         name: @post.title,
         description: @post.content,
         image: @post.image_url,
-        item_type: :Article # ref: https://developers.google.com/+/web/snippet
+        item_type: :Article
       },
       og: {
         title: @post.title,
