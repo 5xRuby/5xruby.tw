@@ -1,4 +1,13 @@
 module ApplicationHelper
+  def html_tag_attributes
+    @html_tag_attributes ||= {}
+    if @seo
+      @html_tag_attributes.merge! prefix: 'og: http://ogp.me/ns#' if @seo[:og]
+      @html_tag_attributes.merge! itemscope: true, itemtype: "http://schema.org/#{@seo[:google][:item_type]}" if @seo[:google] && @seo[:google][:item_type]
+    end
+    @html_tag_attributes
+  end
+
   def notice_message
     # <div class="alert alert-warning alert-dismissable">
     #   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>

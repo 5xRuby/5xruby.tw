@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
-<html lang="en">
+<%= content_tag :html, **html_tag_attributes do %>
 <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <title><%= t('company.name') %></title>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <%= seo_meta_tags %>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
@@ -52,4 +53,4 @@
     <script>new UISearch( document.getElementById( 'sb-search' ) );</script>
     <%= yield :append_body if content_for? :append_body %>
   </body>
-</html>
+<% end %>

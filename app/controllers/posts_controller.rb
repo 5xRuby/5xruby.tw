@@ -9,6 +9,25 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @seo = {
+      meta: {
+        description: @post.content,
+        author: @post.author.try(:name)
+      },
+      google: {
+        name: @post.title,
+        description: @post.content,
+        image: @post.image_url,
+        item_type: :Article # ref: https://developers.google.com/+/web/snippet
+      },
+      og: {
+        title: @post.title,
+        url: post_url(@post),
+        type: :website,
+        description: @post.content,
+        image: @post.image_url
+      }
+    }
   end
 
   private
