@@ -2,10 +2,11 @@
 #
 # Table name: categories
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)      not null
-#  created_at :datetime
-#  updated_at :datetime
+#  id            :integer          not null, primary key
+#  name          :string(255)      not null
+#  created_at    :datetime
+#  updated_at    :datetime
+#  courses_count :integer          default(0), not null
 #
 
 class Admin::Category < Category

@@ -9,6 +9,26 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    description = ActionController::Base.helpers.strip_tags(MarkdownRenderer.render(@post.content))
+    @seo = {
+      meta: {
+        description: description,
+        author: @post.author.try(:name)
+      },
+      google: {
+        name: @post.title,
+        description: description,
+        image: @post.image_url,
+        item_type: :Article
+      },
+      og: {
+        title: @post.title,
+        url: post_url(@post),
+        type: :website,
+        description: description,
+        image: @post.image_url
+      }
+    }
   end
 
   private

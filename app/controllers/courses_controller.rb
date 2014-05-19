@@ -7,5 +7,24 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.includes(:schedules).find(params[:id])
+    description = ActionController::Base.helpers.strip_tags(@course.schedules)
+    @seo = {
+      meta: {
+        description: description
+      },
+      google: {
+        name: @course.title,
+        description: description,
+        image: @course.image_url,
+        item_type: :Article
+      },
+      og: {
+        title: @course.title,
+        url: course_url(@course),
+        type: :website,
+        description: description,
+        image: @course.image_url
+      }
+    }
   end
 end
