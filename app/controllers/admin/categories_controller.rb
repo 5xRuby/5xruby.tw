@@ -69,6 +69,6 @@ class Admin::CategoriesController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_category_params
-      params.require(:admin_category).permit(:name)
+      params.require(:admin_category).permit(:name, :is_highlighted)
     end
 end

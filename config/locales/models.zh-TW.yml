@@ -33,6 +33,7 @@ zh-TW:
         tag_list: 標籤
       category:
         name: 分類名稱
+        is_highlighted: 本期主打分類
       course:
         category: 分類
         title: 標題
