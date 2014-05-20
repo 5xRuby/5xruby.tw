@@ -1,4 +1,4 @@
-<% if categories = Category.where(is_highlighted: true).presence %>
+<% if categories = Category.order(:sort_id).where(is_highlighted: true).presence %>
   <div class="col-md-3 col-sm-3">
     <h4>課程</h4>
     <ul>

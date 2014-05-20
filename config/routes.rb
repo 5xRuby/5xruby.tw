@@ -22,8 +22,8 @@ Rails.application.routes.draw do
   # back
   namespace :admin, path: Settings.admin_path_prefix do
     root to: :dashboard
-    resources :posts, :courses, :schedules, :applies, :authors, :categories
-    resources :speakers, :faqs, concerns: :sortable
+    resources :posts, :courses, :schedules, :applies, :authors
+    resources :speakers, :faqs, :categories, concerns: :sortable
   end
 
   # plugins
