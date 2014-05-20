@@ -15,8 +15,8 @@ zh-TW:
     sidebar:
       all_courses: 所有課程
       categories: 課程分類
-      upcoming_courses: Upcoming Courses
-      upcoming_courses_detail: Suspendisse quis risus turpis, ut pharetra arcu. Donec adipiscing, quam non faucibus luctus, mi arcu blandit diam, at faucibus mi ante vel augue.
+      satisfied: 對我們的課程還覺得滿意嗎?
+      upcoming: 我們將陸續推出與 Ruby/Rails 或網站開發相關的課程，若您有其它課程上的建議，歡迎您來信與我們聯繫。
     breadcrumb:
       home: 首頁
       courses: 課程
