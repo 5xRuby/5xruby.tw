@@ -1,9 +1,9 @@
 <div class="col-md-4 col-sm-6">
   <div class=" box_style_3">
-    <p><%= image_tag speaker.avatar, alt: speaker.name, class: 'img-circle styled', width: 150 %></p>
+    <p><%= image_tag speaker.avatar.thumb, alt: speaker.name, class: 'img-circle styled', width: 150 %></p>
     <h3 class="p-title"><small><%= speaker.role_text %></small></h3>
     <h4 class="p-title"><%= speaker.name %> <small><%= speaker.title %></small></h4>
-    <p><%= speaker.summary %></p>
+    <p><%= speaker_summary speaker %></p>
     <ul class="social_team">
       <% if speaker.facebook_url.present? %>
         <li><a href="<%= speaker.facebook_url %>" target="_blank"><i class="icon-facebook"></i></a></li>
