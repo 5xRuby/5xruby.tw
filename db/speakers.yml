@@ -21,7 +21,7 @@
   summary: |
     RubyConf Taiwan 2012 講師
     RubyKaigi 2013 講師
-    Rails Girls Taipei 創辦人
+    Rails Girls Taipei 發起人
     OpenFoundry 工作坊講師
     資策會課程講師
 
@@ -31,7 +31,7 @@
   role: speaker
   summary: |
     RubyConf Taiwan 主辦人
-    Rails Girls Taipei 創辦人
+    Rails Girls Taipei 發起人
     RubyConf Taiwan 2011 講師
     OpenFoundry 工作坊講師
 
@@ -49,7 +49,7 @@
   is_online: true
   role: parttime-speaker
   summary: |
-    RubyConf Taiwan 創辦人
+    RubyConf Taiwan 發起人
     RubyConf Taiwan 2010 講師
     RubyConf China 2010 講師
     RubyKaigi 2011 講師
@@ -61,7 +61,7 @@
   role: parttime-speaker
   summary: |
     RubyConf Taiwan 2014 講師
-    Rails Girls Taipei 創辦人
+    Rails Girls Taipei 發起人
 
 - name: 何澤清 (Tse-Ching Ho)
   remote_avatar_url: https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-frc3/t1.0-9/320955_2520027161914_1170994112_n.jpg
