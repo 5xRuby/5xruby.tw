@@ -1,9 +1,4 @@
 namespace :dev do
-  desc "Initialize development data"
-  task :init, :fake do
-    Rake::Task[:my_task].invoke(3, 4)
-  end
-
   desc "Generate fake data"
   task :fake, %i[model_name count] => :environment do |task, args|
     args.with_defaults(count: 20)

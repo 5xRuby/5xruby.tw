@@ -1,10 +1,10 @@
-<h1><%= Admin::Category.model_name.human %> <%= link_to t('crud.new'), new_admin_category_path, class: 'btn btn-lg btn-success' %></h1>
-
-<%= paginate @admin_categories %>
+<%= form_tag sort_admin_categories_path, method: :put do |f| %>
+<h1><%= Admin::Category.model_name.human %> <%= link_to t('crud.new'), new_admin_category_path, class: 'btn btn-lg btn-success' %> <%= submit_tag '更新排序', class: 'btn btn-lg btn-primary' %></h1>
 
 <table class="table table-striped table-condensed">
   <thead>
     <tr>
+      <th></th>
       <%= th_for Admin::Category, :id, :name, :is_highlighted %>
       <th></th>
       <th></th>
@@ -12,14 +12,16 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="sortable" data-items=".admin_category">
     <% @admin_categories.each do |admin_category| %>
-      <tr>
+      <%= content_tag_for :tr, admin_category do %>
+        <%= hidden_field_tag "sort[#{admin_category.id}][sort_id]", admin_category.sort_id %>
+        <td><i class="glyphicon glyphicon-move"></i></td>
         <%= td_for admin_category, :id, :name, :is_highlighted %>
         <%= td_action_for admin_category %>
-      </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 
-<%= paginate @admin_categories %>
+<% end %>

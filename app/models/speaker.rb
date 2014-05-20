@@ -35,6 +35,7 @@ class Speaker < ActiveRecord::Base
 
   # validation macros
   validates :name, :role, presence: true
+  validates :name, uniqueness: true
   select2_white_list :name
   enumerize :role, in: %i[author consultant speaker parttime-speaker assistant-speaker]
 

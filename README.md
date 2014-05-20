@@ -39,7 +39,6 @@ $ bundle install
 $ cp config/application.yml.example config/application.yml
 $ cp config/database.yml.example config/database.yml
 $ rake db:setup
-$ rake db:migrate
 ```
 
 ### Run your application

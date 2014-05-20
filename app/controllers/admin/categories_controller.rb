@@ -1,10 +1,11 @@
 class Admin::CategoriesController < AdminController
+  include Sortable
   before_action :set_admin_category, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/categories
   # GET /admin/categories.json
   def index
-    @admin_categories = Admin::Category.all.order('id DESC').page(params[:page])
+    @admin_categories = Admin::Category.order(:sort_id).page(params[:page])
   end
 
   # GET /admin/categories/1

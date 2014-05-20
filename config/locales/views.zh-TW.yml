@@ -15,8 +15,8 @@ zh-TW:
     sidebar:
       all_courses: 所有課程
       categories: 課程分類
-      upcoming_courses: Upcoming Courses
-      upcoming_courses_detail: Suspendisse quis risus turpis, ut pharetra arcu. Donec adipiscing, quam non faucibus luctus, mi arcu blandit diam, at faucibus mi ante vel augue.
+      satisfied: 對我們的課程還覺得滿意嗎?
+      upcoming: 我們將陸續推出與 Ruby/Rails 或網站開發相關的課程，若您有其它課程上的建議，歡迎您來信與我們聯繫。
     breadcrumb:
       home: 首頁
       courses: 課程
@@ -114,14 +114,14 @@ zh-TW:
         至於公司名稱為什麼是「五倍」紅寶石，不是三倍也不是一百倍? 這又是另一個有趣的故事了：）
 
         ---
-        ### 我們的服務
-        #### 技術諮詢
+        ## 我們的服務
+        ### 技術諮詢
         __五倍紅寶石__的每位成員、講師，均在業界有多年 Ruby/Rails 實戰工作經驗，且目前都還在使用 Ruby/Rails 進行開發，在台灣的 Ruby 程式社群亦是相當活躍的成員。從系統規劃到開發，我們都可以提供您專業的建議與諮詢。
 
-        #### 企業內部培訓
+        ### 企業內部培訓
         貴單位之網站或系統原本是使用其它程式語言(例如 PHP、Java 或 ASP.net)開發，正考慮轉換到高速生產力的 Ruby/Rails 平台，但企業內部目前無相關技術能力可進行開發。我們針對這類的需求設計了一系列培訓計劃，將企業內部現有人力快速打造為專業的 Ruby/Rails 開發團隊，可免去面試新人或新進員工企業文化磨合之困擾。
 
-        #### 教育訓練
+        ### 教育訓練
         如果您對程式設計是完全的新手，或是本身已有其它程式語言的基礎也沒問題，我們一系列從入門到中、高階的課程，將引導您有效率的掌握 Ruby/Rails 的重點。
 
       speciality: 專長

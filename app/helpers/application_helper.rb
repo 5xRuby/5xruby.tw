@@ -39,9 +39,9 @@ module ApplicationHelper
     end.join.html_safe if record.errors[attribute].present?
   end
 
-  def nav_li text, url, match: url, method: :start_with?
+  def nav_li text, url, match: url, method: :start_with?, **link_to_options
     content_tag :li, class: (:active if request.path.send(method, match)) do
-      link_to text, url
+      link_to text, url, **link_to_options
     end
   end
 end
