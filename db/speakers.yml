@@ -1,0 +1,116 @@
+- name: 盧韋仁
+  is_online: true
+  remote_avatar_url: https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-prn1/t1.0-9/16643_1290965358036_130778_n.jpg
+  role: consultant
+  summary: |
+    RubyConf Taiwan 2010 講師
+    RubyConf Taiwan 2011 講師
+    Rails Girls Taipei Coach
+
+- name: 徐曦 (shesee)
+  is_online: true
+  remote_avatar_url: https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-ash2/t1.0-9/24920_385036814315_229388_n.jpg 
+  role: speaker
+  summary: |
+    Rails Girls Taipei Coach
+
+- name: 高見龍 (Eddie Kao)
+  is_online: true
+  remote_avatar_url: http://blog.eddie.com.tw/images/blog/eddie_and_son.jpg
+  role: speaker
+  summary: |
+    RubyConf Taiwan 2012 講師
+    RubyKaigi 2013 講師
+    Rails Girls Taipei Founder
+    OpenFoundry 工作坊講師
+    資策會課程講師
+
+- name: 鄧慕凡
+  is_online: true
+  role: speaker
+  summary: |
+    RubyConf Taiwan Organizer
+    Rails Girls Taipei Founder
+    RubyConf Taiwan 2011 講師
+    OpenFoundry 工作坊講師
+
+- name: 簡煒航 (Tonytonyjan)
+  is_online: true
+  role: speaker
+  summary: |
+    RubyConf Taiwan 2014 講師
+    Rails Girls Taipei Coach
+
+- name: 張文鈿 iHower
+  is_online: true
+  role: parttime-speaker
+  summary: |
+    RubyConf Taiwan Founder
+    RubyConf Taiwan 2010 講師
+    RubyConf China 2010 講師
+    RubyKaigi 2011 講師
+    OpenFoundry 工作坊講師
+
+- name: 蘇泰安 Taian Su
+  is_online: true
+  role: parttime-speaker
+  summary: |
+    RubyConf Taiwan 2014 講師
+    Rails Girls Taipei Founder
+
+- name: 何澤清 (Tse-Ching Ho)
+  is_online: true
+  role: parttime-speaker
+  summary: |
+    RubyConf Taiwan 2011 講師
+    RubyConf Taiwan 2014 講師
+    Rails Girls Taipei Coach
+
+- name: 張銘軒 (Mason Chang)
+  is_online: true
+  role: parttime-speaker
+  summary: |
+    RubyConf Taiwan 2011 講師
+    Rails Girls Taipei Coach
+
+- name: Manic (Manic Chuang)
+  is_online: true
+  role: parttime-speaker
+  summary: |
+    RubyConf Taiwan 2011 講師
+    RubyConf Taiwan 2014 講師
+    Rails Girls Taipei Coach
+
+- name: 黃冠中 (Aaron Huang)
+  is_online: true
+  role: parttime-speaker
+  summary: |
+    Rails Girls Taipei Coach
+
+- name: 陳冠宏 (Mars)
+  is_online: true
+  role: parttime-speaker
+  summary: |
+    Rails Girls Taipei Coach
+
+- name: 古傑芳 (Joseph Ku)
+  is_online: true
+  role: parttime-speaker
+  summary: |
+    RubyConf Taiwan 2012 講師
+    RubyConf Taiwan 2014 講師
+    Rails Girls Taipei Coach
+
+- name: 黃信翔 (Juanito Fatas)
+  is_online: true
+  role: author
+  summary: |
+    Rails Girls Taipei Coach
+    Ruby & Rails Contributor
+    Ruby Programming Language 中文官方網頁維護者
+
+- name: 汪會敏
+  is_online: true
+  role: assistant-speaker
+  summary: |
+    Rails Girls Taipei Coach
