@@ -26,6 +26,7 @@
     資策會課程講師
 
 - name: 鄧慕凡
+  remote_avatar_url: https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-frc1/t31.0-8/922485_10201076608749826_915056726_o.jpg
   is_online: true
   role: speaker
   summary: |
@@ -35,6 +36,7 @@
     OpenFoundry 工作坊講師
 
 - name: 簡煒航 (tonytonyjan)
+  remote_avatar_url: https://lh6.googleusercontent.com/-PLtC_bWR_ik/ULOGR0ktJ4I/AAAAAAAACes/3QYoB8x1nuE/w722-h720-no/430601_10151165219257620_1558995400_n+(1).jpg
   is_online: true
   role: speaker
   summary: |
@@ -43,6 +45,7 @@
     Rails Girls Taipei 教練
 
 - name: 張文鈿 iHower
+  remote_avatar_url: https://scontent-a-sjc.xx.fbcdn.net/hphotos-prn1/t1.0-9/1187040_10152189061513971_1636141727_n.jpg
   is_online: true
   role: parttime-speaker
   summary: |
@@ -53,6 +56,7 @@
     OpenFoundry 工作坊講師
 
 - name: 蘇泰安 Taian Su
+  remote_avatar_url: https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-frc3/t31.0-8/977529_10201296496671746_869599157_o.jpg
   is_online: true
   role: parttime-speaker
   summary: |
@@ -60,6 +64,7 @@
     Rails Girls Taipei 創辦人
 
 - name: 何澤清 (Tse-Ching Ho)
+  remote_avatar_url: https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-frc3/t1.0-9/320955_2520027161914_1170994112_n.jpg
   is_online: true
   role: parttime-speaker
   summary: |
@@ -68,6 +73,7 @@
     Rails Girls Taipei 教練
 
 - name: 張銘軒 (Mason Chang)
+  remote_avatar_url: https://scontent-a-sjc.xx.fbcdn.net/hphotos-frc1/t1.0-9/5772_101306416547077_116622_n.jpg
   is_online: true
   role: parttime-speaker
   summary: |
@@ -75,6 +81,7 @@
     Rails Girls Taipei 教練
 
 - name: Manic (Manic Chuang)
+  remote_avatar_url: https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-frc3/t1.0-9/522582_4629639734706_5835994_n.jpg
   is_online: true
   role: parttime-speaker
   summary: |
@@ -83,18 +90,21 @@
     Rails Girls Taipei 教練
 
 - name: 黃冠中 (Aaron Huang)
+  remote_avatar_url: https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-frc3/t31.0-8/1836711_754376214574940_485673950_o.jpg
   is_online: true
   role: parttime-speaker
   summary: |
     Rails Girls Taipei 教練
 
 - name: 陳冠宏 (Mars)
+  remote_avatar_url: https://scontent-a-sjc.xx.fbcdn.net/hphotos-ash2/t1.0-9/163135_478169163563_7094191_n.jpg
   is_online: true
   role: parttime-speaker
   summary: |
     Rails Girls Taipei 教練
 
 - name: 古傑芳 (Joseph Ku)
+  remote_avatar_url: https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/t1.0-1/c0.3.95.95/1780756_10152235880909645_1764772753_s.jpg
   is_online: true
   role: parttime-speaker
   summary: |
@@ -103,6 +113,7 @@
     Rails Girls Taipei 教練
 
 - name: 黃信翔 (Juanito Fatas)
+  remote_avatar_url: https://scontent-a-sjc.xx.fbcdn.net/hphotos-ash3/t1.0-9/1947692_10203263390049110_1094743119_n.jpg
   is_online: true
   role: author
   summary: |
@@ -111,6 +122,7 @@
     Ruby Programming Language 中文官方網頁維護者
 
 - name: 汪會敏
+  remote_avatar_url: https://scontent-a-sjc.xx.fbcdn.net/hphotos-ash2/t1.0-9/264662_233262400019538_7391535_n.jpg
   is_online: true
   role: assistant-speaker
   summary: |
