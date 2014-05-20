@@ -23,6 +23,7 @@ class Faq < ActiveRecord::Base
   # association macros
 
   # validation macros
+  validates :question, uniqueness: true
 
   # callbacks
 
