@@ -1,8 +1,10 @@
-<div class="col-md-3 col-sm-3">
-  <h4>課程</h4>
-  <ul>
-    <% Category.where(is_highlighted: true).each do |category| %>
-    <li><%= link_to category.name, courses_path(category_id: category.id) %></li>
-    <% end %>
-  </ul>
-</div><!-- End col-md-4 -->
+<% if categories = Category.where(is_highlighted: true).presence %>
+  <div class="col-md-3 col-sm-3">
+    <h4>課程</h4>
+    <ul>
+      <% categories.each do |category| %>
+      <li><%= link_to category.name, courses_path(category: category) %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
