@@ -49,6 +49,12 @@ $ rails server
 
 Your server will be up and running at: http://localhost:3000/.
 
+### Load FAQ & Speakers Data
+
+```bash
+$ rake db:seed
+```
+
 ### Generate Fake Data in Development Environment
 
 * 1. Generate all fake data for development environment:
