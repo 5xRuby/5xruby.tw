@@ -1,75 +1,33 @@
-Official Website of 5xRuby: http://5xruby.tw
-=============================================
-
 Development Guide
-------------------
+=================
 
-### software dependencies (OS X)
-
-**Remember to follow the instructions in Caveats given after brew install**
-
-Install PostgreSQL:
+Software Dependencies (OS X)
+----------------------------
 
 ```bash
-$ brew install postgres
+$ brew install postgres redis imagemagick pkg-config
 ```
 
-Install Redis:
+Setup
+-----
 
-```bash
-$ brew install redis
 ```
-
-For rmagick gem, will need to install imagemagick and pkg-config:
-
-```bash
-$ brew install imagemagick
-$ brew install pkg-config
-```
-
-### Install all gems
-
-```bash
 $ bundle install
-```
-
-### Setup your application
-
-```bash
 $ cp config/application.yml.example config/application.yml
 $ cp config/database.yml.example config/database.yml
 $ rake db:setup
-```
-
-### Run your application
-
-```bash
 $ rails server
 ```
 
-Your server will be up and running at: http://localhost:3000/.
+Tasks
+-----
 
-### Load FAQ & Speakers Data
+* `rake dev:fake[model_name,count]`
 
-```bash
-$ rake db:seed
-```
+    dev:fake to generate fake data for all model, dev:fake[course,3] to create 3 fake courses (available parameters: author, post, speaker, category, course, faq)
 
-### Generate Fake Data in Development Environment
-
-* 1. Generate all fake data for development environment:
-
-```bash
-$ rake dev:fake
-```
-
-* 2. Generate 3 fake courses:
-
-```bash
-$ rake dev:fake[course,3]
-```
-
-### Generate Admin Pages for Models
+Generate Admin Pages for Models
+-------------------------------
 
 For example, to generate admin pages for `Post` model:
 
@@ -79,6 +37,6 @@ $ rails generate scaffold admin/post title:string content:text --migration=false
 ```
 
 Contact
--------
+=======
 
 hi@5xruby.tw
