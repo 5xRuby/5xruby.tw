@@ -10,7 +10,7 @@ FactoryGirl.define do
     phone "MyString"
     email "MyString"
     age 1
-    gender "MyString"
+    gender %i[male female].sample
     message "MyText"
   end
 end
