@@ -4,69 +4,27 @@ Official Website of 5xRuby: http://5xruby.tw
 Development Guide
 ------------------
 
-### software dependencies (OS X)
-
-**Remember to follow the instructions in Caveats given after brew install**
-
-Install PostgreSQL:
+### Software Dependencies (OS X)
 
 ```bash
-$ brew install postgres
+$ brew install postgres redis imagemagick pkg-config
 ```
 
-Install Redis:
-
-```bash
-$ brew install redis
+### Setup
 ```
-
-For rmagick gem, will need to install imagemagick and pkg-config:
-
-```bash
-$ brew install imagemagick
-$ brew install pkg-config
-```
-
-### Install all gems
-
-```bash
 $ bundle install
-```
-
-### Setup your application
-
-```bash
 $ cp config/application.yml.example config/application.yml
 $ cp config/database.yml.example config/database.yml
 $ rake db:setup
-```
-
-### Run your application
-
-```bash
 $ rails server
 ```
 
-Your server will be up and running at: http://localhost:3000/.
-
-### Load FAQ & Speakers Data
+### Tasks
 
 ```bash
-$ rake db:seed
-```
-
-### Generate Fake Data in Development Environment
-
-* 1. Generate all fake data for development environment:
-
-```bash
-$ rake dev:fake
-```
-
-* 2. Generate 3 fake courses:
-
-```bash
-$ rake dev:fake[course,3]
+$ rake -D dev
+rake dev:fake[model_name,count]
+    Generate fake data for all model, or dev:fake[course,3] to create 3 fake courses (available parameters: author, post, speaker, category, course, faq)
 ```
 
 ### Generate Admin Pages for Models
