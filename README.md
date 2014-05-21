@@ -22,7 +22,7 @@ $ rails server
 Tasks
 -----
 
-* rake dev:fake[model_name,count]
+* `rake dev:fake[model_name,count]`
 
     dev:fake to generate fake data for all model, dev:fake[course,3] to create 3 fake courses (available parameters: author, post, speaker, category, course, faq)
 
