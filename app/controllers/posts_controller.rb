@@ -2,9 +2,17 @@ class PostsController < ApplicationController
   before_action :set_recent_posts, :set_tags
 
   def index
-    @posts = Post.order('id DESC').page(params[:page]).per(3)
-    @query_tags = params[:tags].is_a?(String) ? params[:tags].split(',') : params[:tags]
-    @posts = @posts.tagged_with(@query_tags) if @query_tags.present?
+    respond_to do |format|
+      format.html do
+        @posts = Post.order('id DESC').page(params[:page]).per(3)
+        @query_tags = params[:tags].is_a?(String) ? params[:tags].split(',') : params[:tags]
+        @posts = @posts.tagged_with(@query_tags) if @query_tags.present?
+      end
+      format.rss do
+        @posts = Post.order('id DESC').first(10)
+        render content_type: 'application/rss-xml'
+      end
+    end
   end
 
   def show
