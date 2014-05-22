@@ -10,7 +10,6 @@ zh-TW:
   courses:
     index:
       title: 課程動態
-      subtitle: Ex utamur fierent tacimates nam, his duis choro an.
       summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
     sidebar:
       all_courses: 所有課程
@@ -51,7 +50,6 @@ zh-TW:
   posts:
     index:
       title: 部落格
-      subtitle: Ex utamur fierent tacimates nam, his duis choro an.
       summary: Lorem ipsu ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
     show:
       title: 部落格
@@ -62,10 +60,16 @@ zh-TW:
     sidebar:
       recent_post: 近期文章
   pages:
+    faq:
+      title: 常見問題
+      summary: Lorem ipsuen ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
     next_schedule:
       hours: 小時
     main_features:
-      why_join_5xruby: 五倍紅寶石
+      5xruby: 五倍紅寶石
+      lead: |
+        Lorem ipsum dolor sit amet, ius minim gubergren ad. <br>
+        At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clitaponderum ne.
       items:
         - icon: icon-trophy
           title: 專業師資
