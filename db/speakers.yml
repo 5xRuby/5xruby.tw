@@ -112,15 +112,6 @@
     RubyConf Taiwan 2014 講師
     Rails Girls Taipei 教練
 
-- name: 黃信翔 (Juanito Fatas)
-  remote_avatar_url: https://scontent-a-sjc.xx.fbcdn.net/hphotos-ash3/t1.0-9/1947692_10203263390049110_1094743119_n.jpg
-  is_online: true
-  role: author
-  summary: |
-    Rails Girls Taipei 教練
-    Ruby & Rails Contributor
-    Ruby Programming Language 中文官方網頁維護者
-
 - name: 汪會敏
   remote_avatar_url: https://scontent-a-sjc.xx.fbcdn.net/hphotos-ash2/t1.0-9/264662_233262400019538_7391535_n.jpg
   is_online: true

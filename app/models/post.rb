@@ -9,6 +9,7 @@
 #  updated_at :datetime
 #  image      :string(255)
 #  author_id  :integer
+#  summary    :string(255)
 #
 
 class Post < ActiveRecord::Base
@@ -26,6 +27,7 @@ class Post < ActiveRecord::Base
   belongs_to :author
 
   # validation macros
+  validates :summary, length: {maximum: 150}
 
   # callbacks
 

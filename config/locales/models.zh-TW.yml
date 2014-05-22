@@ -28,6 +28,7 @@ zh-TW:
     attributes:
       post:
         title: 標題
+        summary: 簡介
         content: 內容
         author: 作者
         tag_list: 標籤

@@ -5,13 +5,10 @@ zh-TW:
   speakers:
     index:
       title: 講師
-      subtitle:
-      summary: 為提供更高品質的教學內容，我們網羅了十多位在台灣 Ruby/Rails 領域有多年開發及教學經驗之講師。若您也有興趣加入我們的講師行列，歡迎來信與我們聯繫。
+      lead: 為提供更高品質的教學內容，我們網羅了十多位在台灣 Ruby/Rails 領域有多年開發及教學經驗之講師。若您也有興趣加入我們的講師行列，歡迎來信與我們聯繫。
   courses:
     index:
       title: 課程動態
-      subtitle: Ex utamur fierent tacimates nam, his duis choro an.
-      summary: Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
     sidebar:
       all_courses: 所有課程
       categories: 課程分類
@@ -51,21 +48,22 @@ zh-TW:
   posts:
     index:
       title: 部落格
-      subtitle: Ex utamur fierent tacimates nam, his duis choro an.
-      summary: Lorem ipsu ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
     show:
       title: 部落格
-      subtitle: Ex utamur fierent tacimates nam, his duis choro an.
-      summary: Lorem ipsuen ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix.
     post:
       read_more: 更多內容
     sidebar:
       recent_post: 近期文章
   pages:
+    faq:
+      title: 常見問題
     next_schedule:
       hours: 小時
     main_features:
-      why_join_5xruby: 五倍紅寶石
+      5xruby: 五倍紅寶石
+      lead: |
+        Lorem ipsum dolor sit amet, ius minim gubergren ad. <br>
+        At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clitaponderum ne.
       items:
         - icon: icon-trophy
           title: 專業師資
@@ -90,8 +88,7 @@ zh-TW:
       detail: 詳細
     about:
       title: 關於
-      subtitle:
-      summary: 五倍專業、五倍祝福，五倍的紅寶石
+      lead: 五倍專業、五倍祝福，五倍的紅寶石
       description: |
         ## 關於「五倍紅寶石」
         ### 由來

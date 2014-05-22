@@ -8,6 +8,7 @@
 #  updated_at     :datetime
 #  courses_count  :integer          default(0), not null
 #  is_highlighted :boolean          default(FALSE), not null
+#  sort_id        :integer          default(0), not null
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl

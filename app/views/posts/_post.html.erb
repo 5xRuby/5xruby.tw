@@ -13,7 +13,7 @@
   <h2><%= link_to post.title, post, title: post.title %></h2>
   <div class="highlight">
     <% if action_name == 'index' %>
-      <p><%= strip_tags(MarkdownRenderer.render(post.content)).truncate(150) %></p>
+      <p><%= post.summary %></p>
     <% else %>
       <%= sanitize MarkdownRenderer.render(post.content) %>
     <% end %>
