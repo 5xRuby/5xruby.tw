@@ -1,4 +1,19 @@
 module ApplicationHelper
+  def sub_header title: nil, lead_box: nil, lead: nil
+    content_tag(:section, id: :'sub-header'){
+      concat content_tag(:div, class: :container){
+        content_tag(:div, class: :row){
+          content_tag(:div, class: 'col-md-10 col-md-offset-1 text-center'){
+            concat content_tag(:h1, title) if title
+            concat content_tag(:p, lead_box, class: 'lead boxed') if lead_box
+            concat content_tag(:p, lead, class: :lead) if lead
+          }
+        }
+      }
+      concat content_tag(:div, nil, class: :divider_top)
+    }
+  end
+
   def html_tag_attributes
     @html_tag_attributes ||= {}
     if @seo

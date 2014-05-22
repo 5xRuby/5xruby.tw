@@ -2,18 +2,7 @@
 <link href="/css/timeline.css" rel="stylesheet">
 <% end %>
 
-<section id="sub-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1 text-center">
-        <h1><%= @schedule.stage.title %></h1>
-        <p class="lead boxed"><%= l @schedule.date, format: :long %></p>
-        <p class="lead"><%= @schedule.stage.description %></p>
-      </div>
-    </div><!-- End row -->
-  </div><!-- End container -->
-  <div class="divider_top"></div>
-</section><!-- End sub-header -->
+<%= sub_header title: @schedule.stage.title, lead_box: l(@schedule.date, format: :long), lead: @schedule.stage.description %>
 
 <section id="main_content">
   <div class="container">
