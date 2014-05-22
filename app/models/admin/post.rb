@@ -9,6 +9,7 @@
 #  updated_at :datetime
 #  image      :string(255)
 #  author_id  :integer
+#  summary    :string(255)
 #
 
 class Admin::Post < Post
