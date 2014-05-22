@@ -2,8 +2,8 @@ xml.instruct! :xml
 xml.rss :version => '2.0' do
   xml.channel do
     xml.title '五倍紅寶石股份有限公司'
-    xml.description "五倍紅寶石股份有限公司"
-    xml.link posts_url
+    xml.link posts_url(format: :rss)
+    xml.description '五倍紅寶石股份有限公司'
     @posts.each do |post|
       xml.item do
         xml.title post.title

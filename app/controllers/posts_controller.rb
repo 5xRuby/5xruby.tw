@@ -10,7 +10,7 @@ class PostsController < ApplicationController
       end
       format.rss do
         @posts = Post.order('id DESC').first(10)
-        render content_type: 'application/rss-xml'
+        render content_type: 'application/rss+xml'
       end
     end
   end
