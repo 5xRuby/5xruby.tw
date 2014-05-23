@@ -1,0 +1,41 @@
+/*
+*= require font-awesome
+*= require additional
+*= require highlightjs/monokai
+*= require nav
+*= require homepage
+*= require stages
+*= require_self
+*/
+
+/* applies#new: Hide forward button */
+#bottom-wizard > button.forward[disabled]{
+  display: none;
+}
+
+body > div.alert{
+  margin-bottom: 0px;
+}
+
+a.button_medium, .button_medium {
+  background: #f0895c; /* 藍色版：71a7f0 */
+}
+
+ul.submenu-col li a#active {
+  background:#8d354d url(../img/arrow.png) no-repeat  96% center;
+}
+
+#about-header > #sub-header{
+  background: url(../img/about.png) no-repeat;
+  background-size: 100%;
+  @media (min-width: 400px) { height: 120px; }
+  @media (min-width: 500px) { height: 150px; }
+  @media (min-width: 870px) { height: 250px; }
+  @media (min-width: 1140px) { height: 320px; }
+  @media (min-width: 1700px) { height: 438px; }
+}
+
+a.button_medium_outline, .button_medium_outline {
+  color:#d62567;
+  border:2px solid #d62567;
+}
