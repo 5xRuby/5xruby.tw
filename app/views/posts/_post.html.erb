@@ -5,7 +5,11 @@
       <ul>
         <li><i class="icon-calendar-empty"></i><!-- On  --><span><%= l post.created_at, format: :short %></span></li>
         <li><i class="icon-user"></i>By <a href="#"><%= post.author.try(:name) %></a></li>
-        <li><i class="icon-tags"></i>Tags <a href="#">Works</a> <a href="#">Personal</a></li>
+        <li><i class="icon-tags"></i><%= t('.tags') %>
+          <% post.tags.each do |tag| %>
+            <%= link_to tag, posts_path(tags: tag.name) %>
+          <% end %>
+        </li>
       </ul>
     </div>
     <% if action_name == 'index' %><div class="post-right"><i class="icon-comment"></i><%= link_to '', post_url(post, anchor: :disqus_thread) %></div><% end %>
