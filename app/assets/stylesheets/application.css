@@ -45,6 +45,8 @@ ul.sf-menu li.active a{
   border-left-color: white;
 }
 
+/* end of active navbar style */
+
 #main-features {
   background:#8d354d url(../img/subheader.png) repeat 0 0;
 }
@@ -75,4 +77,9 @@ a.button_medium, .button_medium {
 
 ul.submenu-col li a#active {
   background:#8d354d url(../img/arrow.png) no-repeat  96% center;
+}
+
+#about-header > #sub-header{
+  background: url(../img/changingpic_2.png) repeat 0 0;
+  padding-bottom: 350px;
 }
