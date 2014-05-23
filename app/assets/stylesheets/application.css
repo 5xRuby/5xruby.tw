@@ -44,3 +44,35 @@ ul.sf-menu li.active a{
 .sf-arrows ul li.active > .sf-with-ul:after{
   border-left-color: white;
 }
+
+#main-features {
+  background:#8d354d url(../img/subheader.png) repeat 0 0;
+}
+
+#testimonials {
+  background: #1abc9c url(../img/praise_bg.png) repeat 0 0;
+}
+
+div.feature > p{
+  color: #fcffd2;
+}
+
+#sub-header{
+  background:#8d354d url(../img/subheader.png) repeat 0 0;
+}
+
+#sub-header.pattern_1{
+  background:#68c3bd url(../img/subheader.png) repeat center top;
+}
+
+#sub-header-features p{
+  color:#005d83;
+}
+
+a.button_medium, .button_medium {
+  background: #f0895c; /* 藍色版：71a7f0 */
+}
+
+ul.submenu-col li a#active {
+  background:#8d354d url(../img/arrow.png) no-repeat  96% center;
+}
