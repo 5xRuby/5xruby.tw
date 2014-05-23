@@ -87,10 +87,8 @@ zh-TW:
     recent_course:
       detail: 詳細
     about:
-      title: 關於
-      lead: 五倍專業、五倍祝福，五倍的紅寶石
       description: |
-        ## 關於「五倍紅寶石」
+        ## 五倍專業、五倍祝福，五倍的紅寶石
         ### 由來
         我們是一群在台灣的 Ruby 程式語言的愛好者，每天的工作都是跟 Ruby/Rails 相關。
 

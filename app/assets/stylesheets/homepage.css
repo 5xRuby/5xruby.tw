@@ -1,0 +1,23 @@
+#main-features {
+  background:#8d354d url(../img/subheader.png) repeat 0 0;
+}
+
+#testimonials {
+  background: #1abc9c url(../img/praise_bg.png) repeat 0 0;
+}
+
+div.feature > p{
+  color: #fcffd2;
+}
+
+#sub-header{
+  background:#8d354d url(../img/subheader.png) repeat 0 0;
+}
+
+#sub-header.pattern_1{
+  background:#68c3bd url(../img/subheader.png) repeat center top;
+}
+
+#sub-header-features p{
+  color:#005d83;
+}
