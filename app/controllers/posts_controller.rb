@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.online.find(params[:id])
+    @post = Post.online.find_by(permalink: params[:id])
     @seo = {
       meta: {
         description: @post.summary,

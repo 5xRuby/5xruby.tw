@@ -9,7 +9,9 @@
 #  updated_at :datetime
 #  image      :string(255)
 #  author_id  :integer
-#  summary    :string(255)
+#  summary    :text
+#  is_online  :boolean          default(FALSE), not null
+#  permalink  :string(255)      default("f58dcb51"), not null
 #
 
 class Post < ActiveRecord::Base
@@ -18,11 +20,13 @@ class Post < ActiveRecord::Base
 
   # Concerns macros
   acts_as_taggable
+  include Permalinkable
 
   # Constants
 
   # Attributes related macros
   mount_uploader :image, PostImageUploader
+  permalinkable :title
 
   # association macros
   belongs_to :author

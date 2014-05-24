@@ -5,7 +5,7 @@
       <%= link_to image_tag(course.image.thumb), course %>
       <div class="cat_row">
         <% if course.category.present? %>
-          <%= link_to course.category.name, courses_path(category_id: course.category.id) %>
+          <%= link_to course.category.name, courses_path(category: course.category.permalink) %>
         <% else %>
           未分類
         <% end %>

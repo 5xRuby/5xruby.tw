@@ -9,7 +9,9 @@
 #  updated_at :datetime
 #  image      :string(255)
 #  author_id  :integer
-#  summary    :string(255)
+#  summary    :text
+#  is_online  :boolean          default(FALSE), not null
+#  permalink  :string(255)      default("f58dcb51"), not null
 #
 
 class Admin::Post < Post

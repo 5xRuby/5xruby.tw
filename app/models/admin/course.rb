@@ -12,6 +12,8 @@
 #  updated_at      :datetime
 #  subtitle        :string(255)
 #  category_id     :integer
+#  is_online       :boolean          default(FALSE), not null
+#  permalink       :string(255)      default("e9bd20e6"), not null
 #
 
 class Admin::Course < Course

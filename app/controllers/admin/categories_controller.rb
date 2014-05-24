@@ -65,11 +65,11 @@ class Admin::CategoriesController < AdminController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_category
-      @admin_category = Admin::Category.find(params[:id])
+      @admin_category = Admin::Category.find_by(permalink: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_category_params
-      params.require(:admin_category).permit(:name, :is_highlighted)
+      params.require(:admin_category).permit(:name, :is_highlighted, :permalink)
     end
 end

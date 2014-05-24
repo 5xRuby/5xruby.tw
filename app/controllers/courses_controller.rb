@@ -1,12 +1,12 @@
 class CoursesController < ApplicationController
   def index
     @courses = Course.online.order('id DESC').page(params[:page]).per(6)
-    @courses = @courses.where(category: @category) if @category = Category.find_by(id: params[:category_id])
+    @courses = @courses.where(category: @category) if @category = Category.find_by(permalink: params[:category])
     @categories = Category.order(:sort_id).where('courses_count > ?', 0) if @courses.presence
   end
 
   def show
-    @course = Course.online.includes(:schedules).find(params[:id])
+    @course = Course.online.includes(:schedules).find_by(permalink: params[:id])
     @seo = {
       meta: {
         description: @course.summary

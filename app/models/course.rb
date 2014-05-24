@@ -12,6 +12,8 @@
 #  updated_at      :datetime
 #  subtitle        :string(255)
 #  category_id     :integer
+#  is_online       :boolean          default(FALSE), not null
+#  permalink       :string(255)      default("e9bd20e6"), not null
 #
 
 class Course < ActiveRecord::Base
@@ -20,11 +22,13 @@ class Course < ActiveRecord::Base
 
   # Concerns macros
   include Select2Concern
+  include Permalinkable
 
   # Constants
 
   # Attributes related macros
   mount_uploader :image, CourseImageUploader
+  permalinkable :title
 
   # association macros
   has_many :stages, -> { order('sort_id') }, dependent: :destroy

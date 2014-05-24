@@ -12,6 +12,8 @@
 #  updated_at      :datetime
 #  subtitle        :string(255)
 #  category_id     :integer
+#  is_online       :boolean          default(FALSE), not null
+#  permalink       :string(255)      default("e9bd20e6"), not null
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
@@ -21,6 +23,8 @@ FactoryGirl.define do
     category { Category.order('RANDOM()').first }
     image { Faker::Image.image }
     title { Faker::Name.title }
+    permalink { SecureRandom.hex(4) }
+    is_online { [true, false].sample }
     subtitle { Faker::Lorem.sentence }
     summary { Faker::Lorem.paragraph.slice(0, 150) }
     description { "<p>#{Faker::Lorem.paragraph}</p>" }
