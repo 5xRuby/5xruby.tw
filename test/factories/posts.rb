@@ -9,7 +9,9 @@
 #  updated_at :datetime
 #  image      :string(255)
 #  author_id  :integer
-#  summary    :string(255)
+#  summary    :text
+#  is_online  :boolean          default(FALSE), not null
+#  permalink  :string(255)      default("f58dcb51"), not null
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
@@ -19,6 +21,8 @@ FactoryGirl.define do
     author { Author.order('RANDOM()').first }
     image { Faker::Image.image }
     title { Faker::Name.title }
+    permalink { SecureRandom.hex(4) }
+    is_online { [true, false].sample }
     summary { Faker::Lorem.paragraph[0,150] }
     content { "<p>#{Faker::Lorem.paragraph}</p>" }
     tag_list { %w[aaa bbb ccc ddd eee fff ggg hhh iii jjj].sample(3) }

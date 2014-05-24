@@ -1,15 +1,15 @@
 <div class="col-lg-4 col-md-6">
   <div class="col-item">
-    <span class="ribbon_course"></span>
+    <%#span class="ribbon_course"></span%>
     <div class="photo">
       <%= link_to image_tag(course.image.thumb), course %>
       <div class="cat_row">
         <% if course.category.present? %>
-          <%= link_to course.category.name, courses_path(category_id: course.category.id) %>
+          <%= link_to course.category.name, courses_path(category: course.category.permalink) %>
         <% else %>
           未分類
         <% end %>
-        <span class="pull-right"><i class=" icon-clock"></i>6 Days</span>
+        <span class="pull-right"><i class=" icon-clock"></i><%= course.stages.size %> Days</span>
       </div>
 
     </div>
@@ -18,9 +18,9 @@
         <div class="course_info col-md-12 col-sm-12">
           <h4><%= course.title %></h4>
           <p><%= course.summary %></p>
-          <div class="rating">
+          <%#div class="rating">
             <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class=" icon-star-empty"></i>
-          </div>
+          </div%>
         </div>
       </div>
       <div class="separator clearfix">

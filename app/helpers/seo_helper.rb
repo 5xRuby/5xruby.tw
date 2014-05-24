@@ -23,6 +23,7 @@ module SeoHelper
 
   def meta_tags **hash, &block
     hash.map{ |name, value|
+      value = image_url(value) if name == :image
       block_given? ? yield(name, value) : tag(:meta, name: name, content: value)
     }.inject(&:+) if hash.respond_to?(:map)
   end

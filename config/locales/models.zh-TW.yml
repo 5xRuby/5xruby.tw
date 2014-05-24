@@ -13,6 +13,7 @@ zh-TW:
   attributes:
     image: 主圖
     remove_image: 刪除圖片
+    permalink: 縮址
   activerecord:
     models:
       post: 文章

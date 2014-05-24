@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524113745) do
+ActiveRecord::Schema.define(version: 20140524171007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,17 +42,20 @@ ActiveRecord::Schema.define(version: 20140524113745) do
   end
 
   create_table "categories", force: true do |t|
-    t.string   "name",                           null: false
+    t.string   "name",                                null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "courses_count",  default: 0,     null: false
-    t.boolean  "is_highlighted", default: false, null: false
-    t.integer  "sort_id",        default: 0,     null: false
+    t.integer  "courses_count",  default: 0,          null: false
+    t.boolean  "is_highlighted", default: false,      null: false
+    t.integer  "sort_id",        default: 0,          null: false
+    t.string   "permalink",      default: "7b88591f", null: false
   end
+
+  add_index "categories", ["permalink"], name: "index_categories_on_permalink", unique: true, using: :btree
 
   create_table "courses", force: true do |t|
     t.string   "image"
-    t.string   "title",                           null: false
+    t.string   "title",                                null: false
     t.text     "summary"
     t.text     "description"
     t.text     "what_will_learn"
@@ -60,10 +63,12 @@ ActiveRecord::Schema.define(version: 20140524113745) do
     t.datetime "updated_at"
     t.string   "subtitle"
     t.integer  "category_id"
-    t.boolean  "is_online",       default: false, null: false
+    t.boolean  "is_online",       default: false,      null: false
+    t.string   "permalink",       default: "e9bd20e6", null: false
   end
 
   add_index "courses", ["category_id"], name: "index_courses_on_category_id", using: :btree
+  add_index "courses", ["permalink"], name: "index_courses_on_permalink", unique: true, using: :btree
 
   create_table "events", force: true do |t|
     t.integer  "schedule_id", null: false
@@ -88,18 +93,19 @@ ActiveRecord::Schema.define(version: 20140524113745) do
   end
 
   create_table "posts", force: true do |t|
-    t.string   "title",                        null: false
-    t.text     "content",                      null: false
+    t.string   "title",                           null: false
+    t.text     "content",                         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
     t.integer  "author_id"
     t.text     "summary"
-    t.boolean  "is_available", default: false, null: false
-    t.boolean  "is_online",    default: false, null: false
+    t.boolean  "is_online",  default: false,      null: false
+    t.string   "permalink",  default: "f58dcb51", null: false
   end
 
   add_index "posts", ["author_id"], name: "index_posts_on_author_id", using: :btree
+  add_index "posts", ["permalink"], name: "index_posts_on_permalink", unique: true, using: :btree
 
   create_table "redactor_images", force: true do |t|
     t.string   "image",      null: false

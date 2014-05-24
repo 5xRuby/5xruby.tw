@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  before_action :set_seo
 
   def recaptcha?
     return @recaptcha if @recaptcha
@@ -16,5 +17,26 @@ class ApplicationController < ActionController::Base
     res = Net::HTTP.post_form(uri, post_params)
     result, error = res.body.split
     @recaptcha = result == 'true'
+  end
+
+  def set_seo
+    @seo = {
+      meta: {
+        description: t('site.description')
+      },
+      google: {
+        name: t('company.name'),
+        description: t('site.description'),
+        image: 'og_logo.png',
+        item_type: :Article
+      },
+      og: {
+        title: t('company.name'),
+        url: request.url,
+        type: :website,
+        description: t('site.description'),
+        image: 'og_logo.png'
+      }
+    }
   end
 end

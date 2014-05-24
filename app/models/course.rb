@@ -12,18 +12,23 @@
 #  updated_at      :datetime
 #  subtitle        :string(255)
 #  category_id     :integer
+#  is_online       :boolean          default(FALSE), not null
+#  permalink       :string(255)      default("e9bd20e6"), not null
 #
 
 class Course < ActiveRecord::Base
   # scope macros
+  scope :online, -> { where(is_online: true) }
 
   # Concerns macros
   include Select2Concern
+  include Permalinkable
 
   # Constants
 
   # Attributes related macros
   mount_uploader :image, CourseImageUploader
+  permalinkable :title
 
   # association macros
   has_many :stages, -> { order('sort_id') }, dependent: :destroy
@@ -38,9 +43,6 @@ class Course < ActiveRecord::Base
   select2_white_list :title
 
   # callbacks
-
-  # scopes
-  scope :online, -> { where(is_online: true) }
 
   protected
   # callback methods
