@@ -19,7 +19,7 @@ class Post < ActiveRecord::Base
   acts_as_taggable
 
   # Constants
-  
+
   # Attributes related macros
   mount_uploader :image, PostImageUploader
 
@@ -32,6 +32,9 @@ class Post < ActiveRecord::Base
   # callbacks
 
   # other
+
+  # scopes
+  scope :online, -> { where(is_online: true) }
 
   protected
   # callback methods

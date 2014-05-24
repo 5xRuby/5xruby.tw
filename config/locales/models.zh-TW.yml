@@ -32,6 +32,7 @@ zh-TW:
         content: 內容
         author: 作者
         tag_list: 標籤
+        is_online: 上線
       category:
         name: 分類名稱
         is_highlighted: 本期主打分類
