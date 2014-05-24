@@ -16,6 +16,7 @@
 
 class Course < ActiveRecord::Base
   # scope macros
+  scope :online, -> { where(is_online: true) }
 
   # Concerns macros
   include Select2Concern
@@ -38,9 +39,6 @@ class Course < ActiveRecord::Base
   select2_white_list :title
 
   # callbacks
-
-  # scopes
-  scope :online, -> { where(is_online: true) }
 
   protected
   # callback methods

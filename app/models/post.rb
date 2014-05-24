@@ -14,6 +14,7 @@
 
 class Post < ActiveRecord::Base
   # scope macros
+  scope :online, -> { where(is_online: true) }
 
   # Concerns macros
   acts_as_taggable
@@ -32,9 +33,6 @@ class Post < ActiveRecord::Base
   # callbacks
 
   # other
-
-  # scopes
-  scope :online, -> { where(is_online: true) }
 
   protected
   # callback methods

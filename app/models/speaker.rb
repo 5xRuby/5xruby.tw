@@ -20,6 +20,7 @@
 
 class Speaker < ActiveRecord::Base
   # scope macros
+  scope :online, -> { where(is_online: true) }
 
   # Concerns macros
   extend Enumerize
@@ -40,9 +41,6 @@ class Speaker < ActiveRecord::Base
   enumerize :role, in: %i[author consultant speaker parttime-speaker assistant-speaker]
 
   # callbacks
-
-  # scopes
-  scope :online, -> { where(is_online: true) }
 
   protected
   # callback methods
