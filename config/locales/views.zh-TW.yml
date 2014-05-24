@@ -39,11 +39,11 @@ zh-TW:
       back_to_course: 回到課程頁
     personal:
       enter_your_personal_info: 請填寫報名資料
-      enter_your_personal_info_detail: 請填寫您的個人資料，我們對您的Lorem ipsum dolor sit amet, quidam semper duo ea. Modo menandri molestiae ad pri, ut nec falli consetetur.<br> 如有任何疑問歡迎來信詢問，或是來電 <strong>+886 928 617 687</strong>
+      enter_your_personal_info_detail: 請填寫您的個人資料，我們對您的Lorem i如有任何疑問歡迎來信詢問，或是來電 <strong>+886 928 617 687</strong>
     preferences:
     message:
       additional_message: 有想告訴我們的嗎？
-      additional_message_detail: Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+      additional_message_detail: Lorem ipsum.
       submit_your_apply: 送出報名
   posts:
     index:
@@ -67,21 +67,21 @@ zh-TW:
     main_features:
       5xruby: 五倍紅寶石
       lead: |
-        Lorem ipsum dolor sit amet, ius minim gubergren ad. <br>
+        Lorem ipsum dolor sit amet, ius minim gubergren ad.
         At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clitaponderum ne.
       items:
         - icon: icon-trophy
           title: 專業師資
-          description: 五倍紅寶石之成員及講師均是在業界或台灣 Ruby 社群的資深成員[待補充]
+          description: 五倍紅寶石之成員及講師均是在業界或台灣 Ruby 社群的資深成員，
         - icon: icon-ok
           title: 技術諮詢、顧問
           description: 從系統設計、規劃到開發，甚至到系統架設，我們都可以提供專業的建議與諮詢。
         - icon: icon-mic
           title: 實戰課程
-          description: 從 Ruby 到 Rails，或是協同工作的工具 Git
+          description: 我們將規劃一系列包括 Ruby、 Rails，或是協同開發的 Git 以及測試、佈署等相關課程，從新手到中、高階的課程，讓您可以快速掌握使用 Ruby 開發的快速與樂趣。
         - icon: icon-video
           title: 企業培訓
-          description: 我們針對企業內部原有開發人員設計了一系列培訓計劃，將企業內部現有人力快速打造為專業的 Ruby/Rails 開發團隊，可免去新進員工忠誠度以及企業文化磨合之困擾。
+          description: 我們也針對企業內部原有開發人員設計了一系列培訓計劃，將企業內部現有人力快速打造為專業的 Ruby/Rails 開發團隊，可免去新進員工忠誠度以及企業文化磨合之困擾。
     main_content_gray:
       view_all_courses: 瀏覽所有課程
       latest_courses: 最新課程
