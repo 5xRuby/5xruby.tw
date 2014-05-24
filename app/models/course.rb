@@ -21,7 +21,7 @@ class Course < ActiveRecord::Base
   include Select2Concern
 
   # Constants
-  
+
   # Attributes related macros
   mount_uploader :image, CourseImageUploader
 
@@ -39,7 +39,8 @@ class Course < ActiveRecord::Base
 
   # callbacks
 
-  # other
+  # scopes
+  scope :online, -> { where(is_online: true) }
 
   protected
   # callback methods

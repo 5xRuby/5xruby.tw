@@ -41,7 +41,8 @@ class Speaker < ActiveRecord::Base
 
   # callbacks
 
-  # other
+  # scopes
+  scope :online, -> { where(is_online: true) }
 
   protected
   # callback methods
