@@ -30,7 +30,7 @@
   </div><!-- End widget -->
 
   <div class="widget tags add_bottom_30">
-    <h4>Tags</h4>
+    <h4><%= t('.tags') %></h4>
     <% @tags.each do |tag| %>
       <%= link_to tag.name, posts_path(tags: tag.name) %>
     <% end %>

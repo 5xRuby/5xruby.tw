@@ -52,8 +52,13 @@ zh-TW:
       title: 部落格
     post:
       read_more: 更多內容
+      tags: 標籤
     sidebar:
+      tags: 標籤
       recent_post: 近期文章
+    breadcrumb:
+      home: 首頁
+      posts: 部落格
   pages:
     faq:
       title: 常見問題
