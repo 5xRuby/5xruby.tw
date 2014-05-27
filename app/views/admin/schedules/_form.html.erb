@@ -4,10 +4,29 @@
     <div class="form-group">
       <label for="course" class="control-label col-sm-1"><%= Course.model_name.human %></label>
       <div class="col-sm-10">
-        <%= text_field_tag :course, (@admin_schedule.stage.course.id rescue nil), class: 'select2-single', data: {model: :Course, column: :title, init: @admin_schedule.stage.try(:course).try(:title)} %>
+        <%= text_field_tag :course, (@admin_schedule.stage.course.id rescue nil),
+          class: 'select2-single',
+          data: {
+            model: :Course,
+            column: :title,
+            child_field: '#admin_schedule_stage_id',
+            init: @admin_schedule.stage.try(:course).try(:title)
+          }
+        %>
       </div>
     </div>
-    <%= f.association :stage, as: :string, input_html: {class: '', data: {model: :Stage, column: :title, init: @admin_schedule.stage.try(:title)}} %>
+    <%= f.association :stage,
+      as: :string,
+      input_html: {
+        class: '',
+        data: {
+          model: :Stage,
+          column: :title,
+          foreign_key: :course_id,
+          init: @admin_schedule.stage.try(:title)
+        }
+      }
+    %>
     <%= f.input :date %>
     <%= f.input :description, input_html: {class: 'redactor'} %>
     <%= render 'events_fields', f: f %>

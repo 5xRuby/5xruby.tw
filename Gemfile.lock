@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/tonytonyjan/select2_helper.git
-  revision: e0d49a615b34386b5c52d958c03bfb19143b8a12
+  revision: 9d8d97cc4b7efa7780deea52e6d6bf94a479cb42
   specs:
     select2_helper (0.0.1)
       coffee-rails
