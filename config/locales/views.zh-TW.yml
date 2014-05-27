@@ -73,7 +73,7 @@ zh-TW:
       items:
         - icon: icon-trophy
           title: 專業師資
-          description: 「五倍紅寶石」之成員及講師均是在業界第一線的開發人員或台灣 Ruby 社群的資深成員，除了理論基礎外，亦有充足的開發實作經驗。
+          description: 「五倍紅寶石」之成員及講師均是在業界第一線的開發人員或台灣 Ruby 社群的資深成員，除了具備理論基礎外，亦有充足的開發實作經驗。
         - icon: icon-ok
           title: 技術諮詢、顧問
           description: 從系統設計、規劃到開發，甚至到系統架設，我們都能為您提供專業的建議與諮詢。
@@ -82,7 +82,7 @@ zh-TW:
           description: 我們規劃了一系列包括 Ruby、Rails、Git 、測試及系統佈署等入門到中、高階的課程，讓您可以快速掌握使用 Ruby 開發的快速與樂趣。
         - icon: icon-video
           title: 企業培訓
-          description: 我們也針對企業內部原有開發人員設計了一系列培訓計劃，將企業內部現有人力快速打造為專業的 Ruby/Rails 開發團隊，可免去面試新進員工或企業文化磨合之困擾。
+          description: 我們針對企業內部開發人員設計了一系列培訓計劃，協助您將現有人力快速打造為專業 Ruby/Rails 開發團隊。您無須再經歷繁瑣的人才招募流程，也可免除新進人員需與組織文化磨合的困擾。
     main_content_gray:
       view_all_courses: 瀏覽所有課程
       latest_courses: 最新課程
