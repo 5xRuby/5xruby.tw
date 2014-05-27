@@ -14,6 +14,7 @@
 #  category_id     :integer
 #  is_online       :boolean          default(FALSE), not null
 #  permalink       :string(255)      default("e9bd20e6"), not null
+#  note            :text
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
@@ -28,6 +29,7 @@ FactoryGirl.define do
     subtitle { Faker::Lorem.sentence }
     summary { Faker::Lorem.paragraph.slice(0, 150) }
     description { "<p>#{Faker::Lorem.paragraph}</p>" }
+    note { "<p>#{Faker::Lorem.paragraph}</p>" }
     what_will_learn { "<p>#{Faker::Lorem.paragraph}</p>" }
 
     ignore do

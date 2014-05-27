@@ -4,7 +4,7 @@
     <th>值</th>
   </thead>
   <tbody>
-    <%= tr_for @admin_course, :id, [:category, :name], :image, :title, :permalink, :subtitle, :summary, :what_will_learn, :description %>
+    <%= tr_for @admin_course, :id, [:category, :name], :image, :title, :permalink, :subtitle, :summary, :what_will_learn, :description, :note %>
   </tbody>
 </table>
 
@@ -12,7 +12,7 @@
 
 <table class="table">
   <thead>
-    <%= th_for Stage, :sort_id, :title, :permalink, :duration, :description, :schedules %>
+    <%= th_for Stage, :sort_id, :title, :duration, :description, :schedules %>
   </thead>
   <tbody>
     <% @admin_course.stages.each_with_index do |stage, i| %>

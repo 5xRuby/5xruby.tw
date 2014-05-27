@@ -45,6 +45,7 @@ zh-TW:
         what_will_learn: 將會學到
         description: 詳細介紹
         is_online: 上線
+        note: 備註
       stage:
         sort_id: 順序
         title: 標題
