@@ -37,7 +37,10 @@
   <% end %>
 
   <div class="container">
-    備註：課程可能因故有所修改，主辦單位保留課程及講師異動之權利。
+    <% if note = @course.note.presence %>
+      <h3><%= t('.note') %></h3>
+      <%= sanitize @course.note %>
+    <% end %>
     <%#= render "question_box" %>
   </div>
 
