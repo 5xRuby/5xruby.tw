@@ -11,11 +11,9 @@
       </aside>
 
       <div class="col-lg-9 col-md-8 col-sm-8">
-        <% @courses.each_slice(3) do |courses| %>
-        <div class="row">
-          <%= render courses %>
+        <div id="courses" class="row">
+          <%= render @courses %>
         </div><!-- End row -->
-        <% end %>
       </div><!-- End col-lg-9-->
 
 
