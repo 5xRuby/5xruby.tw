@@ -38,7 +38,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    acts-as-taggable-on (3.2.3)
+    acts-as-taggable-on (3.2.5)
       actionpack (>= 3, < 5)
       activerecord (>= 3, < 5)
     annotate (2.6.3)
