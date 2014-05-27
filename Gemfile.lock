@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/tonytonyjan/select2_helper.git
+  revision: 0a7375c2f2f422496438d8773b1bc6a5cbb59b9f
+  specs:
+    select2_helper (0.0.1)
+      coffee-rails
+      jbuilder
+      kaminari
+      rails (~> 4.1.1)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -233,6 +243,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  select2_helper!
   settingslogic
   simple_form (= 3.1.0.rc1)
   spring

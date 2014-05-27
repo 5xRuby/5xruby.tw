@@ -6,6 +6,7 @@
 #= require redactor
 #= require redactor_zh_tw
 #= require select2
+#= require select2_helper
 #= require highlightjs
 #= require highlightjs_helper
 #= require_tree ./admin
