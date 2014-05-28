@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @next_schedules = Schedule.includes(stage: :course).available.limit(4)
+    @next_schedules = Schedule.includes(stage: :course).available.where(stages: {sort_id: 0}).limit(4)
     @feature_course = Course.find_by(permalink: 'ruby-on-rails')
   end
 
