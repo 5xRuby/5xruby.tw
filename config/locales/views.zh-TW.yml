@@ -25,6 +25,10 @@ zh-TW:
     course:
       apply: 我想報名
       detail: 詳細資料
+      hours:
+        zero: 尚無時數
+        one: 1 小時
+        other: "%{count} 小時"
   stages:
     stage:
       stage_no: 第 %{stage} 堂

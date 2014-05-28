@@ -46,6 +46,12 @@ class Course < ActiveRecord::Base
 
   # callbacks
 
+  # other
+
+  def hours
+    stages.sum(:duration)
+  end  
+
   protected
   # callback methods
 end
