@@ -13,7 +13,7 @@
         <td class="col-sm-2"><%= ff.input_field :start_at, label: false %></td>
         <td><%= ff.input_field :title, class: 'form-control', label: false %></td>
         <td><%= ff.input_field :description, class: 'form-control', label: false %></td>
-        <td class="col-sm-2"><%= ff.input_field :speaker_id, class: 'select2-single', label: false, data: {model: :Speaker, column: :name, text: ff.object.speaker.try(:name).to_s} %></td>
+        <td class="col-sm-2"><%= ff.input_field :speaker_id, class: 'select2-single', label: false, data: {model: :Speaker, column: :name, init: ff.object.speaker.try(:name)} %></td>
       <% end %>
     <% end %>
   </tbody>
