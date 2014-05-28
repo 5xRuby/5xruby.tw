@@ -46,6 +46,7 @@ zh-TW:
         description: 詳細介紹
         is_online: 上線
         note: 備註
+        apply_link: 報名網址
       stage:
         sort_id: 順序
         title: 標題

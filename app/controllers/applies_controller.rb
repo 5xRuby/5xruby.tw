@@ -28,7 +28,7 @@ class AppliesController < ApplicationController
   private
 
   def set_course
-    @course = Course.find(params[:course_id])
+    @course = Course.find_by!(permalink: params[:course_id])
   end
 
   def apply_params

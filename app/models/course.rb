@@ -15,6 +15,7 @@
 #  is_online       :boolean          default(FALSE), not null
 #  permalink       :string(255)      default("e9bd20e6"), not null
 #  note            :text
+#  apply_link      :string(255)
 #
 
 class Course < ActiveRecord::Base
@@ -44,6 +45,12 @@ class Course < ActiveRecord::Base
   select2_white_list :title
 
   # callbacks
+
+  # other
+
+  def hours
+    stages.sum(:duration)
+  end  
 
   protected
   # callback methods
