@@ -10,7 +10,7 @@ class Admin::CoursesController < AdminController
   # GET /admin/courses/1
   # GET /admin/courses/1.json
   def show
-    @admin_course = Admin::Course.includes(stages: [schedules: [:applies]]).find_by(permalink: params[:id])
+    @admin_course = Admin::Course.includes(stages: [schedules: [:applies]]).find_by!(permalink: params[:id])
   end
 
   # GET /admin/courses/new
@@ -67,7 +67,7 @@ class Admin::CoursesController < AdminController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_course
-      @admin_course = Admin::Course.find_by(permalink: params[:id])
+      @admin_course = Admin::Course.find_by!(permalink: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
