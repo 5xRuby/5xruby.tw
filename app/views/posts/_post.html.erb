@@ -19,7 +19,7 @@
     <% if action_name == 'index' %>
       <p><%= post.summary %></p>
     <% else %>
-      <%= sanitize post.content %>
+      <%= raw post.content %>
     <% end %>
   </div>
   <%= link_to t('.read_more'), post, class: 'button_medium', title: post.title if action_name == 'index' %>
