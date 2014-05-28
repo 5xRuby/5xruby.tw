@@ -71,8 +71,8 @@
           data-endeasing="Power4.easeIn"
           data-captionhidden="on"
           style="z-index: 8">
-          <a href="/courses/ruby-on-rails" class="btn btn-default btn-lg">課程內容</a>
-          <a href="" class="btn btn-default btn-lg">我要報名</a>
+          <%= link_to '課程內容', @feature_course, class: 'btn btn-default btn-lg' %>
+          <%= link_to '我要報名', apply_link(@feature_course), class: 'btn btn-default btn-lg' %>
         </div>
         <div class="tp-caption medium_light_white skewfromrightshort customout"
           data-x="700"
