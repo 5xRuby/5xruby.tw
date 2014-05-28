@@ -15,6 +15,7 @@
 #  is_online       :boolean          default(FALSE), not null
 #  permalink       :string(255)      default("e9bd20e6"), not null
 #  note            :text
+#  apply_link      :string(255)
 #
 
 class Course < ActiveRecord::Base
