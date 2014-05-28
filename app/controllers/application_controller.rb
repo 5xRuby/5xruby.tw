@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
       google: {
         name: t('company.name'),
         description: t('site.description'),
-        image: 'og_logo.png',
+        image: 'og_picture.png',
         item_type: :Article
       },
       og: {
@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
         url: request.url,
         type: :website,
         description: t('site.description'),
-        image: 'og_logo.png'
+        image: 'og_picture.png'
       }
     }
   end
