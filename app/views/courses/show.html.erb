@@ -33,7 +33,7 @@
   </div>
 
   <% @course.stages.each_with_index do |stage, index| %>
-  <%= render stage, index: index + 1 %>
+  <%= render stage, index: index %>
   <% end %>
 
   <div class="container">
