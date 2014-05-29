@@ -13,6 +13,6 @@
   <%= link_to t('action.back'), admin_posts_path, class: 'btn btn-default btn-lg' %>
 </div>
 
-<div id="preview" class="highlight"><%= @admin_post.content %></div>
+<div id="preview" class="highlight"><%= raw @admin_post.content %></div>
 
 <%= mathjax_script_tag :preview %>
