@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # front
   root 'pages#index'
   controller :pages do
-    get :about, :contacts, :faq
+    get :about, :contacts, :faq, :sitemap
   end
 
   resources :posts, only: %i[index show]
