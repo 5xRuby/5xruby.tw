@@ -10,8 +10,7 @@
         <%= render @post %>
         <hr>
         <%= render 'layouts/disqus' %>
-      </div><!-- End col-md-8-->   
-
+      </div><!-- End col-md-8-->
 
     </div>  <!-- End row-->
   </div><!-- End container -->
@@ -20,4 +19,5 @@
 <% content_for :append_body do %>
 <%= render 'layouts/disqus_count' %>
 <%= mathjax_script_tag "post_#{@post.id}" %>
+<%= render 'layouts/ruby_comment' %>
 <% end %>
