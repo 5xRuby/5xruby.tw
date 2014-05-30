@@ -7,16 +7,15 @@
   <% end %>
   <div class="media-body">
     <h4 class="media-heading"><%= link_to course.title, course %> <span class="label label-warning">NEW</span></h4>
-    <h6><%= stage.title %></h6>
-    <%= sanitize course.summary %>
+    <%= raw course.summary %>
     <ul class="data-lessons">
       <li class="po-markup">
-        <a class="po-link" href="javascript:void(0)" ><i class="icon-clock"></i><%= Stage.human_attribute_name(:duration) %>： <%= '%.1f' % stage.duration %></a>
+        <a class="po-link" href="javascript:void(0)" ><i class="icon-clock"></i><%= Stage.human_attribute_name(:duration) %>： <%= course.hours %></a>
         <div class="po-content hidden">
-          <div class="po-title"><strong><%= Stage.human_attribute_name(:duration) %>： <%= '%.1f' % stage.duration %> <%= t('.hours') %></strong></div>
+          <div class="po-title"><strong><%= Stage.human_attribute_name(:duration) %>： <%= course.hours %> <%= t('.hours') %></strong></div>
           <!-- ./po-title -->
           <div class="po-body">
-            <div class="no_margin"><%= sanitize next_schedule.description %></div>
+            <div class="no_margin"><%= raw next_schedule.description %></div>
           </div>
           <!-- ./po-body -->
         </div>

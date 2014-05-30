@@ -10,6 +10,7 @@
             <%= link_to tag, posts_path(tags: tag.name) %>
           <% end %>
         </li>
+        <li><%= fb_share_btn href: post_url(post) %></li>
       </ul>
     </div>
     <% if action_name == 'index' %><div class="post-right"><i class="icon-comment"></i><%= link_to '', post_url(post, anchor: :disqus_thread) %></div><% end %>
@@ -19,7 +20,7 @@
     <% if action_name == 'index' %>
       <p><%= post.summary %></p>
     <% else %>
-      <%= sanitize MarkdownRenderer.render(post.content) %>
+      <%= raw post.content %>
     <% end %>
   </div>
   <%= link_to t('.read_more'), post, class: 'button_medium', title: post.title if action_name == 'index' %>
