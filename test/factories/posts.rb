@@ -12,6 +12,7 @@
 #  summary    :text
 #  is_online  :boolean          default(FALSE), not null
 #  permalink  :string(255)      default("f58dcb51"), not null
+#  publish_at :datetime
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
