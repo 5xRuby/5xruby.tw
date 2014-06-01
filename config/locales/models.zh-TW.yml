@@ -28,6 +28,7 @@ zh-TW:
       author: 作者
     attributes:
       post:
+        publish_at: 發佈時間
         title: 標題
         summary: 簡介
         content: 內容
