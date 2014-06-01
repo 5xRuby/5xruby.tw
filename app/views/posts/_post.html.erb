@@ -3,7 +3,7 @@
   <div class="post_info clearfix">
     <div class="post-left">
       <ul>
-        <li><i class="icon-calendar-empty"></i><!-- On  --><span><%= l post.created_at, format: :short %></span></li>
+        <li><i class="icon-calendar-empty"></i><!-- On  --><span><%= l post.publish_at, format: :short %></span></li>
         <li><i class="icon-user"></i>By <a href="#"><%= post.author.try(:name) %></a></li>
         <li><i class="icon-tags"></i><%= t('.tags') %>
           <% post.tags.each do |tag| %>
