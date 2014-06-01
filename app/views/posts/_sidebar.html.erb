@@ -22,7 +22,7 @@
     <ul class="recent_post">
       <% @recent_posts.each do |post| %>
         <li>
-          <i class="icon-calendar-empty"></i> <%= l post.created_at, format: :short %>
+          <i class="icon-calendar-empty"></i> <%= l post.publish_at, format: :short %>
           <div><%= link_to post.title, post %></div>
         </li>
       <% end %>
