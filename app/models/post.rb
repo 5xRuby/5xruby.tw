@@ -18,6 +18,7 @@
 class Post < ActiveRecord::Base
   # scope macros
   scope :online, -> { where(is_online: true) }
+  scope :publish, -> { where('publish_at < ?', Time.now) }
 
   # Concerns macros
   acts_as_taggable
