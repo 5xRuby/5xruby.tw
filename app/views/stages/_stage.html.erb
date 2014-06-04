@@ -4,7 +4,7 @@
       <div class="col-md-3 col-sm-3 hidden-xs text-center"><img src="/img/class<%= index %>.png" alt="" ></div>
       <div class="col-md-9 col-sm-9">
       <h3><em><%= t('.stage_no', stage: index) %></em> <%= stage.title %></h3>
-        <%= stage.description %>
+        <%= raw stage.description %>
         <ul class="data-lessons">
           <%#li class="po-markup">
             <a class="po-link" href="javascript:void(0)" ><i class="icon-calendar"></i> <%= t('.available_dates') %><%#/a>
