@@ -14,8 +14,8 @@
         <td><i class="glyphicon glyphicon-move"></i></td>
         <td><%= ff.link_to_remove content_tag(:i, nil, class: 'glyphicon glyphicon-trash') %></td>
         <td><%= ff.input_field :title, class: 'form-control', label: false %></td>
-        <td><%= ff.input_field :duration, class: 'form-control', label: false %></td>
-        <td><%= ff.input_field :description, class: 'form-control', label: false %></td>
+        <td class="col-sm-1"><%= ff.input_field :duration, class: 'form-control', label: false %></td>
+        <td class="col-sm-8"><%= ff.input_field :description, class: 'form-control', label: false, rows: 5 %></td>
       <% end %>
     <% end %>
   </tbody>
