@@ -7,7 +7,7 @@
       <%= th_for Stage, :title, :duration, :description %>
     </tr>
   </thead>
-  <tbody class="sortable" data-items=".stage">
+  <tbody class="sortable" data-items=".stage" data-handel=".glyphicon-move">
     <%= f.simple_fields_for :stages, wrapper: false do |ff| %>
       <%= content_tag_for :tr, ff.object, nil, class: 'fields' do %>
         <%= ff.hidden_field :sort_id %>
@@ -15,7 +15,7 @@
         <td><%= ff.link_to_remove content_tag(:i, nil, class: 'glyphicon glyphicon-trash') %></td>
         <td><%= ff.input_field :title, class: 'form-control', label: false %></td>
         <td class="col-sm-1"><%= ff.input_field :duration, class: 'form-control', label: false %></td>
-        <td class="col-sm-8"><%= ff.input_field :description, class: 'form-control', label: false, rows: 5 %></td>
+        <td class="col-sm-8"><%= ff.input_field :description, class: 'redactor', label: false, rows: 5 %></td>
       <% end %>
     <% end %>
   </tbody>

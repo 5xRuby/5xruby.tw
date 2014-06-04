@@ -3,6 +3,7 @@ $(document).on 'ready page:change', () ->
     input = element.getAttribute('data-input') || 'input[name$="[sort_id]"]'
     $(element).sortable
       items: element.getAttribute('data-items')
+      handle: element.getAttribute('data-handel')
       update: () ->
         for field_id, i in $(element).sortable('toArray')
           $('#' + field_id).find(input).val(i)
