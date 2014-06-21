@@ -47,7 +47,7 @@ gem 'rmagick', require: 'RMagick'
 gem 'enumerize'
 gem 'rack-mini-profiler'
 gem 'acts-as-taggable-on'
-gem 'select2_helper', github: 'tonytonyjan/select2_helper'
+gem 'select2_helper'
 
 # assets
 gem 'rails-assets-bootstrap'
