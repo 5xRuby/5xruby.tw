@@ -42,20 +42,20 @@ ActiveRecord::Schema.define(version: 20140601104147) do
   end
 
   create_table "categories", force: true do |t|
-    t.string   "name",                                null: false
+    t.string   "name",                           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "courses_count",  default: 0,          null: false
-    t.boolean  "is_highlighted", default: false,      null: false
-    t.integer  "sort_id",        default: 0,          null: false
-    t.string   "permalink",      default: "7b88591f", null: false
+    t.integer  "courses_count",  default: 0,     null: false
+    t.boolean  "is_highlighted", default: false, null: false
+    t.integer  "sort_id",        default: 0,     null: false
+    t.string   "permalink",                      null: false
   end
 
   add_index "categories", ["permalink"], name: "index_categories_on_permalink", unique: true, using: :btree
 
   create_table "courses", force: true do |t|
     t.string   "image"
-    t.string   "title",                                null: false
+    t.string   "title",                           null: false
     t.text     "summary"
     t.text     "description"
     t.text     "what_will_learn"
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(version: 20140601104147) do
     t.datetime "updated_at"
     t.string   "subtitle"
     t.integer  "category_id"
-    t.boolean  "is_online",       default: false,      null: false
-    t.string   "permalink",       default: "e9bd20e6", null: false
+    t.boolean  "is_online",       default: false, null: false
+    t.string   "permalink",                       null: false
     t.text     "note"
     t.string   "apply_link"
   end
@@ -95,15 +95,15 @@ ActiveRecord::Schema.define(version: 20140601104147) do
   end
 
   create_table "posts", force: true do |t|
-    t.string   "title",                           null: false
-    t.text     "content",                         null: false
+    t.string   "title",                      null: false
+    t.text     "content",                    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
     t.integer  "author_id"
     t.text     "summary"
-    t.boolean  "is_online",  default: false,      null: false
-    t.string   "permalink",  default: "f58dcb51", null: false
+    t.boolean  "is_online",  default: false, null: false
+    t.string   "permalink",                  null: false
     t.datetime "publish_at"
   end
 
