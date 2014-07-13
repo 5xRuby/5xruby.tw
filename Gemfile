@@ -50,7 +50,7 @@ gem 'acts-as-taggable-on'
 gem 'select2_helper'
 
 # assets
-gem 'rails-assets-bootstrap'
+gem 'bootstrap-sass'
 gem 'rails-assets-jquery-ui'
 gem 'rails-assets-select2'
 gem 'rails-assets-highlightjs'
