@@ -131,7 +131,7 @@ GEM
       sprockets-rails (~> 2.0)
     rails-assets-highlightjs (8.0.0)
     rails-assets-jquery (2.1.1)
-    rails-assets-jquery-ui (1.11.0)
+    rails-assets-jquery-ui (1.10.4)
       rails-assets-jquery (>= 1.6)
     rails-assets-select2 (3.5.0)
       rails-assets-jquery (>= 1.7.1)
@@ -231,7 +231,7 @@ DEPENDENCIES
   rack-mini-profiler
   rails (~> 4.1.1)
   rails-assets-highlightjs
-  rails-assets-jquery-ui
+  rails-assets-jquery-ui (= 1.10.4)
   rails-assets-select2
   rails-i18n
   rdiscount

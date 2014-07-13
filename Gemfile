@@ -51,7 +51,7 @@ gem 'select2_helper'
 
 # assets
 gem 'bootstrap-sass'
-gem 'rails-assets-jquery-ui'
+gem 'rails-assets-jquery-ui', '1.10.4'
 gem 'rails-assets-select2'
 gem 'rails-assets-highlightjs'
 gem 'font-awesome-sass'
