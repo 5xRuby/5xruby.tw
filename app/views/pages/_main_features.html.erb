@@ -10,9 +10,9 @@
       <% t('.items').each do |item| %>
         <div class="col-md-6">
           <div class="feature">
-            <i class="<%= item['icon'] %>"></i>
-            <h3><%= item['title'] %></h3>
-            <p><%= item['description'] %></p>
+            <i class="<%= item[:icon] %>"></i>
+            <h3><%= item[:title] %></h3>
+            <p><%= item[:description] %></p>
           </div>
         </div>
       <% end %>
