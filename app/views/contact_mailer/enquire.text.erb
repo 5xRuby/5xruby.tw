@@ -3,3 +3,4 @@
 <% %i[first_name last_name phone].each do |attribute| %>
 <%= Contact.human_attribute_name attribute %>：<%= @contact.send(attribute) %>
 <% end %>
+<%= Contact.human_attribute_name :price %>：<%= @contact.price %> 勝文
