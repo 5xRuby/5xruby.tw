@@ -12,7 +12,7 @@
 
 class Schedule < ActiveRecord::Base
   # scope macros
-  scope :available, -> { order(:date).where('date > ?', Time.now).includes(stage: :course).where(courses: {is_online: true}) }
+  scope :available, -> { order(:date).where('date > ?', Time.now).joins(stage: :course).where(courses: {is_online: true}) }
 
   # Concerns macros
 
