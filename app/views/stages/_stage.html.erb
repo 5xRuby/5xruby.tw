@@ -45,7 +45,7 @@
             </div><!-- ./po-content -->
           </li%>
         </ul>
-        <% stage.schedules.each do |schedule| %>
+        <% @schedules.select{|s| s.stage_id == stage.id}.each do |schedule| %>
         <%= link_to schedule.date, 'javascript:void(0)', class: 'button_medium' %>
         <% end %>
       </div>

@@ -60,6 +60,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-flowdock'
   gem 'annotate'
+  gem 'quiet_assets'
 end
 
 group :development, :test do

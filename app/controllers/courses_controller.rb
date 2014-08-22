@@ -6,7 +6,9 @@ class CoursesController < ApplicationController
   end
 
   def show
-    @course = Course.online.includes(:schedules).find_by!(permalink: params[:id])
+    @course = Course.online.includes(:stages).find_by!(permalink: params[:id])
+    @schedules = Schedule.where("stage_id IN (?)", @course.stage_ids)
+    ## to avoid N+1 query
     @seo = {
       meta: {
         description: @course.summary

@@ -10,7 +10,7 @@ class Admin::CoursesController < AdminController
   # GET /admin/courses/1
   # GET /admin/courses/1.json
   def show
-    @admin_course = Admin::Course.includes(stages: [schedules: [:applies]]).find_by!(permalink: params[:id])
+    @admin_course = Admin::Course.includes(:stages).find_by!(permalink: params[:id])
   end
 
   # GET /admin/courses/new
@@ -73,7 +73,7 @@ class Admin::CoursesController < AdminController
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_course_params
       params.require(:admin_course).permit(
-        :category_id, :image, :remove_image, :title, :permalink, :subtitle, :summary, :description, :what_will_learn, :is_online, :note, :apply_link,
+        :iframe_html, :category_id, :image, :remove_image, :title, :permalink, :subtitle, :summary, :description, :what_will_learn, :is_online, :note, :apply_link,
         stages_attributes: %i[id _destroy sort_id title duration description]
       )
     end
