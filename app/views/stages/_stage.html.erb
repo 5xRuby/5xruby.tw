@@ -46,7 +46,8 @@
           </li%>
         </ul>
         <% @schedules.select{|s| s.stage_id == stage.id}.each do |schedule| %>
-        <%= link_to schedule.date, 'javascript:void(0)', class: 'button_medium' %>
+        <div class="date_label"><i class="icon-calendar"></i> <%= schedule.date %></div>
+        <%#= link_to schedule.date, 'javascript:void(0)', class: 'button_medium' %>
         <% end %>
       </div>
 
