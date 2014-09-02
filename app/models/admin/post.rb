@@ -11,7 +11,7 @@
 #  author_id  :integer
 #  summary    :text
 #  is_online  :boolean          default(FALSE), not null
-#  permalink  :string(255)      default("f58dcb51"), not null
+#  permalink  :string(255)      not null
 #  publish_at :datetime
 #
 
