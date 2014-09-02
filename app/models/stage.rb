@@ -37,6 +37,9 @@ class Stage < ActiveRecord::Base
   # callbacks
 
   # other
+  def duration
+    (end_at - start_at) / 3600 # to hour
+  end
 
   protected
   # callback methods

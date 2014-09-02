@@ -58,6 +58,9 @@ zh-TW:
         description: 介紹
         course: 所屬課程
         schedules: 開課日期
+        date: 日期
+        start_at: 開始
+        end_at: 結束
       schedule:
         stage: 課程階段
         date: 開課日期

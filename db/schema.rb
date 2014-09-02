@@ -152,16 +152,16 @@ ActiveRecord::Schema.define(version: 20140902204101) do
   end
 
   create_table "stages", force: true do |t|
-    t.integer  "course_id",                 null: false
-    t.string   "title",                     null: false
+    t.integer  "course_id",                                   null: false
+    t.string   "title",                                       null: false
     t.text     "description"
-    t.integer  "sort_id",     default: 0,   null: false
+    t.integer  "sort_id",     default: 0,                     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "duration",    default: 0.0, null: false
-    t.date     "date"
-    t.time     "start_at"
-    t.time     "end_at"
+    t.float    "duration",    default: 0.0,                   null: false
+    t.date     "date",        default: '2014-09-02',          null: false
+    t.time     "start_at",    default: '2000-01-01 20:52:59', null: false
+    t.time     "end_at",      default: '2000-01-01 21:52:59', null: false
   end
 
   add_index "stages", ["course_id"], name: "index_stages_on_course_id", using: :btree
