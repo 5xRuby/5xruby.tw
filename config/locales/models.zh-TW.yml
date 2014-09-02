@@ -49,6 +49,8 @@ zh-TW:
         is_online: 上線
         note: 備註
         apply_link: 報名網址
+        iframe_html: iframe
+        speakers: 講師
       stage:
         sort_id: 順序
         title: 標題

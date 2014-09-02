@@ -2,6 +2,7 @@
 
   <div class="form-inputs">
     <%= f.association :category, input_html: {class: 'select2'} %>
+    <%= f.association :speakers, input_html: {class: 'select2'} %>
     <%= f.input :image %>
     <%= f.input :remove_image, as: :boolean %>
     <%= f.input :title %>
