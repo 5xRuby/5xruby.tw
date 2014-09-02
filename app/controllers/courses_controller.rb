@@ -27,5 +27,6 @@ class CoursesController < ApplicationController
         image: @course.image_url
       }
     }
+    render :show_2
   end
 end
