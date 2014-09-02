@@ -11,10 +11,11 @@ set :flowdock_deploy_tags, settings['flowdock']['flowdock_deploy_tags']
 set :application, '5xruby_tw'
 set :repo_url, 'git@github.com:5xRuby/5xruby.tw.git'
 set :branch, 'master'
+set :bundle_binstubs, false
 
 set :deploy_to, '/var/www/5xruby.tw/root'
 set :linked_files, %w{config/database.yml config/application.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
 
 set :default_env, { path: "/usr/local/ruby21/bin:$PATH" }
 
