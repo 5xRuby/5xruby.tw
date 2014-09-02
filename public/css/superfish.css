@@ -1,13 +1,19 @@
 /*** ESSENTIAL STYLES ***/
-.sf-menu, .sf-menu * {
+.sf-menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position:relative;
+}
+ul.sf-menu li.normal_drop_down ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-.sf-menu li {
+.sf-menu li.normal_drop_down {
 	position: relative;
 }
-.sf-menu ul {
+ul.sf-menu li ul {
 	position: absolute;
 	display: none;
 	top: 100%;
@@ -21,16 +27,14 @@
 .sf-menu li.sfHover > ul {
 	display: block;
 }
-
 .sf-menu a {
 	display: block;
-	position: relative;
+	position:relative;
 }
 .sf-menu ul ul {
 	top: 0;
 	left: 100%;
 }
-
 
 /*** DEMO SKIN ***/
 .sf-menu {
@@ -142,16 +146,72 @@ ul.sf-menu li a:hover{
 .mobnav-subarrow {
     display: none;
 }
+
+.sf-menu .sf-mega {
+  position: absolute;
+  display: none;
+  top: 45px;
+  left: 0;
+  z-index: 9999;
+ background: #111;
+  padding: 30px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.sf-menu .sf-mega ul.mega_submenu{
+	display:block;
+	float:none;
+	width:100%;
+	position:inherit;
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.sf-menu .sf-mega ul.mega_submenu li{
+	border-bottom: 1px dotted #333;
+	text-transform:none;
+	font-size:14px;
+}
+.sf-menu .sf-mega ul.mega_submenu li a{
+	color:#b7b7b7;
+}
+.sf-menu .sf-mega ul.mega_submenu li a:hover{
+	color:#000;
+}
+.sf-menu .sf-mega ul.mega_submenu li:last-child{
+	border-bottom: none;
+}
+ul.mega_submenu li i{
+	margin-left:0;
+	padding-left:0;
+	text-align:left;
+}
+.sf-mega h5{
+	border-bottom:1px solid #333;
+	padding-bottom:8px;
+	margin-bottom:0;
+	font-weight:600;
+}
+
+/** VERSION 1.3 New CSS  ==================== **/	
+ul.mega_submenu.icons li{
+	position:relative;
+}
+ul.mega_submenu.icons li i{
+	position:absolute;
+	right:25px;
+}
+/**  End Version 1.3 Updated  **/	
+
 @media (max-width: 767px) {
 	   #mobnav-btn  {
 		   position:absolute;
-		   top:-52px;
+		   top:-44px;
 		   right:20px;
 		   width:20px;
 	      height:20px;
 	      cursor:pointer;
     }
-	#logo  {margin-bottom:10px; }
    #mobnav-btn:before  {
         display: block;
     }
@@ -170,6 +230,10 @@ ul.sf-menu li a:hover{
         -o-transition: all .1s ease-in-out;
         transition: all .1s ease-in-out;
     }
+.sf-menu .sf-mega {
+  padding: 10px;
+}	
+	
 	/* styling for both css and generated arrows */
 	.sf-arrows .sf-with-ul:after {
 	top: 50%;
@@ -195,7 +259,18 @@ ul.sf-menu li a:hover{
         position:static!important;
         display: none!important;
     }
+	.sf-mega {
+        position:static!important;
+        display: none!important;
+    }
     .xpopdrop ul {
         display: block!important;
     }
+	.xpopdrop .sf-mega {
+        display: block!important;
+    }	
+	.mega_drop_down{
+		position:relative;
+}
+
 }
