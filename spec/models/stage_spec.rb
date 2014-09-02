@@ -8,7 +8,6 @@
 #  description :text
 #  created_at  :datetime
 #  updated_at  :datetime
-#  duration    :float            default(0.0), not null
 #  date        :date             default(Tue, 02 Sep 2014), not null
 #  start_at    :time             default(2000-01-01 20:52:59 UTC), not null
 #  end_at      :time             default(2000-01-01 21:52:59 UTC), not null
