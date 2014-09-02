@@ -9,6 +9,7 @@
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -16,6 +17,7 @@
     <% @admin_courses.each do |admin_course| %>
       <tr>
         <%= td_for admin_course, :id, [:category, :name], :image, :title, :permalink, :subtitle, :summary, :what_will_learn, :description %>
+        <td><%= link_to '複製', new_admin_course_path(fork: admin_course) %></td>
         <%= td_action_for admin_course %>
       </tr>
     <% end %>

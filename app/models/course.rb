@@ -49,6 +49,20 @@ class Course < ActiveRecord::Base
   # callbacks
 
   # other
+  def fork
+    the_forked = self.class.new attributes.except!('id', 'iframe', 'is_online')
+    if number = the_forked.permalink[/(\d+)$/, 1]
+      the_forked.permalink.sub!(/(\d+)$/, (number.to_i + 1).to_s)
+    else
+      the_forked.permalink += '-1'
+    end
+    the_forked.speakers = speakers
+    the_forked.image = image
+    stages.each do |stage|
+      the_forked.stages << Stage.new(stage.attributes.except!('id'))
+    end
+    the_forked
+  end
 
   def hours
     stages.sum(:duration)

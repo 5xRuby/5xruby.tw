@@ -4,7 +4,15 @@
     <%= f.association :category, input_html: {class: 'select2'} %>
     <%= f.association :speakers, input_html: {class: 'select2'} %>
     <%= f.input :image %>
+    <%= f.input :image_cache, as: :hidden %>
+    <% if @admin_course.image? %>
+    <div class="form-group">
+      <div class="col-sm-offset-1 col-sm-11">
+        <%= image_tag(@admin_course.image.preview) %>
+      </div>
+    </div>
     <%= f.input :remove_image, as: :boolean %>
+    <% end %>
     <%= f.input :title %>
     <%= f.input :permalink %>
     <%= f.input :iframe_html, as: :text, hint: "活動通或 KKTIX 之報名 iframe code" %>
