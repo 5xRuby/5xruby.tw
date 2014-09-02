@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140822174137) do
+ActiveRecord::Schema.define(version: 20140902143919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,14 @@ ActiveRecord::Schema.define(version: 20140822174137) do
 
   add_index "courses", ["category_id"], name: "index_courses_on_category_id", using: :btree
   add_index "courses", ["permalink"], name: "index_courses_on_permalink", unique: true, using: :btree
+
+  create_table "courses_speakers", id: false, force: true do |t|
+    t.integer "course_id",  null: false
+    t.integer "speaker_id", null: false
+  end
+
+  add_index "courses_speakers", ["course_id", "speaker_id"], name: "index_courses_speakers_on_course_id_and_speaker_id", unique: true, using: :btree
+  add_index "courses_speakers", ["speaker_id", "course_id"], name: "index_courses_speakers_on_speaker_id_and_course_id", unique: true, using: :btree
 
   create_table "events", force: true do |t|
     t.integer  "schedule_id", null: false
