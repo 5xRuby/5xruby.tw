@@ -3,14 +3,12 @@
   <thead>
     <tr>
       <th></th>
-      <th></th>
       <%= th_for Stage, :title, :date, :start_at, :end_at, :description %>
     </tr>
   </thead>
   <tbody>
     <%= f.simple_fields_for :stages, wrapper: false do |ff| %>
       <%= content_tag_for :tr, ff.object, nil, class: 'fields' do %>
-        <td><i class="glyphicon glyphicon-move"></i></td>
         <td><%= ff.link_to_remove content_tag(:i, nil, class: 'glyphicon glyphicon-trash') %></td>
         <td><%= ff.input_field :title, class: 'form-control', label: false %></td>
         <td><%= ff.input_field :date, class: 'form-control', label: false %></td>
