@@ -10,6 +10,9 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #  duration    :float            default(0.0), not null
+#  date        :date
+#  start_at    :time
+#  end_at      :time
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
