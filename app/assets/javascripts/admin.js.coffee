@@ -1,6 +1,8 @@
 #= require jquery
 #= require jquery_ujs
+#= require moment.min
 #= require bootstrap
+#= require bootstrap-datetimepicker.min
 #= require jquery_nested_form
 #= require jquery-ui
 #= require redactor
