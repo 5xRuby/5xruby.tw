@@ -36,8 +36,6 @@ class Course < ActiveRecord::Base
   # association macros
   has_many :stages, -> { order(:date, :start_at) }, dependent: :destroy
   accepts_nested_attributes_for :stages, allow_destroy: true, reject_if: proc { |attributes| attributes[:title].blank? }
-  has_many :schedules, through: :stages
-  has_many :applies
   has_and_belongs_to_many :speakers
   belongs_to :category, counter_cache: true
 

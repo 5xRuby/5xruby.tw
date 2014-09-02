@@ -25,8 +25,6 @@ class Stage < ActiveRecord::Base
 
   # association macros
   belongs_to :course
-  has_many :schedules, -> { available }
-  has_many :applies
 
   # validation macros
   validates :title, presence: true

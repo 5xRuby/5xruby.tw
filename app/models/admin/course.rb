@@ -29,8 +29,6 @@ class Admin::Course < Course
   # Attributes related macros
 
   # association macros
-  has_many :schedules, through: :stages
-  has_many :applies
   has_and_belongs_to_many :speakers
   belongs_to :category
 

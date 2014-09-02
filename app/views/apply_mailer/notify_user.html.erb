@@ -1,8 +1,0 @@
-<p>親愛的 <%= @apply.first_name %>：</p>
-
-<p>感謝你報名五倍紅寶石 <%= link_to @apply.course.title, course_url(@apply.course) %> 課程。</p>
-
-<% if @apply.stage %><p>單元： <%= @apply.stage.title %></p><% end %>
-<% if @apply.schedule %><p>日期： <%= @apply.schedule.date %></p><% end %>
-
-如有疑問請來信：hi@5xruby.tw
