@@ -12,25 +12,18 @@
 
 <table class="table">
   <thead>
-    <%= th_for Stage, :sort_id, :title, :description, :schedules %>
+    <th>順序</th>
+    <%= th_for Stage, :date, :start_at, :end_at, :title, :description %>
   </thead>
   <tbody>
     <% @admin_course.stages.each_with_index do |stage, i| %>
       <tr>
         <td><%= i + 1 %></td>
+        <td><%= l stage.date %></td>
+        <td><%= l stage.start_at, format: '%H:%M' %></td>
+        <td><%= l stage.end_at, format: '%H:%M' %></td>
         <td><%= stage.title %></td>
         <td><%= stage.description %></td>
-        <td class="col-sm-2">
-          <ul>
-            <% stage.schedules.each do |schedule| %>
-            <li>
-              <%= link_to [:admin, schedule] do %>
-                <%= schedule.date %> <span class="badge"><%= schedule.applies.size %></span>
-              <% end %>
-            </li>
-            <% end %>
-          </ul>
-        </td>
       </tr>
     <% end %>
   </tbody>
