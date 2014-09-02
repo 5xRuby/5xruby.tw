@@ -12,14 +12,13 @@
 
 <table class="table">
   <thead>
-    <%= th_for Stage, :sort_id, :title, :duration, :description, :schedules %>
+    <%= th_for Stage, :sort_id, :title, :description, :schedules %>
   </thead>
   <tbody>
     <% @admin_course.stages.each_with_index do |stage, i| %>
       <tr>
         <td><%= i + 1 %></td>
         <td><%= stage.title %></td>
-        <td><%= stage.duration %></td>
         <td><%= stage.description %></td>
         <td class="col-sm-2">
           <ul>

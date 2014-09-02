@@ -39,9 +39,6 @@ class Admin::Course < Course
   # callbacks
 
   # other
-  def hours
-    stages.sum(:duration)
-  end
 
   protected
   # callback methods

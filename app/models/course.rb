@@ -65,8 +65,8 @@ class Course < ActiveRecord::Base
   end
 
   def hours
-    stages.sum(:duration)
-  end  
+    stages.to_a.sum(&:duration)
+  end
 
   protected
   # callback methods
