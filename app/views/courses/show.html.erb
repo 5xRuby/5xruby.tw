@@ -50,7 +50,7 @@
         <% @course.stages.each_with_index do |stage, index| %>
         <h3 class="chapter_course"><%= t('.chapter_title', nth: index) %> <%= stage.title %></h3>
         <div class="strip_single_course">
-          <h4 class="completed"><a href="javascript:void(0);"><%= raw stage.description %></a></h4>
+          <h4 class="completed"><%= raw stage.description %></h4>
           <ul>
             <li><i class="icon-clock"></i> <%= '%.1f' % stage.duration %>h</li>
             <!-- <li><i class="icon-doc"></i>Text reading</li> -->
@@ -73,7 +73,7 @@
               <%= image_tag speaker.avatar.thumb, class: 'img-circle', alt: speaker.name, width: '68' %>
             </div>
             <div class="media-body">
-              <h5 class="media-heading"><a href="javascript:void(0);"><%= speaker.name %></a></h5>
+              <h5 class="media-heading"><%= speaker.name %></h5>
               <p><%= speaker.summary %></p>
             </div>
           </div>
