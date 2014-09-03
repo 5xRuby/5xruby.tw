@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903101343) do
+ActiveRecord::Schema.define(version: 20140903101852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,9 +49,9 @@ ActiveRecord::Schema.define(version: 20140903101343) do
     t.text     "note"
     t.string   "apply_link"
     t.string   "iframe_html"
-    t.integer  "maximum_attendees"
-    t.integer  "total_attendees"
-    t.integer  "minimum_attendees", default: 5
+    t.integer  "maximum_attendees", default: 30,    null: false
+    t.integer  "total_attendees",   default: 0,     null: false
+    t.integer  "minimum_attendees", default: 5,     null: false
   end
 
   add_index "courses", ["category_id"], name: "index_courses_on_category_id", using: :btree
