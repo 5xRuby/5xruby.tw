@@ -62,7 +62,7 @@
       <aside class="col-md-4">
         <div class="box_style_1">
           <h4><%= t('.lessons') %> <span class="pull-right"><%= @course.stages.size %></span></h4>
-          <h4><%= t('.hours') %> <span class="pull-right"><%= @course.hours %></span></h4>
+          <h4><%= t('.hours') %> <span class="pull-right"><%= '%.2f' % @course.hours %></span></h4>
           <% if @course.iframe_html.blank? && apply_link = @course.apply_link.presence %>
           <h4><a href="<%= apply_link %>" target="_blank"><%= t('.apply_now') %> <i class="icon-login-2 pull-right"></i></a></h4>
           <% end %>
