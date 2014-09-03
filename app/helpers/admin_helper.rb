@@ -47,17 +47,17 @@ module AdminHelper
   end
 
   def td_action_for record
-    content_tag(:td, link_to(icon_tag(:'eye-open'), record, class: 'btn btn-default', title: t('crud.show'))) +
-    content_tag(:td, link_to(icon_tag(:edit), [:edit, record], class: 'btn btn-default', title: t('crud.show'))) +
-    content_tag(:td, link_to(icon_tag(:trash), record, method: :delete, data: {confirm: t('message.are_you_sure')}, class: 'btn btn-danger', title: t('crud.show')))
+    content_tag(:td, link_to(admin_icon_tag(:'eye-open'), record, class: 'btn btn-default', title: t('crud.show'))) +
+    content_tag(:td, link_to(admin_icon_tag(:edit), [:edit, record], class: 'btn btn-default', title: t('crud.show'))) +
+    content_tag(:td, link_to(admin_icon_tag(:trash), record, method: :delete, data: {confirm: t('message.are_you_sure')}, class: 'btn btn-danger', title: t('crud.show')))
   end
 
-  def label_tag text, type = :default
+  def admin_label_tag text, type = :default
     # <span class="label label-default">Default</span>
     content_tag :span, text, class: "label label-#{type}"
   end
 
-  def icon_tag type, text = nil
+  def admin_icon_tag type, text = nil
     # <span class="glyphicon glyphicon-search"></span>
     text = ' ' + text if text.present?
     content_tag(:span, nil, class: "glyphicon glyphicon-#{type}") + text

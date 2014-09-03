@@ -12,7 +12,7 @@ module Admin::CoursesHelper
     [
       :is_online,
       ->(course){
-        course.is_online ? label_tag('上線', :success) : label_tag('下線')
+        course.is_online ? admin_label_tag('上線', :success) : admin_label_tag('下線')
       }
     ]
   end

@@ -17,7 +17,7 @@
     <% @admin_courses.each do |admin_course| %>
       <tr>
         <%= td_for admin_course, :id, td_is_online(admin_course), :image, [:title, ->(c){ link_to c.title, c}], :permalink, :subtitle, [:category, :name] %>
-        <td><%= link_to icon_tag(:plus), new_admin_course_path(fork: admin_course), class: 'btn btn-success', title: '複製' %></td>
+        <td><%= link_to admin_icon_tag(:plus), new_admin_course_path(fork: admin_course), class: 'btn btn-success', title: '複製' %></td>
         <%= td_action_for admin_course %>
       </tr>
     <% end %>
