@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   def index
-    @courses = Course.online.coming.page(params[:page]).per(6)
+    @courses = Course.available.coming.page(params[:page]).per(6)
     @courses = @courses.where(category: @category) if @category = Category.find_by(permalink: params[:category])
     @categories = Category.order(:sort_id).includes(:courses).where(courses: {is_online: true})
   end
