@@ -48,8 +48,8 @@ module AdminHelper
 
   def td_action_for record
     content_tag(:td, link_to(admin_icon_tag(:'eye-open'), record, class: 'btn btn-default', title: t('crud.show'))) +
-    content_tag(:td, link_to(admin_icon_tag(:edit), [:edit, record], class: 'btn btn-default', title: t('crud.show'))) +
-    content_tag(:td, link_to(admin_icon_tag(:trash), record, method: :delete, data: {confirm: t('message.are_you_sure')}, class: 'btn btn-danger', title: t('crud.show')))
+    content_tag(:td, link_to(admin_icon_tag(:edit), [:edit, record], class: 'btn btn-default', title: t('crud.edit'))) +
+    content_tag(:td, link_to(admin_icon_tag(:trash), record, method: :delete, data: {confirm: t('message.are_you_sure')}, class: 'btn btn-danger', title: t('crud.delete')))
   end
 
   def admin_label_tag text, type = :default
