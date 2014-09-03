@@ -7,4 +7,13 @@ module Admin::CoursesHelper
       }
     ]
   end
+
+  def td_is_online course
+    [
+      :is_online,
+      ->(course){
+        course.is_online ? label_tag('上線', :success) : label_tag('下線')
+      }
+    ]
+  end
 end
