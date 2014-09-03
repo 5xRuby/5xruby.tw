@@ -70,7 +70,7 @@ class Course < ActiveRecord::Base
   end
 
   def need_attendees_count
-    need_attendees = minimum_attendees - maximum_attendees
+    need_attendees = minimum_attendees - total_attendees
     need_attendees < 0 ? 0 : need_attendees
   end
 

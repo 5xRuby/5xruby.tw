@@ -22,6 +22,6 @@ FactoryGirl.define do
     description { Faker::Lorem.paragraph }
     date { rand(1.month).since }
     start_at { rand(1.hour).since }
-    end_at { rand(1.hour).since }
+    end_at { (rand(1.hour) + 3600).since }
   end
 end
