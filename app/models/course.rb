@@ -70,6 +70,14 @@ class Course < ActiveRecord::Base
     stages.to_a.sum(&:duration)
   end
 
+  def start_on
+    stages.first.date
+  end
+
+  def end_on
+    stages.last.date
+  end
+
   def need_attendees_count
     need_attendees = minimum_attendees - total_attendees
     need_attendees < 0 ? 0 : need_attendees

@@ -55,8 +55,9 @@
         <div class="strip_single_course">
           <h4 class="completed"><%= raw stage.description %></h4>
           <ul>
-            <li><i class="icon-clock"></i> <%= '%.1f' % stage.duration %>h</li>
-            <!-- <li><i class="icon-doc"></i>Text reading</li> -->
+            <li><i class="icon-calendar"></i><%= stage.date %></li>
+            <li><i class="icon-clock"></i><%= time_range stage %></li>
+            <li><i class="icon-clock"></i><%= '%.1f' % stage.duration %>h</li>
           </ul>
         </div><!-- end strip single course -->
         <% end %>
