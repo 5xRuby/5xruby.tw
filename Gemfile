@@ -1,6 +1,4 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.1.1'
@@ -51,9 +49,8 @@ gem 'select2_helper'
 
 # assets
 gem 'bootstrap-sass'
-gem 'rails-assets-jquery-ui', '1.10.4'
-gem 'rails-assets-select2'
-gem 'rails-assets-highlightjs'
+gem 'jquery-ui-rails'
+gem 'select2-rails'
 gem 'font-awesome-sass'
 
 group :development do

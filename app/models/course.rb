@@ -13,9 +13,10 @@
 #  subtitle        :string(255)
 #  category_id     :integer
 #  is_online       :boolean          default(FALSE), not null
-#  permalink       :string(255)      default("e9bd20e6"), not null
+#  permalink       :string(255)      not null
 #  note            :text
 #  apply_link      :string(255)
+#  iframe_html     :string(255)
 #
 
 class Course < ActiveRecord::Base
@@ -37,6 +38,7 @@ class Course < ActiveRecord::Base
   accepts_nested_attributes_for :stages, allow_destroy: true, reject_if: proc { |attributes| attributes[:title].blank? }
   has_many :schedules, through: :stages
   has_many :applies
+  has_and_belongs_to_many :speakers
   belongs_to :category, counter_cache: true
 
   # validation macros

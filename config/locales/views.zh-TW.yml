@@ -22,6 +22,14 @@ zh-TW:
       what_you_will_learn: 你將會學到
       apply_now: 我要報名
       note: 說明
+    show_2:
+      chapter_title: 第 %{nth} 堂：
+      lessons: 堂數
+      hours: 時數
+      price: 價錢
+      charger: <span>開課好棒棒：距離開課還差 <strong>%{num}</strong> 人！</span>
+      apply_now: 我要報名
+      note: 說明
     course:
       apply: 我想報名
       detail: 詳細資料

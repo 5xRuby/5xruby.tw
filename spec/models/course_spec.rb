@@ -13,9 +13,10 @@
 #  subtitle        :string(255)
 #  category_id     :integer
 #  is_online       :boolean          default(FALSE), not null
-#  permalink       :string(255)      default("e9bd20e6"), not null
+#  permalink       :string(255)      not null
 #  note            :text
 #  apply_link      :string(255)
+#  iframe_html     :string(255)
 #
 
 require 'spec_helper'

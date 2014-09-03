@@ -1,12 +1,13 @@
-//set up markers 
-var myMarkers = {"markers": [
-    {"latitude": "25.051103", "longitude":"121.514198", "icon": "img/map-marker2.png"}
-  ]
-};
+		//set up markers 
+		var myMarkers = {"markers": [
+				{"latitude": "25.050888", "longitude":"121.516604", "icon": "img/map-marker2-thumb.png"}
+			]
+		};
+		
+		//set up map options
+		$("#map").mapmarker({
+			zoom	: 16,
+			center  : '10349 台灣台北市大同區長安西路 150 號 11 樓之 1',
+			markers	: myMarkers
+		});
 
-//set up map options
-$("#map").mapmarker({
-  zoom  : 15,
-  center  : '103 台灣台北市大同區華陰街 227 巷 7 號',
-  markers  : myMarkers
-});

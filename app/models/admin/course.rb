@@ -13,9 +13,10 @@
 #  subtitle        :string(255)
 #  category_id     :integer
 #  is_online       :boolean          default(FALSE), not null
-#  permalink       :string(255)      default("e9bd20e6"), not null
+#  permalink       :string(255)      not null
 #  note            :text
 #  apply_link      :string(255)
+#  iframe_html     :string(255)
 #
 
 class Admin::Course < Course
@@ -30,6 +31,7 @@ class Admin::Course < Course
   # association macros
   has_many :schedules, through: :stages
   has_many :applies
+  has_and_belongs_to_many :speakers
   belongs_to :category
 
   # validation macros
@@ -37,6 +39,9 @@ class Admin::Course < Course
   # callbacks
 
   # other
+  def hours
+    stages.sum(:duration)
+  end
 
   protected
   # callback methods

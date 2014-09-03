@@ -4,7 +4,7 @@
     <th>值</th>
   </thead>
   <tbody>
-    <%= tr_for @admin_course, :id, [:category, :name], :image, :title, :permalink, :subtitle, :summary, :what_will_learn, :description, :note, :apply_link %>
+    <%= tr_for @admin_course, :id, [:category, :name], :image, :title, tr_speakers(@admin_course), :permalink, :subtitle, :summary, :what_will_learn, :description, :note, :apply_link %>
   </tbody>
 </table>
 

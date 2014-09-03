@@ -10,8 +10,7 @@ jQuery(function($) {
 					}
 			
 
-				}).find('form').validate({
-					ignore: '.ignore',
+				}).validate({
 					errorPlacement: function(error, element) { 
 						if ( element.is(':radio') || element.is(':checkbox') ) {
 							error.insertBefore( element.next() );
