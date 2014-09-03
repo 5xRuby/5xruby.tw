@@ -75,16 +75,15 @@ ActiveRecord::Schema.define(version: 20140903013050) do
   end
 
   create_table "posts", force: true do |t|
-    t.string   "title",                        null: false
-    t.text     "content",                      null: false
+    t.string   "title",                      null: false
+    t.text     "content",                    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
     t.integer  "author_id"
     t.text     "summary"
-    t.boolean  "is_available", default: false, null: false
-    t.boolean  "is_online",    default: false, null: false
-    t.string   "permalink",                    null: false
+    t.boolean  "is_online",  default: false, null: false
+    t.string   "permalink",                  null: false
     t.datetime "publish_at"
   end
 
@@ -120,8 +119,8 @@ ActiveRecord::Schema.define(version: 20140903013050) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "date",        default: '2014-09-03',          null: false
-    t.time     "start_at",    default: '2000-01-01 00:04:26', null: false
-    t.time     "end_at",      default: '2000-01-01 01:04:26', null: false
+    t.time     "start_at",    default: '2000-01-01 09:44:15', null: false
+    t.time     "end_at",      default: '2000-01-01 10:44:15', null: false
   end
 
   add_index "stages", ["course_id"], name: "index_stages_on_course_id", using: :btree
