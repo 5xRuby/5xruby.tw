@@ -38,7 +38,7 @@ FactoryGirl.define do
     what_will_learn { "<p>#{Faker::Lorem.paragraph}</p>" }
     maximum_attendees { 30 }
     total_attendees { rand(30) }
-    minimum_attendees { rand(10) }
+    minimum_attendees { 5 + rand(5) }
 
     ignore do
       stages_count 6
