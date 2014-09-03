@@ -12,7 +12,12 @@ module Admin::CoursesHelper
     [
       :is_online,
       ->(course){
-        course.is_online ? admin_label_tag('上線', :success) : admin_label_tag('下線')
+        course.is_online ? link_to(
+          admin_label_tag('上線', :success),
+          admin_course_path(course, ref: admin_courses_path, admin_course: {is_online: false}), method: :put)
+        : link_to(
+          admin_label_tag('下線'),
+          admin_course_path(course, ref: admin_courses_path, admin_course: {is_online: true}), method: :put)
       }
     ]
   end

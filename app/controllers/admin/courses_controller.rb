@@ -49,7 +49,7 @@ class Admin::CoursesController < AdminController
   def update
     respond_to do |format|
       if @admin_course.update(admin_course_params)
-        format.html { redirect_to @admin_course, notice: t('crud.updated_successfully!', name: Admin::Course.model_name.human) }
+        format.html { redirect_to (params[:ref] || @admin_course), notice: t('crud.updated_successfully!', name: Admin::Course.model_name.human) }
         format.json { render :show, status: :ok, location: @admin_course }
       else
         format.html { render :edit }
