@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @next_courses = Course.online.order(created_at: :desc).limit(4)
+    @next_courses = Course.online.coming.limit(4)
   end
 
   def contacts

@@ -25,6 +25,7 @@
 class Course < ActiveRecord::Base
   # scope macros
   scope :online, -> { where(is_online: true) }
+  scope :coming, -> { includes(:stages).order('stages.date') }
 
   # Concerns macros
   include Select2Concern
