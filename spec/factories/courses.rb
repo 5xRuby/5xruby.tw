@@ -47,6 +47,7 @@ FactoryGirl.define do
     after(:build) do |course, evaluator|
       stages = build_list(:stage, evaluator.stages_count)
       course.stages = stages
+      course.speakers = Speaker.order('RANDOM()').limit(2)
     end
   end
 end
