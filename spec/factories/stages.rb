@@ -8,9 +8,9 @@
 #  description :text
 #  created_at  :datetime
 #  updated_at  :datetime
-#  date        :date             default(Tue, 02 Sep 2014), not null
-#  start_at    :time             default(2000-01-01 20:52:59 UTC), not null
-#  end_at      :time             default(2000-01-01 21:52:59 UTC), not null
+#  date        :date             default(Wed, 03 Sep 2014), not null
+#  start_at    :time             default(2000-01-01 09:44:15 UTC), not null
+#  end_at      :time             default(2000-01-01 10:44:15 UTC), not null
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl

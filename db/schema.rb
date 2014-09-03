@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903013050) do
+ActiveRecord::Schema.define(version: 20140903095425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(version: 20140903013050) do
     t.text     "note"
     t.string   "apply_link"
     t.string   "iframe_html"
+    t.integer  "maximum_attendees"
     t.integer  "total_attendees"
-    t.integer  "current_attendees"
     t.integer  "minimum_attendees", default: 5
   end
 
