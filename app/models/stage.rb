@@ -9,8 +9,8 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #  date        :date             default(Wed, 03 Sep 2014), not null
-#  start_at    :time             default(2000-01-01 09:44:15 UTC), not null
-#  end_at      :time             default(2000-01-01 10:44:15 UTC), not null
+#  start_at    :time             default(2000-01-01 00:00:00 UTC), not null
+#  end_at      :time             default(2000-01-01 00:00:00 UTC), not null
 #
 
 class Stage < ActiveRecord::Base

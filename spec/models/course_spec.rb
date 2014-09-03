@@ -17,9 +17,9 @@
 #  note              :text
 #  apply_link        :string(255)
 #  iframe_html       :string(255)
-#  maximum_attendees :integer
-#  total_attendees   :integer
-#  minimum_attendees :integer          default(5)
+#  maximum_attendees :integer          default(30), not null
+#  total_attendees   :integer          default(0), not null
+#  minimum_attendees :integer          default(5), not null
 #
 
 require 'spec_helper'
