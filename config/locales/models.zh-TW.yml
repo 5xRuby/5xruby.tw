@@ -51,6 +51,9 @@ zh-TW:
         apply_link: 報名網址
         iframe_html: iframe
         speakers: 講師
+        total_attendees: 課程招收人數
+        current_attendees: 目前報名人數
+        minimum_attendees: 最低開班人數
       stage:
         title: 標題
         duration: 時數

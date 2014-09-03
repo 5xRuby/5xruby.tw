@@ -2,21 +2,24 @@
 #
 # Table name: courses
 #
-#  id              :integer          not null, primary key
-#  image           :string(255)
-#  title           :string(255)      not null
-#  summary         :text
-#  description     :text
-#  what_will_learn :text
-#  created_at      :datetime
-#  updated_at      :datetime
-#  subtitle        :string(255)
-#  category_id     :integer
-#  is_online       :boolean          default(FALSE), not null
-#  permalink       :string(255)      not null
-#  note            :text
-#  apply_link      :string(255)
-#  iframe_html     :string(255)
+#  id                  :integer          not null, primary key
+#  image               :string(255)
+#  title               :string(255)      not null
+#  summary             :text
+#  description         :text
+#  what_will_learn     :text
+#  created_at          :datetime
+#  updated_at          :datetime
+#  subtitle            :string(255)
+#  category_id         :integer
+#  is_online           :boolean          default(FALSE), not null
+#  permalink           :string(255)      not null
+#  note                :text
+#  apply_link          :string(255)
+#  iframe_html         :string(255)
+#  total_attendees     :integer
+#  current_attendees   :integer
+#  minimum_attendees   :integer          default: 5
 #
 
 class Course < ActiveRecord::Base
@@ -64,6 +67,15 @@ class Course < ActiveRecord::Base
 
   def hours
     stages.to_a.sum(&:duration)
+  end
+
+  def need_attendees_count
+    need_attendees = minimum_attendees - current_attendees
+    need_attendees < 0 ? 0 : need_attendees
+  end
+
+  def need_attendees_percent
+    (((minimum_attendees - need_attendees_count).to_f / minimum_attendees) * 100).to_i
   end
 
   protected

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140902220607) do
+ActiveRecord::Schema.define(version: 20140903013050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20140902220607) do
 
   create_table "courses", force: true do |t|
     t.string   "image"
-    t.string   "title",                           null: false
+    t.string   "title",                             null: false
     t.text     "summary"
     t.text     "description"
     t.text     "what_will_learn"
@@ -44,11 +44,14 @@ ActiveRecord::Schema.define(version: 20140902220607) do
     t.datetime "updated_at"
     t.string   "subtitle"
     t.integer  "category_id"
-    t.boolean  "is_online",       default: false, null: false
-    t.string   "permalink",                       null: false
+    t.boolean  "is_online",         default: false, null: false
+    t.string   "permalink",                         null: false
     t.text     "note"
     t.string   "apply_link"
     t.string   "iframe_html"
+    t.integer  "total_attendees"
+    t.integer  "current_attendees"
+    t.integer  "minimum_attendees", default: 5
   end
 
   add_index "courses", ["category_id"], name: "index_courses_on_category_id", using: :btree
@@ -72,15 +75,16 @@ ActiveRecord::Schema.define(version: 20140902220607) do
   end
 
   create_table "posts", force: true do |t|
-    t.string   "title",                      null: false
-    t.text     "content",                    null: false
+    t.string   "title",                        null: false
+    t.text     "content",                      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
     t.integer  "author_id"
     t.text     "summary"
-    t.boolean  "is_online",  default: false, null: false
-    t.string   "permalink",                  null: false
+    t.boolean  "is_available", default: false, null: false
+    t.boolean  "is_online",    default: false, null: false
+    t.string   "permalink",                    null: false
     t.datetime "publish_at"
   end
 
@@ -115,9 +119,9 @@ ActiveRecord::Schema.define(version: 20140902220607) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "date",        default: '2014-09-02',          null: false
-    t.time     "start_at",    default: '2000-01-01 20:52:59', null: false
-    t.time     "end_at",      default: '2000-01-01 21:52:59', null: false
+    t.date     "date",        default: '2014-09-03',          null: false
+    t.time     "start_at",    default: '2000-01-01 00:04:26', null: false
+    t.time     "end_at",      default: '2000-01-01 01:04:26', null: false
   end
 
   add_index "stages", ["course_id"], name: "index_stages_on_course_id", using: :btree

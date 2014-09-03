@@ -26,6 +26,7 @@ zh-TW:
       lessons: 堂數
       hours: 時數
       charger: <span>開課好棒棒：距離開課還差 <strong>%{num}</strong> 人！</span>
+      charger_complete: <span>開課好棒棒：已順利開課！</span>
     course:
       apply: 我想報名
       detail: 詳細資料

@@ -38,10 +38,10 @@
       <div class="col-md-8">
         <div class="row">
           <div class="col-md-12">
-            <%= raw t('.charger', num: 2) %>
+            <%= raw course_charger(@course) %>
             <span id="end"><i class="icon-trophy"></i></span>
             <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" data-percentage="90"></div>
+              <div class="progress-bar progress-bar-info" role="progressbar" data-percentage="<%= @course.need_attendees_percent %>"></div>
             </div>
           </div>
         </div><!-- End progress bar -->
@@ -111,7 +111,7 @@
           </ul>
         </div> -->
       </aside> <!-- End col-md-4 -->
-      
+
     </div><!-- End row -->
   </div><!-- End container -->
 </section>
