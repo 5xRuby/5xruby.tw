@@ -11,6 +11,7 @@
 #  date        :date             default(Wed, 03 Sep 2014), not null
 #  start_at    :time             default(2000-01-01 00:00:00 UTC), not null
 #  end_at      :time             default(2000-01-01 00:00:00 UTC), not null
+#  hours       :float            default(1.0), not null
 #
 
 require 'spec_helper'
