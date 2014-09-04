@@ -59,13 +59,13 @@ zh-TW:
         duration: 時數
         description: 介紹
         course: 所屬講座
-        schedules: 開課日期
+        schedules: 開講日期
         date: 日期
         start_at: 開始
         end_at: 結束
       schedule:
         stage: 講座階段
-        date: 開課日期
+        date: 開講日期
         description: 介紹
       apply:
         course: 講座

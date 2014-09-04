@@ -37,7 +37,7 @@ zh-TW:
   stages:
     stage:
       stage_no: 第 %{stage} 堂
-      available_dates: 開課日期
+      available_dates: 開講日期
       next_dates: 下一堂
   applies:
     new:
