@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root 'pages#index'
   get :about, :contacts, :faq, :sitemap, controller: :pages
 
-  resources :posts, :courses, only: %i[index show]
+  resources :posts, only: %i[index show]
+  resources :courses, path: :talks, only: %i[index show]
   resources :speakers, only: :index
 
   #concern
