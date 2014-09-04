@@ -1,0 +1,259 @@
+.strip_single_course {
+	border-bottom: 1px solid #e0e5e9;
+		border-left: 1px solid #e0e5e9;
+			border-right: 1px solid #e0e5e9;
+	padding-top:10px;
+	background:url(../img/line_bg_course.png) 29px top no-repeat;
+}
+.strip_single_course ul {
+	margin-left:10px;
+}
+.strip_single_course ul li {
+	display:inline-block;
+	margin-right:10px;
+}
+.strip_single_course ul li i{
+	font-size:16px;
+	color:#ccc;
+}
+#end {
+	font-size:26px;
+	float:right;
+	margin:17px -10px 0 15px;
+	color:#ccc;
+	padding:0;
+} 
+.strip_single_course h4 {
+	line-height:18px;
+	font-size:16px;
+	padding:5px 10px 10px 50px;
+	margin:0;
+}
+h4.completed {
+	background:url(../img/bullet_complete.png) no-repeat 15px top;
+}
+h4.completed a{
+	color:#2d4050;
+}
+h4.completed a:hover{
+	color:#000;
+}
+h4.inprogress {
+	background:url(../img/bullet_progress.png) no-repeat 15px top;
+}
+h4.inprogress a{
+	color:#2d4050;
+}
+h4.inprogress a:hover{
+	color:#000;
+}
+h4.start {
+	background: url(../img/bullet_start.png) no-repeat 15px top;
+}
+.chapter_course{
+background:#f8f8f8;
+padding:10px;
+font-size:18px;
+line-height:20px;
+margin-top:25px;
+margin-bottom:0;
+border: 1px solid #e0e5e9;
+border-bottom:2px solid #e0e5e9;
+font-weight:600;
+}
+.chapter_course.no_margin_rop{
+margin-top:0px;
+}
+ul.legend_course{
+	list-style:none;
+	margin-left:0;
+	padding-left:0;
+	line-height:30px;
+	font-size:14px;
+}
+
+ul.legend_course li#tostart{
+	background:url(../img/bullet_start_2.png) no-repeat center left; color:#5394c9; padding-left:25px;
+}
+ul.legend_course li#inprogress{
+	background: url(../img/bullet_progress_2.png) no-repeat center left; color:#949494;padding-left:25px;
+}
+ul.legend_course li#completed{
+	background: url(../img/bullet_complete_2.png) no-repeat center left; color:#949494;padding-left:25px;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-moz-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.progress {
+  height: 20px;
+  margin-bottom: 0;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 0.6s ease;
+          transition: width 0.6s ease;
+}
+
+.progress.active .progress-bar {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+     -moz-animation: progress-bar-stripes 2s linear infinite;
+      -ms-animation: progress-bar-stripes 2s linear infinite;
+       -o-animation: progress-bar-stripes 2s linear infinite;
+          animation: progress-bar-stripes 2s linear infinite;
+}
+
+.progress-bar-info {
+  background-color: #7cbe31;
+}
+
+.progress-striped .progress-bar-info {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+ul#legend li {
+	margin-bottom:5px;
+}
+ul#legend li.legend_completed{
+	background:url(../img/bullet_complete_2.png) no-repeat center left; padding-left:25px;
+}
+ul#legend li.legend_inprogress{
+	background:url(../img/bullet_progress_2.png) no-repeat center left; padding-left:25px;
+}
+ul#legend li.legend_start{
+	background:url(../img/bullet_start_2.png) no-repeat center left; padding-left:25px;
+}
+.main-img-2 { 
+	margin:-30px -30px 30px -30px; 
+	overflow:hidden;
+	position:relative;
+	height:200px;
+	padding-right:15px;
+	background:url(../img/single_course.jpg) no-repeat top left;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.main-img-2 p.lead {
+	background-color:#000;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=70);
+	opacity:0.7;
+	position: absolute;
+	bottom:-25px;
+	padding:15px 20px;
+	color:#fff;
+	line-height:24px;
+	display:block;
+	width:100%;
+}
+.title-course-2 strong{
+	text-transform:uppercase;
+	font-size:32px;
+	font-weight:800;
+	display:block;
+}
+.title-course-2 {
+	position: absolute;
+	top:25%;
+	left:25px;
+	color:#fff;
+	font-size:28px;
+	line-height:30px;
+	font-weight:600;
+	text-shadow: 1px 1px 0px rgba(0,0,0,.3); 
+}
+
+
+
+/*============================================================================================*/
+/* 3. MEDIA QUERIES */
+/*============================================================================================*/
+@media (min-width: 768px) and (max-width: 1200px) {
+	
+	}
+@media (min-width: 768px) and (max-width: 979px) {
+	
+
+}
+
+/* From tablet portrait to mobile */
+@media (max-width: 767px) {
+
+}	
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+.chapter_course{
+font-size:16px;
+}
+h4.completed, h4.inprogres, h4.start {
+	line-height:16px;
+	font-size:14px;
+}
+.title-course-2 {
+	top:15%;
+	font-size:18px;
+	line-height:20px;
+}
+.title-course-2 strong{
+	font-size:22px;
+	line-height:24px;
+}
+.main-img-2 { 
+	height:140px;
+}
+
+}

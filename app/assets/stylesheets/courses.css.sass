@@ -1,0 +1,24 @@
+//= require single_course
+body[data-controller="courses"][data-action="show"]
+  .progress-bar
+    -webkit-transition: none
+    transition: none
+  .strip_single_course h4 li
+    display: list-item
+  #sub-header-features-2
+    ul
+      font-size: 15px
+      font-weight: 600
+      list-style:none
+      margin: 0
+      padding: 0
+      li
+        margin-bottom: 0
+        position: relative
+        padding-left: 20px
+      li:before
+        font-family: "fontello"
+        content: "\e81a"
+        position: absolute
+        left: 0
+        top: 0
