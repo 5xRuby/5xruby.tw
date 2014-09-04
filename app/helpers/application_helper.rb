@@ -64,4 +64,8 @@ module ApplicationHelper
     counter = @course.need_attendees_count
     (counter > 0) ? t('.charger', num: counter) : t('.charger_complete')
   end
+
+  def show_hours hours
+    '%.1g' % hours
+  end
 end

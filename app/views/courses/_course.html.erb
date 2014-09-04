@@ -9,7 +9,7 @@
         <% else %>
           未分類
         <% end %>
-        <span class="pull-right"><i class=" icon-clock"></i><%= t('.hours', count: ( '%.1f' % course.hours)) %></span>
+        <span class="pull-right"><i class=" icon-clock"></i><%= t('.hours', count: ( show_hours course.hours)) %></span>
       </div>
 
     </div>

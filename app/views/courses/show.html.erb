@@ -61,7 +61,7 @@
           <ul>
             <li><i class="icon-calendar"></i><%= stage.date %></li>
             <li><i class="icon-clock"></i><%= time_range stage %></li>
-            <li><i class="icon-clock"></i><%= '%.1f' % stage.hours %>h</li>
+            <li><i class="icon-clock"></i><%= show_hours stage.hours %>h</li>
           </ul>
         </div><!-- end strip single course -->
         <% end %>
@@ -70,7 +70,7 @@
       <aside class="col-md-4">
         <div class="box_style_1">
           <h4><%= t('.lessons') %> <span class="pull-right"><%= @course.stages.size %></span></h4>
-          <h4><%= t('.hours') %> <span class="pull-right"><%= '%.1f' % @course.hours %></span></h4>
+          <h4><%= t('.hours') %> <span class="pull-right"><%= show_hours @course.hours %></span></h4>
           <% if @course.iframe_html.blank? && apply_link = @course.apply_link.presence %>
           <h4><a href="<%= apply_link %>" target="_blank"><%= t('.apply_now') %> <i class="icon-login-2 pull-right"></i></a></h4>
           <% end %>
