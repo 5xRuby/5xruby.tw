@@ -66,6 +66,6 @@ module ApplicationHelper
   end
 
   def show_hours hours
-    '%.1g' % hours
+    '%.2g' % hours
   end
 end
