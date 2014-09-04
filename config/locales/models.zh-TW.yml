@@ -18,8 +18,8 @@ zh-TW:
   activerecord:
     models:
       post: 文章
-      category: 課程分類
-      course: 課程
+      category: 講座分類
+      course: 講座
       stage: 階段
       schedule: 行程
       apply: 報名
@@ -51,26 +51,26 @@ zh-TW:
         apply_link: 報名網址
         iframe_html: iframe
         speakers: 講師
-        maximum_attendees: 課程招收人數
+        maximum_attendees: 講座招收人數
         total_attendees: 目前報名人數
         minimum_attendees: 最低開班人數
       stage:
         title: 標題
         duration: 時數
         description: 介紹
-        course: 所屬課程
+        course: 所屬講座
         schedules: 開課日期
         date: 日期
         start_at: 開始
         end_at: 結束
       schedule:
-        stage: 課程階段
+        stage: 講座階段
         date: 開課日期
         description: 介紹
       apply:
-        course: 課程
-        stage: 課程階段
-        schedule: 課程日期
+        course: 講座
+        stage: 講座階段
+        schedule: 講座日期
         first_name: 名字
         last_name: 姓氏
         phone: 電話
@@ -111,7 +111,7 @@ zh-TW:
     speaker:
       role:
         author: 特約作者
-        consultant: 課程顧問
+        consultant: 講座顧問
         speaker: 講師
         parttime-speaker: 兼任講師
         assistant-speaker: 助理講師
