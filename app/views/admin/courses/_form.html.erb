@@ -18,11 +18,11 @@
     <%= f.input :iframe_html, as: :text, hint: "活動通或 KKTIX 之報名 iframe code" %>
     <%= f.input :subtitle %>
     <%= f.input :summary, hint: '最多 150 字，用在 meta tag 和 courses/index 頁面' %>
-    <%= f.input :what_will_learn, input_html: {class: :redactor} %>
+    <%= f.input :what_will_learn, input_html: {class: :redactor}, hint: '請放 ul 清單' %>
     <%= f.input :description, input_html: {class: :redactor}, hint: '這個欄位目前在網站完全沒有用到' %>
     <%= f.input :note, input_html: {class: :redactor} %>
     <%= f.input :is_online %>
-    <%= f.input :apply_link, hint: '留空則使用網站內部的報名系統' %>
+    <%= f.input :apply_link, hint: '沒有填寫 iframe 時才顯示' %>
     <%= f.input :maximum_attendees %>
     <%= f.input :total_attendees %>
     <%= f.input :minimum_attendees %>
