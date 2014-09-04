@@ -11,4 +11,5 @@
 #= require select2_helper
 #= require highlightjs
 #= require highlightjs_helper
+#= require gistyle
 #= require_tree ./admin

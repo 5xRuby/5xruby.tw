@@ -46,6 +46,7 @@ gem 'enumerize'
 gem 'rack-mini-profiler'
 gem 'acts-as-taggable-on'
 gem 'select2_helper'
+gem 'gistyle'
 
 # assets
 gem 'bootstrap-sass'

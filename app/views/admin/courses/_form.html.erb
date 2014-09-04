@@ -1,5 +1,4 @@
 <%= simple_nested_form_for(@admin_course) do |f| %>
-
   <div class="form-inputs">
     <%= f.association :category, input_html: {class: 'select2'} %>
     <%= f.association :speakers, input_html: {class: 'select2'} %>
@@ -17,7 +16,7 @@
     <%= f.input :permalink %>
     <%= f.input :iframe_html, as: :text, hint: "活動通或 KKTIX 之報名 iframe code" %>
     <%= f.input :subtitle %>
-    <%= f.input :summary, hint: '最多 150 字，用在 meta tag 和 courses/index 頁面' %>
+    <%= f.input :summary, hint: '最多 150 字，剩 <span id="summary_remain"></span> 個字，用在 meta tag 和 courses/index 頁面'.html_safe %>
     <%= f.input :what_will_learn, input_html: {class: :redactor}, hint: '請放 ul 清單' %>
     <%= f.input :description, input_html: {class: :redactor}, hint: '這個欄位目前在網站完全沒有用到' %>
     <%= f.input :note, input_html: {class: :redactor} %>
