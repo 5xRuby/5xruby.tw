@@ -1,12 +1,17 @@
 class CoursesController < ApplicationController
+  before_action :set_course, only: %i[redirect show]  
+
   def index
     @courses = Course.available.coming.page(params[:page]).per(6)
     @courses = @courses.where(category: @category) if @category = Category.find_by(permalink: params[:category])
     @categories = Category.order(:sort_id).includes(:courses).where(courses: {is_online: true})
   end
 
+  def redirect
+    redirect_to @course
+  end
+
   def show
-    @course = Course.online.includes(:stages).find_by!(permalink: params[:id])
     @seo = {
       meta: {
         description: @course.summary
@@ -25,5 +30,11 @@ class CoursesController < ApplicationController
         image: @course.image_url
       }
     }
+  end
+
+  private
+
+  def set_course
+    @course = Course.online.includes(:stages).find_by!(permalink: params[:id])
   end
 end
