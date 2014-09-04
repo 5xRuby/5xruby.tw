@@ -80,7 +80,7 @@ class Admin::CoursesController < AdminController
         :maximum_attendees, :total_attendees, :minimum_attendees, :iframe_html, :category_id, :image, :remove_image, :image_cache, :title, :permalink, :subtitle,
         :summary, :description, :what_will_learn, :is_online, :note, :apply_link,
         speaker_ids: [],
-        stages_attributes: %i[id _destroy title description date start_at end_at]
+        stages_attributes: %i[id _destroy title description date start_at end_at hours]
       )
     end
 end

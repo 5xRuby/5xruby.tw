@@ -68,7 +68,7 @@ class Course < ActiveRecord::Base
   end
 
   def hours
-    stages.to_a.sum(&:duration)
+    stages.sum(:hours)
   end
 
   def start_on

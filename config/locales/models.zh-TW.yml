@@ -56,7 +56,7 @@ zh-TW:
         minimum_attendees: 最低開班人數
       stage:
         title: 標題
-        duration: 時數
+        hours: 時數
         description: 介紹
         course: 所屬講座
         schedules: 開講日期
