@@ -1,0 +1,33 @@
+{
+  "name": "AniJS",
+  "version": "0.5.0",
+  "homepage": "http://anijs.github.io/",
+  "description": "Declarative handling library for CSS animations.",
+  "main": "dist/anijs-min.js",
+  "keywords": [
+    "declarative",
+    "animation",
+    "css",
+    "javascript"
+  ],
+  "authors": [
+    "Dariel Noel <darielnoel@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "_release": "0.5.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.5.0",
+    "commit": "b086a70334934cff89e75652c3c1429f2732d7ad"
+  },
+  "_source": "git://github.com/anijs/anijs.git",
+  "_target": "~0.5.0",
+  "_originalSource": "anijs",
+  "_direct": true
+}
