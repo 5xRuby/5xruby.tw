@@ -82,20 +82,17 @@
             </div>
 
             <div class="row">
-              <div class="col-md-6">
-                <div class="form-group <%= has_error_class @contact, :phone %>">
-                  <%= f.number_field :price, step: 0.1, min: 0.1, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:price) %>
-                  <%= help_block @contact, :price %>
-                  <span class="input-icon">勝文</span>
-                  <p class="help-block">1 勝文 = 10 萬</p>
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <input id="ntd" type="number" class="form-control style_2", placeholder="<%= Contact.human_attribute_name(:price) %>">
+                  <span class="input-icon"><i class="icon-dollar"></i></span>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <div class="input-group">
-                    <span class="input-group-addon">NT$</span>
-                    <input id="ntd" type="number" class="form-control" disabled>
-                  </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group <%= has_error_class @contact, :price %>">
+                  <%= f.number_field :price, step: 0.1, min: 0.1, class: 'form-control style_2', placeholder: '1 勝文 = 10 萬' %>
+                  <%= help_block @contact, :price %>
+                  <span class="input-icon">勝文</span>
                 </div>
               </div>
             </div>
