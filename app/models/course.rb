@@ -53,7 +53,7 @@ class Course < ActiveRecord::Base
 
   # other
   def fork
-    the_forked = self.class.new attributes.except!('id', 'iframe', 'is_online')
+    the_forked = self.class.new attributes.except!('id', 'iframe_html', 'is_online')
     if number = the_forked.permalink[/(\d+)$/, 1]
       the_forked.permalink.sub!(/(\d+)$/, (number.to_i + 1).to_s)
     else
