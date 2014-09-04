@@ -6,10 +6,12 @@
 #  course_id   :integer          not null
 #  title       :string(255)      not null
 #  description :text
-#  sort_id     :integer          default(0), not null
 #  created_at  :datetime
 #  updated_at  :datetime
-#  duration    :float            default(0.0), not null
+#  date        :date             default(Wed, 03 Sep 2014), not null
+#  start_at    :time             default(2000-01-01 00:00:00 UTC), not null
+#  end_at      :time             default(2000-01-01 00:00:00 UTC), not null
+#  hours       :float            default(1.0), not null
 #
 
 class Stage < ActiveRecord::Base
@@ -24,17 +26,21 @@ class Stage < ActiveRecord::Base
 
   # association macros
   belongs_to :course
-  has_many :schedules, -> { available }
-  has_many :applies
 
   # validation macros
-  validates :title, presence: true
+  validates :title, :date, :start_at, :end_at, :hours, presence: true
   select2_white_list :title
 
   # callbacks
+  after_initialize :set_defualt_values, if: :new_record?, unless: :changed?
 
   # other
 
   protected
   # callback methods
+  def set_defualt_values
+    self.date = Time.now.strftime('%Y-%m-%d')
+    self.start_at = '09:30'
+    self.end_at = '17:00'
+  end
 end

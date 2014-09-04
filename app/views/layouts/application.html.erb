@@ -36,7 +36,7 @@
     <![endif]-->
     <%= yield :append_head if content_for? :append_head %>
   </head>
-  <body>
+  <%= content_tag :body, data: {controller: controller_path, action: action_name} do %>
     <%= render 'layouts/header' %>
     <%= render 'layouts/nav' %>
     <%= notice_message %>
@@ -66,5 +66,5 @@
       ga('send', 'pageview');
     </script>
     <%= yield :append_body if content_for? :append_body %>
-  </body>
-<% end %>
+  <% end %><!-- body -->
+<% end %><!-- html -->

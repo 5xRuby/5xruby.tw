@@ -1,6 +1,6 @@
 <% if categories = Category.order(:sort_id).where(is_highlighted: true).presence %>
   <div class="col-md-3 col-sm-3">
-    <h4>課程</h4>
+    <h4>講座</h4>
     <ul>
       <% categories.each do |category| %>
       <li><%= link_to category.name, courses_path(category: category) %></li>

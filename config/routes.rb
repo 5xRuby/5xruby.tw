@@ -1,18 +1,13 @@
 Rails.application.routes.draw do
   # front
   root 'pages#index'
-  controller :pages do
-    get :about, :contacts, :faq, :sitemap
-  end
+  get :about, :contacts, :faq, :sitemap, controller: :pages
 
   resources :posts, only: %i[index show]
+  resources :courses, path: :talks, only: %i[index show]
+  get 'courses/:id', to: redirect('/talks/%{id}')
+  get 'courses', to: redirect('/talks')
   resources :speakers, only: :index
-  resources :courses, only: %i[index show] do
-    resources :applies, only: %i[new create] do
-      get :submit, on: :collection
-    end
-  end
-  resources :schedules, only: %i[show]
 
   #concern
   concern :sortable do
@@ -22,8 +17,7 @@ Rails.application.routes.draw do
   # back
   namespace :admin, path: Settings.admin_path_prefix do
     root to: :dashboard
-    resources :posts, :courses, :schedules, :applies, :authors
-    resources :speakers, :faqs, :categories, concerns: :sortable
+    resources :posts, :courses, :authors, :speakers, :faqs, :categories, concerns: :sortable
   end
 
   # plugins

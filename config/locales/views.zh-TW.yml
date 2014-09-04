@@ -8,28 +8,25 @@ zh-TW:
       lead: 為提供更高品質的教學內容，我們網羅了十多位在台灣 Ruby/Rails 領域有多年開發及教學經驗之講師。若您也有興趣加入我們的講師行列，歡迎來信與我們聯繫。
   courses:
     index:
-      title: 課程動態
+      title: 講座動態
     sidebar:
-      all_courses: 所有課程
-      categories: 課程分類
-      satisfied: 對我們的課程還覺得滿意嗎?
-      upcoming: 我們將陸續推出與 Ruby/Rails 或網站開發相關的課程，若您有其它課程上的建議，歡迎您來信與我們聯繫。
+      all_courses: 所有講座
+      categories: 講座分類
+      satisfied: 對我們的講座還覺得滿意嗎?
+      upcoming: 我們將陸續推出與 Ruby/Rails 或網站開發相關的講座，若您有其它講座上的建議，歡迎您來信與我們聯繫。
     breadcrumb:
       home: 首頁
-      courses: 課程
+      courses: 講座
     show:
       summary: 簡介
       what_you_will_learn: 你將會學到
       apply_now: 我要報名
       note: 說明
-    show_2:
       chapter_title: 第 %{nth} 堂：
       lessons: 堂數
       hours: 時數
-      price: 價錢
-      charger: <span>開課好棒棒：距離開課還差 <strong>%{num}</strong> 人！</span>
-      apply_now: 我要報名
-      note: 說明
+      charger: <span>開講好棒棒：距離開講還差 <strong>%{num}</strong> 人！</span>
+      charger_complete: <span>開講好棒棒：已順利開講！</span>
     course:
       apply: 我想報名
       detail: 詳細資料
@@ -40,7 +37,7 @@ zh-TW:
   stages:
     stage:
       stage_no: 第 %{stage} 堂
-      available_dates: 開課日期
+      available_dates: 開講日期
       next_dates: 下一堂
   applies:
     new:
@@ -49,7 +46,7 @@ zh-TW:
       forward: 下一步
     submit:
       apply_complete_thank_you_for_you_time: 表單已送出，感謝你的填寫！
-      back_to_course: 回到課程頁
+      back_to_course: 回到講座頁
     personal:
       enter_your_personal_info: 請填寫報名資料
       enter_your_personal_info_detail: 請填寫您的個人資料，我們對您的Lorem i如有任何疑問歡迎來信詢問，或是來電 <strong>+886 928 617 687</strong>
@@ -90,17 +87,17 @@ zh-TW:
           title: 技術諮詢、顧問
           description: 從系統設計、規劃到開發，甚至到系統架設，我們都能為您提供專業的建議與諮詢。
         - icon: icon-mic
-          title: 實戰課程
-          description: 我們規劃了一系列包括 Ruby、Rails、Git 、測試及系統佈署等入門到中、高階的課程，讓您可以快速掌握使用 Ruby 開發的快速與樂趣。
+          title: 實戰講座
+          description: 我們規劃了一系列包括 Ruby、Rails、Git 、測試及系統佈署等入門到中、高階的講座，讓您可以快速掌握使用 Ruby 開發的快速與樂趣。
         - icon: icon-video
           title: 企業培訓
           description: 我們針對企業內部開發人員設計了一系列培訓計劃，協助您將現有人力快速打造為專業 Ruby/Rails 開發團隊。您無須再經歷繁瑣的人才招募流程，也可免除新進人員需與組織文化磨合的困擾。
     main_content_gray:
-      view_all_courses: 瀏覽所有課程
-      latest_courses: 最新課程
+      view_all_courses: 瀏覽所有講座
+      latest_courses: 最新講座
       latest_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
     main_content:
-      next_courses: 近期課程
+      next_courses: 近期講座
       next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
     recent_course:
       detail: 詳細
@@ -112,7 +109,7 @@ zh-TW:
 
         Ruby on Rails 快速開發的優勢，在國外企業與創業圈極為熱門；而 Ruby 語言本身的自然與優雅簡潔，也讓工程師們工作起來更加快樂。但是，在台灣實際真的有使用 Ruby/Rails 做為主要開發工具的企業卻仍是少數。
 
-        我們這幾年來持續的在台灣大專院校(成大、輔大、台北商專..等校)開授 Ruby 以及 Rails 課程，觀察學生們的學習狀況，大多覺得 Ruby 跟 Rails 並不難學，自己看書或是照著官網文件練習就能練到一定的程度。但要進階至滿足實戰需求，不容易藉由自學可以短期達成，需要更多的實戰經驗，或是導師的帶領。也因此，在台灣，較資深或有經驗的 Ruby/Rails 開發者相當難找。
+        我們這幾年來持續的在台灣大專院校(成大、輔大、台北商專..等校)開授 Ruby 以及 Rails 講座，觀察學生們的學習狀況，大多覺得 Ruby 跟 Rails 並不難學，自己看書或是照著官網文件練習就能練到一定的程度。但要進階至滿足實戰需求，不容易藉由自學可以短期達成，需要更多的實戰經驗，或是導師的帶領。也因此，在台灣，較資深或有經驗的 Ruby/Rails 開發者相當難找。
 
         我們也訪問了一些企業為什麼不採用 Ruby/Rails 的原因，大多也是因為資深的 Ruby/Rails 的工程師難找，或是背後沒有商業公司的技術支援，遇到問題的時候不知道該找誰求救。
 
@@ -135,7 +132,7 @@ zh-TW:
         貴單位之網站或系統原本是使用其它程式語言(例如 PHP、Java 或 ASP.net)開發，正考慮轉換到高速生產力的 Ruby/Rails 平台，但企業內部目前無相關技術能力可進行開發。我們針對這類的需求設計了一系列培訓計劃，將企業內部現有人力快速打造為專業的 Ruby/Rails 開發團隊，可免去面試新人或新進員工企業文化磨合之困擾。
 
         ### 教育訓練
-        如果您對程式設計是完全的新手，或是本身已有其它程式語言的基礎也沒問題，我們一系列從入門到中、高階的課程，將引導您有效率的掌握 Ruby/Rails 的重點。
+        如果您對程式設計是完全的新手，或是本身已有其它程式語言的基礎也沒問題，我們一系列從入門到中、高階的講座，將引導您有效率的掌握 Ruby/Rails 的重點。
 
       speciality: 專長
       members:
@@ -184,7 +181,7 @@ zh-TW:
       about: 關於
     nav:
       home: 首頁
-      course: 課程
+      course: 講座
       blog: 部落格
       speakers: 講師
       contacts: 聯絡與詢價
@@ -192,7 +189,7 @@ zh-TW:
       faq: 常見問題
     footer:
       browse: 瀏覽
-      courses: 課程
+      courses: 講座
       faq: 常見問題
       blog: 部落格
       contacts: 聯絡我們

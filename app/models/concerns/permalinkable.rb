@@ -10,5 +10,13 @@ module Permalinkable
         send("#{target_column}=", send(source_column).parameterize)
       }
     end
+
+    def next_permalink permalink
+      if number = permalink[/(\d+)$/, 1]
+        permalink.sub!(/(\d+)$/, (number.to_i + 1).to_s)
+      else
+        permalink += '-1'
+      end
+    end
   end
 end

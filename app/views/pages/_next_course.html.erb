@@ -1,0 +1,16 @@
+<div class="media">
+  <%= link_to next_course do %>
+  <div class="circ-wrapper red pull-left">
+    <h3><%= l next_course.stages.first.date, format: '%B' %><br><%= next_course.stages.first.date.day %></h3>
+  </div>
+  <% end %>
+  <div class="media-body">
+    <h4 class="media-heading"><%= link_to next_course.title, next_course %> <span class="label label-warning">NEW</span></h4>
+    <%= next_course.summary %>
+    <ul class="data-lessons">
+      <li class="po-markup">
+        <a class="po-link" href="javascript:void(0)" ><i class="icon-clock"></i><%= Stage.human_attribute_name(:hours) %>： <%= show_hours next_course.hours %></a>
+      </li>
+    </ul>
+  </div>
+</div>

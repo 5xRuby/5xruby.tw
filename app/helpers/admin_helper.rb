@@ -26,7 +26,7 @@ module AdminHelper
         uploader = if val.version_exists?(:preview) && val.preview.present? then val.preview
                    elsif val.version_exists?(:thumb) && val.thumb.present? then val.thumb
                    else val end
-        link_to image_tag(uploader, height: 100), val.url if uploader.present?
+        link_to image_tag(uploader, height: 100), record if uploader.present?
       else val
       end
     end
@@ -47,8 +47,19 @@ module AdminHelper
   end
 
   def td_action_for record
-    content_tag(:td, link_to(t('crud.show'), record)) +
-    content_tag(:td, link_to(t('crud.edit'), [:edit, record])) +
-    content_tag(:td, link_to(t('crud.destroy'), record, method: :delete, data: { confirm: t('message.are_you_sure') }))
+    content_tag(:td, link_to(admin_icon_tag(:'eye-open'), record, class: 'btn btn-default', title: t('crud.show'))) +
+    content_tag(:td, link_to(admin_icon_tag(:edit), [:edit, record], class: 'btn btn-default', title: t('crud.edit'))) +
+    content_tag(:td, link_to(admin_icon_tag(:trash), record, method: :delete, data: {confirm: t('message.are_you_sure')}, class: 'btn btn-danger', title: t('crud.delete')))
+  end
+
+  def admin_label_tag text, type = :default
+    # <span class="label label-default">Default</span>
+    content_tag :span, text, class: "label label-#{type}"
+  end
+
+  def admin_icon_tag type, text = nil
+    # <span class="glyphicon glyphicon-search"></span>
+    text = ' ' + text if text.present?
+    content_tag(:span, nil, class: "glyphicon glyphicon-#{type}") + text
   end
 end

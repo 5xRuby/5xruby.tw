@@ -11,29 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140902143919) do
+ActiveRecord::Schema.define(version: 20140904082353) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "applies", force: true do |t|
-    t.integer  "course_id"
-    t.integer  "stage_id"
-    t.integer  "schedule_id"
-    t.string   "first_name",  null: false
-    t.string   "last_name",   null: false
-    t.string   "phone"
-    t.string   "email",       null: false
-    t.integer  "age"
-    t.string   "gender"
-    t.text     "message"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "applies", ["course_id"], name: "index_applies_on_course_id", using: :btree
-  add_index "applies", ["schedule_id"], name: "index_applies_on_schedule_id", using: :btree
-  add_index "applies", ["stage_id"], name: "index_applies_on_stage_id", using: :btree
 
   create_table "authors", force: true do |t|
     t.string   "name"
@@ -55,7 +36,7 @@ ActiveRecord::Schema.define(version: 20140902143919) do
 
   create_table "courses", force: true do |t|
     t.string   "image"
-    t.string   "title",                           null: false
+    t.string   "title",                             null: false
     t.text     "summary"
     t.text     "description"
     t.text     "what_will_learn"
@@ -63,11 +44,14 @@ ActiveRecord::Schema.define(version: 20140902143919) do
     t.datetime "updated_at"
     t.string   "subtitle"
     t.integer  "category_id"
-    t.boolean  "is_online",       default: false, null: false
-    t.string   "permalink",                       null: false
+    t.boolean  "is_online",         default: false, null: false
+    t.string   "permalink",                         null: false
     t.text     "note"
     t.string   "apply_link"
     t.string   "iframe_html"
+    t.integer  "maximum_attendees", default: 30,    null: false
+    t.integer  "total_attendees",   default: 0,     null: false
+    t.integer  "minimum_attendees", default: 5,     null: false
   end
 
   add_index "courses", ["category_id"], name: "index_courses_on_category_id", using: :btree
@@ -80,19 +64,6 @@ ActiveRecord::Schema.define(version: 20140902143919) do
 
   add_index "courses_speakers", ["course_id", "speaker_id"], name: "index_courses_speakers_on_course_id_and_speaker_id", unique: true, using: :btree
   add_index "courses_speakers", ["speaker_id", "course_id"], name: "index_courses_speakers_on_speaker_id_and_course_id", unique: true, using: :btree
-
-  create_table "events", force: true do |t|
-    t.integer  "schedule_id", null: false
-    t.integer  "speaker_id"
-    t.time     "start_at",    null: false
-    t.string   "title",       null: false
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "events", ["schedule_id"], name: "index_events_on_schedule_id", using: :btree
-  add_index "events", ["speaker_id"], name: "index_events_on_speaker_id", using: :btree
 
   create_table "faqs", force: true do |t|
     t.text     "question",                   null: false
@@ -125,16 +96,6 @@ ActiveRecord::Schema.define(version: 20140902143919) do
     t.datetime "updated_at"
   end
 
-  create_table "schedules", force: true do |t|
-    t.integer  "stage_id",    null: false
-    t.date     "date",        null: false
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "schedules", ["stage_id"], name: "index_schedules_on_stage_id", using: :btree
-
   create_table "speakers", force: true do |t|
     t.string   "avatar"
     t.string   "name",                                null: false
@@ -152,13 +113,15 @@ ActiveRecord::Schema.define(version: 20140902143919) do
   end
 
   create_table "stages", force: true do |t|
-    t.integer  "course_id",                 null: false
-    t.string   "title",                     null: false
+    t.integer  "course_id",                                   null: false
+    t.string   "title",                                       null: false
     t.text     "description"
-    t.integer  "sort_id",     default: 0,   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "duration",    default: 0.0, null: false
+    t.date     "date",        default: '2014-09-03',          null: false
+    t.time     "start_at",    default: '2000-01-01 00:00:00', null: false
+    t.time     "end_at",      default: '2000-01-01 00:00:00', null: false
+    t.float    "hours",       default: 1.0,                   null: false
   end
 
   add_index "stages", ["course_id"], name: "index_stages_on_course_id", using: :btree

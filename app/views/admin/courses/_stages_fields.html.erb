@@ -3,19 +3,19 @@
   <thead>
     <tr>
       <th></th>
-      <th></th>
-      <%= th_for Stage, :title, :duration, :description %>
+      <%= th_for Stage, :title, :date, :start_at, :end_at, :hours, :description %>
     </tr>
   </thead>
-  <tbody class="sortable" data-items=".stage" data-handel=".glyphicon-move">
+  <tbody>
     <%= f.simple_fields_for :stages, wrapper: false do |ff| %>
       <%= content_tag_for :tr, ff.object, nil, class: 'fields' do %>
-        <%= ff.hidden_field :sort_id %>
-        <td><i class="glyphicon glyphicon-move"></i></td>
         <td><%= ff.link_to_remove content_tag(:i, nil, class: 'glyphicon glyphicon-trash') %></td>
         <td><%= ff.input_field :title, class: 'form-control', label: false %></td>
-        <td class="col-sm-1"><%= ff.input_field :duration, class: 'form-control', label: false %></td>
-        <td class="col-sm-8"><%= ff.input_field :description, class: 'form-control redactor', label: false, rows: 5 %></td>
+        <td><%= ff.input_field :date, as: :string, class: 'form-control datetimepicker', label: false, data: {'date-pickTime' => false, 'date-format' => "YYYY-MM-DD"} %></td>
+        <td><%= ff.input_field :start_at, as: :string, class: 'form-control datetimepicker', label: false, data: {'date-pickDate' => false, 'date-format' => 'HH:mm'} %></td>
+        <td><%= ff.input_field :end_at, as: :string, class: 'form-control datetimepicker', label: false, data: {'date-pickDate' => false, 'date-format' => 'HH:mm'} %></td>
+        <td><%= ff.input_field :hours, class: 'form-control', label: false, step: 0.1, min: 1 %></td>
+        <td class="col-sm-6"><%= ff.input_field :description, class: 'form-control redactor', label: false, rows: 5 %></td>
       <% end %>
     <% end %>
   </tbody>

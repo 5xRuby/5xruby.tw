@@ -9,7 +9,7 @@
         <% else %>
           未分類
         <% end %>
-        <span class="pull-right"><i class=" icon-clock"></i><%= t('.hours', count: course.hours) %></span>
+        <span class="pull-right"><i class=" icon-clock"></i><%= t('.hours', count: ( show_hours course.hours)) %></span>
       </div>
 
     </div>
@@ -17,6 +17,7 @@
       <div class="row">
         <div class="course_info col-md-12 col-sm-12">
           <h4><%= link_to course.title, course %></h4>
+          <h4><%= date_range course %></h4>
           <p><%= course.summary %></p>
           <%#div class="rating">
             <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class=" icon-star-empty"></i>

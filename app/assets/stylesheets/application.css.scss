@@ -1,16 +1,12 @@
 /*
 *= require font-awesome
-*= require additional
 *= require highlightjs/monokai
+*= require additional
 *= require nav
 *= require homepage
+*= require courses
 *= require_self
 */
-
-/* applies#new: Hide forward button */
-#bottom-wizard > button.forward[disabled]{
-  display: none;
-}
 
 body > div.alert{
   margin-bottom: 0px;

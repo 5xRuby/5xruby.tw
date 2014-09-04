@@ -1,6 +1,8 @@
 #= require jquery
 #= require jquery_ujs
+#= require moment.min
 #= require bootstrap
+#= require bootstrap-datetimepicker.min
 #= require jquery_nested_form
 #= require jquery-ui
 #= require redactor
@@ -9,4 +11,5 @@
 #= require select2_helper
 #= require highlightjs
 #= require highlightjs_helper
+#= require gistyle
 #= require_tree ./admin

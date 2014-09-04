@@ -59,4 +59,13 @@ module ApplicationHelper
       link_to text, url, **link_to_options
     end
   end
+
+  def course_charger(course)
+    counter = @course.need_attendees_count
+    (counter > 0) ? t('.charger', num: counter) : t('.charger_complete')
+  end
+
+  def show_hours hours
+    '%.2g' % hours
+  end
 end

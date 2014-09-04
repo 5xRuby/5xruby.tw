@@ -4,7 +4,7 @@ class Admin::CoursesController < AdminController
   # GET /admin/courses
   # GET /admin/courses.json
   def index
-    @admin_courses = Admin::Course.all.order('id DESC').page(params[:page])
+    @admin_courses = Admin::Course.order('id DESC').includes(:category).page(params[:page])
   end
 
   # GET /admin/courses/1
@@ -15,7 +15,11 @@ class Admin::CoursesController < AdminController
 
   # GET /admin/courses/new
   def new
-    @admin_course = Admin::Course.new
+    @admin_course = if source_course = Admin::Course.find_by(permalink: params[:fork])
+      source_course.fork
+    else
+      Admin::Course.new
+    end
     @admin_course.stages.new if @admin_course.stages.empty?
   end
 
@@ -45,7 +49,7 @@ class Admin::CoursesController < AdminController
   def update
     respond_to do |format|
       if @admin_course.update(admin_course_params)
-        format.html { redirect_to @admin_course, notice: t('crud.updated_successfully!', name: Admin::Course.model_name.human) }
+        format.html { redirect_to (params[:ref] || @admin_course), notice: t('crud.updated_successfully!', name: Admin::Course.model_name.human) }
         format.json { render :show, status: :ok, location: @admin_course }
       else
         format.html { render :edit }
@@ -73,10 +77,10 @@ class Admin::CoursesController < AdminController
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_course_params
       params.require(:admin_course).permit(
-        :iframe_html, :category_id, :image, :remove_image, :title, :permalink, :subtitle,
+        :maximum_attendees, :total_attendees, :minimum_attendees, :iframe_html, :category_id, :image, :remove_image, :image_cache, :title, :permalink, :subtitle,
         :summary, :description, :what_will_learn, :is_online, :note, :apply_link,
         speaker_ids: [],
-        stages_attributes: %i[id _destroy sort_id title duration description]
+        stages_attributes: %i[id _destroy title description date start_at end_at hours]
       )
     end
 end

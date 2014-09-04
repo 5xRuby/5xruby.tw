@@ -15,7 +15,7 @@ Setup
 $ bundle install
 $ cp config/application.yml.example config/application.yml
 $ cp config/database.yml.example config/database.yml
-$ rake db:setup
+$ rake db:setup dev:fake
 $ rails server
 ```
 
@@ -35,6 +35,16 @@ For example, to generate admin pages for `Post` model:
 $ rails generate model post title:string content:text
 $ rails generate scaffold admin/post title:string content:text --migration=false --parent=post
 ```
+
+Schema Changing
+---------------
+
+1. Generate migraion file
+2. Update facotry
+3. Update `_form.html.erb`
+4. Update `show` page
+
+# `db/schema.rb` MUST BE CONSISTENT in every environment, both servers and clients. Having differnt content is totally not permitted.
 
 Contact
 =======

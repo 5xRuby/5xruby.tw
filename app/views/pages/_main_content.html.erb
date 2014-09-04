@@ -7,9 +7,9 @@
       </div>
     </div>
     <div class="row">
-      <% @next_schedules.each_slice(2) do |next_schedule| %>
+      <% @next_courses.each_slice(2) do |next_course| %>
       <div class="col-md-6">
-        <%= render partial: 'next_schedule', collection: next_schedule %>
+        <%= render partial: 'next_course', collection: next_course %>
       </div>
       <% end %>
     </div>

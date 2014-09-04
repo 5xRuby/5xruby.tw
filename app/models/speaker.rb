@@ -32,7 +32,6 @@ class Speaker < ActiveRecord::Base
   mount_uploader :avatar, SpeakerAvatarUploader
 
   # association macros
-  has_many :events
   has_and_belongs_to_many :courses
 
   # validation macros

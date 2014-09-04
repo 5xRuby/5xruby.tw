@@ -1,4 +1,4 @@
-<section id="map"></section>
+<section id="map" data-scrollwheel="false"></section>
 <section id="directions">
   <div class="container">
     <div class="row">
@@ -31,7 +31,7 @@
         <hr>
         <h3><%= t('.follow_us') %></h3>
         <p>
-          如果您希望可以取得我們的活動或課程資訊，歡迎您加入我們的社群帳號。
+          如果您希望可以取得我們的活動或講座資訊，歡迎您加入我們的社群帳號。
         </p>
         <ul id="follow_us_contacts">
           <li><a href="https://www.facebook.com/5xruby" target="_blank"><i class="icon-facebook"></i>fb.com/5xruby</a></li>
@@ -82,20 +82,17 @@
             </div>
 
             <div class="row">
-              <div class="col-md-6">
-                <div class="form-group <%= has_error_class @contact, :phone %>">
-                  <%= f.number_field :price, step: 0.1, min: 0.1, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:price) %>
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group <%= has_error_class @contact, :price %>">
+                  <%= f.number_field :price, id: 'ntd', class: 'form-control style_2', placeholder: Contact.human_attribute_name(:price) %>
                   <%= help_block @contact, :price %>
-                  <span class="input-icon">勝文</span>
-                  <p class="help-block">1 勝文 = 10 萬</p>
+                  <span class="input-icon"><i class="icon-dollar"></i></span>
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                  <div class="input-group">
-                    <span class="input-group-addon">NT$</span>
-                    <input id="ntd" type="number" class="form-control" disabled>
-                  </div>
+                  <input type="number" id="mmm" class="form-control style_2" placeholder="1 勝文 = 10 萬" step="any">
+                  <span class="input-icon">勝文</span>
                 </div>
               </div>
             </div>

@@ -29,6 +29,7 @@
 		  zoom: zoom,
 		  mapTypeId: google.maps.MapTypeId.ROADMAP
 		}
+		myOptions = $.extend($(map_element).data(), myOptions);
 		var map = new google.maps.Map(map_element, myOptions);
 		var geocoder = new google.maps.Geocoder();
 		var infowindow = null;
