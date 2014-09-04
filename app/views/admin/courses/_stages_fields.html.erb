@@ -14,7 +14,7 @@
         <td><%= ff.input_field :date, as: :string, class: 'form-control datetimepicker', label: false, data: {'date-pickTime' => false, 'date-format' => "YYYY-MM-DD"} %></td>
         <td><%= ff.input_field :start_at, as: :string, class: 'form-control datetimepicker', label: false, data: {'date-pickDate' => false, 'date-format' => 'HH:mm'} %></td>
         <td><%= ff.input_field :end_at, as: :string, class: 'form-control datetimepicker', label: false, data: {'date-pickDate' => false, 'date-format' => 'HH:mm'} %></td>
-        <td><%= ff.input_field :hours, class: 'form-control', label: false %></td>
+        <td><%= ff.input_field :hours, class: 'form-control', label: false, step: 0.1, min: 1 %></td>
         <td class="col-sm-6"><%= ff.input_field :description, class: 'form-control redactor', label: false, rows: 5 %></td>
       <% end %>
     <% end %>
