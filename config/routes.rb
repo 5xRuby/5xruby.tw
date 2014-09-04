@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   resources :posts, only: %i[index show]
   resources :courses, path: :talks, only: %i[index show]
-  get 'courses/:id', to: 'courses#redirect'
+  get 'courses/:id', to: redirect('/talks/%{id}')
+  get 'courses', to: redirect('/talks')
   resources :speakers, only: :index
 
   #concern
