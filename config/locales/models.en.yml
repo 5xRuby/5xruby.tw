@@ -1,0 +1,109 @@
+en:
+  errors:
+    messages:
+      captcha_not_passed: What you typed cannot be verified. Please try again.
+  activemodel:
+    attributes:
+      contact:
+        first_name: first name
+        last_name: last name
+        email: email address
+        phone: phone number
+        message: message
+  attributes:
+    image: image
+    remove_image: delete image
+    permalink: URL shortening
+  activerecord:
+    models:
+      post: posts
+      category: course category
+      course: course
+      stage: stage
+      schedule: schedule
+      apply: apply
+      speaker: lecturer
+      event: event
+      faq: FAQ
+      author: author
+    attributes:
+      post:
+        publish_at: published at
+        title: title
+        summary: summary
+        content: content
+        author: author
+        tag_list: tag
+        is_online: online
+      category:
+        name: name
+        is_highlighted: Highlights of this month
+      course:
+        category: category
+        title: title
+        subtitle: subtitle
+        summary: summary
+        what_will_learn: You are about to learn...
+        description: description
+        is_online: online
+        note: remarks
+        apply_link: application
+      stage:
+        sort_id: 
+        title: title
+        duration: duration
+        description: description
+        course: course
+        schedules: course schedule
+      schedule:
+        stage: stage
+        date: date
+        description: description
+      apply:
+        course: course
+        stage: stage
+        schedule: course name
+        first_name: first name
+        last_name: last name
+        phone: phone number
+        email: email address
+        age: age
+        gender: gender
+        gender_text: gender
+        message: message
+      speaker:
+        name: name
+        summary: summary
+        avatar: image
+        is_online: online
+        remove_avatar: delete image
+        role: role
+        role_text: role
+        title: title
+        facebook_url: FB
+        twitter_url: Twitter
+        google_url: G+
+        blog_url: blog URL
+      event:
+        start_at: start at
+        title: title
+        description: description
+        speaker: lecturer
+      faq:
+        question: question
+        answer: answer
+        is_online: online
+      author:
+        name: name
+  enumerize:
+    apply:
+      gender:
+        male: male
+        female: female
+    speaker:
+      role:
+        author: author
+        consultant: consultant
+        speaker: lecturer
+        parttime-speaker: part-time lecturer
+        assistant-speaker: assistant lecturer

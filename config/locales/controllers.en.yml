@@ -1,0 +1,8 @@
+en:
+  contacts:
+    create:
+      something_went_wrong: Uh-oh, something went wrong.
+      mail_sent_successfully: Your mail was sucessfully sent.
+  applies:
+    create:
+      something_went_wrong: Uh-oh, something went wrong. 

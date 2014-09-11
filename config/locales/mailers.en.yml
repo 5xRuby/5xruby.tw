@@ -1,0 +1,9 @@
+en:
+  contact_mailer:
+    enquire:
+      subject: Contact notice
+  apply_mailer:
+    notify_user:
+      subject: Thank you for applying. 
+    notify_5xruby:
+      subject: Resgistration notice

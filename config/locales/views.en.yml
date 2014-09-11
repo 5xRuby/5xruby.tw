@@ -1,58 +1,198 @@
 en:
+  schedules:
+    show:
+      start_learning: I'd like to sign in the course
+  speakers:
+    index:
+      title: Lecturer
+      lead: In order to provide courses with high quality, we have recruited more than 10 experienced lecturers in Ruby/Rails. They have devoted themselves in the development and teachings of this field. Please contact us if you are ineterested in becoming a lecturer.
+  courses:
+    index:
+      title: Course status
+    sidebar:
+      all_courses: All courses
+      categories: Category
+      satisfied: Are you satisfied with our courses?
+      upcoming: More Ruby/Rails courses or website development courses will be released. Please contact us if you have any suggestions regarding our courses. 
+    breadcrumb:
+      home: Homepage
+      courses: Course
+    show:
+      summary: Introduction
+      what_you_will_learn: What you will learn
+      apply_now: I'd like to sign in the course
+      note: Description
+    course:
+      apply: I'd like to sign in the course
+      detail: Detailed Info
+      hours:
+        zero: not yet available
+        one: 1 hour
+        other: "%{count} hour"
+  stages:
+    stage:
+      stage_no: Lesson number %{stage} 
+      available_dates: Course starting date
+      next_dates: next lesson
+  applies: 
+    new:
+      progress: progress
+      backward: backward
+      forward: forward
+    submit:
+      apply_complete_thank_you_for_you_time: Your application has been sent, thank you! 
+            back_to_course: Back to course
+    personal:
+      enter_your_personal_info: Please fill in your personal information
+      enter_your_personal_info_detail: Please fill in your personal information. If we have any query with your Lorem i, please feel free to contact us vis email or call us at <strong>+886 928 617 687</strong>
+    preferences:
+    message:
+      additional_message: Anything else you'd like to share？
+      additional_message_detail: Lorem ipsum.
+      submit_your_apply: Submit
+  posts:
+    index:
+      title: Blog
+    show:
+      title: Blog
+    post:
+      read_more: more...
+      tags: tags
+    sidebar:
+      tags: tags
+      recent_post: recent posts
+    breadcrumb:
+      home: home
+      posts: blog
   pages:
+    faq:
+      title: Q & A
+    next_schedule:
+      hours: hour
+    main_features:
+      5xruby: 5xruby
+      lead: |
+        Lorem ipsum dolor sit amet, ius minim gubergren ad.
+        At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clitaponderum ne.
+      items:
+        - icon: icon-trophy
+          title: Professional lecturers
+          description: The members and lecturers of 5xRuby are the first-line developppers in the market and senior members from Taiwan Ruby community, where actual developping experience and pracmatics come in hand with theoratical bases.
+        - icon: icon-ok
+          title: Technical consultants
+          description: From system design, planning to development, even to system set-up, we provide professional advise and consultation.
+        - icon: icon-mic
+          title: Authetic practises
+          description: We have designed a serious of lectures including authentic practices of Ruby, Rails, Git, testing and system planning of diffrent levels from enrty, intermidate to advance courses. This will allow you to experience the fast speed and fun of developping via Ruby.
+        - icon: icon-video
+          title: Enterprse Training 
+          description: We have also designed a series of training programs for enterprise staff. This will help you build up a professional Ruby/ Rails development team with your current staffing. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
+    main_content_gray:
+      view_all_courses: view all courses
+      latest_courses: lastest courses
+      latest_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
+    main_content:
+      next_courses: recent courses
+      next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
+    recent_course:
+      detail: details
     about:
       description: |
-        ## About Learn
-        ### We're in the business of hosting great ideas.
+        ##  5 times professionalism. 5 times wishes. 5 times Ruby.
+        ### About Us
+        We are a group of Ruby lovers in Taiwan. Our lives are closed bounded with Ruby/Rails.
 
-        Lorem ipsum dolor sit amet, ius minim gubergren ad. At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clita ponderum ne duo, simul appellantur reprehendunt mea an. An gloriatur vulputate eos, an sed fuisset vituperatoribus, tation tritani prodesset ex sed. Impedit torquatos sed ad, vel ad placerat necessitatibus, in quo inani eligendi.
+        Ruby on Rails saves time on development, and has been favored by many foreign enterprises and start-ups. The simpolicity and elegance of Ruby language brings a lot of fun to the engineers too. However, in Taiwan, on a few enterprises are using Ruby/Rails as their main developping tool.
 
-        Cum copiosae pertinacia ei, admodum volumus cum ut, erat nonumy his te. Iudico praesent sed id, nam error consequat reprehendunt no. Nostrud nostrum tacimates mei ut, debet facilisi in ius, dolor accusam omittam eu sea. His harum verterem ocurreret ei.
+        Over the years we have continuously provided courses to universities in Taiwan (NCKU, Fujen University, TTCB), teaching Ruby and Rails. From our obesevation of students reactions, we noticed that most students find Ruby not so difficult to learn. They could achieve certain level by studying textbooks and practicing via documents from the official website. However, self-study cannot cover all aspects if they wish to elevate into the next level or start working on business projects. They need more authentic practiese and the guidance of lecturers. This is why senior or experienced Ruby/Rails developpes are not easy to be found in Taiwan.
 
-        ### Why choose Learn?
-        #### Service
+      We have also interviewed some enterprises and came to understand the reason why they don't use Ruby/ Raisl. Most of it comes from the shortage of Ruby/Rails engineers, and that technical support is scarce too. They didn't know who to ask for help if a problem occurs. 
 
-        Cum copiosae pertinacia ei, admodum volumus cum ut, erat nonumy his te. Iudico praesent sed id, nam error consequat reprehendunt no. Nostrud nostrum tacimates mei ut, debet facilisi in ius, dolor accusam omittam eu sea. His harum verterem ocurreret ei.
+        In the recent one or two years, the demand of Ruby/Rails expertise grew, more and more high-paid vancies were released, encrouaging more and more people to enter the world of Ruby/Rails. Many people have, besides self-learning, participated in the sharing and exchanges of activities organized by Ruby communities. 
 
-        #### Expert Teachers
+        "If there were only faster and more efficient way to enhance my level." Voices like this started to reveal. 
 
-        An per ancillae concludaturque, senserit rationibus referrentur ne pro, ius omnis complectitur ex. Per ut vocibus contentiones. Oporteat vituperata ut nec, an dicit accusamus definiebas est, ne vix mentitum luptatum. Duo in wisi justo aperiam. Reprimique consectetuer pro ea, civibus commune oportere pri id.
+        Therefore, a group of Ruby lovers started dicussing, "Maybe we can establish a company to provide technical consultancy or training related to Ruby/Rails."
 
-        #### Trusted Certification
+        Our ultumate goal is for more and more enterprises in Taiwan to know more about this elegant, fun and very productive programming language and start using it as their main development tool to speed up their dreams. 
 
-        Impedit epicurei intellegam an eos, id fierent consequat definitiones est. Ne his primis invenire. Ea fugit tantas noster vis, scripta ornatus voluptua quo an. Nusquam salutatus duo ei, semper maiorum eu mea.
+        As to why the company name is 5 times and not 3 or 100 times? Well, that's another story.  
+
+        
+
+        ---
+        ## Our Services
+        ### technical consulatncy
+        __The members and lecturers of 5xRuby are the first-line developppers in the market and senior members from Taiwan Ruby community, where actual developping experience and pracmatics come in hand with theoratical bases.
+
+        ### Enterprise internal training
+        If your website or system is currently built with other programming language (for instance PHP, Java or ASP.net), and you are considering about changing to Ruby/Rails of high productivity. However, if you lack of such technical capability to develop, we offer a series of training program where wiUby/Rails development team can be trained and built with yoru current staff. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
+
+        ### Training
+        if you are a fresh beginner to programming, or if you happen to have experience with other programming languages. We offer a series of courses from entry level to intermediate and advance courses that will guide you efficiently to the core of Ruby/Rails.
+
+      speciality: Expertise
       members:
-        - name: 高見龍
-          title: 工友
+        - name: Eddie Kao
+          title: Ruby Appraiser
           avatar: eddiekao.jpg
-          facebook: http://fb.me/tonytonyjan
-          twitter: https://twitter.com/tonytonyjan
-          google: https://plus.google.com/u/0/+%E7%B0%A1%E7%85%92%E8%88%AATJ/posts
-          about: Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
-        - name: 鄧慕凡
-          title: 工友
+          facebook: https://www.facebook.com/eddiekao
+          twitter: https://twitter.com/eddiekao
+          google: https://plus.google.com/u/0/102669323697108172752/about
+          experience: Organizer of WebConf Taiwan, founder and organizer of PHPConf Taiwan, oprganizer of Rails Girls Taipei.
+          about: "A nerd who love programming, hope to change the world one day by writing code."
+          blog: http://blog.eddie.com.tw
+          skills: Ruby / Rails、iOS app development
+
+        - name: Mu-fang Deng
+          title: Ruby Merchant
           avatar: ryudoawaru.jpg
-          facebook: http://fb.me/tonytonyjan
-          twitter: https://twitter.com/tonytonyjan
-          google: https://plus.google.com/u/0/+%E7%B0%A1%E7%85%92%E8%88%AATJ/posts
-          about: Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
-        - name: 簡煒航
-          title: 實習生
+          facebook: https://www.facebook.com/ryudoawaru
+          twitter: https://twitter.com/ryudoawaru
+          experience: Organizer of RubyConf Taiwan and Rails Girls Taipei
+          about: "A non-typical website maintainer"
+          blog: http://ryudo.tw/
+          skills: Ruby / Rails / Sinatra, system management
+
+        - name: Tonu Jian
+          title: Rail Constructor
           avatar: tonytonyjan.jpg
           facebook: http://fb.me/tonytonyjan
           twitter: https://twitter.com/tonytonyjan
           google: https://plus.google.com/u/0/+%E7%B0%A1%E7%85%92%E8%88%AATJ/posts
-          about: Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex.
-    contact:
-      follow_us: 粉絲頁
-      address: 地址
-      enter_your_starting_point: 輸入你的起點
-      get_directions: 規劃路線
+          experience:
+          about: "I am an engineer and a pianist. I write code with one hand and play music with the other."
+          blog: http://tonytonyjan.net/
+          skills: Ruby / Rails、Java / Swing
+
+    contacts:
+      general_enquire: Inquery
+      follow_us: Community
+      address: Contact info
+      enter_your_starting_point: Enter your starting point
+      get_directions: Get directions
+      write_your_message: Leave your message
+      submit: Submit
   layouts:
     header:
-      about: 關於
+      about: About us
     nav:
-      home: 首頁
-      course: 講座
-      blog: 部落格
-      contacts: 聯絡我們
+      home: Home
+      course: Course 
+      blog: Blog
+      speakers: Lecturer
+      contacts: Contact us
+      about: About us
+      faq: Q & A
+    footer:
+      browse: brow
+      courses: courses
+      faq: Q & A
+      blog: blog
+      contacts: Contact us
+      about_5xruby: About 5xruby
+      about_us: About us
+      source_code: sourse code
+      media: Media exposure
+    application:
+      back_to_top: back to top
