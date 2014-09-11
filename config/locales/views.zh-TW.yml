@@ -39,22 +39,6 @@ zh-TW:
       stage_no: 第 %{stage} 堂
       available_dates: 開講日期
       next_dates: 下一堂
-  applies:
-    new:
-      progress: 進度
-      backward: 上一步
-      forward: 下一步
-    submit:
-      apply_complete_thank_you_for_you_time: 表單已送出，感謝你的填寫！
-      back_to_course: 回到講座頁
-    personal:
-      enter_your_personal_info: 請填寫報名資料
-      enter_your_personal_info_detail: 請填寫您的個人資料，我們對您的Lorem i如有任何疑問歡迎來信詢問，或是來電 <strong>+886 928 617 687</strong>
-    preferences:
-    message:
-      additional_message: 有想告訴我們的嗎？
-      additional_message_detail: Lorem ipsum.
-      submit_your_apply: 送出報名
   posts:
     index:
       title: 部落格

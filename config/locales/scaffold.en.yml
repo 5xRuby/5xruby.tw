@@ -20,5 +20,5 @@ en:
     delete: delete
     destroy!: destroy%{resource}
     destroy: destroy
-    created_successfully!: %{name}was created successfully.
-    updated_successfully!: %{name}was updated successfully.
+    created_successfully!: "%{name}was created successfully."
+    updated_successfully!: "%{name}was updated successfully."
