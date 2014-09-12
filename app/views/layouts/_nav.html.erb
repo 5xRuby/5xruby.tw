@@ -11,6 +11,8 @@
           <%= nav_li t('.faq'), faq_path %>
           <%= nav_li t('.about'), about_path %>
           <%= nav_li t('.contacts'), contacts_path %>
+          <%= nav_li '中文', root_path(locale: nil), method: :eql? if I18n.locale == :en %>
+          <%= nav_li 'EN', root_path(locale: :en), method: :eql?  if I18n.locale == :'zh-TW' %>
         </ul>
 
         <div class="hide col-md-4 pull-right hidden-sm hidden-xs">

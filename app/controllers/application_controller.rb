@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :set_seo, :set_locale
+  helper_method :current_path_with_locale
 
   def recaptcha?
     return @recaptcha if @recaptcha
@@ -45,7 +46,7 @@ class ApplicationController < ActionController::Base
   end
 
   # override
-  def default_url_options(options={})
-    {locale: I18n.locale}
+  def default_url_options options = {}
+    {locale: I18n.locale == I18n.default_locale ? nil : I18n.locale}
   end
 end
