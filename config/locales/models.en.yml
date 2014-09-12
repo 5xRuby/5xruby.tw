@@ -17,8 +17,8 @@ en:
   activerecord:
     models:
       post: posts
-      category: course category
-      course: course
+      category: lecture category
+      course: lecture
       stage: stage
       schedule: schedule
       apply: apply
@@ -53,24 +53,12 @@ en:
         title: title
         duration: duration
         description: description
-        course: course
-        schedules: course schedule
+        course: lecture
+        schedules: lecture schedule
       schedule:
         stage: stage
         date: date
         description: description
-      apply:
-        course: course
-        stage: stage
-        schedule: course name
-        first_name: first name
-        last_name: last name
-        phone: phone number
-        email: email address
-        age: age
-        gender: gender
-        gender_text: gender
-        message: message
       speaker:
         name: name
         summary: summary

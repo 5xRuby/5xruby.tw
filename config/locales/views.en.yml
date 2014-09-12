@@ -1,29 +1,29 @@
 en:
   schedules:
     show:
-      start_learning: I'd like to sign in the course
+      start_learning: I'd like to sign in the lecture
   speakers:
     index:
       title: Lecturer
-      lead: In order to provide courses with high quality, we have recruited more than 10 experienced lecturers in Ruby/Rails. They have devoted themselves in the development and teachings of this field. Please contact us if you are ineterested in becoming a lecturer.
+      lead: In order to provide lectures with high quality, we have recruited more than 10 experienced lecturers in Ruby/Rails. They have devoted themselves in the development and teachings of this field. Please contact us if you are ineterested in becoming a lecturer.
   courses:
     index:
       title: Lecture status
     sidebar:
-      all_courses: All courses
+      all_courses: All lectures
       categories: Category
-      satisfied: Are you satisfied with our courses?
-      upcoming: More Ruby/Rails courses or website development courses will be released. Please contact us if you have any suggestions regarding our courses. 
+      satisfied: Are you satisfied with our lectures?
+      upcoming: More Ruby/Rails lectures or website development lectures will be released. Please contact us if you have any suggestions regarding our lectures.
     breadcrumb:
       home: Homepage
       courses: Lecture
     show:
       summary: Introduction
       what_you_will_learn: What you will learn
-      apply_now: I'd like to sign in the course
+      apply_now: I'd like to sign in the lecture
       note: Description
     course:
-      apply: I'd like to sign in the course
+      apply: I'd like to sign in the lecture
       detail: Detailed Info
       hours:
         zero: not yet available
@@ -67,16 +67,16 @@ en:
           description: From system design, planning to development, even to system set-up, we provide professional advise and consultation.
         - icon: icon-mic
           title: Authetic practises
-          description: We have designed a serious of lectures including authentic practices of Ruby, Rails, Git, testing and system planning of diffrent levels from enrty, intermidate to advance courses. This will allow you to experience the fast speed and fun of developping via Ruby.
+          description: We have designed a serious of lectures including authentic practices of Ruby, Rails, Git, testing and system planning of diffrent levels from enrty, intermidate to advance lectures. This will allow you to experience the fast speed and fun of developping via Ruby.
         - icon: icon-video
           title: Enterprse Training 
           description: We have also designed a series of training programs for enterprise staff. This will help you build up a professional Ruby/ Rails development team with your current staffing. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
     main_content_gray:
-      view_all_courses: view all courses
-      latest_courses: lastest courses
+      view_all_courses: view all lectures
+      latest_courses: lastest lectures
       latest_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
     main_content:
-      next_courses: recent courses
+      next_courses: recent lectures
       next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
     recent_course:
       detail: details
@@ -88,7 +88,7 @@ en:
 
         Ruby on Rails saves time on development, and has been favored by many foreign enterprises and start-ups. The simpolicity and elegance of Ruby language brings a lot of fun to the engineers too. However, in Taiwan, on a few enterprises are using Ruby/Rails as their main developping tool.
 
-        Over the years we have continuously provided courses to universities in Taiwan (NCKU, Fujen University, TTCB), teaching Ruby and Rails. From our obesevation of students reactions, we noticed that most students find Ruby not so difficult to learn. They could achieve certain level by studying textbooks and practicing via documents from the official website. However, self-study cannot cover all aspects if they wish to elevate into the next level or start working on business projects. They need more authentic practiese and the guidance of lecturers. This is why senior or experienced Ruby/Rails developpes are not easy to be found in Taiwan.
+        Over the years we have continuously provided lectures to universities in Taiwan (NCKU, Fujen University, TTCB), teaching Ruby and Rails. From our obesevation of students reactions, we noticed that most students find Ruby not so difficult to learn. They could achieve certain level by studying textbooks and practicing via documents from the official website. However, self-study cannot cover all aspects if they wish to elevate into the next level or start working on business projects. They need more authentic practiese and the guidance of lecturers. This is why senior or experienced Ruby/Rails developpes are not easy to be found in Taiwan.
 
         We have also interviewed some enterprises and came to understand the reason why they don't use Ruby/ Raisl. Most of it comes from the shortage of Ruby/Rails engineers, and that technical support is scarce too. They didn't know who to ask for help if a problem occurs. 
 
@@ -113,7 +113,7 @@ en:
         If your website or system is currently built with other programming language (for instance PHP, Java or ASP.net), and you are considering about changing to Ruby/Rails of high productivity. However, if you lack of such technical capability to develop, we offer a series of training program where wiUby/Rails development team can be trained and built with yoru current staff. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
 
         ### Training
-        if you are a fresh beginner to programming, or if you happen to have experience with other programming languages. We offer a series of courses from entry level to intermediate and advance courses that will guide you efficiently to the core of Ruby/Rails.
+        if you are a fresh beginner to programming, or if you happen to have experience with other programming languages. We offer a series of lectures from entry level to intermediate and advance lectures that will guide you efficiently to the core of Ruby/Rails.
 
       speciality: Expertise
       members:
@@ -170,7 +170,7 @@ en:
       faq: Q & A
     footer:
       browse: brow
-      courses: courses
+      courses: lectures
       faq: Q & A
       blog: blog
       contacts: Contact us
