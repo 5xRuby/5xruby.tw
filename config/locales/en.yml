@@ -2,7 +2,7 @@ en:
   company:
     name: 5xruby
     address: No.7, Ln. 227, Huayin St., Datong Dist., Taipei City 103, Taiwan
-    vat_no: VAT: 24536806
+    vat_no: "VAT: 24536806"
     email: hi@5xruby.tw
     contact_phone: '+886 911-358-006'
   site:
