@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  before_action :set_seo
+  before_action :set_seo, :set_locale
 
   def recaptcha?
     return @recaptcha if @recaptcha
@@ -38,5 +38,14 @@ class ApplicationController < ActionController::Base
         image: 'og_picture.png'
       }
     }
+  end
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  # override
+  def default_url_options(options={})
+    {locale: I18n.locale}
   end
 end
