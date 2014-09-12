@@ -8,7 +8,7 @@ en:
       lead: In order to provide courses with high quality, we have recruited more than 10 experienced lecturers in Ruby/Rails. They have devoted themselves in the development and teachings of this field. Please contact us if you are ineterested in becoming a lecturer.
   courses:
     index:
-      title: Course status
+      title: Lecture status
     sidebar:
       all_courses: All courses
       categories: Category
@@ -16,7 +16,7 @@ en:
       upcoming: More Ruby/Rails courses or website development courses will be released. Please contact us if you have any suggestions regarding our courses. 
     breadcrumb:
       home: Homepage
-      courses: Course
+      courses: Lecture
     show:
       summary: Introduction
       what_you_will_learn: What you will learn
@@ -32,7 +32,7 @@ en:
   stages:
     stage:
       stage_no: Lesson number %{stage}
-      available_dates: Course starting date
+      available_dates: Lecture starting date
       next_dates: next lesson
   posts:
     index:
@@ -162,7 +162,7 @@ en:
       about: About us
     nav:
       home: Home
-      course: Course 
+      course: Lecture
       blog: Blog
       speakers: Lecturer
       contacts: Contact us
