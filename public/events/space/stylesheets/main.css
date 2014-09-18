@@ -668,7 +668,7 @@ h2.bigger {
 /* Layout */
 /* line 3, ../sass/layout/_header.scss */
 #header {
-  color: #232323;
+  color: #BF0A10;
   text-align: center;
   overflow: hidden;
   *zoom: 1;
@@ -696,7 +696,7 @@ h2.bigger {
   display: inline-block;
   margin: 10em 1em;
   padding: 4em;
-  border: 2px solid #232323;
+  border: 2px solid #BF0A10;
 }
 @media only all and (min-width: 481px) {
   /* line 24, ../sass/layout/_header.scss */
