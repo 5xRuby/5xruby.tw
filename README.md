@@ -51,7 +51,7 @@ Schema Changing
 Assets
 ------
 
-Assets are managed by [gistyle](https://github.com/tonytonyjan/gistyle) framework (DOM-based routing of Javascript), please follow the convension to keep your code clean, do not mess them up with view files as much as possible.
+Assets are managed by [gistyle](https://github.com/tonytonyjan/gistyle) framework (DOM-based routing of Javascript), please follow the convension to keep your code clean. Do not mess them up with view files as much as possible.
 
 Principle of Least Gems
 -----------------------
