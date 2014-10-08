@@ -23,7 +23,7 @@ FactoryGirl.define do
     image { Faker::Image.image }
     title { Faker::Name.title }
     permalink { SecureRandom.hex(4) }
-    is_online { [true, false].sample }
+    is_online { rand > 0.5 }
     publish_at { rand(1.month).ago }
     summary { Faker::Lorem.paragraph[0,150] }
     content { "<p>#{Faker::Lorem.paragraph}</p>" }

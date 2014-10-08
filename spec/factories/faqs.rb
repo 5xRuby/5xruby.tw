@@ -17,6 +17,6 @@ FactoryGirl.define do
   factory :faq do
     question { Faker::Lorem.paragraph }
     answer { Faker::Lorem.paragraph }
-    is_online { [true, false].sample }
+    is_online { rand > 0.5 }
   end
 end

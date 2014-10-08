@@ -25,7 +25,7 @@ FactoryGirl.define do
     avatar { Faker::Image.image }
     name { Faker::Name.name }
     summary { Faker::Lorem.paragraph }
-    is_online { [true, false].sample }
+    is_online { rand > 0.5 }
     role { Speaker.role.values.sample }
     title { Faker::Name.title }
     facebook_url { Faker::Internet.url('facebook.com') }
