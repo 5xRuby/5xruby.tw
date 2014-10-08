@@ -21,6 +21,7 @@ class Showcase < ActiveRecord::Base
   # Constants
   
   # Attributes related macros
+  mount_uploader :image, ShowcaseImageUploader
 
   # association macros
 
