@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :showcases
-  end
-
   scope '(:locale)', locale: /en/ do
     root 'pages#index'
     get :about, :contacts, :faq, :sitemap, controller: :pages
@@ -21,7 +17,7 @@ Rails.application.routes.draw do
   # back
   namespace :admin, path: Settings.admin_path_prefix do
     root to: :dashboard
-    resources :posts, :courses, :authors, :speakers, :faqs, :categories, concerns: :sortable
+    resources :posts, :courses, :authors, :speakers, :faqs, :categories, :showcases, concerns: :sortable
   end
 
   # plugins

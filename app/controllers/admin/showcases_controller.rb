@@ -1,10 +1,11 @@
 class Admin::ShowcasesController < AdminController
+  include Sortable
   before_action :set_admin_showcase, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/showcases
   # GET /admin/showcases.json
   def index
-    @admin_showcases = Admin::Showcase.all.order('id DESC').page(params[:page])
+    @admin_showcases = Admin::Showcase.order(:sort_id)
   end
 
   # GET /admin/showcases/1
