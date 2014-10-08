@@ -9,11 +9,13 @@
     <div class="row">
       <% t('.items').each do |item| %>
         <div class="col-md-6">
+          <%= link_to item[:url] do %>
           <div class="feature">
             <i class="<%= item[:icon] %>"></i>
             <h3><%= item[:title] %></h3>
             <p><%= item[:description] %></p>
           </div>
+          <% end %>
         </div>
       <% end %>
     </div>
