@@ -16,6 +16,7 @@ zh-TW:
     remove_image: 刪除圖片
     permalink: 縮址
     hours: 時數
+    is_online: 上線
   activerecord:
     models:
       post: 文章
@@ -28,6 +29,7 @@ zh-TW:
       event: 事件
       faq: 問答
       author: 作者
+      showcase: 案例作品
     attributes:
       post:
         publish_at: 發佈時間
@@ -36,7 +38,6 @@ zh-TW:
         content: 內容
         author: 作者
         tag_list: 標籤
-        is_online: 上線
       category:
         name: 分類名稱
         is_highlighted: 本期主打分類
@@ -47,7 +48,6 @@ zh-TW:
         summary: 簡介
         what_will_learn: 將會學到
         description: 詳細介紹
-        is_online: 上線
         note: 備註
         apply_link: 報名網址
         iframe_html: iframe
@@ -83,7 +83,6 @@ zh-TW:
         name: 名字
         summary: 簡介
         avatar: 照片
-        is_online: 上線
         remove_avatar: 刪除圖片
         role: 身份
         role_text: 身份
@@ -100,9 +99,12 @@ zh-TW:
       faq:
         question: 問題
         answer: 答案
-        is_online: 上線
       author:
         name: 名字
+      showcase:
+        name: 名稱
+        description: 說明
+        url: 連結
   enumerize:
     apply:
       gender:
