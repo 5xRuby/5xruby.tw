@@ -12,7 +12,7 @@
     </tr>
   </thead>
 
-  <tbody  class="sortable" data-items=".admin_faq">
+  <tbody class="sortable" data-items=".admin_faq">
     <% @admin_faqs.each do |admin_faq| %>
       <%= content_tag_for :tr, admin_faq do %>
         <%= hidden_field_tag "sort[#{admin_faq.id}][sort_id]", admin_faq.sort_id %>
