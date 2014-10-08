@@ -21,8 +21,8 @@ FactoryGirl.define do
     course nil
     title { Faker::Name.title }
     description { Faker::Lorem.paragraph }
-    date { rand(1.month).since }
-    start_at { rand(1.hour).since }
-    end_at { (rand(1.hour) + 3600).since }
+    date { rand(1.month).seconds.since }
+    start_at { rand(1.hour).seconds.since }
+    end_at { (rand(1.hour) + 3600).seconds.since }
   end
 end

@@ -70,6 +70,6 @@ class Admin::ShowcasesController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_showcase_params
-      params.require(:admin_showcase).permit(:name, :description, :link, :image, :is_online, :sort_id)
+      params.require(:admin_showcase).permit(:name, :description, :link, :image, :remove_image, :image_cache, :is_online, :sort_id)
     end
 end

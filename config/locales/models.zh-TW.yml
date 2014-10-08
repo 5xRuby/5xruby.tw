@@ -104,7 +104,7 @@ zh-TW:
       showcase:
         name: 名稱
         description: 說明
-        url: 連結
+        link: 連結
   enumerize:
     apply:
       gender:
