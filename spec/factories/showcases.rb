@@ -17,11 +17,10 @@
 
 FactoryGirl.define do
   factory :showcase do
-    name "MyString"
-    description "MyText"
-    link "MyString"
-    image "MyString"
-    is_online false
-    sort_id 1
+    name { Faker::Lorem.sentence }
+    description { Faker::Lorem.paragraph }
+    link { Faker::Internet.url }
+    image { Faker::Image.image }
+    is_online { rand > 0.5 }
   end
 end
