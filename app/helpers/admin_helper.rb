@@ -27,6 +27,7 @@ module AdminHelper
                    elsif val.version_exists?(:thumb) && val.thumb.present? then val.thumb
                    else val end
         link_to image_tag(uploader, height: 100), record if uploader.present?
+      when TrueClass, FalseClass then admin_boolean_tag(val)
       else val
       end
     end
@@ -61,5 +62,10 @@ module AdminHelper
     # <span class="glyphicon glyphicon-search"></span>
     text = ' ' + text if text.present?
     content_tag(:span, nil, class: "glyphicon glyphicon-#{type}") + text
+  end
+
+  def admin_boolean_tag bool
+    text, klass = bool ? %i[是 success] : %i[否 danger]
+    content_tag(:span, text, class: "label label-#{klass}")
   end
 end
