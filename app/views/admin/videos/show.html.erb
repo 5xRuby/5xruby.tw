@@ -4,7 +4,7 @@
     <th>值</th>
   </thead>
   <tbody>
-    <%= tr_for @admin_video, :id, :title, :link, :summary, :description, :is_online %>
+    <%= tr_for @admin_video, :id, :title, tr_speakers(@admin_video), :link, :summary, :description, :is_online %>
   </tbody>
 </table>
 <div class="btn-group">
