@@ -17,30 +17,8 @@
       <aside class="col-md-4">
         <div class="box_style_1">
           <h4><a href="#">Download files <i class="icon-download pull-right"></i></a></h4><br>
-          <h4>Speakers</h4>
-          <div class="media">
-            <div class="pull-right">
-            <img src="/img/avatar1.jpg" class="img-circle" alt="">
-            </div>
-            <div class="media-body">
-              <h5 class="media-heading"><a href="#">Marc Twain</a></h5>
-              <p>
-                Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. 
-              </p>
-            </div>
-          </div>
-
-          <div class="media">
-            <div class="pull-right">
-            <img src="/img/avatar1.jpg" class="img-circle" alt="">
-            </div>
-            <div class="media-body">
-              <h5 class="media-heading"><a href="#">Marc Twain</a></h5>
-              <p>
-                Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in.
-              </p>
-            </div>
-          </div>
+          <h4><%= Speaker.model_name.human %></h4>
+          <%= render partial: 'speakers/side', collection: @video.speakers, as: :speaker %>
         </div>
       </aside> <!-- End col-md-4 -->
     </div><!-- End row -->

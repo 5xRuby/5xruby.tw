@@ -19,6 +19,7 @@ zh-TW:
     is_online: 上線
     link: 連結
     summary: 簡介
+    speakers: 講師
   activerecord:
     models:
       post: 文章
@@ -52,7 +53,6 @@ zh-TW:
         note: 備註
         apply_link: 報名網址
         iframe_html: iframe
-        speakers: 講師
         maximum_attendees: 講座招收人數
         total_attendees: 目前報名人數
         minimum_attendees: 最低開班人數

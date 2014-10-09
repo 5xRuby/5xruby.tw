@@ -58,17 +58,7 @@
           <h4><a href="<%= apply_link %>" target="_blank"><%= t('.apply_now') %> <i class="icon-login-2 pull-right"></i></a></h4>
           <% end %>
           <h4><%= Speaker.model_name.human %></h4>
-          <% @course.speakers.each do |speaker| %>
-          <div class="media">
-            <div class="pull-right">
-              <%= image_tag speaker.avatar.thumb, class: 'img-circle', alt: speaker.name, width: '68' %>
-            </div>
-            <div class="media-body">
-              <h5 class="media-heading"><%= speaker.name %></h5>
-              <p><%= speaker_summary speaker %></p>
-            </div>
-          </div>
-          <% end %>
+          <%= render partial: 'speakers/side', collection: @course.speakers, as: :speaker %>
         </div>
 
         <% if @course.iframe_html.present? %>

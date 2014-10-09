@@ -1,6 +1,7 @@
 <%= simple_form_for(@admin_video) do |f| %>
 
   <div class="form-inputs">
+    <%= f.association :speakers, input_html: {class: 'select2'} %>
     <%= f.input :title %>
     <%= f.input :link %>
     <%= f.input :summary %>
