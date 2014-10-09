@@ -42,7 +42,7 @@ class Admin::VideosController < AdminController
   def update
     respond_to do |format|
       if @admin_video.update(admin_video_params)
-        format.html { redirect_to @admin_video, notice: t('crud.updated_successfully!', name: Admin::Video.model_name.human) }
+        format.html { redirect_to (params[:ref] || @admin_video), notice: t('crud.updated_successfully!', name: Admin::Video.model_name.human) }
         format.json { render :show, status: :ok, location: @admin_video }
       else
         format.html { render :edit }
