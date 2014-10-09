@@ -1,4 +1,11 @@
 en:
+  breadcrumb:
+    home: Home
+  videos:
+    index:
+      title: Videos
+      screencast: Screencast
+      filter: Filter
   schedules:
     show:
       start_learning: I'd like to sign in the lecture

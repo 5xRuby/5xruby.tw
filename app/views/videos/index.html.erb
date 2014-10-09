@@ -1,0 +1,45 @@
+<%= sub_header title: t('.title') %>
+
+<section id="main_content" >
+  <div class="container">
+    <%= breadcrumb t('.title') %>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="panel panel-info filterable add_bottom_45">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= t('.screencast') %></h3>
+            <div class="pull-right">
+              <button class="btn-filter"><span class="icon-th-list"></span> <%= t('.filter') %></button>
+            </div>
+          </div>
+          <table class="table table-responsive table-striped">
+            <thead>
+              <tr class="filters">
+                <th><input type="text" class="form-control" placeholder="<%= Video.human_attribute_name(:title) %>" disabled ></th>
+                <th><input type="text" class="form-control" placeholder="<%= Video.human_attribute_name(:summary) %>" disabled></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @videos.each do |video| %>
+              <tr>
+                <td><%= link_to video.title, video %></td>
+                <td><%= video.summary %></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div><!-- End filterable -->
+      </div><!-- End col-lg-12-->                        
+    </div><!-- End row -->
+    <hr>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <%= paginate @videos %>
+      </div>
+    </div>
+  </div><!-- End container -->
+</section><!-- End main_content -->
+
+<% content_for :append_body do %>
+  <script src="/js/table_filter.js"></script>
+<% end %>

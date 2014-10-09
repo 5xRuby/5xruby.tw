@@ -1,4 +1,11 @@
 zh-TW:
+  breadcrumb:
+    home: 首頁
+  videos:
+    index:
+      title: 五倍影城
+      screencast: 教學短片
+      filter: 過濾
   schedules:
     show:
       start_learning: 我想報名

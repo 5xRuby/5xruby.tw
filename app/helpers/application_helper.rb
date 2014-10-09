@@ -68,4 +68,15 @@ module ApplicationHelper
   def show_hours hours
     '%.2g' % hours
   end
+
+  def breadcrumb *links
+    content_tag :ol, class: :breadcrumb do
+      concat content_tag(:li, link_to(t('breadcrumb.home'), root_path))
+      last = links.pop
+      links.each do |link|
+        concat content_tag(:li, link)
+      end
+      concat content_tag(:li, last, class: 'active')
+    end
+  end
 end
