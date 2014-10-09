@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :video do
     title { Faker::Name.title }
-    link { Faker::Internet.url }
+    link 'http://www.youtube.com/embed/pgk-719mTxM'
     summary { Faker::Lorem.paragraph }
     description { "<p>#{Faker::Lorem.paragraph}</p>" }
     is_online { rand > 0.5 }

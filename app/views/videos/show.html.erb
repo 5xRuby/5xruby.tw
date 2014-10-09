@@ -1,2 +1,48 @@
-<h1>Videos#show</h1>
-<p>Find me in app/views/videos/show.html.erb</p>
+<section id="main_content">
+  <div class="container">
+    <%= breadcrumb link_to(t('videos.index.title'), Video), @video.title %>
+    <div class="row">
+      <div class="col-md-8">
+        <iframe src="<%= @video.link %>" style="border:0;" class="video_course"></iframe>
+        <h3><%= @video.title %></h3>
+        <%= raw @video.description %>
+        <hr>
+        <div class="clearfix text-center">
+          <%= link_to icon_tag('left-open'), @previous, class: 'pull-left button_medium_outline' if @previous %>
+          <%= link_to t('.share'), "http://www.facebook.com/sharer/sharer.php?u=#{u(video_url(@video))}", class: 'button_medium_outline', target: :_blank %>
+          <%= link_to icon_tag('right-open'), @next, class: 'pull-right button_medium_outline' if @next %>
+        </div>
+      </div>
+
+      <aside class="col-md-4">
+        <div class="box_style_1">
+          <h4><a href="#">Download files <i class="icon-download pull-right"></i></a></h4><br>
+          <h4>Speakers</h4>
+          <div class="media">
+            <div class="pull-right">
+            <img src="/img/avatar1.jpg" class="img-circle" alt="">
+            </div>
+            <div class="media-body">
+              <h5 class="media-heading"><a href="#">Marc Twain</a></h5>
+              <p>
+                Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. 
+              </p>
+            </div>
+          </div>
+
+          <div class="media">
+            <div class="pull-right">
+            <img src="/img/avatar1.jpg" class="img-circle" alt="">
+            </div>
+            <div class="media-body">
+              <h5 class="media-heading"><a href="#">Marc Twain</a></h5>
+              <p>
+                Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside> <!-- End col-md-4 -->
+    </div><!-- End row -->
+  </div><!-- End container -->
+</section>

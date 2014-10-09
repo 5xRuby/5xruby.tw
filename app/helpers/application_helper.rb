@@ -79,4 +79,8 @@ module ApplicationHelper
       concat content_tag(:li, last, class: 'active')
     end
   end
+
+  def icon_tag name, text = nil
+    content_tag :i, text, class: "icon-#{name}"
+  end
 end

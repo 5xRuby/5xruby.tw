@@ -6,6 +6,8 @@ en:
       title: Videos
       screencast: Screencast
       filter: Filter
+    show:
+      share: Share to Facebook
   schedules:
     show:
       start_learning: I'd like to sign in the lecture
