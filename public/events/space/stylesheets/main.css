@@ -697,6 +697,7 @@ h2.bigger {
   margin: 10em 1em;
   padding: 4em;
   border: 2px solid #BF0A10;
+  text-shadow: 0px 0px 20px white;
 }
 @media only all and (min-width: 481px) {
   /* line 24, ../sass/layout/_header.scss */
