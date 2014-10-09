@@ -1,0 +1,8 @@
+<h1><%= t('crud.edit!', resource: Admin::Video.model_name.human) %></h1>
+
+<%= render 'form' %>
+<hr>
+<div class="btn-group">
+  <%= link_to t('crud.show'), @admin_video, class: 'btn btn-info btn-lg' %>
+  <%= link_to t('action.back'), admin_videos_path, class: 'btn btn-default btn-lg' %>
+</div>

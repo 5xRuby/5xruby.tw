@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :videos
+  end
+
   scope '(:locale)', locale: /en/ do
     root 'pages#index'
     get :about, :contacts, :faq, :sitemap, controller: :pages
