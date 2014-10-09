@@ -23,9 +23,6 @@ zh-TW:
       categories: 講座分類
       satisfied: 對我們的講座還覺得滿意嗎?
       upcoming: 我們將陸續推出與 Ruby/Rails 或網站開發相關的講座，若您有其它講座上的建議，歡迎您來信與我們聯繫。
-    breadcrumb:
-      home: 首頁
-      courses: 講座
     show:
       summary: 簡介
       what_you_will_learn: 你將會學到
@@ -59,9 +56,6 @@ zh-TW:
     sidebar:
       tags: 標籤
       recent_post: 近期文章
-    breadcrumb:
-      home: 首頁
-      posts: 部落格
   pages:
     faq:
       title: 常見問題

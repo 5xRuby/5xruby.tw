@@ -23,9 +23,6 @@ en:
       categories: Category
       satisfied: Are you satisfied with our lectures?
       upcoming: More Ruby/Rails lectures or website development lectures will be released. Please contact us if you have any suggestions regarding our lectures.
-    breadcrumb:
-      home: Homepage
-      courses: Lecture
     show:
       summary: Introduction
       what_you_will_learn: What you will learn
@@ -58,9 +55,6 @@ en:
     sidebar:
       tags: tags
       recent_post: recent posts
-    breadcrumb:
-      home: home
-      posts: blog
   pages:
     faq:
       title: Q & A

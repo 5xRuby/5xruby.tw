@@ -2,7 +2,11 @@
 
 <section id="main_content">
   <div class="container">
-    <%= render 'breadcrumb' %>
+    <% if @query_tags.present? %>
+      <%= breadcrumb link_to(t('.title'), posts_path), @query_tags.map{|t| "##{t}"}.join(', ') %>
+    <% else %>
+      <%= breadcrumb t('.title') %>
+    <% end %>
     <div class="row">
       <aside class="col-md-4">
         <%= render 'sidebar' %>
