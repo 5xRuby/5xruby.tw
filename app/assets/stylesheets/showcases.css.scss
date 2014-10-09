@@ -1,0 +1,8 @@
+body[data-controller="showcases"][data-action="index"]{
+  .thumbnail > .caption{
+    height: 240px;
+    p{
+      line-height: 20px;
+    }
+  }
+}
