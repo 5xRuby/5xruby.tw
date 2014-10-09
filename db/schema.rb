@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141009144312) do
+ActiveRecord::Schema.define(version: 20141009181547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -122,6 +122,14 @@ ActiveRecord::Schema.define(version: 20141009144312) do
     t.string   "blog_url"
     t.integer  "sort_id",      default: 0,            null: false
   end
+
+  create_table "speakers_videos", id: false, force: true do |t|
+    t.integer "video_id",   null: false
+    t.integer "speaker_id", null: false
+  end
+
+  add_index "speakers_videos", ["speaker_id", "video_id"], name: "index_speakers_videos_on_speaker_id_and_video_id", using: :btree
+  add_index "speakers_videos", ["video_id", "speaker_id"], name: "index_speakers_videos_on_video_id_and_speaker_id", using: :btree
 
   create_table "stages", force: true do |t|
     t.integer  "course_id",                                   null: false
