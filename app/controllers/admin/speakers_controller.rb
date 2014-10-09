@@ -43,7 +43,7 @@ class Admin::SpeakersController < AdminController
   def update
     respond_to do |format|
       if @admin_speaker.update(admin_speaker_params)
-        format.html { redirect_to @admin_speaker, notice: t('crud.updated_successfully!', name: Admin::Speaker.model_name.human) }
+        format.html { redirect_to (params[:ref] || @admin_speaker), notice: t('crud.updated_successfully!', name: Admin::Speaker.model_name.human) }
         format.json { render :show, status: :ok, location: @admin_speaker }
       else
         format.html { render :edit }

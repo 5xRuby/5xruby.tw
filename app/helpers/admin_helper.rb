@@ -68,4 +68,18 @@ module AdminHelper
     text, klass = bool ? %i[是 success] : %i[否 danger]
     content_tag(:span, text, class: "label label-#{klass}")
   end
+
+  def td_is_online record
+    [
+      :is_online,
+      ->(record){
+        record.is_online ? link_to(
+          admin_label_tag('上線', :success),
+          polymorphic_path(record, ref: request.path, dom_class(record) => {is_online: false}), method: :put)
+        : link_to(
+          admin_label_tag('下線'),
+          polymorphic_path(record, ref: request.path, dom_class(record) => {is_online: true}), method: :put)
+      }
+    ]
+  end
 end

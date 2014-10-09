@@ -43,7 +43,7 @@ class Admin::ShowcasesController < AdminController
   def update
     respond_to do |format|
       if @admin_showcase.update(admin_showcase_params)
-        format.html { redirect_to @admin_showcase, notice: t('crud.updated_successfully!', name: Admin::Showcase.model_name.human) }
+        format.html { redirect_to (params[:ref] || @admin_showcase), notice: t('crud.updated_successfully!', name: Admin::Showcase.model_name.human) }
         format.json { render :show, status: :ok, location: @admin_showcase }
       else
         format.html { render :edit }
