@@ -5,7 +5,7 @@
   <thead>
     <tr>
       <th></th>
-      <%= th_for Admin::Showcase, :id, :is_online, :name, :description, :link, :image %>
+      <%= th_for Admin::Showcase, :id, :is_online, :name, :link, :image %>
       <th></th>
       <th></th>
       <th></th>
@@ -17,7 +17,7 @@
       <%= content_tag_for :tr, admin_showcase do %>
         <%= hidden_field_tag "sort[#{admin_showcase.id}][sort_id]", admin_showcase.sort_id %>
         <td><i class="glyphicon glyphicon-move"></i></td>
-        <%= td_for admin_showcase, :id, td_is_online(admin_showcase), :name, :description, [:link, ->(x){link_to(x.link, x.link, target: :_blank)}], :image %>
+        <%= td_for admin_showcase, :id, td_is_online(admin_showcase), :name, [:link, ->(x){link_to(x.link, x.link, target: :_blank)}], :image %>
         <%= td_action_for admin_showcase %>
       <% end %>
     <% end %>
