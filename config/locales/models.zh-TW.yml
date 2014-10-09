@@ -17,6 +17,8 @@ zh-TW:
     permalink: 縮址
     hours: 時數
     is_online: 上線
+    link: 連結
+    summary: 簡介
   activerecord:
     models:
       post: 文章
@@ -30,11 +32,11 @@ zh-TW:
       faq: 問答
       author: 作者
       showcase: 案例作品
+      video: 影片
     attributes:
       post:
         publish_at: 發佈時間
         title: 標題
-        summary: 簡介
         content: 內容
         author: 作者
         tag_list: 標籤
@@ -45,7 +47,6 @@ zh-TW:
         category: 分類
         title: 標題
         subtitle: 副標
-        summary: 簡介
         what_will_learn: 將會學到
         description: 詳細介紹
         note: 備註
@@ -81,7 +82,6 @@ zh-TW:
         message: 訊息
       speaker:
         name: 名字
-        summary: 簡介
         avatar: 照片
         remove_avatar: 刪除圖片
         role: 身份
@@ -104,7 +104,9 @@ zh-TW:
       showcase:
         name: 名稱
         description: 說明
-        link: 連結
+      video:
+        title: 名稱
+        description: 說明
   enumerize:
     apply:
       gender:
