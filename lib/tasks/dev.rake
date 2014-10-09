@@ -6,7 +6,7 @@ namespace :dev do
     if model_name = args[:model_name]
       FactoryGirl.create_list(model_name.underscore, count)
     else
-      %i[author post speaker category course faq showcase].each do |name|
+      %i[author post speaker category course faq showcase video].each do |name|
         FactoryGirl.create_list(name, 20)
       end
     end
