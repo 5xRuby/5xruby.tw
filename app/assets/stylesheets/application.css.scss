@@ -4,8 +4,7 @@
 *= require additional
 *= require nav
 *= require homepage
-*= require courses
-*= require showcases
+*= require_tree ./application
 *= require_self
 */
 
