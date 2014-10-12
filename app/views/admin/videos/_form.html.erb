@@ -3,7 +3,7 @@
   <div class="form-inputs">
     <%= f.association :speakers, input_html: {class: 'select2'} %>
     <%= f.input :title %>
-    <%= f.input :link %>
+    <%= f.input :iframe %>
     <%= f.input :summary, as: :text, hint: '最多 150 字，剩 <span id="summary_remain"></span> 個字，用在 meta tag 和 videos/index 頁面'.html_safe %>
     <%= f.input :description, input_html: {class: :redactor} %>
     <%= f.input :is_online %>

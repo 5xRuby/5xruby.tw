@@ -4,7 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  title       :string(255)
-#  link        :string(255)
+#  iframe      :string(255)
 #  summary     :string(255)
 #  description :text
 #  is_online   :boolean

@@ -4,7 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  title       :string(255)
-#  link        :string(255)
+#  iframe      :string(255)
 #  summary     :string(255)
 #  description :text
 #  is_online   :boolean
@@ -17,7 +17,7 @@
 FactoryGirl.define do
   factory :video do
     title { Faker::Name.title }
-    link 'http://www.youtube.com/embed/pgk-719mTxM'
+    iframe '<iframe width="100%" src="//www.youtube.com/embed/y9UYG4uP6Ko?rel=0" frameborder="0" allowfullscreen></iframe>'
     summary { Faker::Lorem.paragraph }
     description { "<p>#{Faker::Lorem.paragraph}</p>" }
     is_online { rand > 0.5 }
