@@ -14,7 +14,6 @@ class VideosController < ApplicationController
       google: {
         name: @video.title,
         description: @video.summary,
-        embedUrl: @video.link,
         item_type: :VideoObject
       },
       og: {

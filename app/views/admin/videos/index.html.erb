@@ -15,7 +15,7 @@
   <tbody>
     <% @admin_videos.each do |admin_video| %>
       <tr>
-        <%= td_for admin_video, :id, td_is_online(admin_video), :title}], :summary %>
+        <%= td_for admin_video, :id, td_is_online(admin_video), :title, :summary %>
         <%= td_action_for admin_video %>
       </tr>
     <% end %>

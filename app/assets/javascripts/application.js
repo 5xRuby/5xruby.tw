@@ -15,4 +15,6 @@
 //= require highlightjs
 //= require highlightjs_helper
 //= require konami
+//= require gistyle
 //= require pages
+//= require videos
