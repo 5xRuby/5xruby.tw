@@ -5,7 +5,7 @@
       <% @showcases.each do |showcase| %>
       <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
-            <%= link_to image_tag(showcase.image.thumb), showcase.link, target: :_blank  %>
+            <%= link_to_if showcase.link.present?, image_tag(showcase.image.thumb), showcase.link, target: :_blank  %>
             <div class="caption">
               <h3><%= showcase.name %></h3>
               <p><%= showcase.description %></p>
