@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'videos/index'
-
-  get 'videos/show'
-
   scope '(:locale)', locale: /en/ do
     root 'pages#index'
     get :about, :contacts, :faq, :sitemap, controller: :pages
