@@ -100,6 +100,8 @@ en:
     recent_course:
       detail: details
     about:
+      carol: Carol Hsu
+      carol_title: CTO
       description: |
         ##  5 times professionalism. 5 times wishes. 5 times Ruby.
         ### About Us
@@ -203,3 +205,5 @@ en:
       media: Media exposure
     application:
       back_to_top: back to top
+    cooperation_list:
+      cooperations: Cooperations

@@ -101,6 +101,8 @@ zh-TW:
     recent_course:
       detail: 詳細
     about:
+      carol: 徐曦
+      carol_title: 出礦坑老闆娘
       description: |
         ## 五倍專業、五倍祝福，五倍的紅寶石
         ### 由來
@@ -202,3 +204,5 @@ zh-TW:
       media: 媒體報導
     application:
       back_to_top: 回到最上面
+    cooperation_list:
+      cooperations: 合作夥伴
