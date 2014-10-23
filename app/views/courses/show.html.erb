@@ -2,19 +2,19 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h1><%= @course.title %></h1>
-        <p class="lead"><%= @course.subtitle %></p>
+        <h1><%= tr(@course, :title) %></h1>
+        <p class="lead"><%= tr(@course, :subtitle) %></p>
       </div>
     </div><!-- End row -->
 
     <div class="row" id="sub-header-features-2">
       <div class="col-md-6">
         <h2><%= t('.summary') %></h2>
-        <p><%= @course.summary %></p>
+        <p><%= tr(@course, :summary) %></p>
       </div>
       <div class="col-md-6">
         <h2><%= t('.what_you_will_learn') %></h2>
-        <%= raw @course.what_will_learn %>
+        <%= raw tr(@course, :what_will_learn) %>
       </div>
 
     </div><!-- End row -->
@@ -38,9 +38,9 @@
 
         <hr>
         <% @course.stages.each_with_index do |stage, index| %>
-        <h3 class="chapter_course"><%= t('.chapter_title', nth: index) %> <%= stage.title %></h3>
+        <h3 class="chapter_course"><%= t('.chapter_title', nth: index) %> <%= tr(stage, :title) %></h3>
         <div class="strip_single_course">
-          <h4 class="completed"><%= raw stage.description %></h4>
+          <h4 class="completed"><%= raw tr(stage, :description) %></h4>
           <ul>
             <li><i class="icon-calendar"></i><%= stage.date %></li>
             <li><i class="icon-clock"></i><%= time_range stage %></li>
@@ -65,10 +65,10 @@
           <div class="box_style_1"><%= raw @course.iframe_html %></div>
         <% end %>
 
-        <% if note = @course.note.presence %>
+        <% if note = tr(@course, :note).presence %>
           <div class="box_style_1">
             <h4><%= t('.note') %></h4>
-            <%= raw @course.note %>
+            <%= raw tr(@course, :note) %>
           </div>
         <% end %>
 

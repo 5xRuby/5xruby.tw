@@ -2,7 +2,7 @@
   <div class=" box_style_3">
     <p><%= image_tag speaker.avatar.thumb, alt: speaker.name, class: 'img-circle styled', width: 150 %></p>
     <h3 class="p-title"><small><%= speaker.role_text %></small></h3>
-    <h4 class="p-title"><%= speaker.name %> <small><%= speaker.title %></small></h4>
+    <h4 class="p-title"><%= tr speaker, :name %> <small><%= speaker.title %></small></h4>
     <p><%= speaker_summary speaker %></p>
     <ul class="social_team">
       <% if speaker.facebook_url.present? %>

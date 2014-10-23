@@ -22,8 +22,8 @@
             <tbody>
               <% @videos.each do |video| %>
               <tr>
-                <td><%= link_to video.title, video %></td>
-                <td><%= video.summary %></td>
+                <td><%= link_to tr(video, :title), video %></td>
+                <td><%= tr(video, :summary) %></td>
               </tr>
               <% end %>
             </tbody>

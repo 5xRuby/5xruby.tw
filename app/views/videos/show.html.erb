@@ -1,11 +1,11 @@
 <section id="main_content">
   <div class="container">
-    <%= breadcrumb link_to(t('videos.index.title'), Video), @video.title %>
+    <%= breadcrumb link_to(t('videos.index.title'), Video), tr(@video, :title) %>
     <div class="row">
       <div class="col-md-8">
         <%= raw @video.iframe %>
-        <h3><%= @video.title %></h3>
-        <%= raw @video.description %>
+        <h3><%= tr(@video, :title) %></h3>
+        <%= raw tr(@video, :description) %>
         <hr>
         <div class="clearfix text-center">
           <%= link_to icon_tag('left-open'), @previous, class: 'pull-left button_medium_outline' if @previous %>

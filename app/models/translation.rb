@@ -1,9 +1,12 @@
 class Translation < ActiveRecord::Base
   AVAILABLE_MODELS = {
-    Faq => [:question, :answer],
-    Speaker => [:name, :summary],
-    Post => [:title, :summary, content: :redactor],
-    Course => [:title, :summary, :subtitle, what_will_learn: :redactor, description: :redactor, note: :redactor]
+    Faq      => [:question, :answer],
+    Speaker  => [:name, :summary],
+    Video    => [:title, :summary, description: :redactor],
+    Showcase => [:name, :description],
+    Post     => [:title, :summary, content: :redactor],
+    Course   => [:title, :summary, :subtitle, what_will_learn: :redactor, description: :redactor, note: :redactor],
+    Stage    => [:title, description: :redactor]
   }
   # scope macros
 

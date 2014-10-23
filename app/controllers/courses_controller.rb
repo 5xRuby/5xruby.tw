@@ -9,19 +9,19 @@ class CoursesController < ApplicationController
     @course = Course.online.includes(:stages).find_by!(permalink: params[:id])
     @seo = {
       meta: {
-        description: @course.summary
+        description: tr(@course, :summary)
       },
       google: {
-        name: @course.title,
-        description: @course.summary,
+        name: tr(@course, :title),
+        description: tr(@course, :summary),
         image: @course.image_url,
         item_type: :Article
       },
       og: {
-        title: @course.title,
+        title: tr(@course, :title),
         url: course_url(@course),
         type: :website,
-        description: @course.summary,
+        description: tr(@course, :summary),
         image: @course.image_url
       }
     }

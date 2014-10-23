@@ -1,5 +1,5 @@
 <%= content_tag_for :div, post, class: 'post' do %>
-  <%= link_to image_tag(post.image.thumb, class: 'img-responsive'), (action_name == 'index' ? post : post.image.url), title: post.title %>
+  <%= link_to image_tag(post.image.thumb, class: 'img-responsive'), (action_name == 'index' ? post : post.image.url), title: tr(post, :title) %>
   <div class="post_info clearfix">
     <div class="post-left">
       <ul>
@@ -15,13 +15,13 @@
     </div>
     <% if action_name == 'index' %><div class="post-right"><i class="icon-comment"></i><%= link_to '', post_url(post, anchor: :disqus_thread) %></div><% end %>
   </div>
-  <h2><%= link_to post.title, post, title: post.title %></h2>
+  <h2><%= link_to tr(post, :title), post, title: tr(post, :title) %></h2>
   <div class="highlight">
     <% if action_name == 'index' %>
-      <p><%= post.summary %></p>
+      <p><%= tr(post, :summary) %></p>
     <% else %>
-      <%= raw post.content %>
+      <%= raw tr(post, :content) %>
     <% end %>
   </div>
-  <%= link_to t('.read_more'), post, class: 'button_medium', title: post.title if action_name == 'index' %>
+  <%= link_to t('.read_more'), post, class: 'button_medium', title: tr(post, :title) if action_name == 'index' %>
 <% end %>

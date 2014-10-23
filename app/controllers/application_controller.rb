@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :set_seo, :set_locale
-  helper_method :current_path_with_locale
+  helper_method :current_path_with_locale, :translate_record, :tr
 
   def recaptcha?
     return @recaptcha if @recaptcha
@@ -48,6 +48,11 @@ class ApplicationController < ActionController::Base
   def current_path_with_locale locale
     # TODO compute path by request.fullpath, locale, I18n.locale and I18n.default_locale, it's bit complex
   end
+
+  def translate_record record, attribute
+    Translation.find_by(translatable: record, column: attribute, locale: I18n.locale).try(:text).presence || record.send(attribute)
+  end
+  alias :tr :translate_record
 
   # override
   def default_url_options options = {}

@@ -19,20 +19,20 @@ class PostsController < ApplicationController
     @post = Post.online.find_by!(permalink: params[:id])
     @seo = {
       meta: {
-        description: @post.summary,
+        description: tr(@post, :summary),
         author: @post.author.try(:name)
       },
       google: {
-        name: @post.title,
-        description: @post.summary,
+        name: tr(@post, :title),
+        description: tr(@post, :summary),
         image: @post.image_url,
         item_type: :Article
       },
       og: {
-        title: @post.title,
+        title: tr(@post, :title),
         url: post_url(@post),
         type: :website,
-        description: @post.summary,
+        description: tr(@post, :summary),
         image: @post.image_url
       }
     }

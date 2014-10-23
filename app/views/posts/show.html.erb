@@ -1,6 +1,6 @@
 <section id="main_content">
   <div class="container">
-    <%= breadcrumb link_to(t('.title'), posts_path), @post.title %>
+    <%= breadcrumb link_to(t('.title'), posts_path), tr(@post, :title) %>
     <div class="row">
       <aside class="col-md-4">
         <%= render 'sidebar' %>
