@@ -3,5 +3,5 @@
   <% [Admin::Post, Admin::Author, Admin::Category, Admin::Course, Admin::Speaker, Admin::Faq, Admin::Showcase, Admin::Video].each do |model| %>
     <%= nav_li_for model %>
   <% end %>
-  <li><%= link_to Translation.model_name.human, [:admin, Translation, model: :Post] %></li>
+  <%= nav_li Translation.model_name.human, [:admin, Translation, model: :Post], match: '/admin/translations' %>
 </ul>
