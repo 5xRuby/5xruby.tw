@@ -29,9 +29,12 @@ module PentaRuby
     config.i18n.default_locale = :'zh-TW'
 
     config.generators do |g|
-      g.assets = false
-      g.helper = false
-      g.jbuilder = false
+      g.assets           = false
+      g.helper           = false
+      g.jbuilder         = false
+      g.view_specs       = false
+      g.helper_specs     = false
+      g.controller_specs = false
     end
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
     config.autoload_paths += Dir[Rails.root.join('lib')]
