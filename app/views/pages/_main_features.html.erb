@@ -6,19 +6,21 @@
         <h2><%= t('.5xruby') %></h2>
       </div>
     </div>
-    <div class="row">
-      <% t('.items').each do |item| %>
-        <div class="col-md-6">
-          <%= link_to item[:url] do %>
-          <div class="feature">
-            <i class="<%= item[:icon] %>"></i>
-            <h3><%= item[:title] %></h3>
-            <p><%= item[:description] %></p>
-          </div>
-          <% end %>
+    <% t('.items').each_slice(2) do |pair| %>
+      <div class="row">
+      <% pair.each do |item| %>
+      <div class="col-md-6">
+        <%= link_to item[:url] do %>
+        <div class="feature">
+          <i class="<%= item[:icon] %>"></i>
+          <h3><%= item[:title] %></h3>
+          <p><%= item[:description] %></p>
         </div>
+        <% end %>
+      </div>
       <% end %>
-    </div>
+      </div>
+    <% end %>
     <!-- End row -->
   </div>
   <!-- End container-->
