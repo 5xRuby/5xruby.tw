@@ -1,0 +1,30 @@
+<ul class="nav nav-pills">
+  <% Translation::MODELS.each do |model| %>
+    <%= content_tag :li, link_to(model.model_name.human, url_for(model: model)), class: (:active if model.model_name == params[:model]) %>
+  <% end %>
+</ul>
+<%= paginate @records %>
+<table class="table table-striped">
+  <thead><tr><th class="col-sm-1">屬性</th><th class="col-sm-5">原文</th><th>英文</th></tr></thead>
+  <tbody>
+  <% @records.each do |record| %>
+    <% @columns.each do |column| %>
+    <tr>
+      <td><%= record.class.human_attribute_name(column.name) %></td>
+      <td><%= record.send(column.name) %></td>
+      <td>
+        <%= form_for [:admin, Translation.find_or_initialize_by(translatable: record, column: column.name)], remote: true do |f| %>
+          <%= f.hidden_field :translatable_id %>
+          <%= f.hidden_field :translatable_type %>
+          <%= f.hidden_field :column %>
+          <%= f.hidden_field :locale, value: :en %>
+          <%= admin_translations_edit_field f, column %>
+          <%= f.submit '更新', class: 'btn btn-success btn-xs' %>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+<%= paginate @records %>

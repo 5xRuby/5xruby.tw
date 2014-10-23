@@ -34,6 +34,7 @@ zh-TW:
       author: 作者
       showcase: 案例作品
       video: 影片
+      translation: 翻譯
     attributes:
       post:
         publish_at: 發佈時間
