@@ -61,10 +61,7 @@ en:
     next_schedule:
       hours: hour
     main_features:
-      5xruby: 5xruby
-      lead: |
-        Lorem ipsum dolor sit amet, ius minim gubergren ad.
-        At mei sumo sonet audiam, ad mutat elitr platonem vix. Ne nisl idque fierent vix. Ferri clitaponderum ne.
+      5xruby: 5xRuby
       items:
         - icon: icon-trophy
           title: Professional lecturers
@@ -199,7 +196,7 @@ en:
       faq: Q & A
       blog: blog
       contacts: Contact us
-      about_5xruby: About 5xruby
+      about_5xruby: About 5xRuby
       about_us: About us
       source_code: sourse code
       media: Media exposure
