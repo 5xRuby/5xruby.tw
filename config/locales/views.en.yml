@@ -68,23 +68,23 @@ en:
       items:
         - icon: icon-trophy
           title: Professional lecturers
-          url: /speakers
+          url: /en/speakers
           description: The members and lecturers of 5xRuby are the first-line developppers in the market and senior members from Taiwan Ruby community, where actual developping experience and pracmatics come in hand with theoratical bases.
         - icon: icon-ok
           title: Technical consultants
-          url: /contacts
+          url: /en/contacts
           description: From system design, planning to development, even to system set-up, we provide professional advise and consultation.
         - icon: icon-mic
           title: Authetic practises
-          url: /talks
+          url: /en/talks
           description: We have designed a serious of lectures including authentic practices of Ruby, Rails, Git, testing and system planning of diffrent levels from enrty, intermidate to advance lectures. This will allow you to experience the fast speed and fun of developping via Ruby.
         - icon: icon-video
           title: Enterprse Training 
-          url: /contacts
+          url: /en/contacts
           description: We have also designed a series of training programs for enterprise staff. This will help you build up a professional Ruby/ Rails development team with your current staffing. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
         - icon: icon-website
           title: Outsourcing
-          url: /contacts
+          url: /en/contacts
           description: We have professional Ruby, Rails and iOS engineers to build your project.
         - icon: icon-home
           title: Space Rental
