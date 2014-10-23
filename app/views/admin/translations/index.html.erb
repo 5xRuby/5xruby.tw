@@ -13,7 +13,7 @@
       <td><%= record.class.human_attribute_name(column.name) %></td>
       <td><%= record.send(column.name) %></td>
       <td>
-        <%= form_for [:admin, Translation.find_or_initialize_by(translatable: record, column: column.name)], remote: true do |f| %>
+        <%= form_for [:admin, admin_translations_translation_object(@translations, record, column)], remote: true do |f| %>
           <%= f.hidden_field :translatable_id %>
           <%= f.hidden_field :translatable_type %>
           <%= f.hidden_field :column %>

@@ -4,6 +4,7 @@ class Admin::TranslationsController < AdminController
     string_types = %i[string text]
     @models = Translation::AVAILABLE_MODELS.keys
     @records = model.page(params[:page])
+    @translations = Translation.includes(:translatable).where(translatable: @records)
     @columns = model.columns.select{ |column| string_types.include? column.type }
   end
 

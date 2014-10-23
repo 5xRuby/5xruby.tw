@@ -23,4 +23,8 @@ module Admin::TranslationsHelper
     else column.type == :string ? f.text_field(:text) : f.text_area(:text, class: :'form-control')
     end
   end
+
+  def admin_translations_translation_object scope, record, column
+    scope.find{ |x| x.translatable == record && x.column == column.name} || Translation.new(translatable: record, column: column.name)
+  end
 end
