@@ -1,4 +1,4 @@
-<script> var RecaptchaOptions = {theme: 'clean'}; </script>
+<script> var RecaptchaOptions = {theme: 'clean', lang: '<%= I18n.locale %>'}; </script>
 <script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=<%= Settings.recaptcha.public_key %>"></script>
 <noscript>
    <iframe src="http://www.google.com/recaptcha/api/noscript?k=<%= Settings.recaptcha.public_key %>"
