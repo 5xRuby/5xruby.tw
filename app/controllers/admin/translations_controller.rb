@@ -1,9 +1,10 @@
 class Admin::TranslationsController < AdminController
   def index
     model    = params.require(:model).constantize
-    matching = %i[string text]
+    string_types = %i[string text]
+    @models = Translation::AVAILABLE_MODELS.keys
     @records = model.page(params[:page])
-    @columns = model.columns.select{ |column| matching.include? column.type }
+    @columns = model.columns.select{ |column| string_types.include? column.type }
   end
 
   def create
