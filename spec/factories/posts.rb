@@ -24,7 +24,7 @@ FactoryGirl.define do
     title { Faker::Name.title }
     permalink { SecureRandom.hex(4) }
     is_online { rand > 0.5 }
-    publish_at { rand(1.month).ago }
+    publish_at { rand(1.month).seconds.ago }
     summary { Faker::Lorem.paragraph[0,150] }
     content { "<p>#{Faker::Lorem.paragraph}</p>" }
     tag_list { %w[aaa bbb ccc ddd eee fff ggg hhh iii jjj].sample(3) }
