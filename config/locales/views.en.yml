@@ -78,6 +78,14 @@ en:
         - icon: icon-video
           title: Enterprse Training 
           description: We have also designed a series of training programs for enterprise staff. This will help you build up a professional Ruby/ Rails development team with your current staffing. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
+        - icon: icon-website
+          title: Outsourcing
+          url: /contacts
+          description: We have professional Ruby, Rails and iOS engineers to build your project.
+        - icon: icon-home
+          title: Space Rental
+          url: /events/space/
+          description: 近台北車站、最強 300M 網速，我們提供了高品質的工作空間，無論是創業或 SOHO 或是舉辦活動都是你的最佳選擇。
     main_content_gray:
       view_all_courses: view all lectures
       latest_courses: lastest lectures
