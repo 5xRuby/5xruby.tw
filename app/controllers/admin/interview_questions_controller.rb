@@ -1,10 +1,11 @@
 class Admin::InterviewQuestionsController < AdminController
+  include Sortable
   before_action :set_admin_interview_question, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/interview_questions
   # GET /admin/interview_questions.json
   def index
-    @admin_interview_questions = Admin::InterviewQuestion.all.order('id DESC').page(params[:page])
+    @admin_interview_questions = Admin::InterviewQuestion.order(:sort_id)
   end
 
   # GET /admin/interview_questions/1
@@ -42,7 +43,7 @@ class Admin::InterviewQuestionsController < AdminController
   def update
     respond_to do |format|
       if @admin_interview_question.update(admin_interview_question_params)
-        format.html { redirect_to @admin_interview_question, notice: t('crud.updated_successfully!', name: Admin::InterviewQuestion.model_name.human) }
+        format.html { redirect_to (params[:ref] || @admin_interview_question), notice: t('crud.updated_successfully!', name: Admin::InterviewQuestion.model_name.human) }
         format.json { render :show, status: :ok, location: @admin_interview_question }
       else
         format.html { render :edit }

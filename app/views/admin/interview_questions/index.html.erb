@@ -1,25 +1,26 @@
-<h1><%= Admin::InterviewQuestion.model_name.human %> <%= link_to t('crud.new'), new_admin_interview_question_path, class: 'btn btn-lg btn-success' %></h1>
-
-<%= paginate @admin_interview_questions %>
+<%= form_tag sort_admin_interview_questions_path, method: :put do |f| %>
+<h1><%= Admin::InterviewQuestion.model_name.human %> <%= link_to t('crud.new'), new_admin_interview_question_path, class: 'btn btn-lg btn-success' %> <%= submit_tag '更新排序', class: 'btn btn-lg btn-primary' %></h1>
 
 <table class="table table-striped table-condensed">
   <thead>
     <tr>
-      <%= th_for Admin::InterviewQuestion, :id, :question, :answer, :sort_id, :is_online %>
+      <th></th>
+      <%= th_for Admin::InterviewQuestion, :id, :is_online, :question, :answer %>
       <th></th>
       <th></th>
       <th></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="sortable" data-items=".admin_interview_question">
     <% @admin_interview_questions.each do |admin_interview_question| %>
-      <tr>
-        <%= td_for admin_interview_question, :id, :question, :answer, :sort_id, :is_online %>
+      <%= content_tag_for :tr, admin_interview_question do %>
+        <%= hidden_field_tag "sort[#{admin_interview_question.id}][sort_id]", admin_interview_question.sort_id %>
+        <td><i class="glyphicon glyphicon-move"></i></td>
+        <%= td_for admin_interview_question, :id, td_is_online(admin_interview_question), :question, :answer %>
         <%= td_action_for admin_interview_question %>
-      </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
-
-<%= paginate @admin_interview_questions %>
+<% end %>
