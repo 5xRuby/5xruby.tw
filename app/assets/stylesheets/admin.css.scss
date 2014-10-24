@@ -4,6 +4,7 @@
 //= require highlightjs/monokai
 //= require select2_simple_form_compatible
 //= require bootstrap-datetimepicker
+//= require_tree ./admin
 @import "bootstrap-sprockets";
 @import "bootstrap";
 body{ padding-top: 70px; }

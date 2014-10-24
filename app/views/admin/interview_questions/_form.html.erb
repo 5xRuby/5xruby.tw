@@ -1,0 +1,19 @@
+<p>支援 Markdown</p>
+<%= simple_form_for(@admin_interview_question) do |f| %>
+  <div class="form-inputs">
+    <div class="form-group">
+      <label class="col-sm-1 control-label"><%= InterviewQuestion.human_attribute_name :question %></label>
+      <div class="col-sm-11"><div class="aceditor" data-bind=".question"></div></div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-1 control-label"><%= InterviewQuestion.human_attribute_name :answer %></label>
+      <div class="col-sm-11"><div class="aceditor" data-bind=".answer"></div></div>
+    </div>
+    <%= f.input :question, as: :hidden, input_html: {class: 'question'} %>
+    <%= f.input :answer, as: :hidden, input_html: {class: 'answer'} %>
+    <%= f.input :is_online %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
+  </div>
+<% end %>

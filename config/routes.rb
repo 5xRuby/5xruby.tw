@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'translations/index'
-
   scope '(:locale)', locale: /en/ do
     root 'pages#index'
     get :about, :contacts, :faq, :sitemap, controller: :pages
@@ -14,7 +12,7 @@ Rails.application.routes.draw do
   # back
   namespace :admin, path: Settings.admin_path_prefix do
     root to: :dashboard
-    resources :posts, :courses, :authors, :speakers, :faqs, :categories, :showcases, :videos do
+    resources :posts, :courses, :authors, :speakers, :faqs, :categories, :showcases, :videos, :interview_questions do
       put :sort, on: :collection
     end
     resources :translations, only: %i[index create update]

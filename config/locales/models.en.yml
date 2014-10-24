@@ -26,6 +26,7 @@ en:
       event: event
       faq: FAQ
       author: author
+      interview_question: Interview Question
     attributes:
       post:
         publish_at: published at

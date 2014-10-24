@@ -35,6 +35,7 @@ zh-TW:
       showcase: 案例作品
       video: 影片
       translation: 翻譯
+      interview_question: 試題
     attributes:
       post:
         publish_at: 發佈時間

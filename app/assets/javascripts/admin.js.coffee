@@ -12,4 +12,5 @@
 #= require highlightjs
 #= require highlightjs_helper
 #= require gistyle
+#= require ace/ace
 #= require_tree ./admin

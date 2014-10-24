@@ -1,0 +1,5 @@
+<h1><%= t('crud.new!', resource: Admin::InterviewQuestion.model_name.human) %></h1>
+
+<%= render 'form' %>
+<hr>
+<%= link_to t('action.back'), admin_interview_questions_path, class: 'btn btn-default btn-lg' %>
