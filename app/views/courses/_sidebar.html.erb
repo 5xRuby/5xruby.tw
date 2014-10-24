@@ -2,16 +2,12 @@
   <h4><%= t('.categories') %></h4>
   <ul class="submenu-col">
     <li><%= link_to t('.all_courses'), Course, id: (:active unless @category) %></li>
-    <% if @categories.present? %>
-      <% @categories.each do |category| %>
-        <% if courses = category.courses.available.presence %>
-        <li>
-          <%= link_to courses_path(category: category.permalink), id: (:active if @category == category) do %>
-            <%= "#{category.name} (#{courses.length})" %> <%#= image_tag '/img/new.png', alt: 'New' %>
-          <% end %>
-        </li>
+    <% @categories.each do |category| %>
+      <li>
+        <%= link_to courses_path(category: category.permalink), id: (:active if @category == category) do %>
+          <%= "#{category.name} (#{category.available_courses.length })" %> <%#= image_tag '/img/new.png', alt: 'New' %>
         <% end %>
-      <% end %>
+      </li>
     <% end %>
   </ul>
 

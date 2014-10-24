@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
   def index
     @courses = Course.includes(:translations, :category).available.coming.page(params[:page]).per(6)
     @courses = @courses.where(category: @category) if @category = Category.find_by(permalink: params[:category])
-    @categories = Category.includes(:courses).order(:sort_id).where(courses: {is_online: true})
+    @categories = Category.includes(courses: :stages).available.order(:sort_id)
   end
 
   def show
