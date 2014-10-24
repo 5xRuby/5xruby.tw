@@ -20,6 +20,8 @@ zh-TW:
     link: 連結
     summary: 簡介
     speakers: 講師
+    question: 問題
+    answer: 答案
   activerecord:
     models:
       post: 文章
@@ -98,9 +100,6 @@ zh-TW:
         title: 標題
         description: 內容
         speaker: 講師
-      faq:
-        question: 問題
-        answer: 答案
       author:
         name: 名字
       showcase:

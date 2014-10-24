@@ -14,6 +14,13 @@ en:
     image: image
     remove_image: delete image
     permalink: URL shortening
+    hours: Hours
+    is_online: online
+    link: Link
+    summary: Summary
+    speakers: Speakers
+    question: Question
+    answer: Answer
   activerecord:
     models:
       post: posts
@@ -35,7 +42,6 @@ en:
         content: content
         author: author
         tag_list: tag
-        is_online: online
       category:
         name: name
         is_highlighted: Highlights of this month
@@ -78,10 +84,6 @@ en:
         title: title
         description: description
         speaker: lecturer
-      faq:
-        question: question
-        answer: answer
-        is_online: online
       author:
         name: name
   enumerize:
