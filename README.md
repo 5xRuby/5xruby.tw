@@ -60,6 +60,23 @@ Do not easily install gems unless you are familiar with them, generally, functio
 
 If you don't like the rules above, you are welcome to challenge [@tonytonyjan](https://github.com/tonytonyjan).
 
+Internationalization for Database Content
+----------------------------------------
+
+You can define which models and columns to be translated in `Translation::AVAILABLE_MODELS`, for example:
+
+```ruby
+# app/models/translations
+class Translation < ActiveRecord::Base
+  AVAILABLE_MODELS = {
+    Speaker  => [:name, :summary],
+    Video    => [:title, :summary, description: :redactor],
+  }
+end
+```
+
+The last element of array can be a Hahs object, keys are column names and values are form field types which correspond to columns, available valies are `string` (as text field), `text` (as text area) and `redactor` (as WYSIWYG editor).
+
 Contact
 =======
 
