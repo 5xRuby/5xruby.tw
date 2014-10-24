@@ -33,6 +33,9 @@ en:
       event: event
       faq: FAQ
       author: author
+      showcase: Showcase
+      video: Video
+      translation: Translation
       interview_question: Interview Question
     attributes:
       post:
