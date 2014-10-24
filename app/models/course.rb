@@ -43,6 +43,7 @@ class Course < ActiveRecord::Base
   accepts_nested_attributes_for :stages, allow_destroy: true, reject_if: proc { |attributes| attributes[:title].blank? }
   has_and_belongs_to_many :speakers
   belongs_to :category, counter_cache: true
+  has_many :translations, as: :translatable
 
   # validation macros
   validates :title, presence: true

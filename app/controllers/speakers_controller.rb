@@ -1,5 +1,5 @@
 class SpeakersController < ApplicationController
   def index
-    @speakers = Speaker.online.order(:sort_id)
+    @speakers = Speaker.online.includes(:translations).order(:sort_id)
   end
 end

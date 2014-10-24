@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   def index
     respond_to do |format|
       format.html do
-        @posts = Post.online.publish.order('publish_at DESC').page(params[:page]).per(3)
+        @posts = Post.online.publish.order('publish_at DESC').includes(:translations, :author, :tags).page(params[:page]).per(3)
         @query_tags = params[:tags].is_a?(String) ? params[:tags].split(',') : params[:tags]
         @posts = @posts.tagged_with(@query_tags) if @query_tags.present?
       end
@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.online.find_by!(permalink: params[:id])
+    @post = Post.includes(:translations).online.find_by!(permalink: params[:id])
     @seo = {
       meta: {
         description: tr(@post, :summary),

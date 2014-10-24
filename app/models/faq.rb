@@ -21,6 +21,7 @@ class Faq < ActiveRecord::Base
   # Attributes related macros
 
   # association macros
+  has_many :translations, as: :translatable
 
   # validation macros
   validates :question, uniqueness: true

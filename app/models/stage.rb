@@ -26,6 +26,7 @@ class Stage < ActiveRecord::Base
 
   # association macros
   belongs_to :course
+  has_many :translations, as: :translatable
 
   # validation macros
   validates :title, :date, :start_at, :end_at, :hours, presence: true

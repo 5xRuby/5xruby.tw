@@ -37,7 +37,7 @@
         </div><!-- End progress bar -->
 
         <hr>
-        <% @course.stages.each_with_index do |stage, index| %>
+        <% @course.stages.includes(:translations).each_with_index do |stage, index| %>
         <h3 class="chapter_course"><%= t('.chapter_title', nth: index) %> <%= tr(stage, :title) %></h3>
         <div class="strip_single_course">
           <h4 class="completed"><%= raw tr(stage, :description) %></h4>

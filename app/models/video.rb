@@ -23,6 +23,7 @@ class Video < ActiveRecord::Base
 
   # association macros
   has_and_belongs_to_many :speakers
+  has_many :translations, as: :translatable
 
   # validation macros
 

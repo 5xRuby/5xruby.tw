@@ -32,6 +32,7 @@ class Post < ActiveRecord::Base
 
   # association macros
   belongs_to :author
+  has_many :translations, as: :translatable
 
   # validation macros
   validates :summary, length: {maximum: 150}

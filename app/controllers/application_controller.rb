@@ -50,7 +50,7 @@ class ApplicationController < ActionController::Base
   end
 
   def translate_record record, attribute
-    Translation.find_by(translatable: record, column: attribute, locale: I18n.locale).try(:text).presence || record.send(attribute)
+    record.translations.find{ |t| t.column == attribute.to_s && t.locale == I18n.locale.to_s }.try(:text).presence || record.send(attribute)
   end
   alias :tr :translate_record
 

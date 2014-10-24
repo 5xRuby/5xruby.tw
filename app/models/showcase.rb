@@ -24,6 +24,7 @@ class Showcase < ActiveRecord::Base
   mount_uploader :image, ShowcaseImageUploader
 
   # association macros
+  has_many :translations, as: :translatable
 
   # validation macros
 

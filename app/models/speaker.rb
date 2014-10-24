@@ -34,6 +34,7 @@ class Speaker < ActiveRecord::Base
   # association macros
   has_and_belongs_to_many :courses
   has_and_belongs_to_many :videos
+  has_many :translations, as: :translatable
 
   # validation macros
   validates :name, :role, presence: true
