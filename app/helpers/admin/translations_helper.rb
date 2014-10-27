@@ -37,7 +37,7 @@ module Admin::TranslationsHelper
     end
   end
 
-  def admin_translations_translation_object scope, record, column
-    scope.find{ |x| x.translatable == record && x.column == column.name} || Translation.new(translatable: record, column: column.name)
+  def admin_translations_translation_object scope, record, column, locale
+    scope.find{ |x| x.translatable == record && x.column == column.name && x.locale == locale } || Translation.new(translatable: record, column: column.name)
   end
 end

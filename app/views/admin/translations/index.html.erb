@@ -17,7 +17,7 @@
     <tr>
       <td><%= admin_translations_disabled_field record, column %></td>
       <td>
-        <%= form_for [:admin, admin_translations_translation_object(@translations, record, column)], remote: true do |f| %>
+        <%= form_for [:admin, admin_translations_translation_object(@translations, record, column, params[:lc])], remote: true do |f| %>
           <%= f.hidden_field :translatable_id %>
           <%= f.hidden_field :translatable_type %>
           <%= f.hidden_field :column %>
