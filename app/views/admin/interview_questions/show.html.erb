@@ -4,9 +4,21 @@
     <th>值</th>
   </thead>
   <tbody>
-    <%= tr_for @admin_interview_question, :id, :question, :answer, :sort_id, :is_online %>
+    <%= tr_for @admin_interview_question, :id, :sort_id, :is_online %>
   </tbody>
 </table>
+
+<div class="row">
+  <div class="col-sm-6 highlight">
+    <div class="page-header"><h2><%= InterviewQuestion.human_attribute_name :question %></h2></div>
+    <%= MarkdownRenderer.render @admin_interview_question.question %>
+  </div>
+  <div class="col-sm-6 highlight">
+    <div class="page-header"><h2><%= InterviewQuestion.human_attribute_name :answer %></h2></div>
+    <%= MarkdownRenderer.render @admin_interview_question.answer %>
+  </div>
+</div>
+
 <div class="btn-group">
   <%= link_to t('crud.edit'), edit_admin_interview_question_path(@admin_interview_question), class: 'btn btn-info btn-lg' %>
   <%= link_to t('action.back'), admin_interview_questions_path, class: 'btn btn-default btn-lg' %>
