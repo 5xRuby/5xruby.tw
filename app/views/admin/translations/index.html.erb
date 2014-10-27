@@ -1,5 +1,5 @@
 <ul class="nav nav-pills pull-right">
-  <% I18n.available_locales.reject{|i| i == I18n.default_locale}.each do |locale| %>
+  <% translatable_locales.each do |locale| %>
     <%= content_tag :li, link_to(locale, url_for(model: params[:model], lc: locale)), class: ('active' if params[:lc] == locale.to_s) %>
   <% end %>
 </ul>
