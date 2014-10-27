@@ -8,6 +8,7 @@ $ () ->
     editor.setTheme("ace/theme/tomorrow_night_bright")
     editor.setFontSize(16)
     session.setMode("ace/mode/markdown")
+    session.setUseWrapMode(true)
     session.setTabSize(2)
     session.setValue(textarea.val())
     bind_textarea session, textarea
