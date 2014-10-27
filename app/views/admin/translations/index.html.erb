@@ -1,11 +1,11 @@
 <ul class="nav nav-pills pull-right">
   <% I18n.available_locales.reject{|i| i == I18n.default_locale}.each do |locale| %>
-    <%= content_tag :li, link_to(locale, url_for(request.GET.merge(lc: locale))), class: ('active' if params[:lc] == locale.to_s) %>
+    <%= content_tag :li, link_to(locale, url_for(model: params[:model], lc: locale)), class: ('active' if params[:lc] == locale.to_s) %>
   <% end %>
 </ul>
 <ul class="nav nav-pills">
   <% @models.each do |model| %>
-    <%= content_tag :li, link_to(model.model_name.human, url_for(model: model)), class: (:active if model.model_name == params[:model]) %>
+    <%= content_tag :li, link_to(model.model_name.human, url_for(model: model, lc: params[:lc])), class: (:active if model.model_name == params[:model]) %>
   <% end %>
 </ul>
 <%= paginate @records %>
