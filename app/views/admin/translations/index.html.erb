@@ -1,3 +1,8 @@
+<ul class="nav nav-pills pull-right">
+  <% I18n.available_locales.reject{|i| i == I18n.default_locale}.each do |locale| %>
+    <%= content_tag :li, link_to(locale, url_for(request.GET.merge(lc: locale))), class: ('active' if params[:lc] == locale.to_s) %>
+  <% end %>
+</ul>
 <ul class="nav nav-pills">
   <% @models.each do |model| %>
     <%= content_tag :li, link_to(model.model_name.human, url_for(model: model)), class: (:active if model.model_name == params[:model]) %>
@@ -5,7 +10,7 @@
 </ul>
 <%= paginate @records %>
 <table class="table table-striped">
-  <thead><tr><th class="col-sm-6">原文</th><th>英文</th></tr></thead>
+  <thead><tr><th class="col-sm-6">原文</th><th><%= params[:lc] %></th></tr></thead>
   <tbody>
   <% @records.each do |record| %>
     <% admin_translations_available_columns(record).each do |column| %>
@@ -16,7 +21,7 @@
           <%= f.hidden_field :translatable_id %>
           <%= f.hidden_field :translatable_type %>
           <%= f.hidden_field :column %>
-          <%= f.hidden_field :locale, value: :en %>
+          <%= f.hidden_field :locale, value: params[:lc] %>
           <%= admin_translations_edit_field f, record, column %>
           <%= f.submit '更新', class: 'btn btn-success btn-xs' %>
         <% end %>
