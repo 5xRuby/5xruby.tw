@@ -55,7 +55,7 @@ class Course < ActiveRecord::Base
   # other
   def fork
     the_forked = self.class.new attributes.except!('id', 'iframe_html', 'is_online')
-    the_forked.permalink = Course.next_permalink(the_forked.permalink)
+    the_forked.permalink = the_forked.next_permalink
     the_forked.speakers = speakers
     the_forked.image = image
     stages.each do |stage|
