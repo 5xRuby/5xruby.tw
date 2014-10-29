@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :courses, path: :talks, only: %i[index show]
     get 'courses/:id', to: redirect('/talks/%{id}')
     get 'courses', to: redirect('/talks')
-    resources :speakers, :showcases, only: :index
+    resources :speakers, :showcases, :interview_questions, only: :index
   end
 
   # back

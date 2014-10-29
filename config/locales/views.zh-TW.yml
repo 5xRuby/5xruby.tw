@@ -8,6 +8,11 @@ zh-TW:
       filter: 過濾
     show:
       share: 分享到 FB
+  interview_questions:
+    index:
+      title: 嚴選試題
+      answer: 觀看解答
+      nth_question: 第 %{nth} 題
   schedules:
     show:
       start_learning: 我想報名

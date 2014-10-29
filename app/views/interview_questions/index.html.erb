@@ -1,0 +1,22 @@
+<%= sub_header title: t('.title') %>
+
+<section id="main_content">
+  <div class="container">
+    <% @interview_questions.each_with_index do |interview_question, i| %>
+    <div class="panel-group">
+      <div class="panel panel-danger">
+        <div class="panel-heading"><h4 class="panel-title"><%= t('.nth_question', nth: i) %></h4></div>
+        <div class="panel-body highlight"><%= MarkdownRenderer.render interview_question.question %></div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" href="#<%= dom_id interview_question %>"><%= t('.answer') %></a></h4>
+        </div>
+        <div id="<%= dom_id interview_question %>" class="panel-collapse collapse">
+          <div class="panel-body highlight"><%= MarkdownRenderer.render interview_question.answer %></div>
+        </div>
+      </div>  
+    </div>
+    <% end %>
+  </div>
+</section>

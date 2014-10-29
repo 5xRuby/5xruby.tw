@@ -8,6 +8,11 @@ en:
       filter: Filter
     show:
       share: Share to Facebook
+  interview_questions:
+    index:
+      title: Good Interview Questions
+      answer: See Answer
+      nth_question: Question %{nth}
   schedules:
     show:
       start_learning: I'd like to sign in the lecture
