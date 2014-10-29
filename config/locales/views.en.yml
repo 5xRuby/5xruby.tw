@@ -10,9 +10,8 @@ en:
       share: Share to Facebook
   interview_questions:
     index:
-      title: Good Interview Questions
+      lead: 我們提供一些識別度高的 Ruby/Rails 面試題目供你使用 =)
       answer: See Answer
-      nth_question: Question %{nth}
   schedules:
     show:
       start_learning: I'd like to sign in the lecture

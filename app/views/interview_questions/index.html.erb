@@ -1,12 +1,11 @@
-<%= sub_header title: t('.title') %>
+<%= sub_header title: InterviewQuestion.model_name.human, lead: t('.lead') %>
 
 <section id="main_content">
   <div class="container">
-    <% @interview_questions.each_with_index do |interview_question, i| %>
+    <% @interview_questions.each do |interview_question| %>
     <div class="panel-group">
-      <div class="panel panel-danger">
-        <div class="panel-heading"><h4 class="panel-title"><%= t('.nth_question', nth: i) %></h4></div>
-        <div class="panel-body highlight"><%= MarkdownRenderer.render interview_question.question %></div>
+      <div class="panel panel-default">
+        <div class="panel-body highlight question"><%= MarkdownRenderer.render interview_question.question %></div>
       </div>
       <div class="panel panel-default">
         <div class="panel-heading">

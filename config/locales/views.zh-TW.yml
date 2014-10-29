@@ -10,9 +10,8 @@ zh-TW:
       share: 分享到 FB
   interview_questions:
     index:
-      title: 嚴選試題
+      lead: 我們提供一些識別度高的 Ruby/Rails 面試題目供你參考 =)
       answer: 觀看解答
-      nth_question: 第 %{nth} 題
   schedules:
     show:
       start_learning: 我想報名
