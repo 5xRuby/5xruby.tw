@@ -17,7 +17,7 @@
       <%= content_tag_for :tr, admin_interview_question do %>
         <%= hidden_field_tag "sort[#{admin_interview_question.id}][sort_id]", admin_interview_question.sort_id %>
         <td><i class="glyphicon glyphicon-move"></i></td>
-        <%= td_for admin_interview_question, :id, td_is_online(admin_interview_question), :question, :answer %>
+        <%= td_for admin_interview_question, :id, td_is_online(admin_interview_question), [:question, ->(x){x.question.truncate(100)}], [:answer, ->(x){x.question.truncate(100)}] %>
         <%= td_action_for admin_interview_question %>
       <% end %>
     <% end %>
