@@ -33,7 +33,7 @@ class ShowcaseImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process resize_to_fill: [700, 430]
+    process resize_to_fill: [360, 220]
   end
 
   version :preview do
