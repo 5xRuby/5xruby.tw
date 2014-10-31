@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
   def index
-    @videos = Video.includes(:translations).where(is_online: true)#.page(params[:page])
+    @videos = Video.includes(:translations).where(is_online: true).order(id: :desc).page(params[:page]).per(9)
   end
 
   def show

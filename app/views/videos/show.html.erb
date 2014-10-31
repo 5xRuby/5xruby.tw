@@ -8,9 +8,9 @@
         <%= raw tr(@video, :description) %>
         <hr>
         <div class="clearfix text-center">
-          <%= link_to icon_tag('left-open'), @previous, class: 'pull-left button_medium_outline' if @previous %>
+          <%= link_to icon_tag('left-open'), @next, class: 'pull-left button_medium_outline' if @next %>
           <%= link_to t('.share'), "http://www.facebook.com/sharer/sharer.php?u=#{u(video_url(@video))}", class: 'button_medium_outline', target: :_blank %>
-          <%= link_to icon_tag('right-open'), @next, class: 'pull-right button_medium_outline' if @next %>
+          <%= link_to icon_tag('right-open'), @previous, class: 'pull-right button_medium_outline' if @previous %>
         </div>
       </div>
 

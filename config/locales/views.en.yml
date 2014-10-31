@@ -4,8 +4,6 @@ en:
   videos:
     index:
       title: Videos
-      screencast: Screencast
-      filter: Filter
     show:
       share: Share to Facebook
   interview_questions:

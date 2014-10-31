@@ -1,0 +1,5 @@
+body[data-controller="videos"][data-action="index"]{
+  .thumbnail > .caption{
+    height: 100px;
+  }
+}
