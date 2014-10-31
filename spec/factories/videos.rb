@@ -22,5 +22,6 @@ FactoryGirl.define do
     description { "<p>#{Faker::Lorem.paragraph}</p>" }
     is_online { rand > 0.5 }
     speakers { Speaker.order('RANDOM()').limit(2) }
+    image { Faker::Image.image }
   end
 end

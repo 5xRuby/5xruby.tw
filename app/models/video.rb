@@ -20,6 +20,7 @@ class Video < ActiveRecord::Base
   # Constants
   
   # Attributes related macros
+  mount_uploader :image, VideoImageUploader
 
   # association macros
   has_and_belongs_to_many :speakers
