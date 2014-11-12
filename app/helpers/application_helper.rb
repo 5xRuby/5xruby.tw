@@ -85,7 +85,7 @@ module ApplicationHelper
   end
 
   def locale_li name, locale
-    locale_link = link_to name, url_for(locale: locale == I18n.default_locale ? nil : locale)
+    locale_link = link_to name, url_for(request.GET.merge(locale: locale == I18n.default_locale ? nil : locale))
     content_tag :li, locale_link unless locale == I18n.locale
   end
 end
