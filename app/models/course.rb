@@ -25,8 +25,8 @@
 class Course < ActiveRecord::Base
   # scope macros
   scope :online, -> { where(is_online: true) }
-  scope :coming, -> { joins(:stages).select('courses.*, min(date) as min_date').group('courses.id').order('min_date') }
-  scope :available, -> { online.joins(:stages).group('courses.id').where('stages.date >= ?', Time.now).uniq }
+  scope :coming, -> { select('courses.*, min(date) as min_date').joins(:stages).group('courses.id').order('min_date') }
+  scope :available, -> { online.where('stages.date >= ?', Time.now).joins(:stages) }
 
   # Concerns macros
   include Select2Concern
@@ -53,6 +53,23 @@ class Course < ActiveRecord::Base
   # callbacks
 
   # other
+
+  # This query seperates courses by their expiration date,
+  # orders comming-soon courses descendingly and expired course ascendingly.
+  #     comming soon course (latest)
+  #     comming soon course
+  #     comming soon course
+  #     ...
+  #     expired course (latest)
+  #     expired course
+  #     expired course
+  #     ...
+  def self.magic_scope # TODO Find a better name.
+    ret = select('courses.*, min_date, max_date, case when max_date < now() then true else false end as outdated')
+    ret = ret.joins('inner join (select courses.id, min(date) as min_date, max(date) as max_date from courses inner join stages on courses.id = course_id group by courses.id) as r on r.id = courses.id')
+    ret = ret.order('outdated, case max_date < now() when true then min_date end desc, case max_date < now() when false then min_date end asc')
+  end
+
   def fork
     the_forked = self.class.new attributes.except!('id', 'iframe_html', 'is_online')
     the_forked.permalink = the_forked.next_permalink
