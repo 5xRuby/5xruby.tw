@@ -4,7 +4,7 @@ class Admin::CoursesController < AdminController
   # GET /admin/courses
   # GET /admin/courses.json
   def index
-    @admin_courses = Admin::Course.order('id DESC').includes(:category).page(params[:page])
+    @admin_courses = Admin::Course.order('id DESC').includes(:category, :stages).page(params[:page])
   end
 
   # GET /admin/courses/1

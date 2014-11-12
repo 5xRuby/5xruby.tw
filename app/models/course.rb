@@ -65,7 +65,7 @@ class Course < ActiveRecord::Base
   end
 
   def hours
-    stages.sum(:hours)
+    stages.inject(0){|memo, stage| memo += stage.hours }
   end
 
   def start_on
