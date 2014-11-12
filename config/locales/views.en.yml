@@ -38,6 +38,7 @@ en:
     course:
       apply: I'd like to sign in the lecture
       detail: Detailed Info
+      outdated: (Course Ended)
       hours:
         zero: not yet available
         one: 1 hour

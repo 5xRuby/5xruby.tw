@@ -16,7 +16,7 @@
     <div class="info">
       <div class="row">
         <div class="course_info col-md-12 col-sm-12">
-          <h4><%= link_to tr(course, :title), course %></h4>
+          <h4><%= link_to tr(course, :title), course %> <%= t('.outdated') if course.outdated? %></h4>
           <h4><%= date_range course %></h4>
           <p><%= tr(course, :summary) %></p>
           <%#div class="rating">

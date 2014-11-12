@@ -39,6 +39,7 @@ zh-TW:
     course:
       apply: 我想報名
       detail: 詳細資料
+      outdated: （課程結束）
       hours:
         zero: 尚無時數
         one: 1 小時

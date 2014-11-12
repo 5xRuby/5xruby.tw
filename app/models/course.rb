@@ -102,6 +102,10 @@ class Course < ActiveRecord::Base
     (((minimum_attendees - need_attendees_count).to_f / minimum_attendees) * 100).to_i
   end
 
+  def outdated?
+    stages.map(&:date).max < Time.now
+  end
+
   protected
   # callback methods
 end
