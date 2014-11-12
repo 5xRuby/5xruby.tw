@@ -5,7 +5,7 @@
     <% @categories.each do |category| %>
       <li>
         <%= link_to courses_path(category: category.permalink), id: (:active if @category == category) do %>
-          <%= "#{category.name} (#{category.available_courses.length })" %> <%#= image_tag '/img/new.png', alt: 'New' %>
+          <%= "#{category.name} (#{category.courses.size })" %> <%= image_tag '/img/new.png', alt: 'New' if category.new_course? %>
         <% end %>
       </li>
     <% end %>

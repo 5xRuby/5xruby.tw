@@ -14,7 +14,7 @@
 
 class Category < ActiveRecord::Base
   # scope macros
-  scope :available, -> { joins(courses: :stages).where(courses: {is_online: :true}).where('stages.date > ?', Time.now).uniq }
+  scope :available, -> { joins(courses: :stages).where(courses: {is_online: :true}) }
 
   # Concerns macros
   include Permalinkable
@@ -33,8 +33,13 @@ class Category < ActiveRecord::Base
   # callbacks
 
   # other
-  def available_courses
-    courses.select{|c| c.is_online && c.stages.select{|s| s.date > Time.now}.present? }
+  def new_course?
+    courses.each do |course|
+      course.stages.each do |stage|
+        return true if stage.date > Time.now
+      end
+    end
+    return false
   end
 
   protected
