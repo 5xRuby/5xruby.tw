@@ -14,7 +14,7 @@
 
 class Category < ActiveRecord::Base
   # scope macros
-  scope :available, -> { joins(courses: :stages).where(courses: {is_online: :true}) }
+  scope :with_max_date, -> { select('categories.*, max(date) as max_date').joins(courses: :stages).group('categories.id') }
 
   # Concerns macros
   include Permalinkable
@@ -25,7 +25,7 @@ class Category < ActiveRecord::Base
   permalinkable
 
   # association macros
-  has_many :courses
+  has_many :courses, -> { where(is_online: true) }
 
   # validation macros
   validates :name, presence: true
@@ -34,12 +34,12 @@ class Category < ActiveRecord::Base
 
   # other
   def new_course?
-    courses.each do |course|
-      course.stages.each do |stage|
-        return true if stage.date > Time.now
-      end
+    if respond_to?(:max_date)
+      max_date > Time.now
+    else
+      logger.warn 'Use `Category.with_max_date` for better performance.'
+      courses.select('courses.*, max(date) as max_date').joins(:stages).group('courses.id').order('max_date desc').first.max_date > Time.now
     end
-    return false
   end
 
   protected
