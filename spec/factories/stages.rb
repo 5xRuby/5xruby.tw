@@ -24,5 +24,13 @@ FactoryGirl.define do
     date { rand(1.month).seconds.since }
     start_at { rand(1.hour).seconds.since }
     end_at { (rand(1.hour) + 3600).seconds.since }
+
+    trait :since do
+      date { rand(1.month).seconds.since }
+    end
+
+    trait :ago do
+      date { rand(1.month).seconds.ago }
+    end
   end
 end
