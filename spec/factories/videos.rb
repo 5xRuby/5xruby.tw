@@ -10,6 +10,7 @@
 #  is_online   :boolean
 #  created_at  :datetime
 #  updated_at  :datetime
+#  image       :string(255)
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
