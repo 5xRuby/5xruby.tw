@@ -4,10 +4,11 @@ set :stage, :staging
 # Supports bulk-adding hosts to roles, the primary server in each group
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
-role :app, %w{jy365@jy365.tomlan.tw}
-role :web, %w{jy365@jy365.tomlan.tw}
-role :db,  %w{jy365@jy365.tomlan.tw}
+role :app, %w{deploy@staging.5xruby.tw}
+role :web, %w{deploy@staging.5xruby.tw}
+role :db,  %w{deploy@staging.5xruby.tw}
 
+set :deploy_to, '/home/deploy/5xruby'
 # Extended Server Syntax
 # ======================
 # This can be used to drop a more detailed server definition into the

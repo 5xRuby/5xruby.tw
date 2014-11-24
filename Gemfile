@@ -61,7 +61,7 @@ group :development do
   gem 'quiet_assets'
 end
 
-group :development, :test do
+group :development, :test, :staging do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'
