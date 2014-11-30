@@ -4,17 +4,24 @@
       <div class="col-md-12">
         <div id="mobnav-btn"></div>
         <ul class="sf-menu">
-          <%= nav_li t('.home'), root_path, method: :eql? %>
+          <%= nav_dropdown t('.about') do %>
+            <%= nav_li t('.us'), about_path %>
+            <%= nav_li t('.speakers'), speakers_path %>
+            <%= nav_li t('.showcases'), showcases_path %>
+            <%= nav_li t('.faq'), faq_path %>
+          <% end %>
           <%= nav_li t('.course'), courses_path %>
-          <%= nav_li t('.videos'), videos_path %>
-          <%= nav_li t('.showcases'), showcases_path %>
-          <%= nav_li t('.speakers'), speakers_path %>
-          <%= nav_li t('.blog'), posts_path %>
-          <%= nav_li t('.faq'), faq_path %>
-          <%= nav_li t('.about'), about_path %>
+          <%= nav_dropdown t('.space') do %>
+            <%= nav_li t('.rental'), '/events/space/', target: :_blank %>
+            <%= nav_li t('.space_status'), space_status_path %>
+          <% end %>
+          <%= nav_dropdown t('.resources') do %>
+            <%= nav_li t('.interview_questions'), interview_questions_path %>
+            <%= nav_li t('.videos'), videos_path %>
+          <% end %>
           <%= nav_li t('.contacts'), contacts_path %>
-          <li><a href="/events/space/" target="_blank"><%= t('.space') %></a></li>
-          <%= nav_li t('.space_status'), space_status_path %>
+          <%= nav_li t('.blog'), posts_path %>
+          
           <%= locale_li '中文', :'zh-TW' %>
           <%= locale_li 'English', :en %>
         </ul>

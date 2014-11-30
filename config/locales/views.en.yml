@@ -194,7 +194,11 @@ en:
       about: About us
       faq: Q & A
       space: Space
+      rental: Rental
+      interview_questions: Interview Questions
+      resources: Resources
       space_status: Space Status
+      us: Us
     footer:
       browse: brow
       courses: lectures
