@@ -12,6 +12,7 @@
           <%= link_to t('.share'), "http://www.facebook.com/sharer/sharer.php?u=#{u(video_url(@video))}", class: 'button_medium_outline', target: :_blank %>
           <%= link_to icon_tag('right-open'), @previous, class: 'pull-right button_medium_outline' if @previous %>
         </div>
+        <%= render 'layouts/disqus' %>
       </div>
 
       <aside class="col-md-4">
