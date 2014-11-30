@@ -40,7 +40,7 @@ FactoryGirl.define do
     total_attendees { rand(30) }
     minimum_attendees { 5 + rand(5) }
 
-    ignore do
+    transient do
       stages_count 6
     end
 
