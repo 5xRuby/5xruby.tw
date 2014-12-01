@@ -47,6 +47,7 @@ gem 'rack-mini-profiler'
 gem 'acts-as-taggable-on'
 gem 'select2_helper'
 gem 'gistyle'
+gem 'handlebars_assets'
 
 # assets
 gem 'bootstrap-sass'
