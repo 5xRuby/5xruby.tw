@@ -2,6 +2,8 @@ zh-TW:
   errors:
     messages:
       captcha_not_passed: 圖靈測試沒過，為避免被猴子或機器人搗亂，請再試一次
+      must_be_greater_than_start_at: 必須大於開始時間
+      time_must_be_in_available_range: 時間必須在正常範圍內
   activemodel:
     attributes:
       contact:

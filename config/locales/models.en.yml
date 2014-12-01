@@ -2,6 +2,8 @@ en:
   errors:
     messages:
       captcha_not_passed: What you typed cannot be verified. Please try again.
+      must_be_greater_than_start_at: must be greater thant start time
+      time_must_be_in_available_range: must be in available range
   activemodel:
     attributes:
       contact:
