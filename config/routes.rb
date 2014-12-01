@@ -7,11 +7,13 @@ Rails.application.routes.draw do
     get 'courses/:id', to: redirect('/talks/%{id}')
     get 'courses', to: redirect('/talks')
     resources :speakers, :showcases, :interview_questions, only: :index
+    post 'rental/calculate'
   end
 
   # back
   namespace :admin, path: Settings.admin_path_prefix do
     root to: :dashboard
+    get :space_price
     resources :posts, :courses, :authors, :speakers, :faqs, :categories, :showcases, :videos, :interview_questions do
       put :sort, on: :collection
     end

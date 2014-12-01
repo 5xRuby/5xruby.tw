@@ -10,11 +10,11 @@ module Rental
     attr_accessor :date, :start_at, :end_at
     validate :must_be_available, :must_be_in_range
 
-    # ex. Day.new('2014-11-23', '08:00', '12:00')
-    def initialize(date, start_at, end_at)
-      @date     = Date.parse(date)
-      @start_at = Time.parse(start_at)
-      @end_at   = Time.parse(end_at)
+    def initialize *params
+      super
+      self.date     = date.nil? ? Date.today : Date.parse(date)
+      self.start_at = start_at.nil? ? Time.now : Time.parse(start_at)
+      self.end_at   = end_at.nil? ? Time.now.since(1.hour) : Time.parse(end_at)
     end
 
     def hours

@@ -1,0 +1,33 @@
+<div class="page-header"><h1>空間租用試算表</h1></div>
+<div class="row">
+  <div class="col-sm-6">
+    <%= simple_form_for @rental_request, url: rental_calculate_path, remote: true do |f| %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th><%= Rental::Day.human_attribute_name :date %></th>
+            <th><%= Rental::Day.human_attribute_name :start_at %></th>
+            <th><%= Rental::Day.human_attribute_name :end_at %></th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+      <a id="new_day_btn" href="#" class="btn btn-success btn-lg">新增時段</a>
+      <%= f.submit '計算', class: 'btn btn-default btn-lg' %>
+    <% end %>
+  </div>
+  <div class="col-sm-6">
+    <pre id="result"></pre>
+  </div>
+</div>
+
+<script id="template_row" type="text/x-handlebars-template">
+  <tr>
+    <td><a href="#" class="delete_btn"><span class="glyphicon glyphicon-trash"></span></a></td>
+    <td><input class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-date-picktime="false" id="rental_request_rental_day_date" name="rental_request[days_attributes][{{id}}][date]" type="text"></td>
+    <td><input class="form-control datetimepicker" data-date-format="HH:mm" data-date-minutestepping="15" data-date-pickdate="false" id="rental_request_rental_day_start_at" name="rental_request[days_attributes][{{id}}][start_at]" type="text"></td>
+    <td><input class="form-control datetimepicker" data-date-format="HH:mm" data-date-minutestepping="15" data-date-pickdate="false" id="rental_request_rental_day_end_at" name="rental_request[days_attributes][{{id}}][end_at]" type="text"></td>
+  </tr>
+</script>

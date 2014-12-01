@@ -12,6 +12,16 @@ en:
         email: email address
         phone: phone number
         message: message
+      rental/day:
+        date: Date
+        start_at: Start at
+        end_at: End at
+      rental/request:
+        price: Price
+        tax: Tax
+        total_price: Total Price
+        initial_payment: Initial Payment
+        back_payment: Back Payment
   attributes:
     image: image
     remove_image: delete image

@@ -4,4 +4,5 @@
     <%= nav_li_for model %>
   <% end %>
   <%= nav_li Translation.model_name.human, [:admin, Translation, model: :Faq, lc: :en], match: '/translations', method: :[] %>
+  <%= nav_li '空間租用試算表', admin_space_price_path %>
 </ul>
