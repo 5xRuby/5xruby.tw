@@ -1,6 +1,7 @@
 module Rental
   class Request
     TAX_RATE = 0.05
+    include ActiveModel::Model
     attr_accessor :days, :name, :email, :phone
     validates :name, :email, :phone, presence: true
 
