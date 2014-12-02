@@ -18,7 +18,7 @@ module Rental
     end
 
     def initial_payment
-      @initial_payment ||= (total_price * 0.3).round
+      @initial_payment ||= (total_price * 0.3).round(-2)
     end
 
     def back_payment
