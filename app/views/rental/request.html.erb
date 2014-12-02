@@ -1,7 +1,7 @@
 租用時段
 ===========================
 <% @request.days.each do |day| %>
-<%= "#{l day.date, format: '%Y-%m-%d'} #{l day.start_at, format: '%H:%m'}-#{l day.end_at, format: '%H:%m'}" %>（<%= day.hours %> 小時）
+<%= "#{l day.date, format: '%Y-%m-%d'} #{l day.start_at, format: '%H:%M'}-#{l day.end_at, format: '%H:%M'}" %>（<%= day.hours %> 小時）
 <% end %>
 <% %i[price tax total_price initial_payment back_payment].each do |attr_name| %>
 <%= Rental::Request.human_attribute_name attr_name %>：<%= @request.send(attr_name) %>
