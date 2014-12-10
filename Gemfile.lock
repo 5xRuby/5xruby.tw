@@ -85,6 +85,11 @@ GEM
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
       posix-spawn (~> 0.3.6)
+    handlebars_assets (0.18)
+      execjs (>= 1.2.9)
+      multi_json
+      sprockets (>= 2.0.3)
+      tilt
     hike (1.2.3)
     httparty (0.13.3)
       json (~> 1.8)
@@ -219,6 +224,7 @@ DEPENDENCIES
   faker
   font-awesome-sass
   gistyle
+  handlebars_assets
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails

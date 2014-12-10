@@ -1,7 +1,7 @@
 /* hover */
 ul.sf-menu li a:hover{color:#d62567;}
 
-.sf-menu ul li a:hover{background: #d62567;}
+.sf-menu ul li a:hover{background: #d62567; color: white;}
 
 .sf-arrows > li > .sf-with-ul:focus:after,
 .sf-arrows > li:hover > .sf-with-ul:after,
@@ -25,7 +25,7 @@ ul.sf-menu li.active a{
 }
 .sf-menu ul li.active a {
   background: #d62567;
-  color:#111;
+  color:white;
   outline:none;
 }
 

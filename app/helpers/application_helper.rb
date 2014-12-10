@@ -54,12 +54,6 @@ module ApplicationHelper
     end.join.html_safe if record.errors[attribute].present?
   end
 
-  def nav_li text, url, match: url, method: :start_with?, **link_to_options
-    content_tag :li, class: (:active if request.path.send(method, match)) do
-      link_to text, url, **link_to_options
-    end
-  end
-
   def course_charger(course)
     counter = @course.need_attendees_count
     (counter > 0) ? t('.charger', num: counter) : t('.charger_complete')

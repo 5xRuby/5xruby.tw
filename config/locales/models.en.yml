@@ -2,6 +2,8 @@ en:
   errors:
     messages:
       captcha_not_passed: What you typed cannot be verified. Please try again.
+      must_be_greater_than_start_at: must be greater thant start time
+      time_must_be_in_available_range: must be in available range
   activemodel:
     attributes:
       contact:
@@ -10,6 +12,16 @@ en:
         email: email address
         phone: phone number
         message: message
+      rental/day:
+        date: Date
+        start_at: Start at
+        end_at: End at
+      rental/request:
+        price: Price
+        tax: Tax
+        total_price: Total Price
+        initial_payment: Initial Payment
+        back_payment: Back Payment
   attributes:
     image: image
     remove_image: delete image

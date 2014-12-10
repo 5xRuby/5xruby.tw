@@ -2,6 +2,8 @@ zh-TW:
   errors:
     messages:
       captcha_not_passed: 圖靈測試沒過，為避免被猴子或機器人搗亂，請再試一次
+      must_be_greater_than_start_at: 必須大於開始時間
+      time_must_be_in_available_range: 時間必須在正常範圍內
   activemodel:
     attributes:
       contact:
@@ -11,6 +13,16 @@ zh-TW:
         phone: 電話
         message: 訊息
         price: 預算
+      rental/day:
+        date: 日期
+        start_at: 開始時間
+        end_at: 結束時間
+      rental/request:
+        price: 價錢
+        tax: 營業稅
+        total_price: 總計
+        initial_payment: 訂金
+        back_payment: 尾款
   attributes:
     image: 主圖
     remove_image: 刪除圖片

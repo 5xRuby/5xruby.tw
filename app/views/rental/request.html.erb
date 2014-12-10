@@ -1,0 +1,23 @@
+租用時段
+===========================
+<% @request.days.each do |day| %>
+<%= "#{l day.date, format: '%Y-%m-%d'} #{l day.start_at, format: '%H:%M'}-#{l day.end_at, format: '%H:%M'}" %>（<%= '%g' % day.hours %> 小時）
+<% end %>
+<% %i[price tax total_price initial_payment back_payment].each do |attr_name| %>
+<%= Rental::Request.human_attribute_name attr_name %>：<%= @request.send(attr_name) %>
+<% end %>
+
+租借流程
+===========================
+1. 登記租借時間
+2. 登記後三日內付訂金
+3. 在活動當日以前付清尾款
+
+匯款方式
+===========================
+玉山銀行 士林分行
+代碼：808
+帳號：0657-940-006952
+戶名：五倍紅寶石股份有限公司
+
+匯款後請告知金額與匯款帳號後五碼
