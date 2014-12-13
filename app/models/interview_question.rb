@@ -1,23 +1,10 @@
-# == Schema Information
-#
-# Table name: interview_questions
-#
-#  id         :integer          not null, primary key
-#  question   :text             not null
-#  answer     :text             not null
-#  sort_id    :integer          default(0), not null
-#  is_online  :boolean          default(FALSE), not null
-#  created_at :datetime
-#  updated_at :datetime
-#
-
 class InterviewQuestion < ActiveRecord::Base
   # scope macros
-
+  scope :available, -> { where(is_online: true) }
   # Concerns macros
 
   # Constants
-  
+
   # Attributes related macros
 
   # association macros
@@ -27,7 +14,4 @@ class InterviewQuestion < ActiveRecord::Base
   # callbacks
 
   # other
-
-  protected
-  # callback methods
 end

@@ -1,25 +1,10 @@
-# == Schema Information
-#
-# Table name: videos
-#
-#  id          :integer          not null, primary key
-#  title       :string(255)
-#  iframe      :string(255)
-#  summary     :string(255)
-#  description :text
-#  is_online   :boolean
-#  created_at  :datetime
-#  updated_at  :datetime
-#  image       :string(255)
-#
-
 class Video < ActiveRecord::Base
   # scope macros
 
   # Concerns macros
 
   # Constants
-  
+
   # Attributes related macros
   mount_uploader :image, VideoImageUploader
 
@@ -39,7 +24,4 @@ class Video < ActiveRecord::Base
   def previous
     self.class.where('id < ?', id).last
   end
-
-  protected
-  # callback methods
 end

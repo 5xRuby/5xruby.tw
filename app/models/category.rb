@@ -1,17 +1,3 @@
-# == Schema Information
-#
-# Table name: categories
-#
-#  id             :integer          not null, primary key
-#  name           :string(255)      not null
-#  created_at     :datetime
-#  updated_at     :datetime
-#  courses_count  :integer          default(0), not null
-#  is_highlighted :boolean          default(FALSE), not null
-#  sort_id        :integer          default(0), not null
-#  permalink      :string(255)      not null
-#
-
 class Category < ActiveRecord::Base
   # scope macros
   scope :with_max_date, -> { select('categories.*, max(date) as max_date').joins(courses: :stages).group('categories.id') }
@@ -20,7 +6,7 @@ class Category < ActiveRecord::Base
   include Permalinkable
 
   # Constants
-  
+
   # Attributes related macros
   permalinkable
 
@@ -41,7 +27,4 @@ class Category < ActiveRecord::Base
       courses.select('courses.*, max(date) as max_date').joins(:stages).group('courses.id').order('max_date desc').first.max_date > Time.now
     end
   end
-
-  protected
-  # callback methods
 end

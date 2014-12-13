@@ -1,20 +1,3 @@
-# == Schema Information
-#
-# Table name: posts
-#
-#  id         :integer          not null, primary key
-#  title      :string(255)      not null
-#  content    :text             not null
-#  created_at :datetime
-#  updated_at :datetime
-#  image      :string(255)
-#  author_id  :integer
-#  summary    :text
-#  is_online  :boolean          default(FALSE), not null
-#  permalink  :string(255)      not null
-#  publish_at :datetime
-#
-
 class Post < ActiveRecord::Base
   # scope macros
   scope :online, -> { where(is_online: true) }
@@ -40,7 +23,4 @@ class Post < ActiveRecord::Base
   # callbacks
 
   # other
-
-  protected
-  # callback methods
 end
