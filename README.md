@@ -46,8 +46,6 @@ Schema Updating
 2. Update facotry
 3. Update `_form.html.erb`, `show.html.erb` and `index.html.erb` in admin pages.
 
-# `db/schema.rb` MUST BE CONSISTENT in every environment, both servers and clients. Having differnt schema betweent environments is totally not forgivable.
-
 Assets
 ------
 
