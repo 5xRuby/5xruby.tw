@@ -102,8 +102,8 @@ zh-TW:
     recent_course:
       detail: 詳細
     about:
-      carol: 徐曦
-      carol_title: 出礦坑老闆娘
+      ceo: 高見龍
+      ceo_title: 紅寶石鑑定商
       description: |
         ## 五倍專業、五倍祝福，五倍的紅寶石
         ### 由來
@@ -138,16 +138,14 @@ zh-TW:
 
       speciality: 專長
       members:
-        - name: 高見龍
-          title: 紅寶石鑑定商
-          avatar: eddiekao.jpg
-          facebook: https://www.facebook.com/eddiekao
-          twitter: https://twitter.com/eddiekao
-          google: https://plus.google.com/u/0/102669323697108172752/about
-          experience: WebConf Taiwan 主辦人、PHPConf Taiwan 發起兼主辦人、Rails Girls Taipei 主辦人.
-          about: 「愛寫程式的阿宅，希望有一天可以寫程式來改變世界。」
-          blog: http://blog.eddie.com.tw
-          skills: Ruby / Rails、iOS app 開發
+        - name: 徐曦
+          title: 胡謅寶石
+          avatar: shesee2.jpg
+          facebook: https://www.facebook.com/hsu.c.12
+          twitter: https://twitter.com/sheseee
+          about:
+          blog: http://carolhsu.github.io/
+          skills: Ruby / Rails 開發 / 公共交通運輸資訊系統
 
         - name: 鄧慕凡
           title: 紅寶石商人
