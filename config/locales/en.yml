@@ -7,5 +7,8 @@ en:
     contact_phone: '+886-2-2556-2366'
     fax: '+886-2-2556-3779'
     mobile: '+886-928-617-687'
+  layouts:
+    footer:
+      address_label: Address
   site:
     description: 5xRuby is a Ruby/Rails technical consulting and training firm, which is found by several active and core members in Ruby Taiwan community.
