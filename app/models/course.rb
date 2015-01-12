@@ -1,27 +1,3 @@
-# == Schema Information
-#
-# Table name: courses
-#
-#  id                :integer          not null, primary key
-#  image             :string(255)
-#  title             :string(255)      not null
-#  summary           :text
-#  description       :text
-#  what_will_learn   :text
-#  created_at        :datetime
-#  updated_at        :datetime
-#  subtitle          :string(255)
-#  category_id       :integer
-#  is_online         :boolean          default(FALSE), not null
-#  permalink         :string(255)      not null
-#  note              :text
-#  apply_link        :string(255)
-#  iframe_html       :string(255)
-#  maximum_attendees :integer          default(30), not null
-#  total_attendees   :integer          default(0), not null
-#  minimum_attendees :integer          default(5), not null
-#
-
 class Course < ActiveRecord::Base
   # scope macros
   scope :online, -> { where(is_online: true) }
@@ -105,7 +81,4 @@ class Course < ActiveRecord::Base
   def outdated?
     stages.map(&:date).max < Time.now
   end
-
-  protected
-  # callback methods
 end

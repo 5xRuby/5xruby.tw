@@ -1,17 +1,3 @@
-# == Schema Information
-#
-# Table name: translations
-#
-#  id                :integer          not null, primary key
-#  translatable_id   :integer
-#  translatable_type :string(255)
-#  column            :string(255)
-#  locale            :string(255)
-#  text              :text
-#  created_at        :datetime
-#  updated_at        :datetime
-#
-
 class Translation < ActiveRecord::Base
   AVAILABLE_MODELS = {
     Faq      => [:question, :answer],
@@ -27,7 +13,7 @@ class Translation < ActiveRecord::Base
   # Concerns macros
 
   # Constants
-  
+
   # Attributes related macros
 
   # association macros
@@ -38,7 +24,4 @@ class Translation < ActiveRecord::Base
   # callbacks
 
   # other
-
-  protected
-  # callback methods
 end

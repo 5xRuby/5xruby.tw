@@ -1,5 +1,5 @@
 class InterviewQuestionsController < ApplicationController
   def index
-    @interview_questions = InterviewQuestion.order(:sort_id)
+    @interview_questions = InterviewQuestion.available.order(:sort_id)
   end
 end

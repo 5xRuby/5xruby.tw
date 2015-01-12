@@ -1,23 +1,3 @@
-# == Schema Information
-#
-# Table name: speakers
-#
-#  id           :integer          not null, primary key
-#  avatar       :string(255)
-#  name         :string(255)      not null
-#  summary      :text
-#  is_online    :boolean          default(FALSE), not null
-#  created_at   :datetime
-#  updated_at   :datetime
-#  role         :string(255)      default("consultant"), not null
-#  title        :string(255)
-#  facebook_url :string(255)
-#  twitter_url  :string(255)
-#  google_url   :string(255)
-#  blog_url     :string(255)
-#  sort_id      :integer          default(0), not null
-#
-
 class Speaker < ActiveRecord::Base
   # scope macros
   scope :online, -> { where(is_online: true) }
@@ -43,7 +23,4 @@ class Speaker < ActiveRecord::Base
   enumerize :role, in: %i[author consultant speaker parttime-speaker assistant-speaker]
 
   # callbacks
-
-  protected
-  # callback methods
 end

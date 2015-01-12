@@ -80,7 +80,7 @@ en:
           url: /en/talks
           description: We have designed a serious of lectures including authentic practices of Ruby, Rails, Git, testing and system planning of diffrent levels from enrty, intermidate to advance lectures. This will allow you to experience the fast speed and fun of developping via Ruby.
         - icon: icon-video
-          title: Enterprse Training 
+          title: Enterprse Training
           url: /en/contacts
           description: We have also designed a series of training programs for enterprise staff. This will help you build up a professional Ruby/ Rails development team with your current staffing. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
         - icon: icon-website
@@ -101,8 +101,8 @@ en:
     recent_course:
       detail: details
     about:
-      carol: Carol Hsu
-      carol_title: CTO
+      ceo: Eddie Kao
+      ceo_title: Appraiser
       description: |
         ##  5 times professionalism. 5 times wishes. 5 times Ruby.
         ### About Us
@@ -116,13 +116,13 @@ en:
 
         In the recent one or two years, the demand of Ruby/Rails expertise grew, more and more high-paid vancies were released, encrouaging more and more people to enter the world of Ruby/Rails. Many people have, besides self-learning, participated in the sharing and exchanges of activities organized by Ruby communities.
 
-        "If there were only faster and more efficient way to enhance my level." Voices like this started to reveal. 
+        "If there were only faster and more efficient way to enhance my level." Voices like this started to reveal.
 
         Therefore, a group of Ruby lovers started dicussing, "Maybe we can establish a company to provide technical consultancy or training related to Ruby/Rails."
 
         Our ultumate goal is for more and more enterprises in Taiwan to know more about this elegant, fun and very productive programming language and start using it as their main development tool to speed up their dreams.
 
-        As to why the company name is 5 times and not 3 or 100 times? Well, that's another story.  
+        As to why the company name is 5 times and not 3 or 100 times? Well, that's another story.
 
 
 
@@ -139,17 +139,14 @@ en:
 
       speciality: Expertise
       members:
-        - name: Eddie Kao
-          title: Ruby Appraiser
-          avatar: eddiekao.jpg
-          facebook: https://www.facebook.com/eddiekao
-          twitter: https://twitter.com/eddiekao
-          google: https://plus.google.com/u/0/102669323697108172752/about
-          experience: Organizer of WebConf Taiwan, founder and organizer of PHPConf Taiwan, oprganizer of Rails Girls Taipei.
-          about: "A nerd who love programming, hope to change the world one day by writing code."
-          blog: http://blog.eddie.com.tw
-          skills: Ruby / Rails、iOS app development
-
+        - name: Carol Hsu
+          title: Gem
+          avatar: shesee2.jpg
+          facebook: https://www.facebook.com/hsu.c.12
+          twitter: https://twitter.com/sheseee
+          about:
+          blog: http://carolhsu.github.io/
+          skills: Ruby / Rails / public transport information system
         - name: Mu-fang Deng
           title: Ruby Merchant
           avatar: ryudoawaru.jpg
@@ -159,8 +156,7 @@ en:
           about: "A non-typical website maintainer"
           blog: http://ryudo.tw/
           skills: Ruby / Rails / Sinatra, system management
-
-        - name: Tonu Jian
+        - name: Tony Jian
           title: Rail Constructor
           avatar: tonytonyjan.jpg
           facebook: http://fb.me/tonytonyjan
