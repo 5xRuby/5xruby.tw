@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   scope '(:locale)', locale: /en|jp/ do
     root 'pages#index'
-    get :about, :contacts, :faq, :sitemap, :space_status, controller: :pages
+    get :about, :contacts, :faq, :sitemap, controller: :pages
     resources :posts, :videos, only: %i[index show]
     resources :courses, path: :talks, only: %i[index show]
     get 'courses/:id', to: redirect('/talks/%{id}')

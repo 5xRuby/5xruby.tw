@@ -13,7 +13,6 @@
           <%= nav_li t('.course'), courses_path %>
           <%= nav_dropdown t('.space') do %>
             <%= nav_li t('.rental'), '/events/space/', target: :_blank %>
-            <%= nav_li t('.space_status'), space_status_path %>
           <% end %>
           <%= nav_dropdown t('.resources') do %>
             <%= nav_li t('.interview_questions'), interview_questions_path %>
@@ -21,7 +20,7 @@
           <% end %>
           <%= nav_li t('.contacts'), contacts_path %>
           <%= nav_li t('.blog'), posts_path %>
-          
+
           <%= locale_li '中文', :'zh-TW' %>
           <%= locale_li 'English', :en %>
         </ul>
