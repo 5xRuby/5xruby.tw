@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   def index
-    @courses = Course.includes(:translations, :category, :stages).online.magic_scope.page(params[:page]).per(6)
+    @courses = Course.includes(:translations, :category, :stages).online.order('id DESC').page(params[:page]).per(6)
     @courses = @courses.where(category: @category) if @category = Category.find_by(permalink: params[:category])
     @categories = Category.with_max_date.order(:sort_id)
   end
