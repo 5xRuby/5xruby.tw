@@ -139,14 +139,6 @@ en:
 
       speciality: Expertise
       members:
-        - name: Carol Hsu
-          title: Gem
-          avatar: shesee2.jpg
-          facebook: https://www.facebook.com/hsu.c.12
-          twitter: https://twitter.com/sheseee
-          about:
-          blog: http://carolhsu.github.io/
-          skills: Ruby / Rails / public transport information system
         - name: Mu-fang Deng
           title: Ruby Merchant
           avatar: ryudoawaru.jpg
@@ -156,16 +148,22 @@ en:
           about: "A non-typical website maintainer"
           blog: http://ryudo.tw/
           skills: Ruby / Rails / Sinatra, system management
-        - name: Tony Jian
-          title: Rail Constructor
-          avatar: tonytonyjan.jpg
-          facebook: http://fb.me/tonytonyjan
-          twitter: https://twitter.com/tonytonyjan
-          google: https://plus.google.com/u/0/+%E7%B0%A1%E7%85%92%E8%88%AATJ/posts
+        - name: Sabrina Chiang
+          title: Office Manager
+          avatar: sabrina.jpg
+          facebook: https://www.facebook.com/chiang.sabrina.7
           experience:
-          about: "I am an engineer and a pianist. I write code with one hand and play music with the other."
-          blog: http://tonytonyjan.net/
-          skills: Ruby / Rails、Java / Swing
+          about: "I am a Office Manager, and I can code Rails."
+          skills: Office Management
+
+        - name: Carol Hsu
+          title: Gem
+          avatar: shesee2.jpg
+          facebook: https://www.facebook.com/hsu.c.12
+          twitter: https://twitter.com/sheseee
+          about:
+          blog: http://carolhsu.github.io/
+          skills: Ruby / Rails / public transport information system
 
     contacts:
       general_enquire: Inquery

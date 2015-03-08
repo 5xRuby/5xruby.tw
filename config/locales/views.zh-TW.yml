@@ -138,15 +138,6 @@ zh-TW:
 
       speciality: 專長
       members:
-        - name: 徐曦
-          title: 胡謅寶石
-          avatar: shesee2.jpg
-          facebook: https://www.facebook.com/hsu.c.12
-          twitter: https://twitter.com/sheseee
-          about:
-          blog: http://carolhsu.github.io/
-          skills: Ruby / Rails 開發 / 公共交通運輸資訊系統
-
         - name: 鄧慕凡
           title: 紅寶石商人
           avatar: ryudoawaru.jpg
@@ -156,17 +147,21 @@ zh-TW:
           about: 「非典型網站維運者」
           blog: http://ryudo.tw/
           skills: Ruby / Rails / Sinatra、系統管理
-
-        - name: 簡煒航
-          title: 鐵道工人
-          avatar: tonytonyjan.jpg
-          facebook: http://fb.me/tonytonyjan
-          twitter: https://twitter.com/tonytonyjan
-          google: https://plus.google.com/u/0/+%E7%B0%A1%E7%85%92%E8%88%AATJ/posts
+        - name: Sabrina
+          title: 礦坑管理員
+          avatar: sabrina.jpg
+          facebook: https://www.facebook.com/chiang.sabrina.7
           experience:
-          about: 「我是工程師，右手寫程式；我是鋼琴手，左手寫音樂。」
-          blog: http://tonytonyjan.net/
-          skills: Ruby / Rails、Java / Swing
+          about: 「有看過也能寫 Rails 的管理員嗎」
+          skills: 行政庶務/活動企劃/課程宣傳
+        - name: 徐曦
+          title: 胡謅寶石
+          avatar: shesee2.jpg
+          facebook: https://www.facebook.com/hsu.c.12
+          twitter: https://twitter.com/sheseee
+          about:
+          blog: http://carolhsu.github.io/
+          skills: Ruby / Rails 開發 / 公共交通運輸資訊系統
 
     contacts:
       general_enquire: 歡迎諮詢

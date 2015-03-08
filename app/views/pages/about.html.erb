@@ -1,4 +1,4 @@
-<div id="about-header"><%= sub_header %></div>
+<%= sub_header title: '關於我們' %>
 
 <section id="main_content">
 
@@ -59,8 +59,12 @@
             <li><a href="<%= member[:google] %>" target="_blank"><i class=" icon-google"></i></a></li>
           <% end %>
         </ul>
+        <% if member[:blog] %>
         <hr>
         <a href="<%= member[:blog] %>" target="_blank" class=" button_medium_outline">Blog</a>
+        <% else %>
+          <br />
+        <% end %>
       </div>
     </div>
     <% end %>
