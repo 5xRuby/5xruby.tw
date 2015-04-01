@@ -70,7 +70,7 @@ en:
         - icon: icon-trophy
           title: Professional lecturers
           url: /en/speakers
-          description: The members and lecturers of 5xRuby are the first-line developppers in the market and senior members from Taiwan Ruby community, where actual developping experience and pracmatics come in hand with theoratical bases.
+          description: The members and lecturers of 5xRuby are the first-line developers in the market and senior members from Taiwan Ruby community, where actual developing experience and pracmatics come in hand with theoratical bases.
         - icon: icon-ok
           title: Technical consultants
           url: /en/contacts
@@ -78,7 +78,7 @@ en:
         - icon: icon-mic
           title: Authetic practises
           url: /en/talks
-          description: We have designed a serious of lectures including authentic practices of Ruby, Rails, Git, testing and system planning of diffrent levels from enrty, intermidate to advance lectures. This will allow you to experience the fast speed and fun of developping via Ruby.
+          description: We have designed a serious of lectures including authentic practices of Ruby, Rails, Git, testing and system planning of diffrent levels from enrty, intermidate to advance lectures. This will allow you to experience the fast speed and fun of developing via Ruby.
         - icon: icon-video
           title: Enterprse Training
           url: /en/contacts
@@ -106,21 +106,21 @@ en:
       description: |
         ##  5 times professionalism. 5 times wishes. 5 times Ruby.
         ### About Us
-        We are a group of Ruby lovers in Taiwan. Our lives are closed bounded with Ruby/Rails.
+        We are a group of Ruby lovers in Taiwan. Our lives are closely bounded with Ruby/Rails.
 
-        Ruby on Rails saves time on development, and has been favored by many foreign enterprises and start-ups. The simpolicity and elegance of Ruby language brings a lot of fun to the engineers too. However, in Taiwan, on a few enterprises are using Ruby/Rails as their main developping tool.
+        Ruby on Rails saves time on development, and has been favored by many foreign enterprises and start-ups. The simplicity and elegance of Ruby language brings a lot of fun to the engineers too. However, in Taiwan, only a few enterprises are using Ruby/Rails as their main developing tool.
 
-        Over the years we have continuously provided lectures to universities in Taiwan (NCKU, Fujen University, TTCB), teaching Ruby and Rails. From our obesevation of students reactions, we noticed that most students find Ruby not so difficult to learn. They could achieve certain level by studying textbooks and practicing via documents from the official website. However, self-study cannot cover all aspects if they wish to elevate into the next level or start working on business projects. They need more authentic practiese and the guidance of lecturers. This is why senior or experienced Ruby/Rails developpes are not easy to be found in Taiwan.
+        Over the years we have continuously provided lectures to universities in Taiwan (NCKU, Fujen University, TTCB), teaching Ruby and Rails. What we have noticed from student reactions, is that most students find Ruby not so difficult to learn. They could achieve a certain level by studying textbooks and practicing via documents from the official website. However, self-study cannot cover all aspects if they wish to elevate into the next level or start working on business projects. They need more authentic practices and the guidance of lecturers. This is why senior or experienced Ruby/Rails developers are not easy to be found in Taiwan.
 
-        We have also interviewed some enterprises and came to understand the reason why they don't use Ruby/ Raisl. Most of it comes from the shortage of Ruby/Rails engineers, and that technical support is scarce too. They didn't know who to ask for help if a problem occurs.
+        We have also interviewed some enterprises and came to understand the reason why they don't use Ruby/Rails. Most of it comes from the shortage of Ruby/Rails engineers, and that technical support is scarce too. They don't know who to ask for help if a problem occurs.
 
-        In the recent one or two years, the demand of Ruby/Rails expertise grew, more and more high-paid vancies were released, encrouaging more and more people to enter the world of Ruby/Rails. Many people have, besides self-learning, participated in the sharing and exchanges of activities organized by Ruby communities.
+        In recent years, the demand of Ruby/Rails expertise grew, more high-paid vacancies were released, encouraging more people to enter the world of Ruby/Rails. Many people have, besides self-learning, participated in the sharing and exchanges of activities organized by Ruby communities.
 
-        "If there were only faster and more efficient way to enhance my level." Voices like this started to reveal.
+        "If only there were a faster and more efficient way to enhance my skills." Voices like this started to appear.
 
-        Therefore, a group of Ruby lovers started dicussing, "Maybe we can establish a company to provide technical consultancy or training related to Ruby/Rails."
+        Therefore, a group of Ruby lovers thought, "Maybe we can establish a company to provide technical consulting or training related to Ruby/Rails."
 
-        Our ultumate goal is for more and more enterprises in Taiwan to know more about this elegant, fun and very productive programming language and start using it as their main development tool to speed up their dreams.
+        Our ultimate goal is for more enterprises in Taiwan to know about this elegant, fun and very productive programming language, and start using it as their main development tool to speed up their dreams.
 
         As to why the company name is 5 times and not 3 or 100 times? Well, that's another story.
 
@@ -129,13 +129,13 @@ en:
         ---
         ## Our Services
         ### technical consulatncy
-        The members and lecturers of __5xRuby__ are the first-line developppers in the market and senior members from Taiwan Ruby community, where actual developping experience and pracmatics come in hand with theoratical bases.
+        The members and lecturers of __5xRuby__ are the first-line developers in the market and senior members from Taiwan's Ruby community, where actual developing experience and practices come in hand with theoretical basis.
 
         ### Enterprise internal training
-        If your website or system is currently built with other programming language (for instance PHP, Java or ASP.net), and you are considering about changing to Ruby/Rails of high productivity. However, if you lack of such technical capability to develop, we offer a series of training program where wiUby/Rails development team can be trained and built with yoru current staff. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
+        If your website or system is currently built with other programming languages (for instance PHP, Java or ASP.net), and you are considering changing to Ruby/Rails for high productivity, yet lack the technical capabilities to develop, we offer a series of training programs where the Ruby/Rails development team can be trained and built with your current staff. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
 
         ### Training
-        if you are a fresh beginner to programming, or if you happen to have experience with other programming languages. We offer a series of lectures from entry level to intermediate and advance lectures that will guide you efficiently to the core of Ruby/Rails.
+        if you are a fresh beginner to programming, or if you happen to have experience with other programming languages, we offer a series of lectures from entry level to intermediate and advanced, that will guide you efficiently to the core of Ruby/Rails.
 
       speciality: Expertise
       members:
@@ -148,12 +148,20 @@ en:
           about: "A non-typical website maintainer"
           blog: http://ryudo.tw/
           skills: Ruby / Rails / Sinatra, system management
+
+        - name: Tsehau Chao
+          title: Ruby Hunter
+          avatar: jodeci.jpg
+          facebook: https://www.facebook.com/tsehau
+          about: "Hipster turned geek."
+          skills: Ruby / Rails / PHP / EN / JP
+
         - name: Sabrina Chiang
           title: Office Manager
           avatar: sabrina.jpg
           facebook: https://www.facebook.com/chiang.sabrina.7
           experience:
-          about: "I am a Office Manager, and I can code Rails."
+          about: "I am an Office Manager, and I can code Rails."
           skills: Office Management
 
         - name: Carol Hsu
