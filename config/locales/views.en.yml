@@ -68,25 +68,25 @@ en:
       5xruby: 5xRuby
       items:
         - icon: icon-trophy
-          title: Professional lecturers
+          title: Professional Lecturers
           url: /en/speakers
-          description: The members and lecturers of 5xRuby are the first-line developers in the market and senior members from Taiwan Ruby community, where actual developing experience and pracmatics come in hand with theoratical bases.
+          description: The members and lecturers of 5xRuby are the first-line developers in the market and senior members from Taiwan's Ruby community, where actual developing experience and pragmatics come in hand with theoretical basis.
         - icon: icon-ok
-          title: Technical consultants
+          title: Technical Consulting
           url: /en/contacts
-          description: From system design, planning to development, even to system set-up, we provide professional advise and consultation.
+          description: From system design to planning, development, and even system set-up, we provide professional advice and consultation.
         - icon: icon-mic
-          title: Authetic practises
+          title: Authentic Practices
           url: /en/talks
-          description: We have designed a serious of lectures including authentic practices of Ruby, Rails, Git, testing and system planning of diffrent levels from enrty, intermidate to advance lectures. This will allow you to experience the fast speed and fun of developing via Ruby.
+          description: We have designed a series of lectures including authentic practices of Ruby, Rails, Git, testing and system planning of diffrent levels from enrty, intermidate to advanced lectures. This will allow you to experience the fast speed and fun of developing via Ruby.
         - icon: icon-video
-          title: Enterprse Training
+          title: Enterprise Training
           url: /en/contacts
-          description: We have also designed a series of training programs for enterprise staff. This will help you build up a professional Ruby/ Rails development team with your current staffing. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
+          description: We have also designed a series of training programs for enterprise staff. This will help you build up a professional Ruby / Rails development team with your current staffing. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
         - icon: icon-website
           title: Outsourcing
           url: /en/contacts
-          description: We have professional Ruby, Rails and iOS engineers to build your project.
+          description: We have professional Ruby, Rails and iOS engineers to build your projects.
         - icon: icon-home
           title: Space Rental
           url: /events/space/
@@ -128,10 +128,10 @@ en:
 
         ---
         ## Our Services
-        ### technical consulatncy
-        The members and lecturers of __5xRuby__ are the first-line developers in the market and senior members from Taiwan's Ruby community, where actual developing experience and practices come in hand with theoretical basis.
+        ### Technical Consulting
+        The members and lecturers of __5xRuby__ are the first-line developers in the market and senior members from Taiwan's Ruby community, where actual developing experience and pragmatics come in hand with theoretical basis.
 
-        ### Enterprise internal training
+        ### Enterprise Internal Training
         If your website or system is currently built with other programming languages (for instance PHP, Java or ASP.net), and you are considering changing to Ruby/Rails for high productivity, yet lack the technical capabilities to develop, we offer a series of training programs where the Ruby/Rails development team can be trained and built with your current staff. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
 
         ### Training
@@ -139,7 +139,7 @@ en:
 
       speciality: Expertise
       members:
-        - name: Mu-fang Deng
+        - name: Mu-fan Deng
           title: Ruby Merchant
           avatar: ryudoawaru.jpg
           facebook: https://www.facebook.com/ryudoawaru
@@ -202,16 +202,16 @@ en:
       space_status: Space Status
       us: Us
     footer:
-      browse: brow
-      courses: lectures
+      browse: browse
+      courses: Lectures
       faq: Q & A
-      blog: blog
-      contacts: Contact us
+      blog: Blog
+      contacts: Contact Us
       about_5xruby: About 5xRuby
-      about_us: About us
-      source_code: sourse code
-      media: Media exposure
-      any_question: Any question?
+      about_us: About Us
+      source_code: Source Code
+      media: Media Exposure
+      any_question: Any questions?
     application:
       back_to_top: back to top
     cooperation_list:
