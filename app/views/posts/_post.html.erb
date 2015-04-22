@@ -1,5 +1,5 @@
 <%= content_tag_for :div, post, class: 'post' do %>
-  <%= link_to image_tag(post.image.thumb, class: 'img-responsive'), (action_name == 'index' ? post : post.image.url), title: tr(post, :title) %>
+  <%= image_tag(post.image.thumb, class: 'img-responsive') %>
   <div class="post_info clearfix">
     <div class="post-left">
       <ul>
