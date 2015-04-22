@@ -1,5 +1,6 @@
 $ () ->
   redactor_options =
+    buttonSource: true
     imageUpload: '/redactor_images'
     imageUploadParam: 'redactor_image[image]'
     lang: 'zh_tw'
