@@ -1,23 +1,32 @@
 <section id="main_content">
   <div class="container">
-    <div class="row add_bottom_30">
-      <div class="col-md-12 text-center">
-        <h2><%= t('.next_courses') %></h2>
-        <%#p class="lead"><%#= t('.next_courses_detail') ></p%>
+    <% if @next_courses.present? %>
+      <div class="row add_bottom_30">
+        <div class="col-md-12 text-center">
+          <h2><%= t('.next_courses') %></h2>
+          <%#p class="lead"><%#= t('.next_courses_detail') ></p%>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <% @next_courses.each_slice(2) do |next_course| %>
-      <div class="col-md-6">
-        <%= render partial: 'next_course', collection: next_course %>
+      <div class="row">
+        <% @next_courses.each_slice(2) do |next_course| %>
+          <div class="col-md-6">
+            <%= render partial: 'next_course', collection: next_course %>
+          </div>
+        <% end %>
       </div>
-      <% end %>
-    </div>
+    <% end %>
     <%#= render 'main_content_extra' %>
     <hr class="add_bottom_30">
     <div class="row">
       <div class="col-md-12">
         <%= render 'layouts/cooperation_list' %>
+      </div>
+    </div>
+
+    <hr class="add_bottom_30">
+    <div class="row">
+      <div class="col-xs-12">
+        <%= link_to(image_tag("SPONSORbanner.jpg", class: "img-responsive"), "http://2015.rubyworld-conf.org/", target: "_blank") %>
       </div>
     </div>
   </div>
