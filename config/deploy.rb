@@ -13,11 +13,11 @@ set :repo_url, 'git@github.com:5xRuby/5xruby.tw.git'
 set :branch, 'master'
 set :bundle_binstubs, false
 
-set :deploy_to, '/var/www/5xruby.tw/root'
+set :deploy_to, '/var/Data/5xRuby-Home/5xruby.tw'
 set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
 
-set :default_env, { path: "/usr/local/ruby21/bin:$PATH" }
+#set :default_env, { path: "/usr/local/ruby21/bin:$PATH" }
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
