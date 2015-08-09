@@ -4,9 +4,9 @@ set :stage, :production
 # Supports bulk-adding hosts to roles, the primary server in each group
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
-role :app, %w{deploy@5xruby.tw}
-role :web, %w{deploy@5xruby.tw}
-role :db,  %w{deploy@5xruby.tw}
+role :app, %w{5xruby@60.250.121.194}
+role :web, %w{5xruby@60.250.121.194}
+role :db,  %w{5xruby@60.250.121.194}
 
 # Extended Server Syntax
 # ======================
