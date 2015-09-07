@@ -160,14 +160,6 @@ zh-TW:
           experience:
           about: 「有看過也能寫 Rails 的管理員嗎」
           skills: 行政庶務/活動企劃/課程宣傳
-        - name: 徐曦
-          title: 胡謅寶石
-          avatar: shesee2.jpg
-          facebook: https://www.facebook.com/hsu.c.12
-          twitter: https://twitter.com/sheseee
-          about:
-          blog: http://carolhsu.github.io/
-          skills: Ruby / Rails 開發 / 公共交通運輸資訊系統
 
     contacts:
       general_enquire: 歡迎諮詢

@@ -164,15 +164,6 @@ en:
           about: "I am an Office Manager, and I can code Rails."
           skills: Office Management
 
-        - name: Carol Hsu
-          title: Gem
-          avatar: shesee2.jpg
-          facebook: https://www.facebook.com/hsu.c.12
-          twitter: https://twitter.com/sheseee
-          about:
-          blog: http://carolhsu.github.io/
-          skills: Ruby / Rails / public transport information system
-
     contacts:
       general_enquire: Inquery
       follow_us: Community
