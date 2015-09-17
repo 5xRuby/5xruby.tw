@@ -160,6 +160,13 @@ zh-TW:
           experience:
           about: 「有看過也能寫 Rails 的管理員嗎」
           skills: 行政庶務/活動企劃/課程宣傳
+        - name: 謝宜峯
+          title: Creative Problem Solver
+          avatar: yifeng.jpg
+          facebook: http://fb.json.tw
+          blog: http://blog.json.tw
+          about: 「程式、電影、美食、人生」
+          skills: PHP / Ruby
 
     contacts:
       general_enquire: 歡迎諮詢

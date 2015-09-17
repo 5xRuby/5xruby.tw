@@ -163,7 +163,12 @@ en:
           experience:
           about: "I am an Office Manager, and I can code Rails."
           skills: Office Management
-
+        - name: Yifeng Xie
+          title: Creative Problem Solver
+          avatar: yifeng.jpg
+          facebook: http://fb.json.tw
+          blog: http://blog.json.tw
+          skills: PHP / Ruby
     contacts:
       general_enquire: Inquery
       follow_us: Community
