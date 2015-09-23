@@ -169,6 +169,12 @@ en:
           facebook: http://fb.json.tw
           blog: http://blog.json.tw
           skills: PHP / Ruby
+        - name: Nina Yeh
+          title: Ruby Artisan
+          avatar: nina.jpg
+          facebook: https://www.facebook.com/itsmeninayeh
+          about: "Wandering between art and program"
+          skills: Ruby / Rails / HTML / CSS
     contacts:
       general_enquire: Inquery
       follow_us: Community

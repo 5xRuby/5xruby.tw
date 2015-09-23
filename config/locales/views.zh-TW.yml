@@ -167,7 +167,12 @@ zh-TW:
           blog: http://blog.json.tw
           about: 「程式、電影、美食、人生」
           skills: PHP / Ruby
-
+        - name: Nina
+          title: 紅寶石工匠
+          avatar: nina.jpg
+          facebook: https://www.facebook.com/itsmeninayeh
+          about: 「徜徉在程式與藝術的彌留空間裡」
+          skills: Ruby / Rails / HTML / CSS
     contacts:
       general_enquire: 歡迎諮詢
       follow_us: 社群連結
