@@ -175,6 +175,12 @@ en:
           facebook: https://www.facebook.com/itsmeninayeh
           about: "Wandering between art and program"
           skills: Ruby / Rails / HTML / CSS
+        - name: Kendra Tang
+          title: Assistant Programmeow
+          avatar: tang.png
+          facebook: https://www.facebook.com/kendra.tang.meow
+          about: "Bug Freeeeee...!!"
+          skills: Ruby / Rails / HTML / CSS
     contacts:
       general_enquire: Inquery
       follow_us: Community
