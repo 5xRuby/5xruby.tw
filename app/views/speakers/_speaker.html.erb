@@ -14,12 +14,11 @@
       <% end %>
 
       <% if speaker.google_url.present? %>
-        <li><a href="<%= speaker.google_url %>" target="_blank"><i class=" icon-google"></i></a></li>
+        <li><a href="<%= speaker.google_url %>" target="_blank"><i class="icon-google"></i></a></li>
+      <% end %>
+      <% if speaker.blog_url.present? %>
+        <li><a href="<%= speaker.blog_url %>" target="_blank"><i class="icon-edit"></i></a></li>
       <% end %>
     </ul>
-    <% if speaker.blog_url.present? %>
-      <hr>
-      <%= link_to 'Blog', speaker.blog_url, target: :_blank, class: 'button_medium_outline' %>
-    <% end %>
   </div>
 </div>
