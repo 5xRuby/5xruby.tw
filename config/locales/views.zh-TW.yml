@@ -173,6 +173,12 @@ zh-TW:
           facebook: https://www.facebook.com/itsmeninayeh
           about: 「徜徉在程式與藝術的彌留空間裡」
           skills: Ruby / Rails / HTML / CSS
+        - name: 湯凱甯
+          title: 蛀矣攻城喵
+          avatar: tang.jpg
+          facebook: https://www.facebook.com/kendra.tang.meow
+          about: 「惡蟲退散！」
+          skills: Ruby / Rails / HTML / CSS
     contacts:
       general_enquire: 歡迎諮詢
       follow_us: 社群連結
