@@ -2234,6 +2234,8 @@ img.speaker {
 	border:1px solid #fff;
 }
 
+.box_outter { height: 500px; }
+
 .box_style_3 {
    position:relative;
    margin: 0 0 2em 0;

@@ -40,7 +40,7 @@
 
   <div class="row">
     <% t('.members').each do |member| %>
-    <div class="col-md-4 col-sm-6">
+    <div class="col-md-4 col-sm-6 box_outter">
       <div class=" box_style_3">
         <p><img src="<%= image_path(member[:avatar]) %>" alt="Teacher" class="img-circle styled" width="150px"></p>
         <h4 class="p-title"><%= member[:name] %> <small><%= member[:title] %></small></h4>
