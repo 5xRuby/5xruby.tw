@@ -23,6 +23,7 @@ class Course < ActiveRecord::Base
 
   # validation macros
   validates :title, presence: true
+  validates_format_of :permalink, with: /\A\w[-|\w|\d]+\z/
   validates :summary, length: {maximum: 150}
   select2_white_list :title
 

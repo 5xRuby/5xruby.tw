@@ -19,6 +19,7 @@ class Post < ActiveRecord::Base
 
   # validation macros
   validates :summary, length: {maximum: 150}
+  validates_format_of :permalink, with: /\A\w[-|\w|\d]+\z/
 
   # callbacks
 
