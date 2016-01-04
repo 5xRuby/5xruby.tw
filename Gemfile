@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.1.11'
+gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -45,7 +45,7 @@ gem 'rmagick', require: 'RMagick'
 gem 'enumerize'
 gem 'rack-mini-profiler'
 gem 'acts-as-taggable-on'
-gem 'select2_helper'
+gem 'select2_helper', git: 'https://github.com/ryudoawaru/select2_helper.git', branch: 'rails42'
 gem 'gistyle'
 gem 'handlebars_assets'
 
@@ -56,6 +56,7 @@ gem 'select2-rails'
 gem 'font-awesome-sass'
 
 group :development do
+  gem 'web-console'
   gem 'capistrano-rails'
   gem 'capistrano-flowdock'
   gem 'annotate'
