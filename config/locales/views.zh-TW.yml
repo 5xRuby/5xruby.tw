@@ -191,6 +191,13 @@ zh-TW:
           facebook: https://www.facebook.com/treekey999
           about: Blue who say and whose 認同請分享
           skills: Ruby / Rails / HTML / CSS
+        - name: Alan
+          title: 紅寶石吟遊詩人
+          avatar: alan.jpg
+          facebook: https://www.facebook.com/spart.chou
+          twitter: https://twitter.com/spartchou
+          about: 「旅行是唯一讓你花了錢，卻變得更富有的事物」
+          skills: Ruby / Rails
     contacts:
       general_enquire: 歡迎諮詢
       follow_us: 社群連結

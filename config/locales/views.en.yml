@@ -194,6 +194,13 @@ en:
           facebook: https://www.facebook.com/treekey999
           about: Nothing ventured Nothing gained. agree and share
           skills: Ruby / Rails / HTML / CSS
+        - name: Alan
+          title: Ruby Bard
+          avatar: alan.jpg
+          facebook: https://www.facebook.com/spart.chou
+          twitter: https://twitter.com/spartchou
+          about: "Travel is the only thing you buy that makes you richer"
+          skills: Ruby / Rails
     contacts:
       general_enquire: Inquery
       follow_us: Community
