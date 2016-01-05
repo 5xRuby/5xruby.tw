@@ -11,53 +11,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141031082820) do
+ActiveRecord::Schema.define(version: 20160104064158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "authors", force: true do |t|
-    t.string   "name"
+  create_table "authors", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "categories", force: true do |t|
-    t.string   "name",                           null: false
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",           limit: 255,                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "courses_count",  default: 0,     null: false
-    t.boolean  "is_highlighted", default: false, null: false
-    t.integer  "sort_id",        default: 0,     null: false
-    t.string   "permalink",                      null: false
+    t.integer  "courses_count",              default: 0,     null: false
+    t.boolean  "is_highlighted",             default: false, null: false
+    t.integer  "sort_id",                    default: 0,     null: false
+    t.string   "permalink",      limit: 255,                 null: false
   end
 
   add_index "categories", ["permalink"], name: "index_categories_on_permalink", unique: true, using: :btree
 
-  create_table "courses", force: true do |t|
-    t.string   "image"
-    t.string   "title",                             null: false
+  create_table "courses", force: :cascade do |t|
+    t.string   "image",             limit: 255
+    t.string   "title",             limit: 255,                 null: false
     t.text     "summary"
     t.text     "description"
     t.text     "what_will_learn"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "subtitle"
+    t.string   "subtitle",          limit: 255
     t.integer  "category_id"
-    t.boolean  "is_online",         default: false, null: false
-    t.string   "permalink",                         null: false
+    t.boolean  "is_online",                     default: false, null: false
+    t.string   "permalink",         limit: 255,                 null: false
     t.text     "note"
-    t.string   "apply_link"
-    t.string   "iframe_html"
-    t.integer  "maximum_attendees", default: 30,    null: false
-    t.integer  "total_attendees",   default: 0,     null: false
-    t.integer  "minimum_attendees", default: 5,     null: false
+    t.string   "apply_link",        limit: 255
+    t.string   "iframe_html",       limit: 255
+    t.integer  "maximum_attendees",             default: 30,    null: false
+    t.integer  "total_attendees",               default: 0,     null: false
+    t.integer  "minimum_attendees",             default: 5,     null: false
   end
 
   add_index "courses", ["category_id"], name: "index_courses_on_category_id", using: :btree
   add_index "courses", ["permalink"], name: "index_courses_on_permalink", unique: true, using: :btree
 
-  create_table "courses_speakers", id: false, force: true do |t|
+  create_table "courses_speakers", id: false, force: :cascade do |t|
     t.integer "course_id",  null: false
     t.integer "speaker_id", null: false
   end
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20141031082820) do
   add_index "courses_speakers", ["course_id", "speaker_id"], name: "index_courses_speakers_on_course_id_and_speaker_id", unique: true, using: :btree
   add_index "courses_speakers", ["speaker_id", "course_id"], name: "index_courses_speakers_on_speaker_id_and_course_id", unique: true, using: :btree
 
-  create_table "faqs", force: true do |t|
+  create_table "faqs", force: :cascade do |t|
     t.text     "question",                   null: false
     t.text     "answer",                     null: false
     t.boolean  "is_online",  default: false, null: false
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20141031082820) do
     t.integer  "sort_id",    default: 0,     null: false
   end
 
-  create_table "interview_questions", force: true do |t|
+  create_table "interview_questions", force: :cascade do |t|
     t.text     "question",                   null: false
     t.text     "answer",                     null: false
     t.integer  "sort_id",    default: 0,     null: false
@@ -83,56 +83,43 @@ ActiveRecord::Schema.define(version: 20141031082820) do
     t.datetime "updated_at"
   end
 
-  create_table "posts", force: true do |t|
-    t.string   "title",                      null: false
-    t.text     "content",                    null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image"
-    t.integer  "author_id"
-    t.text     "summary"
-    t.boolean  "is_online",  default: false, null: false
-    t.string   "permalink",                  null: false
-    t.datetime "publish_at"
-  end
+# Could not dump table "posts" because of following StandardError
+#   Unknown type 'markup_type' for column 'markup_type'
 
-  add_index "posts", ["author_id"], name: "index_posts_on_author_id", using: :btree
-  add_index "posts", ["permalink"], name: "index_posts_on_permalink", unique: true, using: :btree
-
-  create_table "redactor_images", force: true do |t|
-    t.string   "image",      null: false
+  create_table "redactor_images", force: :cascade do |t|
+    t.string   "image",      limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "showcases", force: true do |t|
-    t.string   "name"
+  create_table "showcases", force: :cascade do |t|
+    t.string   "name",        limit: 255
     t.text     "description"
-    t.string   "link"
-    t.string   "image"
-    t.boolean  "is_online",   default: false, null: false
-    t.integer  "sort_id",     default: 0,     null: false
+    t.string   "link",        limit: 255
+    t.string   "image",       limit: 255
+    t.boolean  "is_online",               default: false, null: false
+    t.integer  "sort_id",                 default: 0,     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "speakers", force: true do |t|
-    t.string   "avatar"
-    t.string   "name",                                null: false
+  create_table "speakers", force: :cascade do |t|
+    t.string   "avatar",       limit: 255
+    t.string   "name",         limit: 255,                        null: false
     t.text     "summary"
-    t.boolean  "is_online",    default: false,        null: false
+    t.boolean  "is_online",                default: false,        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "role",         default: "consultant", null: false
-    t.string   "title"
-    t.string   "facebook_url"
-    t.string   "twitter_url"
-    t.string   "google_url"
-    t.string   "blog_url"
-    t.integer  "sort_id",      default: 0,            null: false
+    t.string   "role",         limit: 255, default: "consultant", null: false
+    t.string   "title",        limit: 255
+    t.string   "facebook_url", limit: 255
+    t.string   "twitter_url",  limit: 255
+    t.string   "google_url",   limit: 255
+    t.string   "blog_url",     limit: 255
+    t.integer  "sort_id",                  default: 0,            null: false
   end
 
-  create_table "speakers_videos", id: false, force: true do |t|
+  create_table "speakers_videos", id: false, force: :cascade do |t|
     t.integer "video_id",   null: false
     t.integer "speaker_id", null: false
   end
@@ -140,44 +127,44 @@ ActiveRecord::Schema.define(version: 20141031082820) do
   add_index "speakers_videos", ["speaker_id", "video_id"], name: "index_speakers_videos_on_speaker_id_and_video_id", using: :btree
   add_index "speakers_videos", ["video_id", "speaker_id"], name: "index_speakers_videos_on_video_id_and_speaker_id", using: :btree
 
-  create_table "stages", force: true do |t|
-    t.integer  "course_id",                                   null: false
-    t.string   "title",                                       null: false
+  create_table "stages", force: :cascade do |t|
+    t.integer  "course_id",                                               null: false
+    t.string   "title",       limit: 255,                                 null: false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "date",        default: '2014-09-03',          null: false
-    t.time     "start_at",    default: '2000-01-01 00:00:00', null: false
-    t.time     "end_at",      default: '2000-01-01 00:00:00', null: false
-    t.float    "hours",       default: 1.0,                   null: false
+    t.date     "date",                    default: '2014-09-03',          null: false
+    t.time     "start_at",                default: '2000-01-01 00:00:00', null: false
+    t.time     "end_at",                  default: '2000-01-01 00:00:00', null: false
+    t.float    "hours",                   default: 1.0,                   null: false
   end
 
   add_index "stages", ["course_id"], name: "index_stages_on_course_id", using: :btree
 
-  create_table "taggings", force: true do |t|
+  create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
-    t.string   "taggable_type"
+    t.string   "taggable_type", limit: 255
     t.integer  "tagger_id"
-    t.string   "tagger_type"
+    t.string   "tagger_type",   limit: 255
     t.string   "context",       limit: 128
     t.datetime "created_at"
   end
 
   add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
 
-  create_table "tags", force: true do |t|
-    t.string  "name"
-    t.integer "taggings_count", default: 0
+  create_table "tags", force: :cascade do |t|
+    t.string  "name",           limit: 255
+    t.integer "taggings_count",             default: 0
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
-  create_table "translations", force: true do |t|
+  create_table "translations", force: :cascade do |t|
     t.integer  "translatable_id"
-    t.string   "translatable_type"
-    t.string   "column"
-    t.string   "locale"
+    t.string   "translatable_type", limit: 255
+    t.string   "column",            limit: 255
+    t.string   "locale",            limit: 255
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -185,15 +172,15 @@ ActiveRecord::Schema.define(version: 20141031082820) do
 
   add_index "translations", ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
 
-  create_table "videos", force: true do |t|
-    t.string   "title"
-    t.string   "iframe"
-    t.string   "summary"
+  create_table "videos", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.string   "iframe",      limit: 255
+    t.string   "summary",     limit: 255
     t.text     "description"
     t.boolean  "is_online"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image"
+    t.string   "image",       limit: 255
   end
 
 end
