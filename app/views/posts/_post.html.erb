@@ -20,7 +20,7 @@
     <% if action_name == 'index' %>
       <p><%= tr(post, :summary) %></p>
     <% else %>
-      <%= raw tr(post, :content) %>
+      <%=render_post post %>
     <% end %>
   </div>
   <%= link_to t('.read_more'), post, class: 'button_medium', title: tr(post, :title) if action_name == 'index' %>

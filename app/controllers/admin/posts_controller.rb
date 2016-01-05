@@ -15,6 +15,7 @@ class Admin::PostsController < AdminController
   # GET /admin/posts/new
   def new
     @admin_post = Admin::Post.new
+    logger.info @admin_post.inspect
   end
 
   # GET /admin/posts/1/edit
@@ -69,6 +70,6 @@ class Admin::PostsController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_post_params
-      params.require(:admin_post).permit(:image, :remove_image, :title, :permalink, :content, :author_id, :tag_list, :summary, :is_online, :publish_at)
+      params.require(:admin_post).permit(:markup_type, :image, :remove_image, :title, :permalink, :content, :author_id, :tag_list, :summary, :is_online, :publish_at, :content_html, :content_markdown)
     end
 end

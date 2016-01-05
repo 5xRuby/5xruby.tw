@@ -13,9 +13,13 @@
 #= require highlightjs_helper
 #= require gistyle
 #= require handlebars
+#= require bootstrap-markdown
+#= require markdown
+#= require to-markdown
+#= require jquery-fileupload/basic
 #= require_tree ./admin
 
-APP['admin'] = 
+APP['admin'] =
   space_price: () ->
     source   = $("#template_row").html()
     template = Handlebars.compile(source)
