@@ -69,9 +69,9 @@ zh-TW:
         note: 備註
         apply_link: 報名網址
         iframe_html: iframe
-        maximum_attendees: 講座招收人數
-        total_attendees: 目前報名人數
-        minimum_attendees: 最低開班人數
+        maximum_attendees: 招收人數
+        total_attendees: 報名人數
+        minimum_attendees: 最低人數
       stage:
         title: 標題
         description: 介紹
