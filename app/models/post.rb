@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  AVAILABLE_MARKUP_TYPES = %w{html markdown}
   # scope macros
   scope :online, -> { where(is_online: true) }
   scope :publish, -> { where('publish_at < ?', Time.now) }
