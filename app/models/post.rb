@@ -13,11 +13,12 @@ class Post < ActiveRecord::Base
   end
 
   def content_html=(v)
-    content = v if markup_type == 'html'
+    logger.info "------#{self.inspect}, #{v}"
+    self.content = v if markup_type == 'html'
   end
 
   def content_markdown=(v)
-    content = v if markup_type == 'markdown'
+    self.content = v if markup_type == 'markdown'
   end
 
   # Concerns macros
