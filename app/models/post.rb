@@ -8,11 +8,16 @@ class Post < ActiveRecord::Base
 
   %w{content_html content_markdown}.each do |atr|
     define_method atr do
-      self.content
+      content
     end
-    define_method "#{atr}=" do |v|
-      self.content = v
-    end
+  end
+
+  def content_html=(v)
+    content = v if markup_type == 'html'
+  end
+
+  def content_markdown=(v)
+    content = v if markup_type == 'markdown'
   end
 
   # Concerns macros

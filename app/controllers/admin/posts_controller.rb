@@ -15,7 +15,6 @@ class Admin::PostsController < AdminController
   # GET /admin/posts/new
   def new
     @admin_post = Admin::Post.new
-    logger.info @admin_post.inspect
   end
 
   # GET /admin/posts/1/edit
