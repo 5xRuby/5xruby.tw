@@ -201,6 +201,13 @@ en:
           twitter: https://twitter.com/spartchou
           about: "Travel is the only thing you buy that makes you richer"
           skills: Ruby / Rails
+        - name: Yusheng Li
+          title: Mosquito Hacker
+          avatar: yusheng.jpg
+          facebook: https://www.facebook.com/bbgba1923
+          twitter: https://twitter.com/HardisonSY
+          about: Worse is Better.
+          skills: Ruby / Rails / HTML / CSS
     contacts:
       general_enquire: Inquery
       follow_us: Community
