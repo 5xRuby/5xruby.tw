@@ -178,13 +178,6 @@ zh-TW:
           facebook: https://www.facebook.com/fokayx
           about: [おK 。]
           skills: Ruby/ Objective-C
-        - name: Leslie
-          title: 邱比特紅寶石
-          avatar: Leslie.jpg
-          facebook: https://www.facebook.com/leslie.chen.75
-          twitter: https://twitter.com/Lesliesychen
-          about: 「不可思議，不可思量」
-          skills: 活動策劃／合作洽談／數位行銷／苦口婆心
         - name: Treekey
           title: 卍殺神乂紅寶石乂斬佛卍
           avatar: treekey.jpg
@@ -198,6 +191,13 @@ zh-TW:
           twitter: https://twitter.com/spartchou
           about: 「旅行是唯一讓你花了錢，卻變得更富有的事物」
           skills: Ruby / Rails
+        - name: 李昱陞
+          title: 登革熱帶原者
+          avatar: yusheng.jpg
+          facebook: https://www.facebook.com/bbgba1923
+          twitter: https://twitter.com/HardisonSY
+          about: 「劣即是夯」
+          skills: Ruby / Rails / HTML / CSS
     contacts:
       general_enquire: 歡迎諮詢
       follow_us: 社群連結

@@ -181,13 +181,6 @@ en:
           facbook: https://www.facebook.com/fokayx
           about: "[おK 。]"
           skills: Ruby/ Objective-C
-        - name: Leslie Chen
-          title: Public Relationship
-          avatar: Leslie.jpg
-          facebook: https://www.facebook.com/leslie.chen.75
-          twitter: https://twitter.com/Lesliesychen
-          about: A murmur fake-hipster
-          skills: Social media marketing / PR / Cooperation management
         - name: Treekey
           title: 卍George乂Ruby乂Mary卍
           avatar: treekey.jpg
@@ -201,6 +194,13 @@ en:
           twitter: https://twitter.com/spartchou
           about: "Travel is the only thing you buy that makes you richer"
           skills: Ruby / Rails
+        - name: Yusheng Li
+          title: Mosquito Hacker
+          avatar: yusheng.jpg
+          facebook: https://www.facebook.com/bbgba1923
+          twitter: https://twitter.com/HardisonSY
+          about: Worse is Better.
+          skills: Ruby / Rails / HTML / CSS
     contacts:
       general_enquire: Inquery
       follow_us: Community
