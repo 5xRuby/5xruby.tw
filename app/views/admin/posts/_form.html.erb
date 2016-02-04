@@ -2,11 +2,7 @@
 
   <div class="form-inputs">
     <%if f.object.new_record?%>
-      <%= f.input :markup_type do %>
-        <%Post::AVAILABLE_MARKUP_TYPES.each do |mt|%>
-          <label><%=f.radio_button :markup_type, mt%><%=mt%></label>
-        <%end%>
-      <%end%>
+      <%= f.input :markup_type, collection: Post::AVAILABLE_MARKUP_TYPES, label: "類型", include_blank: false%>
     <%else%>
       <%=f.hidden_field :markup_type%>
     <%end%>
@@ -18,7 +14,7 @@
     <%= f.input :summary, hint: '最多 150 字，用在 meta tag 和 posts/index 頁面' %>
     <%= f.input :content_html, as: :text, wrapper_html: {class: 'content-editor'}, input_html: {class: 'redactor'}%>
     <%= f.input :content_markdown, as: :text, input_html: {class: 'markdown-editor'}, wrapper_html: {class: 'content-editor'}%>
-    <%= f.input :tag_list, input_html: {class: 'select2-tags'} %>
+    <%= f.input :tag_list, input_html: {class: 'select2-tags',value: f.object.tags.pluck(:name).join(",")} %>
     <%= f.input :is_online %>
     <%= f.input :publish_at %>
   </div>
