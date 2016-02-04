@@ -7,6 +7,13 @@ GIT
       activesupport (>= 3.0.0)
 
 GIT
+  remote: https://github.com/MiniProfiler/rack-mini-profiler.git
+  revision: 96afa78c425a61aedda62db559c8cb51b30efb4e
+  specs:
+    rack-mini-profiler (0.9.8)
+      rack (>= 1.2.0)
+
+GIT
   remote: https://github.com/mbleigh/acts-as-taggable-on.git
   revision: 38b6e7c5bf60b1d28e99ea3a7275ba764f915610
   specs:
@@ -172,8 +179,6 @@ GEM
       railties (>= 3.1, < 5.0)
     rack (2.0.0.alpha)
       json
-    rack-mini-profiler (0.9.8)
-      rack (>= 1.1.3)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.beta2)
@@ -297,7 +302,7 @@ DEPENDENCIES
   nested_form
   pg
   quiet_assets
-  rack-mini-profiler
+  rack-mini-profiler!
   rails (= 5.0.0.beta2)
   rails-i18n
   rdiscount

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'rack-mini-profiler', git: 'https://github.com/MiniProfiler/rack-mini-profiler.git'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.0.beta2'
 # Use postgresql as the database for Active Record
@@ -47,7 +47,6 @@ gem 'settingslogic'
 gem 'rails-i18n'
 gem 'rmagick', require: 'RMagick'
 gem 'enumerize'
-gem 'rack-mini-profiler'
 gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on.git'
 gem 'select2_helper', git: 'https://github.com/ryudoawaru/select2_helper.git', branch: 'rails42'
 gem 'gistyle'
@@ -76,3 +75,4 @@ group :development, :test, :staging do
   gem 'factory_girl_rails'
   gem 'faker'
 end
+
