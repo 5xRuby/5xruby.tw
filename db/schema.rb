@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160104064158) do
+ActiveRecord::Schema.define(version: 20160203040402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,9 +30,8 @@ ActiveRecord::Schema.define(version: 20160104064158) do
     t.boolean  "is_highlighted",             default: false, null: false
     t.integer  "sort_id",                    default: 0,     null: false
     t.string   "permalink",      limit: 255,                 null: false
+    t.index ["permalink"], name: "index_categories_on_permalink", unique: true, using: :btree
   end
-
-  add_index "categories", ["permalink"], name: "index_categories_on_permalink", unique: true, using: :btree
 
   create_table "courses", force: :cascade do |t|
     t.string   "image",             limit: 255
@@ -52,18 +51,16 @@ ActiveRecord::Schema.define(version: 20160104064158) do
     t.integer  "maximum_attendees",             default: 30,    null: false
     t.integer  "total_attendees",               default: 0,     null: false
     t.integer  "minimum_attendees",             default: 5,     null: false
+    t.index ["category_id"], name: "index_courses_on_category_id", using: :btree
+    t.index ["permalink"], name: "index_courses_on_permalink", unique: true, using: :btree
   end
-
-  add_index "courses", ["category_id"], name: "index_courses_on_category_id", using: :btree
-  add_index "courses", ["permalink"], name: "index_courses_on_permalink", unique: true, using: :btree
 
   create_table "courses_speakers", id: false, force: :cascade do |t|
     t.integer "course_id",  null: false
     t.integer "speaker_id", null: false
+    t.index ["course_id", "speaker_id"], name: "index_courses_speakers_on_course_id_and_speaker_id", unique: true, using: :btree
+    t.index ["speaker_id", "course_id"], name: "index_courses_speakers_on_speaker_id_and_course_id", unique: true, using: :btree
   end
-
-  add_index "courses_speakers", ["course_id", "speaker_id"], name: "index_courses_speakers_on_course_id_and_speaker_id", unique: true, using: :btree
-  add_index "courses_speakers", ["speaker_id", "course_id"], name: "index_courses_speakers_on_speaker_id_and_course_id", unique: true, using: :btree
 
   create_table "faqs", force: :cascade do |t|
     t.text     "question",                   null: false
@@ -122,10 +119,9 @@ ActiveRecord::Schema.define(version: 20160104064158) do
   create_table "speakers_videos", id: false, force: :cascade do |t|
     t.integer "video_id",   null: false
     t.integer "speaker_id", null: false
+    t.index ["speaker_id", "video_id"], name: "index_speakers_videos_on_speaker_id_and_video_id", using: :btree
+    t.index ["video_id", "speaker_id"], name: "index_speakers_videos_on_video_id_and_speaker_id", using: :btree
   end
-
-  add_index "speakers_videos", ["speaker_id", "video_id"], name: "index_speakers_videos_on_speaker_id_and_video_id", using: :btree
-  add_index "speakers_videos", ["video_id", "speaker_id"], name: "index_speakers_videos_on_video_id_and_speaker_id", using: :btree
 
   create_table "stages", force: :cascade do |t|
     t.integer  "course_id",                                               null: false
@@ -137,9 +133,8 @@ ActiveRecord::Schema.define(version: 20160104064158) do
     t.time     "start_at",                default: '2000-01-01 00:00:00', null: false
     t.time     "end_at",                  default: '2000-01-01 00:00:00', null: false
     t.float    "hours",                   default: 1.0,                   null: false
+    t.index ["course_id"], name: "index_stages_on_course_id", using: :btree
   end
-
-  add_index "stages", ["course_id"], name: "index_stages_on_course_id", using: :btree
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
@@ -149,16 +144,22 @@ ActiveRecord::Schema.define(version: 20160104064158) do
     t.string   "tagger_type",   limit: 255
     t.string   "context",       limit: 128
     t.datetime "created_at"
+    t.index ["context"], name: "index_taggings_on_context", using: :btree
+    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
+    t.index ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
+    t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
+    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy", using: :btree
+    t.index ["taggable_id"], name: "index_taggings_on_taggable_id", using: :btree
+    t.index ["taggable_type"], name: "index_taggings_on_taggable_type", using: :btree
+    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type", using: :btree
+    t.index ["tagger_id"], name: "index_taggings_on_tagger_id", using: :btree
   end
-
-  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
 
   create_table "tags", force: :cascade do |t|
     t.string  "name",           limit: 255
     t.integer "taggings_count",             default: 0
+    t.index ["name"], name: "index_tags_on_name", unique: true, using: :btree
   end
-
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
   create_table "translations", force: :cascade do |t|
     t.integer  "translatable_id"
@@ -168,9 +169,8 @@ ActiveRecord::Schema.define(version: 20160104064158) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
   end
-
-  add_index "translations", ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
 
   create_table "videos", force: :cascade do |t|
     t.string   "title",       limit: 255

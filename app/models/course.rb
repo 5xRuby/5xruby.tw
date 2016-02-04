@@ -2,7 +2,7 @@ class Course < ActiveRecord::Base
   # scope macros
   scope :online, -> { where(is_online: true) }
   scope :coming, -> { select('courses.*, min(date) as min_date').joins(:stages).group('courses.id').order('min_date') }
-  scope :available, -> { online.where('stages.date >= ?', Time.now).joins(:stages).uniq }
+  scope :available, -> { online.where('stages.date >= ?', Time.now).joins(:stages).distinct }
 
   # Concerns macros
   include Select2Concern

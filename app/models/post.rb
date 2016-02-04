@@ -13,7 +13,6 @@ class Post < ActiveRecord::Base
   end
 
   def content_html=(v)
-    logger.info "------#{self.inspect}, #{v}"
     self.content = v if markup_type == 'html'
   end
 
