@@ -4,7 +4,7 @@ module MathjaxHelper
     result = content_tag :script, type: 'text/x-mathjax-config' do
       "MathJax.Hub.Config({elements: #{js_array},messageStyle: 'none',tex2jax: {inlineMath: [['$','$']]}});".html_safe
     end
-    result += javascript_include_tag 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+    result += javascript_include_tag '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
     result
   end
 end
