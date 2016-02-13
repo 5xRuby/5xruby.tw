@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-       <form action="http://maps.google.com/maps" method="get" target="_blank">
+       <form action="//maps.google.com/maps" method="get" target="_blank">
         <div class="input-group">
           <input type="text" name="saddr" placeholder="<%= t('.enter_your_starting_point') %>" class="form-control style-2" />
           <input type="hidden" name="daddr" value="<%= t('company.address') %>"/><!-- Write here your end point -->
@@ -123,7 +123,7 @@
 
 <% content_for :append_body do %>
   <!-- GOOGLE MAP -->
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
   <script type="text/javascript" src="/js/mapmarker.jquery.js"></script>
   <script type="text/javascript" src="/js/mapmarker_func.jquery.js"></script>
 <% end %>
