@@ -87,6 +87,6 @@ class Course < ActiveRecord::Base
   private
   def force_using_ssl_iframe
     pattern = /(http:\/\/)/
-    self.iframe_html.sub!(pattern, "https://") if pattern.match(self.iframe_html)
+    self.iframe_html.sub!(pattern, "//") if pattern.match(self.iframe_html)
   end
 end

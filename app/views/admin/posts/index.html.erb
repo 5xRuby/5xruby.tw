@@ -16,7 +16,7 @@
     <% @admin_posts.each do |admin_post| %>
       <tr>
         <%= td_for admin_post, [:publish_at, ->(p){ l p.publish_at, format: :short }], :id, :image, :title, :permalink, :summary, [:author, :name] %>
-        <%= td_action_for admin_post %>
+        <%= td_action_for_post admin_post %>
       </tr>
     <% end %>
   </tbody>
