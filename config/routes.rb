@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   # back
   namespace :admin, path: Settings.admin_path_prefix do
     get :space_price
-    resources :posts, :courses, :authors, :speakers, :faqs, :categories, :showcases, :videos, :interview_questions do
+    resources :posts do
+      put :sort, on: :collection
+      get :preview, on: :member
+    end
+    resources :courses, :authors, :speakers, :faqs, :categories, :showcases, :videos, :interview_questions do
       put :sort, on: :collection
     end
     resources :translations, only: %i[index create update]

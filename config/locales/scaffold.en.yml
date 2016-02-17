@@ -4,6 +4,8 @@ en:
   message:
     are_you_sure: Are you sure？
   crud:
+    preview: Preview
+    preview!: Preview%{resource}
     new!: new%{resource}
     new: new
     create!: create%{resource}
