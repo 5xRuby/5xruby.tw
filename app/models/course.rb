@@ -28,6 +28,7 @@ class Course < ActiveRecord::Base
   select2_white_list :title
 
   # callbacks
+  before_save :force_using_ssl_iframe
 
   # other
 
@@ -81,5 +82,11 @@ class Course < ActiveRecord::Base
 
   def outdated?
     stages.map(&:date).max < Time.now
+  end
+
+  private
+  def force_using_ssl_iframe
+    pattern = /(http:\/\/)/
+    self.iframe_html.sub!(pattern, "https://") if pattern.match(self.iframe_html)
   end
 end
