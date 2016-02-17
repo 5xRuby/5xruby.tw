@@ -4,6 +4,8 @@ zh-TW:
   message:
     are_you_sure: 你確定？
   crud:
+    preview: 預覽
+    preview!: 預覽%{resource}
     new!: 新增%{resource}
     new: 新增
     create!: 新增%{resource}
