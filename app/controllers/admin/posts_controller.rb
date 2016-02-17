@@ -1,5 +1,12 @@
 class Admin::PostsController < AdminController
-  before_action :set_admin_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_admin_post, only: [:show, :edit, :update, :destroy, :preview]
+  include PostViewable
+  before_action :set_recent_posts, :set_tags, only: [:preview]
+
+  def preview
+    @post = @admin_post
+    render layout: "application", template: "/posts/show"
+  end
 
   # GET /admin/posts
   # GET /admin/posts.json

@@ -3,10 +3,10 @@
     <%= breadcrumb link_to(t('.title'), posts_path), tr(@post, :title) %>
     <div class="row">
       <aside class="col-md-4">
-        <%= render 'sidebar' %>
+        <%= render '/posts/sidebar' %>
       </aside>
       <div class="col-md-8">
-        <%= render @post %>
+        <%= render partial: '/posts/post', locals: {post: @post} %>
         <hr>
         <%= render 'layouts/disqus' %>
       </div>
