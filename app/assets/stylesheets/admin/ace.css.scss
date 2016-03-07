@@ -2,3 +2,8 @@
   height: 300px;
   width: 100%;
 }
+
+label input[type='checkbox'].form-control {
+  width: auto;
+  height: auto;
+}
