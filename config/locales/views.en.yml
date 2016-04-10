@@ -201,6 +201,11 @@ en:
           twitter: https://twitter.com/HardisonSY
           about: Worse is Better.
           skills: Ruby / Rails / HTML / CSS
+        - name: Git
+          title: Dark Ruby
+          avatar: cat.jpg
+          about: 「Meow~~Meow~~Meow Meow Meow~~~」
+          skills: Play / Eat / Sleep
     contacts:
       general_enquire: Inquery
       follow_us: Community
