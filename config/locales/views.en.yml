@@ -201,6 +201,12 @@ en:
           twitter: https://twitter.com/HardisonSY
           about: Worse is Better.
           skills: Ruby / Rails / HTML / CSS
+        - name: Cat Sun
+          title: Cat Poop Cleaner
+          avatar: cat-sun.jpg
+          facebook: https://www.facebook.com/black.cat.sun
+          about: Villain
+          skills: HTML / CSS / jQuery
         - name: Git
           title: Dark Ruby
           avatar: cat.jpg
