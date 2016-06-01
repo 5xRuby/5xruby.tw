@@ -213,6 +213,12 @@ en:
           about: 「Meow~~Meow~~Meow Meow Meow~~~」
           skills: Play / Eat / Sleep
           facebook: https://www.facebook.com/meowmeowsister1
+        - name: Kosuke :)
+          title: Ruby Samurai
+          avatar: kosuke.jpg
+          about: "Change the world"
+          skills: Ruby / Rails
+          twitter: https://twitter.com/kosuke7kon
     contacts:
       general_enquire: Inquery
       follow_us: Community

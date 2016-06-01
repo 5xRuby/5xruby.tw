@@ -17,42 +17,44 @@ ActiveRecord::Schema.define(version: 20160203040402) do
   enable_extension "plpgsql"
 
   create_table "authors", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name",           limit: 255,                 null: false
+    t.string   "name",                           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "courses_count",              default: 0,     null: false
-    t.boolean  "is_highlighted",             default: false, null: false
-    t.integer  "sort_id",                    default: 0,     null: false
-    t.string   "permalink",      limit: 255,                 null: false
+    t.integer  "courses_count",  default: 0,     null: false
+    t.boolean  "is_highlighted", default: false, null: false
+    t.integer  "sort_id",        default: 0,     null: false
+    t.string   "permalink",                      null: false
+    t.index ["name"], name: "index_categories_on_name", using: :btree
     t.index ["permalink"], name: "index_categories_on_permalink", unique: true, using: :btree
   end
 
   create_table "courses", force: :cascade do |t|
-    t.string   "image",             limit: 255
-    t.string   "title",             limit: 255,                 null: false
+    t.string   "image"
+    t.string   "title",                             null: false
     t.text     "summary"
     t.text     "description"
     t.text     "what_will_learn"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "subtitle",          limit: 255
+    t.string   "subtitle"
     t.integer  "category_id"
-    t.boolean  "is_online",                     default: false, null: false
-    t.string   "permalink",         limit: 255,                 null: false
+    t.boolean  "is_online",         default: false, null: false
+    t.string   "permalink",                         null: false
     t.text     "note"
-    t.string   "apply_link",        limit: 255
-    t.string   "iframe_html",       limit: 255
-    t.integer  "maximum_attendees",             default: 30,    null: false
-    t.integer  "total_attendees",               default: 0,     null: false
-    t.integer  "minimum_attendees",             default: 5,     null: false
+    t.string   "apply_link"
+    t.string   "iframe_html"
+    t.integer  "maximum_attendees", default: 30,    null: false
+    t.integer  "total_attendees",   default: 0,     null: false
+    t.integer  "minimum_attendees", default: 5,     null: false
     t.index ["category_id"], name: "index_courses_on_category_id", using: :btree
     t.index ["permalink"], name: "index_courses_on_permalink", unique: true, using: :btree
+    t.index ["title"], name: "index_courses_on_title", using: :btree
   end
 
   create_table "courses_speakers", id: false, force: :cascade do |t|
@@ -84,36 +86,37 @@ ActiveRecord::Schema.define(version: 20160203040402) do
 #   Unknown type 'markup_type' for column 'markup_type'
 
   create_table "redactor_images", force: :cascade do |t|
-    t.string   "image",      limit: 255, null: false
+    t.string   "image",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "showcases", force: :cascade do |t|
-    t.string   "name",        limit: 255
+    t.string   "name"
     t.text     "description"
-    t.string   "link",        limit: 255
-    t.string   "image",       limit: 255
-    t.boolean  "is_online",               default: false, null: false
-    t.integer  "sort_id",                 default: 0,     null: false
+    t.string   "link"
+    t.string   "image"
+    t.boolean  "is_online",   default: false, null: false
+    t.integer  "sort_id",     default: 0,     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "speakers", force: :cascade do |t|
-    t.string   "avatar",       limit: 255
-    t.string   "name",         limit: 255,                        null: false
+    t.string   "avatar"
+    t.string   "name",                                null: false
     t.text     "summary"
-    t.boolean  "is_online",                default: false,        null: false
+    t.boolean  "is_online",    default: false,        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "role",         limit: 255, default: "consultant", null: false
-    t.string   "title",        limit: 255
-    t.string   "facebook_url", limit: 255
-    t.string   "twitter_url",  limit: 255
-    t.string   "google_url",   limit: 255
-    t.string   "blog_url",     limit: 255
-    t.integer  "sort_id",                  default: 0,            null: false
+    t.string   "role",         default: "consultant", null: false
+    t.string   "title"
+    t.string   "facebook_url"
+    t.string   "twitter_url"
+    t.string   "google_url"
+    t.string   "blog_url"
+    t.integer  "sort_id",      default: 0,            null: false
+    t.index ["name"], name: "index_speakers_on_name", using: :btree
   end
 
   create_table "speakers_videos", id: false, force: :cascade do |t|
@@ -124,24 +127,24 @@ ActiveRecord::Schema.define(version: 20160203040402) do
   end
 
   create_table "stages", force: :cascade do |t|
-    t.integer  "course_id",                                               null: false
-    t.string   "title",       limit: 255,                                 null: false
+    t.integer  "course_id",                                   null: false
+    t.string   "title",                                       null: false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "date",                    default: '2014-09-03',          null: false
-    t.time     "start_at",                default: '2000-01-01 00:00:00', null: false
-    t.time     "end_at",                  default: '2000-01-01 00:00:00', null: false
-    t.float    "hours",                   default: 1.0,                   null: false
+    t.date     "date",        default: '2014-09-03',          null: false
+    t.time     "start_at",    default: '2000-01-01 00:00:00', null: false
+    t.time     "end_at",      default: '2000-01-01 00:00:00', null: false
+    t.float    "hours",       default: 1.0,                   null: false
     t.index ["course_id"], name: "index_stages_on_course_id", using: :btree
   end
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
+    t.string   "taggable_type"
     t.integer  "taggable_id"
-    t.string   "taggable_type", limit: 255
+    t.string   "tagger_type"
     t.integer  "tagger_id"
-    t.string   "tagger_type",   limit: 255
     t.string   "context",       limit: 128
     t.datetime "created_at"
     t.index ["context"], name: "index_taggings_on_context", using: :btree
@@ -156,31 +159,31 @@ ActiveRecord::Schema.define(version: 20160203040402) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string  "name",           limit: 255
-    t.integer "taggings_count",             default: 0
+    t.string  "name"
+    t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true, using: :btree
   end
 
   create_table "translations", force: :cascade do |t|
+    t.string   "translatable_type"
     t.integer  "translatable_id"
-    t.string   "translatable_type", limit: 255
-    t.string   "column",            limit: 255
-    t.string   "locale",            limit: 255
+    t.string   "column"
+    t.string   "locale"
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
+    t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 
   create_table "videos", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.string   "iframe",      limit: 255
-    t.string   "summary",     limit: 255
+    t.string   "title"
+    t.string   "iframe"
+    t.string   "summary"
     t.text     "description"
     t.boolean  "is_online"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image",       limit: 255
+    t.string   "image"
   end
 
 end
