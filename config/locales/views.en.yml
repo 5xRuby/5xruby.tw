@@ -219,6 +219,13 @@ en:
           about: "Change the world"
           skills: Ruby / Rails
           twitter: https://twitter.com/kosuke7kon
+        - name: Roy Huang
+          title: Chaotic Evil Ruby
+          avatar: roy.jpg
+          about: "push -f is a part of Git. I will never stop doing it!"
+          skills: Ruby / Rails
+          twitter: https://twitter.com/roy_times_5
+          facebook: http://facebook.com/roy.huang.963 
     contacts:
       general_enquire: Inquery
       follow_us: Community
