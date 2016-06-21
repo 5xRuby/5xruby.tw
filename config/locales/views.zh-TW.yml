@@ -216,6 +216,13 @@ zh-TW:
           about: 「改變世界」
           skills: Ruby / Rails
           twitter: https://twitter.com/kosuke7kon
+        - name: Roy Huang
+          title: 混亂邪惡紅寶石
+          avatar: roy.jpg
+          about: 「push -f 是 git 的一環，我是不會住手的！」
+          skills: Ruby / Rails
+          twitter: https://twitter.com/roy_times_5
+          facebook: http://facebook.com/roy.huang.963 
     contacts:
       general_enquire: 歡迎諮詢
       follow_us: 社群連結
