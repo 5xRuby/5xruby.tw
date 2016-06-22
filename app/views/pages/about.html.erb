@@ -42,7 +42,7 @@
     <% t('.members').each do |member| %>
     <div class="col-md-4 col-sm-6 box_outter">
       <div class=" box_style_3">
-        <p><img src="<%= image_path(member[:avatar]) %>" alt="Teacher" class="img-circle styled" width="150px"></p>
+        <p><img src="<%= image_path(member[:avatar]) %>" alt="<%= member[:name] %>" class="img-circle styled img-circle-avatar"></p>
         <h4 class="p-title"><%= member[:name] %> <small><%= member[:title] %></small></h4>
         <%= t('.speciality') %>: <small><%= member[:skills] %></small>
         <p><%= member[:about] %></p>
