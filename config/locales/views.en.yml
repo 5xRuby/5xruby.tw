@@ -226,6 +226,13 @@ en:
           skills: Ruby / Rails
           twitter: https://twitter.com/roy_times_5
           facebook: http://facebook.com/roy.huang.963 
+        - name: ilake
+          title: Tainan painter
+          avatar: ilake.jpg
+          about: "C’est la vie"
+          skills: Ruby / Rails
+          facebook: http://facebook.com/ilake.chang
+
     contacts:
       general_enquire: Inquery
       follow_us: Community
