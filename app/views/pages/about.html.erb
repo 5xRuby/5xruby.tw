@@ -24,6 +24,7 @@
                     <li><a href="https://www.facebook.com/eddiekao" target="_blank"><i class="icon-facebook"></i></a></li>
                     <li><a href="https://twitter.com/eddiekao" target="_blank"><i class="icon-twitter"></i></a></li>
                     <li><a href="https://plus.google.com/u/0/102669323697108172752/about" target="_blank"><i class="icon-google"></i></a></li>
+                    <li><a href="https://github.com/kaochenlong" target="_blank"><i class="icon-github"></i></a></li>
                   </ul>
                   「希望有天可以寫程式來改變世界!」
                 </div><!-- transition top -->
@@ -58,6 +59,11 @@
           <% if member[:google] %>
             <li><a href="<%= member[:google] %>" target="_blank"><i class=" icon-google"></i></a></li>
           <% end %>
+
+          <% if member[:github] %>
+            <li><a href="<%= member[:github] %>" target="_blank"><i class=" icon-github"></i></a></li>
+          <% end %>
+
         </ul>
         <% if member[:blog] %>
         <hr>

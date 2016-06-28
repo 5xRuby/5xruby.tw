@@ -144,6 +144,7 @@ en:
           avatar: ryudoawaru.jpg
           facebook: https://www.facebook.com/ryudoawaru
           twitter: https://twitter.com/ryudoawaru
+          github: https://github.com/ryudoawaru
           experience: Organizer of RubyConf Taiwan and Rails Girls Taipei
           about: "A non-typical website maintainer"
           blog: http://ryudo.tw/
@@ -154,6 +155,7 @@ en:
           avatar: jodeci2.jpg
           facebook: https://www.facebook.com/tsehau
           twitter: https://twitter.com/thchao
+          github: https://github.com/jodeci
           about: "Hipster turned geek."
           skills: Ruby / Rails / PHP / EN / JP
 
@@ -164,30 +166,35 @@ en:
           experience:
           about: "I am an Office Manager, and I can code Rails."
           skills: Office Management
+
         - name: Nina Yeh
           title: Ruby Artisan
           avatar: nina.jpg
           facebook: https://www.facebook.com/itsmeninayeh
           about: "Wandering between art and program"
           skills: Ruby / Rails / HTML / CSS
+
         - name: Kendra Tang
           title: Assistant Programmeow
           avatar: tang.jpg
           facebook: https://www.facebook.com/kendra.tang.meow
           about: "Bug Freeeeee...!!"
           skills: Ruby / Rails / HTML / CSS
+
         - name: 。KAY
           title: Ruby Ronin
           avatar: ok.jpg
           facbook: https://www.facebook.com/fokayx
           about: "[おK 。]"
           skills: Ruby/ Objective-C
+
         - name: Treekey
           title: 卍George乂Ruby乂Mary卍
           avatar: treekey.jpg
           facebook: https://www.facebook.com/treekey999
           about: Nothing ventured Nothing gained. agree and share
           skills: Ruby / Rails / HTML / CSS
+
         - name: Alan
           title: Ruby Bard
           avatar: alan.jpg
@@ -195,6 +202,7 @@ en:
           twitter: https://twitter.com/spartchou
           about: "Travel is the only thing you buy that makes you richer"
           skills: Ruby / Rails
+
         - name: Yusheng Li
           title: Mosquito Hacker
           avatar: yusheng.jpg
@@ -202,24 +210,21 @@ en:
           twitter: https://twitter.com/HardisonSY
           about: Worse is Better.
           skills: Ruby / Rails / HTML / CSS
+
         - name: Cat Sun
           title: Cat Poop Cleaner
           avatar: cat-sun.jpg
           facebook: https://www.facebook.com/black.cat.sun
           about: Villain
           skills: HTML / CSS / jQuery
-        - name: Git
-          title: Dark Ruby
-          avatar: cat.jpg
-          about: 「Meow~~Meow~~Meow Meow Meow~~~」
-          skills: Play / Eat / Sleep
-          facebook: https://www.facebook.com/meowmeowsister1
+
         - name: Kosuke :)
           title: Ruby Samurai
           avatar: kosuke.jpg
           about: "Change the world"
           skills: Ruby / Rails
           twitter: https://twitter.com/kosuke7kon
+
         - name: Roy Huang
           title: Chaotic Evil Ruby
           avatar: roy.jpg
@@ -227,12 +232,20 @@ en:
           skills: Ruby / Rails
           twitter: https://twitter.com/roy_times_5
           facebook: http://facebook.com/roy.huang.963 
+
         - name: ilake
           title: Tainan painter
           avatar: ilake.jpg
           about: "C’est la vie"
           skills: Ruby / Rails
           facebook: http://facebook.com/ilake.chang
+
+        - name: Git
+          title: Dark Ruby
+          avatar: cat.jpg
+          about: 「Meow~~Meow~~Meow Meow Meow~~~」
+          skills: Play / Eat / Sleep
+          facebook: https://www.facebook.com/meowmeowsister1
 
     contacts:
       general_enquire: Inquery

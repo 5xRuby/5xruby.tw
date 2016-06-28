@@ -143,17 +143,21 @@ zh-TW:
           avatar: ryudoawaru.jpg
           facebook: https://www.facebook.com/ryudoawaru
           twitter: https://twitter.com/ryudoawaru
+          github: https://github.com/ryudoawaru
           experience: RubyConf Taiwan 主辦人、Rails Girls Taipei 主辦人.
           about: 「非典型網站維運者」
           blog: http://ryudo.tw/
           skills: Ruby / Rails / Sinatra、系統管理
+
         - name: 趙子皓
           title: 紅寶石獵人
           avatar: jodeci2.jpg
           facebook: https://www.facebook.com/tsehau
           twitter: https://twitter.com/thchao
+          github: https://github.com/jodeci
           about: 「文青轉職阿宅」
           skills: Ruby / Rails / PHP / 英日文
+
         - name: Sabrina
           title: 怒怒紅寶石
           avatar: sabrina.jpg
@@ -161,30 +165,35 @@ zh-TW:
           experience:
           about: 「徵男友」
           skills: 3C 破壞/活動企劃/課程宣傳
+
         - name: Nina
           title: 紅寶石工匠
           avatar: nina.jpg
           facebook: https://www.facebook.com/itsmeninayeh
           about: 「徜徉在程式與藝術的彌留空間裡」
           skills: Ruby / Rails / HTML / CSS
+
         - name: 湯凱甯
           title: 蛀矣攻城喵
           avatar: tang.jpg
           facebook: https://www.facebook.com/kendra.tang.meow
           about: 「惡蟲退散！」
           skills: Ruby / Rails / HTML / CSS
+
         - name: 。KAY
           title: 紅寶石浪人
           avatar: ok.jpg
           facebook: https://www.facebook.com/fokayx
           about: [おK 。]
           skills: Ruby/ Objective-C
+
         - name: Treekey
           title: 卍殺神乂紅寶石乂斬佛卍
           avatar: treekey.jpg
           facebook: https://www.facebook.com/treekey999
           about: Blue who say and whose 認同請分享
           skills: Ruby / Rails / HTML / CSS
+
         - name: Alan
           title: 紅寶石吟遊詩人
           avatar: alan.jpg
@@ -192,6 +201,7 @@ zh-TW:
           twitter: https://twitter.com/spartchou
           about: 「旅行是唯一讓你花了錢，卻變得更富有的事物」
           skills: Ruby / Rails
+
         - name: 李昱陞
           title: 登革熱帶原者
           avatar: yusheng.jpg
@@ -199,24 +209,21 @@ zh-TW:
           twitter: https://twitter.com/HardisonSY
           about: 「劣即是夯」
           skills: Ruby / Rails / HTML / CSS
+
         - name: Cat Sun
           title: 貓咪鏟屎官
           avatar: cat-sun.jpg
           facebook: https://www.facebook.com/black.cat.sun
           about: 「可愛又迷人的反派角色」
           skills: HTML / CSS / jQuery
-        - name: 學妹
-          title: 暗黑紅寶石
-          avatar: cat.jpg
-          about: 「喵~~喵~~喵喵喵~~~」
-          skills: 玩 / 吃飯 / 睡覺
-          facebook: https://www.facebook.com/meowmeowsister1
+
         - name: Kosuke :)
           title: 紅寶石侍
           avatar: kosuke.jpg
           about: 「改變世界」
           skills: Ruby / Rails
           twitter: https://twitter.com/kosuke7kon
+
         - name: Roy Huang
           title: 混亂邪惡紅寶石
           avatar: roy.jpg
@@ -224,12 +231,20 @@ zh-TW:
           skills: Ruby / Rails
           twitter: https://twitter.com/roy_times_5
           facebook: http://facebook.com/roy.huang.963 
+
         - name: 張國銘
           title: 台南畫家
           avatar: ilake.jpg
           about: 「人生阿~~」
           skills: Ruby / Rails
           facebook: http://facebook.com/ilake.chang
+
+        - name: 學妹
+          title: 暗黑紅寶石
+          avatar: cat.jpg
+          about: 「喵~~喵~~喵喵喵~~~」
+          skills: 玩 / 吃飯 / 睡覺
+          facebook: https://www.facebook.com/meowmeowsister1
 
     contacts:
       general_enquire: 歡迎諮詢
