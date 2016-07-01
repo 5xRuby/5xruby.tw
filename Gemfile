@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'rack-mini-profiler', git: 'https://github.com/MiniProfiler/rack-mini-profiler.git'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.0.0.beta2'
+gem 'rails', '~> 5.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -47,7 +47,7 @@ gem 'settingslogic'
 gem 'rails-i18n'
 gem 'rmagick', require: 'RMagick'
 gem 'enumerize'
-gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on.git'
+gem 'acts-as-taggable-on', git: 'https://github.com/ryudoawaru/acts-as-taggable-on.git'
 gem 'select2_helper', git: 'https://github.com/ryudoawaru/select2_helper.git', branch: 'rails42'
 gem 'gistyle'
 gem 'handlebars_assets'
@@ -67,7 +67,6 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-flowdock'
   gem 'annotate'
-  gem 'quiet_assets'
 end
 
 group :development, :test, :staging do
