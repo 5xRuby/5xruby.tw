@@ -242,6 +242,14 @@ en:
           skills: Ruby / Rails
           facebook: http://facebook.com/ilake.chang
 
+        - name: Henry Tseng
+          title: Young Onmyoji
+          avatar: henry.jpg
+          about: "Everything is out of nothing"
+          skills: Ruby / Rails / System Administration
+          facebook: https://www.facebook.com/computerhenry321
+          github: https://github.com/lctseng
+
         - name: Git
           title: Dark Ruby
           avatar: cat.jpg
