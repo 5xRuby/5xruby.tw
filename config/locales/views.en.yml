@@ -258,6 +258,14 @@ en:
           skills: Play / Eat / Sleep
           facebook: https://www.facebook.com/meowmeowsister1
 
+        - name: Fumitsuki
+          title: Eight plates eating hime
+          avatar: fumitsuki.jpg
+          about: "Keep calm and eat eight plates"
+          skills: Rails / HTML / CSS
+          facebook: https://www.facebook.com/ei.kudoryafuka
+          github: https://github.com/requiemformemories
+
     contacts:
       general_enquire: Inquery
       follow_us: Community

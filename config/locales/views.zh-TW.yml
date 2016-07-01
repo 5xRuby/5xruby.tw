@@ -257,6 +257,14 @@ zh-TW:
           skills: 玩 / 吃飯 / 睡覺
           facebook: https://www.facebook.com/meowmeowsister1
 
+        - name: Meng-Ying Tsai
+          title: 八盤食姬
+          avatar: fumitsuki.jpg
+          about: 「文著八盤八，月下宵夜嚐；食前方丈味，記遊天下香。」
+          skills: Rails / HTML / CSS 
+          facebook: https://www.facebook.com/ei.kudoryafuka
+          github: https://github.com/requiemformemories
+
     contacts:
       general_enquire: 歡迎諮詢
       follow_us: 社群連結
