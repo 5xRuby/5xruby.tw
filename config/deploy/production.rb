@@ -4,9 +4,9 @@ set :stage, :production
 # Supports bulk-adding hosts to roles, the primary server in each group
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
-role :app, %w{5xruby@60.250.121.194}
-role :web, %w{5xruby@60.250.121.194}
-role :db,  %w{5xruby@60.250.121.194}
+role :app, %w{5xruby@210.61.216.120}
+role :web, %w{5xruby@210.61.216.120}
+role :db,  %w{5xruby@210.61.216.120}
 
 # Extended Server Syntax
 # ======================
@@ -14,7 +14,7 @@ role :db,  %w{5xruby@60.250.121.194}
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-
+set :deploy_to, '/home/5xruby/5xruby.tw'
 
 # Custom SSH Options
 # ==================
@@ -23,11 +23,9 @@ role :db,  %w{5xruby@60.250.121.194}
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+set :ssh_options, {
+  port: 14159
+}
 #
 # And/or per server (overrides global)
 # ------------------------------------
