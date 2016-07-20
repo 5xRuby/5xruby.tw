@@ -1,12 +1,15 @@
 # Simple Role Syntax
 set :stage, :production
 # ==================
+#
+
+
 # Supports bulk-adding hosts to roles, the primary server in each group
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
-role :app, %w{5xruby@210.61.216.120}
-role :web, %w{5xruby@210.61.216.120}
-role :db,  %w{5xruby@210.61.216.120}
+role :app, %w{5xruby@210.61.216.120:14159}
+role :web, %w{5xruby@210.61.216.120:14159}
+role :db,  %w{5xruby@210.61.216.120:14159}
 
 # Extended Server Syntax
 # ======================
@@ -23,9 +26,7 @@ set :deploy_to, '/home/5xruby/5xruby.tw'
 #
 # Global options
 # --------------
-set :ssh_options, {
-  port: 14159
-}
+
 #
 # And/or per server (overrides global)
 # ------------------------------------
