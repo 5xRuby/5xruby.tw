@@ -233,7 +233,7 @@ zh-TW:
           about: 「push -f 是 git 的一環，我是不會住手的！」
           skills: Ruby / Rails
           twitter: https://twitter.com/roy_times_5
-          facebook: http://facebook.com/roy.huang.963 
+          facebook: http://facebook.com/roy.huang.963
 
         - name: 張國銘
           title: 台南畫家
@@ -261,9 +261,17 @@ zh-TW:
           title: 八盤食姬
           avatar: fumitsuki.jpg
           about: 「文著八盤八，月下宵夜嚐；食前方丈味，記遊天下香。」
-          skills: Rails / HTML / CSS 
+          skills: Rails / HTML / CSS
           facebook: https://www.facebook.com/ei.kudoryafuka
           github: https://github.com/requiemformemories
+
+        - name: 張博凱
+          title: 無用產品製做仁
+          avatar: pokaichang.jpg
+          about: 「宅在人文和科技的交叉口」
+          skills: HTML / CSS / JS / Rails
+          facebook: https://fb.me/pokaichang72
+          github: https://github.com/Neson
 
     contacts:
       general_enquire: 歡迎諮詢
