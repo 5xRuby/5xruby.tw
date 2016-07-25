@@ -234,7 +234,7 @@ en:
           about: "push -f is a part of Git. I will never stop doing it!"
           skills: Ruby / Rails
           twitter: https://twitter.com/roy_times_5
-          facebook: http://facebook.com/roy.huang.963 
+          facebook: http://facebook.com/roy.huang.963
 
         - name: ilake
           title: Tainan painter
@@ -265,6 +265,14 @@ en:
           skills: Rails / HTML / CSS
           facebook: https://www.facebook.com/ei.kudoryafuka
           github: https://github.com/requiemformemories
+
+        - name: Pokai Chang
+          title: Useless Things Maker
+          avatar: pokaichang.jpg
+          about: "Vegs out at the intersection of technology and liberal arts"
+          skills: HTML / CSS / JS / Rails
+          facebook: https://fb.me/pokaichang72
+          github: https://github.com/Neson
 
     contacts:
       general_enquire: Inquery
