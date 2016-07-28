@@ -2,6 +2,9 @@
 set :stage, :production
 # ==================
 #
+set :ssh_options, {
+  forward_agent: true
+}
 
 
 # Supports bulk-adding hosts to roles, the primary server in each group
