@@ -251,13 +251,6 @@ en:
           facebook: https://www.facebook.com/computerhenry321
           github: https://github.com/lctseng
 
-        - name: Git
-          title: Dark Ruby
-          avatar: cat.jpg
-          about: 「Meow~~Meow~~Meow Meow Meow~~~」
-          skills: Play / Eat / Sleep
-          facebook: https://www.facebook.com/meowmeowsister1
-
         - name: Fumitsuki
           title: Eight plates eating hime
           avatar: fumitsuki.jpg
@@ -273,6 +266,14 @@ en:
           skills: HTML / CSS / JS / Rails
           facebook: https://fb.me/pokaichang72
           github: https://github.com/Neson
+
+        # 貓放最後面
+        - name: Git
+          title: Dark Ruby
+          avatar: cat.jpg
+          about: 「Meow~~Meow~~Meow Meow Meow~~~」
+          skills: Play / Eat / Sleep
+          facebook: https://www.facebook.com/meowmeowsister1
 
     contacts:
       general_enquire: Inquery
