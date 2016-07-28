@@ -250,13 +250,6 @@ zh-TW:
           facebook: https://www.facebook.com/computerhenry321
           github: https://github.com/lctseng
 
-        - name: 學妹
-          title: 暗黑紅寶石
-          avatar: cat.jpg
-          about: 「喵~~喵~~喵喵喵~~~」
-          skills: 玩 / 吃飯 / 睡覺
-          facebook: https://www.facebook.com/meowmeowsister1
-
         - name: Meng-Ying Tsai
           title: 八盤食姬
           avatar: fumitsuki.jpg
@@ -272,6 +265,14 @@ zh-TW:
           skills: HTML / CSS / JS / Rails
           facebook: https://fb.me/pokaichang72
           github: https://github.com/Neson
+
+        # 貓放最後面
+        - name: 學妹
+          title: 暗黑紅寶石
+          avatar: cat.jpg
+          about: 「喵~~喵~~喵喵喵~~~」
+          skills: 玩 / 吃飯 / 睡覺
+          facebook: https://www.facebook.com/meowmeowsister1
 
     contacts:
       general_enquire: 歡迎諮詢
