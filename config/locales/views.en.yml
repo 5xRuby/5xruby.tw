@@ -243,6 +243,11 @@ en:
           skills: Ruby / Rails
           facebook: http://facebook.com/ilake.chang
 
+        - name: Aotokitsuruya
+          title: Extreme Toolman
+          avatar: aotoki.jpg
+          about: "I am not toolman because it usually born natural. Wait! Why my title become toolman?"
+
         - name: Henry Tseng
           title: Young Onmyoji
           avatar: henry.jpg
