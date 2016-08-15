@@ -247,6 +247,11 @@ en:
           title: Extreme Toolman
           avatar: aotoki.jpg
           about: "I am not toolman because it usually born natural. Wait! Why my title become toolman?"
+          skills: Ruby / Rails / HTML / CSS /JavaScript
+          twitter: https://twitter.com/elct9620
+          facebook: http://fb.me/elct9620
+          github: https://github.com/elct9620
+
 
         - name: Henry Tseng
           title: Young Onmyoji
