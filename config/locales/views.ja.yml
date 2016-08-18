@@ -1,0 +1,328 @@
+ja:
+  breadcrumb:
+    home: ホーム
+  videos:
+    index:
+      title: 動画
+      lead: 各種優質短片，專業課程錄影、桌面錄影教學與重要活動影片
+    show:
+      share: Facebookでシェア
+  interview_questions:
+    index:
+      lead: 我們提供一些識別度高的 Ruby/Rails 面試題目供你使用 =)
+      answer: 回答を確認
+  schedules:
+    show:
+      start_learning: 申込希望
+  speakers:
+    index:
+      title: 講師
+      lead: 高品質な講座を提供する為に、我々は、10名以上の経験豊富なRuby/Rails講師を採用しております。彼らは、熱心に開発及びコーチングに取り組んでおります。もし講師になることに興味がありましたら、是非連絡下さい。
+  courses:
+    index:
+      title: 講座の状況
+    sidebar:
+      all_courses: 全ての講座
+      categories: カテゴリー
+      satisfied: あなたは、我々の講座に満足していますか？
+      upcoming: より多くのRuby/Rails講座又はウェブサイト開発の講座を今後予定しております。もし我々の講座へご提案がございましたら、是非連絡下さい。
+    show:
+      summary: 紹介
+      what_you_will_learn: 学ぶこと
+      apply_now: 申込希望
+      note: 説明
+      charger_complete: Threshold Bar
+      chapter_title: "レッスン %{nth}:"
+      lessons: レッスン
+      hours: 時間
+    course:
+      apply: 申込希望
+      detail: 詳細情報
+      outdated: (講座終了)
+      hours:
+        zero: 不可
+        one: 1 時間
+        other: "%{count} 時間"
+  stages:
+    stage:
+      stage_no: レッスン番号 %{stage}
+      available_dates: 講座開始日
+      next_dates: 次のレッスン
+  posts:
+    index:
+      title: ブログ
+    show:
+      title: ブログ
+    post:
+      read_more: など...
+      tags: タグ
+    sidebar:
+      tags: タグ
+      recent_post: 最近の投稿
+  pages:
+    faq:
+      title: Q & A
+    next_schedule:
+      hours: 時間
+    main_features:
+      5xruby: 5xRuby
+      items:
+        - icon: icon-trophy
+          title: プロの講師陣
+          url: /en/speakers
+          description: 5xRubyの講師陣やメンバーは、第一線で活躍する台湾Rubyコミュニティのシニアクラスエンジニアであり、我々は理論をベースに実践的な経験を持っております。
+        - icon: icon-ok
+          title: 技術コンサルティング
+          url: /en/contacts
+          description: システムの設計、計画、開発、システムセットアップまで全てに関して、専門的なアドバイスが可能です。
+        - icon: icon-mic
+          title: 本格的で実践的な講座
+          url: /en/talks
+          description: 我々は、Ruby/Rails、Git、テストやシステム開発計画など本格的で実践的な講座を入門編から応用編まで用意しております。皆さんが早いスピードで、そして楽しくRubyを通じて開発を学ぶことができるでしょう。
+        - icon: icon-video
+          title: 企業向けトレーニング
+          url: /en/contacts
+          description: 我々は、企業向けのトレーニングプログラムも取り揃えております。こちらのプログラムは、現在のメンバーで、プロフェッショナルなRuby/Rails開発チームを作ることをサポートします。エンジニア採用でお困りの会社や、新規メンバーが既存のチーム文化に馴染めない問題を抱える会社向けです。
+        - icon: icon-website
+          title: アウトソーシング
+          url: /en/contacts
+          description: 我々は、経験豊富なRuby/Rails/iOSエンジニアがであなたのプロジェクトをサポートします。
+        - icon: icon-home
+          title: レンタルスペース
+          url: /events/space/
+          description: 近台北車站、最強 300M 網速，我們提供了高品質的工作空間，無論是創業或 SOHO 或是舉辦活動都是你的最佳選擇。
+    main_content_gray:
+      view_all_courses: 全ての講座を見る
+      latest_courses: 直近の講座
+      latest_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
+    main_content:
+      next_courses: 最近の講座
+      next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
+    recent_course:
+      detail: 詳細
+    about:
+      ceo: エディ
+      ceo_title: Ruby鑑定士
+      description: |
+        ##  プロフェッショナリズム5倍、祝福5倍、Ruby5倍！
+        ### About Us
+        我々は、台湾のRuby大好きグループです。私たちの生活は、Ruby/Railsと共にあります。
+
+        Ruby on Railsは、開発時間を節約することができ、多くの海外の会社やスタートアップで使用されております。シンプルでエレガントなプログラミング言語Rubyは、エンジニアを大いに楽しませてくれます。しかし、台湾では、主力のツールとして少数の会社でしか使われていません。
+
+        ここ数年間、我々は、継続的にRuby/Rails講座を台湾の大学で提供してきました。(成大、輔大、台北商專..など) これを通して、我々が気づいたことは、ほとんどの生徒がRubyを学ぶことを難しいと思わないことです。彼らは、本やドキュメントを参考にしながら練習すれば、ある程度のレベルまでは到達可能でしょう。しかしながら、もし彼らが、仕事で通用するぐらいレベルに達するには、独学では、全てをカバーすることは不可能です。彼らは、本格的で実践的な練習と優秀な講師陣のガイドが必要となります。これが、台湾でシニアクラスのRuby/Railsエンジニアを探すことが難しい理由です。
+
+        我々は、いくつかの会社にインタビューすることにより、なぜ彼らがRuby/Railsを使わないのか理解することができました。ほどんどの理由が、Ruby/Railsエンジニア不足により技術サポートが難しいことです。彼らは、誰にヘルプを求めてよいかわからない状況です。
+
+        近年、Ruby/Railsの需要は増してきており、高給を得ることができる機会もあります。この状況は、より多くの人々がRuby/Railsの世界へ流れ込むことは促進しております。多くの人々が、独学やRubyコミュニティが主催するイベントを通して、お互いの知識や経験を共有して、学び合っています。
+
+        「もし私のスキルをより早く効率的に高める方法があればなぁ。」という声が挙がってきました。
+
+        よって、Ruby大好きグループは「我々は、Ruby/Railsの技術コンサルティングやトレーニングを提供する会社を設立できる。」と考えました。
+
+        我々の究極のゴールは、より多くの台湾の会社にこのエレガントで楽しく生産的なプログラミング言語を知ってもらい、そして彼らの主力プロダクト開発ツールとして使ってもらい、彼らの夢をより早く実現できるように貢献することです。
+
+        なぜ我々の会社の名前は、5倍で3倍や100倍ではないのか？それは、別の話があるんです。
+
+
+        ---
+        ## 我々のサービス
+        ### 技術コンサルティング
+        5xRubyの講師陣やメンバーは、第一線で活躍する台湾Rubyコミュニティのシニアクラスエンジニアであり、我々は理論をベースに実践的な経験を持っております。
+
+        ### 企業内トレーニング
+        もし、現在あなたのウェブサイトやシステムが他のプログラミング言語（例：PHP、Java、ASP.net）で作られており、生産性向上の為、Ruby/Railsに変える予定があるけども、開発する為の技術が不足している場合、我々は、あなたの会社の開発チームへトレーニングプログラミングを提供し、Ruby/Rails開発チームを構築できるようにします。もうエンジニア採用で困る必要や、新規メンバーが既存のチーム文化に馴染めない問題を抱える必要はありません。
+
+        ### トレーニング
+        もし、あなたがプログラミング初心者もしくは、他のプログラミング言語の経験者でも、我々は、入門編から応用編のレクチャーを提供することが可能であり、あなたをRuby/Railsのコアへ効率的に導くことができるでしょう。
+
+
+      speciality: 専門的技術
+      members:
+        - name: ムーファン
+          title: 無限バグ生産機
+          avatar: ryudoawaru.jpg
+          facebook: https://www.facebook.com/ryudoawaru
+          twitter: https://twitter.com/ryudoawaru
+          github: https://github.com/ryudoawaru
+          experience: RubyConf Taiwan 及び Rails Girls Taipeiオーガナイザー
+          about: "スペシャルWebサイト修理師"
+          blog: http://ryudo.tw/
+          skills: Ruby / Rails / Sinatra, システム管理
+
+        - name: アキラ
+          title: Rubyハンター
+          avatar: jodeci2.jpg
+          facebook: https://www.facebook.com/tsehau
+          twitter: https://twitter.com/thchao
+          github: https://github.com/jodeci
+          about: "ヒップスターはオタクになりました"
+          skills: Ruby / Rails / PHP / 英語 / 日本語
+
+        - name: サブリナ
+          title: オフィスマネージャー
+          avatar: sabrina.jpg
+          facebook: https://www.facebook.com/chiang.sabrina.7
+          experience:
+          about: "私は、オフィスマネージャーですが、Rails書けます！"
+          skills: オフィスマネジメント
+
+        - name: ニナ
+          title: Ruby職人
+          avatar: nina.jpg
+          facebook: https://www.facebook.com/itsmeninayeh
+          about: "アートとプログラムの間を放浪する"
+          skills: Ruby / Rails / HTML / CSS
+
+        - name: たんたん
+          title: アシスタントプログラマー
+          avatar: tang.jpg
+          facebook: https://www.facebook.com/kendra.tang.meow
+          github: https://github.com/KazooTang
+          about: "バグから解放されたい!!"
+          skills: Ruby / Rails / HTML / CSS
+
+        - name: おーけい
+          title: Ruby浪人
+          avatar: ok.jpg
+          facbook: https://www.facebook.com/fokayx
+          about: "[おK 。]"
+          skills: Ruby/ Objective-C
+
+        - name: トリッキー
+          title: 卍ジョージ乂Ruby乂マリー卍
+          avatar: treekey.jpg
+          facebook: https://www.facebook.com/treekey999
+          github: https://github.com/treekey999
+          about: "冒険しなければ得られるものはない"
+          skills: Ruby / Rails / HTML / CSS
+
+        - name: アラン
+          title: Ruby詩人
+          avatar: alan.jpg
+          facebook: https://www.facebook.com/spart.chou
+          twitter: https://twitter.com/spartchou
+          about: "旅行は唯一あなたが買えるあなたの人生を豊かにするものだ"
+          skills: Ruby / Rails
+
+        - name: ビル
+          title: 蚊ハンター
+          avatar: yusheng.jpg
+          facebook: https://www.facebook.com/bbgba1923
+          twitter: https://twitter.com/HardisonSY
+          about: "悪いことは、ベターだ"
+          skills: Ruby / Rails / HTML / CSS
+
+        - name: ねこ
+          title: 猫の糞の掃除屋さん
+          avatar: cat-sun.jpg
+          facebook: https://www.facebook.com/black.cat.sun
+          about: "悪役"
+          skills: HTML / CSS / jQuery
+
+        - name: こうすけ :)
+          title: Ruby侍
+          avatar: kosuke.jpg
+          about: "世界を変える"
+          skills: Ruby / Rails
+          twitter: https://twitter.com/kosuke7kon
+          github: https://github.com/Kosuke7
+
+        - name: ロイ
+          title: カオスな邪悪なRuby
+          avatar: roy.jpg
+          about: "push -f はGitの一部だ。私は決してこれを止めない！"
+          skills: Ruby / Rails
+          twitter: https://twitter.com/roy_times_5
+          facebook: http://facebook.com/roy.huang.963
+
+        - name: イラック
+          title: 台南の画家
+          avatar: ilake.jpg
+          about: "それが人生だ"
+          skills: Ruby / Rails
+          facebook: http://facebook.com/ilake.chang
+
+        - name: 蒼時弦也
+          title: 究極のツールマン
+          avatar: aotoki.jpg
+          about: "私はツールマンではない。なぜならそれは自然に生まれるからだ. えっ！なんで私のタイトルはツールマンなの？"
+          twitter: https://twitter.com/elct9620
+          facebook: http://fb.me/elct9620
+          github: https://github.com/elct9620
+
+        - name: ヘンリー
+          title: 若い陰陽師
+          avatar: henry.jpg
+          about: "全ては無から始まる"
+          skills: Ruby / Rails / システム管理
+          facebook: https://www.facebook.com/computerhenry321
+          github: https://github.com/lctseng
+
+        - name: 文月
+          title: 8皿食べる姫
+          avatar: fumitsuki.jpg
+          about: "落ち着いて8皿食べなさい"
+          skills: Rails / HTML / CSS
+          facebook: https://www.facebook.com/ei.kudoryafuka
+          github: https://github.com/requiemformemories
+
+        - name: ネルソン
+          title: 無駄な物生産機
+          avatar: pokaichang.jpg
+          about: "テクノロジーとリベラルアーツの交差点でのんびりする"
+          skills: HTML / CSS / JS / Rails
+          facebook: https://fb.me/pokaichang72
+          github: https://github.com/Neson
+
+        # 貓放最後面
+        - name: 後輩
+          title: 暗黒Ruby
+          avatar: cat.jpg
+          about: 「Meow~~Meow~~Meow Meow Meow~~~」
+          skills: 遊ぶ / 食べる / 寝る
+          facebook: https://www.facebook.com/meowmeowsister1
+
+    contacts:
+      general_enquire: 問い合わせ
+      follow_us: コミュニティ
+      follow_us_desc: もし興味があれば、我々のコミュニティをフォローお願い致します
+      address: 連絡先
+      enter_your_starting_point: あなたの出発点を入力して下さい。
+      get_directions: 道順を知る
+      write_your_message: メッセージを残す
+      submit: 提出
+  layouts:
+    header:
+      about: About us
+    nav:
+      home: ホーム
+      course: 講座
+      videos: 動画
+      showcases: ショーケース
+      blog: ブログ
+      speakers: 講師
+      contacts: Contact us
+      about: About us
+      faq: Q & A
+      space: スペース
+      rental: レンタル
+      interview_questions: インタビューの質問
+      resources: リソース
+      space_status: スペース状況
+      us: Us
+    footer:
+      browse: 閲覧する
+      courses: 講座
+      faq: Q & A
+      blog: ブログ
+      contacts: Contact Us
+      about_5xruby: About 5xRuby
+      about_us: About Us
+      source_code: ソースコード
+      media: メディア
+      any_question: 何か質問はありませんか?
+    application:
+      back_to_top: トップ画面へ
+    cooperation_list:
+      cooperations: 協力

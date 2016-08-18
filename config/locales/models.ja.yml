@@ -1,0 +1,115 @@
+ja:
+  errors:
+    messages:
+      captcha_not_passed: 入力が正しくありません. もう一度入力お願い致します.
+      must_be_greater_than_start_at: 開始時間より後にして下さい。
+      time_must_be_in_available_range: 有効な時間帯内でお願い致します。
+  activemodel:
+    attributes:
+      contact:
+        first_name: 名前
+        last_name: 名字
+        email: Eメールアドレス
+        phone: 電話番号
+        message: メッセージ
+      rental/day:
+        date: 日
+        start_at: 開始時間
+        end_at: 終了時間
+      rental/request:
+        price: 金額
+        tax: 税金
+        total_price: 総額
+        initial_payment: 初回支払金
+        back_payment: 未払金
+  attributes:
+    image: 画像
+    remove_image: 画像削除
+    permalink: URL省略
+    hours: 時間
+    is_online: オンライン
+    link: リンク
+    summary: 要約
+    speakers: スピーカー
+    question: 質問
+    answer: 回答
+  activerecord:
+    models:
+      post: 投稿
+      category: カテゴリー
+      course: レクチャー
+      stage: ステージ
+      schedule: 日程
+      apply: 申込
+      speaker: 講師
+      event: イベント
+      faq: FAQ
+      author: 著者
+      showcase: ショーケース
+      video: 動画
+      translation: 翻訳
+      interview_question: 質問
+    attributes:
+      post:
+        publish_at: 投稿日
+        title: タイトル
+        summary: 要約
+        content: 内容
+        author: 著者
+        tag_list: タグ
+      category:
+        name: 名前
+        is_highlighted: 今月のハイライト
+      course:
+        category: カテゴリー
+        title: タイトル
+        subtitle: サブタイトル
+        summary: 要約
+        what_will_learn: あなたが学べることは・・・
+        description: 説明
+        is_online: オンライン
+        note: 注釈
+        apply_link: 申込
+      stage:
+        sort_id:
+        title: タイトル
+        duration: 期間
+        description: 説明
+        course: レクチャー
+        schedules: 日程
+      schedule:
+        stage: ステージ
+        date: 日
+        description: 説明
+      speaker:
+        name: 名前
+        summary: 要約
+        avatar: 画像
+        is_online: オンライン
+        remove_avatar: 画像削除
+        role: 役割
+        role_text: 役割
+        title: タイトル
+        facebook_url: FB
+        twitter_url: Twitter
+        google_url: G+
+        blog_url: ブログ URL
+      event:
+        start_at: 開始時間
+        title: タイトル
+        description: 説明
+        speaker: 講師
+      author:
+        name: 名前
+  enumerize:
+    apply:
+      gender:
+        male: 男性
+        female: 女性
+    speaker:
+      role:
+        author: 著者
+        consultant: コンサルタント
+        speaker: 講師
+        parttime-speaker: パートタイム講師
+        assistant-speaker: アシスタント講師
