@@ -8,16 +8,17 @@
       <%= breadcrumb t('.title') %>
     <% end %>
     <div class="row">
-      <aside class="col-md-4">
-        <%= render 'sidebar' %>
-      </aside>
-      <div class="col-md-8">
+
+      <div class="col-md-8 col-md-push-4">
         <%= render @posts %>
         <hr>
         <div class="text-center">
           <%= paginate @posts %>
         </div>
       </div><!-- End col-md-8-->
+      <aside class="col-md-4 col-md-pull-8">
+        <%= render 'sidebar' %>
+      </aside>
     </div>  <!-- End row-->
   </div><!-- End container -->
 </section><!-- End main_content-->

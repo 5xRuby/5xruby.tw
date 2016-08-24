@@ -2,14 +2,14 @@
   <div class="container">
     <%= breadcrumb link_to(t('.title'), posts_path), tr(@post, :title) %>
     <div class="row">
-      <aside class="col-md-4">
-        <%= render '/posts/sidebar' %>
-      </aside>
-      <div class="col-md-8">
+      <div class="col-md-8 col-md-push-4">
         <%= render partial: '/posts/post', locals: {post: @post} %>
         <hr>
         <%= render 'layouts/disqus' %>
       </div>
+      <aside class="col-md-4 col-md-pull-8">
+        <%= render '/posts/sidebar' %>
+      </aside>
     </div>
   </div>
 </section>
