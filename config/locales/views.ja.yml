@@ -101,7 +101,7 @@ ja:
     recent_course:
       detail: 詳細
     about:
-      ceo: エディ
+      ceo: Eddie Kao
       ceo_title: Ruby鑑定士
       description: |
         ##  プロフェッショナリズム5倍、祝福5倍、Ruby5倍！
@@ -139,8 +139,8 @@ ja:
 
       speciality: 専門的技術
       members:
-        - name: ムーファン
-          title: 無限バグ生産機
+        - name: 竜堂
+          title: 無限虫制師
           avatar: ryudoawaru.jpg
           facebook: https://www.facebook.com/ryudoawaru
           twitter: https://twitter.com/ryudoawaru
@@ -159,7 +159,7 @@ ja:
           about: "ヒップスターはオタクになりました"
           skills: Ruby / Rails / PHP / 英語 / 日本語
 
-        - name: サブリナ
+        - name: Sabrina Chiang
           title: オフィスマネージャー
           avatar: sabrina.jpg
           facebook: https://www.facebook.com/chiang.sabrina.7
@@ -167,14 +167,14 @@ ja:
           about: "私は、オフィスマネージャーですが、Rails書けます！"
           skills: オフィスマネジメント
 
-        - name: ニナ
+        - name: Nina Yeh
           title: Ruby職人
           avatar: nina.jpg
           facebook: https://www.facebook.com/itsmeninayeh
           about: "アートとプログラムの間を放浪する"
           skills: Ruby / Rails / HTML / CSS
 
-        - name: たんたん
+        - name: Kendra Tang
           title: アシスタントプログラニャーン
           avatar: tang.jpg
           facebook: https://www.facebook.com/kendra.tang.meow
@@ -182,14 +182,14 @@ ja:
           about: "バグから解放されたい!!"
           skills: Ruby / Rails / HTML / CSS
 
-        - name: おーけい
+        - name: Okay
           title: Ruby浪人
           avatar: ok.jpg
           facbook: https://www.facebook.com/fokayx
           about: "[おK 。]"
           skills: Ruby/ Objective-C
 
-        - name: トリッキー
+        - name: Treekey
           title: 卍ジョージ乂Ruby乂マリー卍
           avatar: treekey.jpg
           facebook: https://www.facebook.com/treekey999
@@ -197,7 +197,7 @@ ja:
           about: "冒険しなければ得られるものはない"
           skills: Ruby / Rails / HTML / CSS
 
-        - name: アラン
+        - name: Alan
           title: Ruby詩人
           avatar: alan.jpg
           facebook: https://www.facebook.com/spart.chou
@@ -205,7 +205,7 @@ ja:
           about: "旅行は唯一あなたが買えるあなたの人生を豊かにするものだ"
           skills: Ruby / Rails
 
-        - name: ビル
+        - name: Yusheng Li
           title: 蚊ハンター
           avatar: yusheng.jpg
           facebook: https://www.facebook.com/bbgba1923
@@ -213,7 +213,7 @@ ja:
           about: "悪いことは、ベターだ"
           skills: Ruby / Rails / HTML / CSS
 
-        - name: ねこ
+        - name: Cat Sun
           title: 猫の糞の掃除屋さん
           avatar: cat-sun.jpg
           facebook: https://www.facebook.com/black.cat.sun
@@ -228,7 +228,7 @@ ja:
           twitter: https://twitter.com/kosuke7kon
           github: https://github.com/Kosuke7
 
-        - name: ロイ
+        - name: Roy Huang
           title: カオスな邪悪なRuby
           avatar: roy.jpg
           about: "push -f はGitの一部だ。私は決してこれを止めない！"
@@ -236,7 +236,7 @@ ja:
           twitter: https://twitter.com/roy_times_5
           facebook: http://facebook.com/roy.huang.963
 
-        - name: イラック
+        - name: ilake
           title: 台南の画家
           avatar: ilake.jpg
           about: "それが人生だ"
@@ -251,8 +251,8 @@ ja:
           facebook: http://fb.me/elct9620
           github: https://github.com/elct9620
 
-        - name: ヘンリー
-          title: 若い陰陽師
+        - name: Henry Tseng
+          title: 少年陰陽師
           avatar: henry.jpg
           about: "全ては無から始まる"
           skills: Ruby / Rails / システム管理
@@ -267,7 +267,7 @@ ja:
           facebook: https://www.facebook.com/ei.kudoryafuka
           github: https://github.com/requiemformemories
 
-        - name: ネルソン
+        - name: Pokai Chang
           title: 無駄な物生産機
           avatar: pokaichang.jpg
           about: "テクノロジーとリベラルアーツの交差点でのんびりする"
@@ -276,7 +276,7 @@ ja:
           github: https://github.com/Neson
 
         # 貓放最後面
-        - name: 後輩
+        - name: Git
           title: 暗黒Ruby
           avatar: cat.jpg
           about: 「Meow~~Meow~~Meow Meow Meow~~~」

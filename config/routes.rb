@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  scope '(:locale)', locale: /en|jp/ do
+  scope '(:locale)', locale: /en|ja/ do
     root 'pages#index'
     get :about, :contacts, :faq, :sitemap, controller: :pages
     resources :posts, only: %i[index show]

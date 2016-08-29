@@ -13,7 +13,7 @@ module PentaRuby
     # -- all .rb files in that directory are automatically loaded.
 
     config.time_zone = 'Taipei'
-    config.i18n.available_locales = %i[en zh-TW jp]
+    config.i18n.available_locales = %i[en zh-TW ja]
     config.i18n.default_locale = :'zh-TW'
 
     config.generators do |g|
