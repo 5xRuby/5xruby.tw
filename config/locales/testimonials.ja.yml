@@ -1,0 +1,37 @@
+ja:
+  testimonials:
+    -
+      :img: "testimonial_victor.jpg"
+      :name: Victor Lam
+      :title: "Victor Lam  GoGoVan プロダクトマネージャー兼フルスタックエンジニア"
+      :content: "プログラマーにとって一番価値のあることは、経験です。5xRubyの全ての講師は、台湾Rubyコミュニティの経験豊富なシニアRubyist達です。彼らは、生徒たちを素晴らしいRubyの世界に導いてくれます。そして、それが生徒たちにとって最高の選択になるでしょう。"
+    -
+      :img: "testimonial_jason.jpg"
+      :name: Jason Hsu
+      :title: "Jason Hsu  The Big Questions 創業者、TEDxTaipei 創設者"
+      :content: "Eddieと彼のチームは、私が出会った中で、最高のRubyエバンジェリストです。彼らの情熱とプロフェッショナリズムは、Rubyを学ぶ方々の学習スピードを劇的に上げてくれるでしょう。"
+    -
+      :content: "Ruby/Ruby on Railsのコーチを探していますか？ 間違いなく5xRubyには台湾で最高のRubyistたちがいます。"
+      :name: Felix Lin
+      :title: "Felix Lin  dappei.com創業者"
+      :img: "testimonial_felix.jpg"
+    -
+      :content: "Mu-fanとEddieは、Rubyマスターです。経験だけではなく、素晴らしいコーチングスキルを持っています。私は、彼らの助けがなければ、この素晴らしいRubyの世界へ入ることはできなかったでしょう。"
+      :name: Hana Chang
+      :title: "Hana Chang BountyHunter 共同創業者兼CEO"
+      :img: "test-monial-Hana.jpg"
+    -
+      :content: "どのプログラミング言語を学ぶかを選択することは重要です。もっと重要なことは、その言語を学ぶ時に、正しいコーチを選ぶことです。台湾Rubyコミュニティの実践的で経験豊富なトップRubyistたちと一緒に学ぶ時、あなたは、プログラム開発のアートを見ることができるでしょう。私たちは、プロフェッショナルが次のプロフェッショナルを育てることを知っています。私は、5xRubyがプロフェッショナルの宝島だと信じています。"
+      :name: John Sie
+      :title: " John Sie  Accuvally Inc. 共同創業者兼COO"
+      :img: "testimonial_johnsie.jpg"
+    -
+      :content: "5xRubyのコーチは、この業界のトッププレイヤーたちです。このコースに参加することは、あなた自身で学ぶより、大幅に時間をセーブしてくれることでしょう。"
+      :name: Ben Lin
+      :title: "Ben Lin  POP CEO"
+      :img: "testimonial_benlin.jpg"
+    -
+      :content: "私は、本当にCarolとEddieと一緒に学べたことを光栄に思います。Carolは、自己規律があり、熱心です。Eddieは、問題解決能力に優れており、本当に責任感があります。5xRubyの他のパートナーもこの分野のエキスパートです。このチームは最高です！"
+      :name: Max
+      :title: "Max Lu  Buyble 創業者（インターナショナルブティックショッピングウェブサイト）"
+      :img: "testimonial_max.jpg"

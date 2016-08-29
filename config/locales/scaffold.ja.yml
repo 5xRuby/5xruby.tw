@@ -1,0 +1,26 @@
+ja:
+  action:
+    back: 戻る
+  message:
+    are_you_sure: よろしいでしょうか？
+  crud:
+    preview: プレビュー
+    preview!: プレビュー%{resource}
+    new!: new%{resource}
+    new: new
+    create!: create%{resource}
+    create: create
+    show!: show%{resource}
+    show: show
+    read!: read%{resource}
+    read: read
+    edit!: edit%{resource}
+    edit: edit
+    update!: update%{resource}
+    update: update
+    delete!: delete%{resource}
+    delete: delete
+    destroy!: destroy%{resource}
+    destroy: destroy
+    created_successfully!: "%{name}が作成されました."
+    updated_successfully!: "%{name}が更新されました."

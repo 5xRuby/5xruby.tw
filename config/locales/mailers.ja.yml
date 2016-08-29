@@ -1,0 +1,9 @@
+ja:
+  contact_mailer:
+    enquire:
+      subject: お問い合わせ通知
+  apply_mailer:
+    notify_user:
+      subject: 申し込みありがとうございます。
+    notify_5xruby:
+      subject: ご登録通知

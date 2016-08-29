@@ -1,0 +1,8 @@
+ja:
+  contacts:
+    create:
+      something_went_wrong: 何か問題が発生しました。
+      mail_sent_successfully: メール送信が完了しました。
+  applies:
+    create:
+      something_went_wrong: 何か問題が発生しました。
