@@ -90,7 +90,7 @@ ja:
         - icon: icon-home
           title: レンタルスペース
           url: /events/space/
-          description: We offer high-quality workspace near Taipei Main Station, with network speed up to 300 Mbps. We are your best choice no matter you are launching a startup, working as SOHO or hosting an event.
+          description: 私たちは、台北駅の近くで、通信速度300 Mbpsのインターネット環境且つハイクオリティな仕事場を提供します。スタートアップ、フリーランサーの方々の働く場所やイベント開催場所として、我々は、最高の選択となるでしょう。
     main_content_gray:
       view_all_courses: 全ての講座を見る
       latest_courses: 直近の講座
@@ -246,7 +246,7 @@ ja:
         - name: 蒼時弦也
           title: 究極のツールマン
           avatar: aotoki.jpg
-          about: "私はツールマンではない。なぜならそれは自然に生まれるからだ. えっ！なんで私のタイトルはツールマンなの？"
+          about: "私はツールマンではない。なぜならそれは自然に生まれるからだ。えっ！なんで私のタイトルはツールマンなの？"
           twitter: https://twitter.com/elct9620
           facebook: http://fb.me/elct9620
           github: https://github.com/elct9620
