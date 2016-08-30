@@ -90,7 +90,7 @@ en:
         - icon: icon-home
           title: Space Rental
           url: /events/space/
-          description: 近台北車站、最強 300M 網速，我們提供了高品質的工作空間，無論是創業或 SOHO 或是舉辦活動都是你的最佳選擇。
+          description: We offer high-quality workspace near Taipei Main Station, with network speed up to 300 Mbps. We are your best choice no matter you are launching a startup, working as SOHO or hosting an event.
     main_content_gray:
       view_all_courses: view all lectures
       latest_courses: lastest lectures
