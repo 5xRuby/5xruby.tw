@@ -220,14 +220,6 @@ en:
           about: Villain
           skills: HTML / CSS / jQuery
 
-        - name: Kosuke :)
-          title: Ruby Samurai
-          avatar: kosuke.jpg
-          about: "Change the world"
-          skills: Ruby / Rails
-          twitter: https://twitter.com/kosuke7kon
-          github: https://github.com/Kosuke7
-
         - name: Roy Huang
           title: Chaotic Evil Ruby
           avatar: roy.jpg
