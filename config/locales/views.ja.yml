@@ -220,14 +220,6 @@ ja:
           about: "悪役"
           skills: HTML / CSS / jQuery
 
-        - name: こうすけ :)
-          title: Ruby侍
-          avatar: kosuke.jpg
-          about: "世界を変える"
-          skills: Ruby / Rails
-          twitter: https://twitter.com/kosuke7kon
-          github: https://github.com/Kosuke7
-
         - name: Roy Huang
           title: カオスな邪悪なRuby
           avatar: roy.jpg
