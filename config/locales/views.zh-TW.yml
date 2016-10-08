@@ -243,6 +243,14 @@ zh-TW:
           facebook: http://fb.me/elct9620
           github: https://github.com/elct9620
 
+        - name: Ashton Lee
+          title: 醉拳無敵甘迺迪
+          avatar: ashtonlee.jpg
+          about: 「減肥專家 x Ashton 陪你一起做運動」
+          skills: HTML / CSS / Rails
+          facebook: https://www.facebook.com/eric.lee0210
+          github: https://github.com/Ericlee0210
+
         - name: Henry Tseng
           title: 少年陰陽師
           avatar: henry.jpg
