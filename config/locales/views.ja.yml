@@ -247,7 +247,6 @@ ja:
           title: 無敵な酔拳ケネディ
           avatar: ashtonlee.jpg
           about: "ダイエットの達人 x Ashton と運動しようぜ"
-          about: "Weight-losing expert x Let's work out with Ashton"
           skills: HTML / CSS / Rails
           facebook: https://www.facebook.com/eric.lee0210
           github: https://github.com/Ericlee0210
@@ -277,7 +276,7 @@ ja:
           github: https://github.com/Neson
 
         # 貓放最後面
-        - name: Git
+        - name: Xue Mei
           title: 暗黒Ruby
           avatar: cat.jpg
           about: 「Meow~~Meow~~Meow Meow Meow~~~」
