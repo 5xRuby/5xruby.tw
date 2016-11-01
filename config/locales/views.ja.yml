@@ -198,11 +198,12 @@ ja:
           skills: Ruby / Rails / HTML / CSS
 
         - name: Alan
-          title: Ruby詩人
+          title: Ruby黑王子
           avatar: alan.jpg
           facebook: https://www.facebook.com/spart.chou
           twitter: https://twitter.com/spartchou
-          about: "旅行は唯一あなたが買えるあなたの人生を豊かにするものだ"
+          github: https://github.com/spartchou
+          about: "&."
           skills: Ruby / Rails
 
         - name: Yusheng Li
