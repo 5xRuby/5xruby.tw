@@ -198,11 +198,12 @@ en:
           skills: Ruby / Rails / HTML / CSS
 
         - name: Alan
-          title: Ruby Bard
+          title: Ruby Blue
           avatar: alan.jpg
           facebook: https://www.facebook.com/spart.chou
           twitter: https://twitter.com/spartchou
-          about: "Travel is the only thing you buy that makes you richer"
+          github: https://github.com/spartchou
+          about: "&."
           skills: Ruby / Rails
 
         - name: Yusheng Li
