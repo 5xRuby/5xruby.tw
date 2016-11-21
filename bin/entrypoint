@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -e
+
+setup() {
+  bundle exec rake docker:setup
+}
+
+migrate() {
+  bundle exec rake db:migrate
+}
+
+case ${1} in
+  start)
+
+    setup
+    migrate
+
+    bundle exec rails server
+    ;;
+  rake)
+    shift
+    bundle exec rake $@
+    ;;
+  *)
+    exec "$@"
+    ;;
+esac
