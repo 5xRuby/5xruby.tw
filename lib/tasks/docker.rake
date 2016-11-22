@@ -1,7 +1,24 @@
 namespace :docker do
-  desc 'Build docker image'
+  desc 'Build docker image via Docker Compose'
   task :build, [:name] do |task, args|
-    sh "docker build -t %{name} ." % {name: 'five-times-ruby'}.merge!(args)
+    sh 'docker-compose build'
+  end
+
+  desc 'Start application via Docker Compose'
+  task :start, [:daemon] do |task, args|
+    cmd = "docker-compose up %s"
+
+    daemon = args[:daemon] == "true"
+    daemon = true if args[:daemon].nil?
+    options = []
+    options.push("-d") if daemon
+
+    sh cmd % options.join(" ")
+  end
+
+  desc 'Stop application via Docker Compose'
+  task :stop do
+    sh 'docker-compose stop'
   end
 
   desc 'Create rails config file from environment variable'

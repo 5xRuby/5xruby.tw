@@ -9,6 +9,7 @@ done
 
 # Start Rails Application
 setup() {
+  bundle install --path $BUNDLE_PATH
   bundle exec rake docker:setup
 }
 
