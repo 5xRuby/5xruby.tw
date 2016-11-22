@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+set -e
+
+# Wait PostgreSQL ready
+until pg_isready -h "$DB_HOST" -U "$_DB_USER" -t 1; do
+  >&2 echo "Postgres is unavailable - sleeping"
+  sleep 1
+done
+
+# Start Rails Application
+setup() {
+  bundle install --path $BUNDLE_PATH
+  bundle exec rake docker:setup
+}
+
+migrate() {
+  bundle exec rake db:migrate
+}
+
+prepare_assets() {
+  bundle exec rake assets:precompile
+}
+
+case ${1} in
+  start)
+
+    setup
+    migrate
+    prepare_assets
+
+    puma -C /etc/puma.rb 2>&1
+    ;;
+  rake)
+    shift
+    bundle exec rake $@
+    ;;
+  *)
+    exec "$@"
+    ;;
+esac
