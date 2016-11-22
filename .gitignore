@@ -6,8 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
-/Dockerfile
-/docker-compose.yml
+docker-compose.yml
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
