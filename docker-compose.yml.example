@@ -1,0 +1,52 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/usr/src/app
+      - ./vendor/bundle:/usr/shared/bundle
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=5xruby
+      - DB_PASS=password
+      - DB_NAME=5xruby
+
+      - FLOWDOCK_API_TOKEN=TOKEN
+      - FLOWDOCK_PROJECT_NAME=5xruby_tw
+
+      - ADMIN_PREFIX=admin
+
+      - ADMIN_AUTH_USER=5xruby
+      - ADMIN_AUTH_PASS=5xruby
+
+      - RECAPTCHA_PUBLIC_KEY=RECAPTCHA_PUBLIC_KEY
+      - RECAPTCHA_PRIVATE_KEY=RECAPTCHA_PRIVATE_KEY
+
+      - RECEIPIENT=hi@5xruby.tw
+
+      - MAIL_HOST=5xruby.tw
+
+      - SMTP_HOST=localhost
+      - SMTP_PORT=587
+      - SMTP_USER=5xruby
+      - SMTP_PASS=password
+      - SMTP_AUTHENTICATION=plain
+      - SMTP_STARTSSL=true
+
+      - SECRET_KEY_BASE=YOUR_RAILS_SECRET
+
+      - RAILS_SERVE_STATIC_FILES=true
+
+  db:
+    image: postgres:9.6-alpine
+    environment:
+      - POSTGRES_USER=5xruby
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=5xruby
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+      - /usr/share/zoneinfo:/usr/share/zoneinfo
