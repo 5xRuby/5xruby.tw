@@ -286,9 +286,16 @@ ja:
 
         # 貓放最後面
         - name: Xue Mei
-          title: 暗黒Ruby
-          avatar: cat.jpg
+          title: 暗黒 Ruby
+          avatar: cat-black.jpg
           about: 「Meow~~Meow~~Meow Meow Meow~~~」
+          skills: 遊ぶ / 食べる / 寝る
+          facebook: https://www.facebook.com/meowmeowsister1
+
+        - name: Xai Xai
+          title: 正義 Ruby
+          avatar: cat-orange.jpg
+          about: 「Meow Meow Meow~~~かわいいは正義」
           skills: 遊ぶ / 食べる / 寝る
           facebook: https://www.facebook.com/meowmeowsister1
 

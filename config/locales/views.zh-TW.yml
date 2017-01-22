@@ -163,7 +163,7 @@ zh-TW:
           avatar: sabrina.jpg
           facebook: https://www.facebook.com/chiang.sabrina.7
           experience:
-          about: 「徵男友」
+          about: 「徵男友，希望 30 歲前能嫁掉」
           skills: 3C 破壞/活動企劃/課程宣傳
 
         - name: Nina
@@ -255,7 +255,7 @@ zh-TW:
         - name: Irene Chang
           title: 梅氏狂蕩姬
           avatar: irene.jpg
-          about: 「莫急莫慌莫害怕」 
+          about: 「莫急莫慌莫害怕」
           skills: HTML / CSS / Design
           facebook: https://www.facebook.com/irene.chang.735
           github: https://github.com/irene84111
@@ -287,8 +287,15 @@ zh-TW:
         # 貓放最後面
         - name: 學妹
           title: 暗黑紅寶石
-          avatar: cat.jpg
+          avatar: cat-black.jpg
           about: 「喵~~喵~~喵喵喵~~~」
+          skills: 玩 / 吃飯 / 睡覺
+          facebook: https://www.facebook.com/meowmeowsister1
+
+        - name: 宅宅
+          title: 正義紅寶石
+          avatar: cat-orange.jpg
+          about: 「喵喵喵~~~(毛色正確，可愛就是正義)」
           skills: 玩 / 吃飯 / 睡覺
           facebook: https://www.facebook.com/meowmeowsister1
 

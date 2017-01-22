@@ -164,7 +164,7 @@ en:
           avatar: sabrina.jpg
           facebook: https://www.facebook.com/chiang.sabrina.7
           experience:
-          about: "I am an Office Manager, and I can code Rails."
+          about: "I am an Office Manager, and I can code Rails. Single!"
           skills: Office Management
 
         - name: Nina Yeh
@@ -256,7 +256,7 @@ en:
         - name: Irene Chang
           title: Hysteria May
           avatar: irene.jpg
-          about: "Relax. Don't Worry. Take it Easy." 
+          about: "Relax. Don't Worry. Take it Easy."
           skills: HTML / CSS / Design
           facebook: https://www.facebook.com/irene.chang.735
           github: https://github.com/irene84111
@@ -288,8 +288,15 @@ en:
         # 貓放最後面
         - name: Xue Mei
           title: Dark Ruby
-          avatar: cat.jpg
+          avatar: cat-black.jpg
           about: 「Meow~~Meow~~Meow Meow Meow~~~」
+          skills: Play / Eat / Sleep
+          facebook: https://www.facebook.com/meowmeowsister1
+
+        - name: Xai Xai
+          title: Justice Ruby
+          avatar: cat-orange.jpg
+          about: 「Meow Meow Meow~~~cute is justice」
           skills: Play / Eat / Sleep
           facebook: https://www.facebook.com/meowmeowsister1
 
