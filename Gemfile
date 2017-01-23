@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'rack-mini-profiler', git: 'https://github.com/MiniProfiler/rack-mini-profiler.git'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -39,7 +39,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'rdiscount'
-gem 'kaminari', git: 'git://github.com/amatsuda/kaminari.git'
+gem 'kaminari', '~> 1.0.1'
 gem 'carrierwave'
 gem 'simple_form'
 gem 'nested_form'
@@ -67,6 +67,8 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-flowdock'
   gem 'annotate'
+  gem 'capistrano-sidekiq'
+  gem 'capistrano-upload-config'
 end
 
 group :development, :test, :staging do

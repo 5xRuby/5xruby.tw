@@ -21,6 +21,6 @@ docker-compose.yml
 tags
 *.DS_Store
 .idea
-
+/config/*.*.yml
 /postgres
 /vendor/bundle
