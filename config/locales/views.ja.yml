@@ -284,6 +284,15 @@ ja:
           facebook: https://fb.me/pokaichang72
           github: https://github.com/Neson
 
+        - name: PastLeo
+          title: '10 数字系を理解している人'
+          avatar: pastleo.png
+          about: "私はオープンソースの力とコンセプトが好きです"
+          skills: Web / Ruby / rm -rf /
+          facebook: https://fb.me/pastleo
+          github: https://github.com/pastleo
+          website: http://pastleo.me
+
         # 貓放最後面
         - name: Xue Mei
           title: 暗黒 Ruby
