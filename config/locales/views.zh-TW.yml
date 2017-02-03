@@ -293,6 +293,13 @@ zh-TW:
           github: https://github.com/pastleo
           website: http://pastleo.me
 
+        - name: Keddie
+          title: '撿紅寶石維生的林黛玉'
+          avatar: keddie.png
+          about: "「 我記得我跟程式語言不太熟的啊 」"
+          skills: "課程推廣 / 活動宣傳 / 你們會的我都不會"
+          facebook: https://fb.me/mengting.huang
+
         # 貓放最後面
         - name: 學妹
           title: 暗黑紅寶石
