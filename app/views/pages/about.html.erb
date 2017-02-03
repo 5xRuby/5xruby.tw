@@ -64,6 +64,10 @@
             <li><a href="<%= member[:github] %>" target="_blank"><i class=" icon-github"></i></a></li>
           <% end %>
 
+          <% if member[:website] %>
+            <li><a href="<%= member[:website] %>" target="_blank"><i class=" icon-website"></i></a></li>
+          <% end %>
+
         </ul>
         <% if member[:blog] %>
         <hr>

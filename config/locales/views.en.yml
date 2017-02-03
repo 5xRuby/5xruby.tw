@@ -285,6 +285,15 @@ en:
           facebook: https://fb.me/pokaichang72
           github: https://github.com/Neson
 
+        - name: PastLeo
+          title: 'a person who understand base-10 numeral system'
+          avatar: pastleo.png
+          about: "I like the power and concept of open source"
+          skills: Web / Ruby / rm -rf /
+          facebook: https://fb.me/pastleo
+          github: https://github.com/pastleo
+          website: http://pastleo.me
+        
         # 貓放最後面
         - name: Xue Mei
           title: Dark Ruby

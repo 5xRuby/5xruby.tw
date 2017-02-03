@@ -284,6 +284,15 @@ zh-TW:
           facebook: https://fb.me/pokaichang72
           github: https://github.com/Neson
 
+        - name: PastLeo
+          title: '懂 10 進位的人'
+          avatar: pastleo.png
+          about: 「很喜歡開源的力量以及概念」
+          skills: Web / Ruby / rm -rf /
+          facebook: https://fb.me/pastleo
+          github: https://github.com/pastleo
+          website: http://pastleo.me
+
         # 貓放最後面
         - name: 學妹
           title: 暗黑紅寶石
