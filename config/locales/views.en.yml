@@ -293,6 +293,13 @@ en:
           facebook: https://fb.me/pastleo
           github: https://github.com/pastleo
           website: http://pastleo.me
+
+        - name: Keddie
+          title: 'Keddie Ruby Collector'
+          avatar: keddie.png
+          about: "Love and peace"
+          skills: "Office Assistant"
+          facebook: https://fb.me/mengting.huang
         
         # 貓放最後面
         - name: Xue Mei

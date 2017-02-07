@@ -293,6 +293,13 @@ ja:
           github: https://github.com/pastleo
           website: http://pastleo.me
 
+        - name: Keddie
+          title: 'ジェムハウス'
+          avatar: keddie.png
+          about: ""
+          skills: "デストラクタ"
+          facebook: https://fb.me/mengting.huang
+
         # 貓放最後面
         - name: Xue Mei
           title: 暗黒 Ruby
