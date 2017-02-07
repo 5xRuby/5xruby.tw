@@ -300,6 +300,13 @@ ja:
           skills: "デストラクタ"
           facebook: https://fb.me/mengting.huang
 
+        - name: RingoYang
+          title: 林檎羊
+          avatar: ringoyang.png
+          about: 「メーメー」
+          skills: HTML / CSS / 日本語
+          facebook: https://fb.me/ringo.yang.90
+
         # 貓放最後面
         - name: Xue Mei
           title: 暗黒 Ruby

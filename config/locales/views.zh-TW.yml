@@ -300,6 +300,13 @@ zh-TW:
           skills: "課程推廣 / 活動宣傳 / 你們會的我都不會"
           facebook: https://fb.me/mengting.huang
 
+        - name: RingoYang
+          title: 蘋果羊
+          avatar: ringoyang.png
+          about: 「咩~~咩~~」
+          skills: HTML / CSS / 日文
+          facebook: https://fb.me/ringo.yang.90
+
         # 貓放最後面
         - name: 學妹
           title: 暗黑紅寶石
