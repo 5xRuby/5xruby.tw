@@ -300,7 +300,14 @@ en:
           about: "Love and peace"
           skills: "Office Assistant"
           facebook: https://fb.me/mengting.huang
-        
+
+        - name: RingoYang
+          title: AppleSheep
+          avatar: ringoyang.png
+          about: 「Baa~~Baa~~」
+          skills: "HTML / CSS / Japanese"
+          facebook: https://fb.me/ringo.yang.90
+
         # 貓放最後面
         - name: Xue Mei
           title: Dark Ruby
