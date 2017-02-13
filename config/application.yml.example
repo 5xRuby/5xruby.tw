@@ -1,5 +1,9 @@
 defaults: &defaults
   force_ssl: false
+  tenmax:
+    root_id: 878919477026
+  ga:
+    id: UA-51124505-1
 development:
   <<: *defaults
   admin_path_prefix: admin
