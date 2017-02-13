@@ -1,0 +1,26 @@
+
+<% courses.each do |course| %>
+  <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
+    <%= link_to course do %>
+      <div class="lecture-wrap">
+        <%= image_tag course.image.thumb, class: 'cover' %>
+        <h4 class="rl-padding"><%= course.title %></h4>
+        <div class="rl-padding bottom-padding">
+          <% if course.outdated? %>
+            <span class="small"><%= t('.outdated') %></span>
+          <% elsif course.about_to_begin? %>
+            <span class="yellow-tag small"><%= t('.about_to_begin') %></span>
+          <% else %>
+            <span class="orange-tag small"><%= t('.opening') %></span>
+          <% end %>
+          <%#<span class="orange-tag small">剩<span class="text-brown">2</span>名額</span>%>
+          <span class="date text-grey small"><%= course.stages.first.date %></span>
+          <p class="descri both-spacing-sm">
+            <%= course.summary %>
+          </p>
+          <span class="text-grey small"><%= t('.speaker_label') %> <%= course.speakers.first.name %>  | <%= t('.hours_label') %> <%= course.hours %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

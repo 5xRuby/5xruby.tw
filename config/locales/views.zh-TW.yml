@@ -44,6 +44,12 @@ zh-TW:
         zero: 尚無時數
         one: 1 小時
         other: "%{count} 小時"
+    list:
+      speaker_label: 講者：
+      hours_label: 時數：
+      outdated: 課程結束
+      about_to_begin: 即將開講
+      opening: 招生中
   stages:
     stage:
       stage_no: 第 %{stage} 堂
@@ -66,32 +72,26 @@ zh-TW:
     next_schedule:
       hours: 小時
     main_features:
-      5xruby: 五倍紅寶石
+      about_5xruby: 關於五倍紅寶石 About 5xRuby
       items:
-        - icon: icon-trophy
-          title: 專業師資
-          url: /speakers
-          description: 「五倍紅寶石」之成員及講師均是在業界第一線的開發人員或台灣 Ruby 社群的資深成員，除了具備理論基礎外，亦有充足的開發實作經驗。
-        - icon: icon-ok
-          title: 技術諮詢、顧問
-          url: /contacts
-          description: 從系統設計、規劃到開發，甚至到系統架設，我們都能為您提供專業的建議與諮詢。
-        - icon: icon-mic
-          title: 實戰講座
-          url: /talks
-          description: 我們規劃了一系列包括 Ruby、Rails、Git 、測試及系統佈署等入門到中、高階的講座，讓您可以快速掌握使用 Ruby 開發的快速與樂趣。
-        - icon: icon-code
-          title: 企業培訓
-          url: /contacts
-          description: 我們針對企業內部開發人員設計了一系列培訓計劃，協助您將現有人力快速打造為專業 Ruby/Rails 開發團隊。您無須再經歷繁瑣的人才招募流程，也可免除新進人員需與組織文化磨合的困擾。
-        - icon: icon-website
-          title: 案件外包
-          url: /contacts
-          description: 我們提供 Ruby、Rails、iOS 的工程服務，以頂尖的技術為你快速打造產品。
-        - icon: icon-home
-          title: 場地租借
-          url: /events/space/
-          description: 近台北車站、最強 300M 網速，我們提供了高品質的工作空間，無論是創業或 SOHO 或是舉辦活動都是你的最佳選擇。
+        - img: feature-list-img1
+          title: 十年功力實戰講座
+          description:
+            - 業界資深前輩為你講解 Ruby、Rails、
+            - Git 、系統佈署等從入門到中高階的講座
+            - 讓你有如練了十年功！
+        - img: feature-list-img2
+          title: 案件外包．技術諮詢
+          description:
+            - 從 Ruby、Rails、iOS 的工程服務
+            - 到系統設計、規劃到開發甚至系統架設
+            - 提供專業的建議與頂尖的技術
+        - img: feature-list-img3
+          title: 企業培訓計畫
+          description:
+            - 由業界第一線的開發人員協助您將
+            - 現有人力快速打造為 Ruby/Rails 團隊
+            - 無須經歷繁瑣的人才招募就有即戰力！
     main_content_gray:
       view_all_courses: 瀏覽所有講座
       latest_courses: 最新講座
@@ -99,6 +99,7 @@ zh-TW:
     main_content:
       next_courses: 近期講座
       next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
+      more_talks: ...更多講座
     recent_course:
       detail: 詳細
     about:
@@ -328,21 +329,13 @@ zh-TW:
     header:
       about: 關於
     nav:
-      home: 首頁
+      login: 學員登入
       course: 講座
-      videos: 影片
-      showcases: 案例
-      blog: 部落格
-      speakers: 講師
-      contacts: 聯絡與詢價
-      about: 關於
-      faq: 常見問題
-      space: 空間場地
-      rental: 租用申請
-      space_status: 空間使用狀況
-      interview_questions: 面試題目
-      resources: 資源
-      us: 我們
+      outsourcing: 專案開發
+      training: 企業代訓
+      space_rental: 空間租借
+      news: 最新消息
+      contact: 聯絡詢價
     footer:
       browse: 瀏覽
       courses: 講座
@@ -350,7 +343,9 @@ zh-TW:
       blog: 部落格
       contacts: 聯絡我們
       about_5xruby: 關於五倍紅寶石
+      members: 團隊成員
       about_us: 關於我們
+      recruit: 工作機會
       source_code: 網站原始碼
       media: 媒體報導
       any_question: 有任何問題？

@@ -43,6 +43,12 @@ en:
         zero: not yet available
         one: 1 hour
         other: "%{count} hour"
+    list:
+      speaker_label: 'Speaker:'
+      hours_label: 'Hours:'
+      outdated: Ended
+      about_to_begin: About to begin
+      opening: Opening
   stages:
     stage:
       stage_no: Lesson number %{stage}
@@ -65,32 +71,25 @@ en:
     next_schedule:
       hours: hour
     main_features:
-      5xruby: 5xRuby
+      about_5xruby: About 5xRuby
       items:
-        - icon: icon-trophy
-          title: Professional Lecturers
-          url: /en/speakers
-          description: The members and lecturers of 5xRuby are the first-line developers in the market and senior members from Taiwan's Ruby community, where actual developing experience and pragmatics come in hand with theoretical basis.
-        - icon: icon-ok
-          title: Technical Consulting
-          url: /en/contacts
-          description: From system design to planning, development, and even system set-up, we provide professional advice and consultation.
-        - icon: icon-mic
-          title: Authentic Practices
-          url: /en/talks
-          description: We have designed a series of lectures including authentic practices of Ruby, Rails, Git, testing and system planning of diffrent levels from enrty, intermidate to advanced lectures. This will allow you to experience the fast speed and fun of developing via Ruby.
-        - icon: icon-video
-          title: Enterprise Training
-          url: /en/contacts
-          description: We have also designed a series of training programs for enterprise staff. This will help you build up a professional Ruby / Rails development team with your current staffing. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
-        - icon: icon-website
-          title: Outsourcing
-          url: /en/contacts
-          description: We have professional Ruby, Rails and iOS engineers to build your projects.
-        - icon: icon-home
-          title: Space Rental
-          url: /events/space/
-          description: We offer high-quality workspace near Taipei Main Station, with network speed up to 300 Mbps. We are your best choice no matter you are launching a startup, working as SOHO or hosting an event.
+        - img: feature-list-img1
+          title: Courses
+          description:
+            - From Ruby, Railsk, Git to deployment,
+            - we have experts teaching these in either basic and advanced level,
+            - making you get on board eazily!
+        - img: feature-list-img2
+          title: Case outsourcing / Technical consulting
+          description:
+            - Providing professional and technical advice and support for
+            - Ruby, Rails, iOS, system design and even deployment.
+        - img: feature-list-img3
+          title: Employee Training Plans
+          description:
+            - Helping enterprise making their existing
+            - human resource into Ruby/Rails teams
+            - No more recruit is required!
     main_content_gray:
       view_all_courses: view all lectures
       latest_courses: lastest lectures
@@ -98,6 +97,7 @@ en:
     main_content:
       next_courses: recent lectures
       next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
+      more_talks: ...More
     recent_course:
       detail: details
     about:
@@ -329,21 +329,13 @@ en:
     header:
       about: About us
     nav:
-      home: Home
-      course: Lecture
-      videos: Video
-      showcases: Showcase
-      blog: Blog
-      speakers: Lecturer
-      contacts: Contact us
-      about: About us
-      faq: Q & A
-      space: Space
-      rental: Rental
-      interview_questions: Interview Questions
-      resources: Resources
-      space_status: Space Status
-      us: Us
+      login: Login
+      course: 講座
+      outsourcing: Outsourcing
+      training: Training
+      space_rental: Space Rental
+      news: News
+      contact: Contact us
     footer:
       browse: browse
       courses: Lectures
@@ -351,7 +343,9 @@ en:
       blog: Blog
       contacts: Contact Us
       about_5xruby: About 5xRuby
+      members: Members
       about_us: About Us
+      recruit: Recruit
       source_code: Source Code
       media: Media Exposure
       any_question: Any questions?

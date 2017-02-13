@@ -1,53 +1,44 @@
-<footer>
-  <%#div class="container">
+<!-- Start Footer -->
+<footer class="light-grey-bg">
+  <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h3>訂閱Subscribe to our Newsletter for latest news.</h3>
-        <div id="message-newsletter"></div>
-        <form method="post" action="assets/newsletter.php" name="newsletter" id="newsletter" class="form-inline">
-          <input name="email_newsletter" id="email_newsletter" type="email" value="" placeholder="Your Email" class="form-control">
-          <button id="submit-newsletter" class=" button_outline"> Subscribe</button>
-        </form>
+      <div class="col-sm-3 col-lg-4 col-md-4">
+        <h5><%= t('.media') %></h5>
+        <p>
+        <a href="<%= t('site.openfoundary_url') %>" target="_blank"><%= image_tag 'open-foundry-logo', class: 'bottom-spacing-sm' %></a>
+        <br><a href="<%= t('site.panx_url') %>" target="_blank"><%= image_tag 'panx-logo' %></a>
+        </p>
+      </div>
+      <div class="col-sm-9 col-lg-8 col-md-8 bottom-spacing-sm">
+        <h5><%= link_to t('.about_5xruby'), about_path %></h5>
+        <h5><%= link_to t('.members'), '#' %></h5>
+        <h5><%= link_to t('.faq'), faq_path %></h5>
+        <h5><%= link_to t('.recruit'), posts_path(tags: '徵才') %></h5>
+        <h5><%= link_to t('.source_code'), "https://github.com/5xRuby/5xruby.tw" %></h5>
+      </div>
+      <div class="col-sm-3 col-lg-2 col-md-2">
+        <strong class="large text-red"><%= t('company.contact_phone') %></strong>
+        <br><small><%= t('company.open_hours') %></small>
+        <br><a href="<%= t('company.facebook') %>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="<%= t('company.twitter') %>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      </div>
+      <div class="col-sm-5 col-lg-6 col-md-6">
+        <div class="mail-address">
+          <%= t('.any_question') %> <a href="mailto:<%= t('company.email') %>"><%= t('company.email') %></a>
+          <br>
+          <%=t '.address_label'%> <a target="_blank" href="<%= t('company.gmap_url') %>"><%=t 'company.address'%></a>
+        </div>
       </div>
     </div>
-  </div%>
-
-  <hr>
-
-  <div class="container" id="nav-footer">
-    <div class="row text-left">
-      <div class="col-md-3 col-sm-3">
-        <h4><%= t('.browse') %></h4>
-        <ul>
-          <li><%= link_to t('.courses'), courses_path %></li>
-          <li><%= link_to t('.blog'), posts_path %></li>
-          <li><%= link_to t('.faq'), faq_path %></li>
-          <li><%= link_to t('.media'), "/posts?tags=媒體報導" %></li>
-        </ul>
-      </div><!-- End col-md-4 -->
-      <%= render 'layouts/course_categories' %>
-      <div class="col-md-3 col-sm-3">
-        <h4><%= t('.about_5xruby') %></h4>
-        <ul>
-          <li><%= link_to t('.about_us'), about_path %></li>
-          <li><%= link_to t('.contacts'), contacts_path %></li>
-          <li><%= link_to t('.source_code'), "https://github.com/5xRuby/5xruby.tw", target:"_blank" %></li>
-        </ul>
-      </div><!-- End col-md-4 -->
-      <div class="col-md-3 col-sm-3">
-        <ul id="follow_us">
-          <li><a href="https://www.facebook.com/5xruby" target="_blank"><i class="icon-facebook"></i></a></li>
-          <li><a href="https://twitter.com/5xruby" target="_blank"><i class="icon-twitter"></i></a></li>
-        </ul>
-        <ul>
-          <li><strong class="phone"><%= t('company.contact_phone') %></strong><br><small>Mon - Fri / 09:30 - 22:00</small></li>
-          <li><%= t('.any_question') %> <%= mail_to t('company.email') %></li>
-          <li>
-          <%=t '.address_label'%>：<a target="_blank" href="https://goo.gl/lz5v93"><%=t 'company.address'%></a>
-          </li>
-        </ul>
-      </div><!-- End col-md-4 -->
-    </div><!-- End row -->
+    <div class="row">
+      <div class="text-center col-sm-12 col-lg-12 col-md-12 top-spacing">
+        <%= t('company.name_full') %>
+      </div>
+    </div>
   </div>
-  <div id="copy_right">© 2016 <%= t('company.name') %> (5XRUBY CO., LTD)</div>
+  <div class="to-top text-center">
+    <a href="#" class="scrollup">
+      TOP
+    </a>
+  </div>
 </footer>
+<!-- End Footer -->

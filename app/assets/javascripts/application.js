@@ -18,3 +18,6 @@
 //= require gistyle
 //= require pages
 //= require videos
+//= require swiper
+//= require jquery.slick
+

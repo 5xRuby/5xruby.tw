@@ -1,14 +1,26 @@
 en:
   company:
     name: 5xRuby
+    name_full: '© 2017 5xRuby (5XRUBY CO., LTD)'
     address: 5F., No.7, Hengyang Rd., Zhongzheng Dist., Taipei City 10046, Taiwan.
     vat_no: "VAT: 24536806"
     email: hi@5xruby.tw
     contact_phone: '+886-2-2331-5247'
     fax: '+886-2-2331-8717'
     mobile: '+886-928-617-687'
+    open_hours: 'Mon - Fri / 09:30 - 22:00'
+    facebook: 'https://www.facebook.com/5xruby'
+    twitter: 'https://twitter.com/5xruby'
+    gmap_url: 'https://goo.gl/lz5v93'
   layouts:
     footer:
-      address_label: Address
+      address_label: 'Address:'
   site:
     description: 5xRuby is a Ruby/Rails technical consulting and training firm, founded by active core members of Taiwan's Ruby community.
+    openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
+    panx_url: 'https://panx.asia/archives/15525'
+    index_swiper_imgs:
+      - 'index-swiper-img-1'
+      - 'index-swiper-img-2'
+      - 'index-swiper-img-3'
+

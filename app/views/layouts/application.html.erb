@@ -6,6 +6,7 @@
   <head>
     <meta charset="utf-8">
     <title><%= t('company.name') %></title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
     <%= seo_meta_tags %>
     <!-- FB Insights -->
@@ -19,10 +20,6 @@
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="/img/apple-touch-icon-144x144-precomposed.png">
 
     <!-- CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/superfish.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/fontello/css/fontello.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
@@ -37,14 +34,17 @@
     <%= yield :append_head if content_for? :append_head %>
   </head>
   <%= content_tag :body, data: {controller: controller_path, action: action_name} do %>
-    <%= render 'layouts/header' %>
-    <%= render 'layouts/nav' %>
-    <%= notice_message %>
-    <%= yield %>
+    <div class="index-container">
+      <!-- Body Container -->
+      <div id="container">
+        <%= render 'layouts/header_nav' %>
+        <%= notice_message %>
+        <%= yield %>
 
-    <%= render 'layouts/footer' %>
+        <%= render 'layouts/footer' %>
 
-    <div id="toTop"><%= t('.back_to_top') %></div>
+      </div>
+    </div>
 
     <!-- OTHER JS -->
     <script src="/js/superfish.js"></script>

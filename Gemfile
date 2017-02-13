@@ -59,8 +59,10 @@ gem 'record_tag_helper'
 gem 'bootstrap-sass'
 gem 'jquery-ui-rails'
 gem 'select2-rails', '3.5.9.1'
-gem 'font-awesome-sass'
+gem "font-awesome-rails"
 gem "jquery-fileupload-rails"
+gem "jquery-slick-rails"
+gem "swiper-rails"
 
 group :development do
   gem 'web-console'

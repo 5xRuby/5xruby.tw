@@ -6,6 +6,8 @@
 //= require bootstrap-datetimepicker
 //= require bootstrap-markdown.min
 //= require_tree ./admin
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 body{ padding-top: 70px; }
