@@ -1,5 +1,6 @@
 defaults: &defaults
   force_ssl: false
+  course_about_to_begin_time: '3.days'
 development:
   <<: *defaults
   admin_path_prefix: admin

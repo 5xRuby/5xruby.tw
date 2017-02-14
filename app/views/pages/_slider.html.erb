@@ -2,7 +2,7 @@
   <div class="swiper-wrapper">
     <% t('site.index_swiper_imgs').each do |src| %>
       <div class="swiper-slide">
-        <%= image_tag src, width: '100%' %>
+        <%= image_tag "index_sliders/#{src}", width: '100%' %>
       </div>
     <% end %>
   </div>

@@ -1,6 +1,6 @@
 class Course < ActiveRecord::Base
   
-  ABOUT_TO_BEGIN = 1.day # TODO: use setting to control this value
+  ABOUT_TO_BEGIN = eval Settings.course_about_to_begin_time
 
   # scope macros
   scope :online, -> { where(is_online: true) }

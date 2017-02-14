@@ -1,0 +1,25 @@
+
+<!-- Start Know About Us -->
+<div class="know-about-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= t('.title') %></span></h3>
+        <div class="text col-sm-12 col-lg-12 col-md-12 bottom-spacing text-center">
+          <%= t('.description_1') %>
+          <%= link_to t('.qna'), faq_path %>
+          <%= t('.description_2') %>
+          <%= link_to t('.contact'), contacts_path %>
+          <%= t('.description_3') %>
+          <br>
+          <%= t('.description_4') %>
+        </div>
+        <div class="social-btn text-center bottom-spacing-lg">
+          <%= link_to image_tag('icon-fb'), t('company.facebook'), target: :_blank, class: 'rl-spacing' %>
+          <%= link_to image_tag('icon-twitter'), t('company.twitter'), target: :_blank, class: 'rl-spacing' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Know About Us -->

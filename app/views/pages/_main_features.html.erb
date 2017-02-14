@@ -7,7 +7,7 @@
         <div class="feature-list">
           <% t('.items').each do |item| %>
             <div class="col-sm-4 col-lg-4 col-md-4 text-center bottom-spacing-lg">
-              <%= image_tag item[:img], class: 'bottom-spacing' %>
+              <%= image_tag "main_features/#{item[:img]}", class: 'bottom-spacing' %>
               <h3><%= item[:title] %></h3>
               <p class="line-height-lg">
                 <% item[:description].each do |line| %>
