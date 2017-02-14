@@ -1,0 +1,15 @@
+
+<% showcases.each do |showcase| %>
+  <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
+    <%= link_to showcase.link.present? ? showcase.link : '#', target: :_blank do %>
+      <div class="lecture-wrap">
+        <%= image_tag showcase.image.thumb, class: 'cover' %>
+        <h4 class="rl-padding"><%= showcase.name %></h4>
+        <div class="rl-padding bottom-padding">
+          <p class="descri both-spacing-sm"><%= showcase.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+

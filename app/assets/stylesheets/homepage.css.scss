@@ -22,3 +22,22 @@ div.feature > p{
   width: 150px;
   height: 150px;
 }
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #b81939;
+    border: 1px solid #b81939;
+}
+
+.swiper-pagination-bullet {
+    opacity: 1;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    background: #fff;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 10px;
+}

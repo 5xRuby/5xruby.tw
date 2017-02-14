@@ -1,4 +1,7 @@
 class Course < ActiveRecord::Base
+  
+  ABOUT_TO_BEGIN = eval Settings.course_about_to_begin_time
+
   # scope macros
   scope :online, -> { where(is_online: true) }
   scope :coming, -> { select('courses.*, min(date) as min_date').joins(:stages).group('courses.id').order('min_date') }
@@ -80,8 +83,16 @@ class Course < ActiveRecord::Base
     (((minimum_attendees - need_attendees_count).to_f / minimum_attendees) * 100).to_i
   end
 
+  def nearest_stage_date
+    stages.map(&:date).max
+  end
+
   def outdated?
-    stages.map(&:date).max < Time.now
+    nearest_stage_date < Time.now
+  end
+
+  def about_to_begin?
+    (Date.today - nearest_stage_date) < ABOUT_TO_BEGIN
   end
 
   private

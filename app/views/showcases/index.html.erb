@@ -1,18 +1,2 @@
 <%= sub_header title: Showcase.model_name.human %>
-<section id="main_content">
-  <div class="container">
-    <div class="row">
-      <% @showcases.each do |showcase| %>
-      <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <%= link_to_if showcase.link.present?, image_tag(showcase.image.thumb), showcase.link, target: :_blank  %>
-            <div class="caption">
-              <h3><%= tr(showcase, :name) %></h3>
-              <p><%= tr(showcase, :description) %></p>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</section>
+<%= render partial: 'list', locals: {showcases: @showcases} %>

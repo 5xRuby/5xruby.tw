@@ -43,6 +43,12 @@ en:
         zero: not yet available
         one: 1 hour
         other: "%{count} hour"
+    list:
+      speaker_label: 'Speaker:'
+      hours_label: 'Hours:'
+      outdated: Ended
+      about_to_begin: About to begin
+      opening: Opening
   stages:
     stage:
       stage_no: Lesson number %{stage}
@@ -65,32 +71,25 @@ en:
     next_schedule:
       hours: hour
     main_features:
-      5xruby: 5xRuby
+      about_5xruby: About 5xRuby
       items:
-        - icon: icon-trophy
-          title: Professional Lecturers
-          url: /en/speakers
-          description: The members and lecturers of 5xRuby are the first-line developers in the market and senior members from Taiwan's Ruby community, where actual developing experience and pragmatics come in hand with theoretical basis.
-        - icon: icon-ok
-          title: Technical Consulting
-          url: /en/contacts
-          description: From system design to planning, development, and even system set-up, we provide professional advice and consultation.
-        - icon: icon-mic
-          title: Authentic Practices
-          url: /en/talks
-          description: We have designed a series of lectures including authentic practices of Ruby, Rails, Git, testing and system planning of diffrent levels from enrty, intermidate to advanced lectures. This will allow you to experience the fast speed and fun of developing via Ruby.
-        - icon: icon-video
-          title: Enterprise Training
-          url: /en/contacts
-          description: We have also designed a series of training programs for enterprise staff. This will help you build up a professional Ruby / Rails development team with your current staffing. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
-        - icon: icon-website
-          title: Outsourcing
-          url: /en/contacts
-          description: We have professional Ruby, Rails and iOS engineers to build your projects.
-        - icon: icon-home
-          title: Space Rental
-          url: /events/space/
-          description: We offer high-quality workspace near Taipei Main Station, with network speed up to 300 Mbps. We are your best choice no matter you are launching a startup, working as SOHO or hosting an event.
+        - img: feature-list-img1
+          title: Courses
+          description:
+            - From Ruby, Railsk, Git to deployment,
+            - we have experts teaching these in either basic and advanced level,
+            - making you get on board eazily!
+        - img: feature-list-img2
+          title: Case outsourcing / Technical consulting
+          description:
+            - Providing professional and technical advice and support for
+            - Ruby, Rails, iOS, system design and even deployment.
+        - img: feature-list-img3
+          title: Employee Training Plans
+          description:
+            - Helping enterprise making their existing
+            - human resource into Ruby/Rails teams
+            - No more recruit is required!
     main_content_gray:
       view_all_courses: view all lectures
       latest_courses: lastest lectures
@@ -98,8 +97,50 @@ en:
     main_content:
       next_courses: recent lectures
       next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
+      more_talks: ...More
+    testimonials:
+      items:
+        - name: Victor Lam
+          title: "Product Manager of GoGoVan, Full Stack Developer"
+          img: "testimonial_victor.jpg"
+          content: "The most valuable thing for a programmer is experience. All the lecturers and coaches in 5xRuby are the most experienced senior Rubyists in the community. Having them to guide students to explore the magnificent world of Ruby is a great decision made."
+        - name: Jason Hsu
+          title: "founder of The Big Questions & TEDxTaipei"
+          img: "testimonial_jason.jpg"
+          content: "Eddie and his team are of the most dedicated Ruby evangelists I have ever come across. With their passion and professionalism, Ruby learners will leapfrog in their progress."
+        - name: Felix Lin
+          title: "founder of dappei.com"
+          img: "testimonial_felix.jpg"
+          content: " Are you still looking for professional Ruby/Rails coaches? No doubt the best Rubyists in Taiwan are all in 5xRuby"
+        - name: Hana Chang
+          title: "Co-Founder and CEO of BountyHunter"
+          img: "test-monial-Hana.jpg"
+          content: "Mu-fan and Eddie are the masters in Ruby. Not only are they experienced, but also very skillful in guiding students, training those who encouter obstables and frustration while learning Ruby/Rails. I am really grateful to have entered the wonderful world of Ruby under their help."
+        - name: John Sie
+          title: "co-founder and COO of Accuvally Inc."
+          img: "testimonial_johnsie.jpg"
+          content: "It is important to choose a coding language, and even more important to choose the right coach for coding language. Learning alongside top Rubyists in the community, with their many years of experiences in Ruby/Rails pragmatics, the art of program development can be seen in a glimpse. We all know that we should leave the professional stuff to the professionals. I firmly believe that 5xRuby is a professional Treasure Island waiting for more to dig in and discover more."
+        - name: Ben Lin
+          title: "CEO@POP"
+          img: "testimonial_benlin.jpg"
+          content: "The coaches in 5xRuby are the top players in the market. The courses they provided will save you a lot of time exploring Ruby/Rails on your own."
+        - name: Max Lu
+          title: "founder of Buyble, an international boutique shopping website"
+          img: "testimonial_max.jpg"
+          content: "I was very honered to have worked with Carol and Eddie. I admire Carol's self-discipline and aspiration. I praise Eddie for his exellence in crisis handling and sense of responsibility. The other partners in 5xRuby are also experts in this field. I beleive this is a great team!"
     recent_course:
       detail: details
+    showcases:
+      title: Showcases
+      more: ...more
+    know_more:
+      title: What to know more about us?
+      description_1: You can check out
+      qna: Q&A
+      description_2: or
+      contact: contact us
+      description_3: There will be a person answering your questions
+      description_4: You can also subscribe our social accounts to get the latest information
     about:
       ceo: Eddie Kao
       ceo_title: Appraiser
@@ -336,21 +377,13 @@ en:
     header:
       about: About us
     nav:
-      home: Home
-      course: Lecture
-      videos: Video
-      showcases: Showcase
-      blog: Blog
-      speakers: Lecturer
-      contacts: Contact us
-      about: About us
-      faq: Q & A
-      space: Space
-      rental: Rental
-      interview_questions: Interview Questions
-      resources: Resources
-      space_status: Space Status
-      us: Us
+      login: Login
+      course: 講座
+      outsourcing: Outsourcing
+      training: Training
+      space_rental: Space Rental
+      news: News
+      contact: Contact us
     footer:
       browse: browse
       courses: Lectures
@@ -358,7 +391,9 @@ en:
       blog: Blog
       contacts: Contact Us
       about_5xruby: About 5xRuby
+      members: Members
       about_us: About Us
+      recruit: Recruit
       source_code: Source Code
       media: Media Exposure
       any_question: Any questions?

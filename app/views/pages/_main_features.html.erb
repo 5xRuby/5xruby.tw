@@ -1,27 +1,24 @@
-<section id="main-features">
-  <div class="divider_top_black"></div>
+<!-- Start Feature Section -->
+<div class="feature-section light-grey-bg bottom-padding-lg">
   <div class="container">
     <div class="row">
-      <div class=" col-md-10 col-md-offset-1 text-center">
-        <h2><%= t('.5xruby') %></h2>
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="text-center both-spacing-lg"><span><%= t('.about_5xruby') %></span></h3>
+        <div class="feature-list">
+          <% t('.items').each do |item| %>
+            <div class="col-sm-4 col-lg-4 col-md-4 text-center bottom-spacing-lg">
+              <%= image_tag "main_features/#{item[:img]}", class: 'bottom-spacing' %>
+              <h3><%= item[:title] %></h3>
+              <p class="line-height-lg">
+                <% item[:description].each do |line| %>
+                  <%= line %><br>
+                <% end %>
+              </p>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
-    <% t('.items').each_slice(2) do |pair| %>
-      <div class="row">
-      <% pair.each do |item| %>
-      <div class="col-md-6">
-        <%= link_to item[:url] do %>
-        <div class="feature">
-          <i class="<%= item[:icon] %>"></i>
-          <h3><%= item[:title] %></h3>
-          <p><%= item[:description] %></p>
-        </div>
-        <% end %>
-      </div>
-      <% end %>
-      </div>
-    <% end %>
-    <!-- End row -->
   </div>
-  <!-- End container-->
-</section>
+</div>
+<!-- End Feature Section -->

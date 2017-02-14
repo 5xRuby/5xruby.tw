@@ -1,7 +1,9 @@
 
 /*
-*= require font_awesome
+*= require swiper
+*= require slick-theme
 *= require highlightjs/tomorrow-night-bright
+*= require homepage
 *= require additional
 *= require nav
 *= require homepage
@@ -9,13 +11,14 @@
 *= require_self
 */
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "slick";
+@import "font-awesome";
+@import "bootstrap-theme";
+
 body > div.alert{
   margin-bottom: 0px;
-}
-
-a#logo {
-  width: 208px;
-  height: 50px;
 }
 
 a.button_medium, .button_medium {

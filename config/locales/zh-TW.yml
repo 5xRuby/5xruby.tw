@@ -1,14 +1,25 @@
 zh-TW:
   company:
     name: 五倍紅寶石股份有限公司
+    name_full: '© 2017 五倍紅寶石股份有限公司 (5XRUBY CO., LTD)'
     address: 10046 台北市中正區衡陽路 7 號 5 樓
     vat_no: 統編：24536806
     email: hi@5xruby.tw
     contact_phone: '02-2331-5247'
     fax: '02-2331-8717'
     mobile: '0928-617-687'
+    open_hours: 'Mon - Fri / 09:30 - 22:00'
+    facebook: 'https://www.facebook.com/5xruby'
+    twitter: 'https://twitter.com/5xruby'
+    gmap_url: 'https://goo.gl/lz5v93'
   layouts:
     footer:
-      address_label: 地址
+      address_label: '地址：'
   site:
     description: 「五倍紅寶石」是由幾位台灣 Ruby 社群的朋友共同成立的一家公司，希望透過教育訓練、企業培訓等講座，將 Ruby 推廣到校園、企業、開發者。提供的服務包括：程式教育訓練、企業技術培訓與諮詢、活動場地租借與專案委托製作。
+    openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
+    panx_url: 'https://panx.asia/archives/15525'
+    index_swiper_imgs:
+      - 'index-swiper-img-1'
+      - 'index-swiper-img-2'
+      - 'index-swiper-img-3'
