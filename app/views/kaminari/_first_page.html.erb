@@ -6,6 +6,8 @@
     per_page:      number of items to fetch per page
     remote:        data-remote
 -%>
-<li class="first">
-  <%= link_to_unless current_page.first?, raw(t 'views.pagination.first'), url, :remote => remote %>
+<li class="<%= 'disabled' if current_page.first? %>">
+  <%= link_to url, "aria-label" => "Previous", remote: remote do %>
+    <span aria-hidden="true"><%= raw(t('views.pagination.first')) %></span>
+  <% end %>
 </li>

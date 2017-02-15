@@ -3,6 +3,7 @@ class CoursesController < ApplicationController
     @courses = Course.includes(:translations, :category, :stages).online.order('id DESC').page(params[:page]).per(6)
     @courses = @courses.where(category: @category) if @category = Category.find_by(permalink: params[:category])
     @categories = Category.with_max_date.order(:sort_id)
+    @speakers = Speaker.online.includes(:translations).order(:sort_id)
   end
 
   def show

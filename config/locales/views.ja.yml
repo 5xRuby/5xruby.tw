@@ -18,10 +18,11 @@ ja:
     index:
       title: 講師
       lead: 高品質な講座を提供する為に、我々は、10名以上の経験豊富なRuby/Rails講師を採用しております。彼らは、熱心に開発及びコーチングに取り組んでおります。もし講師になることに興味がありましたら、是非連絡下さい。
+    sliders:
+      title: Speakers
   courses:
     index:
       title: 講座の状況
-    sidebar:
       all_courses: 全ての講座
       categories: カテゴリー
       satisfied: あなたは、我々の講座に満足していますか？

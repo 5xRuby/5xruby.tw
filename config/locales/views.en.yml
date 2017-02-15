@@ -18,10 +18,11 @@ en:
     index:
       title: Lecturer
       lead: In order to provide lectures with high quality, we have recruited more than 10 experienced lecturers in Ruby/Rails. They have devoted themselves in the development and teachings of this field. Please contact us if you are ineterested in becoming a lecturer.
+    sliders:
+      title: Speakers
   courses:
     index:
       title: Lecture status
-    sidebar:
       all_courses: All lectures
       categories: Category
       satisfied: Are you satisfied with our lectures?
@@ -378,7 +379,7 @@ en:
       about: About us
     nav:
       login: Login
-      course: 講座
+      course: Courses
       outsourcing: Outsourcing
       training: Training
       space_rental: Space Rental

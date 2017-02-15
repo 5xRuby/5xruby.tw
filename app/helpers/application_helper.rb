@@ -82,4 +82,11 @@ module ApplicationHelper
     locale_link = link_to name, url_for(request.GET.merge(locale: locale == I18n.default_locale ? nil : locale))
     content_tag :li, locale_link unless locale == I18n.locale
   end
+
+  def image_set_tag(src_folder, sizes, options = {})
+    srcset = sizes.map do |s|
+      "#{path_to_image "#{src_folder}/#{s}"} #{s}"
+    end.join(', ')
+    image_tag "#{src_folder}/#{sizes.last}", {alt: src_folder.split('/').last, srcset: srcset}.merge(options)
+  end
 end

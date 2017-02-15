@@ -20,6 +20,9 @@ zh-TW:
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'
     index_swiper_imgs:
-      - 'index-swiper-img-1'
-      - 'index-swiper-img-2'
-      - 'index-swiper-img-3'
+      - name: 'swiper-1'
+        sizes: ["400w", "600w", "1280w"]
+      - name: 'swiper-2'
+        sizes: ["400w", "600w", "1280w"]
+      - name: 'swiper-3'
+        sizes: ["400w", "600w", "1280w"]

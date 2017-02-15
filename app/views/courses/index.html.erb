@@ -1,32 +1,49 @@
-<%= sub_header title: t('.title') %>
 
-<section id="main_content">
+<!-- Start Main Banner -->
+<div class="container-fluid">
+  <div class="row">
+    <%= image_set_tag "lectures-main-banner", ["400w", "600w", "1280w"], width: "100%" %>
+  </div>
+</div>
+<!-- End Main Banner -->
+
+<!-- Start Lecture Category -->
+<div class="lecture-category">
   <div class="container">
-    <% if @category.respond_to?(:name) %>
-      <%= breadcrumb link_to(Course.model_name.human, Course), @category.name %>
-    <% else %>
-      <%= breadcrumb Course.model_name.human %>
-    <% end %>
     <div class="row">
-      <aside class="col-lg-3 col-md-4 col-sm-4">
-        <%= render 'sidebar' %>
-      </aside>
-
-      <div class="col-lg-9 col-md-8 col-sm-8">
-        <div id="courses" class="row">
-          <%= render @courses %>
-        </div><!-- End row -->
-      </div><!-- End col-lg-9-->
-
-
-
-    </div><!-- End row -->
-
-    <hr>
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <%= paginate @courses %>
+      <div class="col-sm-12 col-lg-12 col-md-12">
+        <ul class="nav nav-pills both-spacing">
+          <li class="<%= 'active' unless @category %>"><%= link_to t('.all_courses'), Course %></li>
+          <% @categories.each do |category| %>
+            <li class="<%= 'active' if @category == category %>">
+              <%= link_to courses_path(category: category.permalink) do %>
+                <%= "#{category.name} (#{category.courses_count })" %> <%= image_tag '/img/new.png', alt: 'New' if category.new_course? %>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </div>
-  </div><!-- End container -->
-</section><!-- End main_content -->
+  </div>
+</div>
+<!-- End Lecture Category -->
+
+<!-- Start Lectures -->
+<div class="lectures-list">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <div class="lecture-list">
+          <%= render partial: 'courses/list', locals: {courses: @courses } %>
+          <nav class="text-center">
+            <%= paginate @courses %>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Lectures -->
+
+<%= render partial: 'speakers/sliders', locals: {speakers: @speakers} %>
+
