@@ -95,6 +95,10 @@ class Course < ActiveRecord::Base
     (Date.today - nearest_stage_date) < ABOUT_TO_BEGIN
   end
 
+  def speakers_name
+    speakers.map(&:name).join(', ')
+  end
+
   private
   def force_using_ssl_iframe
     pattern = /(http:\/\/)/

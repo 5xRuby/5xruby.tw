@@ -1,6 +1,7 @@
 zh-TW:
   breadcrumb:
     home: 首頁
+    courses: 講座資訊
   videos:
     index:
       title: 五倍影城
@@ -30,13 +31,19 @@ zh-TW:
     show:
       summary: 簡介
       what_you_will_learn: 你將會學到
+      suitable_for: 本講座適合
       apply_now: 我要報名
-      note: 說明
+      outline: 講座大綱
+      note: 注意事項：
+      payment_note: 付款方式：
       chapter_title: 第 %{nth} 堂：
       lessons: 堂數
       hours: 時數
+      hours_label: '時數:'
       charger: <span>開講好棒棒：距離開講還差 <strong>%{num}</strong> 人！</span>
       charger_complete: <span>開講好棒棒：已順利開講！</span>
+      outdated: 講座已開始，不接受報名
+      opening: 立即報名
     course:
       apply: 我想報名
       detail: 詳細資料

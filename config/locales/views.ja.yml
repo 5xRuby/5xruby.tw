@@ -1,6 +1,7 @@
 ja:
   breadcrumb:
     home: ホーム
+    courses: 講座
   videos:
     index:
       title: 動画
@@ -30,12 +31,18 @@ ja:
     show:
       summary: 紹介
       what_you_will_learn: 学ぶこと
+      suitable_for: Suitable for
       apply_now: 申込希望
+      outline: Outline
       note: 説明
+      payment_note: 'Payment:'
       charger_complete: Threshold Bar
       chapter_title: "レッスン %{nth}:"
       lessons: レッスン
       hours: 時間
+      hours_label: '時間:'
+      outdated: Lecture has started
+      opening: Sign up now
     course:
       apply: 申込希望
       detail: 詳細情報

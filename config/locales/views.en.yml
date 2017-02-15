@@ -1,6 +1,7 @@
 en:
   breadcrumb:
     home: Home
+    courses: Lectures
   videos:
     index:
       title: Videos
@@ -30,12 +31,18 @@ en:
     show:
       summary: Introduction
       what_you_will_learn: What you will learn
+      suitable_for: Suitable for
       apply_now: I'd like to sign in the lecture
+      outline: Outline
       note: Description
+      payment_note: 'Payment:'
       charger_complete: Threshold Bar
       chapter_title: "Lesson %{nth}:"
       lessons: Lessons
       hours: Hours
+      hours_label: 'Hours:'
+      outdated: Lecture has started
+      opening: Sign up now
     course:
       apply: I'd like to sign in the lecture
       detail: Detailed Info
