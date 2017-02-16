@@ -112,6 +112,14 @@ en:
       next_courses: recent lectures
       next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
       more_talks: ...More
+    training:
+      showcases: Showcases
+      qna:
+        title: Q & A
+        q_label: Q：
+        a_label: A：
+      interested: Are you interested in?
+      contact_us: Contact us
     testimonials:
       items:
         - name: Victor Lam

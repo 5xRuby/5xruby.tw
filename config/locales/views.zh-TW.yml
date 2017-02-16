@@ -114,6 +114,14 @@ zh-TW:
       next_courses: 近期講座
       next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
       more_talks: ...更多講座
+    training:
+      showcases: 培訓案例 Showcase
+      qna:
+        title: Q & A
+        q_label: Q：
+        a_label: A：
+      interested: 對我們的代訓計畫有興趣嗎？
+      contact_us: 歡迎與我們聯繫
     testimonials:
       items:
         - name: Victor Lam

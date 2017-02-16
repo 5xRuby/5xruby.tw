@@ -1,0 +1,117 @@
+
+<!-- Start Main Banner -->
+<div class="container-fluid">
+  <div class="row">
+    <%= image_set_tag 'training-main-banner', ['400w', '600w', '1280w'], width: '100%' %>
+  </div>
+</div>
+<!-- End Main Banner -->
+
+<!-- Start Training Introduction -->
+<div class="training-intro light-grey-bg bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-6 col-md-6 center-block text-center">
+        <h3 class="text-center top-spacing-lg"><span><%= t('training.intro_title') %></span></h3>
+        <p class="line-height-lg"><%= raw t('training.description') %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Training Introduction -->
+
+<!-- Start Training List -->
+<% if @showcases.present? %>
+  <div class="training-list">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+          <h3 class="text-center both-spacing-lg"><span><%= t('.showcases') %></span></h3>
+          <div class="lecture-list">
+            <%= render partial: 'showcases/list', locals: {showcases: @showcases} %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+<!-- End Training List -->
+
+<!-- Start Training Introduction -->
+<div class="training-intro light-grey-bg bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-6 col-md-6">
+        <h3 class="text-center top-spacing-lg bottom-spacing"><span class="border-bottom-red"><%= t('training.process_title') %></span></h3>
+        <div class="rl-padding-lg line-height-lg"><%= raw t('training.process_html') %></div>
+      </div>
+      <div class="col-sm-6 col-lg-6 col-md-6">
+        <h3 class="text-center top-spacing-lg bottom-spacing"><span class="border-bottom-red"><%= t('training.content_title') %></span></h3>
+        <div class="rl-padding-lg line-height-lg">
+        <%= raw t('training.content_html') %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Training Introduction -->
+
+<!-- Start Training Feedback -->
+<div class="training-feedback-wrap feedback-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= t('training.what_they_say_title') %></span></h3>
+        <p class="text-center"><%= t('training.what_they_say_description') %></p>
+        <div class="col-sm-8 col-lg-8 col-md-8 center-block border-grey bottom-spacing-lg">
+          <% t('training.what_they_says').each do |s| %>
+            <div class="row four-spacing">
+              <div class="col-sm-2 col-lg-2 col-md-2">
+                <%= image_tag public_path("img/training_testimonials/#{s[:img]}"), class: "avatar right-spacing" %>
+              </div>
+              <div class="col-sm-10 col-lg-10 col-md-10">
+                <%= raw s[:content] %>
+                <br><br><span class="text-red large"><%= s[:name] %></span>
+                <br><span class="text-grey"><%= s[:title] %></span>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Training Feedback -->
+
+<!-- Start Training Q&A -->
+<div class="training-intro light-grey-bg bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-lg-8 col-md-8 center-block">
+        <h3 class="text-center top-spacing-lg"><span><%= t('.qna.title') %></span></h3>
+        <div class="line-height-lg">
+          <% t('training.qnas').each do |qa| %>
+            <h4 class="top-spacing"><%= "#{t('.qna.q_label')}#{qa[:q]}" %></h4>
+            <p><%= "#{t('.qna.a_label')}#{qa[:a]}" %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Training Q&A -->
+
+<!-- Start Know About Us -->
+<div class="know-about-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= t('.interested') %></span></h3>
+        <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing-lg text-center">
+          <%= link_to t('.contact_us'), contacts_path, class: "btn btn-red" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Know About Us -->

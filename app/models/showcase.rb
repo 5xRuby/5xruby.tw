@@ -4,6 +4,7 @@ class Showcase < ActiveRecord::Base
   # Concerns macros
 
   # Constants
+  enum category: [:project, :training]
 
   # Attributes related macros
   mount_uploader :image, ShowcaseImageUploader

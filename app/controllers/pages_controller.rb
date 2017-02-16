@@ -11,4 +11,8 @@ class PagesController < ApplicationController
   def faq
     @faqs = Faq.where(is_online: true).includes(:translations).order(:sort_id)
   end
+
+  def training
+    @showcases = Showcase.where(category: :training).first(3)
+  end
 end

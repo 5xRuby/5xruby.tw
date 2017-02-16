@@ -87,25 +87,23 @@ ja:
     main_features:
       about_5xruby: About 5xRuby
       items:
-      items:
         - img: feature-list-img1
-          title: 十年功力實戰講座
+          title: Courses
           description:
-            - 業界資深前輩為你講解 Ruby、Rails、
-            - Git 、系統佈署等從入門到中高階的講座
-            - 讓你有如練了十年功！
+            - From Ruby, Railsk, Git to deployment,
+            - we have experts teaching these in either basic and advanced level,
+            - making you get on board eazily!
         - img: feature-list-img2
-          title: 案件外包．技術諮詢
+          title: Case outsourcing / Technical consulting
           description:
-            - 從 Ruby、Rails、iOS 的工程服務
-            - 到系統設計、規劃到開發甚至系統架設
-            - 提供專業的建議與頂尖的技術
+            - Providing professional and technical advice and support for
+            - Ruby, Rails, iOS, system design and even deployment.
         - img: feature-list-img3
-          title: 企業培訓計畫
+          title: Employee Training Plans
           description:
-            - 由業界第一線的開發人員協助您將
-            - 現有人力快速打造為 Ruby/Rails 團隊
-            - 無須經歷繁瑣的人才招募就有即戰力！
+            - Helping enterprise making their existing
+            - human resource into Ruby/Rails teams
+            - No more recruit is required!
     main_content_gray:
       view_all_courses: 全ての講座を見る
       latest_courses: 直近の講座
@@ -114,6 +112,14 @@ ja:
       next_courses: 最近の講座
       next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
       more_talks: ...More
+    training:
+      showcases: Showcases
+      qna:
+        title: Q & A
+        q_label: Q：
+        a_label: A：
+      interested: Are you interested in?
+      contact_us: Contact us
     testimonials:
       items:
         - name: Victor Lam

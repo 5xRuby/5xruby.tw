@@ -51,6 +51,7 @@ gem 'acts-as-taggable-on', git: 'https://github.com/ryudoawaru/acts-as-taggable-
 gem 'select2_helper', git: 'https://github.com/ryudoawaru/select2_helper.git', branch: 'rails42'
 gem 'gistyle'
 gem 'handlebars_assets'
+gem 'enum_help'
 
 # for Rails 5.0 upgrade
 gem 'record_tag_helper'
