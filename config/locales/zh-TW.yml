@@ -12,6 +12,19 @@ zh-TW:
     facebook: 'https://www.facebook.com/5xruby'
     twitter: 'https://twitter.com/5xruby'
     gmap_url: 'https://goo.gl/lz5v93'
+  cooperations:
+    - img: vpon.png
+    - img: accuvally.png
+    - img: pop.png
+    - img: dappei.png
+      href: http://dappei.com/
+    - img: bhuntr.png
+    - name: 5FPRO 伍樓專業
+      img: 5fpro.png
+      href: https://5fpro.com/
+    - img: itrue.png
+    - img: makerbar.png
+    - img: goldenio.png
   layouts:
     footer:
       address_label: '地址：'

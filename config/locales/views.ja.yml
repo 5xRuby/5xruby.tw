@@ -57,6 +57,12 @@ ja:
       outdated: Ended
       about_to_begin: About to begin
       opening: Opening
+  showcases:
+    index:
+      title: Showcase
+      members: Members of our team
+    cooperation_list:
+      cooperations: 協力
   stages:
     stage:
       stage_no: レッスン番号 %{stage}
@@ -388,7 +394,7 @@ ja:
     nav:
       login: Login
       course: 講座
-      outsourcing: Outsourcing
+      showcases: Showcases
       training: Training
       space_rental: レンタル
       news: ニュース
@@ -408,5 +414,3 @@ ja:
       any_question: 何か質問はありませんか?
     application:
       back_to_top: トップ画面へ
-    cooperation_list:
-      cooperations: 協力

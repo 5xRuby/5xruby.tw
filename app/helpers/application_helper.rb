@@ -89,4 +89,8 @@ module ApplicationHelper
     end.join(', ')
     image_tag "#{src_folder}/#{sizes.last}", {alt: src_folder.split('/').last, srcset: srcset}.merge(options)
   end
+
+  def public_path(file_path)
+    "#{root_path}#{file_path}"
+  end
 end

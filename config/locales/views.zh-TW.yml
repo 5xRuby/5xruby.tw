@@ -58,6 +58,12 @@ zh-TW:
       outdated: 課程結束
       about_to_begin: 即將開講
       opening: 招生中
+  showcases:
+    index:
+      title: 案例作品 Showcase
+      members: 我們的團隊成員
+    cooperation_list:
+      cooperations: 合作夥伴
   stages:
     stage:
       stage_no: 第 %{stage} 堂
@@ -387,7 +393,7 @@ zh-TW:
     nav:
       login: 學員登入
       course: 講座資訊
-      outsourcing: 專案開發
+      showcases: 專案開發
       training: 企業代訓
       space_rental: 空間租借
       news: 最新消息
@@ -407,5 +413,3 @@ zh-TW:
       any_question: 有任何問題？
     application:
       back_to_top: 回到最上面
-    cooperation_list:
-      cooperations: 合作夥伴
