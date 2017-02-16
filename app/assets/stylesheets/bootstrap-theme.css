@@ -618,6 +618,7 @@ footer .fa-twitter:hover {
 .lecture-wrap {
   border: 1px solid #ddd;
   cursor: pointer;
+  color: #666;
 }
 .lecture-wrap .cover {
   width: 100%;

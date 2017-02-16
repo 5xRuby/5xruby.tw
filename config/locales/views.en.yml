@@ -378,12 +378,12 @@ en:
       about: About us
     nav:
       login: Login
-      course: 講座
+      camp: Boot Camp
+      course: Courses/Events
       outsourcing: Outsourcing
       training: Training
       space_rental: Space Rental
       news: News
-      contact: Contact us
     footer:
       browse: browse
       courses: Lectures
@@ -392,6 +392,7 @@ en:
       contacts: Contact Us
       about_5xruby: About 5xRuby
       members: Members
+      contact: Contact us
       about_us: About Us
       recruit: Recruit
       source_code: Source Code

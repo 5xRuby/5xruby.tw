@@ -378,21 +378,22 @@ ja:
     header:
       about: About us
     nav:
-      login: Login
-      course: 講座
+      login: ログイン
+      camp: Boot Camp
+      course: 講座/イベント
       outsourcing: Outsourcing
       training: Training
       space_rental: レンタル
       news: ニュース
-      contact: Contact us
     footer:
       browse: 閲覧する
-      courses: 講座
-      faq: Q & A
+      courses: 講座/イベント
+      faq: よくある質問
       blog: ブログ
       contacts: Contact Us
-      about_5xruby: About 5xRuby
+      about_5xruby: 会社概要
       members: Members
+      contact: Contact us
       about_us: About Us
       recruit: Recruit
       source_code: ソースコード

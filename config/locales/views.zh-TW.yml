@@ -378,20 +378,21 @@ zh-TW:
       about: 關於
     nav:
       login: 學員登入
-      course: 講座
+      camp: 全方位衝刺班
+      course: 講座/活動
       outsourcing: 專案開發
       training: 企業代訓
       space_rental: 空間租借
       news: 最新消息
-      contact: 聯絡詢價
     footer:
       browse: 瀏覽
-      courses: 講座
+      courses: 講座/活動
       faq: 常見問題
       blog: 部落格
       contacts: 聯絡我們
       about_5xruby: 關於五倍紅寶石
       members: 團隊成員
+      contact: 聯絡詢價
       about_us: 關於我們
       recruit: 工作機會
       source_code: 網站原始碼
