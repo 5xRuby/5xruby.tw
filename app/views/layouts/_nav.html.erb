@@ -1,37 +1,44 @@
-<nav>
+<!-- Start Header -->
+<header class="clearfix">
+
+  <!-- Start  Logo & Naviagtion  -->
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div id="mobnav-btn"></div>
-        <ul class="sf-menu">
-          <%= nav_li t('.course'), courses_path %>
-          <%= nav_li t('.blog'), posts_path %>
-          <%= nav_li t('.contacts'), contacts_path %>
-          <%= nav_dropdown t('.about') do %>
-            <%= nav_li t('.us'), about_path %>
-            <%= nav_li t('.speakers'), speakers_path %>
-            <%= nav_li t('.showcases'), showcases_path %>
-            <%= nav_li t('.faq'), faq_path %>
-          <% end %>
-          <%= nav_dropdown t('.space') do %>
-            <%= nav_li t('.rental'), '/events/space/', target: :_blank %>
-          <% end %>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-          <%= locale_li '中文', :'zh-TW' %>
-          <%= locale_li 'English', :en %>
-          <%= locale_li '日本語', :ja %>
-        </ul>
-
-        <div class="hide col-md-4 pull-right hidden-sm hidden-xs">
-          <div id="sb-search" class="sb-search">
-            <form>
-              <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
-              <input class="sb-search-submit" type="submit" value="">
-              <span class="sb-icon-search"></span>
-            </form>
+          <%= link_to root_path, class: 'navbar-brand logo-link' do %>
+            <%= image_tag 'logo', alt: t('company.name') %>
+          <% end %>
+        </div>
+        <div class="clear"></div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <div id="lang-sign-in">
+            <ul class="nav navbar-nav">
+              <%= locale_li '中文', :'zh-TW' %>
+              <%= locale_li 'English', :en %>
+              <%= locale_li '日本語', :ja %>
+              <li><%= link_to t('.login'), '#' %></li>
+            </ul>
           </div>
-        </div><!-- End search -->
-      </div>
-    </div><!-- End row -->
-  </div><!-- End container -->
-</nav>
+          <ul class="nav navbar-nav">
+            <li><%= link_to t('.camp'), '#' %></li>
+            <li><%= link_to t('.course'), courses_path %></li>
+            <li><%= link_to t('.showcases'), showcases_path %></li>
+            <li><%= link_to t('.training'), '#' %></li>
+            <li><%= link_to t('.news'), posts_path %></li>
+            <li><%= link_to t('.contact'), contacts_path %></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+  </div>
+  <!-- End Header Logo & Naviagtion -->
+</header>
+<!-- End Header -->

@@ -1,6 +1,7 @@
 en:
   breadcrumb:
     home: Home
+    courses: Lectures
   videos:
     index:
       title: Videos
@@ -18,10 +19,11 @@ en:
     index:
       title: Lecturer
       lead: In order to provide lectures with high quality, we have recruited more than 10 experienced lecturers in Ruby/Rails. They have devoted themselves in the development and teachings of this field. Please contact us if you are ineterested in becoming a lecturer.
+    sliders:
+      title: Speakers
   courses:
     index:
       title: Lecture status
-    sidebar:
       all_courses: All lectures
       categories: Category
       satisfied: Are you satisfied with our lectures?
@@ -29,12 +31,18 @@ en:
     show:
       summary: Introduction
       what_you_will_learn: What you will learn
+      suitable_for: Suitable for
       apply_now: I'd like to sign in the lecture
+      outline: Outline
       note: Description
+      payment_note: 'Payment:'
       charger_complete: Threshold Bar
       chapter_title: "Lesson %{nth}:"
       lessons: Lessons
       hours: Hours
+      hours_label: 'Hours:'
+      outdated: Lecture has started
+      opening: Sign up now
     course:
       apply: I'd like to sign in the lecture
       detail: Detailed Info
@@ -49,6 +57,12 @@ en:
       outdated: Ended
       about_to_begin: About to begin
       opening: Opening
+  showcases:
+    index:
+      title: Showcase
+      members: Members of our team
+    cooperation_list:
+      cooperations: Cooperations
   stages:
     stage:
       stage_no: Lesson number %{stage}
@@ -380,7 +394,7 @@ en:
       login: Login
       camp: Boot Camp
       course: Courses/Events
-      outsourcing: Outsourcing
+      showcases: Showcases
       training: Training
       space_rental: Space Rental
       news: News
@@ -400,5 +414,3 @@ en:
       any_question: Any questions?
     application:
       back_to_top: back to top
-    cooperation_list:
-      cooperations: Cooperations

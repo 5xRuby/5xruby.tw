@@ -12,6 +12,19 @@ zh-TW:
     facebook: 'https://www.facebook.com/5xruby'
     twitter: 'https://twitter.com/5xruby'
     gmap_url: 'https://goo.gl/lz5v93'
+  cooperations:
+    - img: vpon.png
+    - img: accuvally.png
+    - img: pop.png
+    - img: dappei.png
+      href: http://dappei.com/
+    - img: bhuntr.png
+    - name: 5FPRO 伍樓專業
+      img: 5fpro.png
+      href: https://5fpro.com/
+    - img: itrue.png
+    - img: makerbar.png
+    - img: goldenio.png
   layouts:
     footer:
       address_label: '地址：'
@@ -20,6 +33,9 @@ zh-TW:
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'
     index_swiper_imgs:
-      - 'index-swiper-img-1'
-      - 'index-swiper-img-2'
-      - 'index-swiper-img-3'
+      - name: 'swiper-1'
+        sizes: ["400w", "600w", "1280w"]
+      - name: 'swiper-2'
+        sizes: ["400w", "600w", "1280w"]
+      - name: 'swiper-3'
+        sizes: ["400w", "600w", "1280w"]

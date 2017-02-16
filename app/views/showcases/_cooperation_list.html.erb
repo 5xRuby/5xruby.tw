@@ -1,0 +1,27 @@
+
+<!-- Start Sponsor List -->
+<div class="sponsor-list-wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="text-center both-spacing-lg"><span><%= t('.cooperations') %></span></h3>
+        <div class="sponsor-list">
+          <% t('cooperations').each do |c| %>
+            <div class="col-sm-4 col-lg-2 col-md-3 bottom-spacing">
+              <div class="square border-grey">
+                <% if c[:href] %>
+                  <%= link_to c[:href], {target: :_blank}.merge(c[:name].present? ? {title: c[:name]} : {}) do %>
+                    <%= image_tag public_path("img/cooperations/#{c[:img]}"), c[:name].present? ? {alt: c[:name]} : {} %>
+                  <% end %>
+                <% else %>
+                  <%= image_tag public_path("img/cooperations/#{c[:img]}"), c[:name].present? ? {alt: c[:name]} : {} %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Sponsor List -->

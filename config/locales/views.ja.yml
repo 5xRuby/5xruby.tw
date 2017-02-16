@@ -1,6 +1,7 @@
 ja:
   breadcrumb:
     home: ホーム
+    courses: 講座
   videos:
     index:
       title: 動画
@@ -18,10 +19,11 @@ ja:
     index:
       title: 講師
       lead: 高品質な講座を提供する為に、我々は、10名以上の経験豊富なRuby/Rails講師を採用しております。彼らは、熱心に開発及びコーチングに取り組んでおります。もし講師になることに興味がありましたら、是非連絡下さい。
+    sliders:
+      title: Speakers
   courses:
     index:
       title: 講座の状況
-    sidebar:
       all_courses: 全ての講座
       categories: カテゴリー
       satisfied: あなたは、我々の講座に満足していますか？
@@ -29,12 +31,18 @@ ja:
     show:
       summary: 紹介
       what_you_will_learn: 学ぶこと
+      suitable_for: Suitable for
       apply_now: 申込希望
+      outline: Outline
       note: 説明
+      payment_note: 'Payment:'
       charger_complete: Threshold Bar
       chapter_title: "レッスン %{nth}:"
       lessons: レッスン
       hours: 時間
+      hours_label: '時間:'
+      outdated: Lecture has started
+      opening: Sign up now
     course:
       apply: 申込希望
       detail: 詳細情報
@@ -49,6 +57,12 @@ ja:
       outdated: Ended
       about_to_begin: About to begin
       opening: Opening
+  showcases:
+    index:
+      title: Showcase
+      members: Members of our team
+    cooperation_list:
+      cooperations: 協力
   stages:
     stage:
       stage_no: レッスン番号 %{stage}
@@ -381,7 +395,8 @@ ja:
       login: ログイン
       camp: Boot Camp
       course: 講座/イベント
-      outsourcing: Outsourcing
+      login: Login
+      showcases: Showcases
       training: Training
       space_rental: レンタル
       news: ニュース
@@ -401,5 +416,3 @@ ja:
       any_question: 何か質問はありませんか?
     application:
       back_to_top: トップ画面へ
-    cooperation_list:
-      cooperations: 協力

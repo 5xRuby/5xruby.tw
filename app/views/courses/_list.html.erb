@@ -14,11 +14,11 @@
             <span class="orange-tag small"><%= t('.opening') %></span>
           <% end %>
           <%#<span class="orange-tag small">剩<span class="text-brown">2</span>名額</span>%>
-          <span class="date text-grey small"><%= course.stages.first.date %></span>
+          <span class="date text-grey small"><%= course.start_on %></span>
           <p class="descri both-spacing-sm">
             <%= course.summary %>
           </p>
-          <span class="text-grey small"><%= t('.speaker_label') %> <%= course.speakers.first.name %>  | <%= t('.hours_label') %> <%= course.hours %></span>
+          <span class="text-grey small"><%= t('.speaker_label') %> <%= course.speakers_name %>  | <%= t('.hours_label') %> <%= course.hours %></span>
         </div>
       </div>
     <% end %>

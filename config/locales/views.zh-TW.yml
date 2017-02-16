@@ -1,6 +1,7 @@
 zh-TW:
   breadcrumb:
     home: 首頁
+    courses: 講座資訊
   videos:
     index:
       title: 五倍影城
@@ -18,10 +19,11 @@ zh-TW:
     index:
       title: 講師
       lead: 為提供更高品質的教學內容，我們網羅了十多位在台灣 Ruby/Rails 領域有多年開發及教學經驗之講師。若您也有興趣加入我們的講師行列，歡迎來信與我們聯繫。
+    sliders:
+      title: 講師陣容 Speakers
   courses:
     index:
       title: 講座動態
-    sidebar:
       all_courses: 所有講座
       categories: 講座分類
       satisfied: 對我們的講座還覺得滿意嗎?
@@ -29,13 +31,19 @@ zh-TW:
     show:
       summary: 簡介
       what_you_will_learn: 你將會學到
+      suitable_for: 本講座適合
       apply_now: 我要報名
-      note: 說明
+      outline: 講座大綱
+      note: 注意事項：
+      payment_note: 付款方式：
       chapter_title: 第 %{nth} 堂：
       lessons: 堂數
       hours: 時數
+      hours_label: '時數:'
       charger: <span>開講好棒棒：距離開講還差 <strong>%{num}</strong> 人！</span>
       charger_complete: <span>開講好棒棒：已順利開講！</span>
+      outdated: 講座已開始，不接受報名
+      opening: 立即報名
     course:
       apply: 我想報名
       detail: 詳細資料
@@ -50,6 +58,12 @@ zh-TW:
       outdated: 課程結束
       about_to_begin: 即將開講
       opening: 招生中
+  showcases:
+    index:
+      title: 案例作品 Showcase
+      members: 我們的團隊成員
+    cooperation_list:
+      cooperations: 合作夥伴
   stages:
     stage:
       stage_no: 第 %{stage} 堂
@@ -380,9 +394,8 @@ zh-TW:
       login: 學員登入
       camp: 全方位衝刺班
       course: 講座/活動
-      outsourcing: 專案開發
+      showcases: 專案開發
       training: 企業代訓
-      space_rental: 空間租借
       news: 最新消息
     footer:
       browse: 瀏覽
@@ -400,5 +413,3 @@ zh-TW:
       any_question: 有任何問題？
     application:
       back_to_top: 回到最上面
-    cooperation_list:
-      cooperations: 合作夥伴

@@ -1,128 +1,135 @@
-<section id="sub-header" class="pattern_1">
+
+<!-- Start Breadcrumbs -->
+<div class="bread-crumbs-wrap">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-center">
-        <h1><%= tr(@course, :title) %></h1>
-        <p class="lead"><%= tr(@course, :subtitle) %></p>
+      <div class="col-sm-12 col-lg-12 col-md-12">
+        <ol class="breadcrumb">
+          <li><%= link_to t('breadcrumb.home'), root_path %></li>
+          <li><%= link_to t('breadcrumb.courses'), courses_path %></li>
+          <li class="active"><%= @course.title %></li>
+        </ol>
       </div>
-    </div><!-- End row -->
+    </div>
+  </div>
+</div>
+<!-- End Breadcrumbs -->
 
-    <div class="row" id="sub-header-features-2">
-      <div class="col-md-6">
-        <h2><%= t('.summary') %></h2>
-        <p><%= tr(@course, :summary) %></p>
-      </div>
-      <div class="col-md-6">
-        <h2><%= t('.what_you_will_learn') %></h2>
-        <%= raw tr(@course, :what_will_learn) %>
-      </div>
-
-    </div><!-- End row -->
-  </div><!-- End container -->
-  <div class="divider_top"></div>
-</section>
-
-<section id="main_content">
+<!-- Start Lecture Info -->
+<div class="training-intro bottom-padding-lg">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
-        <div class="row">
-          <div class="col-md-12">
-            <%= raw course_charger(@course) %>
-            <span id="end"><i class="icon-trophy"></i></span>
-            <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" data-percentage="<%= @course.need_attendees_percent %>"></div>
+      <div class="col-sm-6 col-lg-5 col-md-7">
+        <%= image_tag @course.image.thumb %>
+      </div>
+      <div class="col-sm-6 col-lg-7 col-md-5 line-height-lg">
+        <small class="text-grey"><%= @course.category.name %></small>
+        <h1><small class="text-black"><%= @course.title %></small></h1>
+        <span class="medium"><%= date_range @course %></span>
+        <br><small class="text-grey"><%= "#{@course.speakers_name} | #{t('.hours_label')}#{@course.hours}" %></small>
+        <p>
+          <%= @course.summary %>
+        </p>
+        <% if @course.outdated? %>
+          <p class="text-center top-spacing"><%= t('.outdated') %></p>
+        <% else %>
+          <a class="btn btn-block btn-red disabled"><%= t('.opening') %></a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Lecture Info -->
+
+<!-- Start Lecture Details -->
+<div class="training-intro light-grey-bg bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <% @course.speakers.each do |s| %>
+        <%= render partial: 'speakers/in_course', locals: {speaker: s} %>
+      <% end %>
+      <div class="col-sm-<%= rwd_column = (@course.speakers.size.odd? ? '6' : '12') %> col-lg-<%= rwd_column %> col-md-<%= rwd_column %> top-spacing-lg line-height-lg">
+        <% if @course.suitable_for.present? %>
+          <h3 class="bottom-spacing-sm"><%= t('.suitable_for') %></h3>
+          <p class="bottom-spacing">
+            <%= raw @course.suitable_for %>
+          </p>
+          <br>
+        <% end %>
+        <% if @course.what_will_learn.present? %>
+          <h3 class="bottom-spacing-sm"><%= t('.what_you_will_learn') %></h3>
+          <p class="bottom-spacing">
+            <%= raw @course.what_will_learn %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Lecture Details -->
+
+<!-- Start Lecture Outline -->
+<div class="lecture-outline-wrap feedback-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= t('.outline') %></span></h3>
+        <div class="col-sm-8 col-lg-8 col-md-8 center-block border-grey bottom-spacing-lg">
+          <% @course.stages.includes(:translations).each_with_index do |stage, index| %>
+            <div class="four-spacing">
+              <h4><%= t('.chapter_title', nth: index) %> <%= stage.title %></h4>
+              <%= raw stage.description %>
+              <ul class="date-time bottom-spacing-lg">
+                <li><i class="fa fa-calendar text-grey" aria-hidden="true"></i> <%= stage.date %></li>
+                <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= time_range stage %></li>
+                <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= show_hours stage.hours %>h</li>
+              </ul>
             </div>
-          </div>
-        </div><!-- End progress bar -->
-
-        <hr>
-        <% @course.stages.includes(:translations).each_with_index do |stage, index| %>
-        <h3 class="chapter_course"><%= t('.chapter_title', nth: index) %> <%= tr(stage, :title) %></h3>
-        <div class="strip_single_course">
-          <h4 class="completed"><%= raw tr(stage, :description) %></h4>
-          <ul>
-            <li><i class="icon-calendar"></i><%= stage.date %></li>
-            <li><i class="icon-clock"></i><%= time_range stage %></li>
-            <li><i class="icon-clock"></i><%= show_hours stage.hours %>h</li>
-          </ul>
-        </div><!-- end strip single course -->
-        <% end %>
-      </div><!-- End col-md-8  -->
-
-      <aside class="col-md-4">
-        <div class="box_style_1">
-          <h4><%= t('.lessons') %> <span class="pull-right"><%= @course.stages.size %></span></h4>
-          <h4><%= t('.hours') %> <span class="pull-right"><%= show_hours @course.hours %></span></h4>
-          <% if @course.iframe_html.blank? && apply_link = @course.apply_link.presence %>
-          <h4><a href="<%= apply_link %>" target="_blank"><%= t('.apply_now') %> <i class="icon-login-2 pull-right"></i></a></h4>
           <% end %>
-          <h4><%= Speaker.model_name.human %></h4>
-          <%= render partial: 'speakers/side', collection: @course.speakers, as: :speaker %>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Lecture Outline -->
 
-        <% if @course.iframe_html.present? %>
-          <div class="box_style_1"><%= raw @course.iframe_html %></div>
-        <% end %>
-
-        <% if note = tr(@course, :note).presence %>
-          <div class="box_style_1">
-            <h4><%= t('.note') %></h4>
-            <%= raw tr(@course, :note) %>
+<!-- Start Tickets -->
+<div class="tickets light-grey-bg bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="top-spacing-lg left-spacing-sm"><span>&emsp;</span></h3>
+        <% if @course.iframe_html.blank? && apply_link = @course.apply_link.presence %>
+          <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing text-center">
+            <%= link_to t('.apply_now'), apply_link, target: :_blank %>
           </div>
+        <% elsif @course.iframe_html.present? %>
+          <%= raw @course.iframe_html %>
         <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Tickets -->
 
-        <!-- <div class="box_style_1">
-          <h4>Legend</h4>
-          <ul class="legend_course">
-            <li id="tostart">Still to start</li>
-            <li id="inprogress">In progress</li>
-            <li id="completed">Completed</li>
-          </ul>
-        </div> -->
+<!-- Start Lecture Notice -->
+<div class="training-intro bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-6 col-md-6">
+        <h3 class="top-spacing-lg bottom-spacing-sm"><%= t('.payment_note') %></h3>
+        <div class="rl-padding-lg line-height-lg">
+          <%= raw @course.payment_note %>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-6 col-md-6">
+        <h3 class="top-spacing-lg bottom-spacing-sm"><%= t('.note') %></h3>
+        <div class="rl-padding-lg line-height-lg">
+          <%= raw @course.note %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Lecture Notice -->
 
-
-        <!-- <div class="box_style_1">
-          <h4>Related content</h4>
-          <ul class="list_1">
-            <li><a href="#">Ceteros mediocritatem</a></li>
-            <li><a href="#">Labore nostrum</a></li>
-            <li><a href="#">Primis bonorum</a></li>
-            <li><a href="#">Ceteros mediocritatem</a></li>
-          </ul>
-        </div> -->
-      </aside> <!-- End col-md-4 -->
-
-    </div><!-- End row -->
-  </div><!-- End container -->
-</section>
-<% content_for :append_body do %>
-<script src="/js/jquery.fitvids.js"></script> <!-- for video responsive-->
-<script type="text/javascript">
-  /* <![CDATA[ */
-  // t: current time, b: begin value
-  // c: change value, d: duration
-  Math.easeOutExpo = function(t, b, c, d){
-    return c * ( -Math.pow( 2, -10 * t/d ) + 1 ) + b;
-  };
-  setTimeout(function(){
-    $('.progress .progress-bar').each(function() {
-      var me = $(this);
-      var perc = me.attr("data-percentage");
-      var current_perc = 0;
-      var timer = 0;
-      var progress = setInterval(function(){
-        if(current_perc >= perc) clearInterval(progress);
-        else{
-          current_perc = Math.easeOutExpo(timer, 0, perc, 2000);
-          if(current_perc > perc - 0.1) current_perc = perc;
-          me.css('width', (current_perc) + '%');
-        }
-        me.text((current_perc | 0)+'%');
-        timer += 10;
-      }, 10);
-    });
-  }, 500);
-  /* ]]> */
-</script>
-<% end %>
