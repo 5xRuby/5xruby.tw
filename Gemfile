@@ -52,6 +52,7 @@ gem 'select2_helper', git: 'https://github.com/ryudoawaru/select2_helper.git', b
 gem 'gistyle'
 gem 'handlebars_assets'
 gem 'enum_help'
+gem "recaptcha", require: "recaptcha/rails"
 
 # for Rails 5.0 upgrade
 gem 'record_tag_helper'
@@ -78,5 +79,6 @@ group :development, :test, :staging do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'pry-byebug'
 end
 

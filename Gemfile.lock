@@ -75,6 +75,7 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.3)
+    byebug (9.0.6)
     capistrano (3.7.1)
       airbrussh (>= 1.0.0)
       capistrano-harrow
@@ -101,6 +102,7 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -191,6 +193,13 @@ GEM
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     pg (0.19.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (3.4.2)
+      byebug (~> 9.0)
+      pry (~> 0.10)
     rack (2.0.1)
     rack-protection (1.5.3)
       rack
@@ -225,6 +234,8 @@ GEM
     rake (11.3.0)
     rdiscount (2.2.0.1)
     rdoc (4.3.0)
+    recaptcha (4.1.0)
+      json
     record_tag_helper (1.0.0)
       actionview (~> 5.x)
     redis (3.3.2)
@@ -268,6 +279,7 @@ GEM
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    slop (3.6.0)
     spring (2.0.1)
       activesupport (>= 4.2)
     sprockets (3.7.1)
@@ -327,10 +339,12 @@ DEPENDENCIES
   kaminari (~> 1.0.1)
   nested_form
   pg
+  pry-byebug
   rack-mini-profiler!
   rails (~> 5.0.1)
   rails-i18n
   rdiscount
+  recaptcha
   record_tag_helper
   rmagick
   rspec-rails

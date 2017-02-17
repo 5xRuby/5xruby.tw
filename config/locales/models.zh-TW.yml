@@ -1,14 +1,13 @@
 zh-TW:
   errors:
     messages:
-      captcha_not_passed: 圖靈測試沒過，為避免被猴子或機器人搗亂，請再試一次
+      captcha_not_passed: 圖靈測試沒過，為避免是機器人在鬧，請勾選『我不是機器人』
       must_be_greater_than_start_at: 必須大於開始時間
       time_must_be_in_available_range: 時間必須在正常範圍內
   activemodel:
     attributes:
       contact:
-        first_name: 名字
-        last_name: 姓氏
+        name: 名字
         email: 信箱
         phone: 電話
         message: 訊息

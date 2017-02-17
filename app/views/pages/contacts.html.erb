@@ -1,129 +1,80 @@
-<section id="map" data-scrollwheel="false"></section>
-<section id="directions">
+
+<!-- Start Main Banner -->
+<div class="container-fluid">
+  <div class="row">
+    <%= image_set_tag 'contact-main-banner', ['400w', '600w', '1280w'], width: '100%' %>
+  </div>
+</div>
+<!-- End Main Banner -->
+
+<!-- Start Contact Info -->
+<div class="contact-info both-spacing-lg">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-       <form action="//maps.google.com/maps" method="get" target="_blank">
-        <div class="input-group">
-          <input type="text" name="saddr" placeholder="<%= t('.enter_your_starting_point') %>" class="form-control style-2" />
-          <input type="hidden" name="daddr" value="<%= t('company.address') %>"/><!-- Write here your end point -->
-          <span class="input-group-btn">
-            <button class="btn" type="submit" value="Get directions" style="margin-left:0;"><%= t('.get_directions') %></button>
-          </span>
-        </div><!-- /input-group -->
-      </form>
+      <div class="col-sm-6 col-lg-6 col-md-6">
+        <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing-sm">
+          <h3><%= t('company.name') %></h3>
+          <%= t('company.address') %>
+        </div>
+        <div class="col-sm-12 col-lg-10 col-md-12 bottom-spacing-sm no-padding">
+          <div class="col-sm-6 col-lg-6 col-md-6">
+            <%= "#{t('.tel_label')}#{t('company.contact_phone')}" %>
+            <br>
+            <%= "#{t('.mobile_label')}#{t('company.mobile')}" %>
+            <br>
+            <%= t('.email_label') %>
+            <%= link_to t('company.email'), "mailto:#{t('company.email')}" %>
+          </div>
+          <div class="col-sm-6 col-lg-6 col-md-6">
+            <%= "#{t('.fax_label')}#{t('company.fax')}" %>
+            <br><%= t('company.vat_no') %>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-10 col-md-12 bottom-spacing">
+          <iframe src="<%= t('company.gmap_iframe_url') %>" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-6 col-md-6">
+        <div class="bottom-spacing-sm">
+          <%= t('.welcom_to_contact') %>
+        </div>
+        <%= form_for @contact do |f| %>
+          <div class="form-group <%= has_error_class @contact, :name %>">
+            <%= f.text_field :name, class: 'form-control input-lg', placeholder: Contact.human_attribute_name(:name) %>
+            <%= help_block @contact, :name %>
+          </div>
+          <div class="form-group <%= has_error_class @contact, :email %>">
+            <%= f.text_field :email, class: 'form-control input-lg', placeholder: Contact.human_attribute_name(:email) %>
+            <%= help_block @contact, :email %>
+          </div>
+          <div class="form-group <%= has_error_class @contact, :phone %>">
+            <%= f.text_field :phone, class: 'form-control input-lg', placeholder: Contact.human_attribute_name(:phone) %>
+            <%= help_block @contact, :phone %>
+          </div>
+          <div class="form-group <%= has_error_class @contact, :price %>">
+            <%= f.select :price, nil, {}, class: 'form-control input-lg', id: 'sel1' do %>
+              <option value="">預算</option> <%#-- TODO: not decided yet %>
+              <option value="100000">10w NTD</option>
+              <option value="200000">20w NTD</option>
+              <option value="300000">30w NTD</option>
+              <option value="400000">40w NTD</option>
+            <% end %>
+            <%= help_block @contact, :price %>
+          </div>
+          <div class="form-group <%= has_error_class @contact, :message %>">
+            <%= f.text_area :message, rows: 5, class: 'form-control', placeholder: t('.write_your_message') %>
+            <%= help_block @contact, :message %>
+          </div>
+          <div class="form-group">
+            <%= recaptcha_tags %>
+            <div class="has-error"><%= help_block @contact, :base %></div>
+          </div>
+          <%= f.submit t('.submit'), class: 'btn btn-red btn-block' %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
-</section>
+<!-- End Lecture Info -->
 
-<section id="main_content" >
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h3><%= t('.address') %></h3>
-        <ul id="contact-info">
-          <li><i class="icon-user"></i> <%= t('company.name') %> (<%= t('company.vat_no') %>)</li>
-          <li><i class="icon-address"></i> <%= t('company.address') %></li>
-          <li><i class="icon-phone"></i>Tel: <%= t('company.contact_phone') %></li>
-          <li><i class="icon-print"></i>Fax: <%= t('company.fax') %></li>
-          <li><i class="icon-mobile"></i>Mobile: <%= t('company.mobile') %></li>
-          <li><i class="icon-email"></i> <%= mail_to t('company.email') %></a></li>
-        </ul>
-        <hr>
-        <h3><%= t('.follow_us') %></h3>
-        <p><%= t('.follow_us_desc') %></p>
-        <ul id="follow_us_contacts">
-          <li><a href="https://www.facebook.com/5xruby" target="_blank"><i class="icon-facebook"></i>fb.com/5xruby</a></li>
-          <li><a href="https://twitter.com/5xruby" target="_blank"><i class="icon-twitter"></i>twitter.com/5xruby</a></li>
-        </ul>
-      </div>
-      <div class="col-md-8">
-        <div class=" box_style_2">
-          <span class="tape"></span>
-          <div class="row">
-            <div class="col-md-12">
-              <h3><%= t('.general_enquire') %></h3>
-            </div>
-          </div>
-          <div id="message-contact"></div>
-          <%= form_for @contact, id: :contactform do |f| %>
-            <div class="row">
-              <div class="col-md-6 col-sm-6">
-                <div class="form-group <%= has_error_class @contact, :first_name %>">
-                  <%= f.text_field :first_name, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:first_name) %>
-                  <%= help_block @contact, :first_name %>
-                  <span class="input-icon"><i class="icon-user"></i></span>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <div class="form-group <%= has_error_class @contact, :last_name %>">
-                  <%= f.text_field :last_name, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:last_name) %>
-                  <%= help_block @contact, :last_name %>
-                  <span class="input-icon"><i class="icon-user"></i></span>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 col-sm-6">
-                <div class="form-group <%= has_error_class @contact, :email %>">
-                  <%= f.text_field :email, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:email) %>
-                  <%= help_block @contact, :email %>
-                  <span class="input-icon"><i class="icon-email"></i></span>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <div class="form-group <%= has_error_class @contact, :phone %>">
-                  <%= f.text_field :phone, class: 'form-control style_2', placeholder: Contact.human_attribute_name(:phone) %>
-                  <%= help_block @contact, :phone %>
-                  <span class="input-icon"><i class="icon-phone"></i></span>
-                </div>
-              </div>
-            </div>
 
-            <div class="row">
-              <div class="col-md-6 col-sm-6">
-                <div class="form-group <%= has_error_class @contact, :price %>">
-                  <%= f.number_field :price, id: 'ntd', class: 'form-control style_2', placeholder: Contact.human_attribute_name(:price) %>
-                  <%= help_block @contact, :price %>
-                  <span class="input-icon"><i class="icon-dollar"></i></span>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <div class="form-group">
-                  <input type="number" id="mmm" class="form-control style_2" placeholder="1 勝文 = 10 萬" step="any">
-                  <span class="input-icon">勝文</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group <%= has_error_class @contact, :message %>">
-                  <%= f.text_area :message, rows: 5, class: 'form-control', placeholder: t('.write_your_message'), style: 'height:200px;' %>
-                  <%= help_block @contact, :message %>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <%= render 'layouts/recaptcha' %>
-                <div class="has-error"><%= help_block @contact, :base %></div>
-                <hr>
-                <%= f.submit t('.submit'), class: 'button_medium' %>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<% content_for :append_body do %>
-  <!-- GOOGLE MAP -->
-  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
-  <script type="text/javascript" src="/js/mapmarker.jquery.js"></script>
-  <script type="text/javascript" src="/js/mapmarker_func.jquery.js"></script>
-<% end %>

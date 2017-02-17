@@ -5,6 +5,13 @@ defaults: &defaults
   ga:
     id: UA-51124505-1
   course_about_to_begin_time: '3.days'
+  posts_cate_tags:
+    - 社群活動
+    - 媒體報導
+    - 企業合作
+    - 工作機會
+    - 心得分享
+    - 其他消息
 development:
   <<: *defaults
   admin_path_prefix: admin
@@ -13,8 +20,8 @@ development:
     flowdock_project_name: 5xruby_tw
     flowdock_deploy_tags: [deploy, website]
   recaptcha:
-    public_key: PUBLIC_KEY
-    private_key: PRIVATE_KEY
+    site_key: SITE_KEY
+    secret_key: SECRET_KEY
   recipient: tonytonyjan@gmail.com
   action_mailer:
     default_url_options:
@@ -39,8 +46,8 @@ production:
     :name: 5xruby
     :password: 5xruby
   recaptcha:
-    public_key: PUBLIC_KEY
-    private_key: PRIVATE_KEY
+    site_key: SITE_KEY
+    secret_key: SECRET_KEY
   action_mailer:
     default_url_options:
       :host: localhost:3000

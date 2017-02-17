@@ -392,6 +392,11 @@ ja:
           facebook: https://www.facebook.com/meowmeowsister1
 
     contacts:
+      tel_label: 'Tel：'
+      mobile_label: 'Mobile：'
+      email_label: 'E-mail：'
+      fax_label: 'Fax：'
+      welcom_to_contact: 任何問題都歡迎您透過以下表單詢問，我們會盡快回覆您！
       general_enquire: 問い合わせ
       follow_us: コミュニティ
       follow_us_desc: もし興味があれば、我々のコミュニティをフォローお願い致します

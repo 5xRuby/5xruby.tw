@@ -1,4 +1,4 @@
-<% %i[first_name last_name phone price].each do |attribute| %>
+<% %i[name phone price].each do |attribute| %>
 <%= Contact.human_attribute_name attribute %>：<%= @contact.send(attribute) %>
 <% end %>
 

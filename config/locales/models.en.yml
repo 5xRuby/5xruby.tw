@@ -7,8 +7,7 @@ en:
   activemodel:
     attributes:
       contact:
-        first_name: first name
-        last_name: last name
+        name: name
         email: email address
         phone: phone number
         message: message

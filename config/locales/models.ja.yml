@@ -7,8 +7,7 @@ ja:
   activemodel:
     attributes:
       contact:
-        first_name: 名前
-        last_name: 名字
+        name: 名前
         email: Eメールアドレス
         phone: 電話番号
         message: メッセージ
