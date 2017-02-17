@@ -71,11 +71,14 @@ ja:
   posts:
     index:
       title: ブログ
-      all_categories: All categories
-      by: By
+      by: 'By '
       more: More
+    categories:
+      all_categories: All categories
     show:
       title: ブログ
+      by: 'By '
+      back_to_index: « Back
     post:
       read_more: など...
       tags: タグ

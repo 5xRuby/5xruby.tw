@@ -71,11 +71,14 @@ en:
   posts:
     index:
       title: Blog
-      all_categories: All categories
-      by: By
+      by: 'By '
       more: More
+    categories:
+      all_categories: All categories
     show:
       title: Blog
+      by: 'By '
+      back_to_index: « Back
     post:
       read_more: more...
       tags: tags

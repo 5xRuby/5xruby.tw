@@ -72,11 +72,14 @@ zh-TW:
   posts:
     index:
       title: 部落格
-      all_categories: 所有類別
-      by: By
+      by: 'By '
       more: 看更多
+    categories:
+      all_categories: 所有類別
     show:
       title: 部落格
+      by: 'By '
+      back_to_index: « 回文章列表
     post:
       read_more: 更多內容
       tags: 標籤

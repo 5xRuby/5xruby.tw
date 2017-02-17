@@ -1,21 +1,32 @@
-<section id="main_content">
+
+<%= render partial: 'banner' %>
+
+<%= render partial: 'categories', locals: {tags: posts_cate_tags - posts_cate_tags_exclude(@post.tag_list) } %>
+
+<!-- Start News Content -->
+<div class="news-content bottom-padding-lg">
   <div class="container">
-    <%= breadcrumb link_to(t('.title'), posts_path), tr(@post, :title) %>
     <div class="row">
-      <div class="col-md-8 col-md-push-4">
-        <%= render partial: '/posts/post', locals: {post: @post} %>
-        <hr>
-        <%= render 'layouts/disqus' %>
+      <div class="col-sm-8 col-lg-8 col-md-8 center-block">
+        <%= image_tag(@post.image.thumb, class: 'bottom-spacing-sm') %>
+        <h1><small class="text-black"><%= @post.title %></small></h1>
+        <div class="text-grey">
+          <%= "#{t('.by')}#{@post.author.try(:name)}" %>
+          <small class="left-spacing-sm"><%= l @post.publish_at, format: :short %></small>
+        </div>
+        <div class="highlight top-spacing-sm">
+          <%= render_post @post %>
+        </div>
+        <%= render 'shared/disqus' %>
+        <%= link_to t('.back_to_index'), posts_path %>
       </div>
-      <aside class="col-md-4 col-md-pull-8">
-        <%= render '/posts/sidebar' %>
-      </aside>
     </div>
   </div>
-</section>
+</div>
+<!-- End News Content -->
 
 <% content_for :append_body do %>
-  <%= render 'layouts/disqus_count' %>
+  <%= render 'shared/disqus_count' %>
   <%= mathjax_script_tag "post_#{@post.id}" %>
-  <%= render 'layouts/ruby_comment' %>
 <% end %>
+

@@ -1,35 +1,7 @@
 
-<!-- Start Main Banner -->
-<div class="container-fluid">
-  <div class="row">
-    <%= image_set_tag 'news-main-banner', ['400w', '600w', '1280w'], width: '100%' %>
-  </div>
-</div>
-<!-- End Main Banner -->
+<%= render partial: 'banner' %>
 
-<!-- Start News Category -->
-<div class="news-category light-grey-bg bottom-spacing">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-lg-12 col-md-12">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle text-grey medium" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= @query_tags.present? ? @query_tags.join(', ') : t('.all_categories') %><span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <% if @query_tags.present? %>
-                <li><%= link_to t('.all_categories'), posts_path %></li>
-              <% end %>
-              <% posts_cate_tags_exclude(@query_tags).each do |tag_as_cate| %>
-                <li><%= link_to tag_as_cate, posts_path(tags: tag_as_cate) %></li>
-              <% end %>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End News Category -->
+<%= render partial: 'categories', locals: {tags: @query_tags} %>
 
 <!-- Start Recent News -->
 <div class="news-list">
@@ -49,7 +21,7 @@
                   <h3><%= post.title %></h3>
                   <div class="bottom-padding">
                     <p class="descri both-spacing-sm"><%= post.summary %></p>
-                    <span class="text-grey small"><%= "#{t('.by')} #{post.author.try(:name)}" %></span>
+                    <span class="text-grey small"><%= "#{t('.by')}#{post.author.try(:name)}" %></span>
                   </div>
                 </div>
                 <div class="more"><%= t('.more') %></div>
