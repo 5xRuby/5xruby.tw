@@ -72,6 +72,9 @@ zh-TW:
   posts:
     index:
       title: 部落格
+      all_categories: 所有類別
+      by: By
+      more: 看更多
     show:
       title: 部落格
     post:
@@ -405,6 +408,7 @@ zh-TW:
       showcases: 專案開發
       training: 企業代訓
       news: 最新消息
+      contact: 聯絡詢價
     footer:
       browse: 瀏覽
       courses: 講座/活動

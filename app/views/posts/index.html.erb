@@ -1,29 +1,69 @@
-<%= sub_header title: t('.title') %>
 
-<section id="main_content">
+<!-- Start Main Banner -->
+<div class="container-fluid">
+  <div class="row">
+    <%= image_set_tag 'news-main-banner', ['400w', '600w', '1280w'], width: '100%' %>
+  </div>
+</div>
+<!-- End Main Banner -->
+
+<!-- Start News Category -->
+<div class="news-category light-grey-bg bottom-spacing">
   <div class="container">
-    <% if @query_tags.present? %>
-      <%= breadcrumb link_to(t('.title'), posts_path), @query_tags.map{|t| "##{t}"}.join(', ') %>
-    <% else %>
-      <%= breadcrumb t('.title') %>
-    <% end %>
     <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle text-grey medium" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= @query_tags.present? ? @query_tags.join(', ') : t('.all_categories') %><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <% if @query_tags.present? %>
+                <li><%= link_to t('.all_categories'), posts_path %></li>
+              <% end %>
+              <% posts_cate_tags_exclude(@query_tags).each do |tag_as_cate| %>
+                <li><%= link_to tag_as_cate, posts_path(tags: tag_as_cate) %></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End News Category -->
 
-      <div class="col-md-8 col-md-push-4">
-        <%= render @posts %>
-        <hr>
-        <div class="text-center">
+<!-- Start Recent News -->
+<div class="news-list">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <% @posts.each do |post| %>
+          <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing">
+            <%= link_to post do %>
+              <div class="news-wrap">
+                <div class="cover col-sm-6 col-lg-6 col-md-6 no-padding" style="background: url('<%= path_to_image post.image.thumb %>'); background-size: cover; background-position: center center;">
+                </div>
+                <div class="col-sm-6 col-lg-6 col-md-6 light-grey-bg rl-padding-lg">
+                  <div class="top-padding">
+                    <small class="text-grey"><%= l post.publish_at, format: :short %></small>
+                  </div>
+                  <h3><%= post.title %></h3>
+                  <div class="bottom-padding">
+                    <p class="descri both-spacing-sm"><%= post.summary %></p>
+                    <span class="text-grey small"><%= "#{t('.by')} #{post.author.try(:name)}" %></span>
+                  </div>
+                </div>
+                <div class="more"><%= t('.more') %></div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+        <nav class="text-center">
           <%= paginate @posts %>
-        </div>
-      </div><!-- End col-md-8-->
-      <aside class="col-md-4 col-md-pull-8">
-        <%= render 'sidebar' %>
-      </aside>
-    </div>  <!-- End row-->
-  </div><!-- End container -->
-</section><!-- End main_content-->
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Recent News -->
 
-<% content_for :append_body do %>
-<%= render 'layouts/disqus_count' %>
-<%= mathjax_script_tag *@posts.map{ |post| "post_#{post.id}" } %>
-<% end %>

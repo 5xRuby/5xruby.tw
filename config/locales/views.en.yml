@@ -71,6 +71,9 @@ en:
   posts:
     index:
       title: Blog
+      all_categories: All categories
+      by: By
+      more: More
     show:
       title: Blog
     post:
@@ -406,6 +409,7 @@ en:
       training: Training
       space_rental: Space Rental
       news: News
+      contact: Contact
     footer:
       browse: browse
       courses: Lectures

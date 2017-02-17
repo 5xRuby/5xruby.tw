@@ -71,6 +71,9 @@ ja:
   posts:
     index:
       title: ブログ
+      all_categories: All categories
+      by: By
+      more: More
     show:
       title: ブログ
     post:
@@ -406,6 +409,7 @@ ja:
       training: Training
       space_rental: レンタル
       news: ニュース
+      contact: Contact
     footer:
       browse: 閲覧する
       courses: 講座/イベント
