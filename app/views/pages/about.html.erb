@@ -1,95 +1,51 @@
-<%= sub_header title: '關於我們' %>
 
-<section id="main_content">
+<!-- Start Main Banner -->
+<div class="container-fluid">
+  <div class="row">
+    <%= image_set_tag 'about-main-banner', ['400w', '600w', '1280w'], width: '100%' %>
+  </div>
+</div>
+<!-- End Main Banner -->
 
+<!-- Start About Us -->
+<div class="about-us light-grey-bg bottom-padding-lg">
   <div class="container">
-   <div class="row">
-
-    <div class="col-md-7">
-      <%= raw RDiscount.new(t('.description')).to_html %>
-    </div>
-    <div class="col-md-4 col-md-offset-1">
-      <div class="row">
-        <div class="col-md-12 col-sm-6">
-          <div class="thumbnail">
-            <div class="project-item-image-container">
-              <!-- <img src="img/team_1.jpg" alt=""/> -->
-              <%= image_tag 'eddiekao2.jpg' %>
-            </div>
-            <div class="caption">
-              <div class="transit-to-top">
-                <h4 class="p-title"><%= t('.ceo') %> <small><%= t('.ceo_title') %></small></h4>
-                <div class="widget_nav_menu">
-                  <ul class="social_team">
-                    <li><a href="https://www.facebook.com/eddiekao" target="_blank"><i class="icon-facebook"></i></a></li>
-                    <li><a href="https://twitter.com/eddiekao" target="_blank"><i class="icon-twitter"></i></a></li>
-                    <li><a href="https://plus.google.com/u/0/102669323697108172752/about" target="_blank"><i class="icon-google"></i></a></li>
-                    <li><a href="https://github.com/kaochenlong" target="_blank"><i class="icon-github"></i></a></li>
-                  </ul>
-                  「希望有天可以寫程式來改變世界!」
-                </div><!-- transition top -->
-              </div><!-- caption -->
-            </div>
-          </div><!-- End col-md-12-->
-        </div><!-- End thumbnail -->
-
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="text-center both-spacing-lg"><span><%= t('.title') %></span></h3>
+        <div class="ceo col-sm-4 col-lg-4 col-md-4 pull-right white-bg left-spacing bottom-spacing-sm top-padding bottom-padding text-center">
+          <%= image_tag t('ceo.avatar') %>
+          <p class="top-spacing-sm">
+            <span class="medium"><%= t('ceo.name') %></span> <small class="text-grey"><%= t('ceo.title') %></small>
+            <br><%= t('ceo.about') %>
+          </p>
+        </div>
+        <%= raw RDiscount.new(t('ceo.description')).to_html %>
       </div>
     </div>
-  </div><!-- End row -->
+  </div>
+</div>
+<!-- End About Us -->
 
-  <hr>
-
-  <div class="row">
-    <% t('.members').each do |member| %>
-    <div class="col-md-4 col-sm-6 box_outter">
-      <div class=" box_style_3">
-        <p><img src="<%= image_path(member[:avatar]) %>" alt="<%= member[:name] %>" class="img-circle styled img-circle-avatar"></p>
-        <h4 class="p-title"><%= member[:name] %> <small><%= member[:title] %></small></h4>
-        <%= t('.speciality') %>: <small><%= member[:skills] %></small>
-        <p><%= member[:about] %></p>
-        <ul class="social_team">
-          <% if member[:facebook] %>
-            <li><a href="<%= member[:facebook] %>" target="_blank"><i class="icon-facebook"></i></a></li>
-          <% end %>
-
-          <% if member[:twitter] %>
-            <li><a href="<%= member[:twitter] %>" target="_blank"><i class="icon-twitter"></i></a></li>
-          <% end %>
-
-          <% if member[:google] %>
-            <li><a href="<%= member[:google] %>" target="_blank"><i class=" icon-google"></i></a></li>
-          <% end %>
-
-          <% if member[:github] %>
-            <li><a href="<%= member[:github] %>" target="_blank"><i class=" icon-github"></i></a></li>
-          <% end %>
-
-          <% if member[:website] %>
-            <li><a href="<%= member[:website] %>" target="_blank"><i class=" icon-website"></i></a></li>
-          <% end %>
-
-        </ul>
-        <% if member[:blog] %>
-        <hr>
-        <a href="<%= member[:blog] %>" target="_blank" class=" button_medium_outline">Blog</a>
-        <% else %>
-          <br />
+<!-- Start Service Section -->
+<div class="service-section bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-lg-9 col-md-9 center-block">
+        <h3 class="text-center both-spacing-lg"><span><%= t('.our_services') %></span></h3>
+        <% t('.services').each do |s| %>
+          <div class="cover bottom-spacing col-sm-3 col-lg-3 col-md-3">
+            <%= image_tag public_path("/img/about_services/#{s[:img]}") %>
+          </div>
+          <div class="text col-sm-9 col-lg-9 col-md-9 line-height-lg bottom-spacing">
+            <h3 class="top-spacing-sm bottom-spacing-sm"><%= s[:name] %></h3>
+            <%= raw s[:content] %>
+          </div>
+          <div class="clear"></div>
         <% end %>
       </div>
     </div>
-    <% end %>
   </div>
+</div>
+<!-- End Service Section -->
 
-  <!-- sponsors -->
-  <hr class="add_bottom_30">
-  <div class="row">
-    <div class="col-md-12">
-      <%= render 'layouts/cooperation_list' %>
-    </div>
-  </div>
-  <!-- sponsors -->
-
-</div><!-- End container -->
-</section><!-- End main_content-->
-
-<%= render 'layouts/testimonials' %>

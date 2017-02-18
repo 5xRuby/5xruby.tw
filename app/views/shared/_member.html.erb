@@ -1,0 +1,48 @@
+
+<div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
+  <div class="<%= type ||= 'member' %>-wrap text-center">
+    <div class="<%= type %>-img-wrap center-block top-spacing-sm bottom-spacing-sm">
+      <%= image_tag avatar, alt: name, class: 'speaker-img' %>
+      <% if blog_url.present? %>
+        <%= link_to blog_url, class: "filter", target: :_blank do %>
+          <span class="tag">BLOG</span>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="social-link">
+      <% if facebook_url.present? %>
+        <%= link_to facebook_url, target: :_blank do %>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        <% end %>
+      <% end %>
+      <% if twitter_url.present? %>
+        <%= link_to twitter_url, target: :_blank do %>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        <% end %>
+      <% end %>
+      <% if google_url.present? %>
+        <%= link_to google_url, target: :_blank do %>
+          <i class="fa fa-google-plus" aria-hidden="true"></i>
+        <% end %>
+      <% end %>
+      <% if github_url.present? %>
+        <%= link_to github_url, target: :_blank do %>
+          <i class="fa fa-github-alt" aria-hidden="true"></i>
+        <% end %>
+      <% end %>
+      <% if website_url.present? %>
+        <%= link_to website_url, target: :_blank do %>
+          <i class="fa fa-window-maximize" aria-hidden="true"></i>
+        <% end %>
+      <% end %>
+    </div>
+    <p>
+    <small class="text-grey"><%= role_text %></small>
+    <br>
+    <strong><%= name %></strong>
+    </p>
+    <p>
+    <small><%= raw summary %></small>
+    </p>
+  </div>
+</div>

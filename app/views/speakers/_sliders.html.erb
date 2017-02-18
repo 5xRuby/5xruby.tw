@@ -17,43 +17,19 @@
             <% speakers.each_slice(3).to_a.each_with_index do |three_speakers, idx| %>
               <div class="item <%= :active if idx == 0 %>">
                 <% three_speakers.each do |s| %>
-                  <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-                    <div class="speaker-wrap text-center">
-                      <div class="speaker-img-wrap center-block top-spacing-sm bottom-spacing-sm">
-                        <%= image_tag s.avatar.thumb, alt: s.name, class: 'speaker-img' %>
-                        <% if s.blog_url.present? %>
-                          <%= link_to s.blog_url, class: "filter", target: :_blank do %>
-                            <span class="tag">BLOG</span>
-                          <% end %>
-                        <% end %>
-                      </div>
-                      <div class="social-link">
-                        <% if s.facebook_url.present? %>
-                          <%= link_to s.facebook_url, target: :_blank do %>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                          <% end %>
-                        <% end %>
-                        <% if s.twitter_url.present? %>
-                          <%= link_to s.twitter_url, target: :_blank do %>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                          <% end %>
-                        <% end %>
-                        <% if s.google_url.present? %>
-                          <%= link_to s.google_url, target: :_blank do %>
-                            <i class="fa fa-google-plus" aria-hidden="true"></i>
-                          <% end %>
-                        <% end %>
-                      </div>
-                      <p>
-                      <small class="text-grey"><%= s.role_text %></small>
-                      <br>
-                      <strong><%= s.name %></strong>
-                      </p>
-                      <p>
-                      <small><%= speaker_summary s %></small>
-                      </p>
-                    </div>
-                  </div>
+                  <%= render partial: 'shared/member', locals: {
+                    type: 'speaker',
+                    avatar: s.avatar.thumb,
+                    name: s.name,
+                    blog_url: s.blog_url,
+                    facebook_url: s.facebook_url,
+                    twitter_url: s.twitter_url,
+                    google_url: s.google_url,
+                    github_url: nil,
+                    website_url: nil,
+                    role_text: s.role_text,
+                    summary: speaker_summary(s)
+                  } %>
                 <% end %>
               </div>
             <% end %>

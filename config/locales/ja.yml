@@ -57,6 +57,220 @@ ja:
         a: 是的，因為我們是先跟企業簽定合約才會開始進行，除非企業因故中止合約，否則可以視為保證就業。
       - q: 6 ~ 8 週就有辦法達到企業的需求嗎?
         a: 如果是一週三天以上密集的訓練加上實際專案的磨練，只要不要太混，在 6 ~ 8 週應該可以練到可以用的程度沒問題。
+  ceo: &ceo
+    name: Eddie Kao
+    title: Appraiser
+    about: 「希望有天可以寫程式來改變世界!」
+    avatar: eddiekao2
+    facebook: https://www.facebook.com/eddiekao
+    twitter: https://twitter.com/eddiekao
+    google: https://plus.google.com/u/0/102669323697108172752/about
+    github: https://github.com/kaochenlong
+    description: |
+      ##  プロフェッショナリズム5倍、祝福5倍、Ruby5倍！
+      ### About Us
+      我々は、台湾のRuby大好きグループです。私たちの生活は、Ruby/Railsと共にあります。
+
+      Ruby on Railsは、開発時間を節約することができ、多くの海外の会社やスタートアップで使用されております。シンプルでエレガントなプログラミング言語Rubyは、エンジニアを大いに楽しませてくれます。しかし、台湾では、主力のツールとして少数の会社でしか使われていません。
+
+      ここ数年間、我々は、継続的にRuby/Rails講座を台湾の大学で提供してきました。(成大、輔大、台北商專..など) これを通して、我々が気づいたことは、ほとんどの生徒がRubyを学ぶことを難しいと思わないことです。彼らは、本やドキュメントを参考にしながら練習すれば、ある程度のレベルまでは到達可能でしょう。しかしながら、もし彼らが、仕事で通用するぐらいレベルに達するには、独学では、全てをカバーすることは不可能です。彼らは、本格的で実践的な練習と優秀な講師陣のガイドが必要となります。これが、台湾でシニアクラスのRuby/Railsエンジニアを探すことが難しい理由です。
+
+      我々は、いくつかの会社にインタビューすることにより、なぜ彼らがRuby/Railsを使わないのか理解することができました。ほどんどの理由が、Ruby/Railsエンジニア不足により技術サポートが難しいことです。彼らは、誰にヘルプを求めてよいかわからない状況です。
+
+      近年、Ruby/Railsの需要は増してきており、高給を得ることができる機会もあります。この状況は、より多くの人々がRuby/Railsの世界へ流れ込むことは促進しております。多くの人々が、独学やRubyコミュニティが主催するイベントを通して、お互いの知識や経験を共有して、学び合っています。
+
+      「もし私のスキルをより早く効率的に高める方法があればなぁ。」という声が挙がってきました。
+
+      よって、Ruby大好きグループは「我々は、Ruby/Railsの技術コンサルティングやトレーニングを提供する会社を設立できる。」と考えました。
+
+      我々の究極のゴールは、より多くの台湾の会社にこのエレガントで楽しく生産的なプログラミング言語を知ってもらい、そして彼らの主力プロダクト開発ツールとして使ってもらい、彼らの夢をより早く実現できるように貢献することです。
+
+      なぜ我々の会社の名前は、5倍で3倍や100倍ではないのか？それは、別の話があるんです。
+  members:
+    - <<: *ceo
+      avatar: eddiekao
+    - name: 竜堂
+      title: 無限虫制師
+      avatar: ryudoawaru.jpg
+      facebook: https://www.facebook.com/ryudoawaru
+      twitter: https://twitter.com/ryudoawaru
+      github: https://github.com/ryudoawaru
+      experience: RubyConf Taiwan 及び Rails Girls Taipeiオーガナイザー
+      about: "スペシャルWebサイト修理師"
+      blog: http://ryudo.tw/
+      skills: Ruby / Rails / Sinatra, システム管理
+
+    - name: アキラ
+      title: Rubyハンター
+      avatar: jodeci2.jpg
+      facebook: https://www.facebook.com/tsehau
+      twitter: https://twitter.com/thchao
+      github: https://github.com/jodeci
+      about: "ヒップスターはオタクになりました"
+      skills: Ruby / Rails / PHP / 英語 / 日本語
+
+    - name: Sabrina Chiang
+      title: オフィスマネージャー
+      avatar: sabrina.jpg
+      facebook: https://www.facebook.com/chiang.sabrina.7
+      experience:
+      about: "私は、オフィスマネージャーですが、Rails書けます！"
+      skills: オフィスマネジメント
+
+    - name: Nina Yeh
+      title: Ruby職人
+      avatar: nina.jpg
+      facebook: https://www.facebook.com/itsmeninayeh
+      about: "アートとプログラムの間を放浪する"
+      skills: Ruby / Rails / HTML / CSS
+
+    - name: Kendra Tang
+      title: アシスタントプログラニャーン
+      avatar: tang.jpg
+      facebook: https://www.facebook.com/kendra.tang.meow
+      github: https://github.com/KazooTang
+      about: "バグから解放されたい!!"
+      skills: Ruby / Rails / HTML / CSS
+
+    - name: Okay
+      title: Ruby浪人
+      avatar: ok.jpg
+      facbook: https://www.facebook.com/fokayx
+      about: "[おK 。]"
+      skills: Ruby/ Objective-C
+
+    - name: Treekey
+      title: 卍ジョージ乂Ruby乂マリー卍
+      avatar: treekey.jpg
+      facebook: https://www.facebook.com/treekey999
+      github: https://github.com/treekey999
+      about: "冒険しなければ得られるものはない"
+      skills: Ruby / Rails / HTML / CSS
+
+    - name: Alan
+      title: Ruby黑王子
+      avatar: alan.jpg
+      facebook: https://www.facebook.com/spart.chou
+      twitter: https://twitter.com/spartchou
+      github: https://github.com/spartchou
+      about: "&."
+      skills: Ruby / Rails
+
+    - name: Yusheng Li
+      title: 蚊ハンター
+      avatar: yusheng.jpg
+      facebook: https://www.facebook.com/bbgba1923
+      twitter: https://twitter.com/HardisonSY
+      about: "悪いことは、ベターだ"
+      skills: Ruby / Rails / HTML / CSS
+
+    - name: Cat Sun
+      title: 猫の糞の掃除屋さん
+      avatar: cat-sun.jpg
+      facebook: https://www.facebook.com/black.cat.sun
+      about: "悪役"
+      skills: HTML / CSS / jQuery
+
+    - name: Roy Huang
+      title: カオスな邪悪なRuby
+      avatar: roy.jpg
+      about: "push -f はGitの一部だ。私は決してこれを止めない！"
+      skills: Ruby / Rails
+      twitter: https://twitter.com/roy_times_5
+      facebook: http://facebook.com/roy.huang.963
+
+    - name: ilake
+      title: 台南の画家
+      avatar: ilake.jpg
+      about: "それが人生だ"
+      skills: Ruby / Rails
+      facebook: http://facebook.com/ilake.chang
+
+    - name: 蒼時弦也
+      title: 究極のツールマン
+      avatar: aotoki.jpg
+      about: "私はツールマンではない。なぜならそれは自然に生まれるからだ。えっ！なんで私のタイトルはツールマンなの？"
+      twitter: https://twitter.com/elct9620
+      facebook: http://fb.me/elct9620
+      github: https://github.com/elct9620
+
+    - name: Ashton Lee
+      title: 無敵な酔拳ケネディ
+      avatar: ashtonlee.jpg
+      about: "ダイエットの達人 x Ashton と運動しようぜ"
+      skills: HTML / CSS / Rails
+      facebook: https://www.facebook.com/eric.lee0210
+      github: https://github.com/Ericlee0210
+
+    - name: Irene Chang
+      title: 梅氏の狂気姫
+      avatar: irene.jpg
+      about: "急がない、焦らない、怖がらない"
+      skills: HTML / CSS / Design
+      facebook: https://www.facebook.com/irene.chang.735
+      github: https://github.com/irene84111
+
+    - name: Henry Tseng
+      title: 少年陰陽師
+      avatar: henry.jpg
+      about: "全ては無から始まる"
+      skills: Ruby / Rails / システム管理
+      facebook: https://www.facebook.com/computerhenry321
+      github: https://github.com/lctseng
+
+    - name: 文月
+      title: 8皿食べる姫
+      avatar: fumitsuki.jpg
+      about: "落ち着いて8皿食べなさい"
+      skills: Rails / HTML / CSS
+      facebook: https://www.facebook.com/ei.kudoryafuka
+      github: https://github.com/requiemformemories
+
+    - name: Pokai Chang
+      title: 無駄な物生産機
+      avatar: pokaichang.jpg
+      about: "テクノロジーとリベラルアーツの交差点でのんびりする"
+      skills: HTML / CSS / JS / Rails
+      facebook: https://fb.me/pokaichang72
+      github: https://github.com/Neson
+
+    - name: PastLeo
+      title: '10 数字系を理解している人'
+      avatar: pastleo.png
+      about: "私はオープンソースの力とコンセプトが好きです"
+      skills: Web / Ruby / rm -rf /
+      facebook: https://fb.me/pastleo
+      github: https://github.com/pastleo
+      website: http://pastleo.me
+
+    - name: Keddie
+      title: 'ジェムハウス'
+      avatar: keddie.png
+      about: ""
+      skills: "デストラクタ"
+      facebook: https://fb.me/mengting.huang
+
+    - name: RingoYang
+      title: 林檎羊
+      avatar: ringoyang.png
+      about: 「メーメー」
+      skills: HTML / CSS / 日本語
+      facebook: https://fb.me/ringo.yang.90
+
+    # 貓放最後面
+    - name: Xue Mei
+      title: 暗黒 Ruby
+      avatar: cat-black.jpg
+      about: 「Meow~~Meow~~Meow Meow Meow~~~」
+      skills: 遊ぶ / 食べる / 寝る
+      facebook: https://www.facebook.com/meowmeowsister1
+
+    - name: Xai Xai
+      title: 正義 Ruby
+      avatar: cat-orange.jpg
+      about: 「Meow Meow Meow~~~かわいいは正義」
+      skills: 遊ぶ / 食べる / 寝る
+      facebook: https://www.facebook.com/meowmeowsister1
   layouts:
     footer:
       address_label: '住所：'
@@ -71,3 +285,8 @@ ja:
         sizes: ["400w", "600w", "1280w"]
       - name: 'swiper-3'
         sizes: ["400w", "600w", "1280w"]
+    contact_budgets:
+      - 'Below 100 thousands NTD'
+      - '100 ~ 500 thousands NTD'
+      - '500 thousands ~ 1 million NTD'
+      - 'More than 1 million NTD'

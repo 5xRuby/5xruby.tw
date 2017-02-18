@@ -32,4 +32,11 @@ $ () ->
       spaceBetween: 0,
       loop: true
     )
-
+  
+  $('.openable').each((i, openable) ->
+    $(openable).click( ->
+      $(this).find(
+        $(this).data('target')
+      ).slideToggle()
+    )
+  )

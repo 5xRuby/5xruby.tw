@@ -1,4 +1,8 @@
-<div class="question_box">
-  <h3><%= tr(faq, :question) %></h3>
-  <p><%= raw tr(faq, :answer) %></p>
-</div>
+
+<li class="openable" data-target=".qa-content">
+  <div class="qa-title medium bottom-spacing-sm"><i class="fa fa-question-circle text-grey" aria-hidden="true"></i> <strong><%= faq.question %></strong></div>
+  <div class="qa-content line-height-lg left-spacing bottom-padding" style="display: none;">
+    <%= faq.answer %>
+  </div>
+</li>
+

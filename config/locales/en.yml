@@ -57,6 +57,221 @@ en:
         a: 是的，因為我們是先跟企業簽定合約才會開始進行，除非企業因故中止合約，否則可以視為保證就業。
       - q: 6 ~ 8 週就有辦法達到企業的需求嗎?
         a: 如果是一週三天以上密集的訓練加上實際專案的磨練，只要不要太混，在 6 ~ 8 週應該可以練到可以用的程度沒問題。
+  ceo: &ceo
+    name: Eddie Kao
+    title: Appraiser
+    about: 「希望有天可以寫程式來改變世界!」
+    avatar: eddiekao2
+    facebook: https://www.facebook.com/eddiekao
+    twitter: https://twitter.com/eddiekao
+    google: https://plus.google.com/u/0/102669323697108172752/about
+    github: https://github.com/kaochenlong
+    description: |
+      ##  5 times professionalism. 5 times wishes. 5 times Ruby.
+      ### About Us
+      We are a group of Ruby lovers in Taiwan. Our lives are closely bounded with Ruby/Rails.
+
+      Ruby on Rails saves time on development, and has been favored by many foreign enterprises and start-ups. The simplicity and elegance of Ruby language brings a lot of fun to the engineers too. However, in Taiwan, only a few enterprises are using Ruby/Rails as their main developing tool.
+
+      Over the years we have continuously provided lectures to universities in Taiwan (NCKU, Fujen University, TTCB), teaching Ruby and Rails. What we have noticed from student reactions, is that most students find Ruby not so difficult to learn. They could achieve a certain level by studying textbooks and practicing via documents from the official website. However, self-study cannot cover all aspects if they wish to elevate into the next level or start working on business projects. They need more authentic practices and the guidance of lecturers. This is why senior or experienced Ruby/Rails developers are not easy to be found in Taiwan.
+
+      We have also interviewed some enterprises and came to understand the reason why they don't use Ruby/Rails. Most of it comes from the shortage of Ruby/Rails engineers, and that technical support is scarce too. They don't know who to ask for help if a problem occurs.
+
+      In recent years, the demand of Ruby/Rails expertise grew, more high-paid vacancies were released, encouraging more people to enter the world of Ruby/Rails. Many people have, besides self-learning, participated in the sharing and exchanges of activities organized by Ruby communities.
+
+      "If only there were a faster and more efficient way to enhance my skills." Voices like this started to appear.
+
+      Therefore, a group of Ruby lovers thought, "Maybe we can establish a company to provide technical consulting or training related to Ruby/Rails."
+
+      Our ultimate goal is for more enterprises in Taiwan to know about this elegant, fun and very productive programming language, and start using it as their main development tool to speed up their dreams.
+
+      As to why the company name is 5 times and not 3 or 100 times? Well, that's another story.
+  members:
+    - <<: *ceo
+      avatar: eddiekao
+    - name: Mu-fan Deng
+      title: Unlimited Bug Generator
+      avatar: ryudoawaru.jpg
+      facebook: https://www.facebook.com/ryudoawaru
+      twitter: https://twitter.com/ryudoawaru
+      github: https://github.com/ryudoawaru
+      experience: Organizer of RubyConf Taiwan and Rails Girls Taipei
+      about: "A non-typical website maintainer"
+      blog: http://ryudo.tw/
+      skills: Ruby / Rails / Sinatra, system management
+
+    - name: Tsehau Chao
+      title: Ruby Hunter
+      avatar: jodeci2.jpg
+      facebook: https://www.facebook.com/tsehau
+      twitter: https://twitter.com/thchao
+      github: https://github.com/jodeci
+      about: "Hipster turned geek."
+      skills: Ruby / Rails / PHP / EN / JP
+
+    - name: Sabrina Chiang
+      title: Office Manager
+      avatar: sabrina.jpg
+      facebook: https://www.facebook.com/chiang.sabrina.7
+      experience:
+      about: "I am an Office Manager, and I can code Rails. Single!"
+      skills: Office Management
+
+    - name: Nina Yeh
+      title: Ruby Artisan
+      avatar: nina.jpg
+      facebook: https://www.facebook.com/itsmeninayeh
+      about: "Wandering between art and program"
+      skills: Ruby / Rails / HTML / CSS
+
+    - name: Kendra Tang
+      title: Assistant Programmeow
+      avatar: tang.jpg
+      facebook: https://www.facebook.com/kendra.tang.meow
+      github: https://github.com/KazooTang
+      about: "Bug Freeeeee...!!"
+      skills: Ruby / Rails / HTML / CSS
+
+    - name: 。KAY
+      title: Ruby Ronin
+      avatar: ok.jpg
+      facbook: https://www.facebook.com/fokayx
+      about: "[おK 。]"
+      skills: Ruby/ Objective-C
+
+    - name: Treekey
+      title: 卍George乂Ruby乂Mary卍
+      avatar: treekey.jpg
+      facebook: https://www.facebook.com/treekey999
+      github: https://github.com/treekey999
+      about: Nothing ventured Nothing gained. agree and share
+      skills: Ruby / Rails / HTML / CSS
+
+    - name: Alan
+      title: Ruby Blue
+      avatar: alan.jpg
+      facebook: https://www.facebook.com/spart.chou
+      twitter: https://twitter.com/spartchou
+      github: https://github.com/spartchou
+      about: "&."
+      skills: Ruby / Rails
+
+    - name: Yusheng Li
+      title: Mosquito Hacker
+      avatar: yusheng.jpg
+      facebook: https://www.facebook.com/bbgba1923
+      twitter: https://twitter.com/HardisonSY
+      about: Worse is Better.
+      skills: Ruby / Rails / HTML / CSS
+
+    - name: Cat Sun
+      title: Cat Poop Cleaner
+      avatar: cat-sun.jpg
+      facebook: https://www.facebook.com/black.cat.sun
+      about: Villain
+      skills: HTML / CSS / jQuery
+
+    - name: Roy Huang
+      title: Chaotic Evil Ruby
+      avatar: roy.jpg
+      about: "push -f is a part of Git. I will never stop doing it!"
+      skills: Ruby / Rails
+      twitter: https://twitter.com/roy_times_5
+      facebook: http://facebook.com/roy.huang.963
+
+    - name: ilake
+      title: Tainan painter
+      avatar: ilake.jpg
+      about: "C’est la vie"
+      skills: Ruby / Rails
+      facebook: http://facebook.com/ilake.chang
+
+    - name: Aotokitsuruya
+      title: Extreme Toolman
+      avatar: aotoki.jpg
+      about: "I am not toolman because it usually born natural. Wait! Why my title become toolman?"
+      skills: Ruby / Rails / HTML / CSS /JavaScript
+      twitter: https://twitter.com/elct9620
+      facebook: http://fb.me/elct9620
+      github: https://github.com/elct9620
+
+    - name: Ashton Lee
+      title: Invincible Drunken Master, Kennedy
+      avatar: ashtonlee.jpg
+      about: "Weight-losing expert x Let's work out with Ashton"
+      skills: HTML / CSS / Rails
+      facebook: https://www.facebook.com/eric.lee0210
+      github: https://github.com/Ericlee0210
+
+    - name: Irene Chang
+      title: Hysteria May
+      avatar: irene.jpg
+      about: "Relax. Don't Worry. Take it Easy."
+      skills: HTML / CSS / Design
+      facebook: https://www.facebook.com/irene.chang.735
+      github: https://github.com/irene84111
+
+    - name: Henry Tseng
+      title: Young Onmyoji
+      avatar: henry.jpg
+      about: "Everything is out of nothing"
+      skills: Ruby / Rails / System Administration
+      facebook: https://www.facebook.com/computerhenry321
+      github: https://github.com/lctseng
+
+    - name: Fumitsuki
+      title: Eight plates eating hime
+      avatar: fumitsuki.jpg
+      about: "Keep calm and eat eight plates"
+      skills: Rails / HTML / CSS
+      facebook: https://www.facebook.com/ei.kudoryafuka
+      github: https://github.com/requiemformemories
+
+    - name: Pokai Chang
+      title: Useless Things Maker
+      avatar: pokaichang.jpg
+      about: "Vegs out at the intersection of technology and liberal arts"
+      skills: HTML / CSS / JS / Rails
+      facebook: https://fb.me/pokaichang72
+      github: https://github.com/Neson
+
+    - name: PastLeo
+      title: 'a person who understand base-10 numeral system'
+      avatar: pastleo.png
+      about: "I like the power and concept of open source"
+      skills: Web / Ruby / rm -rf /
+      facebook: https://fb.me/pastleo
+      github: https://github.com/pastleo
+      website: http://pastleo.me
+
+    - name: Keddie
+      title: 'Keddie Ruby Collector'
+      avatar: keddie.png
+      about: "Love and peace"
+      skills: "Office Assistant"
+      facebook: https://fb.me/mengting.huang
+
+    - name: RingoYang
+      title: AppleSheep
+      avatar: ringoyang.png
+      about: 「Baa~~Baa~~」
+      skills: "HTML / CSS / Japanese"
+      facebook: https://fb.me/ringo.yang.90
+
+    # 貓放最後面
+    - name: Xue Mei
+      title: Dark Ruby
+      avatar: cat-black.jpg
+      about: 「Meow~~Meow~~Meow Meow Meow~~~」
+      skills: Play / Eat / Sleep
+      facebook: https://www.facebook.com/meowmeowsister1
+
+    - name: Xai Xai
+      title: Justice Ruby
+      avatar: cat-orange.jpg
+      about: 「Meow Meow Meow~~~cute is justice」
+      skills: Play / Eat / Sleep
+      facebook: https://www.facebook.com/meowmeowsister1
   layouts:
     footer:
       address_label: 'Address:'
@@ -71,3 +286,9 @@ en:
         sizes: ["400w", "600w", "1280w"]
       - name: 'swiper-3'
         sizes: ["400w", "600w", "1280w"]
+    contact_budgets:
+      - 'Below 100 thousands NTD'
+      - '100 ~ 500 thousands NTD'
+      - '500 thousands ~ 1 million NTD'
+      - 'More than 1 million NTD'
+

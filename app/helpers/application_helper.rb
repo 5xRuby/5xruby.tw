@@ -91,6 +91,6 @@ module ApplicationHelper
   end
 
   def public_path(file_path)
-    "#{root_path}#{file_path}"
+    file_path.start_with?('/') ? file_path : "/#{file_path}"
   end
 end

@@ -52,13 +52,7 @@
             <%= help_block @contact, :phone %>
           </div>
           <div class="form-group <%= has_error_class @contact, :price %>">
-            <%= f.select :price, nil, {}, class: 'form-control input-lg', id: 'sel1' do %>
-              <option value="">預算</option> <%#-- TODO: not decided yet %>
-              <option value="100000">10w NTD</option>
-              <option value="200000">20w NTD</option>
-              <option value="300000">30w NTD</option>
-              <option value="400000">40w NTD</option>
-            <% end %>
+            <%= f.select :price, ([[t('.budget'), '']] + t('site.contact_budgets').map {|b| [b, b] }), {}, class: 'form-control input-lg', id: 'sel1' %>
             <%= help_block @contact, :price %>
           </div>
           <div class="form-group <%= has_error_class @contact, :message %>">

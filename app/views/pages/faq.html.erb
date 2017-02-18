@@ -1,21 +1,23 @@
-<%= sub_header title: t('.title') %>
 
-<section id="strips-course" class="shadow">
+<!-- Start Main Banner -->
+<div class="container-fluid">
+  <div class="row">
+    <%= image_set_tag 'qna-main-banner', ['400w', '600w', '1280w'], width: '100%' %>
+  </div>
+</div>
+<!-- End Main Banner -->
+
+<!-- Start Q&A List -->
+<div class="qna-list bottom-padding-lg">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <div class="lead add_bottom_45">若下列常見問題無法解答您的疑問或是有其它問題，歡迎您填寫<%= link_to "聯絡表單", contacts_path %>與我們聯繫，或是直接來電洽詢。</div>
-      </div>
-    </div>
-    <hr>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <%= render @faqs %>
+      <div id="qa-content" class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
+        <ul class="accordionPart">
+          <%= render @faqs %>
+        </ul>
       </div>
     </div>
   </div>
+</div>
+<!-- End Q&A List -->
 
-</section>
