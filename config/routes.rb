@@ -4,9 +4,10 @@ Rails.application.routes.draw do
     get :training, :about, :members, :contacts, :faq, :sitemap, controller: :pages
     resources :posts, only: %i[index show]
     resources :courses, path: :talks, only: %i[index show]
+    resources :contacts, only: :create
+    resources :showcases, only: :index
     get 'courses/:id', to: redirect('/talks/%{id}')
     get 'courses', to: redirect('/talks')
-    resources :showcases, only: :index
     post 'rental/calculate'
   end
 
@@ -25,5 +26,5 @@ Rails.application.routes.draw do
   end
 
   # plugins
-  resources :redactor_images, :contacts, only: :create
+  resources :redactor_images, only: :create
 end
