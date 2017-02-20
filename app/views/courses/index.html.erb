@@ -34,7 +34,7 @@
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block">
         <div class="lecture-list">
-          <%= render partial: 'courses/list', locals: {courses: @courses } %>
+          <%= render @courses %>
           <nav class="text-center">
             <%= paginate @courses %>
           </nav>

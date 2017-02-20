@@ -1,11 +1,10 @@
 
-<%= render 'slider' %>
-<%= render 'main_features' %>
-<%#= render 'main_content_gray' %>
-<%= render 'main_content' %>
-<%= render 'testimonials' %>
-<%= render 'showcases' %>
-<%= render 'know_more' %>
+<%= render 'pages/index/slider' %>
+<%= render 'pages/index/main_features' %>
+<%= render 'pages/index/main_content' %>
+<%= render 'pages/index/testimonials' %>
+<%= render 'pages/index/showcases' %>
+<%= render 'pages/index/know_more' %>
 <% content_for :append_body do %>
-  <%= render '5xruby_comment' %>
+  <%= render 'pages/index/5xruby_comment' %>
 <% end %>

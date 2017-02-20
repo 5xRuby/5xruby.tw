@@ -33,7 +33,7 @@
     <div class="row">
       <div class="col-sm-9 col-lg-9 col-md-9 center-block">
         <h3 class="text-center both-spacing-lg"><span><%= t('.our_services') %></span></h3>
-        <% t('.services').each do |s| %>
+        <% t('site.about_services').each do |s| %>
           <div class="cover bottom-spacing col-sm-3 col-lg-3 col-md-3">
             <%= image_tag public_path("/img/about_services/#{s[:img]}") %>
           </div>

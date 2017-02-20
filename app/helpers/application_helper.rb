@@ -93,4 +93,8 @@ module ApplicationHelper
   def public_path(file_path)
     file_path.start_with?('/') ? file_path : "/#{file_path}"
   end
+
+  def tr_and_convert_newline2br(object, attr)
+    tr(object, attr).to_s.split($/).join('<br>').html_safe
+  end
 end

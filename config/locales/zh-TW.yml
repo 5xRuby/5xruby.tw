@@ -271,20 +271,76 @@ zh-TW:
       about: 「喵喵喵~~~(毛色正確，可愛就是正義)」
       skills: 玩 / 吃飯 / 睡覺
       facebook: https://www.facebook.com/meowmeowsister1
-  layouts:
-    footer:
-      address_label: '地址：'
   site:
+    index:
+      swiper_imgs:
+        - name: 'swiper-1'
+          sizes: ["400w", "600w", "1280w"]
+        - name: 'swiper-2'
+          sizes: ["400w", "600w", "1280w"]
+        - name: 'swiper-3'
+          sizes: ["400w", "600w", "1280w"]
+      main_features:
+        - img: feature-list-img1
+          title: 十年功力實戰講座
+          description:
+            - 業界資深前輩為你講解 Ruby、Rails、
+            - Git 、系統佈署等從入門到中高階的講座
+            - 讓你有如練了十年功！
+        - img: feature-list-img2
+          title: 案件外包．技術諮詢
+          description:
+            - 從 Ruby、Rails、iOS 的工程服務
+            - 到系統設計、規劃到開發甚至系統架設
+            - 提供專業的建議與頂尖的技術
+        - img: feature-list-img3
+          title: 企業培訓計畫
+          description:
+            - 由業界第一線的開發人員協助您將
+            - 現有人力快速打造為 Ruby/Rails 團隊
+            - 無須經歷繁瑣的人才招募就有即戰力！
+      testimonials:
+        - name: Victor Lam
+          title: "GoGoVan 產品經理，Full Stack Developer."
+          img: "testimonial_victor.jpg"
+          content: "Programmer 最有價值的是經驗值，「五倍紅寶石」的導師都是社群內數一數二的資深 Rubyist，由他們來帶領學員一探 Ruby 世界的神奇之處，實在是最佳選擇。"
+        - name: Jason Hsu
+          title: "founder of The Big Questions & TEDxTaipei"
+          img: "testimonial_jason.jpg"
+          content: "Eddie and his team are of the most dedicated Ruby evangelists I have ever come across. With their passion and professionalism, Ruby learners will leapfrog in their progress."
+        - name: Felix Lin
+          title: "dappei.com 「搭配」網站創辦人"
+          img: "testimonial_felix.jpg"
+          content: "還在尋找專業的 Ruby/Rails 師資嗎？別懷疑了，台灣最頂尖的 Rubyist 盡在「五倍紅寶石」！"
+        - name: Hana Chang
+          title: "Co-Founder and CEO of BountyHunter"
+          img: "test-monial-Hana.jpg"
+          content: "慕凡和龍哥是業界數一數二的 Ruby 大師，他們不光是底子深厚，也很懂得引導、訓練學習路上遇到挫折的 Ruby/Rails 學子。很慶幸有他們的協助讓我進入紅寶石的美妙世界。"
+        - name: John Sie
+          title: "Accuvally Inc.共同創辦人暨營運長"
+          img: "testimonial_johnsie.jpg"
+          content: "選擇程式語言很重要，但選擇優秀的導師更重要！能跟擁有多年 Ruby/Rails 實戰經驗、活躍於社群的頂尖 Rubyist 學習，將一窺程式開發殿堂之藝術！我堅信：專業事讓專業的來，而專業的「五倍紅寶石」是寶藏，就等大家來挖掘。"
+        - name: Ben Lin
+          title: "CEO@POP"
+          img: "testimonial_benlin.jpg"
+          content: "「五倍紅寶石」的導師們都是業界經驗豐富的實戰高手，提供的講座及咨詢絕對能讓你大幅省去自行摸索的時間。"
+        - name: Max
+          title: "呂元鐘 Max Lu, Buyble 國際精品購物 創辦人"
+          img: "testimonial_max.jpg"
+          content: "曾有幸與徐曦與見龍一起工作，徐曦自我要求與向上進取的態度令人稱佩，見龍對危機處理與當責的責任感也值得稱許。「五倍紅寶石」的其他夥伴也是一時之選，相信這是一個很棒的組合。"
+    about_services:
+      - name: 技術諮詢
+        img: consult.png
+        content: 五倍紅寶石的每位成員、講師，均在業界有多年 Ruby/Rails 實戰工作經驗，<br>且目前都還在使用 Ruby/Rails 進行開發，在台灣的 Ruby 程式社群亦是相當活躍的成員。<br>從系統規劃到開發，我們都可以提供您專業的建議與諮詢。
+      - name: 企業內部培訓
+        img: training.png
+        content: 貴單位之網站或系統原本是使用其它程式語言(例如 PHP、Java 或 ASP.net)開發，<br>正考慮轉換到高速生產力的 Ruby/Rails 平台，但企業內部目前無相關技術能力可進行開發嗎？<br>我們針對這類的需求設計了一系列培訓計劃，快速將企業現有人力打造為專業的 Ruby/Rails 開發團隊，<br>還可免去面試新人或新進員工企業文化磨合之困擾！
+      - name: 教育訓練
+        img: edu.png
+        content: 如果您對程式設計是完全的新手，或是本身已有其它程式語言的基礎也沒問題，<br>我們一系列從入門到中、高階的講座，將引導您有效率的掌握 Ruby/Rails 的重點。
     description: 「五倍紅寶石」是由幾位台灣 Ruby 社群的朋友共同成立的一家公司，希望透過教育訓練、企業培訓等講座，將 Ruby 推廣到校園、企業、開發者。提供的服務包括：程式教育訓練、企業技術培訓與諮詢、活動場地租借與專案委托製作。
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'
-    index_swiper_imgs:
-      - name: 'swiper-1'
-        sizes: ["400w", "600w", "1280w"]
-      - name: 'swiper-2'
-        sizes: ["400w", "600w", "1280w"]
-      - name: 'swiper-3'
-        sizes: ["400w", "600w", "1280w"]
     contact_budgets:
       - '10 萬以下'
       - '10 ~ 50 萬'

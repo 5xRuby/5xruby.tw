@@ -1,41 +1,25 @@
-<div class="col-lg-4 col-md-6">
-  <div class="col-item">
-    <%#span class="ribbon_course"></span%>
-    <div class="photo">
-      <%= link_to image_tag(course.image.thumb), course %>
-      <div class="cat_row">
-        <% if course.category.present? %>
-          <%= link_to course.category.name, courses_path(category: course.category.permalink) %>
-        <% else %>
-          未分類
-        <% end %>
-        <span class="pull-right"><i class=" icon-clock"></i><%= t('.hours', count: ( show_hours course.hours)) %></span>
-      </div>
 
-    </div>
-    <div class="info">
-      <div class="row">
-        <div class="course_info col-md-12 col-sm-12">
-          <h4><%= link_to tr(course, :title), course %> <%= t('.outdated') if course.outdated? %></h4>
-          <h4><%= date_range course %></h4>
-          <p><%= tr(course, :summary) %></p>
-          <%#div class="rating">
-            <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class=" icon-star-empty"></i>
-          </div%>
-        </div>
-      </div>
-      <div class="separator clearfix">
-        <p class="btn-add">
-          <%#= link_to new_course_apply_path(course) do %>
-            <%#i class="icon-export-4"></i> <%= t('.apply') %>
-          <%# end %>
+<div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
+  <%= link_to course do %>
+    <div class="lecture-wrap">
+      <%= image_tag course.image.thumb, class: 'cover' %>
+      <h4 class="rl-padding"><%= course.title %></h4>
+      <div class="rl-padding bottom-padding">
+        <% if course.outdated? %>
+          <span class="small"><%= t('.outdated') %></span>
+        <% elsif course.about_to_begin? %>
+          <span class="yellow-tag small"><%= t('.about_to_begin') %></span>
+        <% else %>
+          <span class="orange-tag small"><%= t('.opening') %></span>
+        <% end %>
+        <%#<span class="orange-tag small">剩<span class="text-brown">2</span>名額</span>%>
+        <span class="date text-grey small"><%= course.start_on %></span>
+        <p class="descri both-spacing-sm">
+          <%= course.summary %>
         </p>
-        <p class="btn-details">
-          <%= link_to course do %>
-            <i class=" icon-list"></i> <%= t('.detail') %>
-          <% end %>
-        </p>
+        <span class="text-grey small"><%= t('.speaker_label') %> <%= course.speakers_name %>  | <%= t('.hours_label') %> <%= course.hours %></span>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
+

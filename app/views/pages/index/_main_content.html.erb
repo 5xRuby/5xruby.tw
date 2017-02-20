@@ -1,13 +1,13 @@
 
 <!-- Start Recent Lectures -->
-<% if @next_courses.present? %>
+<% if @courses.present? %>
   <div class="recent-lectures">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-lg-12 col-md-12 center-block">
           <h3 class="text-center both-spacing-lg"><span><%= t('.next_courses') %></span></h3>
           <div class="lecture-list">
-            <%= render partial: 'courses/list', locals: {courses: @next_courses } %>
+            <%= render @courses %>
             <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing text-right">
               <%= link_to t('.more_talks'), courses_path %>
             </div>
@@ -18,3 +18,4 @@
   </div>
 <% end %>
 <!-- End Recent Lectures -->
+

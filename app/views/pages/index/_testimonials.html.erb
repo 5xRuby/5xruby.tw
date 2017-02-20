@@ -7,14 +7,14 @@
         <div id="feedback-carousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
-            <% t('.items').size.times do |x| %>
+            <% t('site.index.testimonials').size.times do |x| %>
               <li data-target="#feedback-carousel" data-slide-to="<%=x%>" class="<%=x == 0 ? :active : nil%>" ></li>
             <% end %>
           </ol>
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
-            <% t('.items').each_with_index do |tm, idx| %>
+            <% t('site.index.testimonials').each_with_index do |tm, idx| %>
               <div class="item <%= :active if idx == 0 %>">
                 <div class="col-sm-8 col-lg-8 col-md-8 center-block">
                   <%= image_tag "testimonials/#{tm[:img]}", class: 'avatar right-spacing', alt: tm[:name] %>

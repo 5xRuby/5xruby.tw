@@ -271,22 +271,78 @@ ja:
       about: 「Meow Meow Meow~~~かわいいは正義」
       skills: 遊ぶ / 食べる / 寝る
       facebook: https://www.facebook.com/meowmeowsister1
-  layouts:
-    footer:
-      address_label: '住所：'
   site:
+    index:
+      swiper_imgs:
+        - name: 'swiper-1'
+          sizes: ["400w", "600w", "1280w"]
+        - name: 'swiper-2'
+          sizes: ["400w", "600w", "1280w"]
+        - name: 'swiper-3'
+          sizes: ["400w", "600w", "1280w"]
+      main_features:
+        - img: feature-list-img1
+          title: Courses
+          description:
+            - From Ruby, Railsk, Git to deployment,
+            - we have experts teaching these in either basic and advanced level,
+            - making you get on board eazily!
+        - img: feature-list-img2
+          title: Case outsourcing / Technical consulting
+          description:
+            - Providing professional and technical advice and support for
+            - Ruby, Rails, iOS, system design and even deployment.
+        - img: feature-list-img3
+          title: Employee Training Plans
+          description:
+            - Helping enterprise making their existing
+            - human resource into Ruby/Rails teams
+            - No more recruit is required!
+      testimonials:
+        - name: Victor Lam
+          title: "GoGoVan プロダクトマネージャー兼フルスタックエンジニア"
+          img: "testimonial_victor.jpg"
+          content: "プログラマーにとって一番価値のあることは、経験です。5xRubyの全ての講師は、台湾Rubyコミュニティの経験豊富なシニアRubyist達です。彼らは、生徒たちを素晴らしいRubyの世界に導いてくれます。そして、それが生徒たちにとって最高の選択になるでしょう。"
+        - name: Jason Hsu
+          title: "The Big Questions 創業者、TEDxTaipei 創設者"
+          img: "testimonial_jason.jpg"
+          content: "Eddieと彼のチームは、私が出会った中で、最高のRubyエバンジェリストです。彼らの情熱とプロフェッショナリズムは、Rubyを学ぶ方々の学習スピードを劇的に上げてくれるでしょう。"
+        - name: Felix Lin
+          title: "dappei.com創業者"
+          img: "testimonial_felix.jpg"
+          content: "Ruby/Ruby on Railsのコーチを探していますか？ 間違いなく5xRubyには台湾で最高のRubyistたちがいます。"
+        - name: Hana Chang
+          title: "BountyHunter 共同創業者兼CEO"
+          img: "test-monial-Hana.jpg"
+          content: "Mu-fanとEddieは、Rubyマスターです。経験だけではなく、素晴らしいコーチングスキルを持っています。私は、彼らの助けがなければ、この素晴らしいRubyの世界へ入ることはできなかったでしょう。"
+        - name: John Sie
+          title: "Accuvally Inc. 共同創業者兼COO"
+          img: "testimonial_johnsie.jpg"
+          content: "どのプログラミング言語を学ぶかを選択することは重要です。もっと重要なことは、その言語を学ぶ時に、正しいコーチを選ぶことです。台湾Rubyコミュニティの実践的で経験豊富なトップRubyistたちと一緒に学ぶ時、あなたは、プログラム開発のアートを見ることができるでしょう。私たちは、プロフェッショナルが次のプロフェッショナルを育てることを知っています。私は、5xRubyがプロフェッショナルの宝島だと信じています。"
+        - name: Ben Lin
+          title: "POP CEO"
+          img: "testimonial_benlin.jpg"
+          content: "5xRubyのコーチは、この業界のトッププレイヤーたちです。このコースに参加することは、あなた自身で学ぶより、大幅に時間をセーブしてくれることでしょう。"
+        - name: Max
+          title: "Buyble 創業者（インターナショナルブティックショッピングウェブサイト）"
+          img: "testimonial_max.jpg"
+          content: "私は、本当にCarolとEddieと一緒に学べたことを光栄に思います。Carolは、自己規律があり、熱心です。Eddieは、問題解決能力に優れており、本当に責任感があります。5xRubyの他のパートナーもこの分野のエキスパートです。このチームは最高です！"
+    about_services:
+      - name: 技術コンサルティング
+        img: consult.png
+        content: 5xRubyの講師陣やメンバーは、第一線で活躍する台湾Rubyコミュニティのシニアクラスエンジニアであり、我々は理論をベースに実践的な経験を持っております。
+      - name: 企業内トレーニング
+        img: training.png
+        content: もし、現在あなたのウェブサイトやシステムが他のプログラミング言語（例：PHP、Java、ASP.net）で作られており、生産性向上の為、Ruby/Railsに変える予定があるけども、開発する為の技術が不足している場合、我々は、あなたの会社の開発チームへトレーニングプログラミングを提供し、Ruby/Rails開発チームを構築できるようにします。もうエンジニア採用で困る必要や、新規メンバーが既存のチーム文化に馴染めない問題を抱える必要はありません。
+      - name: トレーニング
+        img: edu.png
+        content: もし、あなたがプログラミング初心者もしくは、他のプログラミング言語の経験者でも、我々は、入門編から応用編のレクチャーを提供することが可能であり、あなたをRuby/Railsのコアへ効率的に導くことができるでしょう。
     description: 5xRubyは、台湾Rubyコミュニティのコアメンバーが創設しましたRuby及びRuby on Railsの技術コンサルティングとトレーニング事業を行う会社です。
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'
-    index_swiper_imgs:
-      - name: 'swiper-1'
-        sizes: ["400w", "600w", "1280w"]
-      - name: 'swiper-2'
-        sizes: ["400w", "600w", "1280w"]
-      - name: 'swiper-3'
-        sizes: ["400w", "600w", "1280w"]
     contact_budgets:
       - 'Below 100 thousands NTD'
       - '100 ~ 500 thousands NTD'
       - '500 thousands ~ 1 million NTD'
       - 'More than 1 million NTD'
+

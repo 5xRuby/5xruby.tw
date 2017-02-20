@@ -15,7 +15,7 @@
         <h5><%= link_to t('.contact'), contacts_path %></h5>
         <h5><%= link_to t('.faq'), faq_path %></h5>
         <h5><%= link_to t('.recruit'), posts_path(tags: '徵才') %></h5>
-        <h5><%= link_to t('.source_code'), "https://github.com/5xRuby/5xruby.tw" %></h5>
+        <h5><%= link_to t('.source_code'), "https://github.com/5xRuby/5xruby.tw", target: :_blank %></h5>
       </div>
       <div class="col-sm-3 col-lg-2 col-md-2">
         <strong class="large text-red"><%= t('company.contact_phone') %></strong>
@@ -26,7 +26,7 @@
         <div class="mail-address">
           <%= t('.any_question') %> <a href="mailto:<%= t('company.email') %>"><%= t('company.email') %></a>
           <br>
-          <%=t '.address_label'%> <a target="_blank" href="<%= t('company.gmap_url') %>"><%=t 'company.address'%></a>
+          <%= t('.address_label') %> <a target="_blank" href="<%= t('company.gmap_url') %>"><%=t 'company.address'%></a>
         </div>
       </div>
     </div>

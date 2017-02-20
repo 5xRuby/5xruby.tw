@@ -46,7 +46,17 @@
   <div class="container">
     <div class="row">
       <% @course.speakers.each do |s| %>
-        <%= render partial: 'speakers/in_course', locals: {speaker: s} %>
+        <div class="col-sm-6 col-lg-6 col-md-6 top-spacing-lg">
+          <div class="col-sm-4 col-lg-4 col-md-4">
+            <%= image_tag s.avatar.thumb, class: "avatar img-circle right-spacing" %>
+          </div>
+          <div class="col-sm-8 col-lg-8 col-md-8">
+            <h3 class="bottom-spacing-sm"><%= t('.lecturer') %></h3>
+            <strong><%= s.name %></strong>
+            <br>
+            <%= tr_and_convert_newline2br s, :summary %>
+          </div>
+        </div>
       <% end %>
       <div class="col-sm-<%= rwd_column = (@course.speakers.size.odd? ? '6' : '12') %> col-lg-<%= rwd_column %> col-md-<%= rwd_column %> top-spacing-lg line-height-lg">
         <% if @course.suitable_for.present? %>

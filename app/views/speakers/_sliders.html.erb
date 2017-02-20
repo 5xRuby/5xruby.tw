@@ -28,7 +28,7 @@
                     github_url: nil,
                     website_url: nil,
                     role_text: s.role_text,
-                    summary: speaker_summary(s)
+                    summary: tr_and_convert_newline2br(s, :summary)
                   } %>
                 <% end %>
               </div>

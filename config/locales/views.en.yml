@@ -2,122 +2,86 @@ en:
   breadcrumb:
     home: Home
     courses: Lectures
-  videos:
+  courses:
     index:
-      title: Videos
-      lead: 各種優質短片，專業課程錄影、桌面錄影教學與重要活動影片
+      all_courses: All lectures
     show:
-      share: Share to Facebook
+      hours_label: 'Hours:'
+      outdated: Lecture has started
+      opening: Sign up now
+      lecturer: Lecturer
+      suitable_for: Suitable for
+      what_you_will_learn: What you will learn
+      outline: Outline
+      chapter_title: "Lesson %{nth}:"
+      apply_now: I'd like to sign in the lecture
+      payment_note: 'Payment:'
+      note: Description
+    course:
+      outdated: Ended
+      about_to_begin: About to begin
+      opening: Opening
+      speaker_label: 'Speaker:'
+      hours_label: 'Hours:'
   interview_questions:
     index:
       lead: 我們提供一些識別度高的 Ruby/Rails 面試題目供你使用 =)
       answer: See Answer
-  schedules:
-    show:
-      start_learning: I'd like to sign in the lecture
-  speakers:
+  posts:
     index:
-      title: Lecturer
-      lead: In order to provide lectures with high quality, we have recruited more than 10 experienced lecturers in Ruby/Rails. They have devoted themselves in the development and teachings of this field. Please contact us if you are ineterested in becoming a lecturer.
-    sliders:
-      title: Speakers
-  courses:
-    index:
-      title: Lecture status
-      all_courses: All lectures
-      categories: Category
-      satisfied: Are you satisfied with our lectures?
-      upcoming: More Ruby/Rails lectures or website development lectures will be released. Please contact us if you have any suggestions regarding our lectures.
+      by: 'By '
+      more: More
+    categories:
+      all_categories: All categories
     show:
-      summary: Introduction
-      what_you_will_learn: What you will learn
-      suitable_for: Suitable for
-      apply_now: I'd like to sign in the lecture
-      outline: Outline
-      note: Description
-      payment_note: 'Payment:'
-      charger_complete: Threshold Bar
-      chapter_title: "Lesson %{nth}:"
-      lessons: Lessons
-      hours: Hours
-      hours_label: 'Hours:'
-      outdated: Lecture has started
-      opening: Sign up now
-    course:
-      apply: I'd like to sign in the lecture
-      detail: Detailed Info
-      outdated: (Course Ended)
-      hours:
-        zero: not yet available
-        one: 1 hour
-        other: "%{count} hour"
-    list:
-      speaker_label: 'Speaker:'
-      hours_label: 'Hours:'
-      outdated: Ended
-      about_to_begin: About to begin
-      opening: Opening
+      by: 'By '
+      back_to_index: « Back
   showcases:
     index:
       title: Showcase
       members: Members of our team
     cooperation_list:
       cooperations: Cooperations
-  stages:
-    stage:
-      stage_no: Lesson number %{stage}
-      available_dates: Lecture starting date
-      next_dates: next lesson
-  posts:
+  speakers:
+    sliders:
+      title: Speakers
+  videos:
     index:
-      title: Blog
-      by: 'By '
-      more: More
-    categories:
-      all_categories: All categories
+      title: Videos
+      lead: 各種優質短片，專業課程錄影、桌面錄影教學與重要活動影片
     show:
-      title: Blog
-      by: 'By '
-      back_to_index: « Back
-    post:
-      read_more: more...
-      tags: tags
-    sidebar:
-      tags: tags
-      recent_post: recent posts
+      share: Share to Facebook
+
   pages:
-    faq:
-      title: Q & A
-    next_schedule:
-      hours: hour
-    main_features:
-      about_5xruby: About 5xRuby
-      items:
-        - img: feature-list-img1
-          title: Courses
-          description:
-            - From Ruby, Railsk, Git to deployment,
-            - we have experts teaching these in either basic and advanced level,
-            - making you get on board eazily!
-        - img: feature-list-img2
-          title: Case outsourcing / Technical consulting
-          description:
-            - Providing professional and technical advice and support for
-            - Ruby, Rails, iOS, system design and even deployment.
-        - img: feature-list-img3
-          title: Employee Training Plans
-          description:
-            - Helping enterprise making their existing
-            - human resource into Ruby/Rails teams
-            - No more recruit is required!
-    main_content_gray:
-      view_all_courses: view all lectures
-      latest_courses: lastest lectures
-      latest_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
-    main_content:
-      next_courses: recent lectures
-      next_courses_detail: Lorem ipsum dolor sit amet, ius minim gubergren ad.
-      more_talks: ...More
+    index:
+      main_features:
+        about_5xruby: About 5xRuby
+      main_content:
+        next_courses: recent lectures
+        more_talks: ...More
+      showcases:
+        title: Showcases
+        more: ...more
+      know_more:
+        title: What to know more about us?
+        description_1: You can check out
+        qna: Q&A
+        description_2: or
+        contact: contact us
+        description_3: There will be a person answering your questions
+        description_4: You can also subscribe our social accounts to get the latest information
+    about:
+      title: About Us
+      our_services: Our Services
+    contacts:
+      tel_label: 'Tel：'
+      mobile_label: 'Mobile：'
+      email_label: 'E-mail：'
+      fax_label: 'Fax：'
+      welcom_to_contact: 任何問題都歡迎您透過以下表單詢問，我們會盡快回覆您！
+      budget: Budget
+      write_your_message: Leave your message
+      submit: Submit
     training:
       showcases: Showcases
       qna:
@@ -126,109 +90,33 @@ en:
         a_label: A：
       interested: Are you interested in?
       contact_us: Contact us
-    testimonials:
-      items:
-        - name: Victor Lam
-          title: "Product Manager of GoGoVan, Full Stack Developer"
-          img: "testimonial_victor.jpg"
-          content: "The most valuable thing for a programmer is experience. All the lecturers and coaches in 5xRuby are the most experienced senior Rubyists in the community. Having them to guide students to explore the magnificent world of Ruby is a great decision made."
-        - name: Jason Hsu
-          title: "founder of The Big Questions & TEDxTaipei"
-          img: "testimonial_jason.jpg"
-          content: "Eddie and his team are of the most dedicated Ruby evangelists I have ever come across. With their passion and professionalism, Ruby learners will leapfrog in their progress."
-        - name: Felix Lin
-          title: "founder of dappei.com"
-          img: "testimonial_felix.jpg"
-          content: " Are you still looking for professional Ruby/Rails coaches? No doubt the best Rubyists in Taiwan are all in 5xRuby"
-        - name: Hana Chang
-          title: "Co-Founder and CEO of BountyHunter"
-          img: "test-monial-Hana.jpg"
-          content: "Mu-fan and Eddie are the masters in Ruby. Not only are they experienced, but also very skillful in guiding students, training those who encouter obstables and frustration while learning Ruby/Rails. I am really grateful to have entered the wonderful world of Ruby under their help."
-        - name: John Sie
-          title: "co-founder and COO of Accuvally Inc."
-          img: "testimonial_johnsie.jpg"
-          content: "It is important to choose a coding language, and even more important to choose the right coach for coding language. Learning alongside top Rubyists in the community, with their many years of experiences in Ruby/Rails pragmatics, the art of program development can be seen in a glimpse. We all know that we should leave the professional stuff to the professionals. I firmly believe that 5xRuby is a professional Treasure Island waiting for more to dig in and discover more."
-        - name: Ben Lin
-          title: "CEO@POP"
-          img: "testimonial_benlin.jpg"
-          content: "The coaches in 5xRuby are the top players in the market. The courses they provided will save you a lot of time exploring Ruby/Rails on your own."
-        - name: Max Lu
-          title: "founder of Buyble, an international boutique shopping website"
-          img: "testimonial_max.jpg"
-          content: "I was very honered to have worked with Carol and Eddie. I admire Carol's self-discipline and aspiration. I praise Eddie for his exellence in crisis handling and sense of responsibility. The other partners in 5xRuby are also experts in this field. I beleive this is a great team!"
-    recent_course:
-      detail: details
-    showcases:
-      title: Showcases
-      more: ...more
-    know_more:
-      title: What to know more about us?
-      description_1: You can check out
-      qna: Q&A
-      description_2: or
-      contact: contact us
-      description_3: There will be a person answering your questions
-      description_4: You can also subscribe our social accounts to get the latest information
-    about:
-      title: About Us
-      our_services: Our Services
-      speciality: Expertise
-      services:
-        - name: Technical Consulting
-          img: consult.png
-          content: The members and lecturers of 5xRuby are the first-line developers in the market and senior members from Taiwan's Ruby community, where actual developing experience and pragmatics come in hand with theoretical basis.
-        - name: Enterprise Internal Training
-          img: training.png
-          content: If your website or system is currently built with other programming languages (for instance PHP, Java or ASP.net), and you are considering changing to Ruby/Rails for high productivity, yet lack the technical capabilities to develop, we offer a series of training programs where the Ruby/Rails development team can be trained and built with your current staff. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
-        - name: Training
-          img: edu.png
-          content: if you are a fresh beginner to programming, or if you happen to have experience with other programming languages, we offer a series of lectures from entry level to intermediate and advanced, that will guide you efficiently to the core of Ruby/Rails.
-    contacts:
-      tel_label: 'Tel：'
-      mobile_label: 'Mobile：'
-      email_label: 'E-mail：'
-      fax_label: 'Fax：'
-      welcom_to_contact: 任何問題都歡迎您透過以下表單詢問，我們會盡快回覆您！
-      budget: Budget
-      general_enquire: Inquery
-      follow_us: Community
-      follow_us_desc: If you are interested to us, welcome to follow our community pages.
-      address: Contact info
-      enter_your_starting_point: Enter your starting point
-      get_directions: Get directions
-      write_your_message: Leave your message
-      submit: Submit
+
   devise:
     sessions:
       title: Login
       login: SIGN IN
       forget_pw: Forget Password
       register: Register
+      login_with:
+        google: login with Google
+        facebook: login with Facebook
+        twitter: login with Twitter
+
   layouts:
-    header:
-      about: About us
+    footer:
+      media: Media Exposure
+      about_5xruby: About 5xRuby
+      members: Members
+      contact: Contact us
+      faq: Q & A
+      recruit: Recruit
+      source_code: Source Code
+      any_question: Any questions?
+      address_label: 'Address:'
     nav:
       login: Login
       camp: Boot Camp
       course: Courses/Events
       showcases: Showcases
       training: Training
-      space_rental: Space Rental
       news: News
-      contact: Contact
-    footer:
-      browse: browse
-      courses: Lectures
-      faq: Q & A
-      blog: Blog
-      contacts: Contact Us
-      about_5xruby: About 5xRuby
-      members: Members
-      contact: Contact us
-      about_us: About Us
-      recruit: Recruit
-      source_code: Source Code
-      media: Media Exposure
-      any_question: Any questions?
-    application:
-      back_to_top: back to top

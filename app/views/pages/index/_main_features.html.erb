@@ -5,7 +5,7 @@
       <div class="col-sm-12 col-lg-12 col-md-12 center-block">
         <h3 class="text-center both-spacing-lg"><span><%= t('.about_5xruby') %></span></h3>
         <div class="feature-list">
-          <% t('.items').each do |item| %>
+          <% t('site.index.main_features').each do |item| %>
             <div class="col-sm-4 col-lg-4 col-md-4 text-center bottom-spacing-lg">
               <%= image_tag "main_features/#{item[:img]}", class: 'bottom-spacing' %>
               <h3><%= item[:title] %></h3>
