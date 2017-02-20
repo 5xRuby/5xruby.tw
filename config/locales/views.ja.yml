@@ -198,6 +198,12 @@ ja:
       get_directions: 道順を知る
       write_your_message: メッセージを残す
       submit: 提出
+  devise:
+    sessions:
+      title: Login
+      login: SIGN IN
+      forget_pw: Forget Password
+      register: Register
   layouts:
     header:
       about: About us

@@ -198,6 +198,12 @@ en:
       get_directions: Get directions
       write_your_message: Leave your message
       submit: Submit
+  devise:
+    sessions:
+      title: Login
+      login: SIGN IN
+      forget_pw: Forget Password
+      register: Register
   layouts:
     header:
       about: About us

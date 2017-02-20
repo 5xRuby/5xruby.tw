@@ -200,6 +200,16 @@ zh-TW:
       get_directions: 規劃路線
       write_your_message: 留下你的訊息
       submit: 送出
+  devise:
+    sessions:
+      title: 學員登入 Login
+      login: 登入 SIGN IN
+      forget_pw: 忘記密碼
+      register: 申請加入學員
+      login_with:
+        google: 以Google帳號登入
+        facebook: 以Facebook帳號登入
+        twitter: 以Twitter帳號登入
   layouts:
     header:
       about: 關於

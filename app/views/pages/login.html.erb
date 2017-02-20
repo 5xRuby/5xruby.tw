@@ -1,0 +1,39 @@
+
+<!-- Start Login Form -->
+<div class="login-form bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-6 col-md-6 both-spacing">
+        <form>
+          <h3 class="both-spacing"><span><%= t('devise.sessions.title') %></span></h3>
+          <div class="form-group has-feedback bottom-spacing">
+            <input placeholder="member@5xruby.tw" class="form-control input-lg" name="email">
+          </div>
+          <div class="form-group has-feedback bottom-spacing">
+            <input placeholder="password" class="form-control input-lg" name="password" data-bv-field="password" type="password">
+          </div>
+          <a class="btn btn-block btn-login bottom-spacing" href="my-account.html"><strong><%= t('devise.sessions.login') %></strong></a>
+          <div class="both-spacing-sm text-center">
+            <%= link_to t('devise.sessions.forget_pw'), '#', class: 'small' %>
+            ．
+            <%= link_to t('devise.sessions.register'), '#', class: 'small' %>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-6 col-lg-6 col-md-6 both-spacing">
+        <h3 class="both-spacing mobile-disappear"><span>&nbsp;</span></h3>
+        <%= link_to '#', class: 'btn btn-block btn-google-login bottom-spacing' do %>
+          <strong><i class="fa fa-google" aria-hidden="true"></i>&nbsp;&nbsp;<%= t('devise.sessions.login_with.google') %></strong>
+        <% end %>
+        <%= link_to '#', class: 'btn btn-block btn-fb-login bottom-spacing' do %>
+          <strong><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;<%= t('devise.sessions.login_with.facebook') %></strong>
+        <% end %>
+        <%= link_to '#', class: 'btn btn-block btn-twitter-login bottom-spacing' do %>
+          <strong><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;<%= t('devise.sessions.login_with.twitter') %></strong>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Q&A List -->
+
