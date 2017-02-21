@@ -274,11 +274,11 @@ zh-TW:
   site:
     index:
       swiper_imgs:
-        - name: 'swiper-1'
+        - name: 'zh-TW/swiper-1'
           sizes: ["400w", "600w", "1280w"]
-        - name: 'swiper-2'
+        - name: 'zh-TW/swiper-2'
           sizes: ["400w", "600w", "1280w"]
-        - name: 'swiper-3'
+        - name: 'zh-TW/swiper-3'
           sizes: ["400w", "600w", "1280w"]
       main_features:
         - img: feature-list-img1
@@ -328,6 +328,30 @@ zh-TW:
           title: "呂元鐘 Max Lu, Buyble 國際精品購物 創辦人"
           img: "testimonial_max.jpg"
           content: "曾有幸與徐曦與見龍一起工作，徐曦自我要求與向上進取的態度令人稱佩，見龍對危機處理與當責的責任感也值得稱許。「五倍紅寶石」的其他夥伴也是一時之選，相信這是一個很棒的組合。"
+    lectures_main_banner:
+      folder: lectures-main-banner/zh-TW
+      sizes: ["400w", "600w", "1280w"]
+    about_main_banner:
+      folder: about-main-banner/zh-TW
+      sizes: ["400w", "600w", "1280w"]
+    contact_main_banner:
+      folder: contact-main-banner/zh-TW
+      sizes: ["400w", "600w", "1280w"]
+    qna_main_banner:
+      folder: qna-main-banner/zh-TW
+      sizes: ["400w", "600w", "1280w"]
+    member_main_banner:
+      folder: member-main-banner/zh-TW
+      sizes: ["400w", "600w", "1280w"]
+    training_main_banner:
+      folder: training-main-banner/zh-TW
+      sizes: ["400w", "600w", "1280w"]
+    news_main_banner:
+      folder: news-main-banner/zh-TW
+      sizes: ["400w", "600w", "1280w"]
+    projects_main_banner:
+      folder: projects-main-banner/zh-TW
+      sizes: ["400w", "600w", "1280w"]
     about_services:
       - name: 技術諮詢
         img: consult.png

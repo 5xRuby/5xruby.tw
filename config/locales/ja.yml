@@ -274,11 +274,11 @@ ja:
   site:
     index:
       swiper_imgs:
-        - name: 'swiper-1'
+        - name: 'ja/swiper-1'
           sizes: ["400w", "600w", "1280w"]
-        - name: 'swiper-2'
+        - name: 'ja/swiper-2'
           sizes: ["400w", "600w", "1280w"]
-        - name: 'swiper-3'
+        - name: 'ja/swiper-3'
           sizes: ["400w", "600w", "1280w"]
       main_features:
         - img: feature-list-img1
@@ -327,6 +327,30 @@ ja:
           title: "Buyble 創業者（インターナショナルブティックショッピングウェブサイト）"
           img: "testimonial_max.jpg"
           content: "私は、本当にCarolとEddieと一緒に学べたことを光栄に思います。Carolは、自己規律があり、熱心です。Eddieは、問題解決能力に優れており、本当に責任感があります。5xRubyの他のパートナーもこの分野のエキスパートです。このチームは最高です！"
+    lectures_main_banner:
+      folder: lectures-main-banner/ja
+      sizes: ["400w", "600w", "1280w"]
+    about_main_banner:
+      folder: about-main-banner/ja
+      sizes: ["400w", "600w", "1280w"]
+    contact_main_banner:
+      folder: contact-main-banner/ja
+      sizes: ["400w", "600w", "1280w"]
+    qna_main_banner:
+      folder: qna-main-banner/ja
+      sizes: ["400w", "600w", "1280w"]
+    member_main_banner:
+      folder: member-main-banner/ja
+      sizes: ["400w", "600w", "1280w"]
+    training_main_banner:
+      folder: training-main-banner/ja
+      sizes: ["400w", "600w", "1280w"]
+    news_main_banner:
+      folder: news-main-banner/ja
+      sizes: ["400w", "600w", "1280w"]
+    projects_main_banner:
+      folder: projects-main-banner/ja
+      sizes: ["400w", "600w", "1280w"]
     about_services:
       - name: 技術コンサルティング
         img: consult.png

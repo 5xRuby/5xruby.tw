@@ -275,11 +275,11 @@ en:
   site:
     index:
       swiper_imgs:
-        - name: 'swiper-1'
+        - name: 'en/swiper-1'
           sizes: ["400w", "600w", "1280w"]
-        - name: 'swiper-2'
+        - name: 'en/swiper-2'
           sizes: ["400w", "600w", "1280w"]
-        - name: 'swiper-3'
+        - name: 'en/swiper-3'
           sizes: ["400w", "600w", "1280w"]
       main_features:
         - img: feature-list-img1
@@ -328,6 +328,30 @@ en:
           title: "founder of Buyble, an international boutique shopping website"
           img: "testimonial_max.jpg"
           content: "I was very honered to have worked with Carol and Eddie. I admire Carol's self-discipline and aspiration. I praise Eddie for his exellence in crisis handling and sense of responsibility. The other partners in 5xRuby are also experts in this field. I beleive this is a great team!"
+    lectures_main_banner:
+      folder: lectures-main-banner/en
+      sizes: ["400w", "600w", "1280w"]
+    about_main_banner:
+      folder: about-main-banner/en
+      sizes: ["400w", "600w", "1280w"]
+    contact_main_banner:
+      folder: contact-main-banner/en
+      sizes: ["400w", "600w", "1280w"]
+    qna_main_banner:
+      folder: qna-main-banner/en
+      sizes: ["400w", "600w", "1280w"]
+    member_main_banner:
+      folder: member-main-banner/en
+      sizes: ["400w", "600w", "1280w"]
+    training_main_banner:
+      folder: training-main-banner/en
+      sizes: ["400w", "600w", "1280w"]
+    news_main_banner:
+      folder: news-main-banner/en
+      sizes: ["400w", "600w", "1280w"]
+    projects_main_banner:
+      folder: projects-main-banner/en
+      sizes: ["400w", "600w", "1280w"]
     about_services:
       - name: Technical Consulting
         img: consult.png
