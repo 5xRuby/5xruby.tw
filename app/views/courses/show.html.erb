@@ -104,22 +104,24 @@
 <!-- End Lecture Outline -->
 
 <!-- Start Tickets -->
-<div class="tickets light-grey-bg bottom-padding-lg">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-        <h3 class="top-spacing-lg left-spacing-sm"><span>&emsp;</span></h3>
-        <% if @course.iframe_html.blank? && apply_link = @course.apply_link.presence %>
-          <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing text-center">
-            <%= link_to t('.apply_now'), apply_link, target: :_blank %>
-          </div>
-        <% elsif @course.iframe_html.present? %>
-          <%= raw @course.iframe_html %>
-        <% end %>
+<% if @course.iframe_html.present? || @course.apply_link.present? %>
+  <div class="tickets light-grey-bg bottom-padding-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+          <h3 class="top-spacing-lg left-spacing-sm"><span>&emsp;</span></h3>
+          <% if @course.iframe_html.blank? && @course.apply_link.present? %>
+            <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing text-center">
+              <%= link_to t('.apply_now'), @course.apply_link, target: :_blank %>
+            </div>
+          <% else %>
+            <%= raw @course.iframe_html %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
 <!-- End Tickets -->
 
 <!-- Start Lecture Notice -->
