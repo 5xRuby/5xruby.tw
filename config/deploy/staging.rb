@@ -1,14 +1,18 @@
 # Simple Role Syntax
 set :stage, :staging
+set :repo_url, "git@git.5xruby.tw:5xruby/5xruby.tw.git"
+set :ssh_options, {
+  forward_agent: true
+}
 # ==================
 # Supports bulk-adding hosts to roles, the primary server in each group
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
-role :app, %w{deploy@staging.5xruby.tw}
-role :web, %w{deploy@staging.5xruby.tw}
-role :db,  %w{deploy@staging.5xruby.tw}
+role :app, %w{5xruby@srv.5xruby.tw:14159}
+role :web, %w{5xruby@srv.5xruby.tw:14159}
+role :db,  %w{5xruby@srv.5xruby.tw:14159}
 
-set :deploy_to, '/home/deploy/5xruby'
+set :deploy_to, '/home/5xruby/5xruby-stg'
 # Extended Server Syntax
 # ======================
 # This can be used to drop a more detailed server definition into the
