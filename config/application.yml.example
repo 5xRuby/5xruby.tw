@@ -12,6 +12,10 @@ defaults: &defaults
     - 工作機會
     - 心得分享
     - 其他消息
+  index_pictures:
+    langs: ['zh-TW', 'en', 'ja']
+    sizes: ['400w', '600w', '1280w']
+    default_size: '1280w'
 development:
   <<: *defaults
   admin_path_prefix: admin

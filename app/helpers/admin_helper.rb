@@ -98,4 +98,8 @@ module AdminHelper
       }
     ]
   end
+
+  def show_attr(record, attr)
+    "#{record.class.human_attribute_name attr}: #{record.send attr}"
+  end
 end
