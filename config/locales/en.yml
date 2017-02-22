@@ -61,7 +61,7 @@ en:
     name: Eddie Kao
     title: Appraiser
     about: 「希望有天可以寫程式來改變世界!」
-    avatar: eddiekao2
+    avatar: eddiekao2.jpg
     facebook: https://www.facebook.com/eddiekao
     twitter: https://twitter.com/eddiekao
     google: https://plus.google.com/u/0/102669323697108172752/about
@@ -275,18 +275,18 @@ en:
   site:
     index:
       main_features:
-        - img: feature-list-img1
+        - img: feature-list-img1.png
           title: Courses
           description:
             - From Ruby, Railsk, Git to deployment,
             - we have experts teaching these in either basic and advanced level,
             - making you get on board eazily!
-        - img: feature-list-img2
+        - img: feature-list-img2.png
           title: Case outsourcing / Technical consulting
           description:
             - Providing professional and technical advice and support for
             - Ruby, Rails, iOS, system design and even deployment.
-        - img: feature-list-img3
+        - img: feature-list-img3.png
           title: Employee Training Plans
           description:
             - Helping enterprise making their existing
@@ -323,28 +323,28 @@ en:
           content: "I was very honered to have worked with Carol and Eddie. I admire Carol's self-discipline and aspiration. I praise Eddie for his exellence in crisis handling and sense of responsibility. The other partners in 5xRuby are also experts in this field. I beleive this is a great team!"
     lectures_main_banner:
       folder: lectures-main-banner/en
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     about_main_banner:
       folder: about-main-banner/en
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     contact_main_banner:
       folder: contact-main-banner/en
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     qna_main_banner:
       folder: qna-main-banner/en
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     member_main_banner:
       folder: member-main-banner/en
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     training_main_banner:
       folder: training-main-banner/en
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     news_main_banner:
       folder: news-main-banner/en
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     projects_main_banner:
       folder: projects-main-banner/en
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     about_services:
       - name: Technical Consulting
         img: consult.png

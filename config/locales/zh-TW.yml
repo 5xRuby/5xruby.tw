@@ -61,7 +61,7 @@ zh-TW:
     name: 高見龍
     title: 紅寶石鑑定商
     about: 「希望有天可以寫程式來改變世界!」
-    avatar: eddiekao2
+    avatar: eddiekao2.jpg
     facebook: https://www.facebook.com/eddiekao
     twitter: https://twitter.com/eddiekao
     google: https://plus.google.com/u/0/102669323697108172752/about
@@ -88,7 +88,7 @@ zh-TW:
       至於公司名稱為什麼是「五倍」紅寶石，不是三倍也不是一百倍? 這又是另一個有趣的故事了：）
   members:
     - <<: *ceo
-      avatar: eddiekao
+      avatar: eddiekao.jpg
     - name: 鄧慕凡
       title: 無限蟲制師
       avatar: ryudoawaru.jpg
@@ -274,19 +274,19 @@ zh-TW:
   site:
     index:
       main_features:
-        - img: feature-list-img1
+        - img: feature-list-img1.png
           title: 十年功力實戰講座
           description:
             - 業界資深前輩為你講解 Ruby、Rails、
             - Git 、系統佈署等從入門到中高階的講座
             - 讓你有如練了十年功！
-        - img: feature-list-img2
+        - img: feature-list-img2.png
           title: 案件外包．技術諮詢
           description:
             - 從 Ruby、Rails、iOS 的工程服務
             - 到系統設計、規劃到開發甚至系統架設
             - 提供專業的建議與頂尖的技術
-        - img: feature-list-img3
+        - img: feature-list-img3.png
           title: 企業培訓計畫
           description:
             - 由業界第一線的開發人員協助您將
@@ -323,28 +323,28 @@ zh-TW:
           content: "曾有幸與徐曦與見龍一起工作，徐曦自我要求與向上進取的態度令人稱佩，見龍對危機處理與當責的責任感也值得稱許。「五倍紅寶石」的其他夥伴也是一時之選，相信這是一個很棒的組合。"
     lectures_main_banner:
       folder: lectures-main-banner/zh-TW
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     about_main_banner:
       folder: about-main-banner/zh-TW
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     contact_main_banner:
       folder: contact-main-banner/zh-TW
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     qna_main_banner:
       folder: qna-main-banner/zh-TW
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     member_main_banner:
       folder: member-main-banner/zh-TW
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     training_main_banner:
       folder: training-main-banner/zh-TW
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     news_main_banner:
       folder: news-main-banner/zh-TW
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     projects_main_banner:
       folder: projects-main-banner/zh-TW
-      sizes: ["400w", "600w", "1280w"]
+      sizes: ["400w.png", "600w.png", "1280w.png"]
     about_services:
       - name: 技術諮詢
         img: consult.png
