@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :courses, :authors, :speakers, :faqs, :categories, :showcases, :videos, :interview_questions do
       put :sort, on: :collection
     end
+    resources :index_pictures
     resources :translations, only: %i[index create update]
   end
 

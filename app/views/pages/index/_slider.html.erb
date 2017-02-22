@@ -1,8 +1,8 @@
 <div class="swiper-container">
   <div class="swiper-wrapper">
-    <% t('site.index.swiper_imgs').each do |img| %>
+    <% @index_pictures.each do |ip| %>
       <div class="swiper-slide">
-        <%= image_set_tag "index_sliders/#{img[:name]}", img[:sizes], width: '100%' %>
+        <%= render ip %>
       </div>
     <% end %>
   </div>

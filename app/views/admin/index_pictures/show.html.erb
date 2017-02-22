@@ -1,0 +1,18 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <th>屬性</th>
+    <th>值</th>
+  </thead>
+  <tbody>
+    <%= tr_for current_object, :id, :alt, :href %>
+  </tbody>
+</table>
+
+<div class="page-header"><h2><%= IndexPictureImg.model_name.human %></h2></div>
+
+<%= render current_object.index_picture_imgs %>
+
+<div class="btn-group">
+  <%= link_to t('crud.edit'), {action: :edit}, {class: 'btn btn-info btn-lg'} %>
+  <%= link_to t('action.back'), {action: :index}, {class: 'btn btn-default btn-lg'} %>
+</div>

@@ -49,6 +49,8 @@ zh-TW:
       video: 影片
       translation: 翻譯
       interview_question: 面試題目
+      index_picture: 首頁大圖
+      index_picture_img: 首頁大圖圖片
     attributes:
       post:
         publish_at: 發佈時間
@@ -119,6 +121,13 @@ zh-TW:
       video:
         title: 名稱
         description: 說明
+      index_picture:
+        alt: 說明文字
+        href: 連結
+      index_picture_img:
+        src: 圖檔
+        lang: 語系
+        size: 大小
   enumerize:
     apply:
       gender:

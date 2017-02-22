@@ -274,13 +274,6 @@ en:
       facebook: https://www.facebook.com/meowmeowsister1
   site:
     index:
-      swiper_imgs:
-        - name: 'en/swiper-1'
-          sizes: ["400w", "600w", "1280w"]
-        - name: 'en/swiper-2'
-          sizes: ["400w", "600w", "1280w"]
-        - name: 'en/swiper-3'
-          sizes: ["400w", "600w", "1280w"]
       main_features:
         - img: feature-list-img1
           title: Courses
