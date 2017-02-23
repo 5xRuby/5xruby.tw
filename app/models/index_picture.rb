@@ -40,7 +40,7 @@ class IndexPicture < ApplicationRecord
   end
 
   # association macros
-  has_many :index_picture_imgs
+  has_many :index_picture_imgs, dependent: :destroy
   accepts_nested_attributes_for :index_picture_imgs, allow_destroy: true
 
   # validation macros
