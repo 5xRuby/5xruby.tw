@@ -274,35 +274,19 @@ ja:
   site:
     index:
       main_features:
-<<<<<<< HEAD
-        - img: feature-list-img1
+        - img: feature-list-img1.png
           title: 役に立つ実戦講座
           description:
             - 業界の経験を生かし
             - Ruby/Rails、Git、システム構築などの
             - ブートキャンプと実戦講座常に開催！
-        - img: feature-list-img2
+        - img: feature-list-img2.png
           title: 開発、アドバイス
           description:
             - Ruby、RailsでWEBサイト、アプリ、
             - システム開発など、あらゆる案件に対応可能です、お気軽にご相談ください
-        - img: feature-list-img3
-          title: 企業内トレーニング
-=======
-        - img: feature-list-img1.png
-          title: Courses
-          description:
-            - From Ruby, Railsk, Git to deployment,
-            - we have experts teaching these in either basic and advanced level,
-            - making you get on board eazily!
-        - img: feature-list-img2.png
-          title: Case outsourcing / Technical consulting
-          description:
-            - Providing professional and technical advice and support for
-            - Ruby, Rails, iOS, system design and even deployment.
         - img: feature-list-img3.png
-          title: Employee Training Plans
->>>>>>> 1a6842d306515d39164b37256107e98f9a869590
+          title: 企業内トレーニング
           description:
             - あなたの会社の開発チームへ
             - プログラミングトレーニングを提供し
