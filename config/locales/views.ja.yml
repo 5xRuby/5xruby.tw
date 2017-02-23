@@ -21,8 +21,8 @@ ja:
       outdated: Ended
       about_to_begin: About to begin
       opening: Opening
-      speaker_label: 'Speaker:'
-      hours_label: 'Hours:'
+      speaker_label: '講師：'
+      hours_label: '時間：'
   interview_questions:
     index:
       lead: 我們提供一些識別度高的 Ruby/Rails 面試題目供你使用 =)
@@ -32,91 +32,91 @@ ja:
       by: 'By '
       more: More
     categories:
-      all_categories: All categories
+      all_categories: カテゴリ
     show:
       by: 'By '
       back_to_index: « Back
   showcases:
     index:
-      title: Showcase
-      members: Members of our team
+      title: 制作事例
+      members: 社員一覧
     cooperation_list:
       cooperations: 協力
   speakers:
     sliders:
-      title: Speakers
+      title: 講師
   videos:
     index:
       title: 動画
-      lead: 各種優質短片，專業課程錄影、桌面錄影教學與重要活動影片
+      lead: 講座、イベント記録などの動画置き場
     show:
       share: Facebookでシェア
 
   pages:
     index:
       main_features:
-        about_5xruby: About 5xRuby
+        about_5xruby: 5xRubyについて
       main_content:
         next_courses: 最近の講座
         more_talks: ...More
       showcases:
-        title: Showcases
+        title: 制作事例
         more: ...more
       know_more:
-        title: What to know more about us?
-        description_1: You can check out
+        title: もっと知りたい？
+        description_1: 日頃よくいただくご質問を
         qna: Q&A
-        description_2: or
-        contact: contact us
-        description_3: There will be a person answering your questions
-        description_4: You can also subscribe our social accounts to get the latest information
+        description_2: でご紹介しております。他のご質問・ご相談など、お気軽に
+        contact: お問い合わせ
+        description_3: ください。
+        description_4: イベント情報、お知らせなどをfacebookとtwitterで発信しています。ぜひご利用ください。
     about:
-      title: About Us
+      title: 5xRubyについて
       our_services: 我々のサービス
     contacts:
       tel_label: 'Tel：'
       mobile_label: 'Mobile：'
       email_label: 'E-mail：'
       fax_label: 'Fax：'
-      welcom_to_contact: 任何問題都歡迎您透過以下表單詢問，我們會盡快回覆您！
-      budget: Budget
-      write_your_message: メッセージを残す
-      submit: 提出
+      welcom_to_contact: お仕事のご相談、弊社サービス、制作事例に関することなどのご質問、ご意見をお気軽にお問い合わせください。
+      budget: 予算
+      write_your_message: お問い合わせ内容
+      submit: 送信
     training:
-      showcases: Showcases
+      showcases: 制作事例
       qna:
         title: Q & A
         q_label: Q：
         a_label: A：
-      interested: Are you interested in?
-      contact_us: Contact us
+      interested: 興味ある方ぜひ！
+      contact_us: お問い合わせ
 
   devise:
     sessions:
-      title: Login
-      login: SIGN IN
-      forget_pw: Forget Password
-      register: Register
+      title: ログイン
+      login: ログイン
+      forget_pw: ID/パスワードをお忘れの方
+      register: 新規登録
       login_with:
-        google: login with Google
-        facebook: login with Facebook
-        twitter: login with Twitter
-  
+        google: Googleアカウントでログイン
+        facebook: Facebookアカウントでログイン
+        twitter: Twitterアカウントでログイン
+
   layouts:
     footer:
-      media: メディア
+      media: メディア・マスコミ取材
       about_5xruby: 会社概要
-      members: Members
-      contact: Contact us
+      members: 社員一覧
+      contact: お問い合わせ
       faq: よくある質問
-      recruit: Recruit
+      recruit: 採用情報
       source_code: ソースコード
       any_question: 何か質問はありませんか?
       address_label: '住所：'
     nav:
       login: ログイン
-      camp: Boot Camp
+      camp: ブートキャンプ
       course: 講座/イベント
-      showcases: Showcases
-      training: Training
+      showcases: 制作事例
+      training: トレーニング
       news: ニュース

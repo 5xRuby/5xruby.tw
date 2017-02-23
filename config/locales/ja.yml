@@ -12,7 +12,7 @@ ja:
     facebook: 'https://www.facebook.com/5xruby'
     twitter: 'https://twitter.com/5xruby'
     gmap_url: 'https://goo.gl/lz5v93'
-    gmap_iframe_url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.016266311726!2d121.513862!3d25.0424189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa8402e622aa7b148!2z5LqU5YCN57SF5a-255-z!5e0!3m2!1szh-TW!2stw!4v1482991564796" 
+    gmap_iframe_url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.016266311726!2d121.513862!3d25.0424189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa8402e622aa7b148!2z5LqU5YCN57SF5a-255-z!5e0!3m2!1szh-TW!2stw!4v1482991564796"
   cooperations:
     - img: vpon.png
     - img: accuvally.png
@@ -27,40 +27,40 @@ ja:
     - img: makerbar.png
     - img: goldenio.png
   training:
-    intro_title: How do we train your employee?
-    description: Projects based on Ruby/Rails can be developed 5~10 times faster than other frameworks, but no where to find developer?<br>Here we provide \"Employee training program\".<br>The training program includes basic such as Git, Ruby, Rails to practical project development.<br>Making your employee able to start a Ruby/Rails project within 6~8 weeks and get rid of trouble things such as interviewing and recruiting.
-    process_title: 代訓流程
-    process_html: <ol><li>企業提出訓練需求(人數、期望能力、薪資)。</li><li>尋找合適人選。<br><ul><li>a. 由企業先行面試可能人選。</li><li>b. 或由五倍紅寶石協尋合適人選，並與企業進行第一次面談。</li></ul></li><li>三方(企業、受訓學員以及五倍紅寶石)簽定合作合約，由五倍紅寶石進行密集訓練。</li><li>訓練期滿，學員回至企業上班。</li></ol>
-    content_title: 訓練內容
-    content_html: <ol><li>基本技能：Git、Ruby、Rails、HTML/CSS/Javascript</li><li>測試驅動開發(使用 RSpec)</li><li>實際參與大型 Rails 專案開發</li></ol>訓練時間：平常上班日 10:30 ~ 18:30，<br>每週 3 天以上，約 6 ~ 8 週。<br>訓練地點：五倍紅寶石<br>訓練人數：小班制，每梯次最多僅收 3 ~ 5 人。
-    what_they_say_title: 聽聽他們怎麼說
-    what_they_say_description: 以下是一些之前跟我們一起學習，現已經在業界工作的夥伴，聽聽他們怎麼說：
+    intro_title: 企業内トレーニングとは？
+    description: Ruby/Rails開発速度の速さに興味があるけど開発者不足で困る方のために<br>「企業内トレーニング」ををご提案させていただきます！<br>Ruby/Rails、Gitなど基礎スキルから、実際にプロジェクトを開発するまで<br>実用性の高い技を身に付けることができます。<br>もうエンジニア採用で困る必要や、新規メンバーが既存のチーム文化に馴染めない問題を抱える必要はありません。<br>わずか 6 ~ 8 週間で Ruby/Rails 即戦力になれる！
+    process_title: トレーニングの流れ
+    process_html: <ol><li>企業から要求を提出 (人数、期待するアビリティ、給料)。</li><li>適任者を探す。<br><ul><li>a. 企業から適任しそうな方と面接。</li><li>b. 5xRubyから適任者を探し、企業との第一面接を協力する。</li></ul></li><li>三方(企業、学員、5xRuby)契約して、5xRubyで密集な訓練を受ける。</li><li>トレーニング終わり、学員が企業に就職する。</li></ol>
+    content_title: トレーニングの内容
+    content_html: <ol><li>基本的なスキル：Git、Ruby、Rails、HTML/CSS/Javascript</li><li>テストコード開発(RSpecで)</li><li>実際に大きな Rails プロジェクト開発を参加する</li></ol>トレーニング時間：平日 10:30 ~ 18:30，<br>週３日以上、6 ~ 8 週間ほど。<br>トレーニング場所：5xRuby<br>トレーニング人数：小さいクラスサイズで、毎回 3 ~ 5 人。
+    what_they_say_title: フィードバック
+    what_they_say_description: ここは一緒に学習した、今は業界で活躍中の学員たちからの感想：
     what_they_says:
       - name: Annie
-        title: 前艾思網絡 Rails 工程師
+        title: 前i-TRUE Rails プログラマー
         img: annie.jpg
-        content: 與五倍一起學習，使我在公司開發專案時，能更快進入狀況且明顯加快開發效率，尤其在寫出可維護的程式碼上，節省不少自我摸索的時間。另外，五倍強大的人脈，讓我認識許多業界專家，發掘專案常見問題，開發上的實務技巧，以及如何團隊協作。如果想培養出企業所需的即戰力，我相信與五倍一起學習會是一個很棒的選擇。
+        content: 5xRubyと一緒に学習したことによって、会社で開発するとき順調に状況を把握し、開発スピートも早くなった。保守性高いのコードを書くことにも模索する時間もだいぶ減りました。しかも、5xRuby幅広い人脈のおかげで、いろんな業界で活躍する方々と交流の機会があって、システム開発でよくある問題、実戦スキルとかもよく学んだことができました。もし即戦力がほしいなら、5xRubyと一緒に学習することは良いチョイスだと思います。
       - name: Okay
-        title: 五倍紅寶石 iOS 工程師
+        title: 5xRuby iOS プログラマー
         img: okay.jpg
-        content: 2015 年從零開始接觸程式語言，在我的程式生涯開端很幸運地遇見了五倍紅寶石，講師在一字一鍵的教學中，從基礎觀念由淺入深到實戰經驗，架構清晰邏輯清楚，課後也非常鼓勵學員到礦坑解除各種技術障、參加社群活動，交流分享毫不藏私。 五倍紅寶石正派經營、用心實在、技術一流，是學習程式語言的首選無誤 <3<3<3
+        content: 2015 年ゼロからコーディングを勉強して、プログラマーの道の始まりで運良く5xRubyと出会いました。講師たちは細かくな講義で基礎観念から実戦経験まで、わかりやすく解説してくれました。レッスンが終わったあとも5xRubyのオフィスでプログラミング交流会とかの参加にも励まして、隠すことなく経験をシェアしてくれました。5xRubyはまともで、心を込めて、優れた技量の持ち主です、プログラミングを学んだら5xRubyで間違いなく <3<3<3
       - name: 李昱陞
-        title: 五倍紅寶石 Rails 工程師
+        title: 5xRuby Rails プログラマー
         img: bill.jpg
-        content: 身為一個菜鳥工程師，我認為踏入程式設計師的修行之路是永無止盡的，要學的東西並非短短幾個月、幾年可以通通學完，需要的是持續的自我學習。去年有幸在五倍紅寶石成為龍哥的學生，與一般你所認知的進修課程不同，因為老師本身平時就是以他所教授的東西為工作，你可以很紮實的從讓程式動起來、到了解背後的運作，並且直接得知新手常犯的錯誤、工作上應該要留意的細節，而不是等到實作後才自己陷入無止盡地踩雷地獄。<br><br>更重要的是，除了讓你具備實戰的能力，講師們會仔細告訴你程式背後的設計原理跟哲學，讓你不只會運用、更知道什麼時候適合用、該怎麼用；同時老師也會在課堂中實際帶大家解決問題、查閱手冊、培養諸如寫測試等工作應該具備的好習慣，讓你在實際在遇到問題時有自己去解決問題、自我成長的能力。
+        content: 新米プログラマーとして、プログラミングは終わりなき勉強する旅だと思います。わずかの数ヶ月、数年間はすべてを学ぶ尽くすことは不可能だ、いるのは学び続ける決心です。去年ありがたくEddieさんの学生になって、普通のレッスンとは違い、先生がいつも職場で使っている技を教えてくれて、自分が確実にシステムを構築できて、コードどうやって動くのもわかって、しかも初心者にありがちなミスのも知りました。<br><br>最も重要なのは、実戦スキルだけではなく、講師たちは細かくコードデザインする時の原理と哲学を解説してくれます、学員たちは使えることはもちろん、どんな時はどんなコードを使うのも応用できました。そして先生はクラスで実際にあった問題も解決方法を教えて、テスティングコードを書くとかいい習慣のも身につけます。それは実際に問題があった時、自力で解決する能力も高めます。
     qnas:
-      - q: 為什麼要由企業面試可能人選?
-        a: 每個企業的文化以及氣場不同，即使技術很厲害的開發者也不一定跟企業合得來，我們建議由企業先行面試「合得來」的人再來進行訓練。
-      - q: 費用怎麼算?
-        a: 對企業，我們會收取 15 ~ 20% 年薪做為服務費；對受訓的學員，我們會先收取一個的月薪，待到職滿試用期後可退回半個月的月薪。
-      - q: 保證就業嗎?
-        a: 是的，因為我們是先跟企業簽定合約才會開始進行，除非企業因故中止合約，否則可以視為保證就業。
-      - q: 6 ~ 8 週就有辦法達到企業的需求嗎?
-        a: 如果是一週三天以上密集的訓練加上實際專案的磨練，只要不要太混，在 6 ~ 8 週應該可以練到可以用的程度沒問題。
+      - q: どうして企業から面接しなければならないですか。
+        a: 企業それぞれの文化とかオーラとかは違うがあるので、トップクラスのプログラマーでも企業と合うことに限らないため、企業が適性よく方を選んてからトレーニングするほうがいいと思います。
+      - q: コストはいくらですか。
+        a: 企業に対しては年収の 15 ~ 20% がトレーニング料金になります。学員に対しては先に一ヶ月の月収をいただいて、就職決定したら半月分の給料を返金します。
+      - q: 就職率100パーセントですか。
+        a: はい、そうです。先に企業と契約してからトレーニングを始めるので、企業が契約を中止する場合以外、就職率100パーセントです。
+      - q: 6 ~ 8 週間でプログラミングの仕事ができるですか。
+        a: もし週間３日以上密集な訓練と実際にプロジェクトを参加し、サボっていなかったら 6 ~ 8 週ぐらい実際にシステム開発する能力を持つのは可能です。
   ceo: &ceo
     name: Eddie Kao
     title: Appraiser
-    about: 「希望有天可以寫程式來改變世界!」
+    about: 「いつかプログラミングで世界を変える!」
     avatar: eddiekao2
     facebook: https://www.facebook.com/eddiekao
     twitter: https://twitter.com/eddiekao
@@ -275,22 +275,22 @@ ja:
     index:
       main_features:
         - img: feature-list-img1
-          title: Courses
+          title: 役に立つ実戦講座
           description:
-            - From Ruby, Railsk, Git to deployment,
-            - we have experts teaching these in either basic and advanced level,
-            - making you get on board eazily!
+            - 業界の経験を生かし
+            - Ruby/Rails、Git、システム構築などの
+            - ブートキャンプと実戦講座常に開催！
         - img: feature-list-img2
-          title: Case outsourcing / Technical consulting
+          title: 開発、アドバイス
           description:
-            - Providing professional and technical advice and support for
-            - Ruby, Rails, iOS, system design and even deployment.
+            - Ruby、RailsでWEBサイト、アプリ、
+            - システム開発など、あらゆる案件に対応可能です、お気軽にご相談ください
         - img: feature-list-img3
-          title: Employee Training Plans
+          title: 企業内トレーニング
           description:
-            - Helping enterprise making their existing
-            - human resource into Ruby/Rails teams
-            - No more recruit is required!
+            - あなたの会社の開発チームへ
+            - プログラミングトレーニングを提供し
+            - Ruby/Rails開発チームを構築できるようにします
       testimonials:
         - name: Victor Lam
           title: "GoGoVan プロダクトマネージャー兼フルスタックエンジニア"
