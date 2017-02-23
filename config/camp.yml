@@ -1,0 +1,31 @@
+title: 2017年度 第一期 ( 3月～5月班 )
+begin_date: '2017/3/10'
+end_date: '2017/3/30'
+top_count_down: &count_down
+  available:
+    sentence: 距離第一堂課程報名截止只剩不到%{days_before_begining}天！
+    button:
+      text: 名額有限，馬上報名！
+      href: '#'
+  begun:
+    sentence: 距離最後一堂課程報名截止只剩不到%{days_before_ending}天！
+    button:
+      text: 名額有限，馬上報名！
+      href: '#'
+  ended:
+    sentence: 喔吶，錯過課程時間了嗎？
+    #button:
+      #text: 點我訂閱開課消息
+      #href: '#'
+bottom_past_info:
+  <<: *count_down
+
+lessons:
+  - name_prefix: Lesson A. 
+    course_permalink: bootstrap-201601
+    time_description: 3/11(六), 19(日), 25 (六) 09:30 - 17:30
+sales:
+  sentence: 只要報名 A.B.C 任一課程，我們就免費贈送技術圈最夯的 Lesson D. 版本控制 Git 課程(價值3000元！)<br>A.B.C不同課程合報還有更多優惠喔！
+  button:
+    text: 馬上報名獲取優惠
+    href: '#'

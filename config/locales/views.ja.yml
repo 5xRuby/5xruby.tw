@@ -90,6 +90,9 @@ ja:
         a_label: A：
       interested: Are you interested in?
       contact_us: Contact us
+    camp:
+      location_label: 'Location:'
+      sale_title: Good news!
 
   devise:
     sessions:

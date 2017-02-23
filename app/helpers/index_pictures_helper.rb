@@ -5,7 +5,7 @@ module IndexPicturesHelper
     srcset_hash = index_pic.srcset lang
     srcset = srcset_hash.map do |size, src|
       "#{src.url} #{size}"
-    end.join(',')
+    end.join(' , ')
     src = index_pic.src(lang)
     image_tag src, {alt: index_pic.alt, srcset: srcset}.merge(options) if src.present?
   end

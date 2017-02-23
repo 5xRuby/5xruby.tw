@@ -90,6 +90,9 @@ zh-TW:
         a_label: A：
       interested: 對我們的代訓計畫有興趣嗎？
       contact_us: 歡迎與我們聯繫
+    camp:
+      location_label: '上課地點：'
+      sale_title: Good news!
 
   devise:
     sessions:

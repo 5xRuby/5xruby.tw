@@ -16,4 +16,7 @@ class PagesController < ApplicationController
   def training
     @showcases = Showcase.where(category: :training).first(3)
   end
+
+  def camp
+  end
 end

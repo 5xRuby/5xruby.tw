@@ -322,28 +322,31 @@ ja:
           content: "私は、本当にCarolとEddieと一緒に学べたことを光栄に思います。Carolは、自己規律があり、熱心です。Eddieは、問題解決能力に優れており、本当に責任感があります。5xRubyの他のパートナーもこの分野のエキスパートです。このチームは最高です！"
     lectures_main_banner:
       folder: lectures-main-banner/ja
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     about_main_banner:
       folder: about-main-banner/ja
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     contact_main_banner:
       folder: contact-main-banner/ja
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     qna_main_banner:
       folder: qna-main-banner/ja
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     member_main_banner:
       folder: member-main-banner/ja
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     training_main_banner:
       folder: training-main-banner/ja
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     news_main_banner:
       folder: news-main-banner/ja
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     projects_main_banner:
       folder: projects-main-banner/ja
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+    camp_main_banner:
+      folder: camp-main-banner/ja
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     about_services:
       - name: 技術コンサルティング
         img: consult.png
@@ -354,6 +357,20 @@ ja:
       - name: トレーニング
         img: edu.png
         content: もし、あなたがプログラミング初心者もしくは、他のプログラミング言語の経験者でも、我々は、入門編から応用編のレクチャーを提供することが可能であり、あなたをRuby/Railsのコアへ効率的に導くことができるでしょう。
+    camp:
+      features:
+        - img: feature-list-img1.png
+          title: 第一線經驗直授
+          description: 五倍的師資都是業界資深前輩<br>讓你除了懂得理論<br>更學會學校不教的業界祕笈
+        - img: feature-list-img2.png
+          title: 實戰用豐富內容
+          description: 課程內容絕不灌水不教速成<br>除了打好扎實基礎<br>也知道如何在職場上運用自如
+        - img: feature-list-img3.png
+          title: 彈性搭配課程
+          description: 四種系列課程<br>讓你依自身狀況自由搭配<br>避免重複學習已經學會的東西
+        - img: feature-list-img3.png
+          title: 職涯輔導社群交流
+          description: 五倍致力於Ruby社群經營多年<br>不管想求職轉職想創業<br>都可以提供你最專業的建議
     description: 5xRubyは、台湾Rubyコミュニティのコアメンバーが創設しましたRuby及びRuby on Railsの技術コンサルティングとトレーニング事業を行う会社です。
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'
