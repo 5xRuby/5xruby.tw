@@ -5,6 +5,7 @@ en:
   courses:
     index:
       all_courses: All lectures
+      speakers: Speakers
     show:
       hours_label: 'Hours:'
       outdated: Lecture has started
@@ -42,9 +43,6 @@ en:
       members: Members of our team
     cooperation_list:
       cooperations: Cooperations
-  speakers:
-    sliders:
-      title: Speakers
   videos:
     index:
       title: Videos
@@ -90,6 +88,24 @@ en:
         a_label: A：
       interested: Are you interested in?
       contact_us: Contact us
+    camp:
+      location_label: 'Location:'
+      sale_title: Good news!
+      time_label: 'Time: '
+      what_will_learn_label: 'In these %{hours} hours, you will learn:'
+      view_outline: '...outline'
+      chapter_title: "Lesson %{nth}:"
+      testimonials: 聽聽大家怎麼說
+      qna:
+        title: Q & A
+        q_label: Q：
+        a_label: A：
+      more_question:
+        - 若以上Q&A無法解答您的疑問，歡迎您透過
+        - 與我們聯繫，或是直接來電洽詢。
+      contact_link: 聯絡表單
+      payment_note: 'Payment:'
+      note: 'Notes:'
 
   devise:
     sessions:

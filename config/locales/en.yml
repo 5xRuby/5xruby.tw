@@ -323,28 +323,45 @@ en:
           content: "I was very honered to have worked with Carol and Eddie. I admire Carol's self-discipline and aspiration. I praise Eddie for his exellence in crisis handling and sense of responsibility. The other partners in 5xRuby are also experts in this field. I beleive this is a great team!"
     lectures_main_banner:
       folder: lectures-main-banner/en
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     about_main_banner:
       folder: about-main-banner/en
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     contact_main_banner:
       folder: contact-main-banner/en
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     qna_main_banner:
       folder: qna-main-banner/en
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     member_main_banner:
       folder: member-main-banner/en
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     training_main_banner:
       folder: training-main-banner/en
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     news_main_banner:
       folder: news-main-banner/en
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
     projects_main_banner:
       folder: projects-main-banner/en
-      sizes: ["400w.png", "600w.png", "1280w.png"]
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+    camp_main_banner:
+      folder: camp-main-banner/en
+      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+    camp:
+      features:
+        - img: feature-list-img1.png
+          title: 第一線經驗直授
+          description: 五倍的師資都是業界資深前輩<br>讓你除了懂得理論<br>更學會學校不教的業界祕笈
+        - img: feature-list-img2.png
+          title: 實戰用豐富內容
+          description: 課程內容絕不灌水不教速成<br>除了打好扎實基礎<br>也知道如何在職場上運用自如
+        - img: feature-list-img3.png
+          title: 彈性搭配課程
+          description: 四種系列課程<br>讓你依自身狀況自由搭配<br>避免重複學習已經學會的東西
+        - img: feature-list-img3.png
+          title: 職涯輔導社群交流
+          description: 五倍致力於Ruby社群經營多年<br>不管想求職轉職想創業<br>都可以提供你最專業的建議
     about_services:
       - name: Technical Consulting
         img: consult.png

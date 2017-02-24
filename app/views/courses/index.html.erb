@@ -45,5 +45,31 @@
 </div>
 <!-- End Lectures -->
 
-<%= render partial: 'speakers/sliders', locals: {speakers: @speakers} %>
+<div class="feedback-section bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
+        <h3 class="text-center both-spacing-lg"><span><%= t('.speakers') %></span></h3>
+        <%= render partial: 'shared/carousel', locals: {
+          items: @speakers.map do |s| 
+            {
+              type: 'speaker',
+              avatar: s.avatar.thumb,
+              name: s.name,
+              blog_url: s.blog_url,
+              facebook_url: s.facebook_url,
+              twitter_url: s.twitter_url,
+              google_url: s.google_url,
+              github_url: nil,
+              website_url: nil,
+              role_text: s.role_text,
+              summary: tr_and_convert_newline2br(s, :summary)
+            }
+          end,
+          item_partial: 'shared/member'
+        } %>
+      </div>
+    </div>
+  </div>
+</div>
 

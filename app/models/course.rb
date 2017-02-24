@@ -87,12 +87,20 @@ class Course < ActiveRecord::Base
     stages.map(&:date).max
   end
 
+  def available?
+    nearest_stage_date > Time.now
+  end
+
   def outdated?
-    nearest_stage_date < Time.now
+    not available?
+  end
+
+  def remaining_days
+    nearest_stage_date - Date.today
   end
 
   def about_to_begin?
-    (Date.today - nearest_stage_date) < ABOUT_TO_BEGIN
+    remaining_days < ABOUT_TO_BEGIN and not outdated?
   end
 
   def speakers_name

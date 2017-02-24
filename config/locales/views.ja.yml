@@ -5,6 +5,7 @@ ja:
   courses:
     index:
       all_courses: 全ての講座
+      speakers: Speakers
     show:
       hours_label: '時間:'
       outdated: Lecture has started
@@ -42,9 +43,6 @@ ja:
       members: 社員一覧
     cooperation_list:
       cooperations: 協力
-  speakers:
-    sliders:
-      title: 講師
   videos:
     index:
       title: 動画
@@ -90,6 +88,24 @@ ja:
         a_label: A：
       interested: 興味ある方ぜひ！
       contact_us: お問い合わせ
+    camp:
+      location_label: 'Location:'
+      sale_title: Good news!
+      time_label: 'Time: '
+      what_will_learn_label: 'In these %{hours} hours, you will learn:'
+      view_outline: '...outline'
+      chapter_title: "レッスン %{nth}:"
+      testimonials: 聽聽大家怎麼說
+      qna:
+        title: Q & A
+        q_label: Q：
+        a_label: A：
+      more_question:
+        - 若以上Q&A無法解答您的疑問，歡迎您透過
+        - 與我們聯繫，或是直接來電洽詢。
+      contact_link: 聯絡表單
+      payment_note: 'Payment:'
+      note: 'Notes:'
 
   devise:
     sessions:

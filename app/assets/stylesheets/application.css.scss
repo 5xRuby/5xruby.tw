@@ -3,6 +3,8 @@
 *= require swiper
 *= require slick-theme
 *= require highlightjs/tomorrow-night-bright
+*= require vex.css 
+*= require vex-theme-plain.css
 *= require homepage
 *= require additional
 *= require nav
@@ -81,4 +83,8 @@ a.button_big:hover, .button_big:hover{
 	text-transform:uppercase;
 	margin-bottom:20px;
 	-webkit-font-smoothing: antialiased;
+}
+
+.vex-dialog-content {
+  display: none;
 }

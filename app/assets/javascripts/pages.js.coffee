@@ -9,18 +9,26 @@ $ () ->
   $("a").focus ->
     $(this).blur()
 
+  scroll_window = (target, onAfter = (->), duration = 500) ->
+    $(window).scrollTo(target, duration, {interrupt: true, onAfter: onAfter})
+
+  $('.scrollup').click ->
+    scroll_window 0
+
   $(window).scroll ->
     if ($(this).scrollTop() > 100)
       $('.scrollup').fadeIn()
     else
       $('.scrollup').fadeOut()
 
-    $('.scrollup').click ->
-      $("html, body").animate(
-        scrollTop: 0
-        , 600)
+  $('a').click (e) ->
+    anchor = $(this).attr('href')
+    if anchor and anchor.startsWith("#")
+      if $(anchor).length
+        scroll_window $(anchor), ->
+          location.hash = anchor
+      e.preventDefault
       false
-
 
   if $('.swiper-container').length
     swiper = new Swiper('.swiper-container',
@@ -40,3 +48,12 @@ $ () ->
       ).slideToggle()
     )
   )
+
+  $('.vex-dialog-opener').each (i, opener) ->
+    $(opener).click ->
+      vex.dialog.alert
+        message: $($(this).data('target')).html()
+      setTimeout ->
+        $('.vex').scrollTo(0, 600, {interrupt: true})
+      , 300
+

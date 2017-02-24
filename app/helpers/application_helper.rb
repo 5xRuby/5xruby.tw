@@ -83,11 +83,11 @@ module ApplicationHelper
     content_tag :li, locale_link unless locale == I18n.locale
   end
 
-  def image_set_tag(src_folder, sizes, options = {})
-    srcset = sizes.map do |s|
-      "#{path_to_image "#{src_folder}/#{s}"} #{s}"
-    end.join(', ')
-    image_tag "#{src_folder}/#{sizes.last}", {alt: src_folder.split('/').last, srcset: srcset}.merge(options)
+  def image_set_tag(src_folder, size_and_exts, options = {})
+    srcset = size_and_exts.map do |s|
+      "#{path_to_image "#{src_folder}/#{s.join('')}"} #{s[0]}"
+    end.join(' , ')
+    image_tag "#{src_folder}/#{size_and_exts.last.join('')}", {alt: src_folder.split('/').last, srcset: srcset}.merge(options)
   end
 
   def public_path(file_path)
