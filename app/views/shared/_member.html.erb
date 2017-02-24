@@ -1,48 +1,49 @@
 
 <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-  <div class="<%= type ||= 'member' %>-wrap text-center">
-    <div class="<%= type %>-img-wrap center-block top-spacing-sm bottom-spacing-sm">
-      <%= image_tag avatar, alt: name, class: 'speaker-img' %>
-      <% if blog_url.present? %>
-        <%= link_to blog_url, class: "filter", target: :_blank do %>
+  <div class="<%= item[:type] ||= 'member' %>-wrap text-center">
+    <div class="<%= item[:type] %>-img-wrap center-block top-spacing-sm bottom-spacing-sm">
+      <%= image_tag item[:avatar], alt: item[:name], class: "#{item[:type]}-img" %>
+      <% if item[:blog_url].present? %>
+        <%= link_to item[:blog_url], class: "filter", target: :_blank do %>
           <span class="tag">BLOG</span>
         <% end %>
       <% end %>
     </div>
     <div class="social-link">
-      <% if facebook_url.present? %>
-        <%= link_to facebook_url, target: :_blank do %>
+      <% if item[:facebook_url].present? %>
+        <%= link_to item[:facebook_url], target: :_blank do %>
           <i class="fa fa-facebook" aria-hidden="true"></i>
         <% end %>
       <% end %>
-      <% if twitter_url.present? %>
-        <%= link_to twitter_url, target: :_blank do %>
+      <% if item[:twitter_url].present? %>
+        <%= link_to item[:twitter_url], target: :_blank do %>
           <i class="fa fa-twitter" aria-hidden="true"></i>
         <% end %>
       <% end %>
-      <% if google_url.present? %>
-        <%= link_to google_url, target: :_blank do %>
+      <% if item[:google_url].present? %>
+        <%= link_to item[:google_url], target: :_blank do %>
           <i class="fa fa-google-plus" aria-hidden="true"></i>
         <% end %>
       <% end %>
-      <% if github_url.present? %>
-        <%= link_to github_url, target: :_blank do %>
+      <% if item[:github_url].present? %>
+        <%= link_to item[:github_url], target: :_blank do %>
           <i class="fa fa-github-alt" aria-hidden="true"></i>
         <% end %>
       <% end %>
-      <% if website_url.present? %>
-        <%= link_to website_url, target: :_blank do %>
+      <% if item[:website_url].present? %>
+        <%= link_to item[:website_url], target: :_blank do %>
           <i class="fa fa-window-maximize" aria-hidden="true"></i>
         <% end %>
       <% end %>
     </div>
     <p>
-    <small class="text-grey"><%= role_text %></small>
+    <small class="text-grey"><%= item[:role_text] %></small>
     <br>
-    <strong><%= name %></strong>
+    <strong><%= item[:name] %></strong>
     </p>
     <p>
-    <small><%= raw summary %></small>
+    <small><%= raw item[:summary] %></small>
     </p>
   </div>
 </div>
+

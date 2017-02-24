@@ -65,6 +65,7 @@ gem "font-awesome-rails"
 gem "jquery-fileupload-rails"
 gem "jquery-slick-rails"
 gem "swiper-rails"
+gem 'vex_rails', '~> 0.2.0'
 
 group :development do
   gem 'web-console'

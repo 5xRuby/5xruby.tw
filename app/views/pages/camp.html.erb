@@ -7,7 +7,7 @@
 </div>
 <!-- End Main Banner -->
 
-<%= render partial: 'page/camp_count_down', locals: {configs: Camp.top_count_down} %>
+<%= render partial: 'pages/camp_count_down', locals: {configs: Camp.top_count_down} %>
 
 <!-- Start Camp Feature -->
 <div class="feature-section light-grey-bg bottom-padding-lg">
@@ -37,182 +37,72 @@
         <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= Camp.title %></span></h3>
         <div class="text-center text-grey bottom-spacing">
           <i class="fa fa-map-marker" aria-hidden="true"></i> <%= t('.location_label') %>
-          <%= link_to "#{t('company.address')} (#{t('company.name')})", t('company.gmap_url') %>
+          <%= link_to "#{t('company.address')} (#{t('company.name')})", t('company.gmap_url'), target: :_blank %>
         </div>
-        <% Camp.lessons.each do |lesson| %>
+        <% Camp.courses.each do |lesson| %>
+          <% course = lesson['record'] %>
           <!--Start Camp-->
           <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing border-grey no-padding">
-            <div class="camp-wrap" onclick="location.href='#';">
-              <div class="cover col-sm-6 col-lg-6 col-md-6 no-padding" style="background: url('https://5xruby.tw/uploads/course/image/68/thumb_5x_Daikichi_Railbb-12.jpg'); background-size: cover; background-position: center center;">
+            <div class="camp-wrap">
+              <div class="cover col-sm-6 col-lg-6 col-md-6 no-padding" style="background: url('<%= course.image.thumb %>'); background-size: cover; background-position: center center;">
                 <div class="filter">
                   <p class="text-center four-padding-lg top-spacing-lg">
-                    <span class="descri">完整扎實的 HTML ＆ 排版課程，讓你完整了解如何建構有效的網頁架構，並學習清晰的CSS運用方式，本課程從最基本的HTML開始，到HTML5標籤對SEO的助益皆會涉獵，讓你打好正確的網頁設計觀念並做到可自行完成一個網頁版面的能力。</span>
-                    <br><br><span class="btn btn-white-border">名額有限，馬上報名！</span>
+                    <span class="descri"><%= raw course.summary %></span>
+                    <br><br>
+
+                    <% btn_states = DateTime.parse(lesson['time_limit']) < Time.now ? lesson['btn_states']['outdated'] : lesson['btn_states']['opening'] %>
+                    <%= link_to btn_states['text'], btn_states['href'], class: btn_states['class'] || "btn btn-white-border" if btn_states.present? %>
                   </p>
                 </div>
               </div>
               <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
-                <h4 class="top-padding text-center">Lesson A.   深入淺出立即上手的 HTML 網頁設計</h4>
+                <h4 class="top-padding text-center"><%= lesson['name'] %></h4>
                 <div class="both-spacing-sm four-padding text-center light-grey-bg">
-                  課程時間：
-                  <br>3/11(六), 19(日), 25 (六)  09:30 - 17:30
+                  <%= t('.time_label') %>
+                  <br>
+                  <%= raw lesson['time_description'].join('<br>') %>
                 </div>
                 <div class="col-sm-5 col-lg-5 col-md-5">
                   <div class="media">
-                    <div class="media-body">
-                      <b class="media-heading">李建杭 (Amos Lee)</b>
-                      <p class="small">飛肯設計學苑講師
-                      <br>資策會講師
-                      <br>視覺設計師
-                      <br>Modern Web 研討會講者</p>
-                    </div>
+                    <% course.speakers.each do |s| %>
+                      <div class="media-body">
+                        <b class="media-heading"><%= s.name %></b>
+                        <p class="small"><%= tr_and_convert_newline2br s, :summary %></p>
+                      </div>
+                    <% end %>
                   </div>
                 </div>
                 <div class="col-sm-7 col-lg-7 col-md-7">
-                  <b>21 小時課程，您會學到：</b>
+                  <b><%= t('.what_will_learn_label', hours: course.hours) %></b>
                   <p class="small">
-                    <i class="fa fa-check text-red" aria-hidden="true"></i> 具SEO效益的網頁設計
-                    <br><i class="fa fa-check text-red" aria-hidden="true"></i> 高效的CSS選取方式
-                    <br><i class="fa fa-check text-red" aria-hidden="true"></i> 詳細扎實的CSS原理與概念
-                    <br><i class="fa fa-check text-red" aria-hidden="true"></i> CSS排版與定位技能
-                    <br><i class="fa fa-check text-red" aria-hidden="true"></i> 多樣類型的版面製作方式
-                    <br><i class="fa fa-check text-red" aria-hidden="true"></i> 專案實務的切版規劃
+                    <%= raw course.what_will_learn %>
+                  </p>
+                  <p class="pull-right small vex-dialog-opener" data-target="#camp-outline-dialog-<%= course.permalink %>">
+                    <a><%= t('.view_outline') %></a>
                   </p>
                 </div>
               </div>
             </div>
           </div>
           <!--End Camp-->
+
+          <!-- Start Dialog -->
+          <div class="vex-dialog-content" id="camp-outline-dialog-<%= course.permalink %>" title="<%= lesson['name'] %>">
+            <% course.stages.includes(:translations).each_with_index do |stage, index| %>
+              <div class="four-spacing">
+                <h4><%= t('.chapter_title', nth: index) %> <%= stage.title %></h4>
+                <%= raw stage.description %>
+                <ul class="date-time bottom-spacing-lg">
+                  <li><i class="fa fa-calendar text-grey" aria-hidden="true"></i> <%= stage.date %></li>
+                  <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= time_range stage %></li>
+                  <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= show_hours stage.hours %>h</li>
+                </ul>
+              </div>
+            <% end %>
+          </div>
+          <!-- End Dialog -->
+
         <% end %>
-        <!--Start Camp2-->
-        <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing border-grey no-padding">
-          <div class="camp-wrap" onclick="location.href='#';">
-            <div class="cover col-sm-6 col-lg-6 col-md-6 no-padding" style="background: url('https://5xruby.tw/uploads/course/image/69/thumb_5x_Javascript-O.png'); background-size: cover; background-position: center center;">
-              <div class="filter">
-                <p class="text-center four-padding-lg top-spacing-lg">
-                  <span class="descri">這門課程將透過 jQuery 這套跨瀏覽器的 JavaScript 函式庫來簡化 HTML 與 JavaScript 之間的操作，即使學員在不熟悉 JavaScript 這門程式語言時，也能打造實用的互動效果，進一步認識 JavaScript 與前端開發的眉眉角角。</span>
-                  <br><br><span class="btn btn-white-border">名額有限，馬上報名！</span>
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
-              <h4 class="top-padding text-center">Lesson B.  JavaScript & jQuery 前端開發入門實戰</h4>
-              <div class="both-spacing-sm four-padding text-center light-grey-bg">
-                課程時間：
-                <br>4/08 (六) 10:00 - 17:00, 4/12 (三) 19:00 - 22:00
-                <br>4/15 (六) 10:00 - 17:00, 4/19 (三) 19:00 - 22:00
-              </div>
-              <div class="col-sm-5 col-lg-5 col-md-5">
-                <div class="media">
-                  <div class="media-body">
-                    <b class="media-heading">許國政 (Kuro)</b>
-                    <p class="small">WebConf Taiwan 講者
-                    <br>Modern Web 研討會講者
-                    <br>JSDC 講者</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-7 col-lg-7 col-md-7">
-                <b>18 小時課程，您會學到：</b>
-                <p class="small">
-                  <i class="fa fa-check text-red" aria-hidden="true"></i> 前端開發基礎概念
-                  <br><i class="fa fa-check text-red" aria-hidden="true"></i> JavaScript 與 jQuery 程式設計
-                  <br><i class="fa fa-check text-red" aria-hidden="true"></i> 互動性的網頁應用與實作
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--End Camp2-->
-        <!--Start Camp3-->
-        <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing border-grey no-padding">
-          <div class="camp-wrap" onclick="location.href='#';">
-            <div class="cover col-sm-6 col-lg-6 col-md-6 no-padding" style="background: url('https://5xruby.tw/uploads/course/image/71/thumb_5x_Daikichi_Railbb-06.jpg'); background-size: cover; background-position: center center;">
-              <div class="filter">
-                <p class="text-center four-padding-lg top-spacing-lg">
-                  <span class="descri">完整的 Ruby & Rails 的課程。內容包括 Ruby 程式語言、親手打造並且部署一個 Rails 專案。將在短期內帶領初學者對 Rails 整體架構、設計哲學以及開發流程有基本的了解與認識。<br>本課程將使用最新版本的 Rails 5 授課。</span>
-                  <br><br><span class="btn btn-white-border">名額有限，馬上報名！</span>
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
-              <h4 class="top-padding text-center">Lesson C.  Ruby on Rails 從零開始</h4>
-              <div class="both-spacing-sm four-padding text-center light-grey-bg">
-                課程時間：
-                <br>5/03 (三) & 5/05 (五) 19:00 - 22:00, 5/07 (日) 10:00 - 17:00
-                <br>5/10 (三) & 5/12 (五) 19:00 - 22:00, 5/14 (日) 10:00 - 17:00
-                <br>5/17 (三) & 5/19 (五) 19:00 - 22:00, 5/21 (日) 10:00 - 17:00
-              </div>
-              <div class="col-sm-5 col-lg-5 col-md-5">
-                <div class="media">
-                  <div class="media-body">
-                    <b class="media-heading">高見龍 (Eddie Kao)</b>
-                    <p class="small">RubyConf Taiwan 2012 講者
-                    <br>RubyKaigi 2013 講者
-                    <br>Rails Girls Taipei 創辦人
-                    <br>OpenFoundry 講師
-                    <br>Institute for Information Industry 講師
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-7 col-lg-7 col-md-7">
-                <b>36 小時課程，您會學到：</b>
-                <p class="small">
-                  <i class="fa fa-check text-red" aria-hidden="true"></i> Ruby 程式設計
-                  <br><i class="fa fa-check text-red" aria-hidden="true"></i> 建置及部署 Rails 專案
-                  <br><i class="fa fa-check text-red" aria-hidden="true"></i> Rails 的基本架構與哲學
-                  <br><i class="fa fa-check text-red" aria-hidden="true"></i> MVC 運作原理
-                  <br><i class="fa fa-check text-red" aria-hidden="true"></i> Rails View 樣板幫手
-                  <br><i class="fa fa-check text-red" aria-hidden="true"></i> CSS 與 JS 處理 - Assets Pipeline
-                  <br><i class="fa fa-check text-red" aria-hidden="true"></i> ORM 與關聯式資料庫
-                  <br><i class="fa fa-check text-red" aria-hidden="true"></i> 會員、購物車系統及金流串接
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--End Camp3-->
-        <!--Start Camp4-->
-        <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing border-grey no-padding">
-          <div class="camp-wrap" onclick="location.href='#';">
-            <div class="cover col-sm-6 col-lg-6 col-md-6 no-padding" style="background: url('https://5xruby.tw/uploads/course/image/70/thumb_5x_GIT-04.png'); background-size: cover; background-position: center center;">
-              <div class="filter">
-                <p class="text-center four-padding-lg top-spacing-lg">
-                  <span class="descri">Git 是目前最流行的版本控制工具。本課程除介紹 Git 的基本原理及操作外，並將模擬各種在開發過程常遇到的狀況，引導大家快速上手。</span>
-                  <br><br><span class="btn btn-white-border">名額有限，馬上報名！</span>
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
-              <h4 class="top-padding text-center">Lesson D.  人生不能重來，但 GIT 可以</h4>
-              <div class="both-spacing-sm four-padding text-center light-grey-bg">
-                課程時間：
-                <br>4/22 (六) 10:00 - 17:00
-              </div>
-              <div class="col-sm-5 col-lg-5 col-md-5">
-                <div class="media">
-                  <div class="media-body">
-                    <b class="media-heading">高見龍 (Eddie Kao)</b>
-                    <p class="small">RubyConf Taiwan 2012 講者
-                    <br>RubyKaigi 2013 講者
-                    <br>Rails Girls Taipei 創辦人
-                    <br>OpenFoundry 講師
-                    <br>Institute for Information Industry 講師
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-7 col-lg-7 col-md-7">
-                <b>6 小時課程，您會學到：</b>
-                <p class="small">
-                  <i class="fa fa-check text-red" aria-hidden="true"></i> Git 終端機指令操作
-                  <br><i class="fa fa-check text-red" aria-hidden="true"></i> 各種常見情境該使用什麼指令
-                  <br><i class="fa fa-check text-red" aria-hidden="true"></i> 團隊如何使用 Git 共同開發
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--End Camp4-->
       </div>
     </div>
   </div>
@@ -225,7 +115,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
-          <h3 class="text-center top-spacing"><%= image_tag 'gift.png' %> <span><%= t('camp.sale_title') %></span></h3>
+          <h3 class="text-center top-spacing"><%= image_tag 'gift.png' %> <span><%= t('.sale_title') %></span></h3>
           <p class="line-height-lg"><%= raw sales_conf['sentence'] %></p>
           <%= link_to sales_conf['button']['text'], sales_conf['button']['href'], class: "btn btn-white-border" if sales_conf['button'].present? %>
         </div>
@@ -240,157 +130,11 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
-        <h3 class="text-center top-spacing-lg bottom-spacing"><span>聽聽大家怎麼說</span></h3>
-        <div id="feedback-carousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#feedback-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#feedback-carousel" data-slide-to="1"></li>
-            <li data-target="#feedback-carousel" data-slide-to="2"></li>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <!--Start Feedback-1-->
-            <div class="item active">
-              <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-                <div class="speaker-wrap text-center">
-                  <div class="speaker-img-wrap center-block top-spacing-sm bottom-spacing-sm">
-                    <img class="speaker-img" src="https://5xruby.tw/uploads/redactor_image/image/80/thumb_annie.jpg">
-                  </div>
-                  <p>
-                    <small class="text-grey">前艾思網絡 Rails 工程師</small>
-                    <br><strong>Annie</strong>
-                  </p>
-                  <p class="rl-padding">
-                    <small>與五倍一起學習，使我在公司開發專案時，能更快進入狀況且明顯加快開發效率，尤其在寫出可維護的程式碼上，節省不少自我摸索的時間。另外，五倍強大的人脈，讓我認識許多業界專家，發掘專案常見問題，開發上的實務技巧，以及如何團隊協作。如果想培養出企業所需的即戰力，我相信與五倍一起學習會是一個很棒的選擇。</small>
-                  </p>
-                </div>
-              </div>
-              <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-                <div class="speaker-wrap text-center">
-                  <div class="speaker-img-wrap center-block top-spacing-sm bottom-spacing-sm">
-                    <img class="speaker-img" src="https://5xruby.tw/uploads/redactor_image/image/81/thumb_okay.jpg">
-                  </div>
-                  <p>
-                    <small class="text-grey">五倍紅寶石 iOS 工程師</small>
-                    <br><strong>Okay</strong>
-                  </p>
-                  <p class="rl-padding">
-                    <small>2015 年從零開始接觸程式語言，在我的程式生涯開端很幸運地遇見了五倍紅寶石，講師在一字一鍵的教學中，從基礎觀念由淺入深到實戰經驗，架構清晰邏輯清楚，課後也非常鼓勵學員到礦坑解除各種技術障、參加社群活動，交流分享毫不藏私。 五倍紅寶石正派經營、用心實在、技術一流，是學習程式語言的首選無誤 <3<3<3 </small>
-                  </p>
-                </div>
-              </div>
-              <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-                <div class="speaker-wrap text-center">
-                  <div class="speaker-img-wrap center-block top-spacing-sm bottom-spacing-sm">
-                    <img class="speaker-img" src="https://5xruby.tw/uploads/redactor_image/image/82/thumb_bill.jpg">
-                  </div>
-                  <p>
-                    <small class="text-grey">五倍紅寶石 Rails 工程師</small>
-                    <br><strong>李昱陞</strong>
-                  </p>
-                  <p class="rl-padding">
-                    <small>去年有幸在五倍紅寶石成為龍哥的學生，與一般你所認知的進修課程不同，因為老師本身平時就是以他所教授的東西為工作，你可以很紮實的從讓程式動起來、到了解背後的運作，並且直接得知新手常犯的錯誤、工作上應該要留意的細節，而不是等到實作後才自己陷入無止盡地踩雷地獄。</small>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!--End Feedback-1-->
-            <!--Start Feedback-2-->
-            <div class="item">
-              <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-                <div class="speaker-wrap text-center">
-                  <div class="speaker-img-wrap center-block top-spacing-sm bottom-spacing-sm">
-                    <img class="speaker-img" src="https://5xruby.tw/img/testimonial_victor.jpg">
-                  </div>
-                  <p>
-                    <small class="text-grey">GoGoVan 產品經理，Full Stack Developer.</small>
-                    <br><strong>Victor Lam</strong>
-                  </p>
-                  <p class="rl-padding">
-                    <small>Programmer 最有價值的是經驗值，「五倍紅寶石」的導師都是社群內數一數二的資深 Rubyist，由他們來帶領學員一探 Ruby 世界的神奇之處，實在是最佳選擇。</small>
-                  </p>
-                </div>
-              </div>
-              <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-                <div class="speaker-wrap text-center">
-                  <div class="speaker-img-wrap center-block top-spacing-sm bottom-spacing-sm">
-                    <img class="speaker-img" src="https://5xruby.tw/img/testimonial_jason.jpg">
-                  </div>
-                  <p>
-                    <small class="text-grey">founder of The Big Questions & TEDxTaipei</small>
-                    <br><strong>Jason Hsu</strong>
-                  </p>
-                  <p class="rl-padding">
-                    <small>Eddie and his team are of the most dedicated Ruby evangelists I have ever come across. With their passion and professionalism, Ruby learners will leapfrog in their progress.</small>
-                  </p>
-                </div>
-              </div>
-              <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-                <div class="speaker-wrap text-center">
-                  <div class="speaker-img-wrap center-block top-spacing-sm bottom-spacing-sm">
-                    <img class="speaker-img" src="https://5xruby.tw/img/testimonial_felix.jpg">
-                  </div>
-                  <p>
-                    <small class="text-grey">dappei.com 「搭配」網站創辦人</small>
-                    <br><strong>Felix Lin</strong>
-                  </p>
-                  <p class="rl-padding">
-                    <small>還在尋找專業的 Ruby/Rails 師資嗎？別懷疑了，台灣最頂尖的 Rubyist 盡在「五倍紅寶石」！ </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!--End Feedback-2-->
-            <!--Start Feedback-3-->
-            <div class="item">
-              <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-                <div class="speaker-wrap text-center">
-                  <div class="speaker-img-wrap center-block top-spacing-sm bottom-spacing-sm">
-                    <img class="speaker-img" src="https://5xruby.tw/img/test-monial-Hana.jpg">
-                  </div>
-                  <p>
-                    <small class="text-grey">Co-Founder and CEO of BountyHunter</small>
-                    <br><strong>花水木 Hana Chang</strong>
-                  </p>
-                  <p class="rl-padding">
-                    <small>慕凡和龍哥是業界數一數二的 Ruby 大師，他們不光是底子深厚，也很懂得引導、訓練學習路上遇到挫折的 Ruby/Rails 學子。很慶幸有他們的協助讓我進入紅寶石的美妙世界。</small>
-                  </p>
-                </div>
-              </div>
-              <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-                <div class="speaker-wrap text-center">
-                  <div class="speaker-img-wrap center-block top-spacing-sm bottom-spacing-sm">
-                    <img class="speaker-img" src="https://5xruby.tw/img/testimonial_johnsie.jpg">
-                  </div>
-                  <p>
-                    <small class="text-grey">Accuvally Inc.共同創辦人暨營運長</small>
-                    <br><strong>John Sie</strong>
-                  </p>
-                  <p class="rl-padding">
-                    <small>選擇程式語言很重要，但選擇優秀的導師更重要！能跟擁有多年 Ruby/Rails 實戰經驗、活躍於社群的頂尖 Rubyist 學習，將一窺程式開發殿堂之藝術！我堅信：專業事讓專業的來，而專業的「五倍紅寶石」是寶藏，就等大家來挖掘。</small>
-                  </p>
-                </div>
-              </div>
-              <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-                <div class="speaker-wrap text-center">
-                  <div class="speaker-img-wrap center-block top-spacing-sm bottom-spacing-sm">
-                    <img class="speaker-img" src="https://5xruby.tw/img/testimonial_benlin.jpg">
-                  </div>
-                  <p>
-                    <small class="text-grey">CEO@POP</small>
-                    <br><strong>Ben Lin</strong>
-                  </p>
-                  <p class="rl-padding">
-                    <small>「五倍紅寶石」的導師們都是業界經驗豐富的實戰高手，提供的講座及咨詢絕對能讓你大幅省去自行摸索的時間。</small>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!--End Feedback-3-->
-          </div>
-        </div>
+        <h3 class="text-center top-spacing-lg bottom-spacing"><span><%= t('.testimonials') %></span></h3>
+        <%= render partial: 'shared/carousel', locals: {
+          items: Camp.testimonials,
+          item_partial: 'pages/camp_testimonial'
+        } %>
       </div>
     </div>
   </div>
@@ -401,29 +145,21 @@
 <div class="camp-qna light-grey-bg bottom-padding-lg">
   <div class="container">
     <div class="row">
-      <h3 class="text-center top-spacing-lg"><span>Q &amp; A</span></h3>
-      <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
-        <div class="line-height-lg">
-          <h4 class="top-spacing">Q：初次上課，我該如何選擇課程？</h4>
-          <p>A：</p>
-          <h4 class="top-spacing">Q：應具備怎樣的能力/程度才可以上課？</h4>
-          <p>A：</p>
-          <h4 class="top-spacing">Q：上課需自備的器材？</h4>
-          <p>A：</p>
+      <h3 class="text-center top-spacing-lg"><span><%= t('.qna.title') %></span></h3>
+      <% base_index = 0; 2.times do %>
+        <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
+          <div class="line-height-lg">
+            <% base_index = (Camp.qnas.count/2).times do |i| %>
+              <h4 class="top-spacing"><%= "#{t('.qna.q_label')}#{Camp.qnas[base_index + i][:q]}" %></h4>
+              <p><%= "#{t('.qna.a_label')}#{Camp.qnas[base_index + i][:a]}" %></p>
+            <% end %>
+          </div>
         </div>
-      </div>
-      <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
-        <div class="line-height-lg">
-          <h4 class="top-spacing">Q：衝刺班結束之後就可以用 Ruby / Rails 來開發網站，或是一定找得到工作嗎？</h4>
-          <p>A：我們會提供最好的實戰技巧甚至協同合作所需要的各種方法工具相關的訓練，完成階段性講座一定能夠獨力開發自己的 Web 專案，累積實戰經驗與五倍紅寶石的推薦也將會為您帶來為數不少的極佳工作機會。</p>
-          <h4 class="top-spacing">Q：目前衝刺班地點只有在台北市嗎？</h4>
-          <p>A：初期將僅台北市為主，但我們希望在不久的將來在各縣市都可以有機會開講。</p>
-          <h4 class="top-spacing">Q： 我報名參加衝刺班了，但參加之後覺得跟我期待的內容不一樣，可以退錢嗎？</h4>
-          <p>A：當然可以的。如果您聽了課程(3個小時)之後覺得不滿意或是跟您預期的內容有所落差，您可透過直接寫信至我們的客服信箱，並希望可以告知我們做不好的地方，我們會替您辦理退費事宜。</p>
-        </div>
-      </div>
+      <% end %>
       <div class="col-sm-12 col-lg-12 col-md-12 text-center both-spacing">
-        若以上Q&A無法解答您的疑問，歡迎您透過 <a href="contact.html" target="_blank">聯絡表單</a> 與我們聯繫，或是直接來電洽詢。
+        <%= t('.more_question')[0] %>
+        <%= link_to(t('.contact_link'), contacts_path, target: :_blank) %>
+        <%= t('.more_question')[1] %>
       </div>
     </div>
   </div>
@@ -431,42 +167,11 @@
 <!-- End Camp Q&A -->
 
 <!-- Start Tickets -->
-<div class="tickets bottom-padding-lg">
+<div id="tickets" class="tickets bottom-padding-lg">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-        <h3 class="top-spacing-lg left-spacing-sm"><span>購票資訊</span></h3>
-        <div class="col-sm-2 col-lg-2 col-md-2 both-spacing-sm">
-          <small class="text-grey">票種</small>
-          <br>功力加乘票
-        </div>
-        <div class="col-sm-6 col-lg-6 col-md-6 both-spacing-sm">
-          <small class="text-grey">售票時間</small>
-          <br>2016-07-26 (Tue) 12:20 ~ 2016-08-24 (Wed) 18:00
-        </div>
-        <div class="col-sm-2 col-lg-2 col-md-2 both-spacing-sm">
-          <small class="text-grey">價格</small>
-          <br><span class="text-red">NT$ 1999</span>
-        </div>
-        <div class="col-sm-2 col-lg-2 col-md-2 both-spacing-sm">
-          <small class="text-grey">數量</small>
-          <div class="quantity input-group">
-            <span class="input-group-btn">
-              <button data-field="quant[1]" data-type="minus" disabled="disabled" class="btn btn-default btn-number" type="button">
-              <span class="glyphicon glyphicon-minus"></span>
-              </button>
-              </span>
-              <input max="10" min="1" value="1" class="form-control input-number text-center" name="quant[1]" type="text">
-              <span class="input-group-btn">
-              <button data-field="quant[1]" data-type="plus" class="btn btn-default btn-number" type="button">
-              <span class="glyphicon glyphicon-plus"></span>
-              </button>
-            </span>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing text-center">
-          <a href="#" class="btn btn-red">下一步</a>
-        </div>
+        <%= raw Camp.iframe_html %>
       </div>
     </div>
   </div>
@@ -478,24 +183,16 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-lg-6 col-md-6">
-        <h3 class="top-spacing-lg bottom-spacing-sm">付款方式：</h3>
-        <div class="rl-padding-lg line-height-lg">
-          <ol>
-          <li>報名網站(活動通)繳款</li>
-          <li>現場刷卡</li>
-          <li>匯款
-            <ul><li>匯款帳號資訊：</li><li>玉山銀行士林分行（代碼808）</li><li>帳號：0657-940-006952戶名：五倍紅寶石股份有限公司</li><li>請報名並匯款至以上指定帳戶後，請來信 <a href="mailto:pay-service@5xruby.tw">pay-service@5xruby.tw</a> 告知匯款帳號末五碼。</li></ol>
-          </li>
-          </ol>
-        </div>
+        <h3 class="top-spacing-lg bottom-spacing-sm"><%= t('.payment_note') %></h3>
+        <div class="rl-padding-lg line-height-lg"><%= raw Camp.payment_note %></div>
       </div>
       <div class="col-sm-6 col-lg-6 col-md-6">
-        <h3 class="top-spacing-lg bottom-spacing-sm">注意事項：</h3>
-        <div class="rl-padding-lg line-height-lg">
-          <ol><li>講座內容、日期及講師可能因故有所修改，主辦單位保留異動之權利。</li><li>學員需自備筆記型電腦。</li><li>本次講座僅開放 30 人報名。</li><li>報名費不包含餐費。</li><li>若報名學員人數不足 5 人，將視情況取消當次講座，並全額退還報名費用。</li><li>如有企業或團體講座需求，歡迎直接來信洽詢。</li></ol>
-        </div>
+        <h3 class="top-spacing-lg bottom-spacing-sm"><%= t('.note') %></h3>
+        <div class="rl-padding-lg line-height-lg"><%= raw Camp.note %></div>
       </div>
     </div>
   </div>
 </div>
 <!-- End Lecture Notice -->
+
+<%= render partial: 'pages/camp_count_down', locals: {configs: Camp.bottom_past_info} %>

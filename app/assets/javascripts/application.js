@@ -20,4 +20,8 @@
 //= require videos
 //= require swiper
 //= require jquery.slick
+//= require vex.combined.min.js
+//= require jquery.scrollTo
+
+vex.defaultOptions.className = 'vex-theme-plain';
 

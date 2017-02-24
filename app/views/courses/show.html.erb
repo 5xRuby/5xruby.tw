@@ -31,9 +31,9 @@
           <%= @course.summary %>
         </p>
         <% if @course.outdated? %>
-          <p class="text-center top-spacing"><%= t('.outdated') %></p>
+          <p class="btn btn-block btn-red disabled"><%= t('.outdated') %></p>
         <% else %>
-          <a class="btn btn-block btn-red disabled"><%= t('.opening') %></a>
+          <a href="#tickets" class="btn btn-block btn-red"><%= t('.opening') %></a>
         <% end %>
       </div>
     </div>
@@ -102,6 +102,8 @@
   </div>
 </div>
 <!-- End Lecture Outline -->
+
+<div id="tickets"></div>
 
 <!-- Start Tickets -->
 <% if @course.iframe_html.present? || @course.apply_link.present? %>

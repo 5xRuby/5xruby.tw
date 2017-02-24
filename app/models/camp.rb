@@ -26,9 +26,9 @@ class Camp < Settingslogic
       @end_date_parsed ||= Date.parse(end_date)
     end
 
-    def lessons
-      @lessons ||= super.map do |lesson|
-        raise "Course not found by permalink '#{lesson['course_permalink']}'" unless lesson['course'] = Course.find_by(permalink: lesson['course_permalink'])
+    def courses
+      @courses ||= lessons.map do |lesson|
+        raise "Course not found by permalink '#{lesson['course_permalink']}'" unless lesson['record'] = Course.find_by(permalink: lesson['course_permalink'])
         lesson
       end
     end

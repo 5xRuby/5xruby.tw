@@ -5,6 +5,7 @@ zh-TW:
   courses:
     index:
       all_courses: 所有講座
+      speakers: 講師陣容 Speakers
     show:
       hours_label: '時數:'
       outdated: 講座已開始，不接受報名
@@ -42,9 +43,6 @@ zh-TW:
       members: 我們的團隊成員
     cooperation_list:
       cooperations: 合作夥伴
-  speakers:
-    sliders:
-      title: 講師陣容 Speakers
   videos:
     index:
       title: 五倍影城
@@ -92,7 +90,22 @@ zh-TW:
       contact_us: 歡迎與我們聯繫
     camp:
       location_label: '上課地點：'
-      sale_title: Good news!
+      sale_title: 好康逗相報
+      time_label: '課程時間：'
+      what_will_learn_label: '%{hours} 小時課程，您會學到：'
+      view_outline: '...看課程大綱'
+      chapter_title: 第 %{nth} 堂：
+      testimonials: 聽聽大家怎麼說
+      qna:
+        title: Q & A
+        q_label: Q：
+        a_label: A：
+      more_question:
+        - 若以上Q&A無法解答您的疑問，歡迎您透過
+        - 與我們聯繫，或是直接來電洽詢。
+      contact_link: 聯絡表單
+      payment_note: 付款方式：
+      note: 注意事項：
 
   devise:
     sessions:

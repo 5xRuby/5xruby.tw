@@ -301,6 +301,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
+    vex_rails (0.2.0)
     web-console (3.4.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -357,6 +358,7 @@ DEPENDENCIES
   spring
   swiper-rails
   uglifier
+  vex_rails (~> 0.2.0)
   web-console
 
 BUNDLED WITH

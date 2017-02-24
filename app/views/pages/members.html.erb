@@ -14,16 +14,18 @@
       <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
         <% t('members').each do |member| %>
           <%= render partial: 'shared/member', locals: {
-            avatar: image_path(member[:avatar]),
-            name: member[:name],
-            blog_url: member[:blog],
-            facebook_url: member[:facebook],
-            twitter_url: member[:twitter],
-            google_url: member[:google],
-            github_url: member[:github],
-            website_url: member[:website],
-            role_text: member[:title],
-            summary: "#{member[:skills]}<br>#{member[:about]}"
+            item: {
+              avatar: image_path(member[:avatar]),
+              name: member[:name],
+              blog_url: member[:blog],
+              facebook_url: member[:facebook],
+              twitter_url: member[:twitter],
+              google_url: member[:google],
+              github_url: member[:github],
+              website_url: member[:website],
+              role_text: member[:title],
+              summary: "#{member[:skills]}<br>#{member[:about]}"
+            }
           } %>
         <% end %>
       </div>
@@ -31,5 +33,4 @@
   </div>
 </div>
 <!-- End Feedback Section -->
-
 
