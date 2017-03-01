@@ -995,6 +995,9 @@ footer .fa-twitter:hover {
 .news-wrap {
   cursor: pointer;
 }
+.news-wrap h3, .news-wrap p {
+  color: #555;
+}
 .news-wrap .more {
   border: 2px solid #b81939;
   padding: 7px 25px;
@@ -2299,6 +2302,15 @@ footer .fa-twitter:hover {
   border-radius: 0px;
   margin: 0px 10px;
   padding: 10px 0px;
+}
+#will-learn ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+#will-learn li::before {
+  content: "✔ ";
+  color: #b81939;
+  font-size: 120%;
 }
 
 /*speakers*/

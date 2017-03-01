@@ -58,19 +58,19 @@
           </div>
         </div>
       <% end %>
-      <div class="col-sm-<%= rwd_column = (@course.speakers.size.odd? ? '6' : '12') %> col-lg-<%= rwd_column %> col-md-<%= rwd_column %> top-spacing-lg line-height-lg">
+      <div id="will-learn" class="col-sm-<%= rwd_column = (@course.speakers.size.odd? ? '6' : '12') %> col-lg-<%= rwd_column %> col-md-<%= rwd_column %> top-spacing-lg line-height-lg">
         <% if @course.suitable_for.present? %>
           <h3 class="bottom-spacing-sm"><%= t('.suitable_for') %></h3>
-          <p class="bottom-spacing">
+          <div class="bottom-spacing">
             <%= raw @course.suitable_for %>
-          </p>
+          </div>
           <br>
         <% end %>
         <% if @course.what_will_learn.present? %>
           <h3 class="bottom-spacing-sm"><%= t('.what_you_will_learn') %></h3>
-          <p class="bottom-spacing">
+          <div class="bottom-spacing">
             <%= raw @course.what_will_learn %>
-          </p>
+          </div>
         <% end %>
       </div>
     </div>

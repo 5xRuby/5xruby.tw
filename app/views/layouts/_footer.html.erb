@@ -17,12 +17,12 @@
         <h5><%= link_to t('.recruit'), posts_path(tags: '徵才') %></h5>
         <h5><%= link_to t('.source_code'), "https://github.com/5xRuby/5xruby.tw", target: :_blank %></h5>
       </div>
-      <div class="col-sm-3 col-lg-2 col-md-2">
+      <div class="col-sm-3 col-lg-3 col-md-3">
         <strong class="large text-red"><%= t('company.contact_phone') %></strong>
         <br><small><%= t('company.open_hours') %></small>
         <br><a href="<%= t('company.facebook') %>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="<%= t('company.twitter') %>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
       </div>
-      <div class="col-sm-5 col-lg-6 col-md-6">
+      <div class="col-sm-5 col-lg-5 col-md-5">
         <div class="mail-address">
           <%= t('.any_question') %> <a href="mailto:<%= t('company.email') %>"><%= t('company.email') %></a>
           <br>
@@ -37,8 +37,8 @@
     </div>
   </div>
   <div class="to-top text-center">
-    <a href="#" class="scrollup">
-      TOP
+    <a href="#" class="scrollup large">
+      <i class="large fa fa-angle-up" aria-hidden="true"></i>
     </a>
   </div>
 </footer>
