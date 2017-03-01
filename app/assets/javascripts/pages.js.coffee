@@ -5,7 +5,7 @@ $ () ->
     $('#mmm').val(parseFloat($('#ntd').val()) / 100000.0)
   $('#mmm').change(update_ntd).keyup(update_ntd)
   $('#ntd').change(update_mmm).keyup(update_mmm)
-  
+
   $("a").focus ->
     $(this).blur()
 
@@ -40,7 +40,7 @@ $ () ->
       spaceBetween: 0,
       loop: true
     )
-  
+
   $('.openable').each((i, openable) ->
     $(openable).click( ->
       $(this).find(
@@ -48,6 +48,19 @@ $ () ->
       ).slideToggle()
     )
   )
+
+$(window).scroll (event) ->
+  y = $(this).scrollTop()
+  #set position from top in pixels
+  if y >= 100
+    $('.navbar').addClass 'resized'
+    $('.navbar-brand').addClass 'goup'
+    $('#lang-sign-in').fadeOut 'fast'
+  else
+    $('.navbar').removeClass 'resized'
+    $('.navbar-brand').removeClass 'goup'
+    $('#lang-sign-in').fadeIn 'fast'
+  return
 
   $('.vex-dialog-opener').each (i, opener) ->
     $(opener).click ->
