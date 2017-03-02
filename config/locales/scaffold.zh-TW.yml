@@ -8,6 +8,7 @@ zh-TW:
     preview!: 預覽%{resource}
     new!: 新增%{resource}
     new: 新增
+    new_from_default: 從預設值新增
     create!: 新增%{resource}
     create: 新增
     show!: 檢視%{resource}

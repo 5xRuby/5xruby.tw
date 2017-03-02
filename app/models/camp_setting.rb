@@ -2,11 +2,7 @@ class CampSetting < ApplicationRecord
 
   def initialize(_ = {})
     super
-    self.payload ||= if last_camp_version = self.class.active.lang(self.lang).last
-      last_camp_version.payload
-    else
-      Camp.to_hash
-    end
+    self.payload ||= Camp.to_hash
     self.status ||= :inactive
   end
   
