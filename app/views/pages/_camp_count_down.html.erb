@@ -4,11 +4,11 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-lg-6 col-md-6 center-block text-center">
-        <% c = Camp.begun? ? configs['begun'] : configs['available'] %>
+        <% c = camp.begun? ? configs['begun'] : configs['available'] %>
         <h3 class="text-center top-spacing">
           <%= raw(c['sentence'] % {
-            days_before_begining: content_tag(:span, Camp.days_before_begining, class: "large text-orange"),
-            days_before_ending: content_tag(:span, Camp.days_before_ending, class: "large text-orange")
+            days_before_begining: content_tag(:span, camp.days_before_begining, class: "large text-orange"),
+            days_before_ending: content_tag(:span, camp.days_before_ending, class: "large text-orange")
           }) %>
         </h3>
         <%= link_to c['button']['text'], c['button']['href'], class: "btn btn-red top-spacing-sm" if c['button'].present? %>

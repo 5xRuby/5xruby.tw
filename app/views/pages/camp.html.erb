@@ -7,7 +7,7 @@
 </div>
 <!-- End Main Banner -->
 
-<%= render partial: 'pages/camp_count_down', locals: {configs: Camp.top_count_down} %>
+<%= render partial: 'pages/camp_count_down', locals: {configs: @camp.top_count_down, camp: @camp} %>
 
 <!-- Start Camp Feature -->
 <div class="feature-section light-grey-bg bottom-padding-lg">
@@ -34,12 +34,12 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= Camp.title %></span></h3>
+        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= @camp.title %></span></h3>
         <div class="text-center text-grey bottom-spacing">
           <i class="fa fa-map-marker" aria-hidden="true"></i> <%= t('.location_label') %>
           <%= link_to "#{t('company.address')} (#{t('company.name')})", t('company.gmap_url'), target: :_blank %>
         </div>
-        <% Camp.courses.each do |lesson| %>
+        <% @camp.courses.each do |lesson| %>
           <% course = lesson['record'] %>
           <!--Start Camp-->
           <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing border-grey no-padding">
@@ -110,7 +110,7 @@
 <!-- End Camp List -->
 
 <!-- Start Camp Sale -->
-<% if (sales_conf = Camp.sales).present? %>
+<% if (sales_conf = @camp.sales).present? %>
   <div class="camp-sale red-bg bottom-padding-lg">
     <div class="container">
       <div class="row">
@@ -132,7 +132,7 @@
       <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
         <h3 class="text-center top-spacing-lg bottom-spacing"><span><%= t('.testimonials') %></span></h3>
         <%= render partial: 'shared/carousel', locals: {
-          items: Camp.testimonials,
+          items: @camp.testimonials,
           item_partial: 'pages/camp_testimonial'
         } %>
       </div>
@@ -149,9 +149,9 @@
       <% base_index = 0; 2.times do %>
         <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
           <div class="line-height-lg">
-            <% base_index = (Camp.qnas.count/2).times do |i| %>
-              <h4 class="top-spacing"><%= "#{t('.qna.q_label')}#{Camp.qnas[base_index + i][:q]}" %></h4>
-              <p><%= "#{t('.qna.a_label')}#{Camp.qnas[base_index + i][:a]}" %></p>
+            <% base_index = (@camp.qnas.count/2).times do |i| %>
+              <h4 class="top-spacing"><%= "#{t('.qna.q_label')}#{@camp.qnas[base_index + i][:q]}" %></h4>
+              <p><%= "#{t('.qna.a_label')}#{@camp.qnas[base_index + i][:a]}" %></p>
             <% end %>
           </div>
         </div>
@@ -171,7 +171,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-        <%= raw Camp.iframe_html %>
+        <%= raw @camp.iframe_html %>
       </div>
     </div>
   </div>
@@ -184,15 +184,15 @@
     <div class="row">
       <div class="col-sm-6 col-lg-6 col-md-6">
         <h3 class="top-spacing-lg bottom-spacing-sm"><%= t('.payment_note') %></h3>
-        <div class="rl-padding-lg line-height-lg"><%= raw Camp.payment_note %></div>
+        <div class="rl-padding-lg line-height-lg"><%= raw @camp.payment_note %></div>
       </div>
       <div class="col-sm-6 col-lg-6 col-md-6">
         <h3 class="top-spacing-lg bottom-spacing-sm"><%= t('.note') %></h3>
-        <div class="rl-padding-lg line-height-lg"><%= raw Camp.note %></div>
+        <div class="rl-padding-lg line-height-lg"><%= raw @camp.note %></div>
       </div>
     </div>
   </div>
 </div>
 <!-- End Lecture Notice -->
 
-<%= render partial: 'pages/camp_count_down', locals: {configs: Camp.bottom_past_info} %>
+<%= render partial: 'pages/camp_count_down', locals: {configs: @camp.bottom_past_info, camp: @camp} %>

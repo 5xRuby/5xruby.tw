@@ -24,3 +24,4 @@ ja:
     destroy: destroy
     created_successfully!: "%{name}が作成されました."
     updated_successfully!: "%{name}が更新されました."
+    destroy_successfully!: "%{name} was destroyed successfully."
