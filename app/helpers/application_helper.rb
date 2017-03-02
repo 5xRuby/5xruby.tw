@@ -78,11 +78,6 @@ module ApplicationHelper
     content_tag :i, text, class: "icon-#{name}"
   end
 
-  def locale_li name, locale
-    locale_link = link_to name, url_for(request.GET.merge(locale: locale == I18n.default_locale ? nil : locale))
-    content_tag :li, locale_link unless locale == I18n.locale
-  end
-
   def image_set_tag(src_folder, size_and_exts, options = {})
     srcset = size_and_exts.map do |s|
       "#{path_to_image "#{src_folder}/#{s.join('')}"} #{s[0]}"

@@ -276,18 +276,21 @@ zh-TW:
       main_features:
         - img: feature-list-img1.png
           title: 十年功力實戰講座
+          href_method: camp_path
           description:
             - 業界資深前輩為你講解 Ruby、Rails、
             - Git 、系統佈署等從入門到中高階的講座
             - 讓你有如練了十年功！
         - img: feature-list-img2.png
           title: 案件外包．技術諮詢
+          href_method: showcases_path
           description:
             - 從 Ruby、Rails、iOS 的工程服務
             - 到系統設計、規劃到開發甚至系統架設
             - 提供專業的建議與頂尖的技術
         - img: feature-list-img3.png
           title: 企業培訓計畫
+          href_method: training_path
           description:
             - 由業界第一線的開發人員協助您將
             - 現有人力快速打造為 Ruby/Rails 團隊

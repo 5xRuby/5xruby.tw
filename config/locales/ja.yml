@@ -276,17 +276,20 @@ ja:
       main_features:
         - img: feature-list-img1.png
           title: 役に立つ実戦講座
+          href_method: camp_path
           description:
             - 業界の経験を生かし
             - Ruby/Rails、Git、システム構築などの
             - ブートキャンプと実戦講座常に開催！
         - img: feature-list-img2.png
           title: 開発、アドバイス
+          href_method: showcases_path
           description:
             - Ruby、RailsでWEBサイト、アプリ、
             - システム開発など、あらゆる案件に対応可能です、お気軽にご相談ください
         - img: feature-list-img3.png
           title: 企業内トレーニング
+          href_method: training_path
           description:
             - あなたの会社の開発チームへ
             - プログラミングトレーニングを提供し

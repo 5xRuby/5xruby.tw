@@ -24,15 +24,15 @@
               <%= locale_li '中文', :'zh-TW' %>
               <%= locale_li 'English', :en %>
               <%= locale_li '日本語', :ja %>
-              <li><%= link_to t('.login'), login_path %></li>
+              <%= nav_li t('.login'), login_path %>
             </ul>
           </div>
           <ul class="nav navbar-nav">
-            <li><%= link_to t('.camp'), camp_path %></li>
-            <li><%= link_to t('.course'), courses_path %></li>
-            <li><%= link_to t('.showcases'), showcases_path %></li>
-            <li><%= link_to t('.training'), training_path %></li>
-            <li><%= link_to t('.news'), posts_path %></li>
+            <%= nav_li t('.camp'), camp_path %>
+            <%= nav_li t('.course'), courses_path %>
+            <%= nav_li t('.showcases'), showcases_path %>
+            <%= nav_li t('.training'), training_path %>
+            <%= nav_li t('.news'), posts_path %>
           </ul>
         </div><!--/.nav-collapse -->
       </div><!--/.container-fluid -->
