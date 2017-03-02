@@ -51,6 +51,7 @@ zh-TW:
       interview_question: 面試題目
       index_picture: 首頁大圖
       index_picture_img: 首頁大圖圖片
+      camp_setting: 衝刺班設定
     attributes:
       post:
         publish_at: 發佈時間
@@ -128,6 +129,11 @@ zh-TW:
         src: 圖檔
         lang: 語系
         size: 大小
+      camp_setting:
+        payload: 設定值
+        json: 設定值
+        status: 狀態
+        lang: 語系
   enumerize:
     apply:
       gender:

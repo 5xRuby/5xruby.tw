@@ -22,5 +22,10 @@ zh-TW:
     delete: 刪除
     destroy!: 刪除%{resource}
     destroy: 刪除
+    fork: Fork
+    preview: 預覽
+    preview_full: 全頁預覽
+    active!: 啟用
     created_successfully!: 成功新增%{name}
     updated_successfully!: 成功更新%{name}
+    destroy_successfully!: 成功刪除%{name}

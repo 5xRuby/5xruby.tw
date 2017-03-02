@@ -18,5 +18,6 @@ class PagesController < ApplicationController
   end
 
   def camp
+    @camp = Camp.use_or_default CampSetting.active.lang_or_none(I18n.locale).last
   end
 end

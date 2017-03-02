@@ -1,0 +1,16 @@
+
+<div class="well">
+  <%= show_attr camp_setting, :id %><br>
+  <%= show_attr camp_setting, :status %><br>
+  <%= show_attr camp_setting, :lang %><br>
+  <%= show_attr camp_setting, :created_at %><br>
+  <%= show_attr camp_setting, :updated_at %><br>
+  <%= link_to t('crud.fork'), {action: :new, id: camp_setting.id}, {class: 'btn btn-success'} %>
+  <%= link_to t('crud.edit'), {action: :edit, id: camp_setting.id}, {class: 'btn btn-info'} %>
+  <%= link_to t('crud.show'), {action: :show, id: camp_setting.id}, {class: 'btn btn-primary'} %>
+  <%= link_to t('crud.preview_full'), admin_camp_setting_preview_path(camp_setting), class: 'btn btn-success', target: :_blank %>
+  <%= link_to t('crud.active!'), {action: :active, camp_setting_id: camp_setting.id},
+    {method: :patch, data: { confirm: t("message.are_you_sure") }, class: 'btn btn-warning'} %>
+  <%= link_to t('crud.destroy'), {action: :destroy, id: camp_setting.id},
+    {method: :delete, data: { confirm: t("message.are_you_sure") }, class: 'btn btn-danger'} %>
+</div>
