@@ -88,7 +88,7 @@ en:
       As to why the company name is 5 times and not 3 or 100 times? Well, that's another story.
   members:
     - <<: *ceo
-      avatar: eddiekao
+      avatar: eddiekao.jpg
     - name: Mu-fan Deng
       title: Unlimited Bug Generator
       avatar: ryudoawaru.jpg
@@ -326,31 +326,49 @@ en:
           content: "I was very honered to have worked with Carol and Eddie. I admire Carol's self-discipline and aspiration. I praise Eddie for his exellence in crisis handling and sense of responsibility. The other partners in 5xRuby are also experts in this field. I beleive this is a great team!"
     lectures_main_banner:
       folder: lectures-main-banner/en
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Lectures
     about_main_banner:
       folder: about-main-banner/en
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: About
     contact_main_banner:
       folder: contact-main-banner/en
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Contact
     qna_main_banner:
       folder: qna-main-banner/en
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Q&A
     member_main_banner:
       folder: member-main-banner/en
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Members
     training_main_banner:
       folder: training-main-banner/en
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Training
     news_main_banner:
       folder: news-main-banner/en
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: News
     projects_main_banner:
       folder: projects-main-banner/en
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Projects
     camp_main_banner:
       folder: camp-main-banner/en
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Camp
     camp:
       features:
         - img: feature-list-img1.png

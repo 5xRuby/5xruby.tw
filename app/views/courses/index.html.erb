@@ -2,7 +2,7 @@
 <!-- Start Main Banner -->
 <div class="container-fluid">
   <div class="row">
-    <%= image_set_tag t('site.lectures_main_banner.folder'), t('site.lectures_main_banner.sizes'), width: "100%" %>
+    <%= image_set_tag_from_translation_config t('site.lectures_main_banner'), width: "100%" %>
   </div>
 </div>
 <!-- End Main Banner -->
@@ -55,7 +55,7 @@
             {
               type: 'speaker',
               avatar: s.avatar.thumb,
-              name: s.name,
+              name: tr(s, :name),
               blog_url: s.blog_url,
               facebook_url: s.facebook_url,
               twitter_url: s.twitter_url,

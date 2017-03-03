@@ -88,7 +88,7 @@ ja:
       なぜ我々の会社の名前は、5倍で3倍や100倍ではないのか？それは、別の話があるんです。
   members:
     - <<: *ceo
-      avatar: eddiekao
+      avatar: eddiekao.jpg
     - name: 竜堂
       title: 無限虫制師
       avatar: ryudoawaru.jpg
@@ -325,31 +325,49 @@ ja:
           content: "私は、本当にCarolとEddieと一緒に学べたことを光栄に思います。Carolは、自己規律があり、熱心です。Eddieは、問題解決能力に優れており、本当に責任感があります。5xRubyの他のパートナーもこの分野のエキスパートです。このチームは最高です！"
     lectures_main_banner:
       folder: lectures-main-banner/ja
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Lectures
     about_main_banner:
       folder: about-main-banner/ja
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: About
     contact_main_banner:
       folder: contact-main-banner/ja
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Contact
     qna_main_banner:
       folder: qna-main-banner/ja
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Q&A
     member_main_banner:
       folder: member-main-banner/ja
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Members
     training_main_banner:
       folder: training-main-banner/ja
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Training
     news_main_banner:
       folder: news-main-banner/ja
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: News
     projects_main_banner:
       folder: projects-main-banner/ja
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Projects
     camp_main_banner:
       folder: camp-main-banner/ja
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Camp
     about_services:
       - name: 技術コンサルティング
         img: consult.png

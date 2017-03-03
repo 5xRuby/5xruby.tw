@@ -78,11 +78,11 @@ module ApplicationHelper
     content_tag :i, text, class: "icon-#{name}"
   end
 
-  def image_set_tag(src_folder, size_and_exts, options = {})
-    srcset = size_and_exts.map do |s|
-      "#{path_to_image "#{src_folder}/#{s.join('')}"} #{s[0]}"
+  def image_set_tag_from_translation_config(config, options = {})
+    srcset = config[:sizes].map do |s|
+      "#{path_to_image "#{config[:folder]}/#{s[1]}"} #{s[0]}"
     end.join(' , ')
-    image_tag "#{src_folder}/#{size_and_exts.last.join('')}", {alt: src_folder.split('/').last, srcset: srcset}.merge(options)
+    image_tag "#{config[:folder]}/#{config[:default_size]}", {alt: config[:alt], srcset: srcset}.merge(options)
   end
 
   def public_path(file_path)

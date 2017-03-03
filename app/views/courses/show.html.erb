@@ -7,7 +7,7 @@
         <ol class="breadcrumb">
           <li><%= link_to t('breadcrumb.home'), root_path %></li>
           <li><%= link_to t('breadcrumb.courses'), courses_path %></li>
-          <li class="active"><%= @course.title %></li>
+          <li class="active"><%= tr @course, :title %></li>
         </ol>
       </div>
     </div>
@@ -24,11 +24,11 @@
       </div>
       <div class="col-sm-6 col-lg-7 col-md-5 line-height-lg">
         <small class="text-grey"><%= @course.category.name %></small>
-        <h1><small class="text-black"><%= @course.title %></small></h1>
+        <h1><small class="text-black"><%= tr @course, :title %></small></h1>
         <span class="medium"><%= date_range @course %></span>
-        <br><small class="text-grey"><%= "#{@course.speakers_name} | #{t('.hours_label')}#{@course.hours}" %></small>
+        <br><small class="text-grey"><%= "#{speakers_name @course} | #{t('.hours_label')}#{@course.hours}" %></small>
         <p>
-          <%= @course.summary %>
+          <%= tr @course, :summary %>
         </p>
         <% if @course.outdated? %>
           <p class="btn btn-block btn-red disabled"><%= t('.outdated') %></p>
@@ -52,7 +52,7 @@
           </div>
           <div class="col-sm-8 col-lg-8 col-md-8">
             <h3 class="bottom-spacing-sm"><%= t('.lecturer') %></h3>
-            <strong><%= s.name %></strong>
+            <strong><%= tr s, :name %></strong>
             <br>
             <%= tr_and_convert_newline2br s, :summary %>
           </div>
@@ -69,7 +69,7 @@
         <% if @course.what_will_learn.present? %>
           <h3 class="bottom-spacing-sm"><%= t('.what_you_will_learn') %></h3>
           <p class="bottom-spacing">
-            <%= raw @course.what_will_learn %>
+            <%= raw tr(@course, :what_will_learn) %>
           </p>
         <% end %>
       </div>
@@ -87,8 +87,8 @@
         <div class="col-sm-8 col-lg-8 col-md-8 center-block border-grey bottom-spacing-lg">
           <% @course.stages.includes(:translations).each_with_index do |stage, index| %>
             <div class="four-spacing">
-              <h4><%= t('.chapter_title', nth: index) %> <%= stage.title %></h4>
-              <%= raw stage.description %>
+              <h4><%= t('.chapter_title', nth: index) %> <%= tr stage, :title %></h4>
+              <%= raw tr(stage, :description) %>
               <ul class="date-time bottom-spacing-lg">
                 <li><i class="fa fa-calendar text-grey" aria-hidden="true"></i> <%= stage.date %></li>
                 <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= time_range stage %></li>
@@ -139,7 +139,7 @@
       <div class="col-sm-6 col-lg-6 col-md-6">
         <h3 class="top-spacing-lg bottom-spacing-sm"><%= t('.note') %></h3>
         <div class="rl-padding-lg line-height-lg">
-          <%= raw @course.note %>
+          <%= raw tr(@course, :note) %>
         </div>
       </div>
     </div>
