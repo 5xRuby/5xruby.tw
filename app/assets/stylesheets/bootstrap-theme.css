@@ -692,10 +692,41 @@ footer .fa-twitter:hover {
     margin-top: 10px;
   }
 }
-.lecture-wrap .descri {
-  font-size: 14px;
-  height: 100px;
-  overflow: hidden;
+@media (min-width: 768px) {
+  .landing-pic .container {
+    min-height: 263px;
+  }
+}
+@media (min-width: 992px) {
+  .landing-pic .container {
+    min-height: 340px;
+  }
+}
+@media (min-width: 1200px) {
+  .landing-pic .container {
+    min-height: 410px;
+  }
+}
+@media (min-width: 768px) {
+  .lecture-wrap .descri {
+    font-size: 14px;
+    height: 170px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 992px) {
+  .lecture-wrap .descri {
+    font-size: 14px;
+    height: 220px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1200px) {
+  .lecture-wrap .descri {
+    font-size: 14px;
+    height: 170px;
+    overflow: hidden;
+  }
 }
 
 /*feedback section*/
@@ -2095,6 +2126,12 @@ footer .fa-twitter:hover {
   width: 100%;
   text-align: center;
   letter-spacing: 2px;
+}
+.swiper-pagination-bullet {
+  border: 1px solid #ddd !important;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border: 1px solid #fff !important;
 }
 @media (max-width: 767px) {
   .swiper-title {
