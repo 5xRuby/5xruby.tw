@@ -2,12 +2,12 @@
 <!-- Start Main Banner -->
 <div class="container-fluid">
   <div class="row">
-    <%= image_set_tag t('site.camp_main_banner.folder'), t('site.camp_main_banner.sizes'), width: "100%" %>
+    <%= image_set_tag_from_translation_config t('site.camp_main_banner'), width: "100%" %>
   </div>
 </div>
 <!-- End Main Banner -->
 
-<%= render partial: 'pages/camp_count_down', locals: {configs: Camp.top_count_down} %>
+<%= render partial: 'pages/camp_count_down', locals: {configs: @camp.top_count_down, camp: @camp} %>
 
 <!-- Start Camp Feature -->
 <div class="feature-section light-grey-bg bottom-padding-lg">
@@ -34,12 +34,12 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= Camp.title %></span></h3>
+        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= @camp.title %></span></h3>
         <div class="text-center text-grey bottom-spacing">
           <i class="fa fa-map-marker" aria-hidden="true"></i> <%= t('.location_label') %>
           <%= link_to "#{t('company.address')} (#{t('company.name')})", t('company.gmap_url'), target: :_blank %>
         </div>
-        <% Camp.courses.each do |lesson| %>
+        <% @camp.courses.each do |lesson| %>
           <% course = lesson['record'] %>
           <!--Start Camp-->
           <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing border-grey no-padding">
@@ -47,7 +47,7 @@
               <div class="cover col-sm-6 col-lg-6 col-md-6 no-padding" style="background: url('<%= course.image.thumb %>'); background-size: cover; background-position: center center;">
                 <div class="filter">
                   <p class="text-center four-padding-lg top-spacing-lg">
-                    <span class="descri"><%= raw course.summary %></span>
+                    <span class="descri"><%= raw tr(course, :summary) %></span>
                     <br><br>
 
                     <% btn_states = DateTime.parse(lesson['time_limit']) < Time.now ? lesson['btn_states']['outdated'] : lesson['btn_states']['opening'] %>
@@ -66,7 +66,7 @@
                   <div class="media">
                     <% course.speakers.each do |s| %>
                       <div class="media-body">
-                        <b class="media-heading"><%= s.name %></b>
+                        <b class="media-heading"><%= tr s, :name %></b>
                         <p class="small"><%= tr_and_convert_newline2br s, :summary %></p>
                       </div>
                     <% end %>
@@ -75,7 +75,7 @@
                 <div id="will-learn" class="col-sm-7 col-lg-7 col-md-7">
                   <b><%= t('.what_will_learn_label', hours: course.hours) %></b>
                   <div class="small">
-                    <%= raw course.what_will_learn %>
+                    <%= raw tr(course, :what_will_learn) %>
                   </div>
                   <div class="pull-right small vex-dialog-opener" data-target="#camp-outline-dialog-<%= course.permalink %>">
                     <a><%= t('.view_outline') %></a>
@@ -90,8 +90,8 @@
           <div class="vex-dialog-content" id="camp-outline-dialog-<%= course.permalink %>" title="<%= lesson['name'] %>">
             <% course.stages.includes(:translations).each_with_index do |stage, index| %>
               <div class="four-spacing">
-                <h4><%= t('.chapter_title', nth: index) %> <%= stage.title %></h4>
-                <%= raw stage.description %>
+                <h4><%= t('.chapter_title', nth: index) %> <%= tr stage, :title %></h4>
+                <%= raw tr(stage, :description) %>
                 <ul class="date-time bottom-spacing-lg">
                   <li><i class="fa fa-calendar text-grey" aria-hidden="true"></i> <%= stage.date %></li>
                   <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= time_range stage %></li>
@@ -110,7 +110,7 @@
 <!-- End Camp List -->
 
 <!-- Start Camp Sale -->
-<% if (sales_conf = Camp.sales).present? %>
+<% if (sales_conf = @camp.sales).present? %>
   <div class="camp-sale red-bg bottom-padding-lg">
     <div class="container">
       <div class="row">
@@ -132,7 +132,7 @@
       <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
         <h3 class="text-center top-spacing-lg bottom-spacing"><span><%= t('.testimonials') %></span></h3>
         <%= render partial: 'shared/carousel', locals: {
-          items: Camp.testimonials,
+          items: @camp.testimonials,
           item_partial: 'pages/camp_testimonial'
         } %>
       </div>
@@ -149,9 +149,9 @@
       <% base_index = 0; 2.times do %>
         <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
           <div class="line-height-lg">
-            <% base_index = (Camp.qnas.count/2).times do |i| %>
-              <h4 class="top-spacing"><%= "#{t('.qna.q_label')}#{Camp.qnas[base_index + i][:q]}" %></h4>
-              <p><%= "#{t('.qna.a_label')}#{Camp.qnas[base_index + i][:a]}" %></p>
+            <% base_index = (@camp.qnas.count/2).times do |i| %>
+              <h4 class="top-spacing"><%= "#{t('.qna.q_label')}#{@camp.qnas[base_index + i][:q]}" %></h4>
+              <p><%= "#{t('.qna.a_label')}#{@camp.qnas[base_index + i][:a]}" %></p>
             <% end %>
           </div>
         </div>
@@ -171,7 +171,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-        <%= raw Camp.iframe_html %>
+        <%= raw @camp.iframe_html %>
       </div>
     </div>
   </div>
@@ -184,15 +184,15 @@
     <div class="row">
       <div class="col-sm-6 col-lg-6 col-md-6">
         <h3 class="top-spacing bottom-spacing-sm"><%= t('.payment_note') %></h3>
-        <div class="rl-padding-lg line-height-lg"><%= raw Camp.payment_note %></div>
+        <div class="rl-padding-lg line-height-lg"><%= raw @camp.payment_note %></div>
       </div>
       <div class="col-sm-6 col-lg-6 col-md-6">
         <h3 class="top-spacing bottom-spacing-sm"><%= t('.note') %></h3>
-        <div class="rl-padding-lg line-height-lg"><%= raw Camp.note %></div>
+        <div class="rl-padding-lg line-height-lg"><%= raw @camp.note %></div>
       </div>
     </div>
   </div>
 </div>
 <!-- End Lecture Notice -->
 
-<%= render partial: 'pages/camp_count_down', locals: {configs: Camp.bottom_past_info} %>
+<%= render partial: 'pages/camp_count_down', locals: {configs: @camp.bottom_past_info, camp: @camp} %>

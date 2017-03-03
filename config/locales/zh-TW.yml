@@ -276,18 +276,21 @@ zh-TW:
       main_features:
         - img: feature-list-img1.png
           title: 十年功力實戰講座
+          href_method: camp_path
           description:
             - 業界資深前輩為你講解 Ruby、Rails、
             - Git 、系統佈署等從入門到中高階的講座
             - 讓你有如練了十年功！
         - img: feature-list-img2.png
           title: 案件外包．技術諮詢
+          href_method: showcases_path
           description:
             - 從 Ruby、Rails、iOS 的工程服務
             - 到系統設計、規劃到開發甚至系統架設
             - 提供專業的建議與頂尖的技術
         - img: feature-list-img3.png
           title: 企業培訓計畫
+          href_method: training_path
           description:
             - 由業界第一線的開發人員協助您將
             - 現有人力快速打造為 Ruby/Rails 團隊
@@ -323,31 +326,49 @@ zh-TW:
           content: "曾有幸與徐曦與見龍一起工作，徐曦自我要求與向上進取的態度令人稱佩，見龍對危機處理與當責的責任感也值得稱許。「五倍紅寶石」的其他夥伴也是一時之選，相信這是一個很棒的組合。"
     lectures_main_banner:
       folder: lectures-main-banner/zh-TW
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: 業界第一線直接傳授，馬上掌握 Ruby 開發的快速與樂趣
     about_main_banner:
       folder: about-main-banner/zh-TW
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: 五倍專業、五倍祝福，關於五倍紅寶石
     contact_main_banner:
       folder: contact-main-banner/zh-TW
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: 有任何問題嗎？不用懷疑，馬上聯絡我們！
     qna_main_banner:
       folder: qna-main-banner/zh-TW
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: 常見問題Q&A，有關於五倍的問題嗎？你可以在這裡找到答案
     member_main_banner:
       folder: member-main-banner/zh-TW
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: 五倍的頂尖技術團，專業人才，在此集結
     training_main_banner:
       folder: training-main-banner/zh-TW
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: 企業代訓，讓您的現有人力快速轉換為 Ruby/Rails 即戰力
     news_main_banner:
       folder: news-main-banner/zh-TW
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: 最新消息，關於五倍還有更多你可以發掘的
     projects_main_banner:
       folder: projects-main-banner/zh-TW
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: 以頂尖技術快速打造產品，網羅專業人才，為您提供最好的服務
     camp_main_banner:
       folder: camp-main-banner/zh-TW
-      sizes: [["400w", ".png"], ["600w", ".png"], ["1280w", ".png"]]
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: 網站開發，全方位衝刺班，全才師資讓您從零開始也能快速上手！
     about_services:
       - name: 技術諮詢
         img: consult.png

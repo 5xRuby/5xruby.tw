@@ -1,0 +1,8 @@
+<h1><%= current_model.model_name.human %> <%= link_to t('crud.new_from_default'), {action: :new}, {class: 'btn btn-lg btn-success'} %></h1>
+
+<% current_collection.each do |ip| %>
+  <%= render ip %>
+<% end %>
+
+<%= paginate current_collection %>
+

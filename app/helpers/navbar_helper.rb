@@ -1,20 +1,13 @@
 module NavbarHelper
   def nav_li text, url, match: url, method: :start_with?, **link_to_options
-    active = nil
-    @_nav_dropdown_active = active = :active if request.path.send(method, match)
-    # @_nav_dropdown_active is used for nav_dropdown to check active
+    active = request.path.send(method, match) ? :active : nil
     content_tag :li, class: active do
       link_to text, url, **link_to_options
     end
   end
-
-  def nav_dropdown text, &block
-    @_nav_dropdown_active = nil
-    items = content_tag(:ul, capture(&block))
-    content_tag :li, class: "normal_drop_down #{@_nav_dropdown_active}" do
-      concat link_to text, '#'
-      concat content_tag(:div, nil, class: :'mobnav-subarrow')
-      concat items
-    end
+  
+  def locale_li name, locale
+    locale_link = link_to name, url_for(request.GET.merge(locale: locale == I18n.default_locale ? nil : locale))
+    content_tag :li, locale_link unless locale == I18n.locale
   end
 end

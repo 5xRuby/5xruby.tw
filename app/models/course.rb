@@ -103,10 +103,6 @@ class Course < ActiveRecord::Base
     remaining_days < ABOUT_TO_BEGIN and not outdated?
   end
 
-  def speakers_name
-    speakers.map(&:name).join(', ')
-  end
-
   private
   def force_using_ssl_iframe
     pattern = /(http:\/\/)/

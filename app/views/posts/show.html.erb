@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-sm-8 col-lg-8 col-md-8 center-block">
         <%= image_tag(@post.image.thumb, class: 'bottom-spacing-sm') %>
-        <h1><small class="text-black"><%= @post.title %></small></h1>
+        <h1><small class="text-black"><%= tr @post, :title %></small></h1>
         <div class="text-grey">
           <%= "#{t('.by')}#{@post.author.try(:name)}" %>
           <small class="left-spacing-sm"><%= l @post.publish_at, format: :short %></small>

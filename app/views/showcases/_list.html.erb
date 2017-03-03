@@ -4,9 +4,9 @@
     <%= link_to showcase.link.present? ? showcase.link : '#', target: :_blank do %>
       <div class="lecture-wrap">
         <%= image_tag showcase.image.thumb, class: 'cover' %>
-        <h4 class="rl-padding top-spacing"><%= showcase.name %></h4>
+        <h4 class="rl-padding top-spacing"><%= tr showcase, :name %></h4>
         <div class="rl-padding bottom-padding">
-          <p class="descri both-spacing-sm"><%= showcase.description %></p>
+          <p class="descri both-spacing-sm"><%= tr showcase, :description %></p>
         </div>
       </div>
     <% end %>
