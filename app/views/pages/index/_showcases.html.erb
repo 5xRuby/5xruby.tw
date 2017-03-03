@@ -10,7 +10,7 @@
           <%= render partial: 'showcases/list', locals: {showcases: @showcases} %>
 
           <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing text-right">
-            <a href="#"><%= t('.more') %></a>
+            <%= link_to t('.more'), showcases_path %>
           </div>
         </div>
       </div>

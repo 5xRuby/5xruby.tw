@@ -18,8 +18,14 @@ $ () ->
   $(window).scroll ->
     if ($(this).scrollTop() > 100)
       $('.scrollup').fadeIn()
+      $('.navbar').addClass 'resized'
+      $('.navbar-brand').addClass 'goup'
+      $('#lang-sign-in').fadeOut 'fast'
     else
       $('.scrollup').fadeOut()
+      $('.navbar').removeClass 'resized'
+      $('.navbar-brand').removeClass 'goup'
+      $('#lang-sign-in').fadeIn 'fast'
 
   $('a').click (e) ->
     anchor = $(this).attr('href')
@@ -48,19 +54,6 @@ $ () ->
       ).slideToggle()
     )
   )
-
-$(window).scroll (event) ->
-  y = $(this).scrollTop()
-  #set position from top in pixels
-  if y >= 100
-    $('.navbar').addClass 'resized'
-    $('.navbar-brand').addClass 'goup'
-    $('#lang-sign-in').fadeOut 'fast'
-  else
-    $('.navbar').removeClass 'resized'
-    $('.navbar-brand').removeClass 'goup'
-    $('#lang-sign-in').fadeIn 'fast'
-  return
 
   $('.vex-dialog-opener').each (i, opener) ->
     $(opener).click ->
