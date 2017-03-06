@@ -2439,7 +2439,6 @@ footer .fa-twitter:hover {
 }
 .member-img-wrap {
   position: relative;
-  border-radius: 50%;
   overflow: hidden;
   width: 120px;
   height: 120px;
@@ -2631,6 +2630,7 @@ footer .fa-twitter:hover {
 }
 .member-wrap .filter {
   position: absolute;
+  border-radius: 50%;
   top: 0px;
   left: 0px;
   width: 120px;
