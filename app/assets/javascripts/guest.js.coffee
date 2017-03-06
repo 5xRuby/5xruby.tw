@@ -55,6 +55,7 @@ $ () ->
     )
   )
 
+  vex.defaultOptions.className = 'vex-theme-plain';
   $('.vex-dialog-opener').each (i, opener) ->
     $(opener).click ->
       vex.dialog.alert

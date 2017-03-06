@@ -34,29 +34,21 @@
     <%= yield :append_head if content_for? :append_head %>
   </head>
   <%= content_tag :body, data: {controller: controller_path, action: action_name} do %>
+
     <div class="index-container">
-      <!-- Body Container -->
       <div id="container">
         <%= render 'layouts/nav' %>
         <%= notice_message %>
+
         <%= yield %>
 
         <%= render 'layouts/footer' %>
-
       </div>
     </div>
-
-    <!-- OTHER JS -->
-    <script src="/js/superfish.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/validate.js"></script>
-    <script src="/js/jquery.placeholder.js"></script>
-    <script src="/js/functions.js"></script>
-    <script src="/js/classie.js"></script>
-    <script src="/js/uisearch.js"></script>
-    <script>new UISearch( document.getElementById( 'sb-search' ) );</script>
+    
     <%=render partial: "shared/ga"%>
     <%=render partial: "shared/tenmax"%>
     <%= yield :append_body if content_for? :append_body %>
+
   <% end %><!-- body -->
 <% end %><!-- html -->

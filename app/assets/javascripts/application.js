@@ -12,16 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require highlightjs
-//= require highlightjs_helper
-//= require konami
+//= require bootstrap
 //= require gistyle
-//= require pages
-//= require videos
-//= require swiper
+//
 //= require jquery.slick
+//= require swiper
 //= require vex.combined.min.js
+//
+//= require highlightjs
 //= require jquery.scrollTo
-
-vex.defaultOptions.className = 'vex-theme-plain';
+//= require konami
+//
+//= require shared
+//
+//= require guest
 

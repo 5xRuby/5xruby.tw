@@ -1,23 +1,27 @@
 #= require jquery
 #= require jquery_ujs
-#= require moment.min
 #= require bootstrap
-#= require bootstrap-datetimepicker.min
-#= require jquery_nested_form
+#= require gistyle
+#
 #= require jquery-ui
-#= require redactor
-#= require redactor_zh_tw
+#= require jquery_nested_form
 #= require select2
 #= require select2_helper
-#= require highlightjs
-#= require highlightjs_helper
-#= require gistyle
 #= require handlebars
-#= require bootstrap-markdown
-#= require markdown
-#= require to-markdown
 #= require jquery-fileupload/basic
-#= require jsoneditor
+#
+#= require highlightjs
+#= require admin/moment.min
+#= require admin/bootstrap-datetimepicker.min
+#= require admin/redactor
+#= require admin/redactor_zh_tw
+#= require admin/bootstrap-markdown
+#= require admin/markdown
+#= require admin/to-markdown
+#= require admin/jsoneditor
+#
+#= require shared
+#
 #= require_tree ./admin
 
 APP['admin'] =
@@ -48,3 +52,4 @@ $ () ->
       editor.expandAll()
     )($(ele))
   )
+
