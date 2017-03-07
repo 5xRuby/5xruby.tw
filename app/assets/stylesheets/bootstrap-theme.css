@@ -767,7 +767,7 @@ footer .fa-twitter:hover {
 }
 
 /*camp list*/
-.camp-wrap {
+.camp-wrap a {
   cursor: pointer;
 }
 .camp-wrap .speaker {
@@ -2211,7 +2211,7 @@ footer .fa-twitter:hover {
 }
 
 /*camp list*/
-.camp-wrap {
+.camp-wrap a {
   cursor: pointer;
 }
 .camp-wrap .speaker {
