@@ -1240,7 +1240,6 @@ footer .fa-twitter:hover {
 }
 .camp-wrap .filter .btn {
   opacity: 0;
-  transition-delay: 0.7s;
   position: relative;
   top: 20px;
 }
@@ -2700,7 +2699,6 @@ footer .fa-twitter:hover {
 }
 .camp-wrap .filter .btn {
   opacity: 0;
-  transition-delay: 0.7s;
   position: relative;
   top: 20px;
 }

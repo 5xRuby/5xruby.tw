@@ -1,11 +1,13 @@
 
 <div id="feedback-carousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <% (items.size / 3.0).ceil.times do |x| %>
-      <li data-target="#feedback-carousel" data-slide-to="<%=x%>" class="<%=x == 0 ? :active : nil%>" ></li>
-    <% end %>
-  </ol>
+  <% if items.size > 3 %>
+    <ol class="carousel-indicators">
+      <% (items.size / 3.0).ceil.times do |x| %>
+        <li data-target="#feedback-carousel" data-slide-to="<%=x%>" class="<%=x == 0 ? :active : nil%>" ></li>
+      <% end %>
+    </ol>
+  <% end %>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
