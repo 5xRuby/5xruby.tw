@@ -378,6 +378,7 @@ header .logo {
   background: #fff;
   border: none;
   border-bottom: 1px solid #eee;
+  box-shadow: 0 0 5px #b0a0ad;
 }
 .navbar-nav > li > a {
   padding-bottom: 15px;
@@ -1010,7 +1011,7 @@ footer .fa-twitter:hover {
   height: 30px;
   color: #666;
   border: 2px solid #666;
-  line-height: 26px;
+  line-height: 27px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
@@ -2052,7 +2053,7 @@ footer .mail-address {
 footer .fa-facebook {
   border: 2px solid #666;
   border-radius: 50%;
-  padding: 11px;
+  padding: 9px 11px;
   font-size: 22px;
   width: 40px;
   height: 40px;
@@ -2066,7 +2067,7 @@ footer .fa-facebook:hover {
 footer .fa-twitter {
   border: 2px solid #666;
   border-radius: 50%;
-  padding: 11px 9px;
+  padding: 9px 9px;
   font-size: 22px;
   width: 40px;
   height: 40px;
