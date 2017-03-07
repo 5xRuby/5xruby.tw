@@ -32,6 +32,7 @@ class Course < ActiveRecord::Base
 
   # callbacks
   before_save :force_using_ssl_iframe
+  after_save :reset_category_counter
 
   # other
 
@@ -107,5 +108,9 @@ class Course < ActiveRecord::Base
   def force_using_ssl_iframe
     pattern = /(http:\/\/)/
     self.iframe_html.sub!(pattern, "//") if pattern.match(self.iframe_html)
+  end
+
+  def reset_category_counter
+    self.category.reset_courses_count!
   end
 end
