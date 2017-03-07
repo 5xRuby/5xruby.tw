@@ -12,7 +12,7 @@ zh-TW:
     facebook: 'https://www.facebook.com/5xruby'
     twitter: 'https://twitter.com/5xruby'
     gmap_url: 'https://goo.gl/lz5v93'
-    gmap_iframe_url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.016266311726!2d121.513862!3d25.0424189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa8402e622aa7b148!2z5LqU5YCN57SF5a-255-z!5e0!3m2!1szh-TW!2stw!4v1482991564796" 
+    gmap_iframe_url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.016266311726!2d121.513862!3d25.0424189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa8402e622aa7b148!2z5LqU5YCN57SF5a-255-z!5e0!3m2!1szh-TW!2stw!4v1482991564796"
   cooperations:
     - img: vpon.png
     - img: accuvally.png
@@ -387,7 +387,7 @@ zh-TW:
         - img: feature-list-img2.png
           title: 實戰用豐富內容
           description: 課程內容絕不灌水不教速成<br>除了打好扎實基礎<br>也知道如何在職場上運用自如
-        - img: feature-list-img3.png
+        - img: feature-list-img4.png
           title: 彈性搭配課程
           description: 四種系列課程<br>讓你依自身狀況自由搭配<br>避免重複學習已經學會的東西
         - img: feature-list-img3.png
