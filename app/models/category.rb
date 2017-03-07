@@ -10,6 +10,11 @@ class Category < ActiveRecord::Base
   # Attributes related macros
   permalinkable
 
+  def reset_courses_count!
+    self.courses_count = self.courses.count
+    self.save!
+  end
+
   # association macros
   has_many :courses, -> { where(is_online: true) }
 

@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :camp_setting do
-    payload ""
-    status "MyString"
-    lang "MyString"
+    #payload nil
+    #status nil
+    lang CampSetting::LOCALES.sample
   end
 end
