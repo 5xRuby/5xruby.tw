@@ -1121,7 +1121,6 @@ footer .fa-twitter:hover {
 }
 .camp-wrap .filter .btn {
   opacity: 0;
-  transition-delay: 0.5s;
   position: relative;
 }
 .camp-wrap:hover .filter .btn {
@@ -2289,7 +2288,6 @@ footer .fa-twitter:hover {
 }
 .member-img-wrap {
   position: relative;
-  border-radius: 50%;
   overflow: hidden;
   width: 120px;
   height: 120px;
@@ -2481,6 +2479,7 @@ footer .fa-twitter:hover {
 }
 .member-wrap .filter {
   position: absolute;
+  border-radius: 50%;
   top: 0px;
   left: 0px;
   width: 120px;
@@ -2549,7 +2548,6 @@ footer .fa-twitter:hover {
 }
 .camp-wrap .filter .btn {
   opacity: 0;
-  transition-delay: 0.7s;
   position: relative;
   top: 20px;
 }

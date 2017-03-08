@@ -49,5 +49,10 @@ FactoryGirl.define do
       course.stages = stages
       course.speakers = Speaker.order('RANDOM()').limit(2)
     end
+
+    factory :online_course do
+      is_online true
+    end
   end
 end
+

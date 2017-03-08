@@ -64,3 +64,5 @@ $ () ->
         $('.vex').scrollTo(0, 600, {interrupt: true})
       , 300
 
+  $('.dropdown-toggle').dropdown()
+
