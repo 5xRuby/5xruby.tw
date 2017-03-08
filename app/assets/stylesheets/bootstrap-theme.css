@@ -687,6 +687,11 @@ footer .fa-twitter:hover {
   text-overflow : ellipsis;
   white-space : nowrap;
 }
+.lecture-wrap .descri {
+  font-size: 14px;
+  height: 100px;
+  overflow: hidden;
+}
 @media (max-width: 991px) {
   .lecture-wrap .date {
     display: block;
@@ -708,26 +713,10 @@ footer .fa-twitter:hover {
     min-height: 410px;
   }
 }
-@media (min-width: 768px) {
-  .lecture-wrap .descri {
-    font-size: 14px;
-    height: 170px;
-    overflow: hidden;
-  }
-}
-@media (min-width: 992px) {
-  .lecture-wrap .descri {
-    font-size: 14px;
-    height: 220px;
-    overflow: hidden;
-  }
-}
-@media (min-width: 1200px) {
-  .lecture-wrap .descri {
-    font-size: 14px;
-    height: 170px;
-    overflow: hidden;
-  }
+
+/* project list */
+.project-list .lecture-wrap .descri {
+  height: 170px;
 }
 
 /*feedback section*/
@@ -763,112 +752,6 @@ footer .fa-twitter:hover {
     width: 50px;
     height: 50px;
     margin-right: 5px !important;
-  }
-}
-
-/*camp list*/
-.camp-wrap {
-  cursor: pointer;
-}
-.camp-wrap .speaker {
-  width: 50px;
-  height: 50px;
-}
-@media (min-width: 992px) {
-  .camp-list .col-lg-6 {
-    height: 540px !important;
-  }
-  .camp-wrap {
-    line-height: 22px;
-  }
-  .camp-wrap .four-padding {
-    padding: 10px !important;
-  }
-  .camp-list .speaker {
-    display: none !important;
-  }
-  .camp-wrap .light-grey-bg {
-    font-size: 14px;
-  }
-}
-@media (min-width: 1200px) {
-  .camp-list .col-lg-6 {
-    height: 520px !important;
-  }
-  .camp-list .speaker {
-    display: block !important;
-  }
-}
-@media (max-width: 991px) {
-  .camp-wrap .cover {
-    height: 420px;
-  }
-  .camp-list .col-lg-6 {
-    width: 100% !important;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .camp-wrap i {
-    display: none;
-  }
-  .camp-list .pull-right {
-    float: none !important;
-  }
-  .camp-list .filter {
-    opacity: 1 !important;
-    background: transparent !important;
-  }
-  .camp-list .filter .descri {
-    display: none;
-  }
-  .camp-list .filter .btn {
-    margin-top: 155px;
-  }
-  .camp-list .filter .btn-white-border {
-    border: 3px solid #b81939;
-    background: #b81939;
-    color: #fff;
-  }
-  .camp-wrap .light-grey-bg {
-    font-size: 15px;
-  }
-}
-@media (max-width: 480px) {
-  .camp-wrap .cover {
-    height: 280px;
-  }
-  .camp-list .col-lg-6 {
-    width: 100% !important;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .camp-list .pull-right {
-    float: none !important;
-  }
-  .camp-list .filter {
-    opacity: 1 !important;
-    background: transparent !important;
-  }
-  .camp-list .filter .descri {
-    display: none;
-  }
-  .camp-list .filter .btn {
-    margin-top: 110px;
-    padding: 10px;
-    font-size: 14px;
-  }
-  .camp-list .filter .btn-white-border {
-    border: 3px solid #b81939;
-    background: #b81939;
-    color: #fff;
-  }
-  .camp-list .filter .btn-white-border {
-    border: 3px solid #b81939;
-    background: #b81939;
-    color: #fff;
-  }
-  .camp-wrap .light-grey-bg {
-    font-size: 14px;
   }
 }
 
@@ -1230,23 +1113,19 @@ footer .fa-twitter:hover {
 }
 .camp-wrap .filter .descri {
   opacity: 0;
-  transition-delay: 0.3s;
+  transition-delay: 0.1s;
   position: relative;
-  top: 20px;
 }
 .camp-wrap:hover .filter .descri {
   opacity: 1;
-  top: 0px;
 }
 .camp-wrap .filter .btn {
   opacity: 0;
-  transition-delay: 0.7s;
+  transition-delay: 0.5s;
   position: relative;
-  top: 20px;
 }
 .camp-wrap:hover .filter .btn {
   opacity: 1;
-  top: 0px;
 }
 
 /*img zoom*/
@@ -2147,33 +2026,6 @@ footer .fa-twitter:hover {
   }
 }
 
-/* recent lectures */
-.lecture-wrap {
-  border: 1px solid #ddd;
-  cursor: pointer;
-  color: #666;
-}
-.lecture-wrap .cover {
-  width: 100%;
-}
-.lecture-wrap h4 {
-  height: 20px;
-  overflow: hidden;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-}
-@media (max-width: 991px) {
-  .lecture-wrap .date {
-    display: block;
-    margin-top: 10px;
-  }
-}
-.lecture-wrap .descri {
-  font-size: 14px;
-  height: 100px;
-  overflow: hidden;
-}
-
 /*feedback section*/
 .feedback-section .avatar {
   border-radius: 50%;
@@ -2211,9 +2063,6 @@ footer .fa-twitter:hover {
 }
 
 /*camp list*/
-.camp-wrap {
-  cursor: pointer;
-}
 .camp-wrap .speaker {
   width: 50px;
   height: 50px;

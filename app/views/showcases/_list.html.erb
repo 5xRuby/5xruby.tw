@@ -1,6 +1,6 @@
 
 <% showcases.each do |showcase| %>
-  <div class="col-sm-6 col-lg-4 col-md-4 bottom-spacing">
+  <div class="col-sm-6 col-lg-4 col-md-6 bottom-spacing">
     <%= link_to showcase.link.present? ? showcase.link : '#', target: :_blank do %>
       <div class="lecture-wrap">
         <%= image_tag showcase.image.thumb, class: 'cover' %>
