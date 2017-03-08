@@ -2198,6 +2198,9 @@ footer .fa-twitter:hover {
   color: #b81939;
   font-size: 120%;
 }
+#will-learn a {
+  cursor: pointer;
+}
 
 /*speakers*/
 .speaker-wrap {
