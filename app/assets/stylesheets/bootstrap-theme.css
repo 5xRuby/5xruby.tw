@@ -2460,6 +2460,7 @@ footer .fa-twitter:hover {
 /*filter*/
 .speaker-wrap .filter {
   position: absolute;
+  border-radius: 50%;
   top: 0px;
   left: 0px;
   width: 120px;
