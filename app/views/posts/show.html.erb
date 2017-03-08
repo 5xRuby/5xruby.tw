@@ -1,7 +1,7 @@
 
-<%= render partial: 'banner' %>
+<%= render partial: 'posts/banner' %>
 
-<%= render partial: 'categories', locals: {tags: posts_cate_tags - posts_cate_tags_exclude(@post.tag_list) } %>
+<%= render partial: 'posts/categories', locals: {tags: posts_cate_tags - posts_cate_tags_exclude(@post.tag_list) } %>
 
 <!-- Start News Content -->
 <div class="news-content bottom-padding-lg">

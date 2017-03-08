@@ -92,4 +92,17 @@ module ApplicationHelper
   def tr_and_convert_newline2br(object, attr)
     tr(object, attr).to_s.split($/).join('<br>').html_safe
   end
+
+  def link_to_if_with_optional_block(*options, &block)
+    if options[0]
+      link_to(*options[1..-1], &block)
+    else
+      if block.present?
+        block.call
+        nil
+      else
+        options[1]
+      end
+    end
+  end
 end

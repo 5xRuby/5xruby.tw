@@ -347,7 +347,7 @@ DEPENDENCIES
   rdiscount
   recaptcha
   record_tag_helper
-  rmagick
+  rmagick (~> 2.16)
   rspec-rails
   sass-rails
   sdoc (~> 0.4.0)

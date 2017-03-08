@@ -39,6 +39,18 @@ class PostImageUploader < CarrierWave::Uploader::Base
   version :preview do
     process resize_to_fit: [nil, 100]
   end
+  
+  process :store_dimensions
+
+  private
+
+  def store_dimensions
+    if file && model
+      img = ::Magick::Image::read(file.file).first
+      model.image_width = img.columns
+      model.image_height = img.rows
+    end
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

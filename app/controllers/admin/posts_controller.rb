@@ -5,7 +5,8 @@ class Admin::PostsController < AdminController
 
   def preview
     @post = @admin_post
-    render layout: "application", template: "/posts/show"
+    #render layout: "application", template: "/posts/show"
+    render "posts/show", layout: "application"
   end
 
   # GET /admin/posts
