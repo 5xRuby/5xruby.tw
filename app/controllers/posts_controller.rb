@@ -35,10 +35,9 @@ class PostsController < ApplicationController
         type: :website,
         description: tr(@post, :summary),
         image: @post.image_url,
-      }.merge((@post.image_width.present? and @post.image_height.present?) ? {
-          :"image:width" => @post.image_width,
-          :"image:height" => @post.image_height
-        } : {})
+        :"image:width" => @post.image_width,
+        :"image:height" => @post.image_height
+      }
     }
   end
 
