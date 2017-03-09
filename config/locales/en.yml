@@ -66,6 +66,7 @@ en:
     twitter: https://twitter.com/eddiekao
     google: https://plus.google.com/u/0/102669323697108172752/about
     github: https://github.com/kaochenlong
+    blog: http://kaochenlong.com/
     description: |
       ##  5 times professionalism. 5 times wishes. 5 times Ruby.
       ### About Us
@@ -88,7 +89,7 @@ en:
       As to why the company name is 5 times and not 3 or 100 times? Well, that's another story.
   members:
     - <<: *ceo
-      avatar: eddiekao.jpg
+      avatar: eddiekao3.jpg
     - name: Mu-fan Deng
       title: Unlimited Bug Generator
       avatar: ryudoawaru.jpg
@@ -122,14 +123,6 @@ en:
       avatar: nina.jpg
       facebook: https://www.facebook.com/itsmeninayeh
       about: "Wandering between art and program"
-      skills: Ruby / Rails / HTML / CSS
-
-    - name: Kendra Tang
-      title: Assistant Programmeow
-      avatar: tang.jpg
-      facebook: https://www.facebook.com/kendra.tang.meow
-      github: https://github.com/KazooTang
-      about: "Bug Freeeeee...!!"
       skills: Ruby / Rails / HTML / CSS
 
     - name: 。KAY
