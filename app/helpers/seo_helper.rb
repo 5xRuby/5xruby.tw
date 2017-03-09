@@ -1,6 +1,6 @@
 module SeoHelper
   def seo_meta_tags
-    meta_tags(@seo[:meta]) + og_meta_tags(@seo[:og]) + google_meta_tags(@seo[:google]) if @seo
+    [meta_tags(@seo[:meta]), og_meta_tags(@seo[:og]), google_meta_tags(@seo[:google])].delete_if { |v| v.blank? }.inject(&:+) if @seo
   end
 
   private
@@ -22,7 +22,7 @@ module SeoHelper
   # end
 
   def meta_tags **hash, &block
-    hash.delete_if { |k, v| v.blank? }.map{ |name, value|
+    tags = hash.delete_if { |k, v| v.blank? }.map{ |name, value|
       value = image_url(value) if name == :image
       block_given? ? yield(name, value) : tag(:meta, name: name, content: value)
     }.inject(&:+) if hash.respond_to?(:map)
