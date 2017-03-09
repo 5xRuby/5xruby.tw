@@ -913,6 +913,10 @@ footer .fa-twitter:hover {
 .news-wrap h3, .news-wrap p {
   color: #555;
 }
+.news-wrap p.descri {
+  height: 165px;
+  overflow: hidden;
+}
 .news-wrap .more {
   border: 2px solid #b81939;
   padding: 7px 25px;
@@ -2389,6 +2393,10 @@ footer .fa-twitter:hover {
   .about-us .ceo {
     margin-left: 0px !important;
   }
+}
+.about-us p {
+  line-height: 1.75;
+  letter-spacing: .05em;
 }
 
 /*qna*/
