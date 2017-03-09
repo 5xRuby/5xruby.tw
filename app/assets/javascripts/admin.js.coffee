@@ -9,6 +9,7 @@
 #= require select2_helper
 #= require handlebars
 #= require jquery-fileupload/basic
+#= require ace-rails-ap
 #
 #= require highlightjs
 #= require admin/moment.min
@@ -37,19 +38,4 @@ APP['admin'] =
         $(this).closest('tr').remove()
     $('form').on 'ajax:success', (e, data) ->
       $('#result').html(data)
-
-$ () ->
-  $('.jsoneditor-input').each((_, ele) ->
-    ((input) ->
-      container = $('<div></div>')
-      init_value = JSON.parse input.val()
-      input.after(container)
-      editor = new JSONEditor(container.get()[0], {}, init_value)
-      input.parents('form').eq(0).submit( ->
-        input.val JSON.stringify(editor.get())
-      )
-      input.hide()
-      editor.expandAll()
-    )($(ele))
-  )
 
