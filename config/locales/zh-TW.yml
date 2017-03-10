@@ -90,6 +90,7 @@ zh-TW:
   members:
     - <<: *ceo
       avatar: eddiekao3.jpg
+
     - name: 鄧慕凡
       title: 無限蟲制師
       avatar: ryudoawaru.jpg
@@ -100,6 +101,7 @@ zh-TW:
       about: 「非典型網站維運者」
       blog: http://ryudo.tw/
       skills: Ruby / Rails / Sinatra、系統管理
+
     - name: 趙子皓
       title: 紅寶石獵人
       avatar: jodeci2.jpg
@@ -116,13 +118,6 @@ zh-TW:
       experience:
       about: 「徵男友，希望 30 歲前能嫁掉」
       skills: 3C 破壞/活動企劃/課程宣傳
-
-    - name: Nina
-      title: 紅寶石工匠
-      avatar: nina.jpg
-      facebook: https://www.facebook.com/itsmeninayeh
-      about: 「徜徉在程式與藝術的彌留空間裡」
-      skills: Ruby / Rails / HTML / CSS
 
     - name: 。KAY
       title: 紅寶石浪人
@@ -178,6 +173,13 @@ zh-TW:
       skills: Ruby / Rails
       facebook: http://facebook.com/ilake.chang
 
+    - name: Nina
+      title: 紅寶石工匠
+      avatar: nina.jpg
+      facebook: https://www.facebook.com/itsmeninayeh
+      about: 「徜徉在程式與藝術的彌留空間裡」
+      skills: Ruby / Rails / HTML / CSS
+
     - name: 蒼時弦也
       title: 究極のツールマン
       avatar: aotoki.jpg
@@ -202,22 +204,6 @@ zh-TW:
       skills: HTML / CSS / Design
       facebook: https://www.facebook.com/irene.chang.735
       github: https://github.com/irene84111
-
-    - name: Henry Tseng
-      title: 少年陰陽師
-      avatar: henry.jpg
-      about: 「通靈之術！！」
-      skills: Ruby / Rails / 系統管理
-      facebook: https://www.facebook.com/computerhenry321
-      github: https://github.com/lctseng
-
-    - name: Meng-Ying Tsai
-      title: 八盤食姬
-      avatar: fumitsuki.jpg
-      about: 「文著八盤八，月下宵夜嚐；食前方丈味，記遊天下香。」
-      skills: Rails / HTML / CSS
-      facebook: https://www.facebook.com/ei.kudoryafuka
-      github: https://github.com/requiemformemories
 
     - name: 張博凱
       title: 無用產品製做仁
@@ -250,6 +236,24 @@ zh-TW:
       skills: HTML / CSS / 日文
       facebook: https://fb.me/ringo.yang.90
 
+    - name: Henry Tseng
+      title: 少年陰陽師
+      avatar: henry.jpg
+      about: 「通靈之術！！」
+      skills: Ruby / Rails / 系統管理
+      facebook: https://www.facebook.com/computerhenry321
+      github: https://github.com/lctseng
+
+    # 實習生放正職後面
+
+    - name: Meng-Ying Tsai
+      title: 八盤食姬
+      avatar: fumitsuki.jpg
+      about: 「文著八盤八，月下宵夜嚐；食前方丈味，記遊天下香。」
+      skills: Rails / HTML / CSS
+      facebook: https://www.facebook.com/ei.kudoryafuka
+      github: https://github.com/requiemformemories
+
     # 貓放最後面
     - name: 學妹
       title: 暗黑紅寶石
@@ -258,7 +262,7 @@ zh-TW:
       skills: 玩 / 吃飯 / 睡覺
       facebook: https://www.facebook.com/meowmeowsister1
 
-    - name: 宅宅
+    - name: 宅宅（學弟）
       title: 正義紅寶石
       avatar: cat-orange.jpg
       about: 「喵喵喵~~~(毛色正確，可愛就是正義)」

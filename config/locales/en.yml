@@ -60,7 +60,7 @@ en:
   ceo: &ceo
     name: Eddie Kao
     title: Appraiser
-    about: 「希望有天可以寫程式來改變世界!」
+    about: "Change the world with coding!"
     avatar: eddiekao2.jpg
     facebook: https://www.facebook.com/eddiekao
     twitter: https://twitter.com/eddiekao
@@ -90,7 +90,8 @@ en:
   members:
     - <<: *ceo
       avatar: eddiekao3.jpg
-    - name: Mu-fan Deng
+
+    - name: Mu-fan Teng
       title: Unlimited Bug Generator
       avatar: ryudoawaru.jpg
       facebook: https://www.facebook.com/ryudoawaru
@@ -117,13 +118,6 @@ en:
       experience:
       about: "I am an Office Manager, and I can code Rails. Single!"
       skills: Office Management
-
-    - name: Nina Yeh
-      title: Ruby Artisan
-      avatar: nina.jpg
-      facebook: https://www.facebook.com/itsmeninayeh
-      about: "Wandering between art and program"
-      skills: Ruby / Rails / HTML / CSS
 
     - name: 。KAY
       title: Ruby Ronin
@@ -179,6 +173,13 @@ en:
       skills: Ruby / Rails
       facebook: http://facebook.com/ilake.chang
 
+    - name: Nina Yeh
+      title: Ruby Artisan
+      avatar: nina.jpg
+      facebook: https://www.facebook.com/itsmeninayeh
+      about: "Wandering between art and program"
+      skills: Ruby / Rails / HTML / CSS
+
     - name: Aotokitsuruya
       title: Extreme Toolman
       avatar: aotoki.jpg
@@ -203,22 +204,6 @@ en:
       skills: HTML / CSS / Design
       facebook: https://www.facebook.com/irene.chang.735
       github: https://github.com/irene84111
-
-    - name: Henry Tseng
-      title: Young Onmyoji
-      avatar: henry.jpg
-      about: "Everything is out of nothing"
-      skills: Ruby / Rails / System Administration
-      facebook: https://www.facebook.com/computerhenry321
-      github: https://github.com/lctseng
-
-    - name: Fumitsuki
-      title: Eight plates eating hime
-      avatar: fumitsuki.jpg
-      about: "Keep calm and eat eight plates"
-      skills: Rails / HTML / CSS
-      facebook: https://www.facebook.com/ei.kudoryafuka
-      github: https://github.com/requiemformemories
 
     - name: Pokai Chang
       title: Useless Things Maker
@@ -251,6 +236,23 @@ en:
       skills: "HTML / CSS / Japanese"
       facebook: https://fb.me/ringo.yang.90
 
+    - name: Henry Tseng
+      title: Young Onmyoji
+      avatar: henry.jpg
+      about: "Everything is out of nothing"
+      skills: Ruby / Rails / System Administration
+      facebook: https://www.facebook.com/computerhenry321
+      github: https://github.com/lctseng
+
+    # 實習生放正職後面
+    - name: Fumitsuki
+      title: Eight plates eating hime
+      avatar: fumitsuki.jpg
+      about: "Keep calm and eat eight plates"
+      skills: Rails / HTML / CSS
+      facebook: https://www.facebook.com/ei.kudoryafuka
+      github: https://github.com/requiemformemories
+
     # 貓放最後面
     - name: Xue Mei
       title: Dark Ruby
@@ -259,7 +261,7 @@ en:
       skills: Play / Eat / Sleep
       facebook: https://www.facebook.com/meowmeowsister1
 
-    - name: Xai Xai
+    - name: Zhai Zhai (Xue Di)
       title: Justice Ruby
       avatar: cat-orange.jpg
       about: 「Meow Meow Meow~~~cute is justice」
