@@ -74,7 +74,7 @@
                 </div>
                 <div id="will-learn" class="col-sm-7 col-lg-7 col-md-7">
                   <b><%= t('.what_will_learn_label', hours: course.hours) %></b>
-                  <div class="small">
+                  <div class="small text-overflow-auto-scroll">
                     <%= raw tr(course, :what_will_learn) %>
                   </div>
                   <div class="pull-right small vex-dialog-opener" data-target="#camp-outline-dialog-<%= course.permalink %>">

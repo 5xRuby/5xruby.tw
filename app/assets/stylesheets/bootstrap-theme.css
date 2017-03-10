@@ -617,7 +617,6 @@ footer .fa-twitter:hover {
   position: fixed;
   bottom: 50px;
   right: 20px;
-  display: none;
   z-index: 99;
   background: #dfa1a6;
   color: #fff;
@@ -914,7 +913,7 @@ footer .fa-twitter:hover {
   color: #555;
 }
 .news-wrap p.descri {
-  height: 165px;
+  max-height: 165px;
   overflow: hidden;
 }
 .news-wrap .more {
@@ -1968,7 +1967,6 @@ footer .fa-twitter:hover {
   position: fixed;
   bottom: 50px;
   right: 20px;
-  display: none;
   z-index: 99;
   background: #dfa1a6;
   color: #fff;

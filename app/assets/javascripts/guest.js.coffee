@@ -17,12 +17,12 @@ $ () ->
 
   $(window).scroll ->
     if ($(this).scrollTop() > 100)
-      $('.scrollup').fadeIn()
+      $('.scrollup').removeClass 'scrollup-hide'
       $('.navbar').addClass 'resized'
       $('.navbar-brand').addClass 'goup'
       $('#lang-sign-in').fadeOut 'fast'
     else
-      $('.scrollup').fadeOut()
+      $('.scrollup').addClass 'scrollup-hide'
       $('.navbar').removeClass 'resized'
       $('.navbar-brand').removeClass 'goup'
       $('#lang-sign-in').fadeIn 'fast'
@@ -51,7 +51,7 @@ $ () ->
     $(openable).click( ->
       $(this).find(
         $(this).data('target')
-      ).slideToggle()
+      ).toggleClass('opened')
     )
   )
 
@@ -65,4 +65,14 @@ $ () ->
       , 300
 
   $('.dropdown-toggle').dropdown()
+
+  $('.text-overflow-auto-scroll').mousemove (e) ->
+    scroll_frame = $(this)
+    offset = scroll_frame.offset()
+    scroll_frame.clearQueue().scrollTo(
+      {
+        top: "#{(e.pageY - offset.top) * 100 / scroll_frame.height()}%",
+        left: "#{(e.pageX - offset.left) * 100 / scroll_frame.height()}%"
+      },
+      10, {interrupt: true})
 
