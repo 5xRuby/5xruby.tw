@@ -258,6 +258,14 @@ en:
       skills: "HTML / CSS / Japanese"
       facebook: https://fb.me/ringo.yang.90
 
+    - name: David Hou
+      title: Japanese quarrying craftsman
+      avatar: davidhou.png
+      facebook: https://www.facebook.com/takashi0819
+      github: https://github.com/llmonkey
+      about: Don’t forget your original intention.
+      skills: Ruby / Rails / history | grep xxx
+
     # 貓放最後面
     - name: Xue Mei
       title: Dark Ruby

@@ -257,6 +257,14 @@ zh-TW:
       skills: HTML / CSS / 日文
       facebook: https://fb.me/ringo.yang.90
 
+    - name: 侯大偉
+      title: 日本採礦師
+      avatar: davidhou.png
+      facebook: https://www.facebook.com/takashi0819
+      github: https://github.com/llmonkey
+      about: 勿忘初心
+      skills: Ruby / Rails / history | grep xxx
+
     # 貓放最後面
     - name: 學妹
       title: 暗黑紅寶石
