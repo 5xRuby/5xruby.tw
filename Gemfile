@@ -82,5 +82,6 @@ group :development, :test, :staging do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-byebug'
+  gem 'database_cleaner'
 end
 
