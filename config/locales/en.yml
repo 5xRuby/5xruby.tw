@@ -60,12 +60,13 @@ en:
   ceo: &ceo
     name: Eddie Kao
     title: Appraiser
-    about: 「希望有天可以寫程式來改變世界!」
+    about: "Change the world with coding!"
     avatar: eddiekao2.jpg
     facebook: https://www.facebook.com/eddiekao
     twitter: https://twitter.com/eddiekao
     google: https://plus.google.com/u/0/102669323697108172752/about
     github: https://github.com/kaochenlong
+    blog: http://kaochenlong.com/
     description: |
       ##  5 times professionalism. 5 times wishes. 5 times Ruby.
       ### About Us
@@ -88,8 +89,9 @@ en:
       As to why the company name is 5 times and not 3 or 100 times? Well, that's another story.
   members:
     - <<: *ceo
-      avatar: eddiekao.jpg
-    - name: Mu-fan Deng
+      avatar: eddiekao3.jpg
+
+    - name: Mu-fan Teng
       title: Unlimited Bug Generator
       avatar: ryudoawaru.jpg
       facebook: https://www.facebook.com/ryudoawaru
@@ -116,21 +118,6 @@ en:
       experience:
       about: "I am an Office Manager, and I can code Rails. Single!"
       skills: Office Management
-
-    - name: Nina Yeh
-      title: Ruby Artisan
-      avatar: nina.jpg
-      facebook: https://www.facebook.com/itsmeninayeh
-      about: "Wandering between art and program"
-      skills: Ruby / Rails / HTML / CSS
-
-    - name: Kendra Tang
-      title: Assistant Programmeow
-      avatar: tang.jpg
-      facebook: https://www.facebook.com/kendra.tang.meow
-      github: https://github.com/KazooTang
-      about: "Bug Freeeeee...!!"
-      skills: Ruby / Rails / HTML / CSS
 
     - name: 。KAY
       title: Ruby Ronin
@@ -186,6 +173,13 @@ en:
       skills: Ruby / Rails
       facebook: http://facebook.com/ilake.chang
 
+    - name: Nina Yeh
+      title: Ruby Artisan
+      avatar: nina.jpg
+      facebook: https://www.facebook.com/itsmeninayeh
+      about: "Wandering between art and program"
+      skills: Ruby / Rails / HTML / CSS
+
     - name: Aotokitsuruya
       title: Extreme Toolman
       avatar: aotoki.jpg
@@ -210,22 +204,6 @@ en:
       skills: HTML / CSS / Design
       facebook: https://www.facebook.com/irene.chang.735
       github: https://github.com/irene84111
-
-    - name: Henry Tseng
-      title: Young Onmyoji
-      avatar: henry.jpg
-      about: "Everything is out of nothing"
-      skills: Ruby / Rails / System Administration
-      facebook: https://www.facebook.com/computerhenry321
-      github: https://github.com/lctseng
-
-    - name: Fumitsuki
-      title: Eight plates eating hime
-      avatar: fumitsuki.jpg
-      about: "Keep calm and eat eight plates"
-      skills: Rails / HTML / CSS
-      facebook: https://www.facebook.com/ei.kudoryafuka
-      github: https://github.com/requiemformemories
 
     - name: Pokai Chang
       title: Useless Things Maker
@@ -258,6 +236,14 @@ en:
       skills: "HTML / CSS / Japanese"
       facebook: https://fb.me/ringo.yang.90
 
+    - name: Henry Tseng
+      title: Young Onmyoji
+      avatar: henry.jpg
+      about: "Everything is out of nothing"
+      skills: Ruby / Rails / System Administration
+      facebook: https://www.facebook.com/computerhenry321
+      github: https://github.com/lctseng
+
     - name: David Hou
       title: Japanese quarrying craftsman
       avatar: davidhou.png
@@ -265,6 +251,15 @@ en:
       github: https://github.com/llmonkey
       about: Don’t forget your original intention.
       skills: Ruby / Rails / history | grep xxx
+
+    # 實習生放正職後面
+    - name: Fumitsuki
+      title: Eight plates eating hime
+      avatar: fumitsuki.jpg
+      about: "Keep calm and eat eight plates"
+      skills: Rails / HTML / CSS
+      facebook: https://www.facebook.com/ei.kudoryafuka
+      github: https://github.com/requiemformemories
 
     # 貓放最後面
     - name: Xue Mei
@@ -274,7 +269,7 @@ en:
       skills: Play / Eat / Sleep
       facebook: https://www.facebook.com/meowmeowsister1
 
-    - name: Xai Xai
+    - name: Zhai Zhai (Xue Di)
       title: Justice Ruby
       avatar: cat-orange.jpg
       about: 「Meow Meow Meow~~~cute is justice」

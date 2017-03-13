@@ -66,6 +66,7 @@ zh-TW:
     twitter: https://twitter.com/eddiekao
     google: https://plus.google.com/u/0/102669323697108172752/about
     github: https://github.com/kaochenlong
+    blog: http://kaochenlong.com/
     description: |
       ## 五倍專業、五倍祝福，五倍的紅寶石
       ### 由來
@@ -88,7 +89,8 @@ zh-TW:
       至於公司名稱為什麼是「五倍」紅寶石，不是三倍也不是一百倍? 這又是另一個有趣的故事了：）
   members:
     - <<: *ceo
-      avatar: eddiekao.jpg
+      avatar: eddiekao3.jpg
+
     - name: 鄧慕凡
       title: 無限蟲制師
       avatar: ryudoawaru.jpg
@@ -99,6 +101,7 @@ zh-TW:
       about: 「非典型網站維運者」
       blog: http://ryudo.tw/
       skills: Ruby / Rails / Sinatra、系統管理
+
     - name: 趙子皓
       title: 紅寶石獵人
       avatar: jodeci2.jpg
@@ -116,26 +119,11 @@ zh-TW:
       about: 「徵男友，希望 30 歲前能嫁掉」
       skills: 3C 破壞/活動企劃/課程宣傳
 
-    - name: Nina
-      title: 紅寶石工匠
-      avatar: nina.jpg
-      facebook: https://www.facebook.com/itsmeninayeh
-      about: 「徜徉在程式與藝術的彌留空間裡」
-      skills: Ruby / Rails / HTML / CSS
-
-    - name: 湯凱甯
-      title: 蛀矣攻城喵
-      avatar: tang.jpg
-      facebook: https://www.facebook.com/kendra.tang.meow
-      github: https://github.com/KazooTang
-      about: 「惡蟲退散！」
-      skills: Ruby / Rails / HTML / CSS
-
     - name: 。KAY
       title: 紅寶石浪人
       avatar: ok.jpg
       facebook: https://www.facebook.com/fokayx
-      about: [おK 。]
+      about: 「おK 。」
       skills: Ruby/ Objective-C
 
     - name: Treekey
@@ -143,7 +131,7 @@ zh-TW:
       avatar: treekey.jpg
       facebook: https://www.facebook.com/treekey999
       github: https://github.com/treekey999
-      about: Blue who say and whose 認同請分享
+      about: 「Blue who say and whose 認同請分享」
       skills: Ruby / Rails / HTML / CSS
 
     - name: Alan
@@ -185,6 +173,13 @@ zh-TW:
       skills: Ruby / Rails
       facebook: http://facebook.com/ilake.chang
 
+    - name: Nina
+      title: 紅寶石工匠
+      avatar: nina.jpg
+      facebook: https://www.facebook.com/itsmeninayeh
+      about: 「徜徉在程式與藝術的彌留空間裡」
+      skills: Ruby / Rails / HTML / CSS
+
     - name: 蒼時弦也
       title: 究極のツールマン
       avatar: aotoki.jpg
@@ -210,22 +205,6 @@ zh-TW:
       facebook: https://www.facebook.com/irene.chang.735
       github: https://github.com/irene84111
 
-    - name: Henry Tseng
-      title: 少年陰陽師
-      avatar: henry.jpg
-      about: 「通靈之術！！」
-      skills: Ruby / Rails / 系統管理
-      facebook: https://www.facebook.com/computerhenry321
-      github: https://github.com/lctseng
-
-    - name: Meng-Ying Tsai
-      title: 八盤食姬
-      avatar: fumitsuki.jpg
-      about: 「文著八盤八，月下宵夜嚐；食前方丈味，記遊天下香。」
-      skills: Rails / HTML / CSS
-      facebook: https://www.facebook.com/ei.kudoryafuka
-      github: https://github.com/requiemformemories
-
     - name: 張博凱
       title: 無用產品製做仁
       avatar: pokaichang.jpg
@@ -235,7 +214,7 @@ zh-TW:
       github: https://github.com/Neson
 
     - name: PastLeo
-      title: '懂 10 進位的人'
+      title: 懂 10 進位的人
       avatar: pastleo.png
       about: 「很喜歡開源的力量以及概念」
       skills: Web / Ruby / rm -rf /
@@ -244,10 +223,10 @@ zh-TW:
       website: http://pastleo.me
 
     - name: Keddie
-      title: '撿紅寶石維生的林黛玉'
+      title: 撿紅寶石維生的林黛玉
       avatar: keddie.png
-      about: "「 我記得我跟程式語言不太熟的啊 」"
-      skills: "課程推廣 / 活動宣傳 / 你們會的我都不會"
+      about: 「 我記得我跟程式語言不太熟的啊 」
+      skills: 課程推廣 / 活動宣傳 / 你們會的我都不會
       facebook: https://fb.me/mengting.huang
 
     - name: RingoYang
@@ -257,6 +236,14 @@ zh-TW:
       skills: HTML / CSS / 日文
       facebook: https://fb.me/ringo.yang.90
 
+    - name: Henry Tseng
+      title: 少年陰陽師
+      avatar: henry.jpg
+      about: 「通靈之術！！」
+      skills: Ruby / Rails / 系統管理
+      facebook: https://www.facebook.com/computerhenry321
+      github: https://github.com/lctseng
+
     - name: 侯大偉
       title: 日本採礦師
       avatar: davidhou.png
@@ -264,6 +251,16 @@ zh-TW:
       github: https://github.com/llmonkey
       about: 勿忘初心
       skills: Ruby / Rails / history | grep xxx
+
+    # 實習生放正職後面
+
+    - name: Meng-Ying Tsai
+      title: 八盤食姬
+      avatar: fumitsuki.jpg
+      about: 「文著八盤八，月下宵夜嚐；食前方丈味，記遊天下香。」
+      skills: Rails / HTML / CSS
+      facebook: https://www.facebook.com/ei.kudoryafuka
+      github: https://github.com/requiemformemories
 
     # 貓放最後面
     - name: 學妹
@@ -273,7 +270,7 @@ zh-TW:
       skills: 玩 / 吃飯 / 睡覺
       facebook: https://www.facebook.com/meowmeowsister1
 
-    - name: 宅宅
+    - name: 宅宅（學弟）
       title: 正義紅寶石
       avatar: cat-orange.jpg
       about: 「喵喵喵~~~(毛色正確，可愛就是正義)」

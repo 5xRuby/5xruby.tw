@@ -59,13 +59,14 @@ ja:
         a: もし週間３日以上密集な訓練と実際にプロジェクトを参加し、サボっていなかったら 6 ~ 8 週ぐらい実際にシステム開発する能力を持つのは可能です。
   ceo: &ceo
     name: Eddie Kao
-    title: Appraiser
+    title: 赤宝石鑑定士
     about: 「いつかプログラミングで世界を変える!」
     avatar: eddiekao2.jpg
     facebook: https://www.facebook.com/eddiekao
     twitter: https://twitter.com/eddiekao
     google: https://plus.google.com/u/0/102669323697108172752/about
     github: https://github.com/kaochenlong
+    blog: http://kaochenlong.com/
     description: |
       ##  プロフェッショナリズム5倍、祝福5倍、Ruby5倍！
       ### About Us
@@ -88,7 +89,8 @@ ja:
       なぜ我々の会社の名前は、5倍で3倍や100倍ではないのか？それは、別の話があるんです。
   members:
     - <<: *ceo
-      avatar: eddiekao.jpg
+      avatar: eddiekao3.jpg
+
     - name: 竜堂
       title: 無限虫制師
       avatar: ryudoawaru.jpg
@@ -117,21 +119,6 @@ ja:
       about: "私は、オフィスマネージャーですが、Rails書けます！"
       skills: オフィスマネジメント
 
-    - name: Nina Yeh
-      title: Ruby職人
-      avatar: nina.jpg
-      facebook: https://www.facebook.com/itsmeninayeh
-      about: "アートとプログラムの間を放浪する"
-      skills: Ruby / Rails / HTML / CSS
-
-    - name: Kendra Tang
-      title: アシスタントプログラニャーン
-      avatar: tang.jpg
-      facebook: https://www.facebook.com/kendra.tang.meow
-      github: https://github.com/KazooTang
-      about: "バグから解放されたい!!"
-      skills: Ruby / Rails / HTML / CSS
-
     - name: Okay
       title: Ruby浪人
       avatar: ok.jpg
@@ -148,7 +135,7 @@ ja:
       skills: Ruby / Rails / HTML / CSS
 
     - name: Alan
-      title: Ruby黑王子
+      title: Ruby黒王子
       avatar: alan.jpg
       facebook: https://www.facebook.com/spart.chou
       twitter: https://twitter.com/spartchou
@@ -186,6 +173,13 @@ ja:
       skills: Ruby / Rails
       facebook: http://facebook.com/ilake.chang
 
+    - name: Nina Yeh
+      title: Ruby職人
+      avatar: nina.jpg
+      facebook: https://www.facebook.com/itsmeninayeh
+      about: "アートとプログラムの間を放浪する"
+      skills: Ruby / Rails / HTML / CSS
+
     - name: 蒼時弦也
       title: 究極のツールマン
       avatar: aotoki.jpg
@@ -209,22 +203,6 @@ ja:
       skills: HTML / CSS / Design
       facebook: https://www.facebook.com/irene.chang.735
       github: https://github.com/irene84111
-
-    - name: Henry Tseng
-      title: 少年陰陽師
-      avatar: henry.jpg
-      about: "全ては無から始まる"
-      skills: Ruby / Rails / システム管理
-      facebook: https://www.facebook.com/computerhenry321
-      github: https://github.com/lctseng
-
-    - name: 文月
-      title: 8皿食べる姫
-      avatar: fumitsuki.jpg
-      about: "落ち着いて8皿食べなさい"
-      skills: Rails / HTML / CSS
-      facebook: https://www.facebook.com/ei.kudoryafuka
-      github: https://github.com/requiemformemories
 
     - name: Pokai Chang
       title: 無駄な物生産機
@@ -257,6 +235,14 @@ ja:
       skills: HTML / CSS / 日本語
       facebook: https://fb.me/ringo.yang.90
 
+    - name: Henry Tseng
+      title: 少年陰陽師
+      avatar: henry.jpg
+      about: "全ては無から始まる"
+      skills: Ruby / Rails / システム管理
+      facebook: https://www.facebook.com/computerhenry321
+      github: https://github.com/lctseng
+
     - name: 侯大偉
       title: 日本採石職人
       avatar: davidhou.png
@@ -264,6 +250,15 @@ ja:
       github: https://github.com/llmonkey
       about: 初心忘れるべからず
       skills: Ruby / Rails / history | grep xxx
+
+    # 實習生放正職後面
+    - name: 文月
+      title: 8皿食べる姫
+      avatar: fumitsuki.jpg
+      about: "落ち着いて8皿食べなさい"
+      skills: Rails / HTML / CSS
+      facebook: https://www.facebook.com/ei.kudoryafuka
+      github: https://github.com/requiemformemories
 
     # 貓放最後面
     - name: Xue Mei
@@ -273,7 +268,7 @@ ja:
       skills: 遊ぶ / 食べる / 寝る
       facebook: https://www.facebook.com/meowmeowsister1
 
-    - name: Xai Xai
+    - name: Zhai Zhai (Xue Di)
       title: 正義 Ruby
       avatar: cat-orange.jpg
       about: 「Meow Meow Meow~~~かわいいは正義」
