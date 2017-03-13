@@ -244,6 +244,14 @@ en:
       facebook: https://www.facebook.com/computerhenry321
       github: https://github.com/lctseng
 
+    - name: David Hou
+      title: Japanese quarrying craftsman
+      avatar: davidhou.png
+      facebook: https://www.facebook.com/takashi0819
+      github: https://github.com/llmonkey
+      about: Don’t forget your original intention.
+      skills: Ruby / Rails / history | grep xxx
+
     # 實習生放正職後面
     - name: Fumitsuki
       title: Eight plates eating hime

@@ -243,6 +243,14 @@ ja:
       facebook: https://www.facebook.com/computerhenry321
       github: https://github.com/lctseng
 
+    - name: 侯大偉
+      title: 日本採石職人
+      avatar: davidhou.png
+      facebook: https://www.facebook.com/takashi0819
+      github: https://github.com/llmonkey
+      about: 初心忘れるべからず
+      skills: Ruby / Rails / history | grep xxx
+
     # 實習生放正職後面
     - name: 文月
       title: 8皿食べる姫
