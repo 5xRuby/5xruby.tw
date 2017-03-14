@@ -35,16 +35,16 @@ $ () ->
           location.hash = anchor
       e.preventDefault
       false
-
-  if $('.swiper-container').length
-    swiper = new Swiper('.swiper-container',
-      pagination: '.swiper-pagination',
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
-      slidesPerView: 1,
-      paginationClickable: true,
-      spaceBetween: 0,
-      loop: true
+  
+  for swiper_container in $('.swiper-container')
+    $swiper_container = $(swiper_container)
+    new Swiper(swiper_container,
+      pagination: $swiper_container.find('.swiper-pagination').get()[0],
+      slidesPerView: $swiper_container.data('slides-per-view') || 1,
+      paginationClickable: $swiper_container.data('disable-pagination-clickable') == undefined,
+      spaceBetween: $swiper_container.data('space-between') || 0,
+      loop: $swiper_container.data('disable-loop') == undefined,
+      autoplay: $swiper_container.data('autoplay')
     )
 
   $('.openable').each((i, openable) ->
