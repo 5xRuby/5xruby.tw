@@ -17,12 +17,12 @@ $ () ->
 
   $(window).scroll ->
     if ($(this).scrollTop() > 100)
-      $('.scrollup').fadeIn()
+      $('.scrollup').removeClass 'scrollup-hide'
       $('.navbar').addClass 'resized'
       $('.navbar-brand').addClass 'goup'
       $('#lang-sign-in').fadeOut 'fast'
     else
-      $('.scrollup').fadeOut()
+      $('.scrollup').addClass 'scrollup-hide'
       $('.navbar').removeClass 'resized'
       $('.navbar-brand').removeClass 'goup'
       $('#lang-sign-in').fadeIn 'fast'
@@ -35,23 +35,23 @@ $ () ->
           location.hash = anchor
       e.preventDefault
       false
-
-  if $('.swiper-container').length
-    swiper = new Swiper('.swiper-container',
-      pagination: '.swiper-pagination',
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
-      slidesPerView: 1,
-      paginationClickable: true,
-      spaceBetween: 0,
-      loop: true
+  
+  for swiper_container in $('.swiper-container')
+    $swiper_container = $(swiper_container)
+    new Swiper(swiper_container,
+      pagination: $swiper_container.find('.swiper-pagination').get()[0],
+      slidesPerView: $swiper_container.data('slides-per-view') || 1,
+      paginationClickable: $swiper_container.data('disable-pagination-clickable') == undefined,
+      spaceBetween: $swiper_container.data('space-between') || 0,
+      loop: $swiper_container.data('disable-loop') == undefined,
+      autoplay: $swiper_container.data('autoplay')
     )
 
   $('.openable').each((i, openable) ->
     $(openable).click( ->
       $(this).find(
         $(this).data('target')
-      ).slideToggle()
+      ).toggleClass('opened')
     )
   )
 
@@ -65,4 +65,14 @@ $ () ->
       , 300
 
   $('.dropdown-toggle').dropdown()
+
+  $('.text-overflow-auto-scroll').mousemove (e) ->
+    scroll_frame = $(this)
+    offset = scroll_frame.offset()
+    scroll_frame.clearQueue().scrollTo(
+      {
+        top: "#{(e.pageY - offset.top) * 100 / scroll_frame.height()}%",
+        left: "#{(e.pageX - offset.left) * 100 / scroll_frame.height()}%"
+      },
+      10, {interrupt: true})
 

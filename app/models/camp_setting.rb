@@ -14,7 +14,7 @@ class CampSetting < ApplicationRecord
     where(lang: lang)
   }
   scope :lang_or_none, -> (lang) {
-    where(lang: [lang, nil])
+    where(lang: lang).count > 0 ? where(lang: lang) : where(lang: nil)
   }
   scope :lang_or_any, -> (lang) {
     where(lang: lang) if where(lang: lang).count > 0
@@ -26,7 +26,7 @@ class CampSetting < ApplicationRecord
   
   # Attributes related macros
   STATUSES = %i{active inactive}
-  LOCALES = Settings.index_pictures.langs
+  LOCALES = I18n.available_locales.map(&:to_s)
   enum status: Hash[STATUSES.map {|x| [x.to_sym, x.to_s] }],
     lang: Hash[LOCALES.map {|x| [x.to_sym, x.to_s] }]
 

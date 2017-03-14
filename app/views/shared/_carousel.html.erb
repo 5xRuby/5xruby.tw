@@ -1,23 +1,14 @@
 
-<div id="feedback-carousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <% if items.size > 3 %>
-    <ol class="carousel-indicators">
-      <% (items.size / 3.0).ceil.times do |x| %>
-        <li data-target="#feedback-carousel" data-slide-to="<%=x%>" class="<%=x == 0 ? :active : nil%>" ></li>
-      <% end %>
-    </ol>
-  <% end %>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <% items.each_slice(3).to_a.each_with_index do |items_in_a_slide, idx| %>
-      <div class="item <%= :active if idx == 0 %>">
+<div class="swiper-container" data-autoplay="3000">
+  <div class="swiper-wrapper">
+    <% items.each_slice(3).to_a.each do |items_in_a_slide| %>
+      <div class="swiper-slide">
         <% items_in_a_slide.each do |item| %>
           <%= render partial: item_partial, locals: {item: item} %>
         <% end %>
       </div>
     <% end %>
   </div>
+  <div class="normal swiper-pagination"></div>
 </div>
 
