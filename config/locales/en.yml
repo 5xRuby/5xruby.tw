@@ -28,35 +28,35 @@ en:
     - img: goldenio.png
   training:
     intro_title: How do we train your employee?
-    description: Projects based on Ruby/Rails can be developed 5~10 times faster than other frameworks, but no where to find developer?<br>Here we provide \"Employee training program\".<br>The training program includes basic such as Git, Ruby, Rails to practical project development.<br>Making your employee able to start a Ruby/Rails project within 6~8 weeks and get rid of trouble things such as interviewing and recruiting.
-    process_title: 代訓流程
-    process_html: <ol><li>企業提出訓練需求(人數、期望能力、薪資)。</li><li>尋找合適人選。<br><ul><li>a. 由企業先行面試可能人選。</li><li>b. 或由五倍紅寶石協尋合適人選，並與企業進行第一次面談。</li></ul></li><li>三方(企業、受訓學員以及五倍紅寶石)簽定合作合約，由五倍紅寶石進行密集訓練。</li><li>訓練期滿，學員回至企業上班。</li></ol>
-    content_title: 訓練內容
-    content_html: <ol><li>基本技能：Git、Ruby、Rails、HTML/CSS/Javascript</li><li>測試驅動開發(使用 RSpec)</li><li>實際參與大型 Rails 專案開發</li></ol>訓練時間：平常上班日 10:30 ~ 18:30，<br>每週 3 天以上，約 6 ~ 8 週。<br>訓練地點：五倍紅寶石<br>訓練人數：小班制，每梯次最多僅收 3 ~ 5 人。
-    what_they_say_title: 聽聽他們怎麼說
-    what_they_say_description: 以下是一些之前跟我們一起學習，現已經在業界工作的夥伴，聽聽他們怎麼說：
+    description: Projects based on Ruby/Rails can be developed 5~10 times faster than other frameworks, but no where to find developer?<br>Here we provide "Employee training program".<br>The training program includes basic such as Git, Ruby, Rails to practical project development.<br>Making your employee able to start a Ruby/Rails project within 6~8 weeks and get rid of trouble things such as interviewing and recruiting.
+    process_title: Process
+    process_html: <ol><li>Company provides needs(number of people、expected skills and salary)。</li><li>Find potential trainee<br><ul><li>a. Company interviews the potential trainee</li><li>b. Or associated by 5xRuby and have first interview with company.</li></ul></li><li>Tripartite(company、trainee and 5xRuby)sign contract, and the trainee will be trained by 5xRuby.</li><li>After training period, the trainee will go back to the company.</li></ol>
+    content_title: Content
+    content_html: <ol><li>Basic skills：Git、Ruby、Rails、HTML/CSS/Javascript</li><li>TDD(Using RSpec)</li><li>Real experience to join big Rails project</li></ol>Traing time：Weekday 10:30 ~ 18:30，<br>At least 3 days a week and last for 6-8 weeks.。<br>Location：5xRuby<br>Numbers：Only 3 to 5 people accepted for each class.
+    what_they_say_title: The real story
+    what_they_say_description: These are the stroies from our former students. 
     what_they_says:
       - name: Annie
-        title: 前艾思網絡 Rails 工程師
+        title: E i-TRUE Rails Engineer
         img: annie.jpg
-        content: 與五倍一起學習，使我在公司開發專案時，能更快進入狀況且明顯加快開發效率，尤其在寫出可維護的程式碼上，節省不少自我摸索的時間。另外，五倍強大的人脈，讓我認識許多業界專家，發掘專案常見問題，開發上的實務技巧，以及如何團隊協作。如果想培養出企業所需的即戰力，我相信與五倍一起學習會是一個很棒的選擇。
+        content: By learning with 5xRuby, It helped me increase my development efficiency and be able to write maintainable code, which saves me a lot of time. Besides, the community 5xRuby built helps me to meet many industry experts, understand the common problem in projects, the best practice when development and how to cooperate with team members. For those company which want to cultivate more good engineer, I would highly recommend to choose 5xRuby.
       - name: Okay
-        title: 五倍紅寶石 iOS 工程師
+        title: 5xRuby iOS Engineer
         img: okay.jpg
-        content: 2015 年從零開始接觸程式語言，在我的程式生涯開端很幸運地遇見了五倍紅寶石，講師在一字一鍵的教學中，從基礎觀念由淺入深到實戰經驗，架構清晰邏輯清楚，課後也非常鼓勵學員到礦坑解除各種技術障、參加社群活動，交流分享毫不藏私。 五倍紅寶石正派經營、用心實在、技術一流，是學習程式語言的首選無誤 <3<3<3
-      - name: 李昱陞
-        title: 五倍紅寶石 Rails 工程師
+        content: Started to learn programming since 2015, it was very lucky to meet 5xRuby in the early stage of my programming career. The way the teacher teached was very logical and easy to understand. They also encouraged students to come to meetup to get consultation and join the community. 5xRuby is really a reliable, serious, outstanding company, it is definitely the best choice to learn programming. <3<3<3
+      - name: Yu-Sheng Li
+        title: 5xRuby Rails Engineer
         img: bill.jpg
-        content: 身為一個菜鳥工程師，我認為踏入程式設計師的修行之路是永無止盡的，要學的東西並非短短幾個月、幾年可以通通學完，需要的是持續的自我學習。去年有幸在五倍紅寶石成為龍哥的學生，與一般你所認知的進修課程不同，因為老師本身平時就是以他所教授的東西為工作，你可以很紮實的從讓程式動起來、到了解背後的運作，並且直接得知新手常犯的錯誤、工作上應該要留意的細節，而不是等到實作後才自己陷入無止盡地踩雷地獄。<br><br>更重要的是，除了讓你具備實戰的能力，講師們會仔細告訴你程式背後的設計原理跟哲學，讓你不只會運用、更知道什麼時候適合用、該怎麼用；同時老師也會在課堂中實際帶大家解決問題、查閱手冊、培養諸如寫測試等工作應該具備的好習慣，讓你在實際在遇到問題時有自己去解決問題、自我成長的能力。
+        content: As a junior engineer, I think there are too many things you have to learn which may take you several years even decades. What we really need is the ability to keep learning and be self-taught. I was very lucky to be Eddie’s student. The course was different from other normal course you could imagine, because the teacher himself is the senior engineer, so what he taught are all about what a good engineer should do, and how to be a good engineer. So you can really make you application work, know how it works, some common mistake that newbies make and what details are important while working. It can prevent students losing there confidence when they start to do a real project.<br><br>More importantly, the teachers not only teach you the skill, but also let you know the logic and philosophy behind scenes. At the same time, the teacher will walk students through common question, teach how to solve the problem, consult the official document and  cultivate the good habit to write test. 
     qnas:
-      - q: 為什麼要由企業面試可能人選?
-        a: 每個企業的文化以及氣場不同，即使技術很厲害的開發者也不一定跟企業合得來，我們建議由企業先行面試「合得來」的人再來進行訓練。
-      - q: 費用怎麼算?
-        a: 對企業，我們會收取 15 ~ 20% 年薪做為服務費；對受訓的學員，我們會先收取一個的月薪，待到職滿試用期後可退回半個月的月薪。
-      - q: 保證就業嗎?
-        a: 是的，因為我們是先跟企業簽定合約才會開始進行，除非企業因故中止合約，否則可以視為保證就業。
-      - q: 6 ~ 8 週就有辦法達到企業的需求嗎?
-        a: 如果是一週三天以上密集的訓練加上實際專案的磨練，只要不要太混，在 6 ~ 8 週應該可以練到可以用的程度沒問題。
+      - q: Why company should interview the possible trainee?
+        a: Because every company has different culture and needs, even though a excellent developer won't fit every company. So we suggest companies to sent the 'right' people by interviewing first.
+      - q: How you charge?
+        a: For per trainee, we will charge 15-20% of annual salary from the company. And We will also charge 1 month salary from the trainee, but they will get half monthly salary as refund if they pass probation.
+      - q: Is this job-guarantee?
+        a: Yes, because the training program will start after signing contract with company, unless the company cut the contract, or you can think of it as job-guarantee. 
+      - q: Could get 6-8 weeks training to be on part with junior development?
+        a: If you can practice 3 days a week plus intense training and developing a real project, you will be able to be on part with junior development.
   ceo: &ceo
     name: Eddie Kao
     title: Appraiser
@@ -375,17 +375,18 @@ en:
     camp:
       features:
         - img: feature-list-img1.png
-          title: 第一線經驗直授
-          description: 五倍的師資都是業界資深前輩<br>讓你除了懂得理論<br>更學會學校不教的業界祕笈
+          title: Experience fromfirst-line developers
+          description: The lecturers of 5xRuby are all industry experts<br>They will let you understand the theory<br>Also learn the real-world problem-solving skill
         - img: feature-list-img2.png
-          title: 實戰用豐富內容
-          description: 課程內容絕不灌水不教速成<br>除了打好扎實基礎<br>也知道如何在職場上運用自如
+          title: Useful and highly relevant content
+          description:  Step by step courses are provided<br>Help you get solid foundation<br>Let you have strong ability you need for job
         - img: feature-list-img3.png
-          title: 彈性搭配課程
-          description: 四種系列課程<br>讓你依自身狀況自由搭配<br>避免重複學習已經學會的東西
+          title: Flexible training courses
+          description: We have 4 serial progrems<br>You can choses the course you want based on your need<br>No need to enroll in duplicated lecture anymore
         - img: feature-list-img3.png
-          title: 職涯輔導社群交流
-          description: 五倍致力於Ruby社群經營多年<br>不管想求職轉職想創業<br>都可以提供你最專業的建議
+          title: Career consulting and community
+          description: 5xRuby have managed community for years<br>No matter you want to get a job, transfer your job or start a startup<br>We can provide you the most professional advices.
+
     about_services:
       - name: Technical Consulting
         img: consult.png
