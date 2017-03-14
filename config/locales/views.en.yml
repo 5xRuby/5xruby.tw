@@ -26,7 +26,7 @@ en:
       hours_label: 'Hours:'
   interview_questions:
     index:
-      lead: 我們提供一些識別度高的 Ruby/Rails 面試題目供你使用 =)
+      lead: We provide some frequently asked Ruby/Rails interview questions for you
       answer: See Answer
   posts:
     index:
@@ -46,7 +46,7 @@ en:
   videos:
     index:
       title: Videos
-      lead: 各種優質短片，專業課程錄影、桌面錄影教學與重要活動影片
+      lead: Good short video, professional course recording, screen tutorial teaching and event videos
     show:
       share: Share to Facebook
 
@@ -76,7 +76,7 @@ en:
       mobile_label: 'Mobile：'
       email_label: 'E-mail：'
       fax_label: 'Fax：'
-      welcom_to_contact: 任何問題都歡迎您透過以下表單詢問，我們會盡快回覆您！
+      welcom_to_contact: If you have any question, you can use the form below to contact us, we will contact you asap
       budget: Budget
       write_your_message: Leave your message
       submit: Submit
@@ -95,15 +95,15 @@ en:
       what_will_learn_label: 'In these %{hours} hours, you will learn:'
       view_outline: '...outline'
       chapter_title: "Lesson %{nth}:"
-      testimonials: 聽聽大家怎麼說
+      testimonials: Real Story
       qna:
         title: Q & A
         q_label: Q：
         a_label: A：
       more_question:
-        - 若以上Q&A無法解答您的疑問，歡迎您透過
-        - 與我們聯繫，或是直接來電洽詢。
-      contact_link: 聯絡表單
+        - If you question is not answred by the Q&A, you can contact us by
+        - Or call us directly.
+      contact_link: Contact form
       payment_note: 'Payment:'
       note: 'Notes:'
 

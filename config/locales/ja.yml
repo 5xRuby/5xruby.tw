@@ -384,17 +384,17 @@ ja:
     camp:
       features:
         - img: feature-list-img1.png
-          title: 第一線經驗直授
-          description: 五倍的師資都是業界資深前輩<br>讓你除了懂得理論<br>更學會學校不教的業界祕笈
+          title: 第一線で活躍する講師
+          description: 5xRubyの講師陣やメンバー<br>経験豊富な現役エンジニアで<br>我々は理論をベースに実践的な経験を持っております。
         - img: feature-list-img2.png
-          title: 實戰用豐富內容
-          description: 課程內容絕不灌水不教速成<br>除了打好扎實基礎<br>也知道如何在職場上運用自如
+          title: 実用なカリキュラム
+          description: 5xRubyはのカリキュラムは<br>本気て受講生にスキルを習得させることを<br>追求しています。
         - img: feature-list-img3.png
-          title: 彈性搭配課程
-          description: 四種系列課程<br>讓你依自身狀況自由搭配<br>避免重複學習已經學會的東西
+          title: 自由にプログラムを選択
+          description: 四つのプログラム<br>あなたの現在の実力をもとに<br>気に入る講座を選ばせます。
         - img: feature-list-img3.png
-          title: 職涯輔導社群交流
-          description: 五倍致力於Ruby社群經營多年<br>不管想求職轉職想創業<br>都可以提供你最專業的建議
+          title: キャリアサポート
+          description: 5xRubyは長い間コミュニティを経営し<br>就職、転職、起業をしたい方に<br>サポートを提供します。
     description: 5xRubyは、台湾Rubyコミュニティのコアメンバーが創設しましたRuby及びRuby on Railsの技術コンサルティングとトレーニング事業を行う会社です。
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'
