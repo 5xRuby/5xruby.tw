@@ -1,13 +1,13 @@
 class DatePickerInput < SimpleForm::Inputs::Base
 
   def input(wrapper_options = {})
-    template.content_tag(:input, '', {
+    input_html_classes.push('form-control', 'datetimepicker')
+    @builder.text_field(attribute_name, {
       value: object.send(attribute_name).strftime("%Y-%m-%d"),
-      class: 'form-control datetimepicker',
       data: {
         'date-pickTime' => false,
         'date-format' => 'YYYY-MM-DD'
       }
-    }.merge(wrapper_options))
+    }.merge(input_html_options).merge(wrapper_options))
   end
 end
