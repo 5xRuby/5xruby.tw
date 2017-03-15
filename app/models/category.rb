@@ -29,7 +29,8 @@ class Category < ActiveRecord::Base
       max_date > Time.now
     else
       logger.warn 'Use `Category.with_max_date` for better performance.'
-      courses.select('courses.*, max(date) as max_date').joins(:stages).group('courses.id').order('max_date desc').first.max_date > Time.now
+      courses_with_max_data = courses.select('courses.*, max(date) as max_date').joins(:stages).group('courses.id').order('max_date desc').first
+      courses_with_max_data.present? ? courses_with_max_data.max_date > Time.now : false
     end
   end
 end

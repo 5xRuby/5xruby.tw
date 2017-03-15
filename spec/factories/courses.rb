@@ -42,14 +42,23 @@ FactoryGirl.define do
 
     transient do
       stages_count 6
+      stages_since_or_ago :random
     end
 
     after(:build) do |course, evaluator|
-      stages = build_list(:stage, evaluator.stages_count, (rand > 0.5 ? :since : :ago))
+      since_or_ago = evaluator.stages_since_or_ago == :random ? (rand > 0.5 ? :since : :ago) : evaluator.stages_since_or_ago
+      stages = build_list(:stage, evaluator.stages_count, since_or_ago)
       course.stages = stages
       course.speakers = Speaker.order('RANDOM()').limit(2)
     end
-
+    
+    factory :course_since do
+      stages_since_or_ago :since
+    end
+    factory :course_ago do
+      stages_since_or_ago :ago
+    end
+    
     factory :online_course do
       is_online true
     end

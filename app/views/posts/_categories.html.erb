@@ -6,13 +6,13 @@
       <div class="col-sm-12 col-lg-12 col-md-12">
         <ul class="nav navbar-nav">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle text-grey medium" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= tags.present? ? tags.map{|tag_as_cate| t("posts_cate_tags.#{tag_as_cate}")}.join(', ') : t('.all_categories') %><span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle text-grey medium" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= tags.present? ? tags.map{|tag_as_cate| t("posts_cate_tags.#{tag_as_cate}", default: tag_as_cate)}.join(', ') : t('.all_categories') %><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <% if tags.present? %>
                 <li><%= link_to t('.all_categories'), posts_path %></li>
               <% end %>
               <% posts_cate_tags_exclude(tags).each do |tag_as_cate| %>
-                <li><%= link_to t("posts_cate_tags.#{tag_as_cate}"), posts_path(tags: tag_as_cate) %></li>
+                <li><%= link_to t("posts_cate_tags.#{tag_as_cate}", default: tag_as_cate), posts_path(tags: tag_as_cate) %></li>
               <% end %>
             </ul>
           </li>
