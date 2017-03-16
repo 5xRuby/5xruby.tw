@@ -13,10 +13,10 @@ defaults: &defaults
     - 心得分享
     - 其他消息
   index_pictures:
-    langs: ['zh-TW', 'en', 'ja']
     sizes: ['400w', '600w', '1280w', '1920w', '2560w']
     default_size: '1280w'
-development:
+
+development: &development
   <<: *defaults
   admin_path_prefix: admin
   flowdock:
@@ -38,9 +38,10 @@ development:
       :password: PASSWORD
       :authentication: plain
       :enable_starttls_auto: true
+  contact_email: dev@local
 
 test:
-  <<: *defaults
+  <<: *development
 
 production:
   <<: *defaults
