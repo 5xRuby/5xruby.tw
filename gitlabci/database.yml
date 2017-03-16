@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+
+development:
+  <<: *default
+  database: 5xruby-dev
+
+test:
+  <<: *default
+  username: postgres
+  password: mysecretpassword
+  host: postgres
+  database: 5xruby-test
+
+staging:
+  <<: *default
+  database: 5xruby-staging
+
+production:
+  <<: *default
+  database: 5xruby-production

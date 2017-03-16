@@ -83,5 +83,6 @@ group :development, :test, :staging do
   gem 'faker'
   gem 'pry-byebug'
   gem 'database_cleaner'
+  gem 'rubocop'
 end
 

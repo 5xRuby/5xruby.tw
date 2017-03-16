@@ -1,0 +1,104 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  Include:
+    - ./Rakefile
+    - ./config.ru
+  Exclude:
+    - bin/**/*
+    - db/schema.rb
+    - config/**/*
+    - lib/tasks/*.rake
+
+Rails:
+  Enabled: true
+
+# Use &&/|| instead of and/or.
+AndOr:
+  Enabled: false
+
+# Use only ascii symbols in identifiers.
+AsciiComments:
+  Enabled: false
+
+# Document classes and non-namespace modules.
+Documentation:
+  Enabled: false
+
+# Use the lambda method for multi-line lambdas.
+Lambda:
+  Enabled: false
+
+# Limit lines to 79 characters.
+LineLength:
+  Max: 79
+  Enabled: false
+
+MethodLength:
+  Max: 30
+  Enabled: true
+
+# Don't use self where it's not needed.
+RedundantSelf:
+  Enabled: false
+
+# Checks for proper usage of fail and raise.
+SignalException:
+  Enabled: false
+
+# Prefer ' strings when you don't need string interpolation or special symbols.
+StringLiterals:
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+
+# Align block ends correctly.
+BlockAlignment:
+  Enabled: false
+
+# Avoid the use of attr. Use attr_reader and attr_accessor instead.
+Attr:
+  Enabled: false
+
+ClassAndModuleChildren:
+  Enabled: false
+
+UnusedBlockArgument:
+  Enabled: false
+
+UnusedMethodArgument:
+  Enabled: false
+
+MultilineOperationIndentation:
+  Enabled: false
+
+AbcSize:
+  Max: 20
+
+CyclomaticComplexity:
+  Max: 30
+
+RescueModifier:
+  Severity: warning
+  AutoCorrect: false
+
+# node(:id) { |m| m.file_id }
+SymbolProc:
+  Severity: warning
+  AutoCorrect: false
+
+MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+ConditionalAssignment:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Exclude:
+    - "**/*_spec.rb"
+    - spec/factories/*
+
+Metrics/BlockLength:
+  Exclude:
+    - "**/*_spec.rb"
+    - spec/factories/*

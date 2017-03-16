@@ -1,0 +1,32 @@
+image: ryudoawaru/ruby23a
+
+variables:
+  CAP_USER: "deployer"
+  BUNDLE_CACHE: "vendor/bundle/"
+  RAILS_ENV: "test"
+  CI: "true"
+
+cache:
+  untracked: true
+  key: "$CI_BUILD_NAME"
+  paths:
+    - vendor/bundle/
+
+services:
+  - postgres:9.6-alpine
+
+before_script:
+  - ./gitlabci/setup.sh
+
+stages:
+  - test
+
+rspec:
+  stage: test
+  script:
+    - bundle exec rspec
+
+rubocop:
+  stage: test
+  script:
+    - bundle exec rubocop
