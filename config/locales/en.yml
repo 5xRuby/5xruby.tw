@@ -55,8 +55,8 @@ en:
         a: For per trainee, we will charge 15-20% of annual salary from the company. And We will also charge 1 month salary from the trainee, but they will get half monthly salary as refund if they pass probation.
       - q: Is this job-guarantee?
         a: Yes, because the training program will start after signing contract with company, unless the company cut the contract, or you can think of it as job-guarantee. 
-      - q: Could get 6-8 weeks training to be on part with junior development?
-        a: If you can practice 3 days a week plus intense training and developing a real project, you will be able to be on part with junior development.
+      - q: Could get 6-8 weeks training to be on part with junior developer?
+        a: If you can practice 3 days a week plus intense training and developing a real project, you will be able to be on part with junior developer.
   ceo: &ceo
     name: Eddie Kao
     title: Appraiser
@@ -376,16 +376,16 @@ en:
       features:
         - img: feature-list-img1.png
           title: Experience fromfirst-line developers
-          description: The lecturers of 5xRuby are all industry experts<br>They will let you understand the theory<br>Also learn the real-world problem-solving skill
+          description: The lecturers of 5xRuby are all industry experts. They will let you understand the theory and learn the real-world problem-solving skills.
         - img: feature-list-img2.png
           title: Useful and highly relevant content
-          description:  Step by step courses are provided<br>Help you get solid foundation<br>Let you have strong ability you need for job
+          description:  Step by step courses are provided. Help you get solid foundation and have strong ability you need for job.
         - img: feature-list-img3.png
           title: Flexible training courses
-          description: We have 4 serial progrems<br>You can choses the course you want based on your need<br>No need to enroll in duplicated lecture anymore
+          description: We have 4 serial progrems. You can choses the course you want based on your needs. No need to enroll in duplicated lecture anymore.
         - img: feature-list-img3.png
           title: Career consulting and community
-          description: 5xRuby have managed community for years<br>No matter you want to get a job, transfer your job or start a startup<br>We can provide you the most professional advices.
+          description: 5xRuby have managed community for years. No matter you want to get a job, transfer your job or start a startup, we can provide you the most professional advices.
 
     about_services:
       - name: Technical Consulting
