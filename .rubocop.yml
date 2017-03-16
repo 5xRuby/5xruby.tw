@@ -102,3 +102,7 @@ Metrics/BlockLength:
   Exclude:
     - "**/*_spec.rb"
     - spec/factories/*
+
+#Style/FrozenStringLiteralComment:
+  #Enabled: false
+
