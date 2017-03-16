@@ -617,7 +617,6 @@ footer .fa-twitter:hover {
   position: fixed;
   bottom: 50px;
   right: 20px;
-  display: none;
   z-index: 99;
   background: #dfa1a6;
   color: #fff;
@@ -726,20 +725,6 @@ footer .fa-twitter:hover {
   float: left;
   margin-bottom: 50px;
 }
-.carousel-control.left, .carousel-control.right {
-  background: none;
-}
-.carousel-indicators .active {
-  background: #a93247;
-  border: 1px solid #a93247;
-}
-.carousel-indicators li {
-  background: #ccc;
-  border: none;
-}
-.carousel-indicators {
-  bottom: -50px;
-}
 .know-about-us .text {
   line-height: 38px;
   font-size: 18px;
@@ -748,7 +733,7 @@ footer .fa-twitter:hover {
   .carousel-inner {
     text-align: center;
   }
-  .feedback-section .carousel-inner .avatar {
+  .feedback-section .swiper-container .avatar {
     width: 50px;
     height: 50px;
     margin-right: 5px !important;
@@ -914,7 +899,7 @@ footer .fa-twitter:hover {
   color: #555;
 }
 .news-wrap p.descri {
-  height: 165px;
+  max-height: 165px;
   overflow: hidden;
 }
 .news-wrap .more {
@@ -1968,7 +1953,6 @@ footer .fa-twitter:hover {
   position: fixed;
   bottom: 50px;
   right: 20px;
-  display: none;
   z-index: 99;
   background: #dfa1a6;
   color: #fff;
@@ -2010,12 +1994,6 @@ footer .fa-twitter:hover {
   text-align: center;
   letter-spacing: 2px;
 }
-.swiper-pagination-bullet {
-  border: 1px solid #ddd !important;
-}
-.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  border: 1px solid #fff !important;
-}
 @media (max-width: 767px) {
   .swiper-title {
     font-size: 35px;
@@ -2036,20 +2014,6 @@ footer .fa-twitter:hover {
   float: left;
   margin-bottom: 50px;
 }
-.carousel-control.left, .carousel-control.right {
-  background: none;
-}
-.carousel-indicators .active {
-  background: #a93247;
-  border: 1px solid #a93247;
-}
-.carousel-indicators li {
-  background: #ccc;
-  border: none;
-}
-.carousel-indicators {
-  bottom: -50px;
-}
 .know-about-us .text {
   line-height: 38px;
   font-size: 18px;
@@ -2058,7 +2022,7 @@ footer .fa-twitter:hover {
   .carousel-inner {
     text-align: center;
   }
-  .feedback-section .carousel-inner .avatar {
+  .feedback-section .swiper-container .avatar {
     width: 50px;
     height: 50px;
     margin-right: 5px !important;
@@ -2072,7 +2036,7 @@ footer .fa-twitter:hover {
 }
 @media (min-width: 992px) {
   .camp-list .col-lg-6 {
-    height: 470px !important;
+    height: 520px !important;
   }
   .camp-list .speaker {
     display: none !important;
@@ -2083,7 +2047,7 @@ footer .fa-twitter:hover {
 }
 @media (min-width: 1200px) {
   .camp-list .col-lg-6 {
-    height: 470px !important;
+    height: 520px !important;
   }
   .camp-list .speaker {
     display: block !important;

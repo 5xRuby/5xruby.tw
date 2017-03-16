@@ -111,6 +111,6 @@ class Course < ActiveRecord::Base
   end
 
   def reset_category_counter
-    self.category.reset_courses_count!
+    self.category.reset_courses_count! if self.category.present?
   end
 end

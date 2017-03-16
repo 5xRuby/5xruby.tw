@@ -20,7 +20,7 @@
                   </div>
                   <h3><%= tr post, :title %></h3>
                   <div class="bottom-padding">
-                    <p class="descri both-spacing-sm"><%= tr post, :summary %></p>
+                    <p class="descri both-spacing-sm text-overflow-auto-scroll"><%= tr post, :summary %></p>
                     <span class="text-grey small"><%= "#{t('.by')}#{post.author.try(:name)}" %></span>
                   </div>
                 </div>

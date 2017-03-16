@@ -1,4 +1,4 @@
-<div class="swiper-container">
+<div class="swiper-container" data-autoplay="5000">
   <div class="swiper-wrapper">
     <% @index_pictures.each do |ip| %>
       <div class="swiper-slide">
@@ -6,5 +6,5 @@
       </div>
     <% end %>
   </div>
-  <div class="swiper-pagination"></div>
+  <div class="index swiper-pagination"></div>
 </div>

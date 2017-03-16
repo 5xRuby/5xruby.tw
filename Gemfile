@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'rack-mini-profiler', git: 'https://github.com/MiniProfiler/rack-mini-profiler.git'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.1'
+gem 'rails', '~> 5.0.2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -82,5 +82,6 @@ group :development, :test, :staging do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-byebug'
+  gem 'database_cleaner'
 end
 

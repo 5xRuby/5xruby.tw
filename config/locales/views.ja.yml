@@ -104,7 +104,7 @@ ja:
         - もし他の質問があれば、お気軽に
         - 連絡してください。あるいは直接5xRubyに電話してください
       contact_link: お問い合わせフォーム
-      payment_note: '支払い方法'
+      payment_note: '支払い方法:'
       note: 'ノート:'
 
   devise:

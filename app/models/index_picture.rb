@@ -11,7 +11,8 @@ class IndexPicture < ApplicationRecord
   # Attributes related macros
   DEFAULT_SIZE = Settings.index_pictures.default_size.to_sym
   def src(lang, size = DEFAULT_SIZE)
-    if (src_expected = (src_sizes = srcset(lang))[size]).present?
+    return nil if (src_sizes = srcset(lang)).blank?
+    if (src_expected = src_sizes[size]).present?
       src_expected
     else
       src_sizes.first[1]

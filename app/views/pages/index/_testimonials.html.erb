@@ -3,19 +3,11 @@
 <div class="feedback-section light-grey-bg bottom-padding-lg">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
-        <div id="feedback-carousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <% t('site.index.testimonials').size.times do |x| %>
-              <li data-target="#feedback-carousel" data-slide-to="<%=x%>" class="<%=x == 0 ? :active : nil%>" ></li>
-            <% end %>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block top-spacing-lg">
+        <div class="swiper-container" data-autoplay="3000">
+          <div class="swiper-wrapper">
             <% t('site.index.testimonials').each_with_index do |tm, idx| %>
-              <div class="item <%= :active if idx == 0 %>">
+              <div class="swiper-slide">
                 <div class="col-sm-8 col-lg-8 col-md-8 center-block">
                   <%= image_tag "testimonials/#{tm[:img]}", class: 'avatar right-spacing', alt: tm[:name] %>
                   <%= tm[:content] %>
@@ -24,8 +16,8 @@
                 </div>
               </div>
             <% end %>
-
           </div>
+          <div class="normal swiper-pagination both-spacing-sm"></div>
         </div>
       </div>
     </div>
