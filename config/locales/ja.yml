@@ -399,8 +399,14 @@ ja:
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'
     contact_budgets:
-      - 'Below 100 thousands NTD'
-      - '100 ~ 500 thousands NTD'
-      - '500 thousands ~ 1 million NTD'
-      - 'More than 1 million NTD'
-
+      - '10万 台湾ドル以下'
+      - '10万 ~ 50万 台湾ドル'
+      - '50万 ~ 100万 台湾ドル'
+      - '100万 台湾ドル以上'
+  posts_cate_tags:
+      社群活動: コミュニティ
+      媒體報導: メディア掲載
+      企業合作: 業務提携
+      工作機會: 採用情報
+      心得分享: 感想とレビュー
+      其他消息: その他
