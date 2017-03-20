@@ -77,7 +77,7 @@ group :development do
   gem 'capistrano-upload-config'
 end
 
-group :development, :test, :staging do
+group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'

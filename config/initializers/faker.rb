@@ -1,4 +1,4 @@
-unless Rails.env.production?
+unless Rails.env.production? || Rails.env.staging?
   Faker::Config.locale = :'zh-TW'
 
   class Faker::Image
