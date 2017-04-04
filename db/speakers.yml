@@ -55,13 +55,15 @@
     RubyKaigi 2011 講師
     OpenFoundry 工作坊講師
 
-- name: 蘇泰安 Taian Su
+- name: 蘇泰安 (taiansu)
   remote_avatar_url: https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-frc3/t31.0-8/977529_10201296496671746_869599157_o.jpg
   is_online: true
   role: parttime-speaker
   summary: |
     RubyConf Taiwan 2014 講師
+    RubyConf Taiwan 2016 講師
     Rails Girls Taipei 發起人
+    Elixir.tw 共同主辦人
 
 - name: 何澤清 (Tse-Ching Ho)
   remote_avatar_url: https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-frc3/t1.0-9/320955_2520027161914_1170994112_n.jpg

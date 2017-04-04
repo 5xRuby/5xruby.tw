@@ -252,6 +252,17 @@ zh-TW:
       about: 勿忘初心
       skills: Ruby / Rails / history | grep xxx
 
+    - name: 蘇泰安
+      title: 崩潰之鍊金術士
+      avatar: taiansu.png
+      facebook: https://www.facebook.com/sutaian
+      twitter: https://twitter.com/taiansu
+      github: https://github.com/taiansu
+      experience: Elixir.tw 協辦人
+      blog: https://taian.su/
+      about: 「Let it crash.」
+      skills: Elixir / Phoenix / JavaScript / Ruby
+
     # 實習生放正職後面
 
     - name: Meng-Ying Tsai

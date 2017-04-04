@@ -251,6 +251,17 @@ ja:
       about: 初心忘れるべからず
       skills: Ruby / Rails / history | grep xxx
 
+    - name: 蘇泰安
+      title: 崩潰の錬金術士
+      avatar: taiansu.png
+      facebook: https://www.facebook.com/sutaian
+      twitter: https://twitter.com/taiansu
+      github: https://github.com/taiansu
+      experience: Elixir.tw 共同主催者
+      blog: https://taian.su/
+      about: 「バンバンクラッシュさせろ」
+      skills: Elixir / Phoenix / JavaScript / Ruby
+
     # 實習生放正職後面
     - name: 文月
       title: 8皿食べる姫
