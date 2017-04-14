@@ -5,8 +5,9 @@
       <div class="col-sm-3 col-lg-4 col-md-4">
         <h5><%= t('.media') %></h5>
         <p>
-        <a href="<%= t('site.openfoundary_url') %>" target="_blank"><%= image_tag 'open-foundry-logo.png', class: 'bottom-spacing-sm' %></a>
-        <br><a href="<%= t('site.panx_url') %>" target="_blank"><%= image_tag 'panx-logo.png' %></a>
+          <%= link_to press_path do %>
+            <%= image_tag 'press-img.png', class: 'press-img' %>
+          <% end %>
         </p>
       </div>
       <div class="col-sm-9 col-lg-8 col-md-8 bottom-spacing-sm">

@@ -361,6 +361,11 @@ zh-TW:
       sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
       default_size: "1280w.png"
       alt: 常見問題Q&A，有關於五倍的問題嗎？你可以在這裡找到答案
+    press_main_banner:
+      folder: press-main-banner/zh-TW
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: 媒體報導，國內外各家媒體關於五倍的報導
     member_main_banner:
       folder: member-main-banner/zh-TW
       sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
