@@ -120,8 +120,9 @@ ja:
 
   layouts:
     footer:
-      media: メディア・マスコミ取材
+      media: メディア取材
       about_5xruby: 会社概要
+      press: メディア取材
       members: 社員一覧
       contact: お問い合わせ
 

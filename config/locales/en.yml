@@ -11,8 +11,9 @@ en:
     open_hours: 'Mon - Fri / 09:30 - 22:00'
     facebook: 'https://www.facebook.com/5xruby'
     twitter: 'https://twitter.com/5xruby'
+    github: 'https://github.com/5xruby'
     gmap_url: 'https://goo.gl/lz5v93'
-    gmap_iframe_url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.016266311726!2d121.513862!3d25.0424189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa8402e622aa7b148!2z5LqU5YCN57SF5a-255-z!5e0!3m2!1szh-TW!2stw!4v1482991564796" 
+    gmap_iframe_url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.016266311726!2d121.513862!3d25.0424189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa8402e622aa7b148!2z5LqU5YCN57SF5a-255-z!5e0!3m2!1szh-TW!2stw!4v1482991564796"
   cooperations:
     - img: vpon.png
     - img: accuvally.png
@@ -34,7 +35,7 @@ en:
     content_title: Content
     content_html: <ol><li>Basic skills：Git、Ruby、Rails、HTML/CSS/Javascript</li><li>TDD(Using RSpec)</li><li>Real experience to join big Rails project</li></ol>Traing time：Weekday 10:30 ~ 18:30，<br>At least 3 days a week and last for 6-8 weeks.。<br>Location：5xRuby<br>Numbers：Only 3 to 5 people accepted for each class.
     what_they_say_title: The real story
-    what_they_say_description: These are the stroies from our former students. 
+    what_they_say_description: These are the stroies from our former students.
     what_they_says:
       - name: Annie
         title: E i-TRUE Rails Engineer
@@ -47,14 +48,14 @@ en:
       - name: Yu-Sheng Li
         title: 5xRuby Rails Engineer
         img: bill.jpg
-        content: As a junior engineer, I think there are too many things you have to learn which may take you several years even decades. What we really need is the ability to keep learning and be self-taught. I was very lucky to be Eddie’s student. The course was different from other normal course you could imagine, because the teacher himself is the senior engineer, so what he taught are all about what a good engineer should do, and how to be a good engineer. So you can really make you application work, know how it works, some common mistake that newbies make and what details are important while working. It can prevent students losing there confidence when they start to do a real project.<br><br>More importantly, the teachers not only teach you the skill, but also let you know the logic and philosophy behind scenes. At the same time, the teacher will walk students through common question, teach how to solve the problem, consult the official document and  cultivate the good habit to write test. 
+        content: As a junior engineer, I think there are too many things you have to learn which may take you several years even decades. What we really need is the ability to keep learning and be self-taught. I was very lucky to be Eddie’s student. The course was different from other normal course you could imagine, because the teacher himself is the senior engineer, so what he taught are all about what a good engineer should do, and how to be a good engineer. So you can really make you application work, know how it works, some common mistake that newbies make and what details are important while working. It can prevent students losing there confidence when they start to do a real project.<br><br>More importantly, the teachers not only teach you the skill, but also let you know the logic and philosophy behind scenes. At the same time, the teacher will walk students through common question, teach how to solve the problem, consult the official document and  cultivate the good habit to write test.
     qnas:
       - q: Why company should interview the possible trainee?
         a: Because every company has different culture and needs, even though a excellent developer won't fit every company. So we suggest companies to sent the 'right' people by interviewing first.
       - q: How you charge?
         a: For per trainee, we will charge 15-20% of annual salary from the company. And We will also charge 1 month salary from the trainee, but they will get half monthly salary as refund if they pass probation.
       - q: Is this job-guarantee?
-        a: Yes, because the training program will start after signing contract with company, unless the company cut the contract, or you can think of it as job-guarantee. 
+        a: Yes, because the training program will start after signing contract with company, unless the company cut the contract, or you can think of it as job-guarantee.
       - q: Could get 6-8 weeks training to be on part with junior developer?
         a: If you can practice 3 days a week plus intense training and developing a real project, you will be able to be on part with junior developer.
   ceo: &ceo
@@ -358,6 +359,11 @@ en:
       sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
       default_size: "1280w.png"
       alt: Q&A
+    press_main_banner:
+      folder: press-main-banner/ja
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Press
     member_main_banner:
       folder: member-main-banner/en
       sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]

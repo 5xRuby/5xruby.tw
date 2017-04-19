@@ -3,14 +3,15 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-3 col-lg-4 col-md-4">
-        <h5><%= t('.media') %></h5>
         <p>
-        <a href="<%= t('site.openfoundary_url') %>" target="_blank"><%= image_tag 'open-foundry-logo.png', class: 'bottom-spacing-sm' %></a>
-        <br><a href="<%= t('site.panx_url') %>" target="_blank"><%= image_tag 'panx-logo.png' %></a>
+          <%= link_to press_path do %>
+            <%= image_tag 'press-img.png', class: 'press-img', title: t('.media') %>
+          <% end %>
         </p>
       </div>
       <div class="col-sm-9 col-lg-8 col-md-8 bottom-spacing-sm">
         <h5><%= link_to t('.about_5xruby'), about_path %></h5>
+        <h5><%= link_to t('.press'), press_path %></h5>
         <h5><%= link_to t('.members'), members_path %></h5>
         <h5><%= link_to t('.contact'), contacts_path %></h5>
         <h5><%= link_to t('.faq'), faq_path %></h5>
@@ -20,7 +21,7 @@
       <div class="col-sm-3 col-lg-3 col-md-3">
         <strong class="large text-red"><%= t('company.contact_phone') %></strong>
         <br><small><%= t('company.open_hours') %></small>
-        <br><a href="<%= t('company.facebook') %>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="<%= t('company.twitter') %>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <br><a href="<%= t('company.facebook') %>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="<%= t('company.twitter') %>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="<%= t('company.github') %>" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
       </div>
       <div class="col-sm-5 col-lg-5 col-md-5">
         <div class="mail-address">
