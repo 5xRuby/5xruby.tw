@@ -133,7 +133,8 @@
         <h3 class="text-center top-spacing-lg bottom-spacing"><span><%= t('.testimonials') %></span></h3>
         <%= render partial: 'shared/carousel', locals: {
           items: @camp.testimonials,
-          item_partial: 'pages/camp_testimonial'
+          item_partial: 'pages/camp_testimonial',
+          latency: @camp.testimonials_latency,
         } %>
       </div>
     </div>

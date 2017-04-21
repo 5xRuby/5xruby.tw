@@ -1,5 +1,5 @@
 
-<div class="swiper-container" data-autoplay="3000">
+<div class="swiper-container" data-autoplay="<%= latency ||= 3000 %>">
   <div class="swiper-wrapper">
     <% items.each_slice(3).to_a.each do |items_in_a_slide| %>
       <div class="swiper-slide">

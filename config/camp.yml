@@ -59,6 +59,7 @@ sales:
     text: 馬上報名獲取優惠
     href: '#tickets'
 
+testimonials_latency: 15000
 testimonials:
   - name: Annie
     img: /uploads/redactor_image/image/80/thumb_annie.jpg
