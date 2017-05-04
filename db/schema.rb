@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170308030123) do
+ActiveRecord::Schema.define(version: 20170504100313) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
+
+  create_table "activities", force: :cascade do |t|
+    t.string   "type"
+    t.string   "title"
+    t.string   "permalink"
+    t.string   "status"
+    t.text     "note"
+    t.text     "payment_note"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -194,6 +206,7 @@ ActiveRecord::Schema.define(version: 20170308030123) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 
