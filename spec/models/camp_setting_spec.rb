@@ -5,7 +5,7 @@ RSpec.describe CampSetting, type: :model do
   locales = CampSetting::LOCALES
   
   it 'default payload is the same as the yml' do
-    expect(build(:camp_setting).payload['title']).to eq Camp.title
+    expect(build(:camp_setting).payload['title']).to eq CampTemplateLoader.title
   end
 
   it 'query scope lang_or_none for a lang when the target lang not exists, it looks for lang is nil' do

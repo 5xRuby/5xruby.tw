@@ -1,4 +1,4 @@
-class Camp < Settingslogic
+class CampTemplateLoader < Settingslogic
   source "#{Rails.root}/config/camp.yml"
 
   class << self
@@ -35,11 +35,11 @@ class Camp < Settingslogic
   end
 
   private
-  
+
   def add_root_methods
     extend RootMethods
   end
-  
+
   module RootMethods
     def days_before_begining
       (begin_date_parsed - Date.today).to_i
