@@ -285,6 +285,12 @@ GEM
     select2-rails (3.5.9.1)
       thor (~> 0.14)
     settingslogic (2.0.9)
+    shoulda (3.5.0)
+      shoulda-context (~> 1.0, >= 1.0.1)
+      shoulda-matchers (>= 1.4.1, < 3.0)
+    shoulda-context (1.2.2)
+    shoulda-matchers (2.8.0)
+      activesupport (>= 3.0.0)
     sidekiq (4.2.9)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
@@ -372,6 +378,7 @@ DEPENDENCIES
   select2-rails (= 3.5.9.1)
   select2_helper!
   settingslogic
+  shoulda
   simple_form
   spring
   swiper-rails
@@ -380,4 +387,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.14.3
+   1.14.6

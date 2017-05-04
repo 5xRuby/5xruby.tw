@@ -84,5 +84,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'database_cleaner'
   gem 'rubocop'
+  gem 'shoulda'
 end
 

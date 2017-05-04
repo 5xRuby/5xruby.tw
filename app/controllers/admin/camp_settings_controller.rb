@@ -5,7 +5,7 @@ class Admin::CampSettingsController < AdminController
   end
 
   def preview
-    @camp = Camp.use CampSetting.find(params[:camp_setting_id]) 
+    @camp = CampTemplateLoader.use CampSetting.find(params[:camp_setting_id])
     render 'pages/camp', layout: 'application'
   end
 

@@ -2,7 +2,7 @@ class CampSetting < ApplicationRecord
 
   def initialize(_ = {})
     super
-    self.payload ||= Camp.to_hash
+    self.payload ||= CampTemplateLoader.to_hash
     self.status ||= :inactive
   end
   
