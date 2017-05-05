@@ -8,6 +8,7 @@ class Activity::Camp < Activity
   # Attributes related macros
 
   # association macros
+  has_one :template, class_name: "CampTemplate", foreign_key: :activity_id
 
   # validation macros
 

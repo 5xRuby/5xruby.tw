@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170505041141) do
+ActiveRecord::Schema.define(version: 20170505065529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "uuid-ossp"
 
   create_table "activities", force: :cascade do |t|
     t.string   "type"
@@ -44,8 +43,10 @@ ActiveRecord::Schema.define(version: 20170505041141) do
     t.json     "payload"
     t.string   "status"
     t.string   "lang"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "activity_id"
+    t.index ["activity_id"], name: "index_camp_templates_on_activity_id", using: :btree
   end
 
   create_table "categories", force: :cascade do |t|
@@ -213,7 +214,6 @@ ActiveRecord::Schema.define(version: 20170505041141) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 
@@ -230,4 +230,5 @@ ActiveRecord::Schema.define(version: 20170505041141) do
 
   add_foreign_key "activities_courses", "activities"
   add_foreign_key "activities_courses", "courses"
+  add_foreign_key "camp_templates", "activities"
 end

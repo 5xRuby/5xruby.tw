@@ -3,6 +3,7 @@ require 'support/factory_girl'
 
 RSpec.describe CampTemplate, type: :model do
   locales = CampTemplate::LOCALES
+  it { is_expected.to belong_to(:camp).class_name("Activity::Camp") }
 
   it 'default payload is the same as the yml' do
     expect(build(:camp_template).payload['title']).to eq CampTemplateLoader.title

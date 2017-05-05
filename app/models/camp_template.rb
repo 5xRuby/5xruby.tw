@@ -53,6 +53,7 @@ class CampTemplate < ApplicationRecord
   end
 
   # association macros
+  belongs_to :camp, class_name: "Activity::Camp", foreign_key: :activity_id
 
   # validation macros
   validates :status, :payload, presence: true
