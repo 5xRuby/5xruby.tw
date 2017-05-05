@@ -15,6 +15,10 @@ class Activity::Talk < Activity
 
   # other
 
+  def course
+    courses.first
+  end
+
   protected
   # callback methods
 end

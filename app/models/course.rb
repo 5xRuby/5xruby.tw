@@ -1,5 +1,5 @@
 class Course < ActiveRecord::Base
-  
+
   ABOUT_TO_BEGIN = eval Settings.course_about_to_begin_time
 
   # scope macros
@@ -23,8 +23,8 @@ class Course < ActiveRecord::Base
   has_and_belongs_to_many :speakers
   belongs_to :category, counter_cache: true
   has_many :translations, as: :translatable
-  has_and_belongs_to_many :camp, association_foreign_key: 'activity_id', class_name: "::Activity::Camp"
-  has_and_belongs_to_many :talk, association_foreign_key: 'activity_id', class_name: "::Activity::Talk"
+  has_and_belongs_to_many :camps, association_foreign_key: 'activity_id', class_name: "::Activity::Camp"
+  has_and_belongs_to_many :talks, association_foreign_key: 'activity_id', class_name: "::Activity::Talk"
 
   # validation macros
   validates :title, presence: true
