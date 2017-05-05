@@ -22,8 +22,8 @@ Rails.application.routes.draw do
     resources :courses, :authors, :speakers, :faqs, :categories, :showcases, :videos, :interview_questions do
       put :sort, on: :collection
     end
-    resources :index_pictures, :camp_settings
-    resources :camp_settings do
+    resources :index_pictures, :camp_templates
+    resources :camp_templates do
       get :preview
       patch :active
     end

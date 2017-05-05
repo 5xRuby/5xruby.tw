@@ -2,12 +2,12 @@ class CampTemplateLoader < Settingslogic
   source "#{Rails.root}/config/camp.yml"
 
   class << self
-    def use_or_default(camp_setting)
-      camp_setting.nil? ? new : use(camp_setting)
+    def use_or_default(camp_template)
+      camp_template.nil? ? new : use(camp_template)
     end
 
-    def use(camp_setting)
-      new(camp_setting)
+    def use(camp_template)
+      new(camp_template)
     end
   end
 
@@ -17,9 +17,9 @@ class CampTemplateLoader < Settingslogic
       raise Errno::ENOENT, "No file specified as Settingslogic source"
     when Hash
       self.replace source
-    when CampSetting
+    when CampTemplate
       self.replace source.payload || {}
-      section = "CampSetting with id = #{source.id}"
+      section = "CampTemplate with id = #{source.id}"
       add_root_methods
     else
       file_contents = open(source).read
