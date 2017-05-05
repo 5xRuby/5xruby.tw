@@ -8,6 +8,7 @@ class Activity < ApplicationRecord
   # Attributes related macros
 
   # association macros
+  has_and_belongs_to_many :courses
 
   # validation macros
 
