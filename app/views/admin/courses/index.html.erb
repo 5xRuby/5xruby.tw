@@ -5,7 +5,7 @@
 <table class="table table-striped table-condensed">
   <thead>
     <tr>
-      <%= th_for Admin::Course, :id, :is_online, :image, :title, :hours, :permalink, :subtitle, :category %>
+      <%= th_for Admin::Course, :id, :image, :title, :hours, :permalink, :subtitle, :category %>
       <th></th>
       <th></th>
       <th></th>
@@ -16,7 +16,8 @@
   <tbody>
     <% @admin_courses.each do |admin_course| %>
       <tr>
-        <%= td_for admin_course, :id, td_is_online(admin_course), :image, [:title, ->(c){ link_to c.title, c}], [:hours, ->(c){ show_hours c.hours }], :permalink, :subtitle, [:category, :name] %>
+        <!-- TODO admin_is_online(admin_course) -->
+        <%= td_for admin_course, :id, :image, [:title, ->(c){ link_to c.title, c}], [:hours, ->(c){ show_hours c.hours }], :permalink, :subtitle, [:category, :name] %>
         <td><%= link_to admin_icon_tag(:plus), new_admin_course_path(fork: admin_course), class: 'btn btn-success', title: '複製' %></td>
         <%= td_action_for admin_course %>
       </tr>
