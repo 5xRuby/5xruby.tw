@@ -13,10 +13,10 @@
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12">
         <ul class="nav nav-pills both-spacing">
-          <li class="<%= 'active' unless @category %>"><%= link_to t('.all_courses'), Course %></li>
+          <li class="<%= 'active' unless @category %>"><%= link_to t('.all_talks'), talks_path %></li>
           <% @categories.each do |category| %>
             <li class="<%= 'active' if @category == category %>">
-              <%= link_to courses_path(category: category.permalink) do %>
+              <%= link_to talks_path(category: category.permalink) do %>
                 <%= "#{category.name} (#{category.courses_count })" %> <%= image_tag '/img/new.png', alt: 'New' if category.new_course? %>
               <% end %>
             </li>
@@ -34,10 +34,10 @@
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block">
         <div class="lecture-list">
-          <%= render @courses %>
+          <%= render partial: "talk", collection: @talks, as: :talk  %>
           <div class="clear"></div>
           <nav class="text-center">
-            <%= paginate @courses %>
+            <%= paginate @talks %>
           </nav>
         </div>
       </div>
@@ -46,13 +46,14 @@
 </div>
 <!-- End Lectures -->
 
+<!-- Start Speakers -->
 <div class="feedback-section bottom-padding-lg">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
         <h3 class="text-center both-spacing-lg"><span><%= t('.speakers') %></span></h3>
         <%= render partial: 'shared/carousel', locals: {
-          items: @speakers.map do |s| 
+          items: @speakers.map do |s|
             {
               type: 'speaker',
               avatar: s.avatar.thumb,
@@ -73,4 +74,4 @@
     </div>
   </div>
 </div>
-
+<!-- End Speakers -->

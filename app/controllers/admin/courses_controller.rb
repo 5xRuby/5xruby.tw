@@ -78,7 +78,7 @@ class Admin::CoursesController < AdminController
     def admin_course_params
       params.require(:admin_course).permit(
         :maximum_attendees, :total_attendees, :minimum_attendees, :iframe_html, :category_id, :image, :remove_image, :image_cache, :title, :permalink, :subtitle,
-        :summary, :description, :what_will_learn, :is_online, :note, :apply_link, :suitable_for, :payment_note,
+        :summary, :description, :what_will_learn, :note, :apply_link, :suitable_for, :payment_note,
         speaker_ids: [],
         stages_attributes: %i[id _destroy title description date start_at end_at hours]
       )

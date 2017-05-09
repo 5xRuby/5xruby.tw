@@ -8,7 +8,8 @@ class Activity < ApplicationRecord
   # Attributes related macros
 
   # association macros
-  has_and_belongs_to_many :courses
+  has_and_belongs_to_many :courses, after_add: :touch_if_needed, after_remove: :touch_if_needed
+  has_many :translations, as: :translatable
 
   # validation macros
 
@@ -18,4 +19,7 @@ class Activity < ApplicationRecord
 
   protected
   # callback methods
+  def touch_if_needed(course)
+    self.touch if persisted?
+  end
 end

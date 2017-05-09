@@ -1,23 +1,23 @@
 
 <div class="col-sm-4 col-lg-4 col-md-4 bottom-spacing">
-  <%= link_to course do %>
+  <%= link_to talk_path(id: talk.permalink) do %>
     <div class="lecture-wrap">
-      <%= image_tag course.image.thumb, class: 'cover' %>
-      <h4 class="rl-padding"><%= tr course, :title %></h4>
+      <%= image_tag talk.image.thumb, class: 'cover' %>
+      <h4 class="rl-padding"><%= tr talk, :title %></h4>
       <div class="rl-padding bottom-padding">
-        <% if course.outdated? %>
+        <% if talk.outdated? %>
           <span class="small"><%= t('.outdated') %></span>
-        <% elsif course.about_to_begin? %>
+        <% elsif talk.about_to_begin? %>
           <span class="yellow-tag small"><%= t('.about_to_begin') %></span>
         <% else %>
           <span class="orange-tag small"><%= t('.opening') %></span>
         <% end %>
         <%#<span class="orange-tag small">剩<span class="text-brown">2</span>名額</span>%>
-        <span class="date text-grey small"><%= course.start_on %></span>
+        <span class="date text-grey small"><%= talk.start_on %></span>
         <p class="descri both-spacing-sm">
-          <%= tr course, :summary %>
+          <%= tr talk.course, :summary %>
         </p>
-        <span class="text-grey small"><%= t('.speaker_label') %> <%= speakers_name course %>  | <%= t('.hours_label') %> <%= course.hours %></span>
+        <span class="text-grey small"><%= t('.speaker_label') %> <%= speakers_name talk %>  | <%= t('.hours_label') %> <%= talk.hours %></span>
       </div>
     </div>
   <% end %>

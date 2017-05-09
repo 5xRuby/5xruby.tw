@@ -1,4 +1,4 @@
-class Activity::Camp < Activity
+class Admin::CampTemplate < CampTemplate
   # scope macros
 
   # Concerns macros
@@ -8,7 +8,6 @@ class Activity::Camp < Activity
   # Attributes related macros
 
   # association macros
-  has_one :template, class_name: "CampTemplate", foreign_key: :activity_id
 
   # validation macros
 

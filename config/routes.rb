@@ -3,11 +3,9 @@ Rails.application.routes.draw do
     root 'pages#index'
     get :training, :about, :members, :contacts, :faq, :press, :sitemap, :camp, :login, controller: :pages
     resources :posts, only: %i[index show]
-    resources :courses, path: :talks, only: %i[index show]
+    resources :talks, only: %i[index show]
     resources :contacts, only: :create
     resources :showcases, only: :index
-    get 'courses/:id', to: redirect('/talks/%{id}')
-    get 'courses', to: redirect('/talks')
     post 'rental/calculate'
   end
 
@@ -22,8 +20,8 @@ Rails.application.routes.draw do
     resources :courses, :authors, :speakers, :faqs, :categories, :showcases, :videos, :interview_questions do
       put :sort, on: :collection
     end
-    resources :index_pictures, :camp_settings
-    resources :camp_settings do
+    resources :index_pictures, :camp_templates
+    resources :camp_templates do
       get :preview
       patch :active
     end

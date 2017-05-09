@@ -1,11 +1,11 @@
-class Admin::CampSettingsController < AdminController
+class Admin::CampTemplatesController < AdminController
 
   def new
     @current_object = current_model.new(payload: current_object.try(:payload))
   end
 
   def preview
-    @camp = CampTemplateLoader.use CampSetting.find(params[:camp_setting_id])
+    @camp = CampTemplateLoader.use CampTemplate.find(params[:camp_template_id])
     render 'pages/camp', layout: 'application'
   end
 
@@ -18,16 +18,16 @@ class Admin::CampSettingsController < AdminController
   end
 
   protected
-  
+
   def current_model
-    Admin::CampSetting
+    Admin::CampTemplate
   end
 
   def current_object
-    @current_object ||= current_model.find_by(id: params[:id] || params[:camp_setting_id])
+    @current_object ||= current_model.find_by(id: params[:id] || params[:camp_template_id])
   end
 
   def allowed_params
-    params.require(:admin_camp_setting).permit(:json, :lang)
+    params.require(:admin_camp_template).permit(:json, :lang)
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170504104433) do
+ActiveRecord::Schema.define(version: 20170508064522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,11 +19,11 @@ ActiveRecord::Schema.define(version: 20170504104433) do
     t.string   "type"
     t.string   "title"
     t.string   "permalink"
-    t.string   "status"
     t.text     "note"
     t.text     "payment_note"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.boolean  "is_online"
   end
 
   create_table "activities_courses", force: :cascade do |t|
@@ -39,12 +39,14 @@ ActiveRecord::Schema.define(version: 20170504104433) do
     t.datetime "updated_at"
   end
 
-  create_table "camp_settings", force: :cascade do |t|
+  create_table "camp_templates", force: :cascade do |t|
     t.json     "payload"
     t.string   "status"
     t.string   "lang"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "activity_id"
+    t.index ["activity_id"], name: "index_camp_templates_on_activity_id", using: :btree
   end
 
   create_table "categories", force: :cascade do |t|
@@ -228,4 +230,5 @@ ActiveRecord::Schema.define(version: 20170504104433) do
 
   add_foreign_key "activities_courses", "activities"
   add_foreign_key "activities_courses", "courses"
+  add_foreign_key "camp_templates", "activities"
 end

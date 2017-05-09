@@ -9,7 +9,7 @@ RSpec.describe CampTemplateLoader, type: :model do
     expect(camp.int).to eq camp_with_some_payload.payload['int']
   end
 
-  it 'root_methods should be added when initialize with yml or CampSetting' do
+  it 'root_methods should be added when initialize with yml or CampTemplate' do
     camp_with_yml = CampTemplateLoader.new
     camp_using_some_payload = CampTemplateLoader.use build(:camp_with_some_payload)
     CampTemplateLoader::RootMethods.instance_methods.each do |method|
@@ -31,7 +31,7 @@ RSpec.describe CampTemplateLoader, type: :model do
   it 'courses should pick up each of a corresponding course record' do
     courses = create_list :course, 5
     courses_permalinks = courses.map(&:permalink)
-    camp = CampTemplateLoader.use build(:camp_setting,
+    camp = CampTemplateLoader.use build(:camp_template,
       {payload: {lessons: courses_permalinks.map { |permalink| {course_permalink: permalink}}}}
     )
     camp.courses.each do |c|

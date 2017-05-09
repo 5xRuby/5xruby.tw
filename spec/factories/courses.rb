@@ -30,7 +30,6 @@ FactoryGirl.define do
     image { Faker::Image.image }
     title { Faker::Name.title }
     permalink { SecureRandom.hex(4) }
-    is_online { rand > 0.5 }
     subtitle { Faker::Lorem.sentence }
     summary { Faker::Lorem.paragraph.slice(0, 150) }
     description { "<p>#{Faker::Lorem.paragraph}</p>" }
@@ -57,10 +56,6 @@ FactoryGirl.define do
     end
     factory :course_ago do
       stages_since_or_ago :ago
-    end
-    
-    factory :online_course do
-      is_online true
     end
   end
 end

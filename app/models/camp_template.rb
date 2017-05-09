@@ -1,11 +1,11 @@
-class CampSetting < ApplicationRecord
+class CampTemplate < ApplicationRecord
 
   def initialize(_ = {})
     super
     self.payload ||= CampTemplateLoader.to_hash
     self.status ||= :inactive
   end
-  
+
   # scope macros
   scope :active, -> {
     where(status: :active)
@@ -23,7 +23,7 @@ class CampSetting < ApplicationRecord
   # Concerns macros
 
   # Constants
-  
+
   # Attributes related macros
   STATUSES = %i{active inactive}
   LOCALES = I18n.available_locales.map(&:to_s)
@@ -42,7 +42,7 @@ class CampSetting < ApplicationRecord
     self.status = :active
     save!
   end
-  
+
   def inactive!
     self.status = :inactive
     save!
@@ -53,6 +53,7 @@ class CampSetting < ApplicationRecord
   end
 
   # association macros
+  belongs_to :camp, class_name: "Activity::Camp", foreign_key: :activity_id
 
   # validation macros
   validates :status, :payload, presence: true

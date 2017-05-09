@@ -1,10 +1,10 @@
-class Admin::CampSetting < CampSetting
+class Admin::Camp < Activity::Camp
   # scope macros
 
   # Concerns macros
 
   # Constants
-  
+
   # Attributes related macros
 
   # association macros

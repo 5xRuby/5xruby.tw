@@ -1,11 +1,8 @@
 class Course < ActiveRecord::Base
-  
+
   ABOUT_TO_BEGIN = eval Settings.course_about_to_begin_time
 
   # scope macros
-  scope :online, -> { where(is_online: true) }
-  scope :coming, -> { select('courses.*, min(date) as min_date').joins(:stages).group('courses.id').order('min_date') }
-  scope :available, -> { online.where('stages.date >= ?', Time.now).joins(:stages).distinct }
 
   # Concerns macros
   include Select2Concern
@@ -23,8 +20,8 @@ class Course < ActiveRecord::Base
   has_and_belongs_to_many :speakers
   belongs_to :category, counter_cache: true
   has_many :translations, as: :translatable
-  has_and_belongs_to_many :camp, association_foreign_key: 'activity_id', class_name: "::Activity::Camp"
-  has_and_belongs_to_many :talk, association_foreign_key: 'activity_id', class_name: "::Activity::Talk"
+  has_and_belongs_to_many :camps, association_foreign_key: 'activity_id', class_name: "::Activity::Camp"
+  has_and_belongs_to_many :talks, association_foreign_key: 'activity_id', class_name: "::Activity::Talk"
 
   # validation macros
   validates :title, presence: true
@@ -55,7 +52,7 @@ class Course < ActiveRecord::Base
   end
 
   def fork
-    the_forked = self.class.new attributes.except!('id', 'iframe_html', 'is_online')
+    the_forked = self.class.new attributes.except!('id', 'iframe_html')
     the_forked.permalink = the_forked.next_permalink
     the_forked.speakers = speakers
     the_forked.image = image
@@ -94,6 +91,7 @@ class Course < ActiveRecord::Base
     nearest_stage_date > Time.now
   end
 
+  # TODO
   def outdated?
     not available?
   end
@@ -102,6 +100,7 @@ class Course < ActiveRecord::Base
     nearest_stage_date - Date.today
   end
 
+  # TODO
   def about_to_begin?
     remaining_days < ABOUT_TO_BEGIN and not outdated?
   end

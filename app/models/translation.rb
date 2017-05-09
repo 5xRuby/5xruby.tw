@@ -6,6 +6,7 @@ class Translation < ActiveRecord::Base
     Showcase => [:name, :description],
     Post     => [:title, :summary, content: :redactor],
     Course   => [:title, :summary, :subtitle, what_will_learn: :redactor, note: :redactor],
+    Activity => [:title],
     Stage    => [:title, description: :redactor]
   }
   # scope macros

@@ -25,12 +25,10 @@ FactoryGirl.define do
       courses_is_online true
     end
 
-    after(:build) do |category, evaluator|
-      category.courses = create_list(
-        (evaluator.courses_is_online ? :online_course : :course),
-        evaluator.courses_count,
-        stages_since_or_ago: evaluator.courses_since_or_ago
-      )
+    after(:create) do |category, evaluator|
+      evaluator.courses_count.times do
+        category.courses << create(:course, stages_since_or_ago: evaluator.courses_since_or_ago)
+      end
     end
   end
 end
