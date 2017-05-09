@@ -1,10 +1,10 @@
 module TalksHelper
-  def date_range course
-    "#{course.start_on} ~ #{course.end_on}"
+  def date_range(resource)
+    "#{resource.start_on} ~ #{resource.end_on}"
   end
 
-  def speakers_name(course)
-    course.speakers.map do |s|
+  def speakers_name(resource)
+    resource.speakers.map do |s|
       tr(s, :name)
     end.join(', ')
   end

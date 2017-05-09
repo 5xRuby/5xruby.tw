@@ -25,8 +25,8 @@
       <div class="col-sm-6 col-lg-7 col-md-5 line-height-lg">
         <small class="text-grey"><%= @talk.category.name %></small>
         <h1><small class="text-black"><%= tr @talk, :title %></small></h1>
-        <span class="medium"><%= date_range @talk.course %></span>
-        <br><small class="text-grey"><%= "#{speakers_name @talk.course} | #{t('.hours_label')}#{@talk.hours}" %></small>
+        <span class="medium"><%= date_range @talk %></span>
+        <br><small class="text-grey"><%= "#{speakers_name @talk} | #{t('.hours_label')}#{@talk.hours}" %></small>
         <p>
           <%= tr @talk.course, :summary %>
         </p>

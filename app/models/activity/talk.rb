@@ -10,10 +10,12 @@ class Activity::Talk < Activity
   # Concerns macros
 
   # Constants
-  DELEGATE_METHODS = %i(image image_url category hours outdated? speakers suitable_for what_will_learn stages iframe_html apply_link).freeze
+  DELEGATE_METHODS = %i(image_url hours outdated? about_to_begin? start_on end_on suitable_for what_will_learn iframe_html apply_link).freeze
+  DELEGATE_RESOURCES = %i(category image speakers stages)
 
   # Attributes related macros
   delegate *DELEGATE_METHODS, to: :course
+  delegate *DELEGATE_RESOURCES, to: :course
 
   # association macros
 
