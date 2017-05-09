@@ -16,8 +16,8 @@ class Category < ActiveRecord::Base
   end
 
   # association macros
-  has_many :courses # TODO: needed be deleted
-  has_many :talks, through: :courses
+  has_many :courses
+  has_many :talks, -> { where(is_online: true) },through: :courses
 
   # validation macros
   validates :name, presence: true

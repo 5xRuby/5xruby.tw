@@ -3,9 +3,6 @@ class Course < ActiveRecord::Base
   ABOUT_TO_BEGIN = eval Settings.course_about_to_begin_time
 
   # scope macros
-  scope :online, -> { all } # TODO
-  scope :coming, -> { select('courses.*, min(date) as min_date').joins(:stages).group('courses.id').order('min_date') }
-  scope :available, -> { online.where('stages.date >= ?', Time.now).joins(:stages).distinct } # TODO
 
   # Concerns macros
   include Select2Concern

@@ -1,6 +1,6 @@
 class TalksController < ApplicationController
   def index
-    @talks = Activity::Talk.includes(courses: [:translations, :category, :stages]).online.order('id DESC').page(params[:page]).per(6)
+    @talks = Activity::Talk.includes(courses: [:translations, :category, :stages]).online.order(id: :desc).page(params[:page]).per(6)
     @talks = @talks.with_category(@category) if @category = Category.find_by(permalink: params[:category])
     @categories = Category.with_max_date.order(:sort_id)
     @speakers = Speaker.online.includes(:translations).order(:sort_id)
@@ -15,7 +15,7 @@ class TalksController < ApplicationController
       google: {
         name: tr(@talk, :title),
         description: tr(@talk.course, :summary),
-        image: @talk.course.image_url,
+        image: @talk.image_url,
         item_type: :Article
       },
       og: {
@@ -23,7 +23,7 @@ class TalksController < ApplicationController
         url: talk_url(@talk),
         type: :website,
         description: tr(@talk.course, :summary),
-        image: @talk.course.image_url
+        image: @talk.image_url
       }
     }
   end
