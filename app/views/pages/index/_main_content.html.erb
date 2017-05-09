@@ -5,11 +5,11 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-          <h3 class="text-center both-spacing-lg"><span><%= t('.next_talkss') %></span></h3>
+          <h3 class="text-center both-spacing-lg"><span><%= t('.next_talks') %></span></h3>
           <div class="lecture-list">
             <%= render partial: "talks/talk", collection: @talks, as: :talk %>
             <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing text-right">
-              <%= link_to t('.more_talks'), courses_path %>
+              <%= link_to t('.more_talks'), talks_path %>
             </div>
           </div>
         </div>
