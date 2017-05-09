@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20170508064522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "activities", force: :cascade do |t|
     t.string   "type"
@@ -63,7 +64,7 @@ ActiveRecord::Schema.define(version: 20170508064522) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "image"
-    t.string   "title",                          null: false
+    t.string   "title",                             null: false
     t.text     "summary"
     t.text     "description"
     t.text     "what_will_learn"
@@ -71,13 +72,14 @@ ActiveRecord::Schema.define(version: 20170508064522) do
     t.datetime "updated_at"
     t.string   "subtitle"
     t.integer  "category_id"
-    t.string   "permalink",                      null: false
+    t.boolean  "is_online",         default: false, null: false
+    t.string   "permalink",                         null: false
     t.text     "note"
     t.string   "apply_link"
     t.string   "iframe_html"
-    t.integer  "maximum_attendees", default: 30, null: false
-    t.integer  "total_attendees",   default: 0,  null: false
-    t.integer  "minimum_attendees", default: 5,  null: false
+    t.integer  "maximum_attendees", default: 30,    null: false
+    t.integer  "total_attendees",   default: 0,     null: false
+    t.integer  "minimum_attendees", default: 5,     null: false
     t.text     "suitable_for"
     t.text     "payment_note"
     t.index ["category_id"], name: "index_courses_on_category_id", using: :btree
@@ -213,6 +215,7 @@ ActiveRecord::Schema.define(version: 20170508064522) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 

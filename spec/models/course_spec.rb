@@ -9,7 +9,7 @@ RSpec.describe Course, type: :model do
     category = create(:category)
     expect(category.courses_count).to eq 0
     3.times do
-      course = build(:online_course)
+      course = build(:course)
       course.category = category
       course.save!
     end
