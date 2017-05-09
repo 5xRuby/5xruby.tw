@@ -3,11 +3,9 @@ Rails.application.routes.draw do
     root 'pages#index'
     get :training, :about, :members, :contacts, :faq, :press, :sitemap, :camp, :login, controller: :pages
     resources :posts, only: %i[index show]
-    resources :courses, path: :talks, only: %i[index show]
+    resources :talks, only: %i[index show]
     resources :contacts, only: :create
     resources :showcases, only: :index
-    get 'courses/:id', to: redirect('/talks/%{id}')
-    get 'courses', to: redirect('/talks')
     post 'rental/calculate'
   end
 
