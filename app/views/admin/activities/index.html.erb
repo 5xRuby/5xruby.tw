@@ -1,6 +1,15 @@
 <h1><%= Admin::Activity.model_name.human %> <%= link_to t('crud.new'), new_admin_activity_path, class: 'btn btn-lg btn-success' %></h1>
 
-<%= paginate @current_collection %>
+<!-- Navtabs Start -->
+<ul class="nav nav-pills">
+  <li role="presentation" class="<%= params[:type] == "talk" ? "active" : nil%>">
+    <%= link_to t('.talk'), admin_activities_path(type: :talk)%>
+  </li>
+  <li role="presentation" class="<%= params[:type] == "camp" ? "active" : nil%>" >
+    <%= link_to t('.camp'), admin_activities_path(type: :camp)%>
+  </li>
+</ul>
+<!-- Navtabs End -->
 
 <table class="table table-striped table-condensed">
   <thead>

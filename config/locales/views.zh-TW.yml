@@ -137,3 +137,9 @@ zh-TW:
       showcases: 專案開發
       training: 企業代訓
       news: 最新消息
+
+  admin:
+    activities:
+      index:
+        talk: 講座
+        camp: 衝刺班
