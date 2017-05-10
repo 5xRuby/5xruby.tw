@@ -32,6 +32,6 @@ class Admin::ActivitiesController < AdminController
   end
 
   def allowed_params
-    params.require(:admin_activity).permit(:title, :permalink, :note, :payment_note, :is_online)
+    params.require(:admin_activity).permit(:type, :title, :permalink, :note, :payment_note, :is_online, activity_courses_attributes: [:id, :course_id, :_destroy])
   end
 end

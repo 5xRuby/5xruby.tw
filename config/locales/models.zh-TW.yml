@@ -4,6 +4,8 @@ zh-TW:
       captcha_not_passed: 圖靈測試沒過，為避免是機器人在鬧，請勾選『我不是機器人』
       must_be_greater_than_start_at: 必須大於開始時間
       time_must_be_in_available_range: 時間必須在正常範圍內
+      wrong_course_number: 課程數量錯誤
+      course_duplicate: 課程內容不得重複
   activemodel:
     attributes:
       contact:
@@ -38,7 +40,10 @@ zh-TW:
       post: 文章
       category: 講座分類
       course: 講座內容
-      activity: 販售課程
+      activity: 課程
+      activity_course: 課程內容
+      activity/talk: 講座
+      activity/camp: 衝刺班
       stage: 階段
       schedule: 行程
       apply: 報名
@@ -63,6 +68,11 @@ zh-TW:
       category:
         name: 分類名稱
         is_highlighted: 本期主打分類
+      activity:
+        type: 課程屬性
+        title: 標題
+        payment_note: 付款資訊
+        note: 備註
       course:
         category: 分類
         title: 標題

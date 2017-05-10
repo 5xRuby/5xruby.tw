@@ -23,7 +23,7 @@ zh-TW:
     delete: 刪除
     destroy!: 刪除%{resource}
     destroy: 刪除
-    fork: Fork
+    fork: 複製
     preview: 預覽
     preview_full: 全頁預覽
     active!: 啟用

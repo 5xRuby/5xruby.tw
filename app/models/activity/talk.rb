@@ -17,6 +17,10 @@ class Activity::Talk < Activity
   delegate *DELEGATE_METHODS, to: :course
   delegate *DELEGATE_RESOURCES, to: :course
 
+  def course
+    courses.first
+  end
+
   # association macros
 
   # validation macros
@@ -24,9 +28,6 @@ class Activity::Talk < Activity
   # callbacks
 
   # other
-  def course
-    courses.first
-  end
 
   protected
   # callback methods
