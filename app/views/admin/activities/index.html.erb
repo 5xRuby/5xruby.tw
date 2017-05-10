@@ -1,0 +1,27 @@
+<h1><%= Admin::Activity.model_name.human %> <%= link_to t('crud.new'), new_admin_activity_path, class: 'btn btn-lg btn-success' %></h1>
+
+<%= paginate @current_collection %>
+
+<table class="table table-striped table-condensed">
+  <thead>
+    <tr>
+      <%= th_for Admin::Activity, :id, :is_online, :title, :permalink %>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @current_collection.each do |admin_activity| %>
+      <tr>
+        <%= td_for admin_activity, :id, :is_online, [:title, ->(a){ link_to a.title, a}], :permalink %>
+        <td><%= link_to admin_icon_tag(:plus), new_admin_activity_path(fork: admin_activity.permalink), class: 'btn btn-success', title: '複製' %></td>
+        <%= td_action_for admin_activity %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @current_collection %>

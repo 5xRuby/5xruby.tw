@@ -37,7 +37,8 @@ zh-TW:
     models:
       post: 文章
       category: 講座分類
-      course: 講座
+      course: 講座內容
+      activity: 販售課程
       stage: 階段
       schedule: 行程
       apply: 報名
@@ -51,7 +52,7 @@ zh-TW:
       interview_question: 面試題目
       index_picture: 首頁大圖
       index_picture_img: 首頁大圖圖片
-      camp_template: 衝刺班設定
+      camp_template: 衝刺班模板
     attributes:
       post:
         publish_at: 發佈時間
