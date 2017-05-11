@@ -24,7 +24,6 @@ Rails.application.routes.draw do
     resources :index_pictures, :camp_templates
     resources :camp_templates do
       get :preview
-      patch :active
     end
     resources :translations, only: %i[index create update]
   end

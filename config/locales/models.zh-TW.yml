@@ -145,8 +145,6 @@ zh-TW:
       camp_template:
         payload: 設定值
         json: 設定值
-        status: 狀態
-        lang: 語系
   enumerize:
     apply:
       gender:

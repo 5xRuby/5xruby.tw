@@ -9,14 +9,6 @@ class Admin::CampTemplatesController < AdminController
     render 'pages/camp', layout: 'application'
   end
 
-  def active
-    current_object.active!
-    respond_to do |format|
-      format.html { redirect_to({action: :index}, notice: t('crud.updated_successfully!', name: current_model.model_name.human)) }
-      format.json { render :show, status: :ok, location: current_object }
-    end
-  end
-
   protected
 
   def current_model
@@ -28,6 +20,6 @@ class Admin::CampTemplatesController < AdminController
   end
 
   def allowed_params
-    params.require(:admin_camp_template).permit(:json, :lang)
+    params.require(:admin_camp_template).permit(:json)
   end
 end
