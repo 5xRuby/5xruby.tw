@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   scope '(:locale)', locale: /en|ja/ do
     root 'pages#index'
     get :training, :about, :members, :contacts, :faq, :press, :sitemap, :camp, :login, controller: :pages
