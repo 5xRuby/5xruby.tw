@@ -100,6 +100,13 @@ module AdminHelper
   end
 
   def show_attr(record, attr)
-    "#{record.class.human_attribute_name attr}: #{record.send attr}"
+    humanized_name = record.class.human_attribute_name attr
+    value = case attr
+    when Symbol
+      record.send(attr)
+    when Proc
+      attr.call(record)
+    end
+    "#{humanized_name}: #{record.send attr}"
   end
 end
