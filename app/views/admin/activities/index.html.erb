@@ -2,7 +2,7 @@
 
 <!-- Navtabs Start -->
 <ul class="nav nav-pills">
-  <li role="presentation" class="<%= params[:type] == "talk" ? "active" : nil%>">
+  <li role="presentation" class="<%= params[:type] != "camp" ? "active" : nil%>">
     <%= link_to t('.talk'), admin_activities_path(type: :talk)%>
   </li>
   <li role="presentation" class="<%= params[:type] == "camp" ? "active" : nil%>" >
