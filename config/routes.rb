@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   scope '(:locale)', locale: /en|ja/ do
     root 'pages#index'
     get :training, :about, :members, :contacts, :faq, :press, :sitemap, :camp, :login, controller: :pages
@@ -9,6 +8,9 @@ Rails.application.routes.draw do
     resources :showcases, only: :index
     post 'rental/calculate'
   end
+
+  devise_for :users, skip: :omniauth_callbacks
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }, only: :omniauth_callbacks
 
   get Settings.admin_path_prefix, to: "admin#dashboard", as: :admin_root
   # back
