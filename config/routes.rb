@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     post 'rental/calculate'
   end
 
+  devise_for :users, skip: :omniauth_callbacks
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }, only: :omniauth_callbacks
+
   get Settings.admin_path_prefix, to: "admin#dashboard", as: :admin_root
   # back
   namespace :admin, path: Settings.admin_path_prefix do

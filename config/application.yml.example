@@ -39,7 +39,13 @@ development: &development
       :authentication: plain
       :enable_starttls_auto: true
   contact_email: dev@local
-
+  omniauth:
+    google:
+      client_id: CLIENT_ID
+      client_secret: CLIENT_SECRET
+    facebook:
+      facebook_key: FACEBOOK_KEY
+      facebook_secret: FACEBOOK_SECRET
 test:
   <<: *development
 
