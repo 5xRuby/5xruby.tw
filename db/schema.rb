@@ -132,6 +132,9 @@ ActiveRecord::Schema.define(version: 20170511065352) do
     t.datetime "updated_at", null: false
   end
 
+# Could not dump table "posts" because of following StandardError
+#   Unknown type 'markup_type' for column 'markup_type'
+
   create_table "redactor_images", force: :cascade do |t|
     t.string   "image",      null: false
     t.datetime "created_at"
