@@ -6,6 +6,8 @@ zh-TW:
       time_must_be_in_available_range: 時間必須在正常範圍內
       wrong_course_number: 課程數量錯誤
       course_duplicate: 課程內容不得重複
+      talk_has_no_template: 講座不需要模板
+      camp_needs_template: 衝刺班需要模板
   activemodel:
     attributes:
       contact:

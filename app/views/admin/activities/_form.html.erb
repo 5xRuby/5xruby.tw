@@ -1,6 +1,7 @@
 <%= simple_nested_form_for(@current_object) do |f| %>
   <div class="form-inputs">
     <%= f.input :type, as: :select, collection: [Activity::Camp, Activity::Talk].map{|t| [t.model_name.human, t.to_s]}, include_blank: false %>
+    <%= f.association :template, input_html: {class: 'select2'} %>
     <%= f.input :title %>
     <%= f.input :permalink %>
     <%= f.input :payment_note, input_html: {class: :redactor} %>

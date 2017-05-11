@@ -19,6 +19,7 @@ class Activity < ApplicationRecord
   validates :type, inclusion: { in: %w(Activity::Camp Activity::Talk) }
   validate :validate_courses_number
   validate :validate_courses_uniqueness
+  validate :validate_template
 
   # callbacks
 
@@ -39,5 +40,15 @@ class Activity < ApplicationRecord
   def validate_courses_uniqueness
     return if activity_courses.map(&:course_id).uniq.size == activity_courses.size
     errors.add(:type, :course_duplicate)
+  end
+
+  def validate_template
+    return if type == "Activity::Camp" && template.present?
+    return if type == "Activity::Talk" && template.nil?
+    if template
+      errors.add(:type, :talk_has_no_template)
+    else
+      errors.add(:template, :camp_needs_template)
+    end
   end
 end
