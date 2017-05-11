@@ -9,6 +9,7 @@ class Activity < ApplicationRecord
 
   # association macros
   has_and_belongs_to_many :courses, after_add: :touch_if_needed, after_remove: :touch_if_needed
+  belongs_to :template, class_name: "CampTemplate", required: false
   has_many :translations, as: :translatable
   has_many :activity_courses
   accepts_nested_attributes_for :activity_courses, allow_destroy: true
