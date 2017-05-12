@@ -1,10 +1,10 @@
 en:
   breadcrumb:
     home: Home
-    talks: Lectures
-  talks:
+    courses: Lectures
+  courses:
     index:
-      all_talks: All lectures
+      all_courses: All lectures
       speakers: Speakers
     show:
       hours_label: 'Hours:'
@@ -18,7 +18,7 @@ en:
       apply_now: I'd like to sign in the lecture
       payment_note: 'Payment:'
       note: Description
-    talk:
+    course:
       outdated: Ended
       about_to_begin: About to begin
       opening: Opening
@@ -55,7 +55,7 @@ en:
       main_features:
         about_5xruby: About 5xRuby
       main_content:
-        next_talks: recent lectures
+        next_courses: recent lectures
         more_talks: ...More
       showcases:
         title: Showcases
@@ -109,14 +109,38 @@ en:
 
   devise:
     sessions:
-      title: Login
-      login: SIGN IN
-      forget_pw: Forget Password
-      register: Register
-      login_with:
-        google: login with Google
-        facebook: login with Facebook
-        twitter: login with Twitter
+      new:
+        title: Login
+        login: SIGN IN
+        forget_pw: Forget Password
+        register: Register
+        placeholder:
+          email: member@5xruby.tw
+          password: password
+        login_with:
+          google: login with Google
+          facebook: login with Facebook
+          twitter: login with Twitter
+    passwords:
+      new:
+        title: Forget Password?
+        reset_pw: Reset Password
+        placeholder:
+          email: member@5xruby.tw
+      edit:
+        title: Reset Password
+        new_password: New Password
+        confirm_new_password: Confirm New Password
+        reset_password: Reset Password
+    registrations:
+      new:
+        title: 'Sign up'
+      edit:
+        title: 'Edit your account'
+      form:
+        sign_up: 'Submit'
+        password_blank_is_ok: "leave it blank if you don't want to change it"
+        current_password_required: "we need your current password to confirm your change"
 
   layouts:
     footer:
@@ -133,7 +157,10 @@ en:
     nav:
       login: Login
       camp: Boot Camp
-      talk: Courses/Events
+      course: Courses/Events
       showcases: Showcases
       training: Training
       news: News
+      logout: Logout
+      hello_user: Hello, %{name}
+      your_account: Your Account
