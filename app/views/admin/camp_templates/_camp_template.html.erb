@@ -7,7 +7,6 @@
   <%= link_to t('crud.fork'), {action: :new, id: camp_template.id}, {class: 'btn btn-success'} %>
   <%= link_to t('crud.edit'), {action: :edit, id: camp_template.id}, {class: 'btn btn-info'} %>
   <%= link_to t('crud.show'), {action: :show, id: camp_template.id}, {class: 'btn btn-primary'} %>
-  <%= link_to t('crud.preview_full'), admin_camp_template_preview_path(camp_template), class: 'btn btn-success', target: :_blank %>
   <%= link_to t('crud.destroy'), {action: :destroy, id: camp_template.id},
     {method: :delete, data: { confirm: t("message.are_you_sure") }, class: 'btn btn-danger'} %>
 </div>

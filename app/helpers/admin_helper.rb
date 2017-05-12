@@ -40,10 +40,10 @@ module AdminHelper
     }.join.html_safe
   end
 
-  def tr_for record, *attributes
+  def tr_for record, *attributes, **html_options
     attributes.map{ |attribute|
       text = attribute_appearance record, attribute
-      content_tag(:tr, content_tag(:td, record.class.human_attribute_name(Array === attribute ? attribute[0] : attribute)) + content_tag(:td, text))
+      content_tag(:tr, content_tag(:td, record.class.human_attribute_name(Array === attribute ? attribute[0] : attribute), class: html_options[:first_el_class]) + content_tag(:td, text, class: html_options[:last_el_class]))
     }.join.html_safe
   end
 

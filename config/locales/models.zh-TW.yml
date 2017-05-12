@@ -72,7 +72,8 @@ zh-TW:
         is_highlighted: 本期主打分類
       activity:
         type: 課程屬性
-        title: 標題
+        title: 課程名字
+        template: 衝刺班模板
         payment_note: 付款資訊
         note: 備註
       course:
