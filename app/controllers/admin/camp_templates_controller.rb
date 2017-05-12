@@ -4,6 +4,10 @@ class Admin::CampTemplatesController < AdminController
     @current_object = current_model.new(payload: current_object.try(:payload))
   end
 
+  def show; end
+
+  def edit; end
+
   def preview
     @camp = CampTemplateLoader.use CampTemplate.find(params[:camp_template_id])
     render 'pages/camp', layout: 'application'

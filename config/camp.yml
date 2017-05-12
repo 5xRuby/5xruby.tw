@@ -1,7 +1,3 @@
-title: 2017年度 第一期 ( 3月～5月班 )
-
-begin_date: '2017/2/10'
-end_date: '2017/3/30'
 top_count_down: &count_down
   available:
     sentence: 距離第一堂課程報名截止只剩不到%{days_before_begining}天！
@@ -25,34 +21,6 @@ bottom_past_info:
       text: 點我訂閱開課消息
       href: '#'
 
-lessons:
-  - name: Lesson A. 深入淺出立即上手的 HTML 網頁設計
-    course_permalink: bootstrap-201601
-    time_limit: '2017/2/23 19:00'
-    btn_states:
-      opening:
-        text: 名額有限，馬上報名！
-        href: '#tickets'
-      outdated:
-        text: 課程已開始，點此訂閱開課通知
-        href: '#'
-    time_description:
-      - 3/11(六), 19(日), 25 (六) 09:30 - 17:30
-  - name: Ruby on Rails 從零開始
-    course_permalink: ruby-on-rails2016-4
-    time_limit: '2017/2/25 19:00'
-    time_description: 
-      - 5/03 (三) & 5/05 (五) 19:00 - 22:00, 5/07 (日) 10:00 - 17:00 
-      - 5/10 (三) & 5/12 (五) 19:00 - 22:00, 5/14 (日) 10:00 - 17:00 
-      - 5/17 (三) & 5/19 (五) 19:00 - 22:00, 5/21 (日) 10:00 - 17:00
-    btn_states:
-      opening:
-        text: 名額有限，馬上報名！
-        href: '#tickets'
-      outdated:
-        text: 課程已開始，點此訂閱開課通知
-        href: '#'
-
 sales:
   sentence: 只要報名 A.B.C 任一課程，我們就免費贈送技術圈最夯的 Lesson D. 版本控制 Git 課程(價值3000元！)<br>A.B.C不同課程合報還有更多優惠喔！
   button:
@@ -68,7 +36,7 @@ testimonials:
   - name: Okay
     img: /uploads/redactor_image/image/81/thumb_okay.jpg
     position: 五倍紅寶石 iOS 工程師
-    content: 2015 年從零開始接觸程式語言，在我的程式生涯開端很幸運地遇見了五倍紅寶石，講師在一字一鍵的教學中，從基礎觀念由淺入深到實戰經驗，架構清晰邏輯清楚，課後也非常鼓勵學員到礦坑解除各種技術障、參加社群活動，交流分享毫不藏私。 五倍紅寶石正派經營、用心實在、技術一流，是學習程式語言的首選無誤 <3<3<3 
+    content: 2015 年從零開始接觸程式語言，在我的程式生涯開端很幸運地遇見了五倍紅寶石，講師在一字一鍵的教學中，從基礎觀念由淺入深到實戰經驗，架構清晰邏輯清楚，課後也非常鼓勵學員到礦坑解除各種技術障、參加社群活動，交流分享毫不藏私。 五倍紅寶石正派經營、用心實在、技術一流，是學習程式語言的首選無誤 <3<3<3
   - name: 李昱陞
     img: /uploads/redactor_image/image/82/thumb_bill.jpg
     position: 五倍紅寶石 Rails 工程師

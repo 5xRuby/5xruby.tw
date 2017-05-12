@@ -2,7 +2,7 @@ class CampTemplate < ApplicationRecord
 
   def initialize(_ = {})
     super
-    self.payload ||= CampTemplateLoader.to_hash
+    self.payload ||= CampTemplateLoader.new
   end
 
   # scope macros

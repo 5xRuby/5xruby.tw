@@ -20,6 +20,7 @@
 #= require admin/markdown
 #= require admin/to-markdown
 #= require admin/jsoneditor
+#= require admin/jquery-json-viewer
 #
 #= require shared
 #
