@@ -24,6 +24,7 @@ class CampTemplate < ApplicationRecord
   has_many :camps, class_name: "Activity::Camp", foreign_key: :template_id
 
   # validation macros
+  validates :title, presence: true
 
   # callbacks
   # other

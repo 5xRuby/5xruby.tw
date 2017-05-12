@@ -1,6 +1,6 @@
 class Activity::Camp < Activity
   # scope macros
-  default_scope -> { includes(:stages) }
+  default_scope -> { includes(courses: :stages) }
 
   # Concerns macros
 
