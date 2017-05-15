@@ -23,8 +23,13 @@ class Admin::ActivitiesController < AdminController
   end
 
   def preview
-    @camp = Activity::Camp.find(params[:activity_id])
-    render 'camps/show', layout: 'application'
+    if (activity = Activity.find(params[:activity_id])) && activity.template
+      @camp = activity
+      render 'camps/show', layout: 'application'
+    else
+      @talk = activity
+      render 'talks/show', layout: 'application'
+    end
   end
 
 
