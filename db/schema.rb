@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170511090301) do
+ActiveRecord::Schema.define(version: 20170512104535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20170511090301) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "image"
-    t.string   "title",                             null: false
+    t.string   "title",                          null: false
     t.text     "summary"
     t.text     "description"
     t.text     "what_will_learn"
@@ -71,16 +71,15 @@ ActiveRecord::Schema.define(version: 20170511090301) do
     t.datetime "updated_at"
     t.string   "subtitle"
     t.integer  "category_id"
-    t.boolean  "is_online",         default: false, null: false
-    t.string   "permalink",                         null: false
-    t.text     "note"
+    t.string   "permalink",                      null: false
     t.string   "apply_link"
     t.string   "iframe_html"
-    t.integer  "maximum_attendees", default: 30,    null: false
-    t.integer  "total_attendees",   default: 0,     null: false
-    t.integer  "minimum_attendees", default: 5,     null: false
+    t.integer  "maximum_attendees", default: 30, null: false
+    t.integer  "total_attendees",   default: 0,  null: false
+    t.integer  "minimum_attendees", default: 5,  null: false
     t.text     "suitable_for"
-    t.text     "payment_note"
+    t.text     "time_description"
+    t.datetime "time_limit"
     t.index ["category_id"], name: "index_courses_on_category_id", using: :btree
     t.index ["permalink"], name: "index_courses_on_permalink", unique: true, using: :btree
     t.index ["title"], name: "index_courses_on_title", using: :btree
