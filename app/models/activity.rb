@@ -2,9 +2,10 @@ class Activity < ApplicationRecord
   # scope macros
 
   # Concerns macros
+  # TODO: add permalinkable
 
   # Constants
-  
+
   # Attributes related macros
 
   # association macros
@@ -20,6 +21,7 @@ class Activity < ApplicationRecord
   validate :validate_courses_number
   validate :validate_courses_uniqueness
   validate :validate_template
+  validates :permalink, uniqueness: true
 
   # callbacks
 
