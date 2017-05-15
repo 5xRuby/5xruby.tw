@@ -33,7 +33,6 @@ FactoryGirl.define do
     subtitle { Faker::Lorem.sentence }
     summary { Faker::Lorem.paragraph.slice(0, 150) }
     description { "<p>#{Faker::Lorem.paragraph}</p>" }
-    note { "<p>#{Faker::Lorem.paragraph}</p>" }
     what_will_learn { "<p>#{Faker::Lorem.paragraph}</p>" }
     maximum_attendees { 30 }
     total_attendees { rand(30) }

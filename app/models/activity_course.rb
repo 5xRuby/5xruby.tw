@@ -9,6 +9,8 @@ class ActivityCourse < ApplicationRecord
   # Attributes related macros
 
   # association macros
+  belongs_to :activity, inverse_of: :activity_courses
+  belongs_to :course
 
   # validation macros
 

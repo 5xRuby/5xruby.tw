@@ -1,4 +1,4 @@
-class Admin::Talk < Activity::Talk
+class Admin::Talk < Admin::Activity
   # scope macros
 
   # Concerns macros

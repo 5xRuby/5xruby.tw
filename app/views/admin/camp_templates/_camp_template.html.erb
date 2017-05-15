@@ -1,16 +1,12 @@
 
 <div class="well">
   <%= show_attr camp_template, :id %><br>
-  <%= show_attr camp_template, :status %><br>
-  <%= show_attr camp_template, :lang %><br>
+  <%= show_attr camp_template, :title %><br>
   <%= show_attr camp_template, :created_at %><br>
   <%= show_attr camp_template, :updated_at %><br>
   <%= link_to t('crud.fork'), {action: :new, id: camp_template.id}, {class: 'btn btn-success'} %>
   <%= link_to t('crud.edit'), {action: :edit, id: camp_template.id}, {class: 'btn btn-info'} %>
   <%= link_to t('crud.show'), {action: :show, id: camp_template.id}, {class: 'btn btn-primary'} %>
-  <%= link_to t('crud.preview_full'), admin_camp_template_preview_path(camp_template), class: 'btn btn-success', target: :_blank %>
-  <%= link_to t('crud.active!'), {action: :active, camp_template_id: camp_template.id},
-    {method: :patch, data: { confirm: t("message.are_you_sure") }, class: 'btn btn-warning'} %>
   <%= link_to t('crud.destroy'), {action: :destroy, id: camp_template.id},
     {method: :delete, data: { confirm: t("message.are_you_sure") }, class: 'btn btn-danger'} %>
 </div>

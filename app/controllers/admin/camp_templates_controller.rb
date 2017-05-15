@@ -1,21 +1,12 @@
 class Admin::CampTemplatesController < AdminController
 
   def new
-    @current_object = current_model.new(payload: current_object.try(:payload))
+    @current_object = current_model.new(payload: CampTemplateLoader.new.to_h)
   end
 
-  def preview
-    @camp = CampTemplateLoader.use CampTemplate.find(params[:camp_template_id])
-    render 'pages/camp', layout: 'application'
-  end
+  def show; end
 
-  def active
-    current_object.active!
-    respond_to do |format|
-      format.html { redirect_to({action: :index}, notice: t('crud.updated_successfully!', name: current_model.model_name.human)) }
-      format.json { render :show, status: :ok, location: current_object }
-    end
-  end
+  def edit; end
 
   protected
 
@@ -28,6 +19,6 @@ class Admin::CampTemplatesController < AdminController
   end
 
   def allowed_params
-    params.require(:admin_camp_template).permit(:json, :lang)
+    params.require(:admin_camp_template).permit(:title, :json)
   end
 end

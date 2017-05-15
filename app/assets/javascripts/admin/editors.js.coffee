@@ -1,4 +1,4 @@
-$ () ->
+$(document).ready ->
 
   # ace editor
   bind_textarea = (session, textarea) ->

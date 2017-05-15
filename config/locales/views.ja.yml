@@ -49,6 +49,28 @@ ja:
       lead: 講座、イベント記録などの動画置き場
     show:
       share: Facebookでシェア
+  camps:
+    course:
+      time_label: '時間: '
+      what_will_learn_label: 'この%{hours}時間で, 学ぶことは:'
+      view_outline: '...アウトライン'
+      chapter_title: "レッスン %{nth}:"
+      location_label: '場所:'
+    sales:
+      sale_title: 情報
+    feedback:
+      testimonials: 受講生の声
+    qnas:
+      title: Q & A
+      q_label: Q：
+      a_label: A：
+      contact_link: お問い合わせフォーム
+      more_questions:
+        - もし他の質問があれば、お気軽に
+        - 連絡してください。あるいは直接5xRubyに電話してください
+    notice:
+      payment_note: '支払い方法:'
+      note: 'ノート:'
 
   pages:
     index:
@@ -88,24 +110,6 @@ ja:
         a_label: A：
       interested: 興味ある方ぜひ！
       contact_us: お問い合わせ
-    camp:
-      location_label: '場所:'
-      sale_title: 情報
-      time_label: '時間: '
-      what_will_learn_label: 'この%{hours}時間で, 学ぶことは:'
-      view_outline: '...アウトライン'
-      chapter_title: "レッスン %{nth}:"
-      testimonials: 受講生の声
-      qna:
-        title: Q & A
-        q_label: Q：
-        a_label: A：
-      more_question:
-        - もし他の質問があれば、お気軽に
-        - 連絡してください。あるいは直接5xRubyに電話してください
-      contact_link: お問い合わせフォーム
-      payment_note: '支払い方法:'
-      note: 'ノート:'
 
   devise:
     sessions:

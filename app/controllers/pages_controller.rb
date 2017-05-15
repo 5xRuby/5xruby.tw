@@ -16,8 +16,4 @@ class PagesController < ApplicationController
   def training
     @showcases = Showcase.where(category: :training).first(3)
   end
-
-  def camp
-    @camp = CampTemplateLoader.use_or_default CampTemplate.active.lang_or_any(I18n.locale).last
-  end
 end
