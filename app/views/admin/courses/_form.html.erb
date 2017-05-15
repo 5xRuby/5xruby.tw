@@ -19,12 +19,12 @@
     <%= f.input :summary, hint: '最多 150 字，剩 <span id="summary_remain"></span> 個字，用在 meta tag 和 courses/index 頁面'.html_safe %>
     <%= f.input :what_will_learn, input_html: {class: :redactor}, hint: '請放 ul 清單' %>
     <%= f.input :suitable_for, input_html: {class: :redactor} %>
-    <%= f.input :payment_note, input_html: {class: :redactor} %>
-    <%= f.input :note, input_html: {class: :redactor} %>
     <%= f.input :apply_link, hint: '沒有填寫 iframe 時才顯示' %>
     <%= f.input :maximum_attendees %>
     <%= f.input :total_attendees %>
     <%= f.input :minimum_attendees %>
+    <%= f.input :time_description %>
+    <%= f.input :time_limit %>
   </div>
 
   <%= render 'stages_fields', f: f %>
