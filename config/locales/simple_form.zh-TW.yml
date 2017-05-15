@@ -1,0 +1,7 @@
+zh-TW:
+  simple_form:
+    'yes': 是
+    'no': 否
+    required:
+      text: '必填'
+      mark: '*'
