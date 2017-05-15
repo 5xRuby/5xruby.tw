@@ -32,8 +32,9 @@ class Activity < ApplicationRecord
   end
 
   def validate_courses_number
-    return if type == "Activity::Camp" && activity_courses.size >= 1
-    return if activity_courses.size == 1
+    size = activity_courses.reject{ |c| c.marked_for_destruction? }.size
+    return if type == "Activity::Camp" && size >= 1
+    return if type == "Activity::Talk" && size == 1
     errors.add(:type, :wrong_course_number)
   end
 
