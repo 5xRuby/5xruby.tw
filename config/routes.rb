@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   scope '(:locale)', locale: /en|ja/ do
     root 'pages#index'
-    get :training, :about, :members, :contacts, :faq, :press, :sitemap, :camp, :login, controller: :pages
+    get :training, :about, :members, :contacts, :faq, :press, :sitemap, :login, controller: :pages
     resources :posts, only: %i[index show]
     resources :talks, only: %i[index show]
     resources :contacts, only: :create
     resources :showcases, only: :index
+    resource :camp, only: :show
     post 'rental/calculate'
   end
 
