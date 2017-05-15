@@ -1,17 +1,12 @@
 class Admin::CampTemplatesController < AdminController
 
   def new
-    @current_object = current_model.new(payload: current_object.try(:payload))
+    @current_object = current_model.new(payload: CampTemplateLoader.new.to_h)
   end
 
   def show; end
 
   def edit; end
-
-  def preview
-    @camp = CampTemplateLoader.use CampTemplate.find(params[:camp_template_id])
-    render 'pages/camp', layout: 'application'
-  end
 
   protected
 
@@ -24,6 +19,6 @@ class Admin::CampTemplatesController < AdminController
   end
 
   def allowed_params
-    params.require(:admin_camp_template).permit(:json)
+    params.require(:admin_camp_template).permit(:title, :json)
   end
 end
