@@ -15,7 +15,7 @@ class Activity < ApplicationRecord
   accepts_nested_attributes_for :activity_courses, allow_destroy: true
 
   # validation macros
-  validates :type, :title, :permalink, :note, :payment_note, presence: true
+  validates :type, :title, :is_online, :permalink, :note, :payment_note, presence: true
   validates :type, inclusion: { in: %w(Activity::Camp Activity::Talk) }
   validate :validate_courses_number
   validate :validate_courses_uniqueness
