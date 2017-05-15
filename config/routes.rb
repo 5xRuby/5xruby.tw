@@ -20,11 +20,11 @@ Rails.application.routes.draw do
     resources :courses, :authors, :speakers, :faqs, :categories, :showcases, :videos, :interview_questions do
       put :sort, on: :collection
     end
-    resources :activities
-    resources :index_pictures, :camp_templates
-    resources :camp_templates do
+    resources :activities do
       get :preview
     end
+    resources :index_pictures, :camp_templates
+    resources :camp_templates
     resources :translations, only: %i[index create update]
   end
 

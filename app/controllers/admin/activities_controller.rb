@@ -15,12 +15,18 @@ class Admin::ActivitiesController < AdminController
   end
 
   def new
-    source_activity = Admin::Activity.find_by(permalink: params[:permalink])
+    source_activity = current_model.find_by(permalink: params[:permalink])
     @current_object = source_activity ? source_activity.fork : current_model.new
   end
 
   def edit
   end
+
+  def preview
+    @camp = Activity::Camp.find(params[:activity_id])
+    render 'camps/show', layout: 'application'
+  end
+
 
   private
 

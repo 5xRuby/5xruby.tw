@@ -31,4 +31,5 @@ class CampTemplate < ApplicationRecord
 
   protected
   # callback methods
+  before_destroy ->(template) { template.camps.clear }
 end
