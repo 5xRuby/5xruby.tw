@@ -3,9 +3,9 @@ class Omniauth < ApplicationRecord
   enum provider: Hash[OMNIAUTH_PROVIDERS.map {|x| [x.to_sym, x.to_s] }]
 
   class << self
-    def from_omniauth(auth_hash)
+    def from_auth_hash(auth_hash)
       query_hash = { provider: auth_hash['provider'], uid: auth_hash['uid'] }
-      omniauth = Omniauth.where(query_hash).first ||
+      Omniauth.where(query_hash).first ||
         Omniauth.create(query_hash.merge(payload: auth_hash))
     end
 
@@ -28,28 +28,31 @@ class Omniauth < ApplicationRecord
 
   def payload_attrs
     @payload_attrs ||=
-    case self.payload['provider'].to_sym
-    when :google_oauth2
-      {
-        email: self.payload['info']['email'],
-        name: self.payload['info']['name']
-      }
-    when :facebook
-      {
-        email: self.payload['info']['email'],
-        name: self.payload['info']['name']
-      }
-    end
+      case self.payload['provider'].to_sym
+      when :google_oauth2
+        {
+          email: self.payload['info']['email'],
+          name: self.payload['info']['name']
+        }
+      when :facebook
+        {
+          email: self.payload['info']['email'],
+          name: self.payload['info']['name']
+        }
+      end
   end
 
   # association macros
   belongs_to :user
+
   # validation macros
+  validates :provider, :uid, :payload, presence: true
 
   # callbacks
 
   # other
 
   protected
+
   # callback methods
 end

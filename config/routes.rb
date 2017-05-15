@@ -7,11 +7,11 @@ Rails.application.routes.draw do
     resources :contacts, only: :create
     resources :showcases, only: :index
     post 'rental/calculate'
+
+    devise_for :users, controllers: { registrations: 'users/registrations' }, skip: :omniauth_callbacks
   end
-
-  devise_for :users, skip: :omniauth_callbacks
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }, only: :omniauth_callbacks
-
+  
   get Settings.admin_path_prefix, to: "admin#dashboard", as: :admin_root
   # back
   namespace :admin, path: Settings.admin_path_prefix do
