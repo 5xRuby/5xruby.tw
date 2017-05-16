@@ -8,6 +8,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     handle_omniauth('Google')
   end
 
+  def github
+    handle_omniauth('GitHub')
+  end
+
   private
 
   def handle_omniauth(kind)

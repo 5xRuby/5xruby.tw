@@ -258,7 +258,8 @@ Devise.setup do |config|
     scope: 'email,public_profile',
     info_fields: 'name,email'
 
-
+  config.omniauth :github, Settings.omniauth.github.client_id, Settings.omniauth.github.client_secret,
+    scope: 'user:email'
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

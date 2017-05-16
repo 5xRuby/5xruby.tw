@@ -1,5 +1,5 @@
 class Omniauth < ApplicationRecord
-  OMNIAUTH_PROVIDERS = [:facebook, :google_oauth2]
+  OMNIAUTH_PROVIDERS = [:facebook, :google_oauth2, :github]
   enum provider: Hash[OMNIAUTH_PROVIDERS.map {|x| [x.to_sym, x.to_s] }]
 
   class << self
@@ -35,6 +35,11 @@ class Omniauth < ApplicationRecord
           name: self.payload['info']['name']
         }
       when :facebook
+        {
+          email: self.payload['info']['email'],
+          name: self.payload['info']['name']
+        }
+      when :github
         {
           email: self.payload['info']['email'],
           name: self.payload['info']['name']

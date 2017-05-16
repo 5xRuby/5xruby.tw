@@ -121,6 +121,7 @@ zh-TW:
           google: 以Google帳號登入
           facebook: 以Facebook帳號登入
           twitter: 以Twitter帳號登入
+          github: 以GitHub帳號登入
     passwords:
       new:
         title: 忘記密碼？

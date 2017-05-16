@@ -218,6 +218,9 @@ GEM
       rack (>= 1.6.2, < 3)
     omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.2)
+    omniauth-github (1.2.3)
+      omniauth (~> 1.5)
+      omniauth-oauth2 (>= 1.4.0, < 2.0)
     omniauth-google-oauth2 (0.4.1)
       jwt (~> 1.5.2)
       multi_json (~> 1.3)
@@ -401,6 +404,7 @@ DEPENDENCIES
   nested_form
   omniauth
   omniauth-facebook
+  omniauth-github
   omniauth-google-oauth2
   pg
   pry-byebug
