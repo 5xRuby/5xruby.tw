@@ -24,7 +24,7 @@
     <%= f.input :total_attendees %>
     <%= f.input :minimum_attendees %>
     <%= f.input :time_description, input_html: { class: :redactor, hint: "請放 ul 清單" } %>
-    <%= f.input :time_limit %>
+    <%= f.input :time_limit, as: :date_time_picker %>
   </div>
 
   <%= render 'stages_fields', f: f %>
