@@ -32,6 +32,7 @@ class Course < ActiveRecord::Base
   # callbacks
   before_save :force_using_ssl_iframe
   after_save :reset_category_counter
+  after_initialize :set_defualt_values, if: :new_record?, unless: :changed?
 
   # other
 
@@ -88,9 +89,9 @@ class Course < ActiveRecord::Base
   end
 
   def time_description
-    self[:time_description].
-      sub(/<\/{0,1}ul>/, "").
-      scan(/<li>.*?<\/li>/).
+    self[:time_description]&.
+      sub(/<\/{0,1}ul>/, "")&.
+      scan(/<li>.*?<\/li>/)&.
       map{|c| c.gsub(/<\/{0,1}li>/, "")}
   end
 
@@ -102,5 +103,9 @@ class Course < ActiveRecord::Base
 
   def reset_category_counter
     self.category.reset_courses_count! if self.category.present?
+  end
+
+  def set_defualt_values
+    self[:time_limit] = Time.zone.now.strftime('%Y-%m-%d %H:%M')
   end
 end
