@@ -88,6 +88,9 @@ zh-TW:
         maximum_attendees: 招收人數
         total_attendees: 報名人數
         minimum_attendees: 最低人數
+        time_limit: 死線
+        time_description: 上課時間
+        suitable_for: 適合對象
       stage:
         title: 標題
         description: 介紹
