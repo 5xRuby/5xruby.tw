@@ -75,7 +75,6 @@ class Course < ActiveRecord::Base
     nearest_stage_date > Time.now
   end
 
-  # TODO
   def outdated?
     not available?
   end
@@ -84,9 +83,15 @@ class Course < ActiveRecord::Base
     nearest_stage_date - Date.today
   end
 
-  # TODO
   def about_to_begin?
     remaining_days < ABOUT_TO_BEGIN and not outdated?
+  end
+
+  def time_description
+    self[:time_description].
+      sub(/<\/{0,1}ul>/, "").
+      scan(/<li>.*?<\/li>/).
+      map{|c| c.gsub(/<\/{0,1}li>/, "")}
   end
 
   private

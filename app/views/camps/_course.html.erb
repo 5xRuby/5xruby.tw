@@ -28,7 +28,7 @@
                 <div class="both-spacing-sm four-padding text-center light-grey-bg">
                   <%= t('.time_label') %>
                   <br>
-                  <%= raw course.time_description %>
+                  <%= raw course.time_description.join("<br>") %>
                 </div>
                 <div class="col-sm-5 col-lg-5 col-md-5">
                   <div class="media">
