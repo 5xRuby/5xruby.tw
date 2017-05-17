@@ -1,0 +1,122 @@
+<!-- Start Main Banner -->
+<div class="container-fluid">
+  <div class="row">
+    <%= image_set_tag_from_translation_config t('site.space_main_banner'), width: "100%" %>
+  </div>
+</div>
+<!-- End Main Banner -->
+
+<!-- Start Space Feature -->
+<div class="space-img1 container-fluid">
+  <div class="row both-spacing-lg">
+    <div class="col col-sm-12 col-lg-12 col-md-12 text-center">
+      <span class="border-white text-white four-padding medium"><%= t('space.features.net') %></span>
+    </div>
+    <div class="col col-sm-6 col-lg-6 col-md-6 text-left">
+      <span class="border-white text-white four-padding medium"><%= t('space.features.traffic') %></span>
+    </div>
+    <div class="col col-sm-6 col-lg-6 col-md-6 text-right">
+      <span class="border-white text-white four-padding medium"><%= t('space.features.equipment') %></span>
+    </div>
+    <div class="col col-sm-6 col-lg-6 col-md-6 text-center">
+      <span class="border-white text-white four-padding medium"><%= t('space.features.table') %></span>
+    </div>
+    <div class="col col-sm-6 col-lg-6 col-md-6 text-center">
+      <span class="border-white text-white four-padding medium"><%= t('space.features.sound') %></span>
+    </div>
+  </div>
+</div>
+<!-- End Space Feature -->
+
+<!-- Start Space Gallery -->
+<div class="space-gallery container-fluid">
+  <div class="row">
+    <%= render partial: 'shared/carousel', locals: {
+      items: t('space_rent_slides.slides').map do |slide|
+        {
+          type: "space",
+          thumb: slide[:thumb],
+          origin: slide[:origin],
+          alt: slide[:alt],
+          size: slide[:size]
+        }
+      end,
+      item_partial: 'shared/slides',
+      folder: t('space_rent_slides.folder'),
+      autoplay: 0,
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      loop: false,
+      gallery: true
+    } %>
+  </div>
+</div>
+<!-- End Space Gallery -->
+
+<!-- Start Space Whole Booking -->
+<div class="whole-booking bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12">
+        <h3 class="text-center top-spacing-lg bottom-spacing"><span class="border-bottom-red"><%= t('space.booking.title') %></span></h3>
+        <div class="col-sm-12 col-lg-12 col-md-12 line-height-lg text-center bottom-spacing-sm">
+          <%= t('space.booking.description') %>
+        </div>
+        <div class="clear"></div>
+        <div class="col-sm-8 col-lg-8 col-md-8 center-block">
+          <div class="event col-sm-9 col-lg-9 col-md-9 red-bg border-red text-white four-padding bottom-spacing-sm">
+            <%= t('space.booking.event_tech') %>
+          </div>
+          <div class="time col-sm-3 col-lg-3 col-md-3 border-red text-grey four-padding bottom-spacing-sm">
+            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= t('space.booking.time') %>
+          </div>
+        </div>
+        <div class="col-sm-8 col-lg-8 col-md-8 center-block">
+          <div class="event col-sm-9 col-lg-9 col-md-9 red-bg border-red text-white four-padding bottom-spacing-sm">
+            <%= t('space.booking.event_normal') %>
+          </div>
+          <div class="time col-sm-3 col-lg-3 col-md-3 border-red text-grey four-padding bottom-spacing-sm">
+            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= t('space.booking.time') %>
+          </div>
+        </div>
+        <div class="col-sm-8 col-lg-8 col-md-8 center-block">
+          <div class="event col-sm-9 col-lg-9 col-md-9 red-bg border-red text-white four-padding">
+            <%= t('space.booking.event_weekend') %>
+          </div>
+          <div class="time col-sm-3 col-lg-3 col-md-3 border-red text-grey four-padding">
+            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= t('space.booking.time') %>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="col-sm-12 col-lg-12 col-md-12 line-height-lg text-center both-spacing-sm">
+          <%= t('space.booking.note') %>
+        </div>
+      </div>
+        <div class="col-sm-12 col-lg-10 col-md-12 bottom-spacing center-block">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.016266311726!2d121.513862!3d25.0424189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa8402e622aa7b148!2z5LqU5YCN57SF5a-255-z!5e0!3m2!1szh-TW!2stw!4v1482991564796" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- End Whole Booking -->
+
+<!-- Start Contact to Booking -->
+<div class="contact-to-booking">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="text-center bottom-spacing-sm"><span><%= t('space.contact.title') %></span></h3>
+        <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing-lg text-center">
+          <%= link_to t('space.contact.contact_button'), contacts_path, class: 'btn btn-red' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Contact to Booking -->
+
+<!-- PhotoSwipe -->
+<%= render partial: 'shared/photo_swipe' %>
+<!-- End PhotoSwipe -->
+
+

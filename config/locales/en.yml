@@ -397,6 +397,11 @@ en:
       sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
       default_size: "1280w.png"
       alt: Camp
+    space_main_banner:
+      folder: space-main-banner/en
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Space
     camp:
       features:
         - img: feature-list-img1.png
@@ -437,4 +442,57 @@ en:
     徵才: Jobs
     心得分享: Sharing
     其他消息: Other
+  space:
+    features:
+      net: 300M/100M High speed internet
+      traffic: Conveniently located
+      equipment: Projection equipment(with Apple TV)
+      table: Large working table
+      sound: Sound systems
+    booking:
+      title: Rental
+      description: 45 ~ 60 person capacity. We are located near Taipei Main Station and well equipped with projection equipment and sound systems.
+      event_tech: Tech Events & Public interest group NT.1,500
+      event_normal: Weekday night (18:00 ~ 22:00) NT.2,500
+      event_weekend: Weekend & holiday NT.3,000
+      time: 1hr
+      note: We have special pricing for long-term rentals.
+    contact:
+      title: Are you interested in?
+      contact_button: Contact us
+  space_rent_slides:
+    folder: space_rent_slides
+    slides:
+      - thumb: space-img1-sml.jpg
+        origin: space-img1.jpg
+        alt: image1
+        size: 1200x900
+      - thumb: space-img2-sml.jpg
+        origin: space-img2.jpg
+        alt: image2
+        size: 1200x900
+      - thumb: space-img3-sml.jpg
+        origin: space-img3.jpg
+        alt: image3
+        size: 1200x886
+      - thumb: space-img4-sml.jpg
+        origin: space-img4.jpg
+        alt: image4
+        size: 1200x888
+      - thumb: space-img5-sml.jpg
+        origin: space-img5.jpg
+        alt: image5
+        size: 1200x900
+      - thumb: space-img6-sml.jpg
+        origin: space-img6.jpg
+        alt: image6
+        size: 1200x896
+      - thumb: space-img7-sml.jpg
+        origin: space-img7.jpg
+        alt: image7
+        size: 1200x917
+      - thumb: space-img8-sml.jpg
+        origin: space-img8.jpg
+        alt: image8
+        size: 1200x900
 

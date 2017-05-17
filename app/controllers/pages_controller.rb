@@ -20,4 +20,7 @@ class PagesController < ApplicationController
   def camp
     @camp = Camp.use_or_default CampSetting.active.lang_or_any(I18n.locale).last
   end
+
+  def space
+  end
 end

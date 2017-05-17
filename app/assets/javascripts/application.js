@@ -18,6 +18,7 @@
 //= require jquery.slick
 //= require swiper
 //= require vex.combined.min.js
+//= require photoswipe
 //
 //= require highlightjs
 //= require jquery.scrollTo
@@ -26,4 +27,12 @@
 //= require shared
 //
 //= require guest
+<<<<<<< HEAD
+=======
+//= require photo_swipe
+//
+//= require react
+//= require react_ujs
+//= require_tree ./camp_components
+>>>>>>> 6445992... add space page
 
