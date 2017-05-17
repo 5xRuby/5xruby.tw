@@ -24,6 +24,10 @@
 #= require shared
 #
 #= require_tree ./admin
+#
+#= require react
+#= require react_ujs
+#= require_tree ./admin_components
 
 APP['admin'] =
   space_price: () ->
@@ -38,4 +42,3 @@ APP['admin'] =
         $(this).closest('tr').remove()
     $('form').on 'ajax:success', (e, data) ->
       $('#result').html(data)
-

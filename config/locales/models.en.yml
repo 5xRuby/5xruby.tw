@@ -48,6 +48,7 @@ en:
       video: Video
       translation: Translation
       interview_question: Interview Question
+      form: Form
     attributes:
       post:
         publish_at: published at
@@ -70,7 +71,7 @@ en:
         note: remarks
         apply_link: application
       stage:
-        sort_id: 
+        sort_id:
         title: title
         duration: duration
         description: description
@@ -100,6 +101,9 @@ en:
         speaker: lecturer
       author:
         name: name
+      form:
+        title: title
+        fields: fields
   enumerize:
     apply:
       gender:

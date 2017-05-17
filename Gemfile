@@ -53,6 +53,7 @@ gem 'gistyle'
 gem 'handlebars_assets'
 gem 'enum_help'
 gem "recaptcha", require: "recaptcha/rails"
+gem 'react-rails'
 
 # for Rails 5.0 upgrade
 gem 'record_tag_helper'

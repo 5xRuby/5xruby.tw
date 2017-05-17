@@ -52,6 +52,7 @@ zh-TW:
       index_picture: 首頁大圖
       index_picture_img: 首頁大圖圖片
       camp_template: 衝刺班設定
+      form: 表單
     attributes:
       post:
         publish_at: 發佈時間
@@ -134,6 +135,9 @@ zh-TW:
         json: 設定值
         status: 狀態
         lang: 語系
+      form:
+        title: 表單名稱
+        fields: 欄位
   enumerize:
     apply:
       gender:

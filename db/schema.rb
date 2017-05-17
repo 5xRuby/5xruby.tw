@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508064522) do
+ActiveRecord::Schema.define(version: 20170510082425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20170508064522) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.boolean  "is_online"
+    t.integer  "form_id"
+    t.index ["form_id"], name: "index_activities_on_form_id", using: :btree
   end
 
   create_table "activities_courses", force: :cascade do |t|
@@ -100,6 +102,13 @@ ActiveRecord::Schema.define(version: 20170508064522) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "sort_id",    default: 0,     null: false
+  end
+
+  create_table "forms", force: :cascade do |t|
+    t.string   "title"
+    t.json     "fields"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "index_picture_imgs", force: :cascade do |t|
@@ -214,6 +223,7 @@ ActiveRecord::Schema.define(version: 20170508064522) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 
