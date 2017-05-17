@@ -27,6 +27,7 @@ class Activity < ApplicationRecord
   validates :permalink, uniqueness: true
   validate :validate_uniqueness_of_course
   validates :is_online, inclusion: { in: [ true, false ] }
+  validates_format_of :permalink, with: /\A\w[-|\w|\d]+\z/
 
   # callbacks
   before_validation :set_title_if_needed
