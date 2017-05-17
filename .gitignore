@@ -25,3 +25,4 @@ tags
 /config/*.*.yml
 /postgres
 /vendor/bundle
+*.sql
