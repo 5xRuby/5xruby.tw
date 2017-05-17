@@ -1,10 +1,10 @@
 zh-TW:
   breadcrumb:
     home: 首頁
-    talks: 講座資訊
-  talks:
+    courses: 講座資訊
+  courses:
     index:
-      all_talks: 所有講座
+      all_courses: 所有講座
       speakers: 講師陣容 Speakers
     show:
       hours_label: '時數:'
@@ -18,7 +18,7 @@ zh-TW:
       apply_now: 我要報名
       payment_note: 付款方式：
       note: 注意事項：
-    talk:
+    course:
       outdated: 課程結束
       about_to_begin: 即將開講
       opening: 招生中
@@ -77,7 +77,7 @@ zh-TW:
       main_features:
         about_5xruby: 關於五倍紅寶石 About 5xRuby
       main_content:
-        next_talks: 近期講座
+        next_courses: 近期講座
         more_talks: ...更多講座
       showcases:
         title: 案例作品 Showcases
@@ -113,14 +113,38 @@ zh-TW:
 
   devise:
     sessions:
-      title: 學員登入 Login
-      login: 登入 SIGN IN
-      forget_pw: 忘記密碼
-      register: 申請加入學員
-      login_with:
-        google: 以Google帳號登入
-        facebook: 以Facebook帳號登入
-        twitter: 以Twitter帳號登入
+      new:
+        title: 學員登入 Login
+        login: 登入 SIGN IN
+        forget_pw: 忘記密碼
+        register: 申請加入學員
+        placeholder:
+          email: member@5xruby.tw
+          password: password
+        login_with:
+          google: 以Google帳號登入
+          facebook: 以Facebook帳號登入
+          twitter: 以Twitter帳號登入
+    passwords:
+      new:
+        title: 忘記密碼？
+        reset_pw: 重設密碼
+        placeholder:
+          email: member@5xruby.tw
+      edit:
+        title: 重設密碼
+        new_password: 新密碼
+        confirm_new_password: 確認新密碼
+        reset_password: 重設密碼
+    registrations:
+      new:
+        title: '申請加入會員'
+      edit:
+        title: '修改會員資料'
+      form:
+        sign_up: '送出'
+        password_blank_is_ok: "如果不想更改密碼，留白即可"
+        current_password_required: "若要更改密碼，請輸入現有密碼"
 
   layouts:
     footer:
@@ -137,10 +161,13 @@ zh-TW:
     nav:
       login: 學員登入
       camp: 全方位衝刺班
-      talk: 講座/活動
+      course: 講座/活動
       showcases: 專案開發
       training: 企業代訓
       news: 最新消息
+      logout: 登出
+      hello_user: 您好，%{name}
+      your_account: 會員中心
 
   admin:
     activities:

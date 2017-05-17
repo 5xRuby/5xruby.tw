@@ -1,10 +1,10 @@
 ja:
   breadcrumb:
     home: ホーム
-    talks: 講座
-  talks:
+    courses: 講座
+  courses:
     index:
-      all_talks: 全ての講座
+      all_courses: 全ての講座
       speakers: 講師
     show:
       hours_label: '時間:'
@@ -18,7 +18,7 @@ ja:
       apply_now: 申込希望
       payment_note: 'お支払方法:'
       note: 説明
-    talk:
+    course:
       outdated: 終わり
       about_to_begin: まもなく始まる
       opening: 応募中
@@ -77,7 +77,7 @@ ja:
       main_features:
         about_5xruby: 5xRubyについて
       main_content:
-        next_talks: 最近の講座
+        next_courses: 最近の講座
         more_talks: ...もっと見る
       showcases:
         title: 制作事例
@@ -113,14 +113,38 @@ ja:
 
   devise:
     sessions:
-      title: ログイン
-      login: ログイン
-      forget_pw: ID/パスワードをお忘れの方
-      register: 新規登録
-      login_with:
-        google: Googleアカウントでログイン
-        facebook: Facebookアカウントでログイン
-        twitter: Twitterアカウントでログイン
+      new:
+        title: ログイン
+        login: ログイン
+        forget_pw: ID/パスワードをお忘れの方
+        register: 新規登録
+        placeholder:
+          email: member@5xruby.tw
+          password: password
+        login_with:
+          google: Googleアカウントでログイン
+          facebook: Facebookアカウントでログイン
+          twitter: Twitterアカウントでログイン
+    passwords:
+      new:
+        title: Forget Password?
+        reset_pw: Reset Password
+        placeholder:
+          email: member@5xruby.tw
+      edit:
+        title: Reset Password
+        new_password: New Password
+        confirm_new_password: Confirm New Password
+        reset_password: Reset Password
+    registrations:
+      new:
+        title: 'Sign up'
+      edit:
+        title: 'Edit your account'
+      form:
+        sign_up: 'Submit'
+        password_blank_is_ok: "leave it blank if you don't want to change it"
+        current_password_required: "we need your current password to confirm your change"
 
   layouts:
     footer:
@@ -138,8 +162,10 @@ ja:
     nav:
       login: ログイン
       camp: ブートキャンプ
-      talk: 講座/イベント
+      course: 講座/イベント
       showcases: 制作事例
       training: トレーニング
       news: ニュース
-
+      logout: Logout
+      hello_user: Hello, %{name}
+      your_account: Your Account
