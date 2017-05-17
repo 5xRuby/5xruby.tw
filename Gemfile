@@ -12,7 +12,6 @@ gem 'uglifier'
 gem 'coffee-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-
 gem 'foreman'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -37,6 +36,13 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# User Authentication
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-github'
 
 gem 'rdiscount'
 gem 'kaminari', '~> 1.0.1'

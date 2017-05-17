@@ -32,24 +32,9 @@ class Course < ActiveRecord::Base
   # callbacks
   before_save :force_using_ssl_iframe
   after_save :reset_category_counter
+  after_initialize :set_defualt_values, if: :new_record?, unless: :changed?
 
   # other
-
-  # This query seperates courses by their expiration date,
-  # orders comming-soon courses descendingly and expired course ascendingly.
-  #     comming soon course (latest)
-  #     comming soon course
-  #     comming soon course
-  #     ...
-  #     expired course (latest)
-  #     expired course
-  #     expired course
-  #     ...
-  def self.magic_scope # TODO Find a better name.
-    ret = select('courses.*, min_date, max_date, case when max_date < now() then true else false end as outdated')
-    ret = ret.joins('inner join (select courses.id, min(date) as min_date, max(date) as max_date from courses inner join stages on courses.id = course_id group by courses.id) as r on r.id = courses.id')
-    ret = ret.order('outdated, case max_date < now() when true then min_date end desc, case max_date < now() when false then min_date end asc')
-  end
 
   def fork
     the_forked = self.class.new attributes.except!('id', 'iframe_html')
@@ -91,7 +76,6 @@ class Course < ActiveRecord::Base
     nearest_stage_date > Time.now
   end
 
-  # TODO
   def outdated?
     not available?
   end
@@ -100,9 +84,15 @@ class Course < ActiveRecord::Base
     nearest_stage_date - Date.today
   end
 
-  # TODO
   def about_to_begin?
     remaining_days < ABOUT_TO_BEGIN and not outdated?
+  end
+
+  def time_description
+    self[:time_description]&.
+      sub(/<\/{0,1}ul>/, "")&.
+      scan(/<li>.*?<\/li>/)&.
+      map{|c| c.gsub(/<\/{0,1}li>/, "")}
   end
 
   private
@@ -113,5 +103,9 @@ class Course < ActiveRecord::Base
 
   def reset_category_counter
     self.category.reset_courses_count! if self.category.present?
+  end
+
+  def set_defualt_values
+    self[:time_limit] = Time.zone.now.strftime('%Y-%m-%d %H:%M')
   end
 end

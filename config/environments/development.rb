@@ -45,6 +45,8 @@ Rails.application.configure do
   config.assets.digest = true
 
   # Adds additional error checking when serving assets at runtime.
+  config.public_file_server.enabled = true
+
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true

@@ -1,4 +1,4 @@
-class Admin::Camp < Activity::Camp
+class Admin::Camp < Admin::Activity
   # scope macros
 
   # Concerns macros

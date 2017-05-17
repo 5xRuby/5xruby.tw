@@ -1,14 +1,31 @@
 class Activity::Camp < Activity
   # scope macros
+  default_scope -> { includes(courses: :stages) }
 
   # Concerns macros
 
   # Constants
 
   # Attributes related macros
+  delegate :payload, to: :template
+
+  def days_before_begining
+    (begin_date - Date.today).to_i
+  end
+
+  def days_before_ending
+    (end_date - Date.today).to_i
+  end
+
+  def begun?
+    @past ||= begin_date.past?
+  end
+
+  def ended?
+    @ended ||= end_date.past?
+  end
 
   # association macros
-  has_one :template, class_name: "CampTemplate", foreign_key: :activity_id
 
   # validation macros
 
@@ -17,5 +34,17 @@ class Activity::Camp < Activity
   # other
 
   protected
+
   # callback methods
+  def begin_date
+    sorted_course_start_dates.first
+  end
+
+  def end_date
+    sorted_course_start_dates.last
+  end
+
+  def sorted_course_start_dates
+    @sorted_course_start_dates ||= courses.map(&:start_on).sort
+  end
 end

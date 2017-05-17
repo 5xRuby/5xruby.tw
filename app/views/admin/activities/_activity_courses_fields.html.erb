@@ -1,0 +1,18 @@
+<h2><%= ActivityCourse.model_name.human %></h2>
+<table id="activity_courses" class="table">
+  <thead>
+    <tr>
+      <th><%= t('crud.new') %></th>
+      <%= th_for Course, :title %>
+    </tr>
+  </thead>
+  <tbody>
+    <%= f.simple_fields_for :activity_courses, wrapper: false do |ff| %>
+      <%= content_tag_for :tr, ff.object, nil, class: 'fields' do %>
+        <td><%= ff.link_to_remove content_tag(:i, nil, class: 'glyphicon glyphicon-trash') %></td>
+        <td><%= ff.input_field :course_id, as: :select, class: 'form-control', label: false, include_blank: false, collection: Course.all.includes(:stages).sort_by(&:start_on).reverse!.map{|c| [[c.start_on, c.title].join("-"), c.id] } %></td>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+<%= f.link_to_add content_tag(:i, nil, class: 'glyphicon glyphicon-plus'), :activity_courses, class: 'btn btn-xs btn-success', data: { target: "#activity_courses"} %>

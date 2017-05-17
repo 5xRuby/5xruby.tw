@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170510082425) do
+ActiveRecord::Schema.define(version: 20170512104535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,9 @@ ActiveRecord::Schema.define(version: 20170510082425) do
     t.datetime "updated_at",   null: false
     t.boolean  "is_online"
     t.integer  "form_id"
+    t.integer  "template_id"
     t.index ["form_id"], name: "index_activities_on_form_id", using: :btree
+    t.index ["template_id"], name: "index_activities_on_template_id", using: :btree
   end
 
   create_table "activities_courses", force: :cascade do |t|
@@ -45,10 +47,9 @@ ActiveRecord::Schema.define(version: 20170510082425) do
     t.json     "payload"
     t.string   "status"
     t.string   "lang"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "activity_id"
-    t.index ["activity_id"], name: "index_camp_templates_on_activity_id", using: :btree
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "title"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -83,6 +84,8 @@ ActiveRecord::Schema.define(version: 20170510082425) do
     t.integer  "minimum_attendees", default: 5,     null: false
     t.text     "suitable_for"
     t.text     "payment_note"
+    t.text     "time_description"
+    t.datetime "time_limit"
     t.index ["category_id"], name: "index_courses_on_category_id", using: :btree
     t.index ["permalink"], name: "index_courses_on_permalink", unique: true, using: :btree
     t.index ["title"], name: "index_courses_on_title", using: :btree
@@ -130,6 +133,15 @@ ActiveRecord::Schema.define(version: 20170510082425) do
     t.boolean  "is_online",  default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "omniauths", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.integer  "user_id"
+    t.json     "payload"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 # Could not dump table "posts" because of following StandardError
@@ -227,6 +239,25 @@ ActiveRecord::Schema.define(version: 20170510082425) do
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "phone"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  end
+
   create_table "videos", force: :cascade do |t|
     t.string   "title"
     t.string   "iframe"
@@ -238,7 +269,8 @@ ActiveRecord::Schema.define(version: 20170510082425) do
     t.string   "image"
   end
 
+  add_foreign_key "activities", "camp_templates", column: "template_id"
+  add_foreign_key "activities", "forms"
   add_foreign_key "activities_courses", "activities"
   add_foreign_key "activities_courses", "courses"
-  add_foreign_key "camp_templates", "activities"
 end

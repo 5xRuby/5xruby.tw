@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'support/factory_girl'
 
 RSpec.describe Category, type: :model do
   it 'reset_courses_count! should set courses_count correctly' do
