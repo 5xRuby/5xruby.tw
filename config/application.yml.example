@@ -46,6 +46,9 @@ development: &development
     facebook:
       facebook_key: FACEBOOK_KEY
       facebook_secret: FACEBOOK_SECRET
+    github:
+      client_id: CLIENT_ID
+      client_secret: CLIENT_SECRET
 test:
   <<: *development
 

@@ -42,6 +42,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
+gem 'omniauth-github'
 
 gem 'rdiscount'
 gem 'kaminari', '~> 1.0.1'

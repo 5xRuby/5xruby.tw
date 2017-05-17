@@ -125,6 +125,7 @@ en:
           google: login with Google
           facebook: login with Facebook
           twitter: login with Twitter
+          github: login with GitHub
     passwords:
       new:
         title: Forget Password?
