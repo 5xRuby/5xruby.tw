@@ -10,7 +10,7 @@ module Permalinkable
         Permalinkable.next_permalink permalink
       }
       private define_method(:set_permalink){
-        send("#{target_column}=", send(source_column).parameterize)
+        send("#{target_column}=", send(source_column)&.parameterize)
       }
     end
   end

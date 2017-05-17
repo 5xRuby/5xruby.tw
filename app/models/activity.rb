@@ -72,7 +72,7 @@ class Activity < ApplicationRecord
   def validate_uniqueness_of_course
     return if is_camp? || activity_courses.size == 0
     course = activity_courses.first.course
-    return if course.talks.ids.include?(id) || course.talks.count == 0
+    return if course.talks.exists?(id) || course.talks.count == 0
     errors.add(:type, :talk_has_been_existed)
   end
 
