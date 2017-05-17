@@ -400,6 +400,11 @@ zh-TW:
       sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
       default_size: "1280w.png"
       alt: 網站開發，全方位衝刺班，全才師資讓您從零開始也能快速上手！
+    space_main_banner:
+      folder: space-main-banner/zh-TW
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: 網站開發，全方位衝刺班，全才師資讓您從零開始也能快速上手！
     about_services:
       - name: 技術諮詢
         img: consult.png
@@ -439,4 +444,59 @@ zh-TW:
     徵才: 工作機會
     心得分享: 心得分享
     其他消息: 其他消息
+  space:
+    features:
+      net: 300M/100M 高速網路
+      traffic: 三鐵共構便利交通
+      equipment: 投影設備(含 Apple TV)
+      table: 寬廣工作桌
+      sound: 擴音設備
+    booking:
+      title: 活動包場
+      description: 可容納 45 ~ 60 人。出礦坑位於三鐵共構旁，交通超方便！備齊投影擴音設備，只要人到就好了。
+      event_tech: 技術類社群活動、公益團體 1,500 元
+      event_normal: 平日晚間 (18:00 ~ 22:00) 2,500 元
+      event_weekend: 週末、例假日 3,000 元
+      time: 1小時
+      note: 長期租用可另享有優惠
+    contact:
+      title: 有租借需求嗎？
+      contact_button: 歡迎與我們聯繫
+  space_rent_slides:
+    folder: space_rent_slides
+    slides:
+      - thumb: space-img1-sml.jpg
+        origin: space-img1.jpg
+        alt: image1
+        size: 1200x900
+      - thumb: space-img2-sml.jpg
+        origin: space-img2.jpg
+        alt: image2
+        size: 1200x900
+      - thumb: space-img3-sml.jpg
+        origin: space-img3.jpg
+        alt: image3
+        size: 1200x886
+      - thumb: space-img4-sml.jpg
+        origin: space-img4.jpg
+        alt: image4
+        size: 1200x888
+      - thumb: space-img5-sml.jpg
+        origin: space-img5.jpg
+        alt: image5
+        size: 1200x900
+      - thumb: space-img6-sml.jpg
+        origin: space-img6.jpg
+        alt: image6
+        size: 1200x896
+      - thumb: space-img7-sml.jpg
+        origin: space-img7.jpg
+        alt: image7
+        size: 1200x917
+      - thumb: space-img8-sml.jpg
+        origin: space-img8.jpg
+        alt: image8
+        size: 1200x900
+
+
 
