@@ -1,5 +1,7 @@
 class Activity < ApplicationRecord
   # scope macros
+  CAMP = "Activity::Camp".freeze
+  TALK = "Activity::Talk".freeze
 
   # Concerns macros
   include Permalinkable
@@ -17,14 +19,17 @@ class Activity < ApplicationRecord
   accepts_nested_attributes_for :activity_courses, allow_destroy: true
 
   # validation macros
-  validates :type, :title, :is_online, :permalink, :note, :payment_note, presence: true
+  validates :type, :title, :permalink, :note, :payment_note, presence: true
   validates :type, inclusion: { in: %w(Activity::Camp Activity::Talk) }
   validate :validate_courses_number
   validate :validate_courses_uniqueness
   validate :validate_template
   validates :permalink, uniqueness: true
+  validate :validate_uniqueness_of_course
+  validates :is_online, inclusion: { in: [ true, false ] }
 
   # callbacks
+  before_validation :set_title_if_needed
 
   # other
   def is_camp?
@@ -43,8 +48,8 @@ class Activity < ApplicationRecord
 
   def validate_courses_number
     size = activity_courses.reject{ |c| c.marked_for_destruction? }.size
-    return if type == "Activity::Camp" && size >= 1
-    return if type == "Activity::Talk" && size == 1
+    return if is_camp? && size >= 1
+    return if is_talk? && size == 1
     errors.add(:type, :wrong_course_number)
   end
 
@@ -54,8 +59,8 @@ class Activity < ApplicationRecord
   end
 
   def validate_template
-    return if type == "Activity::Camp" && template.present?
-    return if type == "Activity::Talk" && template.nil?
+    return if is_camp? && template.present?
+    return if is_talk? && template.nil?
     if template
       errors.add(:type, :talk_has_no_template)
     else
@@ -64,9 +69,14 @@ class Activity < ApplicationRecord
   end
 
   def validate_uniqueness_of_course
-    return if is_camp?
-    course = Course.find_by(id: activity_courses.first.course_id)
-    return if course.talks.count < 1
+    return if is_camp? || activity_courses.size == 0
+    course = activity_courses.first.course
+    return if course.talks.ids.include?(id) || course.talks.count == 0
     errors.add(:type, :talk_has_been_existed)
+  end
+
+  def set_title_if_needed
+    return if is_camp? || activity_courses.size == 0
+    self[:title] = activity_courses.first.course.title
   end
 end
