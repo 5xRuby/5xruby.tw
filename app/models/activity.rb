@@ -27,6 +27,13 @@ class Activity < ApplicationRecord
   # callbacks
 
   # other
+  def is_camp?
+    type == CAMP
+  end
+
+  def is_talk?
+    type == TALK
+  end
 
   protected
   # callback methods
@@ -54,5 +61,12 @@ class Activity < ApplicationRecord
     else
       errors.add(:template, :camp_needs_template)
     end
+  end
+
+  def validate_uniqueness_of_course
+    return if is_camp?
+    course = Course.find_by(id: activity_courses.first.course_id)
+    return if course.talks.count < 1
+    errors.add(:type, :talk_has_been_existed)
   end
 end

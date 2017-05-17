@@ -4,10 +4,10 @@
     <th>值</th>
   </thead>
   <tbody>
-    <%if current_object.template %>
-      <%= tr_for current_object, :id, [:type, ->(a){ a.model_name.human }], [:template, ->(a){ link_to a.template.title, a.template}], :permalink, :payment_note, :note, first_el_class: "col-md-1", last_el_class: "col-md-11" %>
+    <%if current_object.is_camp? %>
+      <%= tr_for current_object, :id, [:type, ->(a){ a.is_camp? ? "講座" : "衝刺班" }], [:template, ->(a){ link_to a.template.title, a.template}], :permalink, :payment_note, :note, first_el_class: "col-md-1", last_el_class: "col-md-11" %>
     <% else %>
-      <%= tr_for current_object, :id, [:type, ->(a){ a.model_name.human }], :permalink, :payment_note, :note, first_el_class: "col-md-1", last_el_class: "col-md-11" %>
+      <%= tr_for current_object, :id, [:type, ->(a){ a.is_camp? ? "講座" : "衝刺班" }], :permalink, :payment_note, :note, first_el_class: "col-md-1", last_el_class: "col-md-11" %>
     <% end %>
   </tbody>
 </table>

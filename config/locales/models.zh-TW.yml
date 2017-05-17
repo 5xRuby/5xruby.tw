@@ -147,6 +147,7 @@ zh-TW:
         lang: 語系
         size: 大小
       camp_template:
+        title: 模板名字
         payload: 設定值
         json: 設定值
   enumerize:
