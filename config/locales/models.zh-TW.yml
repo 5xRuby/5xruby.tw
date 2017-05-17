@@ -4,9 +4,10 @@ zh-TW:
       captcha_not_passed: 圖靈測試沒過，為避免是機器人在鬧，請勾選『我不是機器人』
       must_be_greater_than_start_at: 必須大於開始時間
       time_must_be_in_available_range: 時間必須在正常範圍內
-      wrong_course_number: 課程數量錯誤
-      course_duplicate: 課程內容不得重複
+      wrong_course_number: 講座數量錯誤
+      course_duplicate: 課程的講座內容不得重複
       talk_has_no_template: 講座不需要模板
+      talk_has_been_existed: 該講座已經開設課程了
       camp_needs_template: 衝刺班需要模板
   activemodel:
     attributes:
@@ -147,6 +148,7 @@ zh-TW:
         lang: 語系
         size: 大小
       camp_template:
+        title: 模板名字
         payload: 設定值
         json: 設定值
   enumerize:

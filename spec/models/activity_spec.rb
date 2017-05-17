@@ -7,7 +7,6 @@ RSpec.describe Activity, type: :model do
   it { is_expected.to have_many(:activity_courses) }
   it { is_expected.to validate_presence_of(:type) }
   it { is_expected.to validate_presence_of(:title) }
-  it { is_expected.to validate_presence_of(:is_online) }
   it { is_expected.to validate_presence_of(:permalink) }
   it { is_expected.to validate_presence_of(:note) }
   it { is_expected.to validate_presence_of(:payment_note) }

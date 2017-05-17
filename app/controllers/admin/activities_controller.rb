@@ -23,7 +23,7 @@ class Admin::ActivitiesController < AdminController
   end
 
   def preview
-    if (activity = Activity.find(params[:activity_id])) && activity.template
+    if (activity = Activity.find_by(permalink: params[:activity_id])) && activity.template
       @camp = activity
       render 'camps/show', layout: 'application'
     else
@@ -50,5 +50,9 @@ class Admin::ActivitiesController < AdminController
     return unless query = URI(request.referer || "").query
     incoming_params = Hash[query.split("&").map{|p| p.split("=")}].symbolize_keys!
     params[:type] ||= incoming_params[:type]
+  end
+
+  def current_object
+    @current_object ||= current_model.find_by(permalink: params[:id])
   end
 end

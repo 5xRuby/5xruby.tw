@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :camp, class: Activity::Camp do
     type { "Activity::Camp" }
     title { Faker::Name.name }
-    permalink { Faker::Name.name }
+    permalink { SecureRandom.hex(4) }
     payment_note { Faker::Lorem.sentence }
     note { Faker::Lorem.sentence }
     is_online { true }

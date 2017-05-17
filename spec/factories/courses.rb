@@ -37,6 +37,7 @@ FactoryGirl.define do
     maximum_attendees { 30 }
     total_attendees { rand(30) }
     minimum_attendees { 5 + rand(5) }
+    time_description { Faker::Lorem.sentence }
 
     transient do
       stages_count 6

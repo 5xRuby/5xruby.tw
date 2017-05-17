@@ -6,13 +6,11 @@ class Course < ActiveRecord::Base
 
   # Concerns macros
   include Select2Concern
-  include Permalinkable
 
   # Constants
 
   # Attributes related macros
   mount_uploader :image, CourseImageUploader
-  permalinkable :title
 
   # association macros
   has_many :stages, -> { order(:date, :start_at) }, dependent: :destroy
@@ -24,7 +22,7 @@ class Course < ActiveRecord::Base
   has_and_belongs_to_many :talks, association_foreign_key: 'activity_id', class_name: "::Activity::Talk"
 
   # validation macros
-  validates :title, presence: true
+  validates :title, :time_description, :time_limit, presence: true
   validates_format_of :permalink, with: /\A\w[-|\w|\d]+\z/
   validates :summary, length: {maximum: 150}
   select2_white_list :title
@@ -38,7 +36,6 @@ class Course < ActiveRecord::Base
 
   def fork
     the_forked = self.class.new attributes.except!('id', 'iframe_html')
-    the_forked.permalink = the_forked.next_permalink
     the_forked.speakers = speakers
     the_forked.image = image
     stages.each do |stage|
@@ -86,13 +83,6 @@ class Course < ActiveRecord::Base
 
   def about_to_begin?
     remaining_days < ABOUT_TO_BEGIN and not outdated?
-  end
-
-  def time_description
-    self[:time_description]&.
-      sub(/<\/{0,1}ul>/, "")&.
-      scan(/<li>.*?<\/li>/)&.
-      map{|c| c.gsub(/<\/{0,1}li>/, "")}
   end
 
   private
