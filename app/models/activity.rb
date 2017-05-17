@@ -2,11 +2,12 @@ class Activity < ApplicationRecord
   # scope macros
 
   # Concerns macros
-  # TODO: add permalinkable
+  include Permalinkable
 
   # Constants
 
   # Attributes related macros
+  permalinkable :title
 
   # association macros
   has_and_belongs_to_many :courses, after_add: :touch_if_needed, after_remove: :touch_if_needed

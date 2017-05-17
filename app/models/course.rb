@@ -6,13 +6,11 @@ class Course < ActiveRecord::Base
 
   # Concerns macros
   include Select2Concern
-  include Permalinkable
 
   # Constants
 
   # Attributes related macros
   mount_uploader :image, CourseImageUploader
-  permalinkable :title
 
   # association macros
   has_many :stages, -> { order(:date, :start_at) }, dependent: :destroy
@@ -86,14 +84,6 @@ class Course < ActiveRecord::Base
 
   def about_to_begin?
     remaining_days < ABOUT_TO_BEGIN and not outdated?
-  end
-
-  def time_description
-    return if self[:time_description] == nil || ""
-    self[:time_description]&.
-      sub(/<\/{0,1}ul>/, "")&.
-      scan(/<li>.*?<\/li>/)&.
-      map{|c| c.gsub(/<\/{0,1}li>/, "")}
   end
 
   private
