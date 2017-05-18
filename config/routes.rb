@@ -27,8 +27,7 @@ Rails.application.routes.draw do
     resources :activities do
       get :preview
     end
-    resources :index_pictures, :camp_templates
-    resources :camp_templates
+    resources :index_pictures, :camp_templates, :forms
     resources :translations, only: %i[index create update]
   end
 

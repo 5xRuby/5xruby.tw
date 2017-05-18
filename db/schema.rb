@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 20170512104535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "uuid-ossp"
 
   create_table "activities", force: :cascade do |t|
     t.string   "type"
@@ -25,7 +24,9 @@ ActiveRecord::Schema.define(version: 20170512104535) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.boolean  "is_online"
+    t.integer  "form_id"
     t.integer  "template_id"
+    t.index ["form_id"], name: "index_activities_on_form_id", using: :btree
     t.index ["template_id"], name: "index_activities_on_template_id", using: :btree
   end
 
@@ -104,6 +105,13 @@ ActiveRecord::Schema.define(version: 20170512104535) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "sort_id",    default: 0,     null: false
+  end
+
+  create_table "forms", force: :cascade do |t|
+    t.string   "title"
+    t.json     "fields"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "index_picture_imgs", force: :cascade do |t|
@@ -262,6 +270,7 @@ ActiveRecord::Schema.define(version: 20170512104535) do
   end
 
   add_foreign_key "activities", "camp_templates", column: "template_id"
+  add_foreign_key "activities", "forms"
   add_foreign_key "activities_courses", "activities"
   add_foreign_key "activities_courses", "courses"
 end
