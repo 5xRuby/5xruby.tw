@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /en|ja/ do
     root 'pages#index'
     get :training, :about, :members, :contacts, :faq, :press, :sitemap, :login, controller: :pages
+    get 'privacy-policy', to: 'pages#privacy_policy'
     resources :posts, only: %i[index show]
     resources :talks, only: %i[index show]
     resources :contacts, only: :create
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
     devise_for :users, controllers: { registrations: 'users/registrations' }, skip: :omniauth_callbacks
   end
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }, only: :omniauth_callbacks
-  
+
   get Settings.admin_path_prefix, to: "admin#dashboard", as: :admin_root
   # back
   namespace :admin, path: Settings.admin_path_prefix do
