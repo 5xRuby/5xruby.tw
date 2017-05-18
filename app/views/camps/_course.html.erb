@@ -18,7 +18,7 @@
                     <br><br>
 
                     <!-- change it to time_limit-->
-                    <% btn_states = course.start_on < Time.now ? configs['outdated'] : configs['opening'] %>
+                    <% btn_states = (course.time_limit || course.start_on) < Time.now ? configs['outdated'] : configs['opening'] %>
                     <%= link_to btn_states['text'], btn_states['href'], class: btn_states['class'] || "btn btn-white-border" if btn_states.present? %>
                   </p>
                 </div>
