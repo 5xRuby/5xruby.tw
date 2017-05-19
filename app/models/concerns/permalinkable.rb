@@ -17,7 +17,7 @@ module Permalinkable
 
   def self.next_permalink permalink
     if number = permalink[/(\d+)$/, 1]
-      permalink.sub!(/(\d+)$/, (number.to_i + 1).to_s)
+      permalink.sub(/(\d+)$/, (number.to_i + 1).to_s)
     else
       permalink += '-1'
     end

@@ -5,6 +5,7 @@ RSpec.describe Activity, type: :model do
   it { is_expected.to belong_to(:template) }
   it { is_expected.to have_many(:translations) }
   it { is_expected.to have_many(:activity_courses) }
+  it { is_expected.to have_many(:orders) }
   it { is_expected.to validate_presence_of(:type) }
   it { is_expected.to validate_presence_of(:title) }
   it { is_expected.to validate_presence_of(:permalink) }
