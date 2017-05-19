@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     root 'pages#index'
     get :training, :about, :members, :contacts, :faq, :press, :sitemap, :login, controller: :pages
     get 'privacy-policy', to: 'pages#privacy_policy'
+    get 'terms-of-service', to: 'pages#terms_of_service'
     resources :posts, only: %i[index show]
     resources :talks, only: %i[index show]
     resources :contacts, only: :create
