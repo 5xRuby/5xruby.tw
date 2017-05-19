@@ -16,4 +16,6 @@ class PagesController < ApplicationController
   def training
     @showcases = Showcase.where(category: :training).first(3)
   end
+
+  def privacy_policy; end
 end
