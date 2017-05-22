@@ -31,7 +31,7 @@ class Activity < ApplicationRecord
   validates_format_of :permalink, with: /\A\w[-|\w|\d]+\z/
 
   # callbacks
-  before_validation :set_title_if_needed
+  before_validation :nullify_invalid_data, :set_title_if_needed
 
   # other
   def is_camp?
@@ -75,6 +75,11 @@ class Activity < ApplicationRecord
     course = activity_courses.first.course
     return if course.talks.exists?(id) || course.talks.count == 0
     errors.add(:type, :talk_has_been_existed)
+  end
+
+  def nullify_invalid_data
+    return if is_camp?
+    assign_attributes(template_id: nil, title: nil, rules: "")
   end
 
   def set_title_if_needed
