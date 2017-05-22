@@ -1,10 +1,10 @@
 ja:
   breadcrumb:
     home: ホーム
-    courses: 講座
-  courses:
+    talks: 講座
+  talks:
     index:
-      all_courses: 全ての講座
+      all_talks: 全ての講座
       speakers: 講師
     show:
       hours_label: '時間:'
@@ -18,7 +18,7 @@ ja:
       apply_now: 申込希望
       payment_note: 'お支払方法:'
       note: 説明
-    course:
+    talk:
       outdated: 終わり
       about_to_begin: まもなく始まる
       opening: 応募中
@@ -77,7 +77,7 @@ ja:
       main_features:
         about_5xruby: 5xRubyについて
       main_content:
-        next_courses: 最近の講座
+        next_talks: 最近の講座
         more_talks: ...もっと見る
       showcases:
         title: 制作事例
@@ -162,7 +162,7 @@ ja:
     nav:
       login: ログイン
       camp: ブートキャンプ
-      course: 講座/イベント
+      talk: 講座/イベント
       showcases: 制作事例
       training: トレーニング
       news: ニュース

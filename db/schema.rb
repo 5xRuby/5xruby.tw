@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512104535) do
+ActiveRecord::Schema.define(version: 20170519040634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "activities", force: :cascade do |t|
     t.string   "type"
@@ -24,8 +25,8 @@ ActiveRecord::Schema.define(version: 20170512104535) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.boolean  "is_online"
-    t.integer  "form_id"
     t.integer  "template_id"
+    t.integer  "form_id"
     t.index ["form_id"], name: "index_activities_on_form_id", using: :btree
     t.index ["template_id"], name: "index_activities_on_template_id", using: :btree
   end
@@ -142,6 +143,33 @@ ActiveRecord::Schema.define(version: 20170512104535) do
     t.json     "payload"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "activitiable_type"
+    t.integer  "activitiable_id"
+    t.string   "state"
+    t.decimal  "amount",            precision: 31, scale: 1
+    t.json     "fields"
+    t.integer  "user_id"
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+    t.index ["activitiable_type", "activitiable_id"], name: "index_orders_on_activitiable_type_and_activitiable_id", using: :btree
+    t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.integer  "order_id"
+    t.integer  "user_id"
+    t.string   "state"
+    t.string   "type"
+    t.string   "identifier", default: "", null: false
+    t.datetime "paid_at"
+    t.datetime "expiry_at"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["order_id"], name: "index_payments_on_order_id", using: :btree
+    t.index ["user_id"], name: "index_payments_on_user_id", using: :btree
   end
 
 # Could not dump table "posts" because of following StandardError
@@ -273,4 +301,7 @@ ActiveRecord::Schema.define(version: 20170512104535) do
   add_foreign_key "activities", "forms"
   add_foreign_key "activities_courses", "activities"
   add_foreign_key "activities_courses", "courses"
+  add_foreign_key "orders", "users"
+  add_foreign_key "payments", "orders"
+  add_foreign_key "payments", "users"
 end

@@ -26,6 +26,8 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (4.12.0)
+      concurrent-ruby (~> 1.0)
     ace-rails-ap (4.1.2)
     actioncable (5.0.3)
       actionpack (= 5.0.3)
@@ -384,6 +386,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aasm
   ace-rails-ap
   acts-as-taggable-on!
   annotate

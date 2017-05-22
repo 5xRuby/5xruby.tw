@@ -1,0 +1,7 @@
+<h3 class="text-center top-spacing">
+  <%= raw(configs['sentence'] % {
+    days_before_begining: content_tag(:span, @camp.days_before_begining, class: "large text-orange"),
+    days_before_ending: content_tag(:span, @camp.days_before_ending, class: "large text-orange")
+  }) %>
+</h3>
+<%= link_to configs['button']['text'], configs['button']['href'], class: "btn btn-red top-spacing-sm" if configs['button'].present? %>
