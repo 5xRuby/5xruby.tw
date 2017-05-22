@@ -4,7 +4,9 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-lg-6 col-md-6 center-block text-center">
-        <% c = camp.begun? ? configs['begun'] : configs['available'] %>
+        <% c = camp.ended? \
+        ? configs['ended'] \
+        : (camp.begun? ? configs['begun'] : configs['available']) %>
         <h3 class="text-center top-spacing">
           <%= raw(c['sentence'] % {
             days_before_begining: content_tag(:span, camp.days_before_begining, class: "large text-orange"),
