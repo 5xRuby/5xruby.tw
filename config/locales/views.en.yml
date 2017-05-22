@@ -1,10 +1,10 @@
 en:
   breadcrumb:
     home: Home
-    courses: Lectures
-  courses:
+    talks: Lectures
+  talks:
     index:
-      all_courses: All lectures
+      all_talks: All lectures
       speakers: Speakers
     show:
       hours_label: 'Hours:'
@@ -18,7 +18,7 @@ en:
       apply_now: I'd like to sign in the lecture
       payment_note: 'Payment:'
       note: Description
-    course:
+    talk:
       outdated: Ended
       about_to_begin: About to begin
       opening: Opening
@@ -77,7 +77,7 @@ en:
       main_features:
         about_5xruby: About 5xRuby
       main_content:
-        next_courses: recent lectures
+        next_talks: recent lectures
         more_talks: ...More
       showcases:
         title: Showcases
@@ -162,7 +162,7 @@ en:
     nav:
       login: Login
       camp: Boot Camp
-      course: Courses/Events
+      talk: Courses/Events
       showcases: Showcases
       training: Training
       news: News
