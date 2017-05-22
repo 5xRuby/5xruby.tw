@@ -3,7 +3,7 @@ class CreateOrders < ActiveRecord::Migration[5.0]
     create_table :orders do |t|
       t.references :activitiable, index: true, polymorphic: true
       t.string :state
-      t.integer :amount
+      t.decimal :amount, precision: 31, scale: 1
       t.json :fields
       t.references :user, foreign_key: true
 

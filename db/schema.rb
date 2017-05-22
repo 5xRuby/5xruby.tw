@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20170519040634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "activities", force: :cascade do |t|
     t.string   "type"
@@ -24,8 +25,8 @@ ActiveRecord::Schema.define(version: 20170519040634) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.boolean  "is_online"
-    t.integer  "form_id"
     t.integer  "template_id"
+    t.integer  "form_id"
     t.index ["form_id"], name: "index_activities_on_form_id", using: :btree
     t.index ["template_id"], name: "index_activities_on_template_id", using: :btree
   end
@@ -148,11 +149,11 @@ ActiveRecord::Schema.define(version: 20170519040634) do
     t.string   "activitiable_type"
     t.integer  "activitiable_id"
     t.string   "state"
-    t.integer  "amount"
+    t.decimal  "amount",            precision: 31, scale: 1
     t.json     "fields"
     t.integer  "user_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
     t.index ["activitiable_type", "activitiable_id"], name: "index_orders_on_activitiable_type_and_activitiable_id", using: :btree
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
@@ -262,6 +263,7 @@ ActiveRecord::Schema.define(version: 20170519040634) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 
