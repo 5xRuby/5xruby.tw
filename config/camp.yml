@@ -11,9 +11,9 @@ top_count_down: &count_down
       href: '#tickets'
   ended:
     sentence: 喔吶，錯過課程時間了嗎？
-    #button:
-      #text: 點我訂閱開課消息
-      #href: '#'
+    button:
+      text: 點我訂閱開課消息
+      href: '#'
 
 bottom_past_info:
   begun:
