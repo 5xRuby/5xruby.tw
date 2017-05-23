@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :contacts, only: :create
     resources :showcases, only: :index
     resource :camp, only: :show
+    resource :registration, only: :show
     post 'rental/calculate'
 
     devise_for :users, controllers: { registrations: 'users/registrations' }, skip: :omniauth_callbacks

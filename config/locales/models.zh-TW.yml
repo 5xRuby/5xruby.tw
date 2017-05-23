@@ -76,6 +76,7 @@ zh-TW:
         type: 課程屬性
         title: 課程名字
         template: 衝刺班模板
+        form: 問題表單
         payment_note: 付款資訊
         note: 備註
       course:
