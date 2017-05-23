@@ -29,7 +29,7 @@ class Order < ApplicationRecord
 
   # association macros
   belongs_to :user
-  belongs_to :activitiable, polymorphic: true
+  belongs_to :purchasable, polymorphic: true
 
   # validation macros
   validates :amount, numericality: { greater_than_or_equal_to: 0 }

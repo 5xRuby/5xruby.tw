@@ -16,7 +16,7 @@ class Activity < ApplicationRecord
   belongs_to :template, class_name: "CampTemplate", required: false
   has_many :translations, as: :translatable
   has_many :activity_courses
-  has_many :orders, as: :activitiable
+  has_many :orders, as: :purchasable
   accepts_nested_attributes_for :activity_courses, allow_destroy: true
 
   # validation macros
