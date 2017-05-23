@@ -87,6 +87,7 @@ group :development do
   gem 'capistrano-sidekiq'
   gem 'capistrano-upload-config'
   gem 'web-console'
+  gem 'letter_opener'
 end
 
 group :development, :test do

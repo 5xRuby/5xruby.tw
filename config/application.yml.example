@@ -29,7 +29,7 @@ development: &development
   recipient: tonytonyjan@gmail.com
   action_mailer:
     default_url_options:
-      :host: localhost:3000
+      :host: 'localhost:3000'
     delivery_method: :smtp
     smtp_settings:
       :address: smtp.gmail.com
@@ -64,7 +64,7 @@ production:
     secret_key: SECRET_KEY
   action_mailer:
     default_url_options:
-      :host: localhost:3000
+      :host: 'localhost:3000'
     delivery_method: :smtp
     smtp_settings:
       :address: smtp.gmail.com
