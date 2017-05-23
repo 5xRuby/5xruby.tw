@@ -6,16 +6,20 @@ ja:
     index:
       all_talks: 全ての講座
       speakers: 講師
-    show:
+    info:
       hours_label: '時間:'
       outdated: 講座を始めました
       opening: 申し込む
+    details:
       lecturer: 講師
       suitable_for: 誰向けの授業
       what_you_will_learn: 学ぶこと
+    outline:
       outline: アウトライン
       chapter_title: "レッスン %{nth}:"
+    tickets:
       apply_now: 申込希望
+    notice:
       payment_note: 'お支払方法:'
       note: 説明
     talk:
