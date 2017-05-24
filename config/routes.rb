@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     get 'courses/:id', to: redirect('/talks/%{id}')
     get 'courses', to: redirect('/talks')
     post 'rental/calculate'
+
+    Settings.alias.each do |path|
+      get path.from, to: redirect(path.to)
+    end
   end
 
   get Settings.admin_path_prefix, to: "admin#dashboard", as: :admin_root
