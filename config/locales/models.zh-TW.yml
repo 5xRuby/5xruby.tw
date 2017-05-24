@@ -125,6 +125,7 @@ zh-TW:
       index_picture:
         alt: 說明文字
         href: 連結
+        ordering: 順序
       index_picture_img:
         src: 圖檔
         lang: 語系
