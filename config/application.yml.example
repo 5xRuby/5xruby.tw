@@ -15,9 +15,9 @@ defaults: &defaults
   index_pictures:
     sizes: ['400w', '600w', '1280w', '1920w', '2560w']
     default_size: '1280w'
-  # alias:
-    # - from: reactjs
-    #   to: /talks/react-redux-2017-1
+  alias:
+    - from: reactjs
+      to: /talks/react-redux-2017-1
 
 development: &development
   <<: *defaults

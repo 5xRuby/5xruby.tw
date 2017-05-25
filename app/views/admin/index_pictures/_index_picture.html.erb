@@ -2,6 +2,7 @@
 <div class="well">
   <%= show_attr index_picture, :alt %>
   <%= show_attr index_picture, :href %>
+  <%= show_attr index_picture, :ordering %>
   <%= index_pic_set_link_tag index_picture, {}, lang: :any, class: 'img-responsive'  %>
   <%= link_to t('crud.edit'), {action: :edit, id: index_picture.id}, {class: 'btn btn-info btn-lg'} %>
   <%= link_to t('crud.show'), {action: :show, id: index_picture.id}, {class: 'btn btn-primary btn-lg'} %>
