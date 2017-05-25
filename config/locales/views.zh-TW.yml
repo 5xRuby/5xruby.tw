@@ -132,6 +132,7 @@ zh-TW:
         reset_pw: 重設密碼
         placeholder:
           email: member@5xruby.tw
+        send_reset_mail: 發送重設密碼信
       edit:
         title: 重設密碼
         new_password: 新密碼
@@ -139,13 +140,13 @@ zh-TW:
         reset_password: 重設密碼
     registrations:
       new:
-        title: '申請加入會員'
+        title: 申請加入會員
       edit:
-        title: '修改會員資料'
+        title: 修改會員資料
       form:
-        sign_up: '送出'
-        password_blank_is_ok: "如果不想更改密碼，留白即可"
-        current_password_required: "若要更改密碼，請輸入現有密碼"
+        sign_up: 送出
+        password_blank_is_ok: 如果不想更改密碼，留白即可
+        current_password_required: 若要更改密碼，請輸入現有密碼
 
   layouts:
     footer:
