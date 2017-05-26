@@ -1,0 +1,17 @@
+<div class="light-grey-bg">
+  <div class="container">
+    <div class="bottom-spacing-lg top-spacing-lg">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-centered white-bg clearfix">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <div class="bottom-spacing-lg top-spacing-lg">
+            <h2 class="both-spacing"><%= t('.title') %></h2>
+            <%= simple_form_for @resource, url: attendance_path , wrapper: :vertical_form do |f| %>
+              <%= f.input_field :fields, as: :json_form_data, source: :questions %>
+              <%= f.submit t('.submit'), class: 'btn btn-red center-block top-spacing' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

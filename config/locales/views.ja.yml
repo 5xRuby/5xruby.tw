@@ -1,4 +1,8 @@
 ja:
+  attendances:
+    new:
+      title: title # TODO: change it to japanese
+      submit: 送信
   breadcrumb:
     home: ホーム
     talks: 講座

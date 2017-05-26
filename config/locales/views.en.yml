@@ -1,4 +1,8 @@
 en:
+  attendances:
+    new:
+      title: Form
+      submit: Submit
   breadcrumb:
     home: Home
     talks: Lectures

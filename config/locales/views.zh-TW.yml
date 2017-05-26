@@ -1,4 +1,8 @@
 zh-TW:
+  attendances:
+    new:
+      title: 表單
+      submit: 送出
   breadcrumb:
     home: 首頁
     talks: 講座資訊
