@@ -125,12 +125,14 @@ ja:
           google: Googleアカウントでログイン
           facebook: Facebookアカウントでログイン
           twitter: Twitterアカウントでログイン
+          github: Githubアカウントでログイン
     passwords:
       new:
-        title: Forget Password?
-        reset_pw: Reset Password
+        title: パスワードをリセット
+        reset_pw: パスワードをリセット
         placeholder:
           email: member@5xruby.tw
+        send_reset_mail: 送信
       edit:
         title: Reset Password
         new_password: New Password

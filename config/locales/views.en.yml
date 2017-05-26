@@ -132,6 +132,7 @@ en:
         reset_pw: Reset Password
         placeholder:
           email: member@5xruby.tw
+        send_reset_mail: Send reset email
       edit:
         title: Reset Password
         new_password: New Password
