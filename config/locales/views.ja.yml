@@ -2,6 +2,7 @@ ja:
   attendances:
     new:
       title: title # TODO: change it to japanese
+    form:
       submit: 送信
   breadcrumb:
     home: ホーム

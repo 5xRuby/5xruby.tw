@@ -2,6 +2,7 @@ en:
   attendances:
     new:
       title: Form
+    form:
       submit: Submit
   breadcrumb:
     home: Home

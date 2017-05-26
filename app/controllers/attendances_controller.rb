@@ -11,14 +11,13 @@ class AttendancesController < ApplicationController
   private
 
   def load_resource
-    @resource = DynamicForm.create(Activity::Camp.last)
+    @resource = DynamicForm.create(current_activity)
   end
 
   alias build_resource load_resource
 
   def save_resource
     @resource.assign_attributes(allowed_params)
-    byebug
     if @resource.save
       redirect_to root_path
     else
@@ -27,12 +26,16 @@ class AttendancesController < ApplicationController
   end
 
   def allowed_params
-    params.require(:dynamic_form).permit(*whitelisted)
+    params.require(:dynamic_form).permit(*whitelisted, :purchasable_id)
   end
 
   def whitelisted
-    JSON.parse(Activity::Camp.last.form.fields).map do |q|
+    JSON.parse(current_activity.form.fields).map do |q|
       q['as'] != 'check_boxes' ? q['name'].to_sym : { q['name'].to_sym => [] }
     end
+  end
+
+  def current_activity
+    @current_activity ||= Activity.find_by(id: params[:purchasable_id]) || Activity::Camp.last
   end
 end

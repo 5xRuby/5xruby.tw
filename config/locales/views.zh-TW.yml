@@ -2,6 +2,7 @@ zh-TW:
   attendances:
     new:
       title: 表單
+    form:
       submit: 送出
   breadcrumb:
     home: 首頁

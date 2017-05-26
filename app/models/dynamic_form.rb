@@ -15,6 +15,7 @@ module DynamicForm
     def generate
       @form = @klass.new
       @form.questions = JSON.parse(@activity.form.fields).map(&:symbolize_keys)
+      @form.purchasable = @activity
       @form.questions.each do |q|
         @form.class.class_eval do
           # set attribute_accessors
