@@ -42,7 +42,7 @@ $ rails generate scaffold admin/post title content:text --migration=false --pare
 Schema Updating
 ---------------
 
-1. Generate migraion file
+1. Generate migration file
 2. Update facotry
 3. Update `_form.html.erb`, `show.html.erb` and `index.html.erb` in admin pages.
 
