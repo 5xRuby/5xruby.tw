@@ -1,5 +1,6 @@
 class UpdateActivitiesCourses < ActiveRecord::Migration[5.0]
   def change
+    enable_extension 'uuid-ossp'
     rename_table :activities_courses, :activities_courses_deprecated
     create_table :activities_courses, id: :uuid do |t|
       t.references :activity, foreign_key: true
