@@ -43,7 +43,7 @@ class Admin::ActivitiesController < AdminController
     params.require(:admin_activity).permit(
       :type, :title, :permalink, :note,
       :payment_note, :is_online, :template_id,
-      activity_courses_attributes: [:id, :course_id, :_destroy])
+      activity_courses_attributes: [:id, :course_id, :price, :priority, :_destroy])
   end
 
   def set_type

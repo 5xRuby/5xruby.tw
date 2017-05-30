@@ -9,8 +9,11 @@
     <%= f.input :note, input_html: { value: current_object.note || raw(t('note')), class: :redactor } %>
   </div>
 
-  <%= render 'activity_courses_fields', f: f %>
-  <%= render 'activity_rules_fields', f: f%>
+  <%= react_component("ActivityFormCourseFields", {
+    activityCourses: current_object.activity_courses,
+    courseSelectOpions: Course.all.includes(:stages).sort_by(&:start_on).reverse!.map{|c| [[c.start_on, c.title].join("－"), c.id] }
+  }) %>
+
   <hr>
   <div class='form-actions'>
     <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
