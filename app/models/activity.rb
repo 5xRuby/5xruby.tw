@@ -56,7 +56,8 @@ class Activity < ApplicationRecord
   end
 
   def validate_courses_uniqueness
-    return if activity_courses.map(&:course_id).uniq.size == activity_courses.size
+    not_destroyed_activity_courses = activity_courses.reject(&:marked_for_destruction?)
+    return if not_destroyed_activity_courses.map(&:course_id).uniq.size == not_destroyed_activity_courses.size
     errors.add(:type, :course_duplicate)
   end
 

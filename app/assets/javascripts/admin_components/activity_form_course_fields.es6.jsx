@@ -3,7 +3,10 @@ class ActivityFormCourseFields extends React.Component {
     super(props, context);
 
     // Reduce activityCourses to an object
-    const activityCourses = this.props.activityCourses.reduce((o, i) => { o[i.id] = i; return o; }, {})
+    const activityCourses = this.props.activityCourses.reduce((o, i) => {
+      o[i.id] = i;
+      return o;
+    }, {});
 
     this.state = {
       activityCourses,
@@ -144,7 +147,10 @@ class ActivityFormCourseFieldsActivityCourseTr extends React.Component {
   render() {
     const {
       index,
-      activityCourse
+      activityCourse,
+      courseSelectOpions,
+      onChangeObject,
+      onRemove
     } = this.props;
 
     if (activityCourse._destroy) {
@@ -162,11 +168,11 @@ class ActivityFormCourseFieldsActivityCourseTr extends React.Component {
         <td>
           <ActivityFormCourseFieldsCourseSelect
             name={`admin_activity[activity_courses_attributes][${index}][course_id]`}
-            courseSelectOpions={this.props.courseSelectOpions}
+            courseSelectOpions={courseSelectOpions}
             value={activityCourse.course_id}
             onChange={(e) => {
-              if (this.props.onChangeObject) {
-                this.props.onChangeObject({ course_id: e.target.value });
+              if (onChangeObject) {
+                onChangeObject({ course_id: e.target.value });
               }
             }}
           />
@@ -182,8 +188,8 @@ class ActivityFormCourseFieldsActivityCourseTr extends React.Component {
               min="0"
               value={activityCourse.price}
               onChange={(e) => {
-                if (this.props.onChangeObject) {
-                  this.props.onChangeObject({ price: e.target.value });
+                if (onChangeObject) {
+                  onChangeObject({ price: e.target.value });
                 }
               }}
             />
@@ -200,8 +206,8 @@ class ActivityFormCourseFieldsActivityCourseTr extends React.Component {
               min="0"
               value={activityCourse.priority}
               onChange={(e) => {
-                if (this.props.onChangeObject) {
-                  this.props.onChangeObject({ priority: e.target.value });
+                if (onChangeObject) {
+                  onChangeObject({ priority: e.target.value });
                 }
               }}
             />
@@ -211,7 +217,7 @@ class ActivityFormCourseFieldsActivityCourseTr extends React.Component {
           <a
             className="btn btn-default"
             onClick={() => {
-              if (this.props.onRemove) this.props.onRemove();
+              if (onRemove) onRemove();
             }}
           >
             移除
