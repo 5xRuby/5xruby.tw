@@ -66,6 +66,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     airbrussh (1.2.0)
       sshkit (>= 1.6.1, != 1.7.0)
     annotate (2.7.1)
@@ -190,6 +192,10 @@ GEM
       activerecord
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.5)
@@ -244,6 +250,7 @@ GEM
     pry-byebug (3.4.2)
       byebug (~> 9.0)
       pry (~> 0.10)
+    public_suffix (2.0.5)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -413,6 +420,7 @@ DEPENDENCIES
   jquery-slick-rails
   jquery-ui-rails
   kaminari (~> 1.0.1)
+  letter_opener
   nested_form
   omniauth
   omniauth-facebook
