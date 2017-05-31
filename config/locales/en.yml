@@ -264,6 +264,14 @@ en:
       about: "Let it crash."
       skills: Elixir / Phoenix / JavaScript / Ruby
 
+    - name: Shang-Wei Tsai
+      title: MBPR2017 buyer
+      avatar: tsw.jpg
+      twitter: https://twitter.com/e39a562r1
+      github: https://github.com/e39a562rs
+      about: 「I need dongles! DESPERATELY!!」
+      skills: C/C++ / Web / JavaScript / Python / free(wallet)
+
     # 實習生放正職後面
     - name: Fumitsuki
       title: Eight plates eating hime
