@@ -52,6 +52,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_type (0.7.0)
+      activerecord (>= 3.2)
     activejob (5.0.3)
       activesupport (= 5.0.3)
       globalid (>= 0.3.6)
@@ -395,6 +397,7 @@ PLATFORMS
 DEPENDENCIES
   aasm
   ace-rails-ap
+  active_type
   acts-as-taggable-on!
   annotate
   bootstrap-sass

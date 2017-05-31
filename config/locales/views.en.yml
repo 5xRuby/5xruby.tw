@@ -1,4 +1,9 @@
 en:
+  attendances:
+    new:
+      title: Form
+    form:
+      submit: Submit
   breadcrumb:
     home: Home
     talks: Lectures
@@ -6,16 +11,20 @@ en:
     index:
       all_talks: All lectures
       speakers: Speakers
-    show:
+    info:
       hours_label: 'Hours:'
       outdated: Lecture has started
       opening: Sign up now
+    details:
       lecturer: Lecturer
       suitable_for: Suitable for
       what_you_will_learn: What you will learn
+    outline:
       outline: Outline
       chapter_title: "Lesson %{nth}:"
+    tickets:
       apply_now: I'd like to sign in the lecture
+    notice:
       payment_note: 'Payment:'
       note: Description
     talk:

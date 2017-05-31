@@ -60,6 +60,7 @@ gem 'rmagick', '~> 2.16'
 gem 'settingslogic'
 gem 'simple_form'
 gem 'aasm'
+gem 'active_type'
 
 # Frontend
 gem 'rdiscount'

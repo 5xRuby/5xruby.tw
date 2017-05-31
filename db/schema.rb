@@ -148,11 +148,11 @@ ActiveRecord::Schema.define(version: 20170523025028) do
     t.string   "purchasable_type"
     t.integer  "purchasable_id"
     t.string   "state"
-    t.integer  "amount"
+    t.decimal  "amount",           precision: 31, scale: 1
     t.json     "fields"
     t.integer  "user_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
     t.index ["purchasable_type", "purchasable_id"], name: "index_orders_on_purchasable_type_and_purchasable_id", using: :btree
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end

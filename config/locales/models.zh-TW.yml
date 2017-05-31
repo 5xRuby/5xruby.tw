@@ -9,6 +9,7 @@ zh-TW:
       talk_has_no_template: 講座不需要模板
       talk_has_been_existed: 該講座已經開設課程了
       camp_needs_template: 衝刺班需要模板
+      not_correct_email_format: '無效 Email'
   activemodel:
     attributes:
       contact:
@@ -42,7 +43,7 @@ zh-TW:
     models:
       post: 文章
       category: 講座分類
-      course: 講座內容
+      course: 講座
       activity: 課程
       activity_course: 課程內容
       activity/talk: 講座
@@ -76,6 +77,7 @@ zh-TW:
         type: 課程屬性
         title: 課程名字
         template: 衝刺班模板
+        form: 表單
         payment_note: 付款資訊
         note: 備註
       course:

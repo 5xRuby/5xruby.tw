@@ -25,4 +25,7 @@ tags
 /config/*.*.yml
 /postgres
 /vendor/bundle
+
+# db dump
 *.sql
+*-*-*

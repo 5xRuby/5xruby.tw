@@ -14,6 +14,7 @@ class Activity < ApplicationRecord
   # association macros
   has_and_belongs_to_many :courses, after_add: :touch_if_needed, after_remove: :touch_if_needed
   belongs_to :template, class_name: "CampTemplate", required: false
+  belongs_to :form, required: false
   has_many :translations, as: :translatable
   has_many :activity_courses
   has_many :orders, as: :purchasable

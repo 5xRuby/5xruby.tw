@@ -1,4 +1,9 @@
 zh-TW:
+  attendances:
+    new:
+      title: 表單
+    form:
+      submit: 送出
   breadcrumb:
     home: 首頁
     talks: 講座資訊
@@ -6,16 +11,20 @@ zh-TW:
     index:
       all_talks: 所有講座
       speakers: 講師陣容 Speakers
-    show:
+    info:
       hours_label: '時數:'
       outdated: 講座已開始，不接受報名
       opening: 立即報名
+    details:
       lecturer: 講師
       suitable_for: 本講座適合
       what_you_will_learn: 你將會學到
+    outline:
       outline: 講座大綱
       chapter_title: 第 %{nth} 堂：
+    tickets:
       apply_now: 我要報名
+    notice:
       payment_note: 付款方式：
       note: 注意事項：
     talk:

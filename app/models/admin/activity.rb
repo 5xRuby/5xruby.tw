@@ -11,6 +11,7 @@ class Admin::Activity < Activity
   # association macros
   has_and_belongs_to_many :courses, after_add: :touch_if_needed, after_remove: :touch_if_needed
   belongs_to :template, class_name: "Admin::CampTemplate", required: false
+  belongs_to :form, class_name: "Admin::Form", required: false
 
   # validation macros
 

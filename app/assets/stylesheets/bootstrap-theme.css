@@ -2891,3 +2891,8 @@ footer .fa-twitter:hover {
 .ui-dialog .ui-dialog-titlebar-close {
   top: 45% !important;
 }
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
