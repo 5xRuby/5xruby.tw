@@ -72,7 +72,7 @@ class User < ApplicationRecord
   end
 
   def password_required?
-    self.omniauths.blank?
+    omniauth.blank? && super
   end
 
   # association macros

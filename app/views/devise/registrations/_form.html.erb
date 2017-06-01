@@ -9,10 +9,6 @@
   <% if resource.password_required? %>
     <%= f.input :password, required: true %>
     <%= f.input :password_confirmation, required: true %>
-  <% elsif resource.persisted? %>
-    <%= f.input :password, autocomplete: "off", hint: t('.password_blank_is_ok'), required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%#= f.input :current_password, hint: t('.current_password_required'), required: true %>
   <% end %>
 
   <div class="form-group">

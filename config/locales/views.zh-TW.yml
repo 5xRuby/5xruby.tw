@@ -187,3 +187,16 @@ zh-TW:
       index:
         talk: 講座
         camp: 衝刺班
+
+  users:
+    profile:
+      passwords:
+        edit:
+          title: 修改密碼
+        form:
+          edit_password: 送出
+
+  shared:
+    profile_sidebar:
+      profile: 會員資料
+      password: 更改密碼
