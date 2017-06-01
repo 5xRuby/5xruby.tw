@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170523025028) do
+ActiveRecord::Schema.define(version: 20170524025052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "activities", force: :cascade do |t|
     t.string   "type"
@@ -30,11 +31,21 @@ ActiveRecord::Schema.define(version: 20170523025028) do
     t.index ["template_id"], name: "index_activities_on_template_id", using: :btree
   end
 
-  create_table "activities_courses", force: :cascade do |t|
+  create_table "activities_courses", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.integer "activity_id"
     t.integer "course_id"
+    t.decimal "price",            null: false
+    t.decimal "early_bird_price"
+    t.integer "priority"
     t.index ["activity_id"], name: "index_activities_courses_on_activity_id", using: :btree
     t.index ["course_id"], name: "index_activities_courses_on_course_id", using: :btree
+  end
+
+  create_table "activities_courses_deprecated", force: :cascade do |t|
+    t.integer "activity_id"
+    t.integer "course_id"
+    t.index ["activity_id"], name: "index_activities_courses_deprecated_on_activity_id", using: :btree
+    t.index ["course_id"], name: "index_activities_courses_deprecated_on_course_id", using: :btree
   end
 
   create_table "authors", force: :cascade do |t|
@@ -262,6 +273,7 @@ ActiveRecord::Schema.define(version: 20170523025028) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 
@@ -299,6 +311,8 @@ ActiveRecord::Schema.define(version: 20170523025028) do
   add_foreign_key "activities", "forms"
   add_foreign_key "activities_courses", "activities"
   add_foreign_key "activities_courses", "courses"
+  add_foreign_key "activities_courses_deprecated", "activities"
+  add_foreign_key "activities_courses_deprecated", "courses"
   add_foreign_key "orders", "users"
   add_foreign_key "payments", "orders"
   add_foreign_key "payments", "users"
