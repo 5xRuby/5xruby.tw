@@ -25,14 +25,6 @@
 //= require konami
 //
 //= require shared
-//
-//= require guest
-<<<<<<< HEAD
-=======
 //= require photo_swipe
 //
-//= require react
-//= require react_ujs
-//= require_tree ./camp_components
->>>>>>> 6445992... add space page
-
+//= require guest
