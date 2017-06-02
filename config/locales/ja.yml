@@ -396,6 +396,11 @@ ja:
       sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
       default_size: "1280w.png"
       alt: Camp
+    space_main_banner:
+      folder: space-main-banner/ja
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Space
     about_services:
       - name: 技術コンサルティング
         img: consult.png
@@ -435,4 +440,57 @@ ja:
       徵才: 採用情報
       心得分享: 感想とレビュー
       其他消息: その他
+  space:
+    features:
+      net: 300M/100M 高速インターネット
+      traffic: 便利な交通アクセス
+      equipment: プロジェクター完備(Apple TVあり)
+      table: 広いワークテーブル
+      sound: 音響設備あり
+    booking:
+      title: レンタル
+      description: 収容人数 45 ~ 60 人。台北駅に近くて、アクセスが超便利！プロジェクターやマイクなどの音響設備も取り揃えております。
+      event_tech: テクノロジー・コミュニティイベント、非営利団体 NT.1,500
+      event_normal: 平日の夜 (18:00 ~ 22:00) NT.2,500
+      event_weekend: 週末、祝日 NT.3,000
+      time: 1hr
+      note: 長期割引サービスがあります
+    contact:
+      title: レンタルに興味ある方ぜひ！
+      contact_button: お問い合わせ
+  space_rent_slides:
+    folder: space_rent_slides
+    slides:
+      - thumb: space-img1-sml.jpg
+        origin: space-img1.jpg
+        alt: image1
+        size: 1200x900
+      - thumb: space-img2-sml.jpg
+        origin: space-img2.jpg
+        alt: image2
+        size: 1200x900
+      - thumb: space-img3-sml.jpg
+        origin: space-img3.jpg
+        alt: image3
+        size: 1200x886
+      - thumb: space-img4-sml.jpg
+        origin: space-img4.jpg
+        alt: image4
+        size: 1200x888
+      - thumb: space-img5-sml.jpg
+        origin: space-img5.jpg
+        alt: image5
+        size: 1200x900
+      - thumb: space-img6-sml.jpg
+        origin: space-img6.jpg
+        alt: image6
+        size: 1200x896
+      - thumb: space-img7-sml.jpg
+        origin: space-img7.jpg
+        alt: image7
+        size: 1200x917
+      - thumb: space-img8-sml.jpg
+        origin: space-img8.jpg
+        alt: image8
+        size: 1200x900
 

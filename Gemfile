@@ -67,6 +67,7 @@ gem "jquery-slick-rails"
 gem "swiper-rails"
 gem 'vex_rails', '~> 0.2.0'
 gem 'ace-rails-ap'
+gem 'photoswipe-rails'
 
 group :development do
   gem 'web-console'
