@@ -1,3 +1,3 @@
-  <%= link_to "/assets/#{folder}/#{item[:origin]}", class: "#{item[:type] ||= 'member'}-wrap text-center", data: {size: "#{item[:size]}"} do %>
-    <%= image_tag "#{folder}/#{item[:thumb]}", alt: item[:alt] %>
-  <% end %>
+<%= link_to image_path("#{folder}/#{item[:origin]}"), class: "#{item[:type] ||= 'member'}-wrap text-center", data: {size: "#{item[:size]}"} do %>
+  <%= image_tag "#{folder}/#{item[:thumb]}", alt: item[:alt] %>
+<% end %>
