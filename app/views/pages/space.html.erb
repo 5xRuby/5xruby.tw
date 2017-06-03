@@ -29,7 +29,7 @@
 <!-- End Space Feature -->
 
 <!-- Start Space Gallery -->
-<div class="space-gallery container-fluid">
+<div class="space-gallery container-fluid light-grey-bg">
   <div class="row">
     <%= render partial: 'shared/carousel', locals: {
       items: t('space_rent_slides.slides').map do |slide|
@@ -54,7 +54,7 @@
 <!-- End Space Gallery -->
 
 <!-- Start Space Whole Booking -->
-<div class="whole-booking bottom-padding-lg">
+<div class="whole-booking bottom-padding-lg light-grey-bg">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12">
@@ -105,7 +105,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-        <h3 class="text-center bottom-spacing-sm"><span><%= t('space.contact.title') %></span></h3>
+        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= t('space.contact.title') %></span></h3>
         <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing-lg text-center">
           <%= link_to t('space.contact.contact_button'), contacts_path, class: 'btn btn-red' %>
         </div>
