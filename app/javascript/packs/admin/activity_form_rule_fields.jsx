@@ -31,9 +31,7 @@ class ActivityFormCourseFields extends React.Component {
   }
 
   render() {
-    const {
-      courseSelectOpions
-    } = this.props;
+    const { courseSelectOptions } = this.props;
 
     const activityCoursesArray = this.getSortedActivityCoursesArray()
     return (
@@ -55,7 +53,7 @@ class ActivityFormCourseFields extends React.Component {
                   key={activityCourse.id}
                   index={index}
                   activityCourse={activityCourse}
-                  courseSelectOpions={courseSelectOpions}
+                  courseSelectOptions={courseSelectOptions}
                   onChangeObject={(changeSet) => {
                     this.handleActivityCourseChange(activityCourse.id, changeSet);
                   }}
@@ -272,7 +270,7 @@ class ActivityFormCourseFieldsActivityCourseTr extends React.Component {
     const {
       index,
       activityCourse,
-      courseSelectOpions,
+      courseSelectOptions,
       onChangeObject,
       onRemove
     } = this.props;
@@ -292,7 +290,7 @@ class ActivityFormCourseFieldsActivityCourseTr extends React.Component {
         <td>
           <ActivityFormCourseFieldsCourseSelect
             name={`admin_activity[activity_courses_attributes][${index}][course_id]`}
-            courseSelectOpions={courseSelectOpions}
+            courseSelectOptions={courseSelectOptions}
             value={activityCourse.course_id}
             onChange={(e) => {
               if (onChangeObject) {
@@ -477,7 +475,7 @@ class ActivityFormCourseFieldsCourseSelect extends React.Component {
         value={this.props.value}
         onChange={this.props.onChange}
       >
-        {this.props.courseSelectOpions.map(
+        {this.props.courseSelectOptions.map(
           option => <option key={option[1]} value={option[1]}>{option[0]}</option>
         )}
       </select>
