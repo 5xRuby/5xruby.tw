@@ -1,1 +1,2 @@
-web: bundle exec rails server -p 5000
+web: puma -p 3000
+webpacker: ./bin/webpack-dev-server

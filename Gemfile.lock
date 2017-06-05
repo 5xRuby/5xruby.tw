@@ -147,6 +147,7 @@ GEM
       i18n (~> 0.5)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
+    ffi (1.9.18)
     flowdock (0.5.0)
       httparty (~> 0.7)
       multi_json
@@ -330,12 +331,17 @@ GEM
     ruby-progressbar (1.8.1)
     rugged (0.19.0)
     sass (3.4.23)
-    sass-rails (5.0.6)
-      railties (>= 4.0.0, < 6)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
+    sassc (1.11.2)
+      bundler
+      ffi (~> 1.9.6)
+      sass (>= 3.3.0)
+    sassc-rails (1.3.0)
+      railties (>= 4.0.0)
+      sass
+      sassc (~> 1.9)
+      sprockets (> 2.11)
+      sprockets-rails
+      tilt
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -387,6 +393,10 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webpacker (2.0)
+      activesupport (>= 4.2)
+      multi_json (~> 1.2)
+      railties (>= 4.2)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -441,7 +451,7 @@ DEPENDENCIES
   rmagick (~> 2.16)
   rspec-rails
   rubocop
-  sass-rails
+  sassc-rails
   sdoc (~> 0.4.0)
   select2-rails (= 3.5.9.1)
   select2_helper!
@@ -453,6 +463,7 @@ DEPENDENCIES
   uglifier
   vex_rails (~> 0.2.0)
   web-console
+  webpacker (~> 2.0)
 
 BUNDLED WITH
    1.14.6

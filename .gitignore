@@ -29,3 +29,5 @@ tags
 # db dump
 *.sql
 *-*-*
+/public/packs
+/node_modules
