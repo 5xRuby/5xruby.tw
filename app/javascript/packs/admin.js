@@ -1,1 +1,1 @@
-import './admin/activity_form_rule_fields'
+import './admin/activity_form'

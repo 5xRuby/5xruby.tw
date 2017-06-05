@@ -14,7 +14,7 @@
     id: 'activity_form_rule_fields',
     data: {
       'activity-courses': current_object.activity_courses,
-      'course-select-opions': Course.all.includes(:stages).sort_by(&:start_on).reverse!.map{|c| [[c.start_on, c.title].join("－"), c.id] }
+      'course-select-options': Course.all_with_humanized_name
     })%>
   <hr>
   <div class='form-actions'>

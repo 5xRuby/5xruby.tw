@@ -1,5 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ActivityFormCourseFieldsActivityCourseTr from './activity_form_course_fields_activity_course_tr';
+import ActivityFormCourseFieldsRuleTr from './activity_form_course_fields_rule_tr';
 
 class ActivityFormCourseFields extends React.Component {
   constructor(props, context) {
@@ -33,7 +35,7 @@ class ActivityFormCourseFields extends React.Component {
   render() {
     const { courseSelectOptions } = this.props;
 
-    const activityCoursesArray = this.getSortedActivityCoursesArray()
+    const activityCoursesArray = this.getSortedActivityCoursesArray();
     return (
       <div>
         <table id="activity_courses" className="table">
@@ -265,230 +267,12 @@ class ActivityFormCourseFields extends React.Component {
   }
 }
 
-class ActivityFormCourseFieldsActivityCourseTr extends React.Component {
-  render() {
-    const {
-      index,
-      activityCourse,
-      courseSelectOptions,
-      onChangeObject,
-      onRemove
-    } = this.props;
-
-    if (activityCourse._destroy) {
-      return (
-        <tr>
-          <input type="hidden" value={activityCourse.id} name={`admin_activity[activity_courses_attributes][${index}][id]`} />
-          <input type="hidden" value="1" name={`admin_activity[activity_courses_attributes][${index}][_destroy]`} />
-        </tr>
-      );
-    }
-    return (
-      <tr>
-        <input type="hidden" value={activityCourse.id} name={`admin_activity[activity_courses_attributes][${index}][id]`} />
-        <td>{String.fromCharCode(65 + index)}.</td>
-        <td>
-          <ActivityFormCourseFieldsCourseSelect
-            name={`admin_activity[activity_courses_attributes][${index}][course_id]`}
-            courseSelectOptions={courseSelectOptions}
-            value={activityCourse.course_id}
-            onChange={(e) => {
-              if (onChangeObject) {
-                onChangeObject({ course_id: e.target.value });
-              }
-            }}
-          />
-        </td>
-        <td>
-          <div className="input-group">
-            <span className="input-group-addon">NT$</span>
-            <input
-              className="form-control"
-              name={`admin_activity[activity_courses_attributes][${index}][price]`}
-              type="number"
-              step="1"
-              min="0"
-              value={activityCourse.price}
-              onChange={(e) => {
-                if (onChangeObject) {
-                  onChangeObject({ price: e.target.value });
-                }
-              }}
-            />
-          </div>
-        </td>
-        <td>
-          <div className="input-group">
-            <span className="input-group-addon">#</span>
-            <input
-              className="form-control"
-              name={`admin_activity[activity_courses_attributes][${index}][priority]`}
-              type="number"
-              step="1"
-              min="0"
-              value={activityCourse.priority}
-              onChange={(e) => {
-                if (onChangeObject) {
-                  onChangeObject({ priority: e.target.value });
-                }
-              }}
-            />
-          </div>
-        </td>
-        <td>
-          <a
-            className="btn btn-default"
-            onClick={() => {
-              if (onRemove) onRemove();
-            }}
-          >
-            移除
-          </a>
-        </td>
-      </tr>
-    );
-  }
-}
-
-class ActivityFormCourseFieldsRuleTr extends React.Component {
-  render() {
-    const {
-      activityCoursesArray,
-      rule,
-      onChangeObject,
-      onRemove
-    } = this.props;
-
-    return (
-      <tr>
-        <td>
-          {activityCoursesArray.filter(o => !o._destroy).map((activityCourse, index) => {
-            return (
-              <div>
-                <input
-                  type="checkbox"
-                  checked={$.inArray(activityCourse.id, rule.selectedActivityCourseIDs) >= 0}
-                  onChange={(e) => {
-                    if (!onChangeObject) return;
-
-                    let selectedActivityCourseIDs = rule.selectedActivityCourseIDs;
-                    if(e.target.checked) {
-                      selectedActivityCourseIDs.push(activityCourse.id)
-                    } else {
-                      index = rule.selectedActivityCourseIDs.indexOf(activityCourse.id)
-                      selectedActivityCourseIDs.splice(index, 1)
-                    }
-
-                    onChangeObject( { selectedActivityCourseIDs } )
-                  }}
-                />
-                {String.fromCharCode(65 + index)}
-              </div>
-            )
-          })
-          }
-        </td>
-        <td>
-          <input
-            className="form-control"
-            value={rule.writing}
-            onChange={(e) => {
-              if (onChangeObject) {
-                onChangeObject({ writing: e.target.value });
-              }
-            }}
-          />
-        </td>
-        <td>
-          <div className="input-group">
-            <span className="input-group-addon">NT$</span>
-            <input
-              className="form-control"
-              type="number"
-              step="1"
-              min="0"
-              value={rule.price}
-              onChange={(e) => {
-                if (onChangeObject) {
-                  onChangeObject({ price: e.target.value });
-                }
-              }}
-            />
-          </div>
-        </td>
-        <td>
-          <div className="input-group">
-            <span className="input-group-addon">NT$</span>
-            <input
-              className="form-control"
-              type="number"
-              step="1"
-              min="0"
-              value={rule.early_price}
-              onChange={(e) => {
-                if (onChangeObject) {
-                  onChangeObject({ early_price: e.target.value });
-                }
-              }}
-            />
-          </div>
-        </td>
-        <td>
-          <div className="input-group">
-            <span className="input-group-addon">#</span>
-            <input
-              className="form-control"
-              type="number"
-              step="1"
-              min="0"
-              value={rule.priority}
-              onChange={(e) => {
-                if (onChangeObject) {
-                  onChangeObject({ priority: e.target.value });
-                }
-              }}
-            />
-          </div>
-        </td>
-        <td>
-          <a
-            className="btn btn-default"
-            onClick={() => {
-              if (onRemove) onRemove();
-            }}
-          >
-            移除
-          </a>
-        </td>
-      </tr>
-    )
-  }
-}
-
-class ActivityFormCourseFieldsCourseSelect extends React.Component {
-  render() {
-    return (
-      <select
-        className="select required form-control"
-        label="false"
-        name={this.props.name}
-        value={this.props.value}
-        onChange={this.props.onChange}
-      >
-        {this.props.courseSelectOptions.map(
-          option => <option key={option[1]} value={option[1]}>{option[0]}</option>
-        )}
-      </select>
-    );
-  }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-  const node = document.getElementById('activity_form_rule_fields')
+  const node = document.getElementById('activity_form_rule_fields');
   const data = Object.assign({}, node.dataset);
 
   // each value in data object must be converted into an array
-  Object.keys(data).map(id => data[id] = JSON.parse(data[id]))
+  Object.keys(data).map(id => data[id] = JSON.parse(data[id]));
 
-  ReactDOM.render(<ActivityFormCourseFields {...data}/>, node)
+  ReactDOM.render(<ActivityFormCourseFields {...data}/>, node);
 })
