@@ -7,7 +7,6 @@ class Activity::Camp < Activity
   # Constants
 
   # Attributes related macros
-  delegate :payload, to: :template
 
   def days_before_begining
     (begin_date - Date.today).to_i
