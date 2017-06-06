@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170524025052) do
+ActiveRecord::Schema.define(version: 20170606032020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,11 +22,12 @@ ActiveRecord::Schema.define(version: 20170524025052) do
     t.string   "permalink"
     t.text     "note"
     t.text     "payment_note"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.boolean  "is_online"
     t.integer  "form_id"
     t.integer  "template_id"
+    t.json     "rules",        default: {}
     t.index ["form_id"], name: "index_activities_on_form_id", using: :btree
     t.index ["template_id"], name: "index_activities_on_template_id", using: :btree
   end
