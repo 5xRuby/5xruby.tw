@@ -2,16 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ActivityFormCourseFieldsActivityCourseTr from './activity_form_course_fields_activity_course_tr';
 import ActivityFormCourseFieldsRuleTr from './activity_form_course_fields_rule_tr';
+import _ from 'lodash';
 
 class ActivityFormCourseFields extends React.Component {
   constructor(props, context) {
     super(props, context);
 
-    const rules = {} // TODO
-
     this.state = {
       activityCourses: {},
-      rules
+      rules: {}
     };
 
     this.handleActivityCourseChange = this.handleActivityCourseChange.bind(this);
@@ -29,7 +28,17 @@ class ActivityFormCourseFields extends React.Component {
       return o;
     }, {});
 
-    this.setState({ activityCourses });
+    // Convert rule to an object
+    const rules = _.reduce(this.props.rules, (obj, value, key) => {
+      const uuid = this.generateUUID();
+      obj[uuid] = {
+        ...value,
+        selectedActivityCourseIDs: key.split("--")
+      }
+      return obj
+    }, {})
+
+    this.setState({ activityCourses, rules });
   }
 
   render() {
@@ -261,7 +270,10 @@ class ActivityFormCourseFields extends React.Component {
         filter((el) => $.inArray(el, activityCoursesIDs) >= 0).
         sort().
         join("--")
-      result[uuid] = el
+      result[uuid] = {
+        ...el,
+        selectedActivityCourseIDs: undefined
+      }
       return result
     }, {})
   }
