@@ -447,10 +447,18 @@ zh-TW:
   space:
     features:
       net: 300M/100M 高速網路
+      net_intro: 光纖寬頻上網 300M/100M，上傳下載速度都超快！
       traffic: 三鐵共構便利交通
-      equipment: 投影設備(含 Apple TV)
+      traffic_intro: 不管是搭乘北捷、台鐵或是高鐵，都可以輕鬆抵達。
+      equipment: 投影設備 & Apple TV
+      equipment_intro: FULL HD投影設備，還有Apple TV可以使用喔！
       table: 寬廣工作桌
+      table_intro: 教室內備有寬敞的桌椅以及充足的插座。
       sound: 擴音設備
+      sound_intro: 備有無線麥克風及音響，不用自己準備器材囉。
+      live: 錄影直播設備
+      live_intro: 即時合成子母畫面，除了可以直播還兼具錄影功能。
+      live_video: 範例影片
     booking:
       title: 活動包場
       description: 可容納 45 ~ 60 人。出礦坑位於三鐵共構旁，交通超方便！備齊投影擴音設備，只要人到就好了。

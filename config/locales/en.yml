@@ -444,11 +444,19 @@ en:
     其他消息: Other
   space:
     features:
-      net: 300M/100M High speed internet
+      net: High speed internet
+      net_intro: Faster speeds make everything online better.
       traffic: Conveniently located
-      equipment: Projection equipment(with Apple TV)
+      traffic_intro: Near Taipei Main Station, easy to access!
+      equipment: Projection equipment
+      equipment_intro: FULL HD projection and Apple TV.
       table: Large working table
+      table_intro: Capacious table and plenty of power socket.
       sound: Sound systems
+      sound_intro: Wireless microphones and sound stystems.
+      live: Live equipment
+      live_intro: Record live streaming video into PiP immediately.
+      live_video: Sample video
     booking:
       title: Rental
       description: 45 ~ 60 person capacity. We are located near Taipei Main Station and well equipped with projection equipment and sound systems.

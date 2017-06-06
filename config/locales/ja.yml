@@ -442,11 +442,19 @@ ja:
       其他消息: その他
   space:
     features:
-      net: 300M/100M 高速インターネット
+      net: 高速インターネット
+      net_intro: 光回線 300M/100M，ネット環境バッチリ！
       traffic: 便利な交通アクセス
-      equipment: プロジェクター完備(Apple TVあり)
+      traffic_intro: 台北駅から歩いて10分、アクセス抜群！
+      equipment: プロジェクター完備
+      equipment_intro: FULL HDプロジェクター、Apple TV使えます。
       table: 広いワークテーブル
+      table_intro: 教室内には広いテーブルとコンセントも完備。
       sound: 音響設備あり
+      sound_intro: マイク、音響設備完備、ワイヤレスマイク対応。
+      live: 録画ライブ配信設備
+      live_intro: 2画面分割機能付き、ライブ配信と録画兼用。
+      live_video: サンプル動画
     booking:
       title: レンタル
       description: 収容人数 45 ~ 60 人。台北駅に近くて、アクセスが超便利！プロジェクターやマイクなどの音響設備も取り揃えております。

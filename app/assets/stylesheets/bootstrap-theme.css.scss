@@ -1112,6 +1112,14 @@ footer .fa-github:hover {
 }
 
 /*space*/
+.feature-descri {
+  p img {
+    max-width: 90px;
+  }
+  .col-md-4 {
+    height: 220px;
+  }
+}
 .space-img1 {
   background: image-url('space-img-cover.jpg') no-repeat center center;
   background-size: cover;
