@@ -444,17 +444,17 @@ en:
     其他消息: Other
   space:
     features:
-      net: High speed internet
+      net: High-speed Internet
       net_intro: Faster speeds make everything online better.
       traffic: Conveniently located
       traffic_intro: Near Taipei Main Station, easy to access!
       equipment: Projection equipment
       equipment_intro: FULL HD projection and Apple TV.
-      table: Large working table
+      table: Large working tables
       table_intro: Capacious table and plenty of power socket.
       sound: Sound systems
       sound_intro: Wireless microphones and sound stystems.
-      live: Live equipment
+      live: Webcasting equipment
       live_intro: Record live streaming video into PiP immediately.
       live_video: Sample video
     booking:
@@ -466,7 +466,7 @@ en:
       time: 1hr
       note: We have special pricing for long-term rentals.
     contact:
-      title: Are you interested in?
+      title: Need space?
       contact_button: Contact us
   space_rent_slides:
     folder: space_rent_slides
