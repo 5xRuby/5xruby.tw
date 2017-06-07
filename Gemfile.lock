@@ -254,6 +254,7 @@ GEM
       byebug (~> 9.0)
       pry (~> 0.10)
     public_suffix (2.0.5)
+    puma (3.8.2)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -441,6 +442,7 @@ DEPENDENCIES
   omniauth-google-oauth2
   pg
   pry-byebug
+  puma
   rack-mini-profiler!
   rails (~> 5.0.2)
   rails-i18n

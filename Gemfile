@@ -90,6 +90,7 @@ group :development do
   gem 'capistrano-upload-config'
   gem 'web-console'
   gem 'letter_opener'
+  gem 'puma'
 end
 
 group :development, :test do
