@@ -47,7 +47,7 @@ export default class ActivityFormCourseFieldsActivityCourseTr extends React.Comp
               value={activityCourse.price}
               onChange={(e) => {
                 if (onChangeObject) {
-                  onChangeObject({ price: e.target.value });
+                  onChangeObject({ price: parseInt(e.target.value) });
                 }
               }}
             />
@@ -65,7 +65,7 @@ export default class ActivityFormCourseFieldsActivityCourseTr extends React.Comp
               value={activityCourse.priority}
               onChange={(e) => {
                 if (onChangeObject) {
-                  onChangeObject({ priority: e.target.value });
+                  onChangeObject({ priority: parseInt(e.target.value) });
                 }
               }}
             />

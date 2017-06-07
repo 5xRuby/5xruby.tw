@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import _ from 'lodash';
 import ActivityFormCourseFieldsActivityCourseTr from './activity_form_course_fields_activity_course_tr';
 import ActivityFormCourseFieldsRuleTr from './activity_form_course_fields_rule_tr';
-import _ from 'lodash';
 
 class ActivityFormCourseFields extends React.Component {
   constructor(props, context) {
@@ -23,7 +23,7 @@ class ActivityFormCourseFields extends React.Component {
 
   componentWillMount() {
     // Reduce activityCourses to an object
-    const activityCourses = this.props.activityCourses.reduce((o, i) => {
+    const activityCourses = _.reduce(this.props.activityCourses, (o, i) => {
       o[i.id] = i;
       return o;
     }, {});
@@ -43,8 +43,8 @@ class ActivityFormCourseFields extends React.Component {
 
   render() {
     const { courseSelectOptions } = this.props;
-
     const activityCoursesArray = this.getSortedActivityCoursesArray();
+
     return (
       <div>
         <table id="activity_courses" className="table">
@@ -191,8 +191,8 @@ class ActivityFormCourseFields extends React.Component {
         ...newData
       }
     };
-    this.setState({ rules });
 
+    this.setState({ rules });
   }
 
   handleNewActivityCourse() {
@@ -204,7 +204,7 @@ class ActivityFormCourseFields extends React.Component {
         _new: true,
         id: uuid,
         priority,
-        price: 100000
+        price: 10000
       }
     };
 
@@ -219,8 +219,8 @@ class ActivityFormCourseFields extends React.Component {
       [id]: {
         selectedActivityCourseIDs: [],
         priority,
-        price: 100000,
-        early_price: 100000
+        price: 10000,
+        early_price: 10000
       }
     };
 

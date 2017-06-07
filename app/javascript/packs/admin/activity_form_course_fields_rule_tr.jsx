@@ -22,6 +22,10 @@ export default class ActivityFormCourseFieldsRuleTr extends React.Component {
       value: activityCourse.id
     }));
 
+    const value = activityCoursesArray.filter(o => {
+      return !o._destroy && rule.selectedActivityCourseIDs.indexOf(o.id) >= 0
+    }).map(o => o.id)
+
     return (
       <tr>
         <td className="col-md-2">
@@ -31,7 +35,7 @@ export default class ActivityFormCourseFieldsRuleTr extends React.Component {
             joinValues
             clearable
             delimiter=","
-            value={rule.selectedActivityCourseIDs}
+            value={value}
             options={options}
             onChange={vals => {
               const newSelectedActivityCourseIDs = vals.split(",").filter(o => o)
@@ -61,7 +65,7 @@ export default class ActivityFormCourseFieldsRuleTr extends React.Component {
               value={rule.price}
               onChange={(e) => {
                 if (onChangeObject) {
-                  onChangeObject({ price: e.target.value });
+                  onChangeObject({ price: parseInt(e.target.value) });
                 }
               }}
             />
@@ -78,7 +82,7 @@ export default class ActivityFormCourseFieldsRuleTr extends React.Component {
               value={rule.early_price}
               onChange={(e) => {
                 if (onChangeObject) {
-                  onChangeObject({ early_price: e.target.value });
+                  onChangeObject({ early_price: parseInt(e.target.value) });
                 }
               }}
             />
@@ -116,15 +120,15 @@ export default class ActivityFormCourseFieldsRuleTr extends React.Component {
   }
 
   handleSelectValues(oldVals, vals, callback) {
-    let diff;
+    let el;
     let newVals = oldVals;
 
     if(oldVals.length < vals.length) {
-      diff = _.difference(vals, oldVals).pop()
-      newVals.push(diff)
+      el = _.difference(vals, oldVals).pop()
+      newVals.push(el)
     } else {
-      diff = _.difference(oldVals, vals).pop()
-      newVals.splice(oldVals.indexOf(diff), 1)
+      el = _.difference(oldVals, vals).pop()
+      newVals.splice(oldVals.indexOf(el), 1)
     }
     callback( { newVals } );
   }
