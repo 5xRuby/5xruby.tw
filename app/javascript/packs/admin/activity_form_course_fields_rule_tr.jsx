@@ -1,6 +1,14 @@
 import React from 'react';
+import Select from 'react-select';
+import _ from 'lodash';
 
 export default class ActivityFormCourseFieldsRuleTr extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleSelectValues = this.handleSelectValues.bind(this);
+  }
+
   render() {
     const {
       activityCoursesArray,
@@ -9,36 +17,29 @@ export default class ActivityFormCourseFieldsRuleTr extends React.Component {
       onRemove
     } = this.props;
 
+    const options = activityCoursesArray.filter(o => !o._destroy).map((activityCourse, index) => ({
+      label: String.fromCharCode(65 + index),
+      value: activityCourse.id
+    }));
+
     return (
       <tr>
-        <td>
-          {activityCoursesArray.filter(o => !o._destroy).map((activityCourse, index) => {
-            return (
-              <div>
-                <input
-                  type="checkbox"
-                  checked={$.inArray(activityCourse.id, rule.selectedActivityCourseIDs) >= 0}
-                  onChange={(e) => {
-                    if (!onChangeObject) return;
-
-                    let selectedActivityCourseIDs = rule.selectedActivityCourseIDs;
-                    if(e.target.checked) {
-                      selectedActivityCourseIDs.push(activityCourse.id)
-                    } else {
-                      index = rule.selectedActivityCourseIDs.indexOf(activityCourse.id)
-                      selectedActivityCourseIDs.splice(index, 1)
-                    }
-
-                    onChangeObject( { selectedActivityCourseIDs } )
-                  }}
-                />
-                {String.fromCharCode(65 + index)}
-              </div>
-            )
-          })
-          }
+        <td className="col-md-2">
+          <Select
+            multi
+            simpleValue
+            joinValues
+            clearable
+            delimiter=","
+            value={rule.selectedActivityCourseIDs}
+            options={options}
+            onChange={vals => {
+              const newSelectedActivityCourseIDs = vals.split(",").filter(o => o)
+              this.handleSelectValues(rule.selectedActivityCourseIDs, newSelectedActivityCourseIDs, onChangeObject);
+            }}
+          />
         </td>
-        <td>
+        <td className="col-md-3">
           <input
             className="form-control"
             value={rule.writing}
@@ -49,7 +50,7 @@ export default class ActivityFormCourseFieldsRuleTr extends React.Component {
             }}
           />
         </td>
-        <td>
+        <td className="col-md-2">
           <div className="input-group">
             <span className="input-group-addon">NT$</span>
             <input
@@ -66,7 +67,7 @@ export default class ActivityFormCourseFieldsRuleTr extends React.Component {
             />
           </div>
         </td>
-        <td>
+        <td className="col-md-2">
           <div className="input-group">
             <span className="input-group-addon">NT$</span>
             <input
@@ -83,7 +84,7 @@ export default class ActivityFormCourseFieldsRuleTr extends React.Component {
             />
           </div>
         </td>
-        <td>
+        <td className="col-md-2">
           <div className="input-group">
             <span className="input-group-addon">#</span>
             <input
@@ -100,7 +101,7 @@ export default class ActivityFormCourseFieldsRuleTr extends React.Component {
             />
           </div>
         </td>
-        <td>
+        <td className="col-md-1">
           <a
             className="btn btn-default"
             onClick={() => {
@@ -112,6 +113,20 @@ export default class ActivityFormCourseFieldsRuleTr extends React.Component {
         </td>
       </tr>
     );
+  }
+
+  handleSelectValues(oldVals, vals, callback) {
+    let diff;
+    let newVals = oldVals;
+
+    if(oldVals.length < vals.length) {
+      diff = _.difference(vals, oldVals).pop()
+      newVals.push(diff)
+    } else {
+      diff = _.difference(oldVals, vals).pop()
+      newVals.splice(oldVals.indexOf(diff), 1)
+    }
+    callback( { newVals } );
   }
 }
 
