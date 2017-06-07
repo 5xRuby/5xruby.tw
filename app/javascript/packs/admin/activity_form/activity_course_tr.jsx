@@ -1,7 +1,7 @@
 import React from 'react';
-import ActivityFormCourseFieldsCourseSelect from './activity_form_course_fields_course_select';
+import ActivityCourseTrSelect from './activity_course_tr_select';
 
-export default class ActivityFormCourseFieldsActivityCourseTr extends React.Component {
+export default class ActivityCourseTr extends React.Component {
   render() {
     const {
       index,
@@ -24,7 +24,7 @@ export default class ActivityFormCourseFieldsActivityCourseTr extends React.Comp
         <input type="hidden" value={activityCourse.id} name={`admin_activity[activity_courses_attributes][${index}][id]`} />
         <td>{String.fromCharCode(65 + index)}.</td>
         <td>
-          <ActivityFormCourseFieldsCourseSelect
+          <ActivityCourseTrSelect
             name={`admin_activity[activity_courses_attributes][${index}][course_id]`}
             courseSelectOptions={courseSelectOptions}
             value={activityCourse.course_id}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class ActivityFormCourseFieldsCourseSelect extends React.Component {
+export default class ActivityCourseTrSelect extends React.Component {
   render() {
     return (
       <select

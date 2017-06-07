@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
-import ActivityFormCourseFieldsActivityCourseTr from './activity_form_course_fields_activity_course_tr';
-import ActivityFormCourseFieldsRuleTr from './activity_form_course_fields_rule_tr';
+import ActivityCourseFields from './activity_form/activity_course_fields';
+import RuleFields from './activity_form/rule_fields';
 
 class ActivityFormCourseFields extends React.Component {
   constructor(props, context) {
@@ -44,80 +44,37 @@ class ActivityFormCourseFields extends React.Component {
   render() {
     const { courseSelectOptions } = this.props;
     const activityCoursesArray = this.getSortedActivityCoursesArray();
+    const rulesArray = this.getSortedRulesArray();
 
     return (
       <div>
-        <table id="activity_courses" className="table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>課程內容</th>
-              <th>價格</th>
-              <th>順序</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {activityCoursesArray.map((activityCourse, index) => {
-              return (
-                <ActivityFormCourseFieldsActivityCourseTr
-                  key={activityCourse.id}
-                  index={index}
-                  activityCourse={activityCourse}
-                  courseSelectOptions={courseSelectOptions}
-                  onChangeObject={(changeSet) => {
-                    this.handleActivityCourseChange(activityCourse.id, changeSet);
-                  }}
-                  onRemove={() => {
-                    this.handleRemoveActivityCourse(activityCourse.id);
-                  }}
-                />
-              );
-            })}
-          </tbody>
-        </table>
-        <a
-          className="btn btn-block btn-success"
-          onClick={this.handleNewActivityCourse}
-        >
-          新增課程
-        </a>
+        <ActivityCourseFields
+          activityCoursesArray={activityCoursesArray}
+          courseSelectOptions={courseSelectOptions}
+          onChangeObject={(activityCourseID, changeSet) => {
+            this.handleActivityCourseChange(activityCourseID, changeSet);
+          }}
+          onRemove={(activityCourseID) => {
+            this.handleRemoveActivityCourse(activityCourseID);
+          }}
+          onNew={() => {
+            this.handleNewActivityCourse()
+          }}
+        />
 
-        <table className="table">
-          <thead>
-            <tr>
-              <th>講座組合</th>
-              <th>行銷文字</th>
-              <th>價格</th>
-              <th>早鳥優惠</th>
-              <th>順序</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.getSortedRulesArray().map(rule => {
-              return (
-                <ActivityFormCourseFieldsRuleTr
-                  key={rule.id}
-                  activityCoursesArray={activityCoursesArray}
-                  rule={rule}
-                  onChangeObject={(changeSet) => {
-                    this.handleRuleChange(rule.id, changeSet);
-                  }}
-                  onRemove={() => {
-                    this.handleRemoveRule(rule.id);
-                  }}
-                />
-              )
-            })}
-          </tbody>
-        </table>
-        <a
-          className="btn btn-block btn-success"
-          onClick={this.handleNewRule}
-        >
-          新增規則
-        </a>
+        <RuleFields
+          rulesArray={rulesArray}
+          activityCoursesArray={activityCoursesArray}
+          onChangeObject={(ruleID, changeSet)=> {
+            this.handleRuleChange(ruleID, changeSet);
+          }}
+          onRemove={(ruleID) => {
+            this.handleRemoveRule(ruleID);
+          }}
+          onNew={() => {
+            this.handleNewRule()
+          }}
+        />
         <input
           name="admin_activity[rules]"
           type="textarea"

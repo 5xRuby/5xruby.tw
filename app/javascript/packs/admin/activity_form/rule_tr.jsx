@@ -2,7 +2,7 @@ import React from 'react';
 import Select from 'react-select';
 import _ from 'lodash';
 
-export default class ActivityFormCourseFieldsRuleTr extends React.Component {
+export default class RuleTr extends React.Component {
   constructor(props) {
     super(props);
 
