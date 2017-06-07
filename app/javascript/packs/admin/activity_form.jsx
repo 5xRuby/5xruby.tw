@@ -154,7 +154,7 @@ class ActivityFormCourseFields extends React.Component {
 
   handleNewActivityCourse() {
     const uuid = this.generateUUID();
-    const priority = this.getSortedActivityCoursesArray().filter((o) => !o._destroy).length + 1;
+    const priority = this.getSortedActivityCoursesArray().filter((o) => !o._destroy).length
     const activityCourses = {
       ...this.state.activityCourses,
       [uuid]: {

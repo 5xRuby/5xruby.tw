@@ -1,10 +1,13 @@
 import React from 'react';
 import ActivityCourseTrSelect from './activity_course_tr_select';
+import {SortableHandle} from 'react-sortable-hoc';
+
+const DragHandle = SortableHandle(() => <span>::</span>);
 
 export default class ActivityCourseTr extends React.Component {
   render() {
     const {
-      index,
+      order,
       activityCourse,
       courseSelectOptions,
       onChangeObject,
@@ -14,18 +17,21 @@ export default class ActivityCourseTr extends React.Component {
     if (activityCourse._destroy) {
       return (
         <tr>
-          <input type="hidden" value={activityCourse.id} name={`admin_activity[activity_courses_attributes][${index}][id]`} />
-          <input type="hidden" value="1" name={`admin_activity[activity_courses_attributes][${index}][_destroy]`} />
+          <input type="hidden" value={activityCourse.id} name={`admin_activity[activity_courses_attributes][${order}][id]`} />
+          <input type="hidden" value="1" name={`admin_activity[activity_courses_attributes][${order}][_destroy]`} />
         </tr>
       );
     }
     return (
       <tr>
-        <input type="hidden" value={activityCourse.id} name={`admin_activity[activity_courses_attributes][${index}][id]`} />
-        <td>{String.fromCharCode(65 + index)}.</td>
+        <input type="hidden" value={activityCourse.id} name={`admin_activity[activity_courses_attributes][${order}][id]`} />
+        <td>
+          <DragHandle />
+        </td>
+        <td>{String.fromCharCode(65 + order)}</td>
         <td>
           <ActivityCourseTrSelect
-            name={`admin_activity[activity_courses_attributes][${index}][course_id]`}
+            name={`admin_activity[activity_courses_attributes][${order}][course_id]`}
             courseSelectOptions={courseSelectOptions}
             value={activityCourse.course_id}
             onChange={(e) => {
@@ -40,7 +46,7 @@ export default class ActivityCourseTr extends React.Component {
             <span className="input-group-addon">NT$</span>
             <input
               className="form-control"
-              name={`admin_activity[activity_courses_attributes][${index}][price]`}
+              name={`admin_activity[activity_courses_attributes][${order}][price]`}
               type="number"
               step="1"
               min="0"
@@ -48,24 +54,6 @@ export default class ActivityCourseTr extends React.Component {
               onChange={(e) => {
                 if (onChangeObject) {
                   onChangeObject({ price: parseInt(e.target.value) });
-                }
-              }}
-            />
-          </div>
-        </td>
-        <td>
-          <div className="input-group">
-            <span className="input-group-addon">#</span>
-            <input
-              className="form-control"
-              name={`admin_activity[activity_courses_attributes][${index}][priority]`}
-              type="number"
-              step="1"
-              min="0"
-              value={activityCourse.priority}
-              onChange={(e) => {
-                if (onChangeObject) {
-                  onChangeObject({ priority: parseInt(e.target.value) });
                 }
               }}
             />

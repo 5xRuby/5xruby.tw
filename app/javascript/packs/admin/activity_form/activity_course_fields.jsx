@@ -1,36 +1,30 @@
 import React from 'react';
 import ActivityCourseTr from './activity_course_tr';
+import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 
 const ActivityCourseFields = ({activityCoursesArray, courseSelectOptions, onChangeObject, onRemove, onNew}) => (
   <div>
     <table id="activity_courses" className="table">
       <thead>
         <tr>
+          <th>順序</th>
           <th>#</th>
           <th>課程內容</th>
           <th>價格</th>
-          <th>順序</th>
           <th></th>
         </tr>
       </thead>
-      <tbody>
-        {activityCoursesArray.map((activityCourse, index) => {
-          return (
-            <ActivityCourseTr
-              key={activityCourse.id}
-              index={index}
-              activityCourse={activityCourse}
-              courseSelectOptions={courseSelectOptions}
-              onChangeObject={(changeSet) => {
-                onChangeObject(activityCourse.id, changeSet);
-              }}
-              onRemove={() => {
-                onRemove(activityCourse.id);
-              }}
-            />
-          );
-        })}
-      </tbody>
+      <SortableList
+        items={activityCoursesArray}
+        useDragHandle
+        onSortEnd={({oldIndex, newIndex}) => {
+          onChangeObject(activityCoursesArray[oldIndex].id, { priority: activityCoursesArray[newIndex].priority })
+          onChangeObject(activityCoursesArray[newIndex].id, { priority: activityCoursesArray[oldIndex].priority })
+        }}
+        courseSelectOptions={courseSelectOptions}
+        onChangeObject={onChangeObject}
+        onRemove={onRemove}
+      />
     </table>
     <a
       className="btn btn-block btn-success"
@@ -39,6 +33,39 @@ const ActivityCourseFields = ({activityCoursesArray, courseSelectOptions, onChan
       新增課程
     </a>
   </div>
+);
+
+const SortableList = SortableContainer(({items, courseSelectOptions, onChangeObject, onRemove}) => {
+  return (
+    <tbody>
+      {items.map((activityCourse, index) => (
+        <SortableItem
+          key={'item-'.concat(activityCourse.id)}
+          index={index}
+          order={index}
+          obj={activityCourse}
+          courseSelectOptions={courseSelectOptions}
+          onChangeObject={onChangeObject}
+          onRemove={onRemove}
+        />
+      ))}
+    </tbody>
+  );
+});
+
+const SortableItem = SortableElement(({obj, order, courseSelectOptions, onChangeObject, onRemove}) =>
+  <ActivityCourseTr
+    key={obj.id}
+    order={order}
+    activityCourse={obj}
+    courseSelectOptions={courseSelectOptions}
+    onChangeObject={(changeSet) => {
+      onChangeObject(obj.id, changeSet);
+    }}
+    onRemove={() => {
+      onRemove(obj.id);
+    }}
+  />
 );
 
 export default ActivityCourseFields;
