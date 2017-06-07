@@ -444,29 +444,29 @@ en:
     其他消息: Other
   space:
     features:
-      net: High speed internet
-      net_intro: Faster speeds make everything online better.
+      net: High-speed Internet
+      net_intro: Faster speed make everything online better.
       traffic: Conveniently located
       traffic_intro: Near Taipei Main Station, easy to access!
       equipment: Projection equipment
       equipment_intro: FULL HD projection and Apple TV.
-      table: Large working table
-      table_intro: Capacious table and plenty of power socket.
+      table: Large working tables
+      table_intro: Capacious tables and plenty of power socket.
       sound: Sound systems
       sound_intro: Wireless microphones and sound stystems.
-      live: Live equipment
+      live: Webcasting equipment
       live_intro: Record live streaming video into PiP immediately.
       live_video: Sample video
     booking:
       title: Rental
-      description: 45 ~ 60 person capacity. We are located near Taipei Main Station and well equipped with projection equipment and sound systems.
+      description: The seating capacity for 45 ~ 60 people. We are located near to Taipei Main Station and well equipped with projection equipment and sound systems.
       event_tech: Tech Events & Public interest group NT.1,500
       event_normal: Weekday night (18:00 ~ 22:00) NT.2,500
       event_weekend: Weekend & holiday NT.3,000
       time: 1hr
       note: We have special pricing for long-term rentals.
     contact:
-      title: Are you interested in?
+      title: Need space?
       contact_button: Contact us
   space_rent_slides:
     folder: space_rent_slides

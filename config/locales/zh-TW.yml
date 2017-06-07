@@ -446,7 +446,7 @@ zh-TW:
     其他消息: 其他消息
   space:
     features:
-      net: 300M/100M 高速網路
+      net: 光纖高速網路
       net_intro: 光纖寬頻上網 300M/100M，上傳下載速度都超快！
       traffic: 三鐵共構便利交通
       traffic_intro: 不管是搭乘北捷、台鐵或是高鐵，都可以輕鬆抵達。
