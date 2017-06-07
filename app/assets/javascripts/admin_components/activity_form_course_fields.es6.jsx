@@ -247,10 +247,10 @@ class ActivityFormCourseFields extends React.Component {
   }
 
   getActivityRuleInputValue() {
-    const activityCoursesIDs = Object.keys(this.state.activityCourses)
+    const activityCourseIDs = Object.keys(this.state.activityCourses)
 
     return Object.keys(this.state.rules).map((id) => this.state.rules[id]).reduce((result, el) => {
-      id = el.selectedActivityCourseIDs.filter((el) => $.inArray(el, activityCoursesIDs) >= 0).sort().join("--")
+      id = el.selectedActivityCourseIDs.filter((el) => $.inArray(el, activityCourseIDs) >= 0).sort().join("--")
       result[id] = el
       return result
     }, {})
