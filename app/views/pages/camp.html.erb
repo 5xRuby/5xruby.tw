@@ -56,7 +56,10 @@
                 </div>
               </div>
               <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
-                <h4 class="top-padding text-center"><%= lesson['name'] %></h4>
+                <div class="top-padding text-right">
+                  <%= fb_share_btn(href: courses_url + "/#{lesson[:course_permalink]}", size: :small) %>
+                </div>
+                <h4 class="text-center"><%= lesson['name'] %></h4>
                 <div class="both-spacing-sm four-padding text-center light-grey-bg">
                   <%= t('.time_label') %>
                   <br>
@@ -196,5 +199,3 @@
   </div>
 </div>
 <!-- End Lecture Notice -->
-
-<%= render partial: 'pages/camp_count_down', locals: {configs: @camp.bottom_past_info, camp: @camp} %>
