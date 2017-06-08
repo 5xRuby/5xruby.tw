@@ -274,7 +274,6 @@ ActiveRecord::Schema.define(version: 20170606032020) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 

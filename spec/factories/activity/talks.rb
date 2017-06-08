@@ -8,6 +8,7 @@ FactoryGirl.define do
     payment_note { Faker::Lorem.sentence }
     note { Faker::Lorem.sentence }
     is_online { true }
+    rules { {} }
 
     after(:build) do |talk, evaluator|
       talk.activity_courses << build(:activity_course, activity_id: talk.id, course_id: create(:course).id)

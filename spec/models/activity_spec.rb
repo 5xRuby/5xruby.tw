@@ -23,11 +23,6 @@ RSpec.describe Activity, type: :model do
         expect(camp).not_to be_valid
       end
 
-      it "not pass" do
-        talk.template = template
-        expect(talk).not_to be_valid
-      end
-
       it "pass" do
         expect(camp).to be_valid
       end
