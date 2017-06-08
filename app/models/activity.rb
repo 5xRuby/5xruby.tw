@@ -44,6 +44,10 @@ class Activity < ApplicationRecord
     type == TALK
   end
 
+  def specialized
+    becomes(type.constantize)
+  end
+
   protected
   # callback methods
   def touch_if_needed(course)
