@@ -254,9 +254,10 @@ a.text-grey:hover {
 }
 
 /*breadcrumb*/
-.breadcrumb {
+.breadcrumb, .fb-button {
   background: none;
   padding: 20px 0px;
+  margin-bottom: 0px;
 }
 .breadcrumb li {
   font-size: 90%;
@@ -315,7 +316,7 @@ header .logo {
   background: transparent;
 }
 .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
-  background-color: #f0ede9;
+  background-color: #f8f6f3 !important;
 }
 .dropdown-menu {
   padding: 15px 0px;
@@ -693,7 +694,7 @@ footer .fa-github:hover {
 }
 @media (min-width: 992px) {
   .camp-list .col-lg-6 {
-    height: 520px !important;
+    height: 550px !important;
   }
   .camp-list .speaker {
     display: none !important;
@@ -704,7 +705,7 @@ footer .fa-github:hover {
 }
 @media (min-width: 1200px) {
   .camp-list .col-lg-6 {
-    height: 520px !important;
+    height: 530px !important;
   }
   .camp-list .speaker {
     display: block !important;
