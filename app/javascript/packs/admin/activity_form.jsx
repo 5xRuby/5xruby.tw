@@ -75,8 +75,10 @@ class ActivityFormCourseFields extends React.Component {
             this.handleNewRule()
           }}
         />
+
         <input
           name="admin_activity[rules]"
+          hidden
           type="textarea"
           value={JSON.stringify(this.getActivityRuleInputValue())}
         />
@@ -236,6 +238,32 @@ class ActivityFormCourseFields extends React.Component {
   }
 }
 
+class ActivityFormDetailFields {
+  constructor() {
+    this.$typeInput = $("select[name='admin_activity[type]']");
+    this.bindInput(this.$typeInput);
+    this.setupTrigger();
+  }
+
+  bindInput(input) {
+    if (input.val() == "Activity::Camp") {
+      for (var el of $('.camp-only')) {
+        $(el).show();
+      }
+    } else {
+      for (var el of $('.camp-only')) {
+        $(el).hide();
+      }
+    }
+  }
+
+  setupTrigger() {
+    this.$typeInput.on('change', (e) => {
+      this.bindInput($(e.target))
+    })
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('activity_form_rule_fields');
   const data = Object.assign({}, node.dataset);
@@ -244,4 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
   Object.keys(data).map(id => data[id] = JSON.parse(data[id]));
 
   ReactDOM.render(<ActivityFormCourseFields {...data}/>, node);
+
+  ActivityFormDetailFields = new ActivityFormDetailFields;
 })

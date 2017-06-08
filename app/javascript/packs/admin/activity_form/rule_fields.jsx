@@ -3,7 +3,7 @@ import RuleTr from './rule_tr';
 import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 
 const RuleFields = ({rulesArray, activityCoursesArray, onChangeObject, onRemove, onNew}) => (
-  <div>
+  <div className='camp-only'>
     <table className="table">
       <thead>
         <tr>
