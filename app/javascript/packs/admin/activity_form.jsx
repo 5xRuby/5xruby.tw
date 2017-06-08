@@ -177,7 +177,7 @@ class ActivityFormCourseFields extends React.Component {
         selectedActivityCourseIDs: [],
         priority,
         price: 10000,
-        early_price: 10000
+        early_bird_price: 10000
       }
     };
 

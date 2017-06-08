@@ -83,10 +83,10 @@ export default class RuleTr extends React.Component {
               type="number"
               step="1"
               min="0"
-              value={rule.early_price}
+              value={rule.early_bird_price}
               onChange={(e) => {
                 if (onChangeObject) {
-                  onChangeObject({ early_price: parseInt(e.target.value) });
+                  onChangeObject({ early_bird_price: parseInt(e.target.value) });
                 }
               }}
             />
