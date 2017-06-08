@@ -1,8 +1,6 @@
 import React from 'react';
 import ActivityCourseTrSelect from './activity_course_tr_select';
-import {SortableHandle} from 'react-sortable-hoc';
-
-const DragHandle = SortableHandle(() => <span>::</span>);
+import DragHandle from './drag_handle';
 
 export default class ActivityCourseTr extends React.Component {
   render() {

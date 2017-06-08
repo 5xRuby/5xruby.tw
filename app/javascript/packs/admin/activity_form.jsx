@@ -170,7 +170,7 @@ class ActivityFormCourseFields extends React.Component {
 
   handleNewRule() {
     const id = this.generateUUID();
-    const priority = this.getSortedRulesArray().length + 1;
+    const priority = this.getSortedRulesArray().length;
     const rules = {
       ...this.state.rules,
       [id]: {

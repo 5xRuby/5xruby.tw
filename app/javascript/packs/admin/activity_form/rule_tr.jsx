@@ -1,6 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import _ from 'lodash';
+import DragHandle from './drag_handle';
 
 export default class RuleTr extends React.Component {
   constructor(props) {
@@ -28,6 +29,9 @@ export default class RuleTr extends React.Component {
 
     return (
       <tr>
+        <td className="col-md-1">
+          <DragHandle />
+        </td>
         <td className="col-md-2">
           <Select
             multi
@@ -83,23 +87,6 @@ export default class RuleTr extends React.Component {
               onChange={(e) => {
                 if (onChangeObject) {
                   onChangeObject({ early_price: parseInt(e.target.value) });
-                }
-              }}
-            />
-          </div>
-        </td>
-        <td className="col-md-2">
-          <div className="input-group">
-            <span className="input-group-addon">#</span>
-            <input
-              className="form-control"
-              type="number"
-              step="1"
-              min="0"
-              value={rule.priority}
-              onChange={(e) => {
-                if (onChangeObject) {
-                  onChangeObject({ priority: e.target.value });
                 }
               }}
             />
