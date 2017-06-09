@@ -1,8 +1,9 @@
 class Activity::Talk < Activity
   # scope macros
+  default_scope -> { joins(courses: :stages) }
   scope :online, -> { where(is_online: true) }
-  scope :coming, -> { joins(courses: :stages).select("activities.*, min(date) as min_date").group(:id).order("min_date") }
-  scope :available, -> { online.joins(courses: :stages).where('stages.date >= ?', Time.now).distinct }
+  scope :coming,->(count)  { select("activities.*", "min(date) as min_date").group("activities.id").order("min_date").limit(count) }
+  scope :available, -> { online.select("activities.*").where('stages.date >= ?', Time.now).group("activities.id") }
   scope :with_category, ->(category) do
     joins(:courses).where("courses.category_id" => category.id)
   end
