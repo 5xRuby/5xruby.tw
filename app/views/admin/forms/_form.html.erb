@@ -1,7 +1,12 @@
 <%= simple_nested_form_for(current_object) do |f| %>
  <div class="form-inputs">
    <%= f.input :title %>
-   <%= f.input :fields, as: :json_form_fields_editor %>
+   <%= render_react_component(
+     id: 'form_fields',
+     data: {
+       'questions': current_object.fields
+     }
+   )%>
  </div>
  <hr>
  <div class="form-actions">
