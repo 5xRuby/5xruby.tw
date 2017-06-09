@@ -62,7 +62,7 @@ zh-TW:
       index_picture: 首頁大圖
       index_picture_img: 首頁大圖圖片
       camp_template: 衝刺班模板
-      form: 表單
+      survey: 表單
     attributes:
       post:
         publish_at: 發佈時間
@@ -77,7 +77,7 @@ zh-TW:
         type: 課程屬性
         title: 課程名字
         template: 衝刺班模板
-        form: 表單
+        survey: 表單
         payment_note: 付款資訊
         note: 備註
       course:
@@ -154,9 +154,9 @@ zh-TW:
         title: 模板名字
         payload: 設定值
         json: 設定值
-      form:
+      survey:
         title: 表單名稱
-        fields: 欄位
+        questions: 欄位
   enumerize:
     apply:
       gender:

@@ -54,7 +54,7 @@ en:
       video: Video
       translation: Translation
       interview_question: Interview Question
-      form: Form
+      survey: Survey
     attributes:
       post:
         publish_at: published at

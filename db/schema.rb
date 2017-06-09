@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170606032020) do
+ActiveRecord::Schema.define(version: 20170609062433) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 20170606032020) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.boolean  "is_online"
-    t.integer  "form_id"
+    t.integer  "survey_id"
     t.integer  "template_id"
     t.json     "rules",        default: {}
-    t.index ["form_id"], name: "index_activities_on_form_id", using: :btree
+    t.index ["survey_id"], name: "index_activities_on_survey_id", using: :btree
     t.index ["template_id"], name: "index_activities_on_template_id", using: :btree
   end
 
@@ -117,13 +117,6 @@ ActiveRecord::Schema.define(version: 20170606032020) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "sort_id",    default: 0,     null: false
-  end
-
-  create_table "forms", force: :cascade do |t|
-    t.string   "title"
-    t.json     "fields"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "index_picture_imgs", force: :cascade do |t|
@@ -241,6 +234,13 @@ ActiveRecord::Schema.define(version: 20170606032020) do
     t.index ["course_id"], name: "index_stages_on_course_id", using: :btree
   end
 
+  create_table "surveys", force: :cascade do |t|
+    t.string   "title"
+    t.json     "questions"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
     t.string   "taggable_type"
@@ -274,6 +274,7 @@ ActiveRecord::Schema.define(version: 20170606032020) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 
@@ -308,7 +309,7 @@ ActiveRecord::Schema.define(version: 20170606032020) do
   end
 
   add_foreign_key "activities", "camp_templates", column: "template_id"
-  add_foreign_key "activities", "forms"
+  add_foreign_key "activities", "surveys"
   add_foreign_key "activities_courses", "activities"
   add_foreign_key "activities_courses", "courses"
   add_foreign_key "activities_courses_deprecated", "activities"

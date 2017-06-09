@@ -1,4 +1,4 @@
-class Admin::Form < Form
+class Admin::Survey < Survey
   # scope macros
 
   # Concerns macros

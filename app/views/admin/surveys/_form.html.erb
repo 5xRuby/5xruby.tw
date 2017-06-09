@@ -2,9 +2,9 @@
  <div class="form-inputs">
    <%= f.input :title %>
    <%= render_react_component(
-     id: 'form_fields',
+     id: 'survey_fields',
      data: {
-       'questions': current_object.fields
+       'questions': current_object.questions
      }
    )%>
  </div>

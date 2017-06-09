@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-class FormFormFields extends React.Component {
+class SurveyFormQuestions extends React.Component {
   constructor(props) {
     super(props);
 
@@ -25,5 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // each value in data object must be converted into an array
   Object.keys(data).map(id => data[id] = JSON.parse(data[id]));
 
-  ReactDOM.render(<FormFormFields {...data}/>, node);
+  ReactDOM.render(<SurveyFormQuestions {...data}/>, node);
 })
