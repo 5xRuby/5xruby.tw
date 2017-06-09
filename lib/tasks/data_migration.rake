@@ -7,7 +7,7 @@ namespace :data_migration do
           # the talk and relation has established, do nothing
         elsif talk = Activity::Talk.find_by(permalink: course.permalink)
           # the talk has existed, but relation hasn't
-          ActivityCourse.create(activity_id: talk.id, course_id: course.id)
+          ActivityCourse.create(activity_id: talk.id, course_id: course.id, price: 0)
         else
           # the talk and relation haven't existed, create the talk
           talk = course.talks.build(
@@ -18,7 +18,7 @@ namespace :data_migration do
             payment_note: I18n.t('payment_note')
           )
           talk.save!(validate: false)
-          ActivityCourse.create!(activity_id: talk.id, course_id: course.id)
+          ActivityCourse.create!(activity_id: talk.id, course_id: course.id, price: 0)
         end
 
         # why why why? why is this course having no stage? =.=
@@ -50,7 +50,7 @@ namespace :data_migration do
         courses.each do |course|
           unless camp.courses.find_by(permalink: course.permalink)
             # the relation doesn't exist, establish the relation
-            ActivityCourse.create(activity_id: camp.id, course_id: course.id)
+            ActivityCourse.create(activity_id: camp.id, course_id: course.id, price: 0)
           end
         end
 
