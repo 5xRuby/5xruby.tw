@@ -105,4 +105,11 @@ module ApplicationHelper
       end
     end
   end
+
+  def active_link_to(text, path, options = {})
+    active_class = options[:active] || "active"
+    options.delete(:active)
+    options[:class] = "#{options[:class]} #{active_class}" if current_page?(path)
+    link_to(text, path, options)
+  end
 end

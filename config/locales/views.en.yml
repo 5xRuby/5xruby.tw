@@ -179,3 +179,16 @@ en:
       logout: Logout
       hello_user: Hello, %{name}
       your_account: Your Account
+
+  users:
+    profile:
+      passwords:
+        edit:
+          title: Change Password
+        form:
+          edit_password: Submit
+
+  shared:
+    profile_sidebar:
+      profile: Profile
+      password: Password

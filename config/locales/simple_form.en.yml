@@ -2,6 +2,14 @@ en:
   simple_form:
     "yes": 'Yes'
     "no": 'No'
+    labels:
+      defaults:
+        name: Your name
+        email: E-mail
+        phone: Phone number
+        password: Password
+        password_confirmation: Enter password again
+        current_password: Old password
     required:
       text: 'required'
       mark: '*'
@@ -19,10 +27,9 @@ en:
     #       email: 'E-mail to sign in.'
     #     edit:
     #       email: 'E-mail.'
-    # hints:
-    #   defaults:
-    #     username: 'User name to sign in.'
-    #     password: 'No special characters, please.'
+    hints:
+      defaults:
+        password: 'At least 6 characters'
     # include_blanks:
     #   defaults:
     #     age: 'Rather not say'
