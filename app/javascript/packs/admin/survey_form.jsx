@@ -1,6 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
+import DragHandle from './drag_handle';
+import {SortableContainer, SortableElement} from 'react-sortable-hoc';
+
+const questionTypeSelectOptions = [
+  ['單行文字', 'string'],
+  ['Email', 'email'],
+  ['URL', 'url'],
+  ['電話號碼', 'tel'],
+  ['多行文字', 'text'],
+  ['檔案上傳', 'file'],
+  ['拉下選單', 'select'],
+  ['單選核取方塊', 'radio_buttons'],
+  ['多選核取方塊', 'check_boxes']
+];
 
 class SurveyFormQuestionsFields extends React.Component {
   constructor(props) {
@@ -10,7 +24,7 @@ class SurveyFormQuestionsFields extends React.Component {
       questions: {
         "e7451554-15cc-4507-a170-1f06716ad83b": {
           "as": "string",
-          "name": "string_1",
+          "name": "string_0",
           "required": true,
           "multiple":false,
           "label": "hihihihihihihihihihi",
@@ -18,7 +32,7 @@ class SurveyFormQuestionsFields extends React.Component {
         },
         "e18669d5-0b2f-4ea6-b645-2c2824a95855": {
           "as": "email",
-          "name": "email_1",
+          "name": "email_0",
           "required": true,
           "multiple": false,
           "label": "your email",
@@ -26,17 +40,29 @@ class SurveyFormQuestionsFields extends React.Component {
         }
       }
     }
+
+    this.getSortedQuestionsArray = this.getSortedQuestionsArray.bind(this);
+    this.getTypeCount = this.getTypeCount.bind(this);
+    this.handleChangeObject = this.handleChangeObject.bind(this);
+    this.handleChangeType = this.handleChangeType.bind(this);
+    this.handleRemoveQuestion = this.handleChangeObject.bind(this);
   }
 
-  questionTypeCount = (type) => {
-    let typeCount = _.reduce(this.props.questions, (total, el) => {
-      return total + (el.as === type ? 1 : 0)
-    }, 0);
+  componentWillMount() {
+    let typesCount = {}
+    questionTypeSelectOptions.map((item) => {
+      typesCount[item[1]] = 0;
+    })
 
-    return typeCount;
+    typesCount = _.reduce(this.state.questions, (obj, el) => {
+      obj[el.as] = obj[el.as] + 1
+      return obj
+    }, typesCount);
+
+    this.setState({ typesCount });
   }
 
-  getSortedQuestionsArray = () => {
+  getSortedQuestionsArray() {
     const compare = (a, b) => {
       if (a.priority < b.priority) {
         return -1;
@@ -55,7 +81,12 @@ class SurveyFormQuestionsFields extends React.Component {
     return questionsArray.sort(compare);
   }
 
-  onChangeObject = (questionID, changeSet) => {
+  getTypeCount(type) {
+    const count = this.state.typesCount[type];
+    return count;
+  }
+
+  handleChangeObject(questionID, changeSet) {
     const questions = {
       ...this.state.questions,
       [questionID]: {
@@ -67,94 +98,144 @@ class SurveyFormQuestionsFields extends React.Component {
     this.setState({ questions })
   }
 
+  handleChangeType(oldType, newType) {
+    const typesCount = {
+      ...this.state.typesCount,
+      [oldType]: this.state.typesCount[oldType] - 1,
+      [newType]: this.state.typesCount[newType] + 1
+    }
+
+    this.setState({ typesCount })
+  }
+
+  handleRemoveQuestion(questionID) {
+    const questions = {
+      ...this.state.questions
+    };
+    delete questions[questionID]
+
+    this.setState({ questions });
+  }
+
   render () {
     const questions = this.state.questions;
     const sortedQuestionsArray = this.getSortedQuestionsArray();
-    const questionTypeSelectOptions = [
-      ['單行文字', 'string'],
-      ['Email', 'email'],
-      ['URL', 'url'],
-      ['電話號碼', 'tel'],
-      ['多行文字', 'text'],
-      ['檔案上傳', 'file'],
-      ['拉下選單', 'select'],
-      ['單選核取方塊', 'radio_buttons'],
-      ['多選核取方塊', 'check_boxes']
-    ];
 
     return(
       <div className="container">
-        <ul className="no-padding-left no-list-style">
-          {sortedQuestionsArray.map((obj, index) => (
-            <li key={obj.id}>
-              <div className="row">
-                <div className="form-group col-md-3">
-                  <label>問題種類</label>
-                  <select
-                    className="select required form-control"
-                    label="false"
-                    value={obj.as}
-                    onChange={(e) => {
-                      const newVal = `${e.target.value}_${this.questionTypeCount(e.target.value) + 1}`
-                      this.onChangeObject(obj.id, { name: newVal, as: e.target.value });
-                    }}
-                  >
-                    {questionTypeSelectOptions.map( q =>
-                      <option
-                        key={`${q[1]}_${this.questionTypeCount(q[1])}`}
-                        value={`${q[1]}`}
-                      >
-                        {q[0]}
-                      </option>
-                    )}
-                  </select>
-                </div>
-                <div className="col-md-1">
-                  <label>
-                    <input
-                      type="checkbox"
-                      checked={obj.required}
-                      onChange={(e) => {
-                        this.onChangeObject(obj.id, { required: e.target.checked })
-                      }}
-                    />
-                    必填
-                  </label>
-                </div>
-                <div className="form-group col-md-6">
-                  <label>問題題目</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="問題題目"
-                    value={obj.label}
-                    onChange={(e) => {
-                      this.onChangeObject(obj.id, { label: e.target.value })
-                    }}
-                  />
-                </div>
-                <div className="col-md-2">
-                  <a
-                    className="btn btn-default"
-                    onClick={() => {
-                      this.handleRemoveQuestion()
-                    }}
-                  >
-                    移除
-                  </a>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <ol className="no-padding-left">
+          <SortableList
+            items={sortedQuestionsArray}
+            onSortEnd={({oldIndex, newIndex}) => {
+              this.handleChangeObject(sortedQuestionsArray[oldIndex].id, { priority: sortedQuestionsArray[newIndex].priority })
+              this.handleChangeObject(sortedQuestionsArray[newIndex].id, { priority: sortedQuestionsArray[oldIndex].priority })
+            }}
+            getTypeCount={this.getTypeCount}
+            onChangeObject={this.handleChangeObject}
+            onChangeType={this.handleChangeType}
+            onRemoveQuestion={this.handleRemoveQuestion}
+          />
+        </ol>
       </div>
     );
   }
-
-  handleRemoveQuestion = () => {
-    return; // TODO
-  }
 }
+
+const SortableList = SortableContainer(({items, getTypeCount, onChangeObject, onChangeType, onRemoveQuestion}) => {
+  return (
+    <ul className="no-padding-left no-list-style">
+      {items.map((obj, index) => (
+        <SortableItem
+          key={obj.id}
+          index={index}
+          question={obj}
+          getTypeCount={getTypeCount}
+          onChangeObject={onChangeObject}
+          onChangeType={onChangeType}
+          onRemoveQuestion={onRemoveQuestion}
+        />
+      ))}
+    </ul>
+  );
+})
+
+const SortableItem = SortableElement(({question, getTypeCount, onChangeObject, onChangeType, onRemoveQuestion}) => {
+  return (
+    <li key={question.id}>
+      <div className="row">
+        <div className="col-md-1">
+          <DragHandle />
+        </div>
+
+        <div className="form-group col-md-3">
+          <label>問題種類</label>
+          <select
+            className="select required form-control"
+            label="false"
+            value={question.as}
+            onChange={(e) => {
+              const oldType = question.as;
+              const newType = e.target.value;
+              const newVal = `${newType}_${getTypeCount(newType)}`;
+
+              onChangeType(oldType, newType);
+              onChangeObject(question.id, {
+                name: newVal,
+                as: e.target.value
+              });
+            }}
+          >
+            {questionTypeSelectOptions.map( q =>
+              <option
+                key={`${q[1]}_${getTypeCount(q[1]) + 1}`}
+                value={`${q[1]}`}
+              >
+                {q[0]}
+              </option>
+            )}
+          </select>
+        </div>
+
+        <div className="col-md-1">
+          <label>
+            <input
+              type="checkbox"
+              checked={question.required}
+              onChange={(e) => {
+                onChangeObject(question.id, { required: e.target.checked })
+              }}
+            />
+            必填
+          </label>
+        </div>
+
+        <div className="form-group col-md-5">
+          <label>問題題目</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="問題題目"
+            value={question.label}
+            onChange={(e) => {
+              onChangeObject(question.id, { label: e.target.value })
+            }}
+          />
+        </div>
+
+        <div className="col-md-2">
+          <a
+            className="btn btn-default"
+            onClick={() => {
+              onRemoveQuestion(obj.id)
+            }}
+          >
+            移除
+          </a>
+        </div>
+      </div>
+    </li>
+  );
+})
 
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('survey_fields');

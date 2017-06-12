@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import _ from 'lodash';
-import DragHandle from './drag_handle';
+import DragHandle from '../drag_handle';
 
 export default class RuleTr extends React.Component {
   constructor(props) {
