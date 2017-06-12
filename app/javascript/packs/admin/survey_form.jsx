@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
-import './survey_form/style';
-
 
 class SurveyFormQuestionsFields extends React.Component {
   constructor(props) {
@@ -90,7 +88,8 @@ class SurveyFormQuestionsFields extends React.Component {
           {sortedQuestionsArray.map((obj, index) => (
             <li key={obj.id}>
               <div className="row">
-                <div className="col-md-3">
+                <div className="form-group col-md-3">
+                  <label>問題種類</label>
                   <select
                     className="select required form-control"
                     label="false"
@@ -110,8 +109,30 @@ class SurveyFormQuestionsFields extends React.Component {
                     )}
                   </select>
                 </div>
-                <div className="col-md-1">{obj.required}</div>
-                <div className="col-md-6">{obj.label}</div>
+                <div className="col-md-1">
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked={obj.required}
+                      onChange={(e) => {
+                        this.onChangeObject(obj.id, { required: e.target.checked })
+                      }}
+                    />
+                    必填
+                  </label>
+                </div>
+                <div className="form-group col-md-6">
+                  <label>問題題目</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="問題題目"
+                    value={obj.label}
+                    onChange={(e) => {
+                      this.onChangeObject(obj.id, { label: e.target.value })
+                    }}
+                  />
+                </div>
                 <div className="col-md-2">
                   <a
                     className="btn btn-default"
