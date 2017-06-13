@@ -1,15 +1,17 @@
-<%= simple_nested_form_for(current_object) do |f| %>
- <div class="form-inputs">
-   <%= f.input :title %>
-   <%= render_react_component(
-     id: 'survey_fields',
-     data: {
-       'questions': current_object.questions
-     }
-   )%>
- </div>
- <hr>
- <div class="form-actions">
-   <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
- </div>
-<% end %>
+<div class="container" id="survey-form">
+  <%= simple_nested_form_for(current_object) do |f| %>
+   <div>
+     <%= f.input :title, wrapper_html: { class: "no-form-group" } %>
+     <%= render_react_component(
+       id: 'survey_fields',
+       data: {
+         'questions': current_object.questions
+       }
+     )%>
+   </div>
+   <hr>
+   <div class="form-actions">
+     <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
+   </div>
+  <% end %>
+</div>

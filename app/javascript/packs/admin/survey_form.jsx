@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
+import Util from './util';
 import DragHandle from './drag_handle';
 import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 
@@ -26,7 +27,7 @@ class SurveyFormQuestionsFields extends React.Component {
           "as": "string",
           "name": "string_0",
           "required": true,
-          "multiple":false,
+          "multiple": false,
           "label": "hihihihihihihihihihi",
           "priority": 0
         },
@@ -37,7 +38,16 @@ class SurveyFormQuestionsFields extends React.Component {
           "multiple": false,
           "label": "your email",
           "priority": 1
-        }
+        },
+        "e7451554-123d-4507-a170-1f06716ad83b": {
+          "as": "check_boxes",
+          "name": "check_boxes_0",
+          "required": true,
+          "multiple": true,
+          "label": "skdfkshdfk",
+          "priority": 2,
+          "collection": ["heyheyhehy", "yoyoyoy", "blablabla"]
+        },
       }
     }
 
@@ -45,7 +55,8 @@ class SurveyFormQuestionsFields extends React.Component {
     this.getTypeCount = this.getTypeCount.bind(this);
     this.handleChangeObject = this.handleChangeObject.bind(this);
     this.handleChangeType = this.handleChangeType.bind(this);
-    this.handleRemoveQuestion = this.handleChangeObject.bind(this);
+    this.handleNewQuestion = this.handleNewQuestion.bind(this);
+    this.handleRemoveQuestion = this.handleRemoveQuestion.bind(this);
   }
 
   componentWillMount() {
@@ -108,6 +119,25 @@ class SurveyFormQuestionsFields extends React.Component {
     this.setState({ typesCount })
   }
 
+  handleNewQuestion() {
+    const uuid = Util.generateUUID();
+    const stringCount = this.getTypeCount('string');
+    const questions = {
+      ...this.state.questions,
+      [uuid]: {
+        as: "string",
+        name: `string_${stringCount}`,
+        required: false,
+        multiple: false,
+        label: "",
+        priority: this.state.questions.length,
+        collection: ["問題選項"]
+      }
+    }
+
+    this.setState({ questions })
+  }
+
   handleRemoveQuestion(questionID) {
     const questions = {
       ...this.state.questions
@@ -122,20 +152,33 @@ class SurveyFormQuestionsFields extends React.Component {
     const sortedQuestionsArray = this.getSortedQuestionsArray();
 
     return(
-      <div className="container">
-        <ol className="no-padding-left">
-          <SortableList
-            items={sortedQuestionsArray}
-            onSortEnd={({oldIndex, newIndex}) => {
-              this.handleChangeObject(sortedQuestionsArray[oldIndex].id, { priority: sortedQuestionsArray[newIndex].priority })
-              this.handleChangeObject(sortedQuestionsArray[newIndex].id, { priority: sortedQuestionsArray[oldIndex].priority })
-            }}
-            getTypeCount={this.getTypeCount}
-            onChangeObject={this.handleChangeObject}
-            onChangeType={this.handleChangeType}
-            onRemoveQuestion={this.handleRemoveQuestion}
-          />
-        </ol>
+      <div>
+        <SortableList
+          items={sortedQuestionsArray}
+          useDragHandle
+          onSortEnd={({oldIndex, newIndex}) => {
+            this.handleChangeObject(sortedQuestionsArray[oldIndex].id, { priority: sortedQuestionsArray[newIndex].priority })
+            this.handleChangeObject(sortedQuestionsArray[newIndex].id, { priority: sortedQuestionsArray[oldIndex].priority })
+          }}
+          getTypeCount={this.getTypeCount}
+          onChangeObject={this.handleChangeObject}
+          onChangeType={this.handleChangeType}
+          onRemoveQuestion={this.handleRemoveQuestion}
+        />
+        <div className="text-center">
+          <a
+            className="btn btn-primary"
+            onClick={this.handleNewQuestion}
+            style={{width: "30%"}}
+          >
+            新增問題
+          </a>
+        </div>
+        <input
+          name="admin_survey[questions]"
+          type="textarea"
+          value={JSON.stringify(this.state.questions)}
+        />
       </div>
     );
   }
@@ -148,6 +191,7 @@ const SortableList = SortableContainer(({items, getTypeCount, onChangeObject, on
         <SortableItem
           key={obj.id}
           index={index}
+          order={index}
           question={obj}
           getTypeCount={getTypeCount}
           onChangeObject={onChangeObject}
@@ -159,83 +203,163 @@ const SortableList = SortableContainer(({items, getTypeCount, onChangeObject, on
   );
 })
 
-const SortableItem = SortableElement(({question, getTypeCount, onChangeObject, onChangeType, onRemoveQuestion}) => {
+const SortableItem = SortableElement(({question, order, getTypeCount, onChangeObject, onChangeType, onRemoveQuestion}) => {
   return (
-    <li key={question.id}>
-      <div className="row">
-        <div className="col-md-1">
+    <li key={question.id} className="sortable-item gray-border">
+      <div className="flex padding-vertical-10 gray-bg">
+        <div className="col-md-1 drag-handle" >
           <DragHandle />
         </div>
 
-        <div className="form-group col-md-3">
-          <label>問題種類</label>
-          <select
-            className="select required form-control"
-            label="false"
-            value={question.as}
-            onChange={(e) => {
-              const oldType = question.as;
-              const newType = e.target.value;
-              const newVal = `${newType}_${getTypeCount(newType)}`;
+        <div className="col-md-10">
+          <div className="overflow-hidden margin-bottom-10 text-center" >
+            <div className="col-md-1">
+              <label htmlFor={`question_${order}_label`}>問題<br/>題目</label>
+            </div>
+            <div className="col-md-11">
+              <input
+                id={`question_${order}_label`}
+                type="text"
+                className="form-control"
+                placeholder="問題題目"
+                value={question.label}
+                onChange={(e) => {
+                  onChangeObject(question.id, { label: e.target.value })
+                }}
+              />
+            </div>
+          </div>
 
-              onChangeType(oldType, newType);
-              onChangeObject(question.id, {
-                name: newVal,
-                as: e.target.value
-              });
-            }}
-          >
-            {questionTypeSelectOptions.map( q =>
-              <option
-                key={`${q[1]}_${getTypeCount(q[1]) + 1}`}
-                value={`${q[1]}`}
+          <div className="overflow-hidden text-center flex" >
+            <div className="col-md-1 vertical-middle">
+              <label htmlFor={`question_${order}_type`}>問題<br/>種類</label>
+            </div>
+            <div className="col-md-10 vertical-middle">
+              <select
+                id={`question_${order}_type`}
+                className="select required form-control"
+                label="false"
+                value={question.as}
+                onChange={(e) => {
+                  const oldType = question.as;
+                  const newType = e.target.value;
+                  const newVal = `${newType}_${getTypeCount(newType)}`;
+
+                  onChangeType(oldType, newType);
+                  onChangeObject(question.id, {
+                    name: newVal,
+                    as: e.target.value
+                  });
+                }}
               >
-                {q[0]}
-              </option>
-            )}
-          </select>
+                {questionTypeSelectOptions.map( q =>
+                  <option
+                    key={`${q[1]}_${getTypeCount(q[1]) + 1}`}
+                    value={`${q[1]}`}
+                  >
+                    {q[0]}
+                  </option>
+                )}
+              </select>
+            </div>
+
+            <div className="col-md-1 vertical-middle">
+              <label>
+                <input
+                  type="checkbox"
+                  checked={question.required}
+                  onChange={(e) => {
+                    onChangeObject(question.id, { required: e.target.checked })
+                  }}
+                />
+                必填
+              </label>
+            </div>
+          </div>
         </div>
 
-        <div className="col-md-1">
-          <label>
-            <input
-              type="checkbox"
-              checked={question.required}
-              onChange={(e) => {
-                onChangeObject(question.id, { required: e.target.checked })
-              }}
-            />
-            必填
-          </label>
-        </div>
-
-        <div className="form-group col-md-5">
-          <label>問題題目</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="問題題目"
-            value={question.label}
-            onChange={(e) => {
-              onChangeObject(question.id, { label: e.target.value })
-            }}
-          />
-        </div>
-
-        <div className="col-md-2">
+        <div className="col-md-1 text-center vertical-middle">
           <a
-            className="btn btn-default"
+            className="btn btn-danger"
             onClick={() => {
-              onRemoveQuestion(obj.id)
+              onRemoveQuestion(question.id)
             }}
           >
             移除
           </a>
         </div>
       </div>
+
+      <QuestionDetail
+        question={question}
+        onChangeQuestionOption={onChangeObject}
+      />
     </li>
   );
 })
+
+const QuestionDetail = ({question, onChangeQuestionOption}) => {
+  let detail;
+  switch(question.as) {
+    case 'check_boxes':
+      detail = (
+        <div className="flex margin-vertical-10">
+          <div className="col-md-offset-1 col-md-10">
+            {
+              (question.collection || []).map((option, index) =>
+                <div key={`${question.id}_q_${index}`} className="flex margin-bottom-5">
+                  <div className="col-md-1 text-center vertical-middle">
+                    {String.fromCharCode(65 + index)}
+                  </div>
+                  <div className="col-md-10">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="選項內容"
+                      value={option}
+                      onChange={(e) => {
+                        let collection = [...question.collection];
+                        collection[index] = e.target.value;
+                        onChangeQuestionOption(question.id, { collection: collection });
+                      }}
+                    />
+                  </div>
+                  <div className="col-md-1 text-center vertical-middle">
+                    <a
+                      onClick={() => {
+                        let collection = [...question.collection];
+                        collection.splice(index, 1);
+                        onChangeQuestionOption(question.id, { collection: collection });
+                      }}
+                    >
+                      <span className="glyphicon glyphicon-trash"></span>
+                    </a>
+                  </div>
+                </div>
+              )
+            }
+          </div>
+          <div className="col-md-1 text-center vertical-middle">
+            <a
+              className="btn btn-primary"
+              onClick={() => {
+                let collection = [...question.collection];
+                collection.push('');
+                onChangeQuestionOption(question.id, { collection: collection });
+              }}>
+              <span className="glyphicon glyphicon-plus"></span>
+            </a>
+          </div>
+        </div>
+      );
+      break;
+    default:
+      detail = null;
+  }
+  return (
+    detail
+  );
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('survey_fields');
