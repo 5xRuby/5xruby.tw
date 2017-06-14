@@ -1,21 +1,16 @@
 class Course < ActiveRecord::Base
-  
+
   ABOUT_TO_BEGIN = eval Settings.course_about_to_begin_time
 
   # scope macros
-  scope :online, -> { where(is_online: true) }
-  scope :coming, -> { select('courses.*, min(date) as min_date').joins(:stages).group('courses.id').order('min_date') }
-  scope :available, -> { online.where('stages.date >= ?', Time.now).joins(:stages).distinct }
 
   # Concerns macros
   include Select2Concern
-  include Permalinkable
 
   # Constants
 
   # Attributes related macros
   mount_uploader :image, CourseImageUploader
-  permalinkable :title
 
   # association macros
   has_many :stages, -> { order(:date, :start_at) }, dependent: :destroy
@@ -23,9 +18,11 @@ class Course < ActiveRecord::Base
   has_and_belongs_to_many :speakers
   belongs_to :category, counter_cache: true
   has_many :translations, as: :translatable
+  has_and_belongs_to_many :camps, association_foreign_key: 'activity_id', class_name: "::Activity::Camp"
+  has_and_belongs_to_many :talks, association_foreign_key: 'activity_id', class_name: "::Activity::Talk"
 
   # validation macros
-  validates :title, presence: true
+  validates :title, :time_description, :time_limit, presence: true
   validates_format_of :permalink, with: /\A\w[-|\w|\d]+\z/
   validates :summary, length: {maximum: 150}
   select2_white_list :title
@@ -33,28 +30,19 @@ class Course < ActiveRecord::Base
   # callbacks
   before_save :force_using_ssl_iframe
   after_save :reset_category_counter
+  after_initialize :set_defualt_values, if: :new_record?, unless: :changed?
 
   # other
-
-  # This query seperates courses by their expiration date,
-  # orders comming-soon courses descendingly and expired course ascendingly.
-  #     comming soon course (latest)
-  #     comming soon course
-  #     comming soon course
-  #     ...
-  #     expired course (latest)
-  #     expired course
-  #     expired course
-  #     ...
-  def self.magic_scope # TODO Find a better name.
-    ret = select('courses.*, min_date, max_date, case when max_date < now() then true else false end as outdated')
-    ret = ret.joins('inner join (select courses.id, min(date) as min_date, max(date) as max_date from courses inner join stages on courses.id = course_id group by courses.id) as r on r.id = courses.id')
-    ret = ret.order('outdated, case max_date < now() when true then min_date end desc, case max_date < now() when false then min_date end asc')
+  class << self
+    def all_with_humanized_name(order: :desc, time_range: 12)
+      courses = all.includes(:stages).select { |c| c.start_on && c.start_on > (Time.current - time_range.months) }.sort_by(&:start_on)
+      courses.reverse! if order == :desc
+      courses.map{|c| [[c.start_on, c.title].join("－"), c.id] }
+    end
   end
 
   def fork
-    the_forked = self.class.new attributes.except!('id', 'iframe_html', 'is_online')
-    the_forked.permalink = the_forked.next_permalink
+    the_forked = self.class.new attributes.except!('id', 'iframe_html')
     the_forked.speakers = speakers
     the_forked.image = image
     stages.each do |stage|
@@ -68,11 +56,11 @@ class Course < ActiveRecord::Base
   end
 
   def start_on
-    stages.first.date
+    stages.first&.date
   end
 
   def end_on
-    stages.last.date
+    stages.last&.date
   end
 
   def need_attendees_count
@@ -112,5 +100,9 @@ class Course < ActiveRecord::Base
 
   def reset_category_counter
     self.category.reset_courses_count! if self.category.present?
+  end
+
+  def set_defualt_values
+    self[:time_limit] = Time.zone.now.strftime('%Y-%m-%d %H:%M')
   end
 end

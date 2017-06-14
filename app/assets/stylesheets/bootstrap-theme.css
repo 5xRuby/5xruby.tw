@@ -1091,6 +1091,42 @@ footer .fa-github:hover {
   }
 }
 
+/*login*/
+.login-form .simple_form {
+  background: #fff;
+  -webkit-box-shadow: 5px 5px 17px 4px rgba(0,0,0,0.25);
+  -moz-box-shadow: 5px 5px 17px 4px rgba(0,0,0,0.25);
+  box-shadow: 5px 5px 17px 4px rgba(0,0,0,0.25);
+}
+.login-form .simple_form h3 span {
+  font-weight: normal;
+  display: block;
+}
+.login-input, .social-login {
+  padding: 10px 30px;
+}
+.login-form .or {
+  border-bottom: 1px solid #b81939;
+  height: 10px;
+  text-align: center;
+  color: #b81939;
+}
+.login-form .or span {
+  background: #fff;
+  padding: 0px 10px;
+}
+@media (max-width: 767px) {
+  .login-form .simple_form {
+    background: #fff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .login-form .simple_form h3 {
+    display: none;
+  }
+}
+
 /*date time*/
 .date-time {
   padding-left: 0px;
@@ -1318,14 +1354,14 @@ footer .fa-github:hover {
   background-color: #27448a;
   color: #fff;
 }
-.btn-twitter-login {
-  background: #45b0e3;
+.btn-github-login {
+  background: #29ab47;
   padding: 10.5px 15px;
   color: #fff;
   font-size: 16px;
 }
-.btn-twitter-login:hover {
-  background-color: #45b0e3;
+.btn-github-login:hover {
+  background-color: #29ab47;
   color: #fff;
 }
 .btn-google-login {
@@ -1489,6 +1525,10 @@ h2 {
 .form-control {
   border-radius: 0px !important;
   background: #fff;
+}
+.form-horizontal .form-group {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 .vertical {
   -webkit-writing-mode: vertical-lr;
@@ -2850,4 +2890,9 @@ footer .fa-twitter:hover {
 }
 .ui-dialog .ui-dialog-titlebar-close {
   top: 45% !important;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
 }

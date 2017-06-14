@@ -1,24 +1,33 @@
 en:
+  attendances:
+    new:
+      title: Survey
+    form:
+      submit: Submit
   breadcrumb:
     home: Home
-    courses: Lectures
-  courses:
+    talks: Lectures
+  talks:
     index:
-      all_courses: All lectures
+      all_talks: All lectures
       speakers: Speakers
-    show:
+    info:
       hours_label: 'Hours:'
       outdated: Lecture has started
       opening: Sign up now
+    details:
       lecturer: Lecturer
       suitable_for: Suitable for
       what_you_will_learn: What you will learn
+    outline:
       outline: Outline
       chapter_title: "Lesson %{nth}:"
+    tickets:
       apply_now: I'd like to sign in the lecture
+    notice:
       payment_note: 'Payment:'
       note: Description
-    course:
+    talk:
       outdated: Ended
       about_to_begin: About to begin
       opening: Opening
@@ -49,13 +58,35 @@ en:
       lead: Good short video, professional course recording, screen tutorial teaching and event videos
     show:
       share: Share to Facebook
+  camps:
+    course:
+      time_label: 'Time: '
+      what_will_learn_label: 'In these %{hours} hours, you will learn:'
+      view_outline: '...outline'
+      chapter_title: "Lesson %{nth}:"
+      location_label: 'Location:'
+    sales:
+      sale_title: Good news!
+    feedback:
+      testimonials: Real Story
+    qnas:
+      title: Q & A
+      q_label: Q：
+      a_label: A：
+      contact_link: Contact form
+      more_questions:
+        - If you question is not answred by the Q&A, you can contact us by
+        - Or call us directly.
+    notice:
+      payment_note: 'Payment:'
+      note: 'Notes:'
 
   pages:
     index:
       main_features:
         about_5xruby: About 5xRuby
       main_content:
-        next_courses: recent lectures
+        next_talks: recent lectures
         more_talks: ...More
       showcases:
         title: Showcases
@@ -88,35 +119,43 @@ en:
         a_label: A：
       interested: Are you interested in?
       contact_us: Contact us
-    camp:
-      location_label: 'Location:'
-      sale_title: Good news!
-      time_label: 'Time: '
-      what_will_learn_label: 'In these %{hours} hours, you will learn:'
-      view_outline: '...outline'
-      chapter_title: "Lesson %{nth}:"
-      testimonials: Real Story
-      qna:
-        title: Q & A
-        q_label: Q：
-        a_label: A：
-      more_question:
-        - If you question is not answred by the Q&A, you can contact us by
-        - Or call us directly.
-      contact_link: Contact form
-      payment_note: 'Payment:'
-      note: 'Notes:'
 
   devise:
     sessions:
-      title: Login
-      login: SIGN IN
-      forget_pw: Forget Password
-      register: Register
-      login_with:
-        google: login with Google
-        facebook: login with Facebook
-        twitter: login with Twitter
+      new:
+        title: Login
+        login: SIGN IN
+        forget_pw: Forget Password
+        register: Register
+        placeholder:
+          email: member@5xruby.tw
+          password: password
+        login_with:
+          google: login with Google
+          facebook: login with Facebook
+          twitter: login with Twitter
+          github: login with GitHub
+    passwords:
+      new:
+        title: Forget Password?
+        reset_pw: Reset Password
+        placeholder:
+          email: member@5xruby.tw
+        send_reset_mail: Send reset email
+      edit:
+        title: Reset Password
+        new_password: New Password
+        confirm_new_password: Confirm New Password
+        reset_password: Reset Password
+    registrations:
+      new:
+        title: 'Sign up'
+      edit:
+        title: 'Edit your account'
+      form:
+        sign_up: 'Submit'
+        password_blank_is_ok: "leave it blank if you don't want to change it"
+        current_password_required: "we need your current password to confirm your change"
 
   layouts:
     footer:
@@ -133,7 +172,23 @@ en:
     nav:
       login: Login
       camp: Boot Camp
-      course: Courses/Events
+      talk: Courses/Events
       showcases: Showcases
       training: Training
       news: News
+      logout: Logout
+      hello_user: Hello, %{name}
+      your_account: Your Account
+
+  users:
+    profile:
+      passwords:
+        edit:
+          title: Change Password
+        form:
+          edit_password: Submit
+
+  shared:
+    profile_sidebar:
+      profile: Profile
+      password: Password

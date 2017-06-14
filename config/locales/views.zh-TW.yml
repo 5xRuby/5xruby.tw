@@ -1,24 +1,33 @@
 zh-TW:
+  attendances:
+    new:
+      title: 表單
+    form:
+      submit: 送出
   breadcrumb:
     home: 首頁
-    courses: 講座資訊
-  courses:
+    talks: 講座資訊
+  talks:
     index:
-      all_courses: 所有講座
+      all_talks: 所有講座
       speakers: 講師陣容 Speakers
-    show:
+    info:
       hours_label: '時數:'
       outdated: 講座已開始，不接受報名
       opening: 立即報名
+    details:
       lecturer: 講師
       suitable_for: 本講座適合
       what_you_will_learn: 你將會學到
+    outline:
       outline: 講座大綱
       chapter_title: 第 %{nth} 堂：
+    tickets:
       apply_now: 我要報名
+    notice:
       payment_note: 付款方式：
       note: 注意事項：
-    course:
+    talk:
       outdated: 課程結束
       about_to_begin: 即將開講
       opening: 招生中
@@ -49,13 +58,35 @@ zh-TW:
       lead: 各種優質短片，專業課程錄影、桌面錄影教學與重要活動影片
     show:
       share: 分享到 FB
+  camps:
+    course:
+      time_label: '課程時間：'
+      what_will_learn_label: '%{hours} 小時課程，您會學到：'
+      view_outline: '...看課程大綱'
+      chapter_title: 第 %{nth} 堂：
+      location_label: '上課地點：'
+    sales:
+      sale_title: 好康逗相報
+    feedback:
+      testimonials: 聽聽大家怎麼說
+    qnas:
+      title: Q & A
+      q_label: Q：
+      a_label: A：
+      contact_link: 聯絡表單
+      more_questions:
+        - 若以上Q&A無法解答您的疑問，歡迎您透過
+        - 與我們聯繫，或是直接來電洽詢。
+    notice:
+      payment_note: 付款方式：
+      note: 注意事項：
 
   pages:
     index:
       main_features:
         about_5xruby: 關於五倍紅寶石 About 5xRuby
       main_content:
-        next_courses: 近期講座
+        next_talks: 近期講座
         more_talks: ...更多講座
       showcases:
         title: 案例作品 Showcases
@@ -88,35 +119,43 @@ zh-TW:
         a_label: A：
       interested: 對我們的代訓計畫有興趣嗎？
       contact_us: 歡迎與我們聯繫
-    camp:
-      location_label: '上課地點：'
-      sale_title: 好康逗相報
-      time_label: '課程時間：'
-      what_will_learn_label: '%{hours} 小時課程，您會學到：'
-      view_outline: '...看課程大綱'
-      chapter_title: 第 %{nth} 堂：
-      testimonials: 聽聽大家怎麼說
-      qna:
-        title: Q & A
-        q_label: Q：
-        a_label: A：
-      more_question:
-        - 若以上Q&A無法解答您的疑問，歡迎您透過
-        - 與我們聯繫，或是直接來電洽詢。
-      contact_link: 聯絡表單
-      payment_note: 付款方式：
-      note: 注意事項：
 
   devise:
     sessions:
-      title: 學員登入 Login
-      login: 登入 SIGN IN
-      forget_pw: 忘記密碼
-      register: 申請加入學員
-      login_with:
-        google: 以Google帳號登入
-        facebook: 以Facebook帳號登入
-        twitter: 以Twitter帳號登入
+      new:
+        title: 學員登入 Login
+        login: 登入 SIGN IN
+        forget_pw: 忘記密碼
+        register: 申請加入學員
+        placeholder:
+          email: member@5xruby.tw
+          password: password
+        login_with:
+          google: 以Google帳號登入
+          facebook: 以Facebook帳號登入
+          twitter: 以Twitter帳號登入
+          github: 以GitHub帳號登入
+    passwords:
+      new:
+        title: 忘記密碼？
+        reset_pw: 重設密碼
+        placeholder:
+          email: member@5xruby.tw
+        send_reset_mail: 發送重設密碼信
+      edit:
+        title: 重設密碼
+        new_password: 新密碼
+        confirm_new_password: 確認新密碼
+        reset_password: 重設密碼
+    registrations:
+      new:
+        title: 申請加入會員
+      edit:
+        title: 修改會員資料
+      form:
+        sign_up: 送出
+        password_blank_is_ok: 如果不想更改密碼，留白即可
+        current_password_required: 若要更改密碼，請輸入現有密碼
 
   layouts:
     footer:
@@ -128,12 +167,36 @@ zh-TW:
       faq: 常見問題
       recruit: 工作機會
       source_code: 網站原始碼
+      privacy: 隱私權條款
+      terms_of_service: 服務條款
       any_question: 有任何問題？
       address_label: '地址：'
     nav:
       login: 學員登入
       camp: 全方位衝刺班
-      course: 講座/活動
+      talk: 講座/活動
       showcases: 專案開發
       training: 企業代訓
       news: 最新消息
+      logout: 登出
+      hello_user: 您好，%{name}
+      your_account: 會員中心
+
+  admin:
+    activities:
+      index:
+        talk: 講座
+        camp: 衝刺班
+
+  users:
+    profile:
+      passwords:
+        edit:
+          title: 修改密碼
+        form:
+          edit_password: 送出
+
+  shared:
+    profile_sidebar:
+      profile: 會員資料
+      password: 更改密碼

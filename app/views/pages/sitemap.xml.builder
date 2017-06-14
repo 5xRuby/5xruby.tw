@@ -22,14 +22,14 @@ xml.urlset xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9' do
     xml.loc speakers_url
   end
 
-  # courses
+  # talks
   xml.url do
-    xml.loc courses_url
+    xml.loc talks_url
   end
-  Course.find_each do |course|
+  Activity::Talk.find_each do |talk|
     xml.url do
-      xml.loc course_url(course)
-      xml.lastmod course.updated_at.to_date
+      xml.loc talk_url(talk)
+      xml.lastmod talk.updated_at.to_date
     end
   end
 

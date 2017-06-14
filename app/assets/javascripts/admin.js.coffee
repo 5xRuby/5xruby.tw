@@ -20,6 +20,7 @@
 #= require admin/markdown
 #= require admin/to-markdown
 #= require admin/jsoneditor
+#= require admin/jquery-json-viewer
 #
 #= require shared
 #
@@ -38,4 +39,3 @@ APP['admin'] =
         $(this).closest('tr').remove()
     $('form').on 'ajax:success', (e, data) ->
       $('#result').html(data)
-

@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def index
     @index_pictures = IndexPicture.includes(:index_picture_imgs).lang(I18n.locale).order(:ordering)
-    @courses = Course.available.coming.limit(3)
+    @talks = Activity::Talk.available.coming(3)
     @showcases = Showcase.includes(:translations).where(is_online: true).order(:sort_id).first 3
   end
 
@@ -17,7 +17,7 @@ class PagesController < ApplicationController
     @showcases = Showcase.where(category: :training).first(3)
   end
 
-  def camp
-    @camp = Camp.use_or_default CampSetting.active.lang_or_any(I18n.locale).last
-  end
+  def privacy_policy; end
+
+  def terms_of_service; end
 end

@@ -1,7 +1,3 @@
-title: 2017年度 第一期 ( 3月～5月班 )
-
-begin_date: '2017/2/10'
-end_date: '2017/3/30'
 top_count_down: &count_down
   available:
     sentence: 距離第一堂課程報名截止只剩不到%{days_before_begining}天！
@@ -15,9 +11,10 @@ top_count_down: &count_down
       href: '#tickets'
   ended:
     sentence: 喔吶，錯過課程時間了嗎？
-    #button:
-      #text: 點我訂閱開課消息
-      #href: '#'
+    button:
+      text: 點我訂閱開課消息
+      href: '#'
+
 bottom_past_info:
   begun:
     sentence: 喔吶，錯過課程時間了嗎？
@@ -25,33 +22,13 @@ bottom_past_info:
       text: 點我訂閱開課消息
       href: '#'
 
-lessons:
-  - name: Lesson A. 深入淺出立即上手的 HTML 網頁設計
-    course_permalink: bootstrap-201601
-    time_limit: '2017/2/23 19:00'
-    btn_states:
-      opening:
-        text: 名額有限，馬上報名！
-        href: '#tickets'
-      outdated:
-        text: 課程已開始，點此訂閱開課通知
-        href: '#'
-    time_description:
-      - 3/11(六), 19(日), 25 (六) 09:30 - 17:30
-  - name: Ruby on Rails 從零開始
-    course_permalink: ruby-on-rails2016-4
-    time_limit: '2017/2/25 19:00'
-    time_description: 
-      - 5/03 (三) & 5/05 (五) 19:00 - 22:00, 5/07 (日) 10:00 - 17:00 
-      - 5/10 (三) & 5/12 (五) 19:00 - 22:00, 5/14 (日) 10:00 - 17:00 
-      - 5/17 (三) & 5/19 (五) 19:00 - 22:00, 5/21 (日) 10:00 - 17:00
-    btn_states:
-      opening:
-        text: 名額有限，馬上報名！
-        href: '#tickets'
-      outdated:
-        text: 課程已開始，點此訂閱開課通知
-        href: '#'
+btn_states:
+  opening:
+    text: 名額有限，馬上報名！
+    href: '#tickets'
+  outdated:
+    text: 課程已開始，點此訂閱開課通知
+    href: '#'
 
 sales:
   sentence: 只要報名 A.B.C 任一課程，我們就免費贈送技術圈最夯的 Lesson D. 版本控制 Git 課程(價值3000元！)<br>A.B.C不同課程合報還有更多優惠喔！
@@ -68,7 +45,7 @@ testimonials:
   - name: Okay
     img: /uploads/redactor_image/image/81/thumb_okay.jpg
     position: 五倍紅寶石 iOS 工程師
-    content: 2015 年從零開始接觸程式語言，在我的程式生涯開端很幸運地遇見了五倍紅寶石，講師在一字一鍵的教學中，從基礎觀念由淺入深到實戰經驗，架構清晰邏輯清楚，課後也非常鼓勵學員到礦坑解除各種技術障、參加社群活動，交流分享毫不藏私。 五倍紅寶石正派經營、用心實在、技術一流，是學習程式語言的首選無誤 <3<3<3 
+    content: 2015 年從零開始接觸程式語言，在我的程式生涯開端很幸運地遇見了五倍紅寶石，講師在一字一鍵的教學中，從基礎觀念由淺入深到實戰經驗，架構清晰邏輯清楚，課後也非常鼓勵學員到礦坑解除各種技術障、參加社群活動，交流分享毫不藏私。 五倍紅寶石正派經營、用心實在、技術一流，是學習程式語言的首選無誤 <3<3<3
   - name: 李昱陞
     img: /uploads/redactor_image/image/82/thumb_bill.jpg
     position: 五倍紅寶石 Rails 工程師
@@ -89,7 +66,3 @@ qnas:
     a: 當然可以的。如果您聽了課程(3個小時)之後覺得不滿意或是跟您預期的內容有所落差，您可透過直接寫信至我們的客服信箱，並希望可以告知我們做不好的地方，我們會替您辦理退費事宜。
 
 iframe_html: <iframe title= "Accupass 報名表"  marginwidth="0" marginheight="0" frameborder="0" border="0" scrolling="yes" src="https://www.accupass.com/event/shareregister/1610060658158647707480" width="100%" height="700px" ></iframe>
-
-payment_note: <ol><li>報名網站(活動通)繳款</li><li>現場刷卡</li><li>匯款<ul><li>匯款帳號資訊：</li><li>玉山銀行士林分行（代碼808）</li><li>帳號：0657-940-006952戶名：五倍紅寶石股份有限公司</li><li>請報名並匯款至以上指定帳戶後，請來信 <a href="mailto:pay-service@5xruby.tw">pay-service@5xruby.tw</a> 告知匯款帳號末五碼。</li></ol></li></ol>
-
-note: <ol><li>講座內容、日期及講師可能因故有所修改，主辦單位保留異動之權利。</li><li>學員需自備筆記型電腦。</li><li>本次講座僅開放 30 人報名。</li><li>報名費不包含餐費。</li><li>若報名學員人數不足 5 人，將視情況取消當次講座，並全額退還報名費用。</li><li>如有企業或團體講座需求，歡迎直接來信洽詢。</li></ol>

@@ -1,0 +1,23 @@
+<div class="training-intro bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-5 col-md-7">
+        <%= image_tag @talk.image.thumb %>
+      </div>
+      <div class="col-sm-6 col-lg-7 col-md-5 line-height-lg">
+        <small class="text-grey"><%= @talk.category.name %></small>
+        <h1><small class="text-black"><%= tr @talk, :title %></small></h1>
+        <span class="medium"><%= date_range @talk %></span>
+        <br><small class="text-grey"><%= "#{speakers_name @talk} | #{t('.hours_label')}#{@talk.hours}" %></small>
+        <p>
+          <%= tr @talk.course, :summary %>
+        </p>
+        <% if @talk.outdated? %>
+          <p class="btn btn-block btn-red disabled"><%= t('.outdated') %></p>
+        <% else %>
+          <a href="#tickets" class="btn btn-block btn-red"><%= t('.opening') %></a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

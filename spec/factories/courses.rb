@@ -30,15 +30,14 @@ FactoryGirl.define do
     image { Faker::Image.image }
     title { Faker::Name.title }
     permalink { SecureRandom.hex(4) }
-    is_online { rand > 0.5 }
     subtitle { Faker::Lorem.sentence }
     summary { Faker::Lorem.paragraph.slice(0, 150) }
     description { "<p>#{Faker::Lorem.paragraph}</p>" }
-    note { "<p>#{Faker::Lorem.paragraph}</p>" }
     what_will_learn { "<p>#{Faker::Lorem.paragraph}</p>" }
     maximum_attendees { 30 }
     total_attendees { rand(30) }
     minimum_attendees { 5 + rand(5) }
+    time_description { Faker::Lorem.sentence }
 
     transient do
       stages_count 6
@@ -57,10 +56,6 @@ FactoryGirl.define do
     end
     factory :course_ago do
       stages_since_or_ago :ago
-    end
-    
-    factory :online_course do
-      is_online true
     end
   end
 end

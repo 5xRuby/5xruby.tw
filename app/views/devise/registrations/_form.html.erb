@@ -1,0 +1,18 @@
+<%= simple_form_for resource, as: resource_name, url: registration_path(resource_name), wrapper: :vertical_form do |f| %>
+  <%= f.error_notification class: 'alert alert-danger' %>
+
+  <%= f.input :omniauth_key, as: :hidden %>
+  <%= f.input :name, autofocus: true, required: true %>
+  <%= f.input :email, required: true %>
+  <%= f.input :phone, required: true %>
+
+  <% if resource.password_required? %>
+    <%= f.input :password, required: true %>
+    <%= f.input :password_confirmation, required: true %>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.button :submit, t('.sign_up'), class: 'btn btn-default btn btn-block btn-login both-spacing' %>
+  </div>
+
+<% end %>

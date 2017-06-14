@@ -4,6 +4,12 @@ zh-TW:
       captcha_not_passed: 圖靈測試沒過，為避免是機器人在鬧，請勾選『我不是機器人』
       must_be_greater_than_start_at: 必須大於開始時間
       time_must_be_in_available_range: 時間必須在正常範圍內
+      wrong_course_number: 講座數量錯誤
+      course_duplicate: 課程的講座內容不得重複
+      talk_has_no_template: 講座不需要模板
+      talk_has_been_existed: 該講座已經開設課程了
+      camp_needs_template: 衝刺班需要模板
+      not_correct_email_format: '無效 Email'
   activemodel:
     attributes:
       contact:
@@ -38,6 +44,10 @@ zh-TW:
       post: 文章
       category: 講座分類
       course: 講座
+      activity: 課程
+      activity_course: 課程內容
+      activity/talk: 講座
+      activity/camp: 衝刺班
       stage: 階段
       schedule: 行程
       apply: 報名
@@ -51,7 +61,8 @@ zh-TW:
       interview_question: 面試題目
       index_picture: 首頁大圖
       index_picture_img: 首頁大圖圖片
-      camp_setting: 衝刺班設定
+      camp_template: 衝刺班模板
+      survey: 表單
     attributes:
       post:
         publish_at: 發佈時間
@@ -62,6 +73,13 @@ zh-TW:
       category:
         name: 分類名稱
         is_highlighted: 本期主打分類
+      activity:
+        type: 課程屬性
+        title: 課程名字
+        template: 衝刺班模板
+        survey: 表單
+        payment_note: 付款資訊
+        note: 備註
       course:
         category: 分類
         title: 標題
@@ -74,6 +92,9 @@ zh-TW:
         maximum_attendees: 招收人數
         total_attendees: 報名人數
         minimum_attendees: 最低人數
+        time_limit: 死線
+        time_description: 上課時間
+        suitable_for: 適合對象
       stage:
         title: 標題
         description: 介紹
@@ -130,11 +151,13 @@ zh-TW:
         src: 圖檔
         lang: 語系
         size: 大小
-      camp_setting:
+      camp_template:
+        title: 模板名字
         payload: 設定值
         json: 設定值
-        status: 狀態
-        lang: 語系
+      survey:
+        title: 表單名稱
+        questions: 欄位
   enumerize:
     apply:
       gender:
