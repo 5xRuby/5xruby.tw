@@ -65,7 +65,6 @@ gem 'webpacker', '~> 2.0'
 
 # Frontend
 gem 'rdiscount'
-gem 'react-rails'
 gem 'select2_helper', git: 'https://github.com/ryudoawaru/select2_helper.git', branch: 'rails42'
 
 # for Rails 5.0 upgrade
