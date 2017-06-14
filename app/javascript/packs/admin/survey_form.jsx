@@ -179,6 +179,8 @@ class SurveyFormQuestionsFields extends React.Component {
         <input
           name="admin_survey[questions]"
           type="textarea"
+          readOnly
+          hidden
           value={JSON.stringify(this.state.questions)}
         />
       </div>
