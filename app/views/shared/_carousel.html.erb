@@ -1,7 +1,7 @@
 <div class="swiper-container" 
      data-autoplay="<%= latency ||= 3000 %>"
-     data-slides-per-view="<%= slidesPerView %>"
-     data-gallery="<%= gallery %>" data-loop="<%= loop %>" data-slides-per-group="<%= slidesPerGroup %>">
+     data-slides-per-view="<%= slidesPerView ||= 'auto' %>"
+     data-gallery="<%= gallery ||= false %>" data-loop="<%= loop ||= true %>" data-slides-per-group="<%= slidesPerGroup ||= 1 %>">
   <div class="swiper-wrapper gallery">
     <% if action_name == "space"%>
       <% items.to_a.each do |items_in_a_slide| %>
