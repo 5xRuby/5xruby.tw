@@ -7,7 +7,7 @@ gem 'rails', '~> 5.0.2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # Use CoffeeScript for .js.coffee assets and views
@@ -61,6 +61,7 @@ gem 'settingslogic'
 gem 'simple_form'
 gem 'aasm'
 gem 'active_type'
+gem 'webpacker', '~> 2.0'
 
 # Frontend
 gem 'rdiscount'
@@ -89,6 +90,7 @@ group :development do
   gem 'capistrano-upload-config'
   gem 'web-console'
   gem 'letter_opener'
+  gem 'puma'
 end
 
 group :development, :test do

@@ -9,6 +9,7 @@ FactoryGirl.define do
     note { Faker::Lorem.sentence }
     is_online { true }
     template { create(:camp_template) }
+    rules { {} }
 
     after(:build) do |camp, evaluator|
       (1..4).to_a.sample.times do

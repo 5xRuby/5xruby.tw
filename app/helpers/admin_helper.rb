@@ -109,4 +109,9 @@ module AdminHelper
     end
     "#{humanized_name}: #{record.send attr}"
   end
+
+  def render_react_component(id: '', data: {})
+    content_tag :div, id: id, data: data do
+    end
+  end
 end

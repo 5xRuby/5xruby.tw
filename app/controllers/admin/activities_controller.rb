@@ -23,7 +23,7 @@ class Admin::ActivitiesController < AdminController
   end
 
   def preview
-    if (activity = Activity.find_by(permalink: params[:activity_id])) && activity.template
+    if (activity = current_model.find_by(permalink: params[:activity_id])&.specialized) && activity.template
       @camp = activity
       render 'camps/show', layout: 'application'
     else
@@ -41,9 +41,9 @@ class Admin::ActivitiesController < AdminController
 
   def allowed_params
     params.require(:admin_activity).permit(
-      :type, :title, :permalink, :note,
+      :type, :title, :permalink, :note, :rules,
       :payment_note, :is_online, :template_id, :form_id,
-      activity_courses_attributes: [:id, :course_id, :_destroy])
+      activity_courses_attributes: [:id, :course_id, :price, :priority, :_destroy])
   end
 
   def set_type

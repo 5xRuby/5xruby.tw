@@ -10,6 +10,7 @@ class Activity < ApplicationRecord
 
   # Attributes related macros
   permalinkable :title
+  delegate :payload, to: :template, allow_nil: true
 
   # association macros
   has_and_belongs_to_many :courses, after_add: :touch_if_needed, after_remove: :touch_if_needed
@@ -32,7 +33,7 @@ class Activity < ApplicationRecord
   validates_format_of :permalink, with: /\A\w[-|\w|\d]+\z/
 
   # callbacks
-  before_validation :set_title_if_needed
+  before_validation :nullify_invalid_data, :set_title_if_needed
 
   # other
   def is_camp?
@@ -41,6 +42,10 @@ class Activity < ApplicationRecord
 
   def is_talk?
     type == TALK
+  end
+
+  def specialized
+    becomes(type.constantize)
   end
 
   protected
@@ -57,7 +62,8 @@ class Activity < ApplicationRecord
   end
 
   def validate_courses_uniqueness
-    return if activity_courses.map(&:course_id).uniq.size == activity_courses.size
+    not_destroyed_activity_courses = activity_courses.reject(&:marked_for_destruction?)
+    return if not_destroyed_activity_courses.map(&:course_id).uniq.size == not_destroyed_activity_courses.size
     errors.add(:type, :course_duplicate)
   end
 
@@ -78,8 +84,36 @@ class Activity < ApplicationRecord
     errors.add(:type, :talk_has_been_existed)
   end
 
+  def nullify_invalid_data
+    return if is_camp?
+    assign_attributes(template_id: nil, title: nil, rules: "")
+  end
+
   def set_title_if_needed
     return if is_camp? || activity_courses.size == 0
     self[:title] = activity_courses.first.course.title
+  end
+
+  private
+
+  # Patch to allow creating nested activity_courses with predefined id
+  def assign_nested_attributes_for_collection_association(association_name, attributes_collection)
+    if association_name == :activity_courses && attributes_collection.is_a?(Hash)
+      attributes_collection.each_pair do |key, value|
+        activity_course = ActivityCourse.find_by(id: value['id'])
+        next if activity_course.present? && activity_course.activity_id.present?
+
+        if activity_course.present?
+          activity_courses << activity_course
+        else
+          new_activity_course = ActivityCourse.new(value)
+          new_activity_course.activity_id = id
+          new_activity_course.save!
+          activity_courses << new_activity_course
+        end
+      end
+    end
+
+    super
   end
 end
