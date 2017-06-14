@@ -16,7 +16,7 @@
     <%= f.input :content_markdown, as: :text, input_html: {class: 'markdown-editor'}, wrapper_html: {class: 'content-editor'}%>
     <%= f.input :tag_list, input_html: {class: 'select2-tags',value: f.object.tags.pluck(:name).join(",")} %>
     <%= f.input :is_online %>
-    <%= f.input :publish_at %>
+    <%= f.input :publish_at, as: :date_time_picker %>
   </div>
   <%=file_field :redactor_image, :image, style: "display:none;", data: {url: redactor_images_path(format: :json) }%>
 
