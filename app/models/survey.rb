@@ -1,4 +1,4 @@
-class Form < ApplicationRecord
+class Survey < ApplicationRecord
   # scope macros
 
   # Concerns macros

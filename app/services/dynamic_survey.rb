@@ -1,4 +1,4 @@
-module DynamicForm
+module DynamicSurvey
   class Builder
     def initialize(activity)
       @activity = activity
@@ -7,17 +7,17 @@ module DynamicForm
         attr_accessor :questions
 
         def self.model_name
-          ActiveModel::Name.new(self, nil, "dynamic_form")
+          ActiveModel::Name.new(self, nil, "dynamic_survey")
         end
       end
     end
 
     def generate
-      @form = @klass.new
-      @form.questions = JSON.parse(@activity.form.fields).map(&:symbolize_keys)
-      @form.purchasable = @activity
-      @form.questions.each do |q|
-        @form.class.class_eval do
+      @survey = @klass.new
+      @survey.questions = JSON.parse(@activity.survey.questions).map(&:symbolize_keys)
+      @survey.purchasable = @activity
+      @survey.questions.each do |q|
+        @survey.class.class_eval do
           # set attribute_accessors
           attribute q[:name].to_sym
 
@@ -32,7 +32,7 @@ module DynamicForm
           validates q[:name].to_sym, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/ , message: I18n.t('errors.messages.not_correct_email_format') } if %w[email].include?(q[:as])
         end
       end
-      @form
+      @survey
     end
   end
 

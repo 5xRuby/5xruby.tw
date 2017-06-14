@@ -38,7 +38,22 @@ class ActivityFormCourseFields extends React.Component {
       return obj
     }, {})
 
+    // fetch activity type and bind on change
+    this.bindActivityType();
+
     this.setState({ activityCourses, rules });
+  }
+
+  bindActivityType() {
+    const $input = $('#admin_activity_type');
+    const update = ($input) => {
+      this.setState( { isCamp: $input.val() === "Activity::Camp" } )
+    }
+    update($input);
+
+    $input.on('change', (e) => {
+      update($(e.target))
+    });
   }
 
   render() {
@@ -60,6 +75,7 @@ class ActivityFormCourseFields extends React.Component {
           onNew={() => {
             this.handleNewActivityCourse()
           }}
+          isCamp={this.state.isCamp}
         />
 
         <RuleFields
@@ -266,12 +282,14 @@ class ActivityFormDetailFields {
 
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('activity_form_rule_fields');
-  const data = Object.assign({}, node.dataset);
+  if (node) {
+    const data = Object.assign({}, node.dataset);
 
-  // each value in data object must be converted into an array
-  Object.keys(data).map(id => data[id] = JSON.parse(data[id]));
+    // each value in data object must be converted into an array
+    Object.keys(data).map(id => data[id] = JSON.parse(data[id]));
 
-  ReactDOM.render(<ActivityFormCourseFields {...data}/>, node);
+    ReactDOM.render(<ActivityFormCourseFields {...data}/>, node);
 
-  ActivityFormDetailFields = new ActivityFormDetailFields;
+    ActivityFormDetailFields = new ActivityFormDetailFields;
+  }
 })

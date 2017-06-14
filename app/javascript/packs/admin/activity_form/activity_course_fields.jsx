@@ -2,7 +2,24 @@ import React from 'react';
 import ActivityCourseTr from './activity_course_tr';
 import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 
-const ActivityCourseFields = ({activityCoursesArray, courseSelectOptions, onChangeObject, onRemove, onNew}) => (
+const NewActivityCourseButton = (props) => {
+
+  if (props.hasActivityCourse) {
+    return(
+      <a
+        className="btn btn-block btn-success"
+        onClick={props.onNew}
+      >
+        新增課程
+      </a>
+    );
+  } else {
+    return(null);
+  }
+}
+
+
+const ActivityCourseFields = ({activityCoursesArray, courseSelectOptions, onChangeObject, onRemove, onNew, isCamp}) => (
   <div>
     <table id="activity_courses" className="table">
       <thead>
@@ -26,12 +43,11 @@ const ActivityCourseFields = ({activityCoursesArray, courseSelectOptions, onChan
         onRemove={onRemove}
       />
     </table>
-    <a
-      className="btn btn-block btn-success"
-      onClick={onNew}
-    >
-      新增課程
-    </a>
+    <NewActivityCourseButton
+      hasActivityCourse={
+        isCamp || activityCoursesArray.length === 0
+      }
+    />
   </div>
 );
 

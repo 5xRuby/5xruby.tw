@@ -11,7 +11,7 @@ class AttendancesController < ApplicationController
   private
 
   def load_resource
-    @resource = DynamicForm.create(current_activity)
+    @resource = DynamicSurvey.create(current_activity)
   end
 
   alias build_resource load_resource
@@ -26,11 +26,11 @@ class AttendancesController < ApplicationController
   end
 
   def allowed_params
-    params.require(:dynamic_form).permit(*whitelisted, :purchasable_id)
+    params.require(:dynamic_survey).permit(*whitelisted, :purchasable_id)
   end
 
   def whitelisted
-    JSON.parse(current_activity.form.fields).map do |q|
+    JSON.parse(current_activity.survey.questions).map do |q|
       q['as'] != 'check_boxes' ? q['name'].to_sym : { q['name'].to_sym => [] }
     end
   end
