@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     resource :attendance, only: %i[new create]
     post 'rental/calculate'
 
+    Settings.alias.each do |path|
+      get path.from, to: redirect(path.to)
+    end
+
     devise_for :users,
       controllers: { registrations: 'users/registrations' },
       path_names: { edit: 'profile' },

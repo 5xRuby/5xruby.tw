@@ -127,8 +127,9 @@ ActiveRecord::Schema.define(version: 20170609062433) do
   end
 
   create_table "index_pictures", force: :cascade do |t|
-    t.string "alt"
-    t.string "href"
+    t.string  "alt"
+    t.string  "href"
+    t.integer "ordering"
   end
 
   create_table "interview_questions", force: :cascade do |t|
