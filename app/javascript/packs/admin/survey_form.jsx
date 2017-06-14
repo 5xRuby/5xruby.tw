@@ -29,7 +29,8 @@ class SurveyFormQuestionsFields extends React.Component {
           "required": true,
           "multiple": false,
           "label": "hihihihihihihihihihi",
-          "priority": 0
+          "priority": 0,
+          "collection": []
         },
         "e18669d5-0b2f-4ea6-b645-2c2824a95855": {
           "as": "email",
@@ -37,7 +38,8 @@ class SurveyFormQuestionsFields extends React.Component {
           "required": true,
           "multiple": false,
           "label": "your email",
-          "priority": 1
+          "priority": 1,
+          "collection": []
         },
         "e7451554-123d-4507-a170-1f06716ad83b": {
           "as": "check_boxes",
@@ -248,7 +250,8 @@ const SortableItem = SortableElement(({question, order, getTypeCount, onChangeOb
                   onChangeType(oldType, newType);
                   onChangeObject(question.id, {
                     name: newVal,
-                    as: e.target.value
+                    as: e.target.value,
+                    multiple: (newType === "check_boxes")
                   });
                 }}
               >
@@ -301,6 +304,8 @@ const SortableItem = SortableElement(({question, order, getTypeCount, onChangeOb
 const QuestionDetail = ({question, onChangeQuestionOption}) => {
   let detail;
   switch(question.as) {
+    case 'select':
+    case 'radio_buttons':
     case 'check_boxes':
       detail = (
         <div className="flex margin-vertical-10">
