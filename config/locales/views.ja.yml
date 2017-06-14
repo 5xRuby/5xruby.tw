@@ -177,7 +177,7 @@ ja:
       showcases: 制作事例
       training: トレーニング
       news: ニュース
-      logout: Logout
+      logout: Logout # TODO: translate it to jp
       hello_user: Hello, %{name}
       your_account: Your Account
 

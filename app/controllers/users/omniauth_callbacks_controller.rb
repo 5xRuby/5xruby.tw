@@ -15,6 +15,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private
 
   def handle_omniauth(kind)
+    # Use the session locale set earlier; use the default if it isn't available.
+    I18n.locale = session[:omniauth_login_locale] || I18n.default_locale
+
     if user_from_omniauth.persisted?
       set_flash_message :notice, :success, kind: kind
       sign_in_and_redirect user_from_omniauth
