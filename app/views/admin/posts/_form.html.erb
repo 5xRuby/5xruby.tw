@@ -18,9 +18,9 @@
     <%= f.input :is_online %>
     <%= f.input :publish_at %>
   </div>
+  <%=file_field :redactor_image, :image, style: "display:none;", data: {url: redactor_images_path(format: :json) }%>
 
   <div class="form-actions">
     <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
   </div>
 <% end %>
-<%=file_field :redactor_image, :image, style: "display:none;", data: {url: redactor_images_path(format: :json) }%>

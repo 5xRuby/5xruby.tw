@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :showcases, only: :index
     resource :camp, only: :show
     resource :attendance, only: %i[new create]
+    resources :redactor_images, only: :create
     post 'rental/calculate'
 
     Settings.alias.each do |path|
@@ -32,7 +33,6 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' },
     only: :omniauth_callbacks
 
-
   get Settings.admin_path_prefix, to: "admin#dashboard", as: :admin_root
   namespace :admin, path: Settings.admin_path_prefix do
     get :space_price
@@ -49,6 +49,4 @@ Rails.application.routes.draw do
     resources :index_pictures, :camp_templates, :surveys
     resources :translations, only: %i[index create update]
   end
-
-  resources :redactor_images, only: :create
 end
