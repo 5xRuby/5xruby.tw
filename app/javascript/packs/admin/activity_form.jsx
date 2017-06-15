@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
+import Utils from '../shared/utils';
 import ActivityCourseFields from './activity_form/activity_course_fields';
 import RuleFields from './activity_form/rule_fields';
 
@@ -30,7 +31,7 @@ class ActivityFormCourseFields extends React.Component {
 
     // Convert rule to an object
     const rules = _.reduce(this.props.rules, (obj, value, key) => {
-      const uuid = this.generateUUID();
+      const uuid = Utils.generateUUID();
       obj[uuid] = {
         ...value,
         selectedActivityCourseIDs: key.split("--")
@@ -102,11 +103,6 @@ class ActivityFormCourseFields extends React.Component {
     );
   }
 
-  generateUUID() {
-    const s4 = () => Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1)
-    return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
-  }
-
   getSortedActivityCoursesArray() {
     const compare = (a, b) => {
       if (b._destroy && !a._destroy) {
@@ -171,7 +167,7 @@ class ActivityFormCourseFields extends React.Component {
   }
 
   handleNewActivityCourse() {
-    const uuid = this.generateUUID();
+    const uuid = Utils.generateUUID();
     const priority = this.getSortedActivityCoursesArray().filter((o) => !o._destroy).length
     const activityCourses = {
       ...this.state.activityCourses,
@@ -187,7 +183,7 @@ class ActivityFormCourseFields extends React.Component {
   }
 
   handleNewRule() {
-    const id = this.generateUUID();
+    const id = Utils.generateUUID();
     const priority = this.getSortedRulesArray().length;
     const rules = {
       ...this.state.rules,

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
-import Util from './util';
+import Utils from '../shared/utils';
 import DragHandle from './drag_handle';
 import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 
@@ -122,7 +122,7 @@ class SurveyFormQuestionsFields extends React.Component {
   }
 
   handleNewQuestion() {
-    const uuid = Util.generateUUID();
+    const uuid = Utils.generateUUID();
     const stringCount = this.getTypeCount('string');
     const questions = {
       ...this.state.questions,
