@@ -214,6 +214,9 @@ a.text-grey:hover {
 .bottom-padding {
   padding-bottom: 15px !important;
 }
+.both-padding {
+  padding: 15px 0px !important;
+}
 .bottom-padding-lg {
   padding-bottom: 30px !important;
 }
@@ -248,6 +251,11 @@ a.text-grey:hover {
 }
 .border-left-violet {
   border-left: 1px solid #ee82ee;
+}
+
+/*list style*/
+.no-list-style {
+  list-style: none !important;
 }
 
 /*mobile only*/
@@ -1664,8 +1672,8 @@ a.text-grey:hover {
 .right-spacing-sm {
   margin-right: 10px !important;
 }
-.no-padding {
-  padding: 0px !important;
+.left-no-padding {
+  padding-left: 0px !important;
 }
 .right-padding {
   padding: 0px 15px 0px 0px !important;
@@ -1719,6 +1727,11 @@ a.text-grey:hover {
 }
 .border-left-violet {
   border-left: 1px solid #ee82ee;
+}
+
+/*overflow*/
+.overflow-hidden {
+  overflow: hidden;
 }
 
 /*mobile only*/

@@ -190,7 +190,7 @@ class SurveyFormQuestionsFields extends React.Component {
 
 const SortableList = SortableContainer(({items, getTypeCount, onChangeObject, onChangeType, onRemoveQuestion}) => {
   return (
-    <ul className="no-padding-left no-list-style">
+    <ul className="left-no-padding no-list-style">
       {items.map((obj, index) => (
         <SortableItem
           key={obj.id}
@@ -210,13 +210,13 @@ const SortableList = SortableContainer(({items, getTypeCount, onChangeObject, on
 const SortableItem = SortableElement(({question, order, getTypeCount, onChangeObject, onChangeType, onRemoveQuestion}) => {
   return (
     <li key={question.id} className="sortable-item gray-border">
-      <div className="flex padding-vertical-10 gray-bg">
+      <div className="flex both-padding gray-bg">
         <div className="col-md-1 drag-handle" >
           <DragHandle />
         </div>
 
         <div className="col-md-10">
-          <div className="overflow-hidden margin-bottom-10 text-center" >
+          <div className="overflow-hidden bottom-margin-sm text-center" >
             <div className="col-md-1">
               <label htmlFor={`question_${order}_label`}>問題<br/>題目</label>
             </div>
@@ -310,11 +310,11 @@ const QuestionDetail = ({question, onChangeQuestionOption}) => {
     case 'radio_buttons':
     case 'check_boxes':
       detail = (
-        <div className="flex margin-vertical-10">
+        <div className="flex both-spacing-sm">
           <div className="col-md-offset-1 col-md-10">
             {
               (question.collection || []).map((option, index) =>
-                <div key={`${question.id}_q_${index}`} className="flex margin-bottom-5">
+                <div key={`${question.id}_q_${index}`} className="flex bottom-spacing-xsm">
                   <div className="col-md-1 text-center vertical-middle">
                     {String.fromCharCode(65 + index)}
                   </div>

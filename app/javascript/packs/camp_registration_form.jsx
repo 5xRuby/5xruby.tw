@@ -40,6 +40,12 @@ class CampRegistrationForm extends React.Component {
     return array.sort(Utils.compare);
   }
 
+  getSelectedCoursesArray() {
+    const array = Object.keys(_.pickBy(this.state.selectedCourses, value => value))
+
+    return array
+  }
+
   getSortedRulesArray() {
     const array = Object.keys(this.state.rules).map(id => ({
       ...this.state.rules[id],
@@ -84,8 +90,8 @@ class CampRegistrationForm extends React.Component {
 
         <hr/>
 
-        <div className="activity-courses">
-          <ol>
+        <div className="overflow-hidden activity-courses rl-padding-lg">
+          <ol className="no-list-style">
             {activityCoursesArray.map(item => (
               <li key={item.id}>
                 <div className="col-xs-9 col-md-9">
@@ -109,10 +115,10 @@ class CampRegistrationForm extends React.Component {
           </ol>
         </div>
 
-        <div className="rule-container top-padding ">
+        <div className="rule-container top-padding rl-padding-lg">
           <div className="info text-right">根據不同選擇有不同優惠</div>
 
-          <ul>
+          <ul className="left-no-padding no-list-style">
             {rulesArray.map(item => (
               <li
                 key={item.id}
@@ -139,6 +145,13 @@ class CampRegistrationForm extends React.Component {
         <div className="total-price">
           <h3>共計 <span className="price">0 元</span></h3>
         </div>
+
+        <input
+          hidden
+          readOnly
+          value={JSON.stringify(this.getSelectedCoursesArray())}
+          name="order[selected_courses]"
+        />
       </div>
     );
   }
