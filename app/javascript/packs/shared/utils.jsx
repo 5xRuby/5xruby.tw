@@ -3,6 +3,17 @@ export function generateUUID() {
   return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
 }
 
+export function compare(a, b) {
+  if (a.priority < b.priority) {
+    return -1;
+  } else if (b.priority < a.priority) {
+    return 1;
+  }
+
+  return 0;
+}
+
 export default {
   generateUUID,
+  compare
 }

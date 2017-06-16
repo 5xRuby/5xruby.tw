@@ -32,8 +32,13 @@ Rails.application.routes.draw do
     scope :users, module: :users do
       get 'omniauth/:provider', to: 'omniauth#localized', as: :localized_omniauth
 
-      namespace :profile do
-        resource :password, only: %i[edit update]
+      # resources which can be accessed after user login
+      authenticate :user do
+        namespace :profile do
+          resource :password, only: %i[edit update]
+        end
+
+        resources :orders, except: :new
       end
     end
   end

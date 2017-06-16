@@ -17,6 +17,16 @@ class ActivityCourse < ApplicationRecord
   # callbacks
 
   # other
+  class << self
+    def to_hash_with_title
+      attrs = self.column_names
+
+      includes(:course).map do |item|
+        new_hash = item.attributes.merge(title: item.course.title)
+        [item.id, new_hash]
+      end.to_h
+    end
+  end
 
   protected
   # callback methods

@@ -124,22 +124,12 @@ class ActivityFormCourseFields extends React.Component {
   }
 
   getSortedRulesArray() {
-    const compare = (a, b) => {
-      if (a.priority < b.priority) {
-        return -1;
-      } else if (b.priority < a.priority) {
-        return 1;
-      }
-
-      return 0;
-    }
-
     const rulesArray = Object.keys(this.state.rules).map(id => ({
       ...this.state.rules[id],
       id: id
     }));
 
-    return rulesArray.sort(compare);
+    return rulesArray.sort(Utils.compare);
   }
 
   handleActivityCourseChange(activityCourseID, newData) {
