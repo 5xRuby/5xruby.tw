@@ -12,6 +12,7 @@ class Admin::ActivitiesController < AdminController
   end
 
   def show
+    @courses = current_object.courses.includes(:stages)
   end
 
   def new
@@ -25,7 +26,7 @@ class Admin::ActivitiesController < AdminController
   def preview
     if (activity = current_model.find_by(permalink: params[:activity_id])&.specialized) && activity.template
       @camp = activity
-      @courses = @camp.courses.includes(:translations, :stages, :speakers)
+      @courses = @camp.courses.includes(:translations, { speakers: [:translations] }, { stages: [:translations] } )
       @order = @camp.orders.new
       render 'camps/show', layout: 'application'
     else
