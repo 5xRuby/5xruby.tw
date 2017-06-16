@@ -27,6 +27,8 @@ class Order < ApplicationRecord
     end
   end
 
+  delegate :survey, to: :purchasable
+
   # association macros
   belongs_to :user
   belongs_to :purchasable, polymorphic: true

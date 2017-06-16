@@ -6,6 +6,8 @@
       "rules": @camp.rules
     }
   )%>
+  <%= f.hidden_field :purchasable_id %>
+  <%= f.hidden_field :purchasable_type %>
 
   <div class="text-center">
     <%= f.button :submit, t('.submit'), class: "btn btn-red"%>
