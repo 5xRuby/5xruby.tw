@@ -85,6 +85,9 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.3)
+    bullet (5.5.1)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.10.0)
     byebug (9.0.6)
     capistrano (3.8.1)
       airbrussh (>= 1.0.0)
@@ -376,6 +379,7 @@ GEM
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.2.1)
+    uniform_notifier (1.10.0)
     vex_rails (0.2.0)
     warden (1.2.7)
       rack (>= 1.0)
@@ -402,6 +406,7 @@ DEPENDENCIES
   acts-as-taggable-on!
   annotate
   bootstrap-sass
+  bullet
   capistrano-flowdock
   capistrano-rails
   capistrano-sidekiq

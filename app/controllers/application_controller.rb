@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :set_locale, :set_seo
-  helper_method :current_path_with_locale, :translate_record, :tr, :translatable_locales
+  helper_method :current_path_with_locale, :translatable_locales
 
   def set_seo
     @seo = {
@@ -34,11 +34,6 @@ class ApplicationController < ActionController::Base
   def current_path_with_locale locale
     # TODO compute path by request.fullpath, locale, I18n.locale and I18n.default_locale, it's bit complex
   end
-
-  def translate_record record, attribute
-    record.translations.find{ |t| t.column == attribute.to_s && t.locale == I18n.locale.to_s }.try(:text).presence || record.send(attribute)
-  end
-  alias :tr :translate_record
 
   def translatable_locales
     @translatable_locales ||= I18n.available_locales.reject{ |i| i == I18n.default_locale }

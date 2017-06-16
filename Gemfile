@@ -90,6 +90,7 @@ group :development do
   gem 'web-console'
   gem 'letter_opener'
   gem 'puma'
+  gem 'bullet'
 end
 
 group :development, :test do

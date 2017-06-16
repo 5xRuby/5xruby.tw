@@ -7,7 +7,7 @@
           <i class="fa fa-map-marker" aria-hidden="true"></i> <%= t('.location_label') %>
           <%= link_to "#{t('company.address')} (#{t('company.name')})", t('company.gmap_url'), target: :_blank %>
         </div>
-        <% @camp.courses.each do |course| %>
+        <% @courses.each do |course| %>
           <!--Start Camp-->
           <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing border-grey no-padding">
             <div class="camp-wrap">
@@ -56,7 +56,7 @@
 
           <!-- Start Dialog -->
           <div class="vex-dialog-content" id="camp-outline-dialog-<%= course.permalink %>" title="<%= course.title %>">
-            <% course.stages.includes(:translations).each_with_index do |stage, index| %>
+            <% course.stages.each_with_index do |stage, index| %>
               <div class="four-spacing">
                 <h4><%= t('.chapter_title', nth: index) %> <%= tr stage, :title %></h4>
                 <%= raw tr(stage, :description) %>

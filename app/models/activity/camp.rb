@@ -1,6 +1,5 @@
 class Activity::Camp < Activity
   # scope macros
-  default_scope -> { includes(courses: :stages) }
 
   # Concerns macros
 
@@ -44,6 +43,6 @@ class Activity::Camp < Activity
   end
 
   def sorted_course_start_dates
-    @sorted_course_start_dates ||= courses.map(&:start_on).sort
+    @sorted_course_start_dates ||= courses.includes(:stages).map(&:start_on).sort
   end
 end
