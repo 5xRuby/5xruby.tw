@@ -25,6 +25,7 @@ class Admin::ActivitiesController < AdminController
   def preview
     if (activity = current_model.find_by(permalink: params[:activity_id])&.specialized) && activity.template
       @camp = activity
+      @order = @camp.orders.new
       render 'camps/show', layout: 'application'
     else
       @talk = activity

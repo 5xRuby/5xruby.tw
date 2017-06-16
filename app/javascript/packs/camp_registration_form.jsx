@@ -123,7 +123,7 @@ class CampRegistrationForm extends React.Component {
                 </div>
 
                 <div className="col-xs-2 col-md-2">
-                  原價 {this.calOriginalAmount(item.newVals)}
+                  原價 {this.calOriginalAmount(item.selectedCourses)}
                 </div>
 
                 <div className="col-xs-2 col-md-2">
