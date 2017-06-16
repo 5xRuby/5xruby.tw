@@ -80,6 +80,8 @@ en:
     notice:
       payment_note: 'Payment:'
       note: 'Notes:'
+    form:
+      submit: Next step
 
   pages:
     index:

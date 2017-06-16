@@ -77,6 +77,9 @@ zh-TW:
       more_questions:
         - 若以上Q&A無法解答您的疑問，歡迎您透過
         - 與我們聯繫，或是直接來電洽詢。
+    form:
+      submit: 下一步
+
     notice:
       payment_note: 付款方式：
       note: 注意事項：

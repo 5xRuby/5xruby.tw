@@ -80,6 +80,8 @@ ja:
     notice:
       payment_note: '支払い方法:'
       note: 'ノート:'
+    form:
+      submit: 下一步 # TODO: translate it to jp
 
   pages:
     index:
