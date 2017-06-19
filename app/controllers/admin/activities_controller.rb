@@ -12,7 +12,7 @@ class Admin::ActivitiesController < AdminController
   end
 
   def show
-    @courses = current_object.courses.includes(:stages)
+    @admin_courses = current_object.courses.includes(:stages)
   end
 
   def new

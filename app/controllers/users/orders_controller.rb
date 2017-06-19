@@ -19,7 +19,7 @@ module Users
     end
 
     def allowed_params
-      params.require(:order).permit(:activity_id, :activity_type)
+      params.require(:order).permit(:purchasable_id, :purchasable_type)
     end
   end
 end
