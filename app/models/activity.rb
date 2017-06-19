@@ -5,11 +5,13 @@ class Activity < ApplicationRecord
 
   # Concerns macros
   include Permalinkable
+  include PatchNestedAttributesAssignment
 
   # Constants
 
   # Attributes related macros
   permalinkable :title
+  patch :activity_courses
   delegate :payload, to: :template, allow_nil: true
 
   # association macros
@@ -89,28 +91,5 @@ class Activity < ApplicationRecord
   def set_title_if_needed
     return if is_camp? || activity_courses.size == 0
     self[:title] = activity_courses.first.course.title
-  end
-
-  private
-
-  # Patch to allow creating nested activity_courses with predefined id
-  def assign_nested_attributes_for_collection_association(association_name, attributes_collection)
-    if association_name == :activity_courses && attributes_collection.is_a?(Hash)
-      attributes_collection.each_pair do |key, value|
-        activity_course = ActivityCourse.find_by(id: value['id'])
-        next if activity_course.present? && activity_course.activity_id.present?
-
-        if activity_course.present?
-          activity_courses << activity_course
-        else
-          new_activity_course = ActivityCourse.new(value)
-          new_activity_course.activity_id = id
-          new_activity_course.save!
-          activity_courses << new_activity_course
-        end
-      end
-    end
-
-    super
   end
 end

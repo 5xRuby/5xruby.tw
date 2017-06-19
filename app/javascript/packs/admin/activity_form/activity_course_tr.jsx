@@ -23,6 +23,7 @@ export default class ActivityCourseTr extends React.Component {
     return (
       <tr>
         <input type="hidden" value={activityCourse.id} name={`admin_activity[activity_courses_attributes][${order}][id]`} />
+        <input type="hidden" value={activityCourse.priority} name={`admin_activity[activity_courses_attributes][${order}][priority]`} />
         <td>
           <DragHandle />
         </td>
