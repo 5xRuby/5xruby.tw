@@ -11,6 +11,7 @@ class ActivityCourse < ApplicationRecord
   # association macros
   belongs_to :activity, inverse_of: :activity_courses
   belongs_to :course
+  has_and_belongs_to_many :orders
 
   # validation macros
 

@@ -19,6 +19,7 @@ class Course < ActiveRecord::Base
   belongs_to :category, counter_cache: true
   has_many :translations, as: :translatable
   has_many :activity_courses
+  has_many :orders, through: :activity_courses, source: :orders
   has_and_belongs_to_many :camps, association_foreign_key: 'activity_id', class_name: "::Activity::Camp"
   has_and_belongs_to_many :talks, association_foreign_key: 'activity_id', class_name: "::Activity::Talk"
 

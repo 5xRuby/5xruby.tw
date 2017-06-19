@@ -24,11 +24,8 @@ class Activity < ApplicationRecord
   # validation macros
   validates :type, :title, :permalink, :note, :payment_note, presence: true
   validates :type, inclusion: { in: %w(Activity::Camp Activity::Talk) }
-  validate :validate_courses_number
-  validate :validate_courses_uniqueness
-  validate :validate_template
+  validate :validate_courses_number, :validate_courses_uniqueness, :validate_template, :validate_uniqueness_of_course
   validates :permalink, uniqueness: true
-  validate :validate_uniqueness_of_course
   validates :is_online, inclusion: { in: [ true, false ] }
   validates_format_of :permalink, with: /\A\w[-|\w|\d]+\z/
 

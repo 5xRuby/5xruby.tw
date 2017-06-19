@@ -32,6 +32,8 @@ class Order < ApplicationRecord
   # association macros
   belongs_to :user
   belongs_to :purchasable, polymorphic: true
+  has_and_belongs_to_many :activities_courses, class_name: "ActivityCourse"
+  has_many :selected_courses, class_name: "Course", through: :activities_courses, source: :course
 
   # validation macros
   validates :amount, numericality: { greater_than_or_equal_to: 0 }
