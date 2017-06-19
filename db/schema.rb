@@ -48,14 +48,6 @@ ActiveRecord::Schema.define(version: 20170619022600) do
     t.index ["activity_id"], name: "index_activities_courses_deprecated_on_activity_id", using: :btree
     t.index ["course_id"], name: "index_activities_courses_deprecated_on_course_id", using: :btree
   end
-
-  create_table "activities_courses_orders", force: :cascade do |t|
-    t.uuid    "activity_course_id"
-    t.integer "order_id"
-    t.index ["activity_course_id"], name: "index_activities_courses_orders_on_activity_course_id", using: :btree
-    t.index ["order_id"], name: "index_activities_courses_orders_on_order_id", using: :btree
-  end
-
   create_table "authors", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -81,6 +73,13 @@ ActiveRecord::Schema.define(version: 20170619022600) do
     t.string   "permalink",                      null: false
     t.index ["name"], name: "index_categories_on_name", using: :btree
     t.index ["permalink"], name: "index_categories_on_permalink", unique: true, using: :btree
+  end
+
+  create_table "course_enrollments", force: :cascade do |t|
+    t.uuid    "activity_course_id"
+    t.integer "order_id"
+    t.index ["activity_course_id"], name: "index_course_enrollments_on_activity_course_id", using: :btree
+    t.index ["order_id"], name: "index_course_enrollments_on_order_id", using: :btree
   end
 
   create_table "courses", force: :cascade do |t|
@@ -282,6 +281,7 @@ ActiveRecord::Schema.define(version: 20170619022600) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 
@@ -319,8 +319,6 @@ ActiveRecord::Schema.define(version: 20170619022600) do
   add_foreign_key "activities", "surveys"
   add_foreign_key "activities_courses", "activities"
   add_foreign_key "activities_courses", "courses"
-  add_foreign_key "activities_courses_deprecated", "activities"
-  add_foreign_key "activities_courses_deprecated", "courses"
   add_foreign_key "orders", "users"
   add_foreign_key "payments", "orders"
   add_foreign_key "payments", "users"

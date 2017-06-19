@@ -1,6 +1,6 @@
-class CreateActivitiesCoursesOrdersTable < ActiveRecord::Migration[5.0]
+class CreateCourseEnrollmentTable < ActiveRecord::Migration[5.0]
   def change
-    create_table :activities_courses_orders do |t|
+    create_table :course_enrollments do |t|
       t.references :activity_course, references: :activities_courses, type: :uuid
       t.references :order
     end
