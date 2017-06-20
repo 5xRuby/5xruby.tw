@@ -298,26 +298,27 @@ en:
   site:
     index:
       main_features:
-        - img: feature-list-img1.png
+        - img: feature-list-img4.png
           title: Courses
           href_method: camp_path
           description:
-            - From Ruby, Railsk, Git to deployment,
-            - we have experts teaching these in either basic and advanced level,
-            - making you get on board eazily!
-        - img: feature-list-img2.png
-          title: Case outsourcing / Technical consulting
+            - We have experts teaching these in either basic and advanced level, making you get on board eazily!
+        - img: feature-list-img1.png
+          title: Case outsourcing
           href_method: showcases_path
           description:
             - Providing professional and technical advice and support for
             - Ruby, Rails, iOS, system design and even deployment.
-        - img: feature-list-img3.png
-          title: Employee Training Plans
+        - img: feature-list-img2.png
+          title: Technical consulting
           href_method: training_path
           description:
-            - Helping enterprise making their existing
-            - human resource into Ruby/Rails teams
-            - No more recruit is required!
+            - Helping enterprise making their existing human resource into Ruby/Rails teams. No more recruit is required!
+        - img: feature-list-img3.png
+          title: Ruby community
+          href_method: training_path
+          description:
+            - We organized many kind of events for the sustainability of Ruby programmer community.
       testimonials:
         - name: Victor Lam
           title: "Product Manager of GoGoVan, Full Stack Developer"

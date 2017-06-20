@@ -300,27 +300,26 @@ zh-TW:
   site:
     index:
       main_features:
-        - img: feature-list-img1.png
-          title: 十年功力實戰講座
+        - img: feature-list-img4.png
+          title: 課程教學
           href_method: camp_path
           description:
-            - 業界資深前輩為你講解 Ruby、Rails、
-            - Git 、系統佈署等從入門到中高階的講座
-            - 讓你有如練了十年功！
-        - img: feature-list-img2.png
-          title: 案件外包．技術諮詢
+            - 五倍規劃了一系列從入門到中高階的專業網站開發課程，不管是初學或已有基礎，都可以快速上手！
+        - img: feature-list-img1.png
+          title: 專案開發
           href_method: showcases_path
           description:
-            - 從 Ruby、Rails、iOS 的工程服務
-            - 到系統設計、規劃到開發甚至系統架設
-            - 提供專業的建議與頂尖的技術
-        - img: feature-list-img3.png
-          title: 企業培訓計畫
+            - 從 Ruby、Rails、iOS 的工程服務，到系統設計開發甚至系統架設，提供專業的建議與頂尖的技術。
+        - img: feature-list-img2.png
+          title: 技術顧問
           href_method: training_path
           description:
-            - 由業界第一線的開發人員協助您將
-            - 現有人力快速打造為 Ruby/Rails 團隊
-            - 無須經歷繁瑣的人才招募就有即戰力！
+            - 協助您將現有人力快速打造為 Ruby/Rails 團隊，無須經歷繁瑣的人才招募就有即戰力！
+        - img: feature-list-img3.png
+          title: 社群經營
+          href_method: posts_path
+          description:
+            - 追求 Ruby 開發社群的永續經營，致力於舉辦各類活動，促進 Ruby 社群良好發展。
       testimonials:
         - name: Victor Lam
           title: "GoGoVan 產品經理，Full Stack Developer."
