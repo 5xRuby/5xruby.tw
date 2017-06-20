@@ -26,7 +26,7 @@ class AttendancesController < ApplicationController
   end
 
   def allowed_params
-    params.require(:dynamic_survey).permit(*whitelisted, :purchasable_id)
+    params.require(:dynamic_survey).permit(*whitelisted, :activity_id)
   end
 
   def whitelisted
@@ -36,6 +36,6 @@ class AttendancesController < ApplicationController
   end
 
   def current_activity
-    @current_activity ||= Activity.find_by(id: params[:purchasable_id]) || Activity::Camp.last
+    @current_activity ||= Activity.find_by(id: params[:activity_id]) || Activity::Camp.last
   end
 end

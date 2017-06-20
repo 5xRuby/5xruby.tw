@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170619022600) do
+ActiveRecord::Schema.define(version: 20170620035458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20170619022600) do
     t.index ["activity_id"], name: "index_activities_courses_deprecated_on_activity_id", using: :btree
     t.index ["course_id"], name: "index_activities_courses_deprecated_on_course_id", using: :btree
   end
+
   create_table "authors", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -157,15 +158,14 @@ ActiveRecord::Schema.define(version: 20170619022600) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string   "purchasable_type"
-    t.integer  "purchasable_id"
     t.string   "state"
-    t.decimal  "amount",           precision: 31, scale: 1
+    t.decimal  "amount",      precision: 31, scale: 1
     t.json     "fields"
     t.integer  "user_id"
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
-    t.index ["purchasable_type", "purchasable_id"], name: "index_orders_on_purchasable_type_and_purchasable_id", using: :btree
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.integer  "activity_id"
+    t.index ["activity_id"], name: "index_orders_on_activity_id", using: :btree
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
@@ -281,7 +281,6 @@ ActiveRecord::Schema.define(version: 20170619022600) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 
@@ -319,6 +318,8 @@ ActiveRecord::Schema.define(version: 20170619022600) do
   add_foreign_key "activities", "surveys"
   add_foreign_key "activities_courses", "activities"
   add_foreign_key "activities_courses", "courses"
+  add_foreign_key "activities_courses_deprecated", "activities"
+  add_foreign_key "activities_courses_deprecated", "courses"
   add_foreign_key "orders", "users"
   add_foreign_key "payments", "orders"
   add_foreign_key "payments", "users"

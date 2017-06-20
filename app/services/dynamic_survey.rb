@@ -15,7 +15,7 @@ module DynamicSurvey
     def generate
       @survey = @klass.new
       @survey.questions = JSON.parse(@activity.survey.questions).map(&:symbolize_keys)
-      @survey.purchasable = @activity
+      @survey.activity = @activity
       @survey.questions.each do |q|
         @survey.class.class_eval do
           # set attribute_accessors

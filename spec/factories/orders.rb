@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :order do
-    purchasable { create(%i[talk camp].sample) }
+    activity { create(%i[talk camp].sample) }
     amount { Faker::Number.between(10000, 20000) }
     fields { "" }
     user { create(:user) }

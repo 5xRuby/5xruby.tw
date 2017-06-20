@@ -26,15 +26,15 @@ class Order < ApplicationRecord
     end
   end
 
-  delegate :survey, to: :purchasable
-
   # association macros
   belongs_to :user
-  belongs_to :purchasable, polymorphic: true
   # has_and_belongs_to_many :activities_courses, class_name: "ActivityCourse"
+  belongs_to :activity
   has_many :course_enrollments, class_name: "Order::CourseEnrollment"
   has_many :activity_courses, through: :course_enrollments
   has_many :enrolling_courses, through: :activity_courses, source: :course
+
+  delegate :survey, to: :activity
 
   # validation macros
   validates :amount, numericality: { greater_than_or_equal_to: 0 }

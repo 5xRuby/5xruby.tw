@@ -20,7 +20,7 @@ class Activity < ApplicationRecord
   belongs_to :survey, required: false
   has_many :translations, as: :translatable
   has_many :activity_courses
-  has_many :orders, as: :purchasable
+  has_many :orders
   accepts_nested_attributes_for :activity_courses, allow_destroy: true
 
   # validation macros
