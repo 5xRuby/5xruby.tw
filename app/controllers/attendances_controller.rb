@@ -11,7 +11,7 @@ class AttendancesController < ApplicationController
   private
 
   def load_resource
-    @resource = DynamicSurvey.create(current_activity)
+    @resource = DynamicFormForSurveyService.create(current_activity)
   end
 
   alias build_resource load_resource
