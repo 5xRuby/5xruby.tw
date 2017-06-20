@@ -9,7 +9,7 @@ class CampRegistrationForm extends React.Component {
 
     this.state = {
       activityCourses: {},
-      selectedCourses: {},
+      courseEnrollments: {},
       rules: props.rules
     }
 
@@ -25,13 +25,13 @@ class CampRegistrationForm extends React.Component {
         price: parseInt(activityCourses[key].price)
     })
 
-    // initialize selectedCourses
-    let selectedCourses = {}
+    // initialize courseEnrollments
+    let courseEnrollments = {}
     Object.keys(activityCourses).map(id =>
-      selectedCourses[id] = false
+      courseEnrollments[id] = false
     )
 
-    this.setState({ activityCourses, selectedCourses })
+    this.setState({ activityCourses, courseEnrollments })
   }
 
   getSortedActivityCoursesArray() {
@@ -40,9 +40,8 @@ class CampRegistrationForm extends React.Component {
     return array.sort(Utils.compare);
   }
 
-  getSelectedCoursesArray() {
-    const array = Object.keys(_.pickBy(this.state.selectedCourses, value => value))
-
+  getCourseEnrollmentsArray() {
+    const array = Object.keys(_.pickBy(this.state.courseEnrollments, value => value))
     return array
   }
 
@@ -53,6 +52,10 @@ class CampRegistrationForm extends React.Component {
     }));
 
     return array.sort(Utils.compare);
+  }
+
+  getMatchedRuleID() {
+    return Object.keys(_.pickBy(this.state.courseEnrollments, value => value)).sort().join("--");
   }
 
   calOriginalAmount(ids) {
@@ -66,18 +69,18 @@ class CampRegistrationForm extends React.Component {
   }
 
   isMatched(ruleID) {
-    const id = Object.keys(_.pickBy(this.state.selectedCourses, value => value)).sort().join("--");
+    const id = this.getMatchedRuleID();
 
     return id === ruleID
   }
 
   handleClickActivityCourse(id, isClicked) {
-    const selectedCourses = {
-      ...this.state.selectedCourses,
+    const courseEnrollments = {
+      ...this.state.courseEnrollments,
       [id]: isClicked
     }
 
-    this.setState({ selectedCourses })
+    this.setState({ courseEnrollments })
   }
 
   render() {
@@ -147,10 +150,17 @@ class CampRegistrationForm extends React.Component {
         </div>
 
         <input
-          hidden
           readOnly
-          value={JSON.stringify(this.getSelectedCoursesArray())}
-          name="order[selected_courses]"
+          hidden
+          value={JSON.stringify(this.getCourseEnrollmentsArray())}
+          name="order[course_enrollments]"
+        />
+
+        <input
+          readOnly
+          hidden
+          value={this.getMatchedRuleID()}
+          name="order[rule_id]"
         />
       </div>
     );
