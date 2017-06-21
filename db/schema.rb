@@ -43,18 +43,17 @@ ActiveRecord::Schema.define(version: 20170620073446) do
     t.index ["course_id"], name: "index_activities_courses_on_course_id", using: :btree
   end
 
+  create_table "activities_courses_deprecated", force: :cascade do |t|
+    t.integer "activity_id"
+    t.integer "course_id"
+    t.index ["activity_id"], name: "index_activities_courses_deprecated_on_activity_id", using: :btree
+    t.index ["course_id"], name: "index_activities_courses_deprecated_on_course_id", using: :btree
+  end
+
   create_table "authors", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "camp_settings", force: :cascade do |t|
-    t.json     "payload"
-    t.string   "status"
-    t.string   "lang"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "camp_templates", force: :cascade do |t|
@@ -322,6 +321,8 @@ ActiveRecord::Schema.define(version: 20170620073446) do
   add_foreign_key "activities", "surveys"
   add_foreign_key "activities_courses", "activities"
   add_foreign_key "activities_courses", "courses"
+  add_foreign_key "activities_courses_deprecated", "activities"
+  add_foreign_key "activities_courses_deprecated", "courses"
   add_foreign_key "orders", "users"
   add_foreign_key "payments", "orders"
   add_foreign_key "payments", "users"

@@ -28,7 +28,7 @@ module DynamicFormForSurveyService
 
           # set validations
           validates value[:name].to_sym, presence: true if value[:required]
-          validates value[:name].to_sym, inclusion: { in: value[:collection] } if %w[radio_buttons select].include?(value[:as])
+          validates value[:name].to_sym, inclusion: { in: value[:collection] } if %w[check_boxes radio_buttons select].include?(value[:as])
           validates value[:name].to_sym, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/ , message: I18n.t('errors.messages.not_correct_email_format') } if %w[email].include?(value[:as])
         end
       end
