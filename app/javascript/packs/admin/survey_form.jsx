@@ -22,35 +22,7 @@ class SurveyFormQuestionsFields extends React.Component {
     super(props);
 
     this.state = {
-      questions: {
-        "e7451554-15cc-4507-a170-1f06716ad83b": {
-          "as": "string",
-          "name": "string_0",
-          "required": true,
-          "multiple": false,
-          "label": "hihihihihihihihihihi",
-          "priority": 0,
-          "collection": []
-        },
-        "e18669d5-0b2f-4ea6-b645-2c2824a95855": {
-          "as": "email",
-          "name": "email_0",
-          "required": true,
-          "multiple": false,
-          "label": "your email",
-          "priority": 1,
-          "collection": []
-        },
-        "e7451554-123d-4507-a170-1f06716ad83b": {
-          "as": "check_boxes",
-          "name": "check_boxes_0",
-          "required": true,
-          "multiple": true,
-          "label": "skdfkshdfk",
-          "priority": 2,
-          "collection": ["heyheyhehy", "yoyoyoy", "blablabla"]
-        },
-      }
+      questions: {}
     }
 
     this.getSortedQuestionsArray = this.getSortedQuestionsArray.bind(this);
@@ -179,8 +151,6 @@ class SurveyFormQuestionsFields extends React.Component {
         <input
           name="admin_survey[questions]"
           type="textarea"
-          readOnly
-          hidden
           value={JSON.stringify(this.state.questions)}
         />
       </div>

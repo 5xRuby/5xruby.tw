@@ -246,7 +246,7 @@ ActiveRecord::Schema.define(version: 20170620073446) do
     t.string   "title"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
-    t.jsonb    "questions",  default: {}, null: false
+    t.jsonb    "questions",  default: {}
     t.index ["questions"], name: "index_surveys_on_questions", using: :gin
   end
 
