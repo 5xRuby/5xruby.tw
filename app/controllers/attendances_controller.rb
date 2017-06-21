@@ -30,8 +30,9 @@ class AttendancesController < ApplicationController
   end
 
   def whitelisted
-    JSON.parse(current_activity.survey.questions).map do |q|
-      q['as'] != 'check_boxes' ? q['name'].to_sym : { q['name'].to_sym => [] }
+    current_activity.survey.questions.map do |key, value|
+      return value[:name].to_sym if value[:as] != 'check_boxes'
+      { q[:name].to_sym => [] }
     end
   end
 

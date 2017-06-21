@@ -14,7 +14,7 @@ module DynamicFormForSurveyService
 
     def generate
       @survey = @klass.new
-      @survey.questions = JSON.parse(@activity.survey.questions).map { |key, value| [key, value.symbolize_keys] }.to_h
+      @survey.questions = @activity.survey.questions
       @survey.activity = @activity
       @survey.questions.each do |key, value|
         @survey.class.class_eval do
@@ -23,7 +23,7 @@ module DynamicFormForSurveyService
 
           # set callbacks
           before_validation do
-            self.send("#{value[:name]}=", self.send(value[:name]) & value[:collection])
+            self.send("#{value[:name]}=", (self.send(value[:name]) || []) & value[:collection])
           end if value[:as] == 'check_boxes'
 
           # set validations
