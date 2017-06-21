@@ -232,8 +232,7 @@ class ActivityFormCourseFields extends React.Component {
         sort().
         join("--")
       result[uuid] = {
-        ...el,
-        selectedActivityCourseIDs: undefined
+        ...el
       }
       return result
     }, {})

@@ -117,7 +117,7 @@ export default class RuleTr extends React.Component {
       el = _.difference(oldVals, vals).pop()
       newVals.splice(oldVals.indexOf(el), 1)
     }
-    callback( { selectedCourses: newVals } );
+    callback( { selectedActivityCourseIDs: newVals } );
   }
 }
 

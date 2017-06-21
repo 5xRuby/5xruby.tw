@@ -12,6 +12,7 @@ class Activity < ApplicationRecord
   # Attributes related macros
   permalinkable :title
   patch :activity_courses
+  serialize :rules, HashSerializer
   delegate :payload, to: :template, allow_nil: true
 
   # association macros
@@ -45,6 +46,10 @@ class Activity < ApplicationRecord
 
   def specialized
     becomes(type.constantize)
+  end
+
+  def rules_to_json
+    self.rules.to_json
   end
 
   protected

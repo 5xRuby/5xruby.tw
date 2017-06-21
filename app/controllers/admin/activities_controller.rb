@@ -44,9 +44,11 @@ class Admin::ActivitiesController < AdminController
 
   def allowed_params
     params.require(:admin_activity).permit(
-      :type, :title, :permalink, :note, :rules,
+      :type, :title, :permalink, :note,
       :payment_note, :is_online, :template_id, :survey_id,
-      activity_courses_attributes: [:id, :course_id, :price, :priority, :_destroy])
+      activity_courses_attributes: [:id, :course_id, :price, :priority, :_destroy]).tap do |whitelist|
+        whitelist[:rules] = JSON.parse(params[:admin_activity][:rules])
+      end
   end
 
   def set_type

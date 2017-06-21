@@ -15,7 +15,7 @@
     data: {
       'activity-courses': current_object.activity_courses,
       'course-select-options': Course.all_with_humanized_name,
-      'rules': current_object.rules.presence || {}
+      'rules': current_object.rules_to_json.presence || {}
     })%>
   <hr>
   <div class='form-actions'>
