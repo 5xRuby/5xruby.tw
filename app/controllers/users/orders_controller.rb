@@ -9,9 +9,11 @@ module Users
         course_enrollments: allowed_params[:course_enrollments],
         rule_id: allowed_params[:rule_id]
       )
-
-      return redirect_to camp_path unless @order.save
-      redirect_to root_path
+      if @order.save
+        redirect_to root_path
+      else
+        redirect_to camp_path, flash: { alert: @order.errors.full_messages }
+      end
     end
 
     private

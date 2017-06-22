@@ -37,6 +37,7 @@ class Order < ApplicationRecord
 
   # validation macros
   validates :amount, numericality: { greater_than_or_equal_to: 0 }
+  validate :number_of_course_enrollments, on: :create
 
   # callbacks
 
@@ -44,4 +45,8 @@ class Order < ApplicationRecord
 
   protected
   # callback methods
+  def number_of_course_enrollments
+    return unless course_enrollments.size.zero?
+    errors.add(:course_enrollments, :no_course_enrollments_in_camp_registration)
+  end
 end
