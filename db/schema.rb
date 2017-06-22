@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170620073446) do
+ActiveRecord::Schema.define(version: 20170622081204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -161,12 +161,13 @@ ActiveRecord::Schema.define(version: 20170620073446) do
   create_table "orders", force: :cascade do |t|
     t.string   "state"
     t.decimal  "amount",      precision: 31, scale: 1
-    t.json     "fields"
+    t.jsonb    "ans",                                  default: {}
     t.integer  "user_id"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
     t.integer  "activity_id"
     t.index ["activity_id"], name: "index_orders_on_activity_id", using: :btree
+    t.index ["ans"], name: "index_orders_on_ans", using: :gin
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
