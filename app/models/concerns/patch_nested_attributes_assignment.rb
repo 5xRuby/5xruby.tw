@@ -14,18 +14,22 @@ module PatchNestedAttributesAssignment
         foreign_key ||= [self.class.to_s.split("::").reject{|s| s == "Admin"}.map(&:downcase), "id"].join("_").to_sym
 
         if association_name == attribute_name && attributes_collection.is_a?(Hash)
-          attributes_collection.each_pair do |key, value|
+          attributes_collection = attributes_collection.each_with_object({}) do |(key, value), hash|
             resource = class_name.find_by(id: value['id'])
-            next if resource.present? && resource.send(foreign_key).present?
 
-            if resource.present?
-              send(attribute_name).send(:<<, resource)
-            else
-              new_resource = class_name.new(value)
-              new_resource.send(:"#{foreign_key}=", id)
-              new_resource.save!
-              send(attribute_name).send(:<<, new_resource)
+            unless resource.present? && resource.send(foreign_key).present?
+              if resource.present?
+                send(attribute_name).send(:<<, resource)
+              else
+                hash[key] = value.except(:id) and next if value[:_destroy].present?
+                new_resource = class_name.new(value)
+                new_resource.send(:"#{foreign_key}=", id)
+                new_resource.save!
+                send(attribute_name).send(:<<, new_resource)
+              end
             end
+
+            hash[key] = value
           end
         end
 
