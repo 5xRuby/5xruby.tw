@@ -4,8 +4,9 @@ module OrderService
       @order = order
       @order.user_id = user_id
       @order.activity_id = activity_id
+
       assign_course_enrollments(course_enrollments)
-      assign_amount(rule_id)
+      assign_amount(rule_id, course_enrollments)
 
       @order
     end
@@ -20,9 +21,18 @@ module OrderService
       end
     end
 
-    def assign_amount(rule_id)
-      rule = JSON.parse(@order.activity.rules)[rule_id].symbolize_keys
-      @order.amount = rule.present? ? rule[:price] : @selected_activity_courses.map(&:price).sum
+    def assign_amount(rule_id, course_enrollments)
+      rule = @order.activity.rules[rule_id]
+      rule_courses = rule.present? ? rule[:selectedActivityCourseIDs] : []
+      free_courses = rule.present? ? rule[:freeActivityCourseIDs] : []
+      extra_courses = course_enrollments - rule_courses - free_courses
+
+      extra_price = @selected_activity_courses.where(id: extra_courses).sum(&:price)
+      @order.amount = if rule
+                        rule[:price] + extra_price
+                      else
+                        extra_price
+                      end
     end
   end
 end
