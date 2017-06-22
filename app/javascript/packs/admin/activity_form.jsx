@@ -96,6 +96,7 @@ class ActivityFormCourseFields extends React.Component {
         <input
           name="admin_activity[rules]"
           hidden
+          readOnly
           type="textarea"
           value={JSON.stringify(this.getActivityRuleInputValue())}
         />
@@ -179,6 +180,7 @@ class ActivityFormCourseFields extends React.Component {
       ...this.state.rules,
       [id]: {
         selectedActivityCourseIDs: [],
+        freeActivityCourseIDs: [],
         priority,
         price: 10000,
         early_bird_price: 10000

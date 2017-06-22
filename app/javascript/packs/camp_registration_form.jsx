@@ -19,6 +19,7 @@ class CampRegistrationForm extends React.Component {
   componentWillMount() {
     // map activityCourses
     let activityCourses = Object.assign({}, this.props.activityCourses)
+
     Object.keys(activityCourses).map((key, i) =>
       activityCourses[key] = {
         ...activityCourses[key],
@@ -55,10 +56,46 @@ class CampRegistrationForm extends React.Component {
   }
 
   getMatchedRuleID() {
-    return Object.keys(_.pickBy(this.state.courseEnrollments, value => value)).sort().join("--");
+    const courseEnrollments = this.getCourseEnrollmentsArray();
+    const qualifiedRules = Object.keys(this.state.rules).
+      filter(ruleID => ruleID.split("--").every(id => courseEnrollments.indexOf(id) > -1))
+
+    if (qualifiedRules.length == 0) {
+      return '';
+    } else if (qualifiedRules.length == 1) {
+      return qualifiedRules[0];
+    } else {
+      let discount = 0;
+
+      return qualifiedRules.reduce((id, ruleID) => {
+        const rule = this.state.rules[ruleID];
+        const specialPriceRulePart = rule['price'];
+        const specialPriceExtraPart = this.calOriginalPrice(
+          courseEnrollments.
+            filter(id => rule['selectedActivityCourseIDs'].indexOf(id) < 0).
+            filter(id => rule['freeActivityCourseIDs'].indexOf(id) < 0)
+        )
+        const specialPrice = specialPriceRulePart + specialPriceExtraPart;
+        const originalPrice = this.calOriginalPrice(courseEnrollments);
+        const currentDiscount = originalPrice - specialPrice;
+
+        if (currentDiscount > discount) {
+          discount = currentDiscount;
+          return ruleID;
+        } else if (currentDiscount == discount) {
+          if (!id) {
+            return ruleID;
+          } else {
+            return ruleID.split("--").length > id.split("--").length ? ruleID : id
+          }
+        } else {
+          return id;
+        }
+      }, '');
+    }
   }
 
-  calOriginalAmount(ids) {
+  calOriginalPrice(ids) {
     return _.reduce(this.state.activityCourses, (sum, value, key) => {
       if (_.includes(ids, key)) {
         return sum + parseInt(value.price)
@@ -68,10 +105,23 @@ class CampRegistrationForm extends React.Component {
     }, 0)
   }
 
-  isMatched(ruleID) {
-    const id = this.getMatchedRuleID();
+  calTotalPrice() {
+    const matchedID = this.getMatchedRuleID();
+    const rule = this.state.rules[matchedID];
+    const courseEnrollments = this.getCourseEnrollmentsArray();
 
-    return id === ruleID
+    if (matchedID) {
+      const rulePriceExtraPart = this.calOriginalPrice(
+        courseEnrollments.
+          filter(id => rule['selectedActivityCourseIDs'].indexOf(id) < 0).
+          filter(id => rule['freeActivityCourseIDs'].indexOf(id) < 0)
+      );
+      const rulePrice = rule['price'];
+
+      return rulePrice + rulePriceExtraPart;
+    } else {
+      return this.calOriginalPrice(courseEnrollments);
+    }
   }
 
   handleClickActivityCourse(id, isClicked) {
@@ -125,14 +175,14 @@ class CampRegistrationForm extends React.Component {
             {rulesArray.map(item => (
               <li
                 key={item.id}
-                className={this.isMatched(item.id) ? "bingo" : undefined}
+                className={item.id == this.getMatchedRuleID() ? "bingo" : undefined}
               >
                 <div className="col-xs-8 col-md-8">
                   {item.writing}
                 </div>
 
                 <div className="col-xs-2 col-md-2">
-                  原價 {this.calOriginalAmount(item.selectedCourses)}
+                  原價 {this.calOriginalPrice(item.selectedActivityCourseIDs)}
                 </div>
 
                 <div className="col-xs-2 col-md-2">
@@ -146,7 +196,7 @@ class CampRegistrationForm extends React.Component {
         </div>
 
         <div className="total-price">
-          <h3>共計 <span className="price">0 元</span></h3>
+          <h3>共計 <span className="price">{this.calTotalPrice()} 元</span></h3>
         </div>
 
         <input
@@ -157,8 +207,8 @@ class CampRegistrationForm extends React.Component {
         />
 
         <input
-          readOnly
           hidden
+          readOnly
           value={this.getMatchedRuleID()}
           name="order[rule_id]"
         />
