@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Activity, type: :model do
+  include_examples "permalinkable"
+
+  it { is_expected.to delegate_method(:payload).to(:template) }
   it { is_expected.to have_and_belong_to_many(:courses) }
   it { is_expected.to belong_to(:template) }
   it { is_expected.to have_many(:translations) }

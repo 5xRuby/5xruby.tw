@@ -18,7 +18,7 @@ RSpec.describe Order, type: :model do
 
       it "return error, at least one course enrollment" do
         expect(subject).to be_invalid
-        expect(subject.errors[:course_enrollments]).not be_nil
+        expect(subject.errors[:course_enrollments]).not_to be_nil
       end
     end
   end
