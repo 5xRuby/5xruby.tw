@@ -6,7 +6,10 @@ class JsonFormDataInput < SimpleForm::Inputs::Base
     json_form_data.each do |key, value|
       input_options = value.clone
       name = input_options.delete(:name)
-      out << @builder.input(name, input_options)
+
+      input_options.merge!(checked: object.send(name)) if value[:as] == 'radio_buttons'
+      input_options.merge!(selected: object.send(name)) if value[:as] == 'check_boxes'
+      out << @builder.input(name, input_options.symbolize_keys)
     end
 
     out
