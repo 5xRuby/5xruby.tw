@@ -5,6 +5,7 @@ module OrderService
       @order.user_id = user_id
       @order.activity_id = activity_id
 
+      assign_serial
       assign_course_enrollments(course_enrollments)
       assign_amount(rule_id, course_enrollments)
 
@@ -12,6 +13,15 @@ module OrderService
     end
 
     private
+
+    def assign_serial
+      head = "RU"
+      time = Time.zone.now.strftime("%Y%m%d")
+      tail = ((Order.last&.id || 0) + 1).to_s.rjust(4, "0")
+      check_number = ((time+tail).to_i % 10).to_s
+
+      @order.serial = head + time + tail + check_number
+    end
 
     def assign_course_enrollments(course_enrollments)
       @selected_activity_courses = ActivityCourse.where(id: course_enrollments)

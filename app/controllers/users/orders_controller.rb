@@ -10,7 +10,7 @@ module Users
         rule_id: allowed_params[:rule_id]
       )
       if @order.save
-        redirect_to root_path
+        redirect_to new_attendance_path(serial: @order.serial)
       else
         redirect_to camp_path, flash: { alert: @order.errors.full_messages }
       end
