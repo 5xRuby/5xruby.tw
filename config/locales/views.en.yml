@@ -1,9 +1,4 @@
 en:
-  attendances:
-    new:
-      title: Survey
-    form:
-      submit: Submit
   breadcrumb:
     home: Home
     talks: Lectures
@@ -189,6 +184,11 @@ en:
           title: Change Password
         form:
           edit_password: Submit
+    attendances:
+      new:
+        title: Survey
+      form:
+        submit: Submit
 
   shared:
     profile_sidebar:

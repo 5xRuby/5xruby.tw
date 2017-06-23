@@ -77,6 +77,7 @@ class User < ApplicationRecord
 
   # association macros
   has_many :omniauths
+  has_many :orders
 
   # validation macros
   validates :name, :phone, presence: true

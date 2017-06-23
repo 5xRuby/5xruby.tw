@@ -16,7 +16,6 @@ Rails.application.routes.draw do
     resources :contacts, only: :create
     resources :showcases, only: :index
     resource :camp, only: :show
-    resource :attendance, only: %i[new create]
     resources :redactor_images, only: :create
     post 'rental/calculate'
 
@@ -39,6 +38,7 @@ Rails.application.routes.draw do
         end
 
         resources :orders, except: :new
+        resource :attendance, only: %i[new create]
       end
     end
   end

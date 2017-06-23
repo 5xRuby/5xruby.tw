@@ -34,6 +34,7 @@ class Order < ApplicationRecord
   has_many :enrolling_courses, through: :activity_courses, source: :course
 
   delegate :survey, to: :activity
+  delegate :questions, to: :survey
 
   # validation macros
   validates :amount, numericality: { greater_than_or_equal_to: 0 }

@@ -1,9 +1,4 @@
 ja:
-  attendances:
-    new:
-      title: title # TODO: change it to japanese
-    form:
-      submit: 送信
   breadcrumb:
     home: ホーム
     talks: 講座
@@ -190,6 +185,11 @@ ja:
           title: 修改密碼
         form:
           edit_password: 送出
+    attendances:
+      new:
+        title: title # TODO: change it to japanese
+      form:
+        submit: 送信
 
   shared: # TODO: need to translate to jp
     profile_sidebar:
