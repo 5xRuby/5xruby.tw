@@ -11,6 +11,7 @@ zh-TW:
       camp_needs_template: 衝刺班需要模板
       not_correct_email_format: '無效 Email'
       no_course_enrollments_in_camp_registration: 報名衝刺班時至少要選一門講座
+      not_valid_process: 無效操作
   activemodel:
     attributes:
       contact:

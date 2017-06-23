@@ -10,6 +10,8 @@ ja:
       talk_has_been_existed: 該講座已經開設課程了
       camp_needs_template: 衝刺班需要模板
       not_correct_email_format: '無效 Email'
+      no_course_enrollments_in_camp_registration: Select at least one course while registering for a boot camp
+      not_valid_process: Invalid process # TODO: translate
   activemodel:
     attributes:
       contact:

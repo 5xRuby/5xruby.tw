@@ -10,6 +10,8 @@ en:
       talk_has_been_existed: There's already existed a talk including the course you selected
       camp_needs_template: Camp needs a template
       not_correct_email_format: Invalid Email
+      no_course_enrollments_in_camp_registration: Select at least one course while registering for a boot camp
+      not_valid_process: Invalid process
   activemodel:
     attributes:
       contact:
