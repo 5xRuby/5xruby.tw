@@ -1,7 +1,7 @@
 <%= simple_form_for(current_object) do |f| %>
   <div class="form-inputs">
     <%= f.input :title %>
-    <%= f.input :json, as: :json %>
+    <%= f.input :payload, as: :json %>
   </div>
   <div class="form-actions">
     <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
