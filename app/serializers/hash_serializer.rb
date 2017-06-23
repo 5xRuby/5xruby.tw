@@ -4,6 +4,6 @@ class HashSerializer
   end
 
   def self.load(hash)
-    (hash || {}).with_indifferent_access
+    (hash.presence || {}).with_indifferent_access
   end
 end

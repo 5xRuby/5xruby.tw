@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :survey do
     title { Faker::Name.title }
-    questions { {} }
+    questions { Hash.new }
   end
 end
