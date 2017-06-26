@@ -58,11 +58,15 @@ $ () ->
   vex.defaultOptions.className = 'vex-theme-plain'
   $('.vex-dialog-opener').each (i, opener) ->
     $(opener).click ->
-      vex.dialog.alert
+      vexContent = vex.dialog.alert
         message: $($(this).data('target')).html()
       setTimeout ->
         $('.vex').scrollTo(0, 600, {interrupt: true})
       , 300
+      $('.vex').click ->
+        vex.close(vexContent.data().vex.id)
+      $('.vex-content').click (e) ->
+        e.stopPropagation()
 
   $('.dropdown-toggle').dropdown()
 
