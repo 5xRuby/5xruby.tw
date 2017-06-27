@@ -11,7 +11,7 @@ const RuleFields = ({rulesArray, activityCoursesArray, onChangeObject, onRemove,
           <th>講座組合</th>
           <th>行銷文字</th>
           <th>價格</th>
-          <th>早鳥優惠</th>
+          <th>免費講座</th>
           <th></th>
         </tr>
       </thead>

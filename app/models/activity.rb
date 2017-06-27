@@ -5,11 +5,14 @@ class Activity < ApplicationRecord
 
   # Concerns macros
   include Permalinkable
+  include PatchNestedAttributesAssignment
 
   # Constants
 
   # Attributes related macros
   permalinkable :title
+  patch :activity_courses
+  serialize :rules, HashSerializer
   delegate :payload, to: :template, allow_nil: true
 
   # association macros
@@ -18,17 +21,14 @@ class Activity < ApplicationRecord
   belongs_to :survey, required: false
   has_many :translations, as: :translatable
   has_many :activity_courses
-  has_many :orders, as: :purchasable
+  has_many :orders
   accepts_nested_attributes_for :activity_courses, allow_destroy: true
 
   # validation macros
   validates :type, :title, :permalink, :note, :payment_note, presence: true
   validates :type, inclusion: { in: %w(Activity::Camp Activity::Talk) }
-  validate :validate_courses_number
-  validate :validate_courses_uniqueness
-  validate :validate_template
+  validate :validate_courses_number, :validate_courses_uniqueness, :validate_template, :validate_uniqueness_of_course
   validates :permalink, uniqueness: true
-  validate :validate_uniqueness_of_course
   validates :is_online, inclusion: { in: [ true, false ] }
   validates_format_of :permalink, with: /\A\w[-|\w|\d]+\z/
 
@@ -46,6 +46,10 @@ class Activity < ApplicationRecord
 
   def specialized
     becomes(type.constantize)
+  end
+
+  def rules_to_json
+    self.rules.to_json
   end
 
   protected
@@ -92,28 +96,5 @@ class Activity < ApplicationRecord
   def set_title_if_needed
     return if is_camp? || activity_courses.size == 0
     self[:title] = activity_courses.first.course.title
-  end
-
-  private
-
-  # Patch to allow creating nested activity_courses with predefined id
-  def assign_nested_attributes_for_collection_association(association_name, attributes_collection)
-    if association_name == :activity_courses && attributes_collection.is_a?(Hash)
-      attributes_collection.each_pair do |key, value|
-        activity_course = ActivityCourse.find_by(id: value['id'])
-        next if activity_course.present? && activity_course.activity_id.present?
-
-        if activity_course.present?
-          activity_courses << activity_course
-        else
-          new_activity_course = ActivityCourse.new(value)
-          new_activity_course.activity_id = id
-          new_activity_course.save!
-          activity_courses << new_activity_course
-        end
-      end
-    end
-
-    super
   end
 end

@@ -1,9 +1,4 @@
 en:
-  attendances:
-    new:
-      title: Survey
-    form:
-      submit: Submit
   breadcrumb:
     home: Home
     talks: Lectures
@@ -80,6 +75,8 @@ en:
     notice:
       payment_note: 'Payment:'
       note: 'Notes:'
+    form:
+      submit: Next step
 
   pages:
     index:
@@ -187,6 +184,11 @@ en:
           title: Change Password
         form:
           edit_password: Submit
+    attendances:
+      new:
+        title: Survey
+      form:
+        submit: Submit
 
   shared:
     profile_sidebar:

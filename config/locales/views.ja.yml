@@ -1,9 +1,4 @@
 ja:
-  attendances:
-    new:
-      title: title # TODO: change it to japanese
-    form:
-      submit: 送信
   breadcrumb:
     home: ホーム
     talks: 講座
@@ -80,6 +75,8 @@ ja:
     notice:
       payment_note: '支払い方法:'
       note: 'ノート:'
+    form:
+      submit: 下一步 # TODO: translate it to jp
 
   pages:
     index:
@@ -177,7 +174,7 @@ ja:
       showcases: 制作事例
       training: トレーニング
       news: ニュース
-      logout: Logout
+      logout: Logout # TODO: translate it to jp
       hello_user: Hello, %{name}
       your_account: Your Account
 
@@ -188,6 +185,11 @@ ja:
           title: 修改密碼
         form:
           edit_password: 送出
+    attendances:
+      new:
+        title: title # TODO: change it to japanese
+      form:
+        submit: 送信
 
   shared: # TODO: need to translate to jp
     profile_sidebar:

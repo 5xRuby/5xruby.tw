@@ -112,4 +112,9 @@ module ApplicationHelper
     options[:class] = "#{options[:class]} #{active_class}" if current_page?(path)
     link_to(text, path, options)
   end
+
+  def translate_record record, attribute
+    record.translations.find{ |t| t.column == attribute.to_s && t.locale == I18n.locale.to_s }.try(:text).presence || record.send(attribute)
+  end
+  alias :tr :translate_record
 end

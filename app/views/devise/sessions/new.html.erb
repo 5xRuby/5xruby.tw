@@ -25,13 +25,13 @@
             <span>OR</span>
           </div>
           <div class="social-login">
-            <%= link_to user_google_oauth2_omniauth_authorize_path, class: 'btn btn-block btn-google-login bottom-spacing' do %>
+            <%= link_to localized_omniauth_path(:google_oauth2), class: 'btn btn-block btn-google-login bottom-spacing' do %>
               <strong><i class="fa fa-google" aria-hidden="true"></i>&nbsp;&nbsp;<%= t('.login_with.google') %></strong>
             <% end %>
-            <%= link_to user_facebook_omniauth_authorize_path, class: 'btn btn-block btn-fb-login bottom-spacing' do %>
+            <%= link_to localized_omniauth_path(:facebook), class: 'btn btn-block btn-fb-login bottom-spacing' do %>
               <strong><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;<%= t('.login_with.facebook') %></strong>
             <% end %>
-            <%= link_to user_github_omniauth_authorize_path, class: 'btn btn-block btn-github-login bottom-spacing' do %>
+            <%= link_to localized_omniauth_path(:github), class: 'btn btn-block btn-github-login bottom-spacing' do %>
               <strong><i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;<%= t('.login_with.github') %></strong>
             <% end %>
           </div>

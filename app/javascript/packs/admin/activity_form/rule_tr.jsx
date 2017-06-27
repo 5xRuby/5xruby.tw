@@ -7,7 +7,7 @@ export default class RuleTr extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleSelectValues = this.handleSelectValues.bind(this);
+    this.handleSelectedActivityCourses = this.handleSelectedActivityCourses.bind(this);
   }
 
   render() {
@@ -23,8 +23,12 @@ export default class RuleTr extends React.Component {
       value: activityCourse.id
     }));
 
-    const value = activityCoursesArray.filter(o => {
+    const selectedActivityCourseIDs = activityCoursesArray.filter(o => {
       return !o._destroy && rule.selectedActivityCourseIDs.indexOf(o.id) >= 0
+    }).map(o => o.id)
+
+    const freeActivityCourseIDs = activityCoursesArray.filter(o => {
+      return !o._destroy && rule.freeActivityCourseIDs.indexOf(o.id) >= 0
     }).map(o => o.id)
 
     return (
@@ -39,11 +43,11 @@ export default class RuleTr extends React.Component {
             joinValues
             clearable
             delimiter=","
-            value={value}
+            value={selectedActivityCourseIDs}
             options={options}
             onChange={vals => {
               const newSelectedActivityCourseIDs = vals.split(",").filter(o => o)
-              this.handleSelectValues(rule.selectedActivityCourseIDs, newSelectedActivityCourseIDs, onChangeObject);
+              this.handleSelectedActivityCourses(rule.selectedActivityCourseIDs, newSelectedActivityCourseIDs, onChangeObject);
             }}
           />
         </td>
@@ -76,21 +80,19 @@ export default class RuleTr extends React.Component {
           </div>
         </td>
         <td className="col-md-2">
-          <div className="input-group">
-            <span className="input-group-addon">NT$</span>
-            <input
-              className="form-control"
-              type="number"
-              step="1"
-              min="0"
-              value={rule.early_bird_price}
-              onChange={(e) => {
-                if (onChangeObject) {
-                  onChangeObject({ early_bird_price: parseInt(e.target.value) });
-                }
-              }}
-            />
-          </div>
+          <Select
+            multi
+            simpleValue
+            joinValues
+            clearable
+            delimiter=","
+            value={freeActivityCourseIDs}
+            options={options}
+            onChange={vals => {
+              const newFreeActivityCourseIDs = vals.split(",").filter(o => o)
+              this.handleFreeActivityCourses(rule.freeActivityCourseIDs, newFreeActivityCourseIDs, onChangeObject);
+            }}
+          />
         </td>
         <td className="col-md-1">
           <a
@@ -106,7 +108,7 @@ export default class RuleTr extends React.Component {
     );
   }
 
-  handleSelectValues(oldVals, vals, callback) {
+  handleSelectedActivityCourses(oldVals, vals, callback) {
     let el;
     let newVals = oldVals;
 
@@ -117,7 +119,21 @@ export default class RuleTr extends React.Component {
       el = _.difference(oldVals, vals).pop()
       newVals.splice(oldVals.indexOf(el), 1)
     }
-    callback( { newVals } );
+    callback( { selectedActivityCourseIDs: newVals } );
+  }
+
+  handleFreeActivityCourses(oldVals, vals, callback) {
+    let el;
+    let newVals = oldVals;
+
+    if(oldVals.length < vals.length) {
+      el = _.difference(vals, oldVals).pop()
+      newVals.push(el)
+    } else {
+      el = _.difference(oldVals, vals).pop()
+      newVals.splice(oldVals.indexOf(el), 1)
+    }
+    callback( { freeActivityCourseIDs: newVals } );
   }
 }
 

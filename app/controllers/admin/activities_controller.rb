@@ -12,6 +12,7 @@ class Admin::ActivitiesController < AdminController
   end
 
   def show
+    @admin_courses = current_object.courses.includes(:stages)
   end
 
   def new
@@ -25,6 +26,8 @@ class Admin::ActivitiesController < AdminController
   def preview
     if (activity = current_model.find_by(permalink: params[:activity_id])&.specialized) && activity.template
       @camp = activity
+      @courses = @camp.courses.includes(:translations, { speakers: [:translations] }, { stages: [:translations] } )
+      @order = @camp.orders.new
       render 'camps/show', layout: 'application'
     else
       @talk = activity
@@ -41,9 +44,11 @@ class Admin::ActivitiesController < AdminController
 
   def allowed_params
     params.require(:admin_activity).permit(
-      :type, :title, :permalink, :note, :rules,
-      :payment_note, :is_online, :template_id, :form_id,
-      activity_courses_attributes: [:id, :course_id, :price, :priority, :_destroy])
+      :type, :title, :permalink, :note,
+      :payment_note, :is_online, :template_id, :survey_id,
+      activity_courses_attributes: [:id, :course_id, :price, :priority, :_destroy]).tap do |whitelist|
+        whitelist[:rules] = JSON.parse(params[:admin_activity][:rules])
+      end
   end
 
   def set_type

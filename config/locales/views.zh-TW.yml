@@ -1,9 +1,4 @@
 zh-TW:
-  attendances:
-    new:
-      title: 表單
-    form:
-      submit: 送出
   breadcrumb:
     home: 首頁
     talks: 講座資訊
@@ -77,6 +72,9 @@ zh-TW:
       more_questions:
         - 若以上Q&A無法解答您的疑問，歡迎您透過
         - 與我們聯繫，或是直接來電洽詢。
+    form:
+      submit: 下一步
+
     notice:
       payment_note: 付款方式：
       note: 注意事項：
@@ -202,6 +200,11 @@ zh-TW:
           title: 修改密碼
         form:
           edit_password: 送出
+    attendances:
+      new:
+        title: 表單
+      form:
+        submit: 送出
 
   shared:
     profile_sidebar:

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
+import Utils from '../shared/utils';
 import ActivityCourseFields from './activity_form/activity_course_fields';
 import RuleFields from './activity_form/rule_fields';
 
@@ -30,7 +31,7 @@ class ActivityFormCourseFields extends React.Component {
 
     // Convert rule to an object
     const rules = _.reduce(this.props.rules, (obj, value, key) => {
-      const uuid = this.generateUUID();
+      const uuid = Utils.generateUUID();
       obj[uuid] = {
         ...value,
         selectedActivityCourseIDs: key.split("--")
@@ -95,16 +96,12 @@ class ActivityFormCourseFields extends React.Component {
         <input
           name="admin_activity[rules]"
           hidden
+          readOnly
           type="textarea"
           value={JSON.stringify(this.getActivityRuleInputValue())}
         />
       </div>
     );
-  }
-
-  generateUUID() {
-    const s4 = () => Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1)
-    return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
   }
 
   getSortedActivityCoursesArray() {
@@ -128,22 +125,12 @@ class ActivityFormCourseFields extends React.Component {
   }
 
   getSortedRulesArray() {
-    const compare = (a, b) => {
-      if (a.priority < b.priority) {
-        return -1;
-      } else if (b.priority < a.priority) {
-        return 1;
-      }
-
-      return 0;
-    }
-
     const rulesArray = Object.keys(this.state.rules).map(id => ({
       ...this.state.rules[id],
       id: id
     }));
 
-    return rulesArray.sort(compare);
+    return rulesArray.sort(Utils.compare);
   }
 
   handleActivityCourseChange(activityCourseID, newData) {
@@ -171,7 +158,7 @@ class ActivityFormCourseFields extends React.Component {
   }
 
   handleNewActivityCourse() {
-    const uuid = this.generateUUID();
+    const uuid = Utils.generateUUID();
     const priority = this.getSortedActivityCoursesArray().filter((o) => !o._destroy).length
     const activityCourses = {
       ...this.state.activityCourses,
@@ -187,12 +174,13 @@ class ActivityFormCourseFields extends React.Component {
   }
 
   handleNewRule() {
-    const id = this.generateUUID();
+    const id = Utils.generateUUID();
     const priority = this.getSortedRulesArray().length;
     const rules = {
       ...this.state.rules,
       [id]: {
         selectedActivityCourseIDs: [],
+        freeActivityCourseIDs: [],
         priority,
         price: 10000,
         early_bird_price: 10000
@@ -246,8 +234,7 @@ class ActivityFormCourseFields extends React.Component {
         sort().
         join("--")
       result[uuid] = {
-        ...el,
-        selectedActivityCourseIDs: undefined
+        ...el
       }
       return result
     }, {})

@@ -19,7 +19,7 @@
     <%= th_for Admin::Course, :id, :title, :start_on %>
   </thead>
   <tbody>
-    <% current_object.courses.each do |admin_course| %>
+    <% @admin_courses.each do |admin_course| %>
       <tr>
         <%= td_for admin_course, :id, [:title, ->(a){ link_to a.title, a}], :start_on %>
       </tr>

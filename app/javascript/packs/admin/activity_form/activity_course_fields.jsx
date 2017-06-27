@@ -44,9 +44,8 @@ const ActivityCourseFields = ({activityCoursesArray, courseSelectOptions, onChan
       />
     </table>
     <NewActivityCourseButton
-      hasActivityCourse={
-        isCamp || activityCoursesArray.length === 0
-      }
+      hasActivityCourse={isCamp || activityCoursesArray.length === 0}
+      onNew={onNew}
     />
   </div>
 );

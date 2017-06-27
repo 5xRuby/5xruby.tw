@@ -13,16 +13,5 @@ RSpec.describe User, type: :model do
         expect { User.from_omniauth(omniauth) }.to change { described_class.count }.by(0)
       end
     end
-
-    context "user doesn't exist in db" do
-      let(:omniauth) { FactoryGirl.create(:omniauth) }
-
-      it "create a new user" do
-        expect { User.from_omniauth(omniauth) }.to change { described_class.count }.by(1)
-        user = User.last
-        expect(user.email).to eq("test@test.com")
-        expect(user.name).to eq("super mario")
-      end
-    end
   end
 end

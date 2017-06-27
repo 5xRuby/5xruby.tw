@@ -2,7 +2,7 @@ class CampTemplate < ApplicationRecord
 
   def initialize(_ = {})
     super
-    self.payload ||= CampTemplateLoader.new
+    self.payload = self.payload.presence || CampTemplateLoader.new
   end
 
   # scope macros
@@ -12,13 +12,7 @@ class CampTemplate < ApplicationRecord
   # Constants
 
   # Attributes related macros
-  def json
-    self.payload.to_json
-  end
-
-  def json=(input)
-    self.payload = JSON.parse(input)
-  end
+  serialize :payload, HashSerializer
 
   # association macros
   has_many :camps, class_name: "Activity::Camp", foreign_key: :template_id
@@ -27,6 +21,7 @@ class CampTemplate < ApplicationRecord
   validates :title, presence: true
 
   # callbacks
+
   # other
 
   protected

@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170609062433) do
+ActiveRecord::Schema.define(version: 20170622082758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
+  enable_extension "btree_gin"
 
   create_table "activities", force: :cascade do |t|
     t.string   "type"
@@ -74,6 +75,13 @@ ActiveRecord::Schema.define(version: 20170609062433) do
     t.string   "permalink",                      null: false
     t.index ["name"], name: "index_categories_on_name", using: :btree
     t.index ["permalink"], name: "index_categories_on_permalink", unique: true, using: :btree
+  end
+
+  create_table "course_enrollments", force: :cascade do |t|
+    t.uuid    "activity_course_id"
+    t.integer "order_id"
+    t.index ["activity_course_id"], name: "index_course_enrollments_on_activity_course_id", using: :btree
+    t.index ["order_id"], name: "index_course_enrollments_on_order_id", using: :btree
   end
 
   create_table "courses", force: :cascade do |t|
@@ -151,15 +159,16 @@ ActiveRecord::Schema.define(version: 20170609062433) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string   "purchasable_type"
-    t.integer  "purchasable_id"
     t.string   "state"
-    t.decimal  "amount",           precision: 31, scale: 1
-    t.json     "fields"
+    t.decimal  "amount",      precision: 31, scale: 1
+    t.jsonb    "ans",                                  default: {}
     t.integer  "user_id"
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
-    t.index ["purchasable_type", "purchasable_id"], name: "index_orders_on_purchasable_type_and_purchasable_id", using: :btree
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.integer  "activity_id"
+    t.string   "serial",                               default: ""
+    t.index ["activity_id"], name: "index_orders_on_activity_id", using: :btree
+    t.index ["ans"], name: "index_orders_on_ans", using: :gin
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
@@ -237,9 +246,10 @@ ActiveRecord::Schema.define(version: 20170609062433) do
 
   create_table "surveys", force: :cascade do |t|
     t.string   "title"
-    t.json     "questions"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.jsonb    "questions",  default: {}
+    t.index ["questions"], name: "index_surveys_on_questions", using: :gin
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -275,7 +285,6 @@ ActiveRecord::Schema.define(version: 20170609062433) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 
