@@ -1,4 +1,7 @@
 class Admin::CampTemplatesController < AdminController
+  def index
+    @current_collection = current_collection.order(id: :desc)
+  end
 
   def new
     @current_object = current_model.new(payload: CampTemplateLoader.new.to_h)

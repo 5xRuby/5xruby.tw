@@ -19,10 +19,8 @@ module Users
     def save_survey
       @survey.assign_attributes(allowed_params)
       if @survey.save
-        byebug
         redirect_to root_path
       else
-        byebug
         render :new
       end
     end
