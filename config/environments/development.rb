@@ -30,6 +30,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = Settings.action_mailer.delivery_method
   config.action_mailer.default_options = Settings.action_mailer.default_options
   config.action_mailer.default_url_options = Settings.action_mailer.default_url_options
+  config.action_mailer.asset_host = "http://" + Settings.action_mailer.default_url_options.host
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

@@ -154,6 +154,13 @@ zh-TW:
         sign_up: 送出
         password_blank_is_ok: 如果不想更改密碼，留白即可
         current_password_required: 若要更改密碼，請輸入現有密碼
+    mailer:
+      reset_password_instructions:
+        title: 親愛的 五倍紅寶石 5xRuby 學員您好：
+        change_password: 請先點選下方連結以變更您的密碼
+        link: 連結
+        ignore: 若您沒有申請 五倍紅寶石 5xRuby 的學員帳號請您直接忽略此信
+        contact: 有任何使用上的問題歡迎直接來信或來電詢問
 
   layouts:
     footer:
