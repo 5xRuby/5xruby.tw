@@ -12,6 +12,7 @@ class ActivityCourse < ApplicationRecord
   belongs_to :activity, inverse_of: :activity_courses
   belongs_to :course
   has_many :course_enrollments, class_name: "Order::CourseEnrollment"
+  delegate :title, to: :course
 
   # validation macros
 
