@@ -189,6 +189,14 @@ en:
         title: Survey
       form:
         submit: Submit
+    payments:
+      new:
+        title: Please Select a Payment Method
+        warning: You haven't paid yet, please select a payment method below.
+    tappays:
+      new:
+        title: Please fill in your credit card number
+        submit: Submit
 
   shared:
     profile_sidebar:

@@ -12,6 +12,7 @@ en:
       not_correct_email_format: Invalid Email
       no_course_enrollments_in_camp_registration: Select at least one course while registering for a boot camp
       not_valid_process: Invalid process
+      order_unpaid: Order didn't establish, please try it again, or contact us
   activemodel:
     attributes:
       contact:
@@ -57,6 +58,7 @@ en:
       translation: Translation
       interview_question: Interview Question
       survey: Survey
+      order: Order
     attributes:
       post:
         publish_at: published at
