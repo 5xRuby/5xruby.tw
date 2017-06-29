@@ -1,7 +1,18 @@
 zh-TW:
   breadcrumb:
     home: 首頁
-    courses: 講座資訊
+    camps: 專業課程
+    camp_senior: 全方位衝刺班
+    courses: 講座活動
+    projects: 專案開發
+    training: 企業代訓
+    space: 空間租借
+    posts: 最新消息
+    about: 關於五倍紅寶石
+    press: 媒體報導
+    members: 團隊成員
+    contacts: 聯絡詢價
+    faq: 常見問題
   courses:
     index:
       all_courses: 所有講座
@@ -58,7 +69,7 @@ zh-TW:
         next_courses: 近期講座
         more_talks: ...更多講座
       showcases:
-        title: 案例作品 Showcases
+        title: 案例作品 Showcase
         more: ...更多案例
       know_more:
         title: 想更瞭解我們嗎？
@@ -133,7 +144,7 @@ zh-TW:
     nav:
       login: 學員登入
       camp: 全方位衝刺班
-      course: 講座/活動
+      course: 講座活動
       showcases: 專案開發
       training: 企業代訓
       space: 空間租借

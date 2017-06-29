@@ -1,8 +1,17 @@
 
 <!-- Start Main Banner -->
-<div class="container-fluid">
-  <div class="row">
-    <%= image_set_tag_from_translation_config t('site.lectures_main_banner'), width: "100%" %>
+<div class="top-banner talks-top-banner red-bg both-padding-lg medium">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 top-spacing-sm text-right">
+        <%= fb_share_btn %>
+      </div>
+      <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
+        <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.courses') %></small>
+        <h1 class="title top-padding-lg"><%= t('site.talks_main_banner.title') %></h1>
+        <p class="line-height"><%= t('site.talks_main_banner.subtitle') %></p>
+      </div>
+    </div>
   </div>
 </div>
 <!-- End Main Banner -->
@@ -50,9 +59,9 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
-        <h3 class="text-center both-spacing-lg"><span><%= t('.speakers') %></span></h3>
+        <h3 class="title text-center both-spacing-lg"><span><%= t('.speakers') %></span></h3>
         <%= render partial: 'shared/carousel', locals: {
-          items: @speakers.map do |s| 
+          items: @speakers.map do |s|
             {
               type: 'speaker',
               avatar: s.avatar.thumb,

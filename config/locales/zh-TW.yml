@@ -70,8 +70,6 @@ zh-TW:
     github: https://github.com/kaochenlong
     blog: http://kaochenlong.com/
     description: |
-      ## 五倍專業、五倍祝福，五倍的紅寶石
-      ### 由來
       我們是一群在台灣的 Ruby 程式語言的愛好者，每天的工作都是跟 Ruby/Rails 相關。
 
       Ruby on Rails 快速開發的優勢，在國外企業與創業圈極為熱門；而 Ruby 語言本身的自然與優雅簡潔，也讓工程師們工作起來更加快樂。但是，在台灣實際真的有使用 Ruby/Rails 做為主要開發工具的企業卻仍是少數。
@@ -300,24 +298,28 @@ zh-TW:
   site:
     index:
       main_features:
-        - img: feature-list-img4.png
+        - img: feature-list-img1.png
           title: 課程教學
           href_method: camp_path
+          url: camp
           description:
             - 五倍規劃了一系列從入門到中高階的專業網站開發課程，不管是初學或已有基礎，都可以快速上手！
-        - img: feature-list-img1.png
+        - img: feature-list-img2.png
           title: 專案開發
           href_method: showcases_path
+          url: showcases
           description:
             - 從 Ruby、Rails、iOS 的工程服務，到系統設計開發甚至系統架設，提供專業的建議與頂尖的技術。
-        - img: feature-list-img2.png
+        - img: feature-list-img3.png
           title: 技術顧問
           href_method: training_path
+          url: training
           description:
             - 協助您將現有人力快速打造為 Ruby/Rails 團隊，無須經歷繁瑣的人才招募就有即戰力！
-        - img: feature-list-img3.png
+        - img: feature-list-img4.png
           title: 社群經營
           href_method: posts_path
+          url: posts?tags=社群活動
           description:
             - 追求 Ruby 開發社群的永續經營，致力於舉辦各類活動，促進 Ruby 社群良好發展。
       testimonials:
@@ -349,61 +351,35 @@ zh-TW:
           title: "呂元鐘 Max Lu, Buyble 國際精品購物 創辦人"
           img: "testimonial_max.jpg"
           content: "曾有幸與徐曦與見龍一起工作，徐曦自我要求與向上進取的態度令人稱佩，見龍對危機處理與當責的責任感也值得稱許。「五倍紅寶石」的其他夥伴也是一時之選，相信這是一個很棒的組合。"
-    lectures_main_banner:
-      folder: lectures-main-banner/zh-TW
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: 業界第一線直接傳授，馬上掌握 Ruby 開發的快速與樂趣
+    talks_main_banner:
+      title: 業界第一線直接傳授
+      subtitle: 馬上掌握使用 Ruby 開發的快速與樂趣
     about_main_banner:
-      folder: about-main-banner/zh-TW
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: 五倍專業、五倍祝福，關於五倍紅寶石
-    contact_main_banner:
-      folder: contact-main-banner/zh-TW
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: 有任何問題嗎？不用懷疑，馬上聯絡我們！
-    qna_main_banner:
-      folder: qna-main-banner/zh-TW
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: 常見問題Q&A，有關於五倍的問題嗎？你可以在這裡找到答案
+      title: 五倍專業、五倍祝福
+    contacts_main_banner:
+      title: 有任何問題嗎？馬上聯絡我們！
+    faq_main_banner:
+      title: 有關於五倍的問題？
     press_main_banner:
-      folder: press-main-banner/zh-TW
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: 媒體報導，國內外各家媒體關於五倍的報導
-    member_main_banner:
-      folder: member-main-banner/zh-TW
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: 五倍的頂尖技術團，專業人才，在此集結
+      title: 國內外各媒體報導
+    members_main_banner:
+      title: 五倍的頂尖技術團隊
+      subtitle: 各領域專業人才在此集結
     training_main_banner:
-      folder: training-main-banner/zh-TW
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: 企業代訓，讓您的現有人力快速轉換為 Ruby/Rails 即戰力
-    news_main_banner:
-      folder: news-main-banner/zh-TW
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: 最新消息，關於五倍還有更多你可以發掘的
+      title: 企業代訓 現有人力=即戰力
+      subtitle: 精心設計培訓計畫，讓您將現有人力轉換為 Ruby/Rails 即戰力
+    posts_main_banner:
+      title: 最新消息
+      subtitle: 關於五倍還有更多你可以發掘的，都在這邊說給你知！
     projects_main_banner:
-      folder: projects-main-banner/zh-TW
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: 以頂尖技術快速打造產品，網羅專業人才，為您提供最好的服務
+      title: 以頂尖技術快速打造產品
+      subtitle: 網羅各領域專業人才，為您提供最好的服務
     camp_main_banner:
-      folder: camp-main-banner/zh-TW
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: 網站開發，全方位衝刺班，全才師資讓您從零開始也能快速上手！
+      title: 網站開發全方位衝刺班
+      subtitle: 網站開發基礎概念到實作經驗，<br>全才師資讓你從零開始也能快速上手！
     space_main_banner:
-      folder: space-main-banner/zh-TW
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: 網站開發，全方位衝刺班，全才師資讓您從零開始也能快速上手！
+      title: 五倍紅寶石 台北出礦坑
+      subtitle: 三鐵共構，300M/100M 高速網路，場地租借優質選擇
     about_services:
       - name: 技術諮詢
         img: consult.png

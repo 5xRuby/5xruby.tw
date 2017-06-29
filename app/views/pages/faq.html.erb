@@ -1,8 +1,16 @@
 
 <!-- Start Main Banner -->
-<div class="container-fluid">
-  <div class="row">
-    <%= image_set_tag_from_translation_config t('site.qna_main_banner'), width: "100%" %>
+<div class="top-banner faq-top-banner red-bg both-padding-lg medium">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 top-spacing-sm text-right">
+        <%= fb_share_btn %>
+      </div>
+      <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
+        <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.faq') %></small>
+        <h1 class="title top-padding-lg"><%= t('site.faq_main_banner.title') %></h1>
+      </div>
+    </div>
   </div>
 </div>
 <!-- End Main Banner -->

@@ -1,25 +1,16 @@
 
 <!-- Start Camp Count Down -->
-<div class="camp-countdown bottom-padding-lg">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-lg-12 col-md-12 top-spacing-sm text-right">
-        <%= fb_share_btn %>
-      </div>
-      <div class="col-sm-6 col-lg-6 col-md-6 center-block text-center">
         <% c = camp.ended? \
         ? configs['ended'] \
         : (camp.begun? ? configs['begun'] : configs['available']) %>
-        <h3 class="text-center top-spacing">
+        <p class="top-spacing medium">
           <%= raw(c['sentence'] % {
-            days_before_begining: content_tag(:span, camp.days_before_begining, class: "large text-orange"),
+            days_before_begining: content_tag(:span, camp.days_before_begining, class: "large text-yellow"),
             days_before_ending: content_tag(:span, camp.days_before_ending, class: "large text-orange")
           }) %>
-        </h3>
-        <%= link_to c['button']['text'], c['button']['href'], class: "btn btn-red top-spacing-sm" if c['button'].present? %>
-      </div>
-    </div>
-  </div>
-</div>
+        </p>
+        <p class="top-spacing medium">
+          <%= link_to c['button']['text'], c['button']['href'], class: "btn btn-white-border" if c['button'].present? %>
+        </p>
 <!-- End Camp Count Down -->
 

@@ -297,22 +297,22 @@ ja:
   site:
     index:
       main_features:
-        - img: feature-list-img4.png
+        - img: feature-list-img1.png
           title: 実戦講座
           href_method: camp_path
           description:
             - 業界の経験を生かしブートキャンプと実戦講座常に開催、初心者でも安心！
-        - img: feature-list-img1.png
+        - img: feature-list-img2.png
           title: システム開発
           href_method: showcases_path
           description:
             - Ruby、Railsであらゆる案件に対応可能です。お気軽にご相談ください。
-        - img: feature-list-img2.png
+        - img: feature-list-img3.png
           title: 社内トレーニング
           href_method: training_path
           description:
             - あなたの会社の開発チームへプログラミングトレーニングを提供します。
-        - img: feature-list-img3.png
+        - img: feature-list-img4.png
           title: コミュニティ経営
           href_method: posts_path
           description:
@@ -346,61 +346,34 @@ ja:
           title: "Buyble 創業者（インターナショナルブティックショッピングウェブサイト）"
           img: "testimonial_max.jpg"
           content: "私は、本当にCarolとEddieと一緒に学べたことを光栄に思います。Carolは、自己規律があり、熱心です。Eddieは、問題解決能力に優れており、本当に責任感があります。5xRubyの他のパートナーもこの分野のエキスパートです。このチームは最高です！"
-    lectures_main_banner:
-      folder: lectures-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Lectures
+    talks_main_banner:
+      title: Courses/Events
+      subtitle: 　
     about_main_banner:
-      folder: about-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: About
-    contact_main_banner:
-      folder: contact-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Contact
-    qna_main_banner:
-      folder: qna-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Q&A
+      title: About Us
+    contacts_main_banner:
+      title: Contact Us
+    faq_main_banner:
+      title: Q & A
     press_main_banner:
-      folder: press-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Press
-    member_main_banner:
-      folder: member-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Members
+      title: Media Exposure
+    members_main_banner:
+      title: Members
     training_main_banner:
-      folder: training-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Training
-    news_main_banner:
-      folder: news-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: News
+      title: Training
+      subtitle: 　
+    posts_main_banner:
+      title: News
+      subtitle: 　
     projects_main_banner:
-      folder: projects-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Projects
+      title: Showcase
+      subtitle: 　
     camp_main_banner:
-      folder: camp-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Camp
+      title: Webシステム開発ブートキャンプ
+      subtitle: 経験豊富な現役エンジニア講師とゼロから学びましょう！
     space_main_banner:
-      folder: space-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Space
+      title: Space Rental
+      subtitle: 　
     about_services:
       - name: 技術コンサルティング
         img: consult.png
@@ -415,16 +388,16 @@ ja:
       features:
         - img: feature-list-img1.png
           title: 第一線で活躍する講師
-          description: 5xRubyの講師陣やメンバー<br>経験豊富な現役エンジニアで<br>我々は理論をベースに実践的な経験を持っております。
+          description: 5xRubyの講師陣やメンバー経験豊富な現役エンジニアで我々は理論をベースに実践的な経験を持っております。
         - img: feature-list-img2.png
           title: 実用なカリキュラム
-          description: 5xRubyはのカリキュラムは<br>本気て受講生にスキルを習得させることを<br>追求しています。
+          description: 5xRubyのカリキュラムは本気て受講生にスキルを習得させることを追求しています。
         - img: feature-list-img4.png
-          title: 自由にプログラムを選択
-          description: 四つのプログラム<br>あなたの現在の実力をもとに<br>気に入る講座を選ばせます。
+          title: 自由なプログラム選択
+          description: 四つのプログラムからあなたの現在の実力をもとに気に入る講座を選ばせます。
         - img: feature-list-img3.png
           title: キャリアサポート
-          description: 5xRubyは長い間コミュニティを経営し<br>就職、転職、起業をしたい方に<br>サポートを提供します。
+          description: 5xRubyは長い間コミュニティを経営し、就職、転職、起業をしたい方にサポートします。
     description: 5xRubyは、台湾Rubyコミュニティのコアメンバーが創設しましたRuby及びRuby on Railsの技術コンサルティングとトレーニング事業を行う会社です。
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'

@@ -298,23 +298,23 @@ en:
   site:
     index:
       main_features:
-        - img: feature-list-img4.png
+        - img: feature-list-img1.png
           title: Courses
           href_method: camp_path
           description:
             - We have experts teaching these in either basic and advanced level, making you get on board eazily!
-        - img: feature-list-img1.png
+        - img: feature-list-img2.png
           title: Case outsourcing
           href_method: showcases_path
           description:
             - Providing professional and technical advice and support for
             - Ruby, Rails, iOS, system design and even deployment.
-        - img: feature-list-img2.png
+        - img: feature-list-img3.png
           title: Technical consulting
           href_method: training_path
           description:
             - Helping enterprise making their existing human resource into Ruby/Rails teams. No more recruit is required!
-        - img: feature-list-img3.png
+        - img: feature-list-img4.png
           title: Ruby community
           href_method: training_path
           description:
@@ -348,65 +348,39 @@ en:
           title: "founder of Buyble, an international boutique shopping website"
           img: "testimonial_max.jpg"
           content: "I was very honered to have worked with Carol and Eddie. I admire Carol's self-discipline and aspiration. I praise Eddie for his exellence in crisis handling and sense of responsibility. The other partners in 5xRuby are also experts in this field. I beleive this is a great team!"
-    lectures_main_banner:
-      folder: lectures-main-banner/en
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Lectures
+    talks_main_banner:
+      title: Experience from first-line developers
+      subtitle: 　
     about_main_banner:
-      folder: about-main-banner/en
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: About
-    contact_main_banner:
-      folder: contact-main-banner/en
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Contact
-    qna_main_banner:
-      folder: qna-main-banner/en
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Q&A
+      title: 5 Times Professionalism
+    contacts_main_banner:
+      title: Contact Us
+    faq_main_banner:
+      title: Any Questions？
     press_main_banner:
-      folder: press-main-banner/ja
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Press
-    member_main_banner:
-      folder: member-main-banner/en
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Members
+      title: Media Exposure from Taiwan and Overseas
+    members_main_banner:
+      title: Our Team Members
+      subtitle: 　
     training_main_banner:
-      folder: training-main-banner/en
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Training
-    news_main_banner:
-      folder: news-main-banner/en
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: News
+      title: Employee training program
+      subtitle: 　
+    posts_main_banner:
+      title: Latest News
+      subtitle: 　
     projects_main_banner:
-      folder: projects-main-banner/en
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Projects
+      title: Case outsourcing
+      subtitle: 　
     camp_main_banner:
-      folder: camp-main-banner/en
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Camp
+      title: Learning from the first-line developers
+      subtitle: Front-end & Back-end Boot Camp
     space_main_banner:
-      folder: space-main-banner/en
-      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
-      default_size: "1280w.png"
-      alt: Space
+      title: Looking for a space for your event?
+      subtitle: 　
     camp:
       features:
         - img: feature-list-img1.png
-          title: Experience fromfirst-line developers
+          title: Experience from first-line developers
           description: The lecturers of 5xRuby are all industry experts. They will let you understand the theory and learn the real-world problem-solving skills.
         - img: feature-list-img2.png
           title: Useful and highly relevant content
