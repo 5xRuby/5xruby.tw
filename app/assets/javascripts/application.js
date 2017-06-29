@@ -26,4 +26,5 @@
 //= require shared
 //
 //= require guest
+//= require tappay
 
