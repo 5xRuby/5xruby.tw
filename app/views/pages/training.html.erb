@@ -1,8 +1,17 @@
 
 <!-- Start Main Banner -->
-<div class="container-fluid">
-  <div class="row">
-    <%= image_set_tag_from_translation_config t('site.training_main_banner'), width: "100%" %>
+<div class="top-banner training-top-banner red-bg both-padding-lg medium">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 top-spacing-sm text-right">
+        <%= fb_share_btn %>
+      </div>
+      <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
+        <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.training') %></small>
+        <h1 class="title top-padding-lg"><%= t('site.training_main_banner.title') %></h1>
+        <p class="line-height"><%= t('site.training_main_banner.subtitle') %></p>
+      </div>
+    </div>
   </div>
 </div>
 <!-- End Main Banner -->
@@ -26,7 +35,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-          <h3 class="text-center both-spacing-lg"><span><%= t('.showcases') %></span></h3>
+          <h3 class="title text-center both-spacing-lg"><span><%= t('.showcases') %></span></h3>
           <div class="lecture-list">
             <%= render partial: 'showcases/list', locals: {showcases: @showcases} %>
           </div>
@@ -42,11 +51,11 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-lg-6 col-md-6">
-        <h3 class="text-center top-spacing-lg bottom-spacing"><span class="border-bottom-red"><%= t('training.process_title') %></span></h3>
+        <h3 class="title text-center top-spacing-lg bottom-spacing"><span><%= t('training.process_title') %></span></h3>
         <div class="rl-padding-lg line-height-lg"><%= raw t('training.process_html') %></div>
       </div>
       <div class="col-sm-6 col-lg-6 col-md-6">
-        <h3 class="text-center top-spacing-lg bottom-spacing"><span class="border-bottom-red"><%= t('training.content_title') %></span></h3>
+        <h3 class="title text-center top-spacing-lg bottom-spacing"><span><%= t('training.content_title') %></span></h3>
         <div class="rl-padding-lg line-height-lg">
         <%= raw t('training.content_html') %>
         </div>
@@ -61,7 +70,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= t('training.what_they_say_title') %></span></h3>
+        <h3 class="title text-center top-spacing-lg bottom-spacing-sm"><span><%= t('training.what_they_say_title') %></span></h3>
         <p class="text-center"><%= t('training.what_they_say_description') %></p>
         <div class="col-sm-8 col-lg-8 col-md-8 center-block border-grey bottom-spacing-lg">
           <% t('training.what_they_says').each do |s| %>
@@ -88,7 +97,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8 col-lg-8 col-md-8 center-block">
-        <h3 class="text-center top-spacing-lg"><span><%= t('.qna.title') %></span></h3>
+        <h3 class="title text-center top-spacing-lg"><span><%= t('.qna.title') %></span></h3>
         <div class="line-height-lg">
           <% t('training.qnas').each do |qa| %>
             <h4 class="top-spacing"><%= "#{t('.qna.q_label')}#{qa[:q]}" %></h4>

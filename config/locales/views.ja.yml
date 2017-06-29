@@ -1,7 +1,18 @@
 ja:
   breadcrumb:
     home: ホーム
-    courses: 講座
+    camps: ブートキャンプ
+    camp_senior: ブートキャンプ
+    courses: 講座．イベント
+    projects: 制作事例
+    training: トレーニング
+    space: レンタルスペース
+    posts: ニュース
+    about: 会社概要
+    press: メディア取材
+    members: 社員一覧
+    contacts: お問い合わせ
+    faq: よくある質問
   courses:
     index:
       all_courses: 全ての講座
@@ -134,7 +145,7 @@ ja:
     nav:
       login: ログイン
       camp: ブートキャンプ
-      course: 講座/イベント
+      course: 講座．イベント
       showcases: 制作事例
       training: トレーニング
       space: レンタルスペース

@@ -1,8 +1,17 @@
 
 <!-- Start Main Banner -->
-<div class="container-fluid">
-  <div class="row">
-    <%= image_set_tag_from_translation_config t('site.projects_main_banner'), width: "100%" %>
+<div class="top-banner projects-top-banner red-bg both-padding-lg medium">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 top-spacing-sm text-right">
+        <%= fb_share_btn %>
+      </div>
+      <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
+        <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.projects') %></small>
+        <h1 class="title top-padding-lg"><%= t('site.projects_main_banner.title') %></h1>
+        <p class="line-height"><%= t('site.projects_main_banner.subtitle') %></p>
+      </div>
+    </div>
   </div>
 </div>
 <!-- End Main Banner -->
@@ -12,7 +21,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-        <h3 class="text-center both-spacing-lg"><span><%= t('.title') %></span></h3>
+        <h3 class="title text-center both-spacing-lg"><span><%= t('.title') %></span></h3>
         <div class="lecture-list">
           <%= render partial: 'list', locals: {showcases: @showcases} %>
           <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing text-center">

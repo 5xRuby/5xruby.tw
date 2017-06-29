@@ -1,7 +1,18 @@
 en:
   breadcrumb:
     home: Home
-    courses: Lectures
+    camps: Boot Camp
+    camp_senior: Boot Camp
+    courses: Courses/Events
+    projects: Showcases
+    training: Training
+    space: Space Rental
+    posts: News
+    about: About 5xRuby
+    press: Media Exposure
+    members: Members
+    contacts: Contact us
+    faq: Q & A
   courses:
     index:
       all_courses: All lectures
