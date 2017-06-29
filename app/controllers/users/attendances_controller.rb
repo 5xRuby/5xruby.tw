@@ -19,7 +19,7 @@ module Users
     def save_survey
       @survey.assign_attributes(allowed_params)
       if @survey.save
-        redirect_to root_path
+        redirect_to new_payment_path
       else
         render :new
       end

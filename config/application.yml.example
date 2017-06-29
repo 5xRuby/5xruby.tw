@@ -53,6 +53,14 @@ defaults: &defaults
     github:
       client_id: needed_to_fill
       client_secret: needed_to_fill
+  third_party_payment:
+    tappay:
+      merchant_id: needed_to_fill
+      partner_key: needed_to_fill
+      vat_number: needed_to_fill
+      app_id: needed_to_fill
+      sandbox_app_key: needed_to_fill
+      app_key: needed_to_fill
 
 development:
   <<: *defaults
