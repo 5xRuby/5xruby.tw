@@ -105,4 +105,8 @@ module ApplicationHelper
       end
     end
   end
+
+  def fb_pixel_track(action_type, action_params = {})
+    render partial: "shared/fb_pixel_track", locals: {action_type: action_type, action_params: action_params}
+  end
 end

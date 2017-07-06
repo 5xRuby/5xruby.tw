@@ -210,3 +210,5 @@
   </div>
 </div>
 <!-- End Lecture Notice -->
+<%= render partial: 'pages/camp_count_down', locals: {configs: @camp.bottom_past_info, camp: @camp} %>
+<%= fb_pixel_track("ViewContent", {content_ids: ['camp'], content_type: 'camp'})%>
