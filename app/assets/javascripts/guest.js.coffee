@@ -35,7 +35,7 @@ $ () ->
           location.hash = anchor
       e.preventDefault
       false
-  
+
   for swiper_container in $('.swiper-container')
     $swiper_container = $(swiper_container)
     new Swiper(swiper_container,
@@ -43,8 +43,9 @@ $ () ->
       slidesPerView: $swiper_container.data('slides-per-view') || 1,
       paginationClickable: $swiper_container.data('disable-pagination-clickable') == undefined,
       spaceBetween: $swiper_container.data('space-between') || 0,
-      loop: $swiper_container.data('disable-loop') == undefined,
-      autoplay: $swiper_container.data('autoplay')
+      loop: $swiper_container.data('loop') || false,
+      autoplay: $swiper_container.data('autoplay'),
+      slidesPerGroup: $swiper_container.data('slides-per-group') || 1,
     )
 
   $('.openable').each((i, openable) ->

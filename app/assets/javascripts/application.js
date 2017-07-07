@@ -18,12 +18,13 @@
 //= require jquery.slick
 //= require swiper
 //= require vex.combined.min.js
+//= require photoswipe
 //
 //= require highlightjs
 //= require jquery.scrollTo
 //= require konami
 //
 //= require shared
+//= require photo_swipe
 //
 //= require guest
-

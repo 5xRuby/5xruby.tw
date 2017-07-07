@@ -263,6 +263,14 @@ ja:
       about: 「バンバンクラッシュさせろ」
       skills: Elixir / Phoenix / JavaScript / Ruby
 
+    - name: 蔡尚維
+      title: MBPR2017 の被害人
+      avatar: tsw.jpg
+      twitter: https://twitter.com/e39a562r1
+      github: https://github.com/e39a562r
+      about: 「ダイヘン！USB Type-C ダ！」
+      skills: C/C++ / Web / JavaScript / Python / free(wallet)
+
     # 實習生放正職後面
     - name: 文月
       title: 8皿食べる姫
@@ -290,25 +298,25 @@ ja:
     index:
       main_features:
         - img: feature-list-img1.png
-          title: 役に立つ実戦講座
+          title: 実戦講座
           href_method: camp_path
           description:
-            - 業界の経験を生かし
-            - Ruby/Rails、Git、システム構築などの
-            - ブートキャンプと実戦講座常に開催！
+            - 業界の経験を生かしブートキャンプと実戦講座常に開催、初心者でも安心！
         - img: feature-list-img2.png
-          title: 開発、アドバイス
+          title: システム開発
           href_method: showcases_path
           description:
-            - Ruby、RailsでWEBサイト、アプリ、
-            - システム開発など、あらゆる案件に対応可能です、お気軽にご相談ください
+            - Ruby、Railsであらゆる案件に対応可能です。お気軽にご相談ください。
         - img: feature-list-img3.png
-          title: 企業内トレーニング
+          title: 社内トレーニング
           href_method: training_path
           description:
-            - あなたの会社の開発チームへ
-            - プログラミングトレーニングを提供し
-            - Ruby/Rails開発チームを構築できるようにします
+            - あなたの会社の開発チームへプログラミングトレーニングを提供します。
+        - img: feature-list-img4.png
+          title: コミュニティ経営
+          href_method: posts_path
+          description:
+            - 継続的な Ruby コミュニティの交流に注力し、さまざまな活動に取り組んでいます。
       testimonials:
         - name: Victor Lam
           title: "GoGoVan プロダクトマネージャー兼フルスタックエンジニア"
@@ -402,16 +410,16 @@ ja:
       features:
         - img: feature-list-img1.png
           title: 第一線で活躍する講師
-          description: 5xRubyの講師陣やメンバー<br>経験豊富な現役エンジニアで<br>我々は理論をベースに実践的な経験を持っております。
+          description: 5xRubyの講師陣やメンバー経験豊富な現役エンジニアで我々は理論をベースに実践的な経験を持っております。
         - img: feature-list-img2.png
           title: 実用なカリキュラム
-          description: 5xRubyはのカリキュラムは<br>本気て受講生にスキルを習得させることを<br>追求しています。
+          description: 5xRubyのカリキュラムは本気て受講生にスキルを習得させることを追求しています。
         - img: feature-list-img4.png
-          title: 自由にプログラムを選択
-          description: 四つのプログラム<br>あなたの現在の実力をもとに<br>気に入る講座を選ばせます。
+          title: 自由なプログラム選択
+          description: 四つのプログラムからあなたの現在の実力をもとに気に入る講座を選ばせます。
         - img: feature-list-img3.png
           title: キャリアサポート
-          description: 5xRubyは長い間コミュニティを経営し<br>就職、転職、起業をしたい方に<br>サポートを提供します。
+          description: 5xRubyは長い間コミュニティを経営し、就職、転職、起業をしたい方にサポートします。
     description: 5xRubyは、台湾Rubyコミュニティのコアメンバーが創設しましたRuby及びRuby on Railsの技術コンサルティングとトレーニング事業を行う会社です。
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'
@@ -427,4 +435,65 @@ ja:
       徵才: 採用情報
       心得分享: 感想とレビュー
       其他消息: その他
+  space:
+    features:
+      net: 高速インターネット
+      net_intro: 光回線 300M/100M，ネット環境バッチリ！
+      traffic: 便利な交通アクセス
+      traffic_intro: 台北駅から歩いて10分、アクセス抜群！
+      equipment: プロジェクター完備
+      equipment_intro: FULL HDプロジェクター、Apple TV使えます。
+      table: 広いワークテーブル
+      table_intro: 教室内には広いテーブルとコンセントも完備。
+      sound: 音響設備あり
+      sound_intro: マイク、音響設備完備、ワイヤレスマイク対応。
+      live: 録画ライブ配信設備
+      live_intro: 2画面分割機能付き、ライブ配信と録画兼用。
+      live_video: サンプル動画
+    booking:
+      title: レンタル
+      description: 収容人数 45 ~ 60 人。台北駅に近くて、アクセスが超便利！プロジェクターやマイクなどの音響設備も取り揃えております。
+      event_tech: テクノロジー・コミュニティ、非営利団体 NT.1,500
+      event_normal: 平日の夜 (18:00 ~ 22:00) NT.2,500
+      event_weekend: 週末、祝日 NT.3,000
+      time: 1hr
+      note: 長期割引サービスがあります
+    contact:
+      title: レンタルに興味ある方ぜひ！
+      contact_button: お問い合わせ
+  space_rent_slides:
+    folder: space_rent_slides
+    slides:
+      - thumb: space-img1-sml.jpg
+        origin: space-img1.jpg
+        alt: image1
+        size: 1200x900
+      - thumb: space-img2-sml.jpg
+        origin: space-img2.jpg
+        alt: image2
+        size: 1200x900
+      - thumb: space-img3-sml.jpg
+        origin: space-img3.jpg
+        alt: image3
+        size: 1200x886
+      - thumb: space-img4-sml.jpg
+        origin: space-img4.jpg
+        alt: image4
+        size: 1200x888
+      - thumb: space-img5-sml.jpg
+        origin: space-img5.jpg
+        alt: image5
+        size: 1200x900
+      - thumb: space-img6-sml.jpg
+        origin: space-img6.jpg
+        alt: image6
+        size: 1200x896
+      - thumb: space-img7-sml.jpg
+        origin: space-img7.jpg
+        alt: image7
+        size: 1200x917
+      - thumb: space-img8-sml.jpg
+        origin: space-img8.jpg
+        alt: image8
+        size: 1200x900
 

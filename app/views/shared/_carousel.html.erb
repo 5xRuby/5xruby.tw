@@ -1,14 +1,23 @@
-
-<div class="swiper-container" data-autoplay="<%= latency ||= 3000 %>">
-  <div class="swiper-wrapper">
-    <% items.each_slice(3).to_a.each do |items_in_a_slide| %>
-      <div class="swiper-slide">
-        <% items_in_a_slide.each do |item| %>
-          <%= render partial: item_partial, locals: {item: item} %>
-        <% end %>
-      </div>
+<div class="swiper-container"
+     data-autoplay="<%= latency ||= 3000 %>"
+     data-slides-per-view="<%= slidesPerView ||= 'auto' %>"
+     data-gallery="<%= gallery ||= false %>" data-loop="<%= loop ||= true %>" data-slides-per-group="<%= slidesPerGroup ||= 1 %>">
+  <div class="swiper-wrapper gallery">
+    <% if action_name == "space"%>
+      <% items.to_a.each do |items_in_a_slide| %>
+        <figure class="swiper-slide">
+         <%= render partial: item_partial, locals: {item: items_in_a_slide, folder: folder} %>
+        </figure>
+      <% end %>
+    <% else %>
+      <% items.each_slice(slides).to_a.each do |items_in_a_slide| %>
+        <div class="swiper-slide">
+          <% items_in_a_slide.each do |item| %>
+            <%= render partial: item_partial, locals: {item: item} %>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
   </div>
   <div class="normal swiper-pagination"></div>
 </div>
-

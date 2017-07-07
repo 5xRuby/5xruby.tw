@@ -1,0 +1,200 @@
+<!-- Start Main Banner -->
+<div class="top-banner space-top-banner red-bg both-padding-lg medium">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 top-spacing-sm text-right">
+        <%= fb_share_btn %>
+      </div>
+      <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
+        <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.space') %></small>
+        <h1 class="title top-padding-lg"><%= t('site.space_main_banner.title') %></h1>
+        <p class="line-height"><%= t('site.space_main_banner.subtitle') %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Main Banner -->
+
+<!-- Start Space Feature -->
+<!--<div class="space-img1 container-fluid">
+  <div class="row both-spacing-lg">
+    <div class="col col-sm-12 col-lg-12 col-md-12 text-center">
+      <span class="border-white text-white four-padding medium"><%= t('space.features.live') %></span>
+    </div>
+    <div class="col col-sm-6 col-lg-6 col-md-6 text-center">
+      <span class="border-white text-white four-padding medium"><%= t('space.features.traffic') %></span>
+    </div>
+    <div class="col col-sm-6 col-lg-6 col-md-6 text-center">
+      <span class="border-white text-white four-padding medium"><%= t('space.features.equipment') %></span>
+    </div>
+    <div class="col col-sm-6 col-lg-6 col-md-6 text-center">
+      <span class="border-white text-white four-padding medium"><%= t('space.features.table') %></span>
+    </div>
+    <div class="col col-sm-6 col-lg-6 col-md-6 text-center">
+      <span class="border-white text-white four-padding medium"><%= t('space.features.sound') %></span>
+    </div>
+    <div class="col col-sm-12 col-lg-12 col-md-12 text-center">
+      <span class="border-white text-white four-padding medium"><%= t('space.features.net') %></span>
+    </div>
+  </div>
+</div>-->
+<!-- End Space Feature -->
+
+<!-- Start Space Gallery -->
+<div class="space-gallery container-fluid light-grey-bg">
+  <div class="row">
+    <%= render partial: 'shared/carousel', locals: {
+      items: t('space_rent_slides.slides').map do |slide|
+        {
+          type: "space",
+          thumb: slide[:thumb],
+          origin: slide[:origin],
+          alt: slide[:alt],
+          size: slide[:size]
+        }
+      end,
+      item_partial: 'shared/slides',
+      folder: t('space_rent_slides.folder'),
+      autoplay: 30000,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      loop: false,
+      gallery: true
+    } %>
+  </div>
+</div>
+<!-- End Space Gallery -->
+
+<!-- Start Space Feature Description -->
+<div class="feature-descri light-grey-bg">
+  <div class="container-fluid">
+    <div class="row top-spacing-lg bottom-spacing">
+      <div class="col-sm-4 col-lg-2 col-md-4 text-center">
+        <p>
+          <%= image_tag 'space-icon/icon-features-live.png' %>
+        </p>
+        <h4><%= t('space.features.live') %></h4>
+        <p class="small bottom-spacing">
+          <%= t('space.features.live_intro') %>
+          <br><a href="https://www.youtube.com/watch?v=Lrl7mOGxIIg" target="_blank"><%= t('space.features.live_video') %></a>
+        </p>
+      </div>
+      <div class="col-sm-4 col-lg-2 col-md-4 text-center">
+        <p>
+          <%= image_tag 'space-icon/icon-features-traffic.png' %>
+        </p>
+        <h4><%= t('space.features.traffic') %></h4>
+        <p class="small bottom-spacing">
+          <%= t('space.features.traffic_intro') %>
+        </p>
+      </div>
+      <div class="col-sm-4 col-lg-2 col-md-4 text-center">
+        <p>
+          <%= image_tag 'space-icon/icon-features-equipment.png' %>
+        </p>
+        <h4><%= t('space.features.equipment') %></h4>
+        <p class="small bottom-spacing">
+          <%= t('space.features.equipment_intro') %>
+        </p>
+      </div>
+      <div class="col-sm-4 col-lg-2 col-md-4 text-center">
+        <p>
+          <%= image_tag 'space-icon/icon-features-table.png' %>
+        </p>
+        <h4><%= t('space.features.table') %></h4>
+        <p class="small bottom-spacing">
+          <%= t('space.features.table_intro') %>
+        </p>
+      </div>
+      <div class="col-sm-4 col-lg-2 col-md-4 text-center">
+        <p>
+          <%= image_tag 'space-icon/icon-features-sound.png' %>
+        </p>
+        <h4><%= t('space.features.sound') %></h4>
+        <p class="small bottom-spacing">
+          <%= t('space.features.sound_intro') %>
+        </p>
+      </div>
+      <div class="col-sm-4 col-lg-2 col-md-4 text-center">
+        <p>
+          <%= image_tag 'space-icon/icon-features-net.png' %>
+        </p>
+        <h4><%= t('space.features.net') %></h4>
+        <p class="small bottom-spacing">
+          <%= t('space.features.net_intro') %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Space Feature Description -->
+
+<!-- Start Space Whole Booking -->
+<div class="whole-booking bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12">
+        <h3 class="title text-center top-spacing-lg bottom-spacing"><span><%= t('space.booking.title') %></span></h3>
+        <div class="col-sm-12 col-lg-12 col-md-12 line-height-lg text-center bottom-spacing-sm">
+          <%= t('space.booking.description') %>
+        </div>
+        <div class="clear"></div>
+        <div class="col-sm-12 col-lg-8 col-md-8 center-block">
+          <div class="event col-sm-9 col-lg-9 col-md-9 red-bg border-red text-white four-padding bottom-spacing-sm">
+            <span><%= t('space.booking.event_tech') %></span>
+          </div>
+          <div class="time col-sm-3 col-lg-3 col-md-3 border-red text-grey four-padding bottom-spacing-sm">
+            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= t('space.booking.time') %>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-8 col-md-8 center-block">
+          <div class="event col-sm-9 col-lg-9 col-md-9 red-bg border-red text-white four-padding bottom-spacing-sm">
+            <span><%= t('space.booking.event_normal') %></span>
+          </div>
+          <div class="time col-sm-3 col-lg-3 col-md-3 border-red text-grey four-padding bottom-spacing-sm">
+            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= t('space.booking.time') %>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-8 col-md-8 center-block">
+          <div class="event col-sm-9 col-lg-9 col-md-9 red-bg border-red text-white four-padding">
+            <span><%= t('space.booking.event_weekend') %></span>
+          </div>
+          <div class="time col-sm-3 col-lg-3 col-md-3 border-red text-grey four-padding">
+            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= t('space.booking.time') %>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="col-sm-12 col-lg-12 col-md-12 line-height-lg text-center both-spacing-sm">
+          <%= t('space.booking.note') %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-lg-10 col-md-12 bottom-spacing center-block">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.016266311726!2d121.513862!3d25.0424189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa8402e622aa7b148!2z5LqU5YCN57SF5a-255-z!5e0!3m2!1szh-TW!2stw!4v1482991564796" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Whole Booking -->
+
+<!-- Start Contact to Booking -->
+<div class="contact-to-booking">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= t('space.contact.title') %></span></h3>
+        <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing-lg text-center">
+          <%= link_to t('space.contact.contact_button'), contacts_path, class: 'btn btn-red' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Contact to Booking -->
+
+<!-- PhotoSwipe -->
+<%= render partial: 'shared/photo_swipe' %>
+<!-- End PhotoSwipe -->
+
+

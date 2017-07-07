@@ -33,6 +33,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <%= yield :append_head if content_for? :append_head %>
+		<%= render partial: "shared/fb_pixel_init"%>
   </head>
   <%= content_tag :body, data: {controller: controller_path, action: action_name} do %>
 

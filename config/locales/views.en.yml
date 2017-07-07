@@ -2,6 +2,18 @@ en:
   breadcrumb:
     home: Home
     talks: Lectures
+    camps: Boot Camp
+    camp_senior: Boot Camp
+    courses: Courses/Events
+    projects: Showcases
+    training: Training
+    space: Space Rental
+    posts: News
+    about: About 5xRuby
+    press: Media Exposure
+    members: Members
+    faq: Q & A
+    contacts: Contact us
   talks:
     index:
       all_talks: All lectures
@@ -172,6 +184,7 @@ en:
       talk: Courses/Events
       showcases: Showcases
       training: Training
+      space: Space Rental
       news: News
       logout: Logout
       hello_user: Hello, %{name}
