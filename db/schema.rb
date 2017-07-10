@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170622082758) do
+ActiveRecord::Schema.define(version: 20170628081451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -167,6 +167,7 @@ ActiveRecord::Schema.define(version: 20170622082758) do
     t.datetime "updated_at",                                        null: false
     t.integer  "activity_id"
     t.string   "serial",                               default: ""
+    t.datetime "expiry_at"
     t.index ["activity_id"], name: "index_orders_on_activity_id", using: :btree
     t.index ["ans"], name: "index_orders_on_ans", using: :gin
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
@@ -175,13 +176,12 @@ ActiveRecord::Schema.define(version: 20170622082758) do
   create_table "payments", force: :cascade do |t|
     t.integer  "order_id"
     t.integer  "user_id"
-    t.string   "state"
     t.string   "type"
     t.string   "identifier", default: "", null: false
     t.datetime "paid_at"
-    t.datetime "expiry_at"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.string   "rectradeid"
     t.index ["order_id"], name: "index_payments_on_order_id", using: :btree
     t.index ["user_id"], name: "index_payments_on_user_id", using: :btree
   end
@@ -285,6 +285,7 @@ ActiveRecord::Schema.define(version: 20170622082758) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["translatable_id", "translatable_type"], name: "index_translations_on_translatable_id_and_translatable_type", using: :btree
     t.index ["translatable_type", "translatable_id"], name: "index_translations_on_translatable_type_and_translatable_id", using: :btree
   end
 

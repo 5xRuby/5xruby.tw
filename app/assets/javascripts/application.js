@@ -28,3 +28,4 @@
 //= require photo_swipe
 //
 //= require guest
+//= require tappay

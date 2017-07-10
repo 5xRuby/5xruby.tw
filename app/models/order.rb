@@ -29,6 +29,7 @@ class Order < ApplicationRecord
   # association macros
   belongs_to :user
   belongs_to :activity
+  has_one :payment
   has_many :course_enrollments, class_name: "Order::CourseEnrollment"
   has_many :activity_courses, through: :course_enrollments
   has_many :enrolling_courses, through: :activity_courses, source: :course

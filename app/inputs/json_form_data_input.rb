@@ -9,6 +9,7 @@ class JsonFormDataInput < SimpleForm::Inputs::Base
 
       input_options.merge!(checked: object.send(name)) if value[:as] == 'radio_buttons'
       input_options.merge!(selected: object.send(name)) if value[:as] == 'check_boxes'
+      input_options.merge!(include_blank: false) if value[:as] == 'select'
       out << @builder.input(name, input_options.symbolize_keys)
     end
 

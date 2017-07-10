@@ -203,6 +203,14 @@ ja:
         title: title # TODO: change it to japanese
       form:
         submit: 送信
+    payments: # TODO: change it to jp
+      new:
+        title: 請選擇付款方式
+        warning: 您尚未付款成功，請選擇付款方式
+    tappays: # TODO: change it to jp
+      new:
+        title: 請填寫信用卡資料
+        submit: 送出
 
   shared: # TODO: need to translate to jp
     profile_sidebar:

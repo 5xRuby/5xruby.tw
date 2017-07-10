@@ -218,6 +218,14 @@ zh-TW:
         title: 表單
       form:
         submit: 送出
+    payments:
+      new:
+        title: 請選擇付款方式
+        warning: 您尚未付款成功，請選擇付款方式
+    tappays:
+      new:
+        title: 請填寫信用卡資料
+        submit: 送出
 
   shared:
     profile_sidebar:

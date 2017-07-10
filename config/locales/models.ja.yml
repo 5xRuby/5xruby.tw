@@ -57,6 +57,7 @@ ja:
       translation: 翻訳
       interview_question: 質問
       survey: Survey # TODO: translate to jp
+      order: Order # TODO: translate to jp
     attributes:
       post:
         publish_at: 投稿日

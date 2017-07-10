@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/5xRuby/tappay-rails.git
+  revision: 594e221d4913774f32f568b8d3de531152fe6223
+  specs:
+    tappay-rails (0.1.0)
+      rails (>= 4.0, < 5.2)
+
+GIT
   remote: https://github.com/MiniProfiler/rack-mini-profiler.git
   revision: 1d7294989faf1fe62bbf96e7f1c4560f7df35dcd
   specs:
@@ -458,6 +465,7 @@ DEPENDENCIES
   simple_form
   spring
   swiper-rails
+  tappay-rails!
   uglifier
   vex_rails (~> 0.2.0)
   web-console

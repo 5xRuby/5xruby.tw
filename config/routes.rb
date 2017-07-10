@@ -37,7 +37,9 @@ Rails.application.routes.draw do
         end
 
         resources :orders, except: :new
+        resource :payment, only: %i[new create]
         resource :attendance, only: %i[new create]
+        resource :tappay, only: %i[new create]
       end
     end
   end

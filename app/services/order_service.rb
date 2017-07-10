@@ -12,6 +12,17 @@ module OrderService
       @order
     end
 
+    def update!(order, res:)
+      order.succeed!
+      order.create_payment!(
+        user: order.user,
+        type: res.card_info.type.to_s,
+        identifier: res.cardinfo.lastfour,
+        rectradeid: res.rectradeid,
+        paid_at: Time.zone.now
+      )
+    end
+
     private
 
     def assign_serial

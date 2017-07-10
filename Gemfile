@@ -63,6 +63,9 @@ gem 'aasm'
 gem 'active_type'
 gem 'webpacker', '~> 2.0'
 
+# 3rd party payment
+gem 'tappay-rails', github: '5xRuby/tappay-rails'
+
 # Frontend
 gem 'rdiscount'
 gem 'select2_helper', git: 'https://github.com/ryudoawaru/select2_helper.git', branch: 'rails42'

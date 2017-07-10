@@ -65,6 +65,7 @@ zh-TW:
       index_picture_img: 首頁大圖圖片
       camp_template: 衝刺班模板
       survey: 表單
+      order: 訂單
     attributes:
       post:
         publish_at: 發佈時間
