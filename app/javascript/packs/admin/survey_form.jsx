@@ -22,7 +22,7 @@ class SurveyFormQuestionsFields extends React.Component {
     super(props);
 
     this.state = {
-      questions: {}
+      questions: this.props.questions
     }
 
     this.getSortedQuestionsArray = this.getSortedQuestionsArray.bind(this);
