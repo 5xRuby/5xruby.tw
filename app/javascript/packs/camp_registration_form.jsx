@@ -182,7 +182,7 @@ class CampRegistrationForm extends React.Component {
                 </div>
 
                 <div className="col-xs-2 col-md-2">
-                  原價 {this.calOriginalPrice(item.selectedActivityCourseIDs)}
+                  原價 {this.calOriginalPrice(item.selectedActivityCourseIDs.concat(item.freeActivityCourseIDs))}
                 </div>
 
                 <div className="col-xs-2 col-md-2">
