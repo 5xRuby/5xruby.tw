@@ -11,7 +11,7 @@ defaults: &defaults
     - 社群活動
     - 媒體報導
     - 企業合作
-    - 徵才
+    - 工作機會
     - 心得分享
     - 其他消息
   index_pictures:
