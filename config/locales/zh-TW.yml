@@ -294,7 +294,7 @@ zh-TW:
       main_features:
         - img: feature-list-img1.png
           title: 十年功力實戰講座
-          href_method: camp_path
+          href_method: camps_path
           description:
             - 業界資深前輩為你講解 Ruby、Rails、
             - Git 、系統佈署等從入門到中高階的講座

@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :set_locale, :set_seo
+  before_action :set_nav_camp_online
   helper_method :current_path_with_locale, :translatable_locales
 
   def set_seo
@@ -42,5 +43,9 @@ class ApplicationController < ActionController::Base
   # override
   def default_url_options options = {}
     {locale: I18n.locale == I18n.default_locale ? nil : I18n.locale}
+  end
+
+  def set_nav_camp_online
+    @camps_online = Activity::Camp.online
   end
 end
