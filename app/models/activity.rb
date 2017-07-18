@@ -2,6 +2,7 @@ class Activity < ApplicationRecord
   # scope macros
   CAMP = "Activity::Camp".freeze
   TALK = "Activity::Talk".freeze
+  scope :online, -> { where(is_online: true) }
 
   # Concerns macros
   include Permalinkable

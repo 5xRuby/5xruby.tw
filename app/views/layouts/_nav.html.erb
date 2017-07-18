@@ -35,7 +35,21 @@
             </ul>
           </div>
           <ul class="nav navbar-nav">
-            <%= nav_li t('.camp'), camp_path %>
+            <li class="dropdown">
+              <%= link_to camps_path, class: "dropdown-toggle", role: "button", data: { toggle: "dropdown" }, "aria-haspopup": true, "aria-expand": false do %>
+                <%= t('.camp') %>
+                <span class="caret"></span>
+              <% end %>
+
+              <ul class="dropdown-menu">
+                <%= nav_li t('.camp'), camps_path %>
+                <li role="separator" class="divider"></li>
+                <% @camps_online.each do |camp| %>
+                  <%= nav_li camp.title, camp_path(camp.permalink) %>
+                <% end %>
+              </ul>
+            </li>
+
             <%= nav_li t('.talk'), talks_path %>
             <%= nav_li t('.showcases'), showcases_path %>
             <%= nav_li t('.training'), training_path %>

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :talks, only: %i[index show]
     resources :contacts, only: :create
     resources :showcases, only: :index
-    resource :camp, only: :show
+    resources :camps, only: [:index, :show]
     resources :redactor_images, only: :create
     post 'rental/calculate'
 
