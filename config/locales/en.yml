@@ -264,6 +264,14 @@ en:
       about: "Let it crash."
       skills: Elixir / Phoenix / JavaScript / Ruby
 
+    - name: Shang-Wei Tsai
+      title: MBPR2017 buyer
+      avatar: tsw.jpg
+      twitter: https://twitter.com/e39a562r1
+      github: https://github.com/e39a562rs
+      about: 「I need dongles! DESPERATELY!!」
+      skills: C/C++ / Web / JavaScript / Python / free(wallet)
+
     # 實習生放正職後面
     - name: Fumitsuki
       title: Eight plates eating hime
@@ -294,22 +302,23 @@ en:
           title: Courses
           href_method: camp_path
           description:
-            - From Ruby, Railsk, Git to deployment,
-            - we have experts teaching these in either basic and advanced level,
-            - making you get on board eazily!
+            - We have experts teaching these in either basic and advanced level, making you get on board eazily!
         - img: feature-list-img2.png
-          title: Case outsourcing / Technical consulting
+          title: Case outsourcing
           href_method: showcases_path
           description:
             - Providing professional and technical advice and support for
             - Ruby, Rails, iOS, system design and even deployment.
         - img: feature-list-img3.png
-          title: Employee Training Plans
+          title: Technical consulting
           href_method: training_path
           description:
-            - Helping enterprise making their existing
-            - human resource into Ruby/Rails teams
-            - No more recruit is required!
+            - Helping enterprise making their existing human resource into Ruby/Rails teams. No more recruit is required!
+        - img: feature-list-img4.png
+          title: Ruby community
+          href_method: training_path
+          description:
+            - We organized many kind of events for the sustainability of Ruby programmer community.
       testimonials:
         - name: Victor Lam
           title: "Product Manager of GoGoVan, Full Stack Developer"
@@ -392,7 +401,7 @@ en:
     camp:
       features:
         - img: feature-list-img1.png
-          title: Experience fromfirst-line developers
+          title: Experience from first-line developers
           description: The lecturers of 5xRuby are all industry experts. They will let you understand the theory and learn the real-world problem-solving skills.
         - img: feature-list-img2.png
           title: Useful and highly relevant content
@@ -429,4 +438,65 @@ en:
     徵才: Jobs
     心得分享: Sharing
     其他消息: Other
+  space:
+    features:
+      net: High-speed Internet
+      net_intro: Faster speed make everything online better.
+      traffic: Conveniently located
+      traffic_intro: Near Taipei Main Station, easy to access!
+      equipment: Projection equipment
+      equipment_intro: FULL HD projection and Apple TV.
+      table: Large working tables
+      table_intro: Capacious tables and plenty of power socket.
+      sound: Sound systems
+      sound_intro: Wireless microphones and sound stystems.
+      live: Webcasting equipment
+      live_intro: Record live streaming video into PiP immediately.
+      live_video: Sample video
+    booking:
+      title: Rental
+      description: The seating capacity for 45 ~ 60 people. We are located near to Taipei Main Station and well equipped with projection equipment and sound systems.
+      event_tech: Tech Events & Public interest group NT.1,500
+      event_normal: Weekday night (18:00 ~ 22:00) NT.2,500
+      event_weekend: Weekend & holiday NT.3,000
+      time: 1hr
+      note: We have special pricing for long-term rentals.
+    contact:
+      title: Need space?
+      contact_button: Contact us
+  space_rent_slides:
+    folder: space_rent_slides
+    slides:
+      - thumb: space-img1-sml.jpg
+        origin: space-img1.jpg
+        alt: image1
+        size: 1200x900
+      - thumb: space-img2-sml.jpg
+        origin: space-img2.jpg
+        alt: image2
+        size: 1200x900
+      - thumb: space-img3-sml.jpg
+        origin: space-img3.jpg
+        alt: image3
+        size: 1200x886
+      - thumb: space-img4-sml.jpg
+        origin: space-img4.jpg
+        alt: image4
+        size: 1200x888
+      - thumb: space-img5-sml.jpg
+        origin: space-img5.jpg
+        alt: image5
+        size: 1200x900
+      - thumb: space-img6-sml.jpg
+        origin: space-img6.jpg
+        alt: image6
+        size: 1200x896
+      - thumb: space-img7-sml.jpg
+        origin: space-img7.jpg
+        alt: image7
+        size: 1200x917
+      - thumb: space-img8-sml.jpg
+        origin: space-img8.jpg
+        alt: image8
+        size: 1200x900
 

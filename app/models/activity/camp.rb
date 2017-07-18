@@ -1,13 +1,11 @@
 class Activity::Camp < Activity
   # scope macros
-  default_scope -> { includes(courses: :stages) }
 
   # Concerns macros
 
   # Constants
 
   # Attributes related macros
-  delegate :payload, to: :template
 
   def days_before_begining
     (begin_date - Date.today).to_i
@@ -45,6 +43,6 @@ class Activity::Camp < Activity
   end
 
   def sorted_course_start_dates
-    @sorted_course_start_dates ||= courses.map(&:start_on).sort
+    @sorted_course_start_dates ||= courses.includes(:stages).map(&:start_on).sort
   end
 end

@@ -3,9 +3,10 @@
 *= require swiper
 *= require slick-theme
 *= require highlightjs/tomorrow-night-bright
-*= require vex.css 
+*= require vex.css
 *= require vex-theme-plain.css
 *= require shared
+*= require photoswipe
 *= require_tree ./application
 *= require_self
 */
@@ -16,5 +17,6 @@
 @import "font-awesome";
 
 @import "bootstrap-theme";
+@import "bootstrap-element";
 @import "guest";
 

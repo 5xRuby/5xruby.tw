@@ -1,17 +1,24 @@
 <%= simple_nested_form_for(current_object) do |f| %>
   <div class="form-inputs">
     <%= f.input :type, as: :select, collection: [Activity::Camp, Activity::Talk].map{|t| [t.model_name.human, t.to_s]}, include_blank: false %>
-    <%= f.association :template, input_html: {class: 'select2'} %>
-    <%= f.input :title %>
+    <%= f.association :template, input_html: { class: 'select2' }, wrapper_html: { class: 'camp-only' } %>
+    <%= f.association :survey, input_html: { class: 'select2' } %>
+    <%= f.input :title, wrapper_html: { class: 'camp-only' } %>
     <%= f.input :is_online, as: :select, include_blank: false %>
     <%= f.input :permalink %>
     <%= f.input :payment_note, input_html: { value: current_object.payment_note || raw(t('payment_note')), class: :redactor} %>
     <%= f.input :note, input_html: { value: current_object.note || raw(t('note')), class: :redactor } %>
   </div>
 
-  <%= render 'activity_courses_fields', f: f %>
+  <%= render_react_component(
+    id: 'activity_form_rule_fields',
+    data: {
+      'activity-courses': current_object.activity_courses,
+      'course-select-options': Course.all_with_humanized_name,
+      'rules': current_object.rules_to_json.presence || {}
+    })%>
   <hr>
-  <div class="form-actions">
+  <div class='form-actions'>
     <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
   </div>
 <% end %>

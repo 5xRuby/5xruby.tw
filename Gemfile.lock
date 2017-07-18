@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/5xRuby/tappay-rails.git
+  revision: 594e221d4913774f32f568b8d3de531152fe6223
+  specs:
+    tappay-rails (0.1.0)
+      rails (>= 4.0, < 5.2)
+
+GIT
   remote: https://github.com/MiniProfiler/rack-mini-profiler.git
   revision: 1d7294989faf1fe62bbf96e7f1c4560f7df35dcd
   specs:
@@ -52,6 +59,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_type (0.7.0)
+      activerecord (>= 3.2)
     activejob (5.0.3)
       activesupport (= 5.0.3)
       globalid (>= 0.3.6)
@@ -66,7 +75,9 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    airbrussh (1.2.0)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
+    airbrussh (1.3.0)
       sshkit (>= 1.6.1, != 1.7.0)
     annotate (2.7.1)
       activerecord (>= 3.2, < 6.0)
@@ -75,19 +86,19 @@ GEM
     ast (2.3.0)
     autoprefixer-rails (7.1.0)
       execjs
-    babel-source (5.8.35)
-    babel-transpiler (0.7.0)
-      babel-source (>= 4.0, < 6)
-      execjs (~> 2.0)
     bcrypt (3.1.11)
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.3)
+    bullet (5.5.1)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.10.0)
     byebug (9.0.6)
-    capistrano (3.8.1)
+    capistrano (3.7.1)
       airbrussh (>= 1.0.0)
+      capistrano-harrow
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
@@ -98,6 +109,7 @@ GEM
       capistrano (~> 3.0)
       flowdock (~> 0.5.0)
       rugged (~> 0.19.0)
+    capistrano-harrow (0.5.3)
     capistrano-rails (1.2.3)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -143,6 +155,7 @@ GEM
       i18n (~> 0.5)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
+    ffi (1.9.18)
     flowdock (0.5.0)
       httparty (~> 0.7)
       multi_json
@@ -160,7 +173,7 @@ GEM
     hashie (3.5.5)
     httparty (0.15.3)
       multi_xml (>= 0.5.2)
-    i18n (0.8.1)
+    i18n (0.8.6)
     jbuilder (2.6.4)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2)
@@ -190,6 +203,10 @@ GEM
       activerecord
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.5)
@@ -236,6 +253,7 @@ GEM
     parser (2.4.0.0)
       ast (~> 2.2)
     pg (0.20.0)
+    photoswipe-rails (4.1.2)
     powerpack (0.1.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -244,6 +262,8 @@ GEM
     pry-byebug (3.4.2)
       byebug (~> 9.0)
       pry (~> 0.10)
+    public_suffix (2.0.5)
+    puma (3.8.2)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -280,12 +300,6 @@ GEM
     rake (11.3.0)
     rdiscount (2.2.0.1)
     rdoc (4.3.0)
-    react-rails (2.2.0)
-      babel-transpiler (>= 0.7.0)
-      connection_pool
-      execjs
-      railties (>= 3.2)
-      tilt
     recaptcha (4.3.1)
       json
     record_tag_helper (1.0.0)
@@ -321,12 +335,17 @@ GEM
     ruby-progressbar (1.8.1)
     rugged (0.19.0)
     sass (3.4.23)
-    sass-rails (5.0.6)
-      railties (>= 4.0.0, < 6)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
+    sassc (1.11.2)
+      bundler
+      ffi (~> 1.9.6)
+      sass (>= 3.3.0)
+    sassc-rails (1.3.0)
+      railties (>= 4.0.0)
+      sass
+      sassc (~> 1.9)
+      sprockets (> 2.11)
+      sprockets-rails
+      tilt
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -357,7 +376,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sshkit (1.13.1)
+    sshkit (1.14.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     swiper-rails (1.0.4)
@@ -370,6 +389,7 @@ GEM
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.2.1)
+    uniform_notifier (1.10.0)
     vex_rails (0.2.0)
     warden (1.2.7)
       rack (>= 1.0)
@@ -378,6 +398,10 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webpacker (2.0)
+      activesupport (>= 4.2)
+      multi_json (~> 1.2)
+      railties (>= 4.2)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -388,9 +412,12 @@ PLATFORMS
 DEPENDENCIES
   aasm
   ace-rails-ap
+  active_type
   acts-as-taggable-on!
   annotate
   bootstrap-sass
+  bullet
+  capistrano (= 3.7.1)
   capistrano-flowdock
   capistrano-rails
   capistrano-sidekiq
@@ -413,24 +440,26 @@ DEPENDENCIES
   jquery-slick-rails
   jquery-ui-rails
   kaminari (~> 1.0.1)
+  letter_opener
   nested_form
   omniauth
   omniauth-facebook
   omniauth-github
   omniauth-google-oauth2
   pg
+  photoswipe-rails
   pry-byebug
+  puma
   rack-mini-profiler!
   rails (~> 5.0.2)
   rails-i18n
   rdiscount
-  react-rails
   recaptcha
   record_tag_helper
   rmagick (~> 2.16)
   rspec-rails
   rubocop
-  sass-rails
+  sassc-rails
   sdoc (~> 0.4.0)
   select2-rails (= 3.5.9.1)
   select2_helper!
@@ -439,9 +468,11 @@ DEPENDENCIES
   simple_form
   spring
   swiper-rails
+  tappay-rails!
   uglifier
   vex_rails (~> 0.2.0)
   web-console
+  webpacker (~> 2.0)
 
 BUNDLED WITH
    1.14.6

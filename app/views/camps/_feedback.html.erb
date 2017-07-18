@@ -8,7 +8,8 @@
         <%= render partial: 'shared/carousel', locals: { \
           items: @camp.payload['testimonials'], \
           item_partial: 'camps/testimonial', \
-          latency: @camp.payload['testimonials_latency'] } %>
+          latency: @camp.payload['testimonials_latency'], \
+          slides: 3 } %>
       </div>
     </div>
   </div>

@@ -1,9 +1,11 @@
 defaults: &defaults
-  force_ssl: false
   tenmax:
-    root_id: 878919477026
+    root_id: needed_to_fill
   ga:
-    id: UA-51124505-1
+    id: needed_to_fill
+  use_fluentd_logger: false
+  force_ssl: false
+  admin_path_prefix: admin
   course_about_to_begin_time: '3.days'
   posts_cate_tags:
     - 社群活動
@@ -15,61 +17,60 @@ defaults: &defaults
   index_pictures:
     sizes: ['400w', '600w', '1280w', '1920w', '2560w']
     default_size: '1280w'
-
-development: &development
-  <<: *defaults
-  admin_path_prefix: admin
+  alias:
+    - from: reactjs
+      to: /talks/react-redux-2017-1
+  mailer_sender: noreply@5xruby.tw
   flowdock:
-    flowdock_api_token: FLOWDOCK_API_TOKEN
-    flowdock_project_name: 5xruby_tw
+    flowdock_api_token: needed_to_fill
+    flowdock_project_name: needed_to_fill
     flowdock_deploy_tags: [deploy, website]
   recaptcha:
-    site_key: SITE_KEY
-    secret_key: SECRET_KEY
-  recipient: tonytonyjan@gmail.com
-  action_mailer:
+    site_key: needed_to_fill
+    secret_key: needed_to_fill
+  action_mailer: &action_mailer
+    default_options:
+      from: '"5xruby" <noreply@5xruby.te>'
+      reply_to: service@5xruby.tw
     default_url_options:
-      :host: localhost:3000
+      host: 'localhost:3000'
     delivery_method: :smtp
     smtp_settings:
-      :address: smtp.gmail.com
-      :port: 587
-      :user_name: tonytonyjan@gmail.com
-      :password: PASSWORD
-      :authentication: plain
-      :enable_starttls_auto: true
-  contact_email: dev@local
+      address: needed_to_fill
+      port: needed_to_fill
+      user_name: needed_to_fill
+      password: needed_to_fill
+      domain: needed_to_fill
+      authentication: plain
+      enable_starttls_auto: true
   omniauth:
     google:
-      client_id: CLIENT_ID
-      client_secret: CLIENT_SECRET
+      client_id: needed_to_fill
+      client_secret: needed_to_fill
     facebook:
-      facebook_key: FACEBOOK_KEY
-      facebook_secret: FACEBOOK_SECRET
+      facebook_key: needed_to_fill
+      facebook_secret: needed_to_fill
     github:
-      client_id: CLIENT_ID
-      client_secret: CLIENT_SECRET
-test:
-  <<: *development
+      client_id: needed_to_fill
+      client_secret: needed_to_fill
+  third_party_payment:
+    tappay:
+      merchant_id: needed_to_fill
+      partner_key: needed_to_fill
+      vat_number: needed_to_fill
+      app_id: needed_to_fill
+      sandbox_app_key: needed_to_fill
+      app_key: needed_to_fill
 
+development:
+  <<: *defaults
+  action_mailer:
+    <<: *action_mailer
+    delivery_method: :letter_opener
+test:
+  <<: *defaults
+  action_mailer:
+    <<: *action_mailer
+    delivery_method: :test
 production:
   <<: *defaults
-  force_ssl: true
-  admin_path_prefix: a75f256c7c4624d5283f99c2e95fb08d
-  http_basic_auth:
-    :name: 5xruby
-    :password: 5xruby
-  recaptcha:
-    site_key: SITE_KEY
-    secret_key: SECRET_KEY
-  action_mailer:
-    default_url_options:
-      :host: localhost:3000
-    delivery_method: :smtp
-    smtp_settings:
-      :address: smtp.gmail.com
-      :port: 587
-      :user_name: tonytonyjan@gmail.com
-      :password: PASSWORD
-      :authentication: plain
-      :enable_starttls_auto: true

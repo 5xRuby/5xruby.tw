@@ -1,0 +1,16 @@
+
+<!-- Start Camp Count Down -->
+        <% c = camp.ended? \
+        ? configs['ended'] \
+        : (camp.begun? ? configs['begun'] : configs['available']) %>
+        <p class="top-spacing medium">
+          <%= raw(c['sentence'] % {
+            days_before_begining: content_tag(:span, camp.days_before_begining, class: "large text-yellow"),
+            days_before_ending: content_tag(:span, camp.days_before_ending, class: "large text-orange")
+          }) %>
+        </p>
+        <p class="top-spacing medium">
+          <%= link_to c['button']['text'], c['button']['href'], class: "btn btn-white-border" if c['button'].present? %>
+        </p>
+<!-- End Camp Count Down -->
+

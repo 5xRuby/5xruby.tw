@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Activity, type: :model do
+  include_examples "permalinkable"
+
+  it { is_expected.to delegate_method(:payload).to(:template) }
   it { is_expected.to have_and_belong_to_many(:courses) }
   it { is_expected.to belong_to(:template) }
   it { is_expected.to have_many(:translations) }
@@ -21,11 +24,6 @@ RSpec.describe Activity, type: :model do
       it "not pass" do
         camp.template = nil
         expect(camp).not_to be_valid
-      end
-
-      it "not pass" do
-        talk.template = template
-        expect(talk).not_to be_valid
       end
 
       it "pass" do

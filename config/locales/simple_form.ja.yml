@@ -2,6 +2,14 @@ ja:
   simple_form:
     "yes": 'はい'
     "no": 'いいえ'
+    labels:
+      defaults:
+        name: 姓名 # TODO: translate it to jp
+        email: E-mail
+        phone: 電話
+        password: 密碼
+        password_confirmation: 再輸入一次密碼
+        current_password: 舊密碼
     required:
       text: '必須'
       mark: '*'
@@ -19,10 +27,9 @@ ja:
     #       email: 'E-mail to sign in.'
     #     edit:
     #       email: 'E-mail.'
-    # hints:
-    #   defaults:
-    #     username: 'User name to sign in.'
-    #     password: 'No special characters, please.'
+    hints:
+      defaults:
+        password: 'At least 6 characters' # TODO: translate it to jp
     # include_blanks:
     #   defaults:
     #     age: 'Rather not say'

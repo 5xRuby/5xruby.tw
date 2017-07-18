@@ -18,6 +18,8 @@ class Course < ActiveRecord::Base
   has_and_belongs_to_many :speakers
   belongs_to :category, counter_cache: true
   has_many :translations, as: :translatable
+  has_many :activity_courses
+  has_many :orders, through: :activity_courses, source: :orders
   has_and_belongs_to_many :camps, association_foreign_key: 'activity_id', class_name: "::Activity::Camp"
   has_and_belongs_to_many :talks, association_foreign_key: 'activity_id', class_name: "::Activity::Talk"
 
@@ -33,6 +35,13 @@ class Course < ActiveRecord::Base
   after_initialize :set_defualt_values, if: :new_record?, unless: :changed?
 
   # other
+  class << self
+    def all_with_humanized_name(order: :desc, time_range: 12)
+      courses = all.includes(:stages).select { |c| c.start_on && c.start_on > (Time.current - time_range.months) }.sort_by(&:start_on)
+      courses.reverse! if order == :desc
+      courses.map{|c| [[c.start_on, c.title].join("－"), c.id] }
+    end
+  end
 
   def fork
     the_forked = self.class.new attributes.except!('id', 'iframe_html')
@@ -49,11 +58,11 @@ class Course < ActiveRecord::Base
   end
 
   def start_on
-    stages.first.date
+    stages.first&.date
   end
 
   def end_on
-    stages.last.date
+    stages.last&.date
   end
 
   def need_attendees_count

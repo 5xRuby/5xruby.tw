@@ -2,20 +2,36 @@ en:
   breadcrumb:
     home: Home
     talks: Lectures
+    camps: Boot Camp
+    camp_senior: Boot Camp
+    courses: Courses/Events
+    projects: Showcases
+    training: Training
+    space: Space Rental
+    posts: News
+    about: About 5xRuby
+    press: Media Exposure
+    members: Members
+    faq: Q & A
+    contacts: Contact us
   talks:
     index:
       all_talks: All lectures
       speakers: Speakers
-    show:
+    info:
       hours_label: 'Hours:'
       outdated: Lecture has started
       opening: Sign up now
+    details:
       lecturer: Lecturer
       suitable_for: Suitable for
       what_you_will_learn: What you will learn
+    outline:
       outline: Outline
       chapter_title: "Lesson %{nth}:"
+    tickets:
       apply_now: I'd like to sign in the lecture
+    notice:
       payment_note: 'Payment:'
       note: Description
     talk:
@@ -71,6 +87,8 @@ en:
     notice:
       payment_note: 'Payment:'
       note: 'Notes:'
+    form:
+      submit: Next step
 
   pages:
     index:
@@ -132,6 +150,7 @@ en:
         reset_pw: Reset Password
         placeholder:
           email: member@5xruby.tw
+        send_reset_mail: Send reset email
       edit:
         title: Reset Password
         new_password: New Password
@@ -165,7 +184,34 @@ en:
       talk: Courses/Events
       showcases: Showcases
       training: Training
+      space: Space Rental
       news: News
       logout: Logout
       hello_user: Hello, %{name}
       your_account: Your Account
+
+  users:
+    profile:
+      passwords:
+        edit:
+          title: Change Password
+        form:
+          edit_password: Submit
+    attendances:
+      new:
+        title: Survey
+      form:
+        submit: Submit
+    payments:
+      new:
+        title: Please Select a Payment Method
+        warning: You haven't paid yet, please select a payment method below.
+    tappays:
+      new:
+        title: Please fill in your credit card number
+        submit: Submit
+
+  shared:
+    profile_sidebar:
+      profile: Profile
+      password: Password

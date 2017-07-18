@@ -7,7 +7,7 @@ gem 'rails', '~> 5.0.2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # Use CoffeeScript for .js.coffee assets and views
@@ -60,10 +60,14 @@ gem 'rmagick', '~> 2.16'
 gem 'settingslogic'
 gem 'simple_form'
 gem 'aasm'
+gem 'active_type'
+gem 'webpacker', '~> 2.0'
+
+# 3rd party payment
+gem 'tappay-rails', github: '5xRuby/tappay-rails'
 
 # Frontend
 gem 'rdiscount'
-gem 'react-rails'
 gem 'select2_helper', git: 'https://github.com/ryudoawaru/select2_helper.git', branch: 'rails42'
 
 # for Rails 5.0 upgrade
@@ -79,14 +83,20 @@ gem 'jquery-ui-rails'
 gem 'select2-rails', '3.5.9.1'
 gem 'swiper-rails'
 gem 'vex_rails', '~> 0.2.0'
+gem 'ace-rails-ap'
+gem 'photoswipe-rails'
 
 group :development do
   gem 'annotate'
+  gem 'capistrano', '3.7.1'
   gem 'capistrano-flowdock'
   gem 'capistrano-rails'
   gem 'capistrano-sidekiq'
   gem 'capistrano-upload-config'
   gem 'web-console'
+  gem 'letter_opener'
+  gem 'puma'
+  gem 'bullet'
 end
 
 group :development, :test do

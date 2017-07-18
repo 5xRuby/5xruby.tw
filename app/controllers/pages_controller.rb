@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def index
-    @index_pictures = IndexPicture.includes(:index_picture_imgs).lang I18n.locale
-    @talks = Activity::Talk.available.coming.limit(3)
+    @index_pictures = IndexPicture.includes(:index_picture_imgs).lang(I18n.locale).order(:ordering)
+    @talks = Activity::Talk.includes(:translations).available.coming(3)
     @showcases = Showcase.includes(:translations).where(is_online: true).order(:sort_id).first 3
   end
 
@@ -20,4 +20,7 @@ class PagesController < ApplicationController
   def privacy_policy; end
 
   def terms_of_service; end
+
+  def space
+  end
 end

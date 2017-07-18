@@ -25,4 +25,9 @@ tags
 /config/*.*.yml
 /postgres
 /vendor/bundle
+
+# db dump
 *.sql
+*-*-*
+/public/packs
+/node_modules

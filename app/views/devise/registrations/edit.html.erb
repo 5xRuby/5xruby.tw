@@ -1,6 +1,8 @@
 <div class="container">
-  <div class="both-spacing bottom-padding-lg">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+  <div class="row both-spacing bottom-padding-lg">
+    <%= render 'shared/profile_sidebar' %>
+
+    <div class="col-md-8">
       <h2 class="both-spacing"><%= t('.title') %></h2>
       <%= render 'devise/registrations/form' %>
     </div>

@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 class Order < ApplicationRecord
   # scope macros
 
@@ -29,10 +28,18 @@ class Order < ApplicationRecord
 
   # association macros
   belongs_to :user
-  belongs_to :purchasable, polymorphic: true
+  belongs_to :activity
+  has_one :payment
+  has_many :course_enrollments, class_name: "Order::CourseEnrollment"
+  has_many :activity_courses, through: :course_enrollments
+  has_many :enrolling_courses, through: :activity_courses, source: :course
+
+  delegate :survey, to: :activity
+  delegate :questions, to: :survey
 
   # validation macros
   validates :amount, numericality: { greater_than_or_equal_to: 0 }
+  validate :number_of_course_enrollments, on: :create
 
   # callbacks
 
@@ -40,4 +47,8 @@ class Order < ApplicationRecord
 
   protected
   # callback methods
+  def number_of_course_enrollments
+    return unless course_enrollments.size.zero?
+    errors.add(:course_enrollments, :no_course_enrollments_in_camp_registration)
+  end
 end

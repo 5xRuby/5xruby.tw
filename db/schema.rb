@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170523025028) do
+ActiveRecord::Schema.define(version: 20170628081451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
+  enable_extension "btree_gin"
 
   create_table "activities", force: :cascade do |t|
     t.string   "type"
@@ -22,20 +23,31 @@ ActiveRecord::Schema.define(version: 20170523025028) do
     t.string   "permalink"
     t.text     "note"
     t.text     "payment_note"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.boolean  "is_online"
-    t.integer  "form_id"
+    t.integer  "survey_id"
     t.integer  "template_id"
-    t.index ["form_id"], name: "index_activities_on_form_id", using: :btree
+    t.json     "rules",        default: {}
+    t.index ["survey_id"], name: "index_activities_on_survey_id", using: :btree
     t.index ["template_id"], name: "index_activities_on_template_id", using: :btree
   end
 
-  create_table "activities_courses", force: :cascade do |t|
+  create_table "activities_courses", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.integer "activity_id"
     t.integer "course_id"
+    t.decimal "price",            null: false
+    t.decimal "early_bird_price"
+    t.integer "priority"
     t.index ["activity_id"], name: "index_activities_courses_on_activity_id", using: :btree
     t.index ["course_id"], name: "index_activities_courses_on_course_id", using: :btree
+  end
+
+  create_table "activities_courses_deprecated", force: :cascade do |t|
+    t.integer "activity_id"
+    t.integer "course_id"
+    t.index ["activity_id"], name: "index_activities_courses_deprecated_on_activity_id", using: :btree
+    t.index ["course_id"], name: "index_activities_courses_deprecated_on_course_id", using: :btree
   end
 
   create_table "authors", force: :cascade do |t|
@@ -63,6 +75,13 @@ ActiveRecord::Schema.define(version: 20170523025028) do
     t.string   "permalink",                      null: false
     t.index ["name"], name: "index_categories_on_name", using: :btree
     t.index ["permalink"], name: "index_categories_on_permalink", unique: true, using: :btree
+  end
+
+  create_table "course_enrollments", force: :cascade do |t|
+    t.uuid    "activity_course_id"
+    t.integer "order_id"
+    t.index ["activity_course_id"], name: "index_course_enrollments_on_activity_course_id", using: :btree
+    t.index ["order_id"], name: "index_course_enrollments_on_order_id", using: :btree
   end
 
   create_table "courses", force: :cascade do |t|
@@ -108,13 +127,6 @@ ActiveRecord::Schema.define(version: 20170523025028) do
     t.integer  "sort_id",    default: 0,     null: false
   end
 
-  create_table "forms", force: :cascade do |t|
-    t.string   "title"
-    t.json     "fields"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "index_picture_imgs", force: :cascade do |t|
     t.string  "src"
     t.string  "lang"
@@ -123,8 +135,9 @@ ActiveRecord::Schema.define(version: 20170523025028) do
   end
 
   create_table "index_pictures", force: :cascade do |t|
-    t.string "alt"
-    t.string "href"
+    t.string  "alt"
+    t.string  "href"
+    t.integer "ordering"
   end
 
   create_table "interview_questions", force: :cascade do |t|
@@ -146,28 +159,29 @@ ActiveRecord::Schema.define(version: 20170523025028) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string   "purchasable_type"
-    t.integer  "purchasable_id"
     t.string   "state"
-    t.decimal  "amount",           precision: 31, scale: 1
-    t.json     "fields"
+    t.decimal  "amount",      precision: 31, scale: 1
+    t.jsonb    "ans",                                  default: {}
     t.integer  "user_id"
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
-    t.index ["purchasable_type", "purchasable_id"], name: "index_orders_on_purchasable_type_and_purchasable_id", using: :btree
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.integer  "activity_id"
+    t.string   "serial",                               default: ""
+    t.datetime "expiry_at"
+    t.index ["activity_id"], name: "index_orders_on_activity_id", using: :btree
+    t.index ["ans"], name: "index_orders_on_ans", using: :gin
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
   create_table "payments", force: :cascade do |t|
     t.integer  "order_id"
     t.integer  "user_id"
-    t.string   "state"
     t.string   "type"
     t.string   "identifier", default: "", null: false
     t.datetime "paid_at"
-    t.datetime "expiry_at"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.string   "rectradeid"
     t.index ["order_id"], name: "index_payments_on_order_id", using: :btree
     t.index ["user_id"], name: "index_payments_on_user_id", using: :btree
   end
@@ -228,6 +242,14 @@ ActiveRecord::Schema.define(version: 20170523025028) do
     t.time     "end_at",      default: '2000-01-01 00:00:00', null: false
     t.float    "hours",       default: 1.0,                   null: false
     t.index ["course_id"], name: "index_stages_on_course_id", using: :btree
+  end
+
+  create_table "surveys", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.jsonb    "questions",  default: {}
+    t.index ["questions"], name: "index_surveys_on_questions", using: :gin
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -298,9 +320,11 @@ ActiveRecord::Schema.define(version: 20170523025028) do
   end
 
   add_foreign_key "activities", "camp_templates", column: "template_id"
-  add_foreign_key "activities", "forms"
+  add_foreign_key "activities", "surveys"
   add_foreign_key "activities_courses", "activities"
   add_foreign_key "activities_courses", "courses"
+  add_foreign_key "activities_courses_deprecated", "activities"
+  add_foreign_key "activities_courses_deprecated", "courses"
   add_foreign_key "orders", "users"
   add_foreign_key "payments", "orders"
   add_foreign_key "payments", "users"

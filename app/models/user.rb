@@ -72,11 +72,12 @@ class User < ApplicationRecord
   end
 
   def password_required?
-    self.omniauths.blank?
+    omniauth.blank? && super
   end
 
   # association macros
   has_many :omniauths
+  has_many :orders
 
   # validation macros
   validates :name, :phone, presence: true

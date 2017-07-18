@@ -2,6 +2,14 @@ zh-TW:
   simple_form:
     'yes': 是
     'no': 否
+    labels:
+      defaults:
+        name: 姓名
+        email: E-mail
+        phone: 電話
+        password: 密碼
+        password_confirmation: 再輸入一次密碼
+        current_password: 舊密碼
     required:
       text: '必填'
       mark: '*'

@@ -5,33 +5,35 @@ class Activity < ApplicationRecord
 
   # Concerns macros
   include Permalinkable
+  include PatchNestedAttributesAssignment
 
   # Constants
 
   # Attributes related macros
   permalinkable :title
+  patch :activity_courses
+  serialize :rules, HashSerializer
+  delegate :payload, to: :template, allow_nil: true
 
   # association macros
   has_and_belongs_to_many :courses, after_add: :touch_if_needed, after_remove: :touch_if_needed
   belongs_to :template, class_name: "CampTemplate", required: false
+  belongs_to :survey, required: false
   has_many :translations, as: :translatable
   has_many :activity_courses
-  has_many :orders, as: :purchasable
+  has_many :orders
   accepts_nested_attributes_for :activity_courses, allow_destroy: true
 
   # validation macros
   validates :type, :title, :permalink, :note, :payment_note, presence: true
   validates :type, inclusion: { in: %w(Activity::Camp Activity::Talk) }
-  validate :validate_courses_number
-  validate :validate_courses_uniqueness
-  validate :validate_template
+  validate :validate_courses_number, :validate_courses_uniqueness, :validate_template, :validate_uniqueness_of_course
   validates :permalink, uniqueness: true
-  validate :validate_uniqueness_of_course
   validates :is_online, inclusion: { in: [ true, false ] }
   validates_format_of :permalink, with: /\A\w[-|\w|\d]+\z/
 
   # callbacks
-  before_validation :set_title_if_needed
+  before_validation :nullify_invalid_data, :set_title_if_needed
 
   # other
   def is_camp?
@@ -40,6 +42,14 @@ class Activity < ApplicationRecord
 
   def is_talk?
     type == TALK
+  end
+
+  def specialized
+    becomes(type.constantize)
+  end
+
+  def rules_to_json
+    self.rules.to_json
   end
 
   protected
@@ -56,7 +66,8 @@ class Activity < ApplicationRecord
   end
 
   def validate_courses_uniqueness
-    return if activity_courses.map(&:course_id).uniq.size == activity_courses.size
+    not_destroyed_activity_courses = activity_courses.reject(&:marked_for_destruction?)
+    return if not_destroyed_activity_courses.map(&:course_id).uniq.size == not_destroyed_activity_courses.size
     errors.add(:type, :course_duplicate)
   end
 
@@ -75,6 +86,11 @@ class Activity < ApplicationRecord
     course = activity_courses.first.course
     return if course.talks.exists?(id) || course.talks.count == 0
     errors.add(:type, :talk_has_been_existed)
+  end
+
+  def nullify_invalid_data
+    return if is_camp?
+    assign_attributes(template_id: nil, title: nil, rules: "")
   end
 
   def set_title_if_needed

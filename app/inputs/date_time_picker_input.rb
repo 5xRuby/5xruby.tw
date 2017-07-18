@@ -5,7 +5,7 @@ class DateTimePickerInput < SimpleForm::Inputs::Base
     merged_input_options = merge_wrapper_options(input_html_options, wrapper_options)
 
     @builder.text_field(attribute_name, {
-      value: object.send(attribute_name)&.strftime("%Y-%m-%d %H:%M"),
+      value: (object.send(attribute_name) || Time.zone.now).strftime("%Y-%m-%d %H:%M"),
       data: {
         'date-pickTime' => true,
         'date-format' => 'YYYY-MM-DD HH:mm'

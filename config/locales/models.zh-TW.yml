@@ -9,6 +9,9 @@ zh-TW:
       talk_has_no_template: 講座不需要模板
       talk_has_been_existed: 該講座已經開設課程了
       camp_needs_template: 衝刺班需要模板
+      not_correct_email_format: '無效 Email'
+      no_course_enrollments_in_camp_registration: 報名衝刺班時至少要選一門講座
+      not_valid_process: 無效操作
   activemodel:
     attributes:
       contact:
@@ -42,7 +45,7 @@ zh-TW:
     models:
       post: 文章
       category: 講座分類
-      course: 講座內容
+      course: 講座
       activity: 課程
       activity_course: 課程內容
       activity/talk: 講座
@@ -61,7 +64,8 @@ zh-TW:
       index_picture: 首頁大圖
       index_picture_img: 首頁大圖圖片
       camp_template: 衝刺班模板
-      form: 表單
+      survey: 表單
+      order: 訂單
     attributes:
       post:
         publish_at: 發佈時間
@@ -76,6 +80,7 @@ zh-TW:
         type: 課程屬性
         title: 課程名字
         template: 衝刺班模板
+        survey: 表單
         payment_note: 付款資訊
         note: 備註
       course:
@@ -144,6 +149,7 @@ zh-TW:
       index_picture:
         alt: 說明文字
         href: 連結
+        ordering: 順序
       index_picture_img:
         src: 圖檔
         lang: 語系
@@ -152,9 +158,9 @@ zh-TW:
         title: 模板名字
         payload: 設定值
         json: 設定值
-      form:
+      survey:
         title: 表單名稱
-        fields: 欄位
+        questions: 欄位
   enumerize:
     apply:
       gender:

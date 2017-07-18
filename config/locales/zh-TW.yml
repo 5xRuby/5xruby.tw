@@ -433,5 +433,64 @@ zh-TW:
     其他消息: 其他消息
   payment_note: <ol><li>報名網站(活動通)繳款</li><li>現場刷卡</li><li>匯款<ul><li>匯款帳號資訊：</li><li>玉山銀行士林分行（代碼808）</li><li>帳號：0657-940-006952戶名：五倍紅寶石股份有限公司</li><li>請報名並匯款至以上指定帳戶後，請來信 <a href="mailto:pay-service@5xruby.tw">pay-service@5xruby.tw</a> 告知匯款帳號末五碼。</li></ol></li></ol>
   note: <ol><li>講座內容、日期及講師可能因故有所修改，主辦單位保留異動之權利。</li><li>學員需自備筆記型電腦。</li><li>本次講座僅開放 30 人報名。</li><li>報名費不包含餐費。</li><li>若報名學員人數不足 5 人，將視情況取消當次講座，並全額退還報名費用。</li><li>如有企業或團體講座需求，歡迎直接來信洽詢。</li></ol>
-
-
+  space:
+    features:
+      net: 光纖高速網路
+      net_intro: 光纖寬頻上網 300M/100M，上傳下載速度都超快！
+      traffic: 三鐵共構便利交通
+      traffic_intro: 不管是搭乘北捷、台鐵或是高鐵，都可以輕鬆抵達。
+      equipment: 投影設備 & Apple TV
+      equipment_intro: FULL HD投影設備，還有Apple TV可以使用喔！
+      table: 寬廣工作桌
+      table_intro: 教室內備有寬敞的桌椅以及充足的插座。
+      sound: 擴音設備
+      sound_intro: 備有無線麥克風及音響，不用自己準備器材囉。
+      live: 錄影直播設備
+      live_intro: 即時合成子母畫面，除了可以直播還兼具錄影功能。
+      live_video: 範例影片
+    booking:
+      title: 活動包場
+      description: 可容納 45 ~ 60 人。出礦坑位於三鐵共構旁，交通超方便！備齊投影擴音設備，只要人到就好了。
+      event_tech: 技術類社群活動、公益團體 1,500 元
+      event_normal: 平日晚間 (18:00 ~ 22:00) 2,500 元
+      event_weekend: 週末、例假日 3,000 元
+      time: 1小時
+      note: 長期租用可另享有優惠
+    contact:
+      title: 有租借需求嗎？
+      contact_button: 歡迎與我們聯繫
+  space_rent_slides:
+    folder: space_rent_slides
+    slides:
+      - thumb: space-img1-sml.jpg
+        origin: space-img1.jpg
+        alt: image1
+        size: 1200x900
+      - thumb: space-img2-sml.jpg
+        origin: space-img2.jpg
+        alt: image2
+        size: 1200x900
+      - thumb: space-img3-sml.jpg
+        origin: space-img3.jpg
+        alt: image3
+        size: 1200x886
+      - thumb: space-img4-sml.jpg
+        origin: space-img4.jpg
+        alt: image4
+        size: 1200x888
+      - thumb: space-img5-sml.jpg
+        origin: space-img5.jpg
+        alt: image5
+        size: 1200x900
+      - thumb: space-img6-sml.jpg
+        origin: space-img6.jpg
+        alt: image6
+        size: 1200x896
+      - thumb: space-img7-sml.jpg
+        origin: space-img7.jpg
+        alt: image7
+        size: 1200x917
+      - thumb: space-img8-sml.jpg
+        origin: space-img8.jpg
+        alt: image8
+        size: 1200x900
