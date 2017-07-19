@@ -1,13 +1,12 @@
 class CampsController < ApplicationController
   def index
-    @camp = Activity::Camp.last
-    @courses = @camp.courses.includes(:translations, { speakers: [:translations] }, { stages: [:translations] } )
-    @order = @camp.orders.new
+    @camps = Activity::Camp.online
   end
 
   def show
     @camp = Activity::Camp.find_by_permalink(params[:id])
-    @courses = @camp.courses.includes(:translations, { speakers: [:translations] }, { stages: [:translations] } )
+    @activity_courses = @camp.activity_courses.includes(:course, { course: [stages: [:translations]] })
     @order = @camp.orders.new
+    @speakers = Speaker.online.includes(:translations).order(:sort_id)
   end
 end
