@@ -27,6 +27,7 @@ const ActivityCourseFields = ({activityCoursesArray, courseSelectOptions, onChan
           <th>順序</th>
           <th>#</th>
           <th>課程內容</th>
+          <th>副標</th>
           <th>價格</th>
           <th></th>
         </tr>
