@@ -31,3 +31,6 @@ tags
 *-*-*
 /public/packs
 /node_modules
+
+# vim swp
+*.swp
