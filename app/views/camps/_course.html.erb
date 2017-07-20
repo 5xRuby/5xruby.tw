@@ -7,50 +7,16 @@
           <i class="fa fa-map-marker" aria-hidden="true"></i> <%= t('.location_label') %>
           <%= link_to "#{t('company.address')} (#{t('company.name')})", t('company.gmap_url'), target: :_blank %>
         </div>
-        <% @courses.each do |course| %>
-          <!--Start Camp-->
-          <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing border-grey no-padding">
-            <div class="camp-wrap">
-              <div class="cover col-sm-6 col-lg-6 col-md-6 no-padding" style="background: url('<%= course.image.thumb %>'); background-size: cover; background-position: center center;">
-                <div class="filter">
-                  <p class="text-center four-padding-lg top-spacing-lg">
-                    <span class="descri"><%= raw tr(course, :summary) %></span>
-                    <br><br>
+        <%# @courses.each do |course| %>
+        <% @activity_courses.each do |activity_course| %>
+          <% course = activity_course.course %>
 
-                    <!-- change it to time_limit-->
-                    <% btn_states = (course.time_limit || course.start_on) < Time.now ? configs['outdated'] : configs['opening'] %>
-                    <%= link_to btn_states['text'], btn_states['href'], class: btn_states['class'] || "btn btn-white-border" if btn_states.present? %>
-                  </p>
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
-                <h4 class="top-padding text-center"><%= course.title %></h4>
-                <div class="both-spacing-sm four-padding text-center light-grey-bg ul-no-padding li-no-style">
-                  <%= t('.time_label') %>
-                  <br>
-                  <%= raw course.time_description %>
-                </div>
-                <div class="col-sm-5 col-lg-5 col-md-5">
-                  <div class="media">
-                    <% course.speakers.each do |s| %>
-                      <div class="media-body">
-                        <b class="media-heading"><%= tr s, :name %></b>
-                        <p class="small"><%= tr_and_convert_newline2br s, :summary %></p>
-                      </div>
-                    <% end %>
-                  </div>
-                </div>
-                <div id="will-learn" class="col-sm-7 col-lg-7 col-md-7">
-                  <b><%= t('.what_will_learn_label', hours: course.hours) %></b>
-                  <div class="small text-overflow-auto-scroll">
-                    <%= raw tr(course, :what_will_learn) %>
-                  </div>
-                  <div class="pull-right small vex-dialog-opener" data-target="#camp-outline-dialog-<%= course.permalink %>">
-                    <a><%= t('.view_outline') %></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!--Start Camp-->
+          <p><%= activity_course.subtitle %></p>
+          <p><%= activity_course.title %></p>
+          <%= raw course.what_will_learn %>
+          <div class="small vex-dialog-opener" data-target="#camp-outline-dialog-<%= course.permalink %>">
+            <a><%= t('.view_outline') %></a>
           </div>
           <!--End Camp-->
 

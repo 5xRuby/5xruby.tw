@@ -1,13 +1,12 @@
-<h1>Camp#Show <%= @camp.id %> <%= @camp.permalink %></h1>
-
 <% template = @camp.payload %>
-<%= render partial: "camps/main_banner" %>
-<%= render partial: "camps/count_down", locals: { configs: template['top_count_down'] } %>
+
+<%= render partial: "camps/main_banner", locals: { configs: template['top_count_down'] } %>
 <%= render partial: "camps/features" %>
+<%= render partial: "shared/speakers", locals: { speakers: @speakers } %>
 <%= render partial: "camps/course", locals: { configs: template['btn_states'] } %>
-<%= render partial: "camps/sales", locals: { configs: template['sales'] } %>
 <%= render partial: "camps/feedback" %>
 <%= render partial: "camps/qnas", locals: { configs: template['qnas'] } %>
-<%= render partial: "camps/registration" %>
+<%#= render partial: "camps/registration" %>
+<%= render partial: "camps/tickets", locals: { configs: template['iframe_html'] } %>
 <%= render partial: "camps/notice", locals: { configs: template['notice'] } %>
-<%= render partial: 'camps/count_down', locals: { configs: template['top_count_down'] } %>
+

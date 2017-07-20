@@ -42,6 +42,20 @@ export default class ActivityCourseTr extends React.Component {
         </td>
         <td>
           <div className="input-group">
+            <input
+              className="form-control"
+              name={`admin_activity[activity_courses_attributes][${order}][subtitle]`}
+              value={activityCourse.subtitle}
+              onChange={(e) => {
+                if (onChangeObject) {
+                  onChangeObject({ subtitle: e.target.value });
+                }
+              }}
+            />
+          </div>
+        </td>
+        <td>
+          <div className="input-group">
             <span className="input-group-addon">NT$</span>
             <input
               className="form-control"

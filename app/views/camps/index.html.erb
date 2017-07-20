@@ -1,13 +1,27 @@
-<h1>Camp#Index</h1>
+<div class="top-banner camp-top-banner red-bg both-padding-lg medium">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 top-spacing-sm text-right">
+        <%= fb_share_btn %>
+      </div>
+      <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
+        <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.camp_senior') %></small>
+      </div>
+      <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white top-spacing bottom-spacing">
+        <h1 class="top-padding-lg"><%= t('site.camp_main_banner.title') %></h1>
+        <p class="line-height-lg top-spacing-sm"><%= raw t('site.camp_main_banner.subtitle') %></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% template = @camp.payload %>
-<%= render partial: "camps/main_banner" %>
-<%= render partial: "camps/count_down", locals: { configs: template['top_count_down'] } %>
-<%= render partial: "camps/features" %>
-<%= render partial: "camps/course", locals: { configs: template['btn_states'] } %>
-<%= render partial: "camps/sales", locals: { configs: template['sales'] } %>
-<%= render partial: "camps/feedback" %>
-<%= render partial: "camps/qnas", locals: { configs: template['qnas'] } %>
-<%= render partial: "camps/registration" %>
-<%= render partial: "camps/notice", locals: { configs: template['notice'] } %>
-<%= render partial: 'camps/count_down', locals: { configs: template['top_count_down'] } %>
+<% @camps.each do |camp| %>
+  <div>
+    <%= camp.title %>
+    <%= link_to '連結', camp_path(camp.permalink) %>
+  </div>
+<% end %>
+
+
+<%= render 'pages/index/testimonials' %>
+<%= render partial: "shared/speakers", locals: { speakers: @speakers } %>
