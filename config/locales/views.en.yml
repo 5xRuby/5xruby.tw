@@ -72,23 +72,24 @@ en:
       view_outline: '...outline'
       chapter_title: "Lesson %{nth}:"
       location_label: 'Location:'
-    sales:
-      sale_title: Good news!
-    feedback:
-      testimonials: Real Story
-    qnas:
-      title: Q & A
-      q_label: Q：
-      a_label: A：
-      contact_link: Contact form
-      more_questions:
-        - If you question is not answred by the Q&A, you can contact us by
-        - Or call us directly.
-    notice:
-      payment_note: 'Payment:'
-      note: 'Notes:'
-    form:
-      submit: Next step
+    shared:
+      sales:
+        sale_title: Good news!
+      feedback:
+        testimonials: Real Story
+      qnas:
+        title: Q & A
+        q_label: Q：
+        a_label: A：
+        contact_link: Contact form
+        more_questions:
+          - If you question is not answred by the Q&A, you can contact us by
+          - Or call us directly.
+      notice:
+        payment_note: 'Payment:'
+        note: 'Notes:'
+      form:
+        submit: Next step
 
   pages:
     index:

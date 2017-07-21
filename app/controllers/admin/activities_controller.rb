@@ -26,7 +26,7 @@ class Admin::ActivitiesController < AdminController
   def preview
     if (activity = current_model.find_by(permalink: params[:activity_id])&.specialized) && activity.template
       @camp = activity
-      @activity_courses = @camp.activity_courses.includes(:course, { course: [stages: [:translations]] })
+      @activity_courses = @camp.activity_courses.includes(:course, { course: [:translations, { speakers: [:translations] }, { stages: [:translations] }] })
       @order = @camp.orders.new
       @speakers = Speaker.online.includes(:translations).order(:sort_id)
       render 'camps/show', layout: 'application'

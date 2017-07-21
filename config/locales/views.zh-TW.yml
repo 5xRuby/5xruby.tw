@@ -72,24 +72,24 @@ zh-TW:
       view_outline: '...看課程大綱'
       chapter_title: 第 %{nth} 堂：
       location_label: '上課地點：'
-    sales:
-      sale_title: 好康逗相報
-    feedback:
-      testimonials: 聽聽大家怎麼說
-    qnas:
-      title: Q & A
-      q_label: Q：
-      a_label: A：
-      contact_link: 聯絡表單
-      more_questions:
-        - 若以上Q&A無法解答您的疑問，歡迎您透過
-        - 與我們聯繫，或是直接來電洽詢。
-    form:
-      submit: 下一步
-
-    notice:
-      payment_note: 付款方式：
-      note: 注意事項：
+    shared:
+      sales:
+        sale_title: 好康逗相報
+      feedback:
+        testimonials: 聽聽大家怎麼說
+      qnas:
+        title: Q & A
+        q_label: Q：
+        a_label: A：
+        contact_link: 聯絡表單
+        more_questions:
+          - 若以上Q&A無法解答您的疑問，歡迎您透過
+          - 與我們聯繫，或是直接來電洽詢。
+      form:
+        submit: 下一步
+      notice:
+        payment_note: 付款方式：
+        note: 注意事項：
 
   pages:
     index:

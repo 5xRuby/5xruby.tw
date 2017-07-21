@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-sm-6 col-lg-6 col-md-6 center-block text-center">
         <% type = @camp.ended? ? 'ended' : @camp.begun? ? 'begun' : 'available' %>
-        <%= render partial: "camps/count_down_text", locals: { configs: configs[type] }%>
+        <%= render partial: "camps/shared/count_down_text", locals: { configs: configs[type] }%>
       </div>
     </div>
   </div>
