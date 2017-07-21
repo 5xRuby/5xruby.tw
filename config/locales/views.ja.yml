@@ -72,23 +72,24 @@ ja:
       view_outline: '...アウトライン'
       chapter_title: "レッスン %{nth}:"
       location_label: '場所:'
-    sales:
-      sale_title: 情報
-    feedback:
-      testimonials: 受講生の声
-    qnas:
-      title: Q & A
-      q_label: Q：
-      a_label: A：
-      contact_link: お問い合わせフォーム
-      more_questions:
-        - もし他の質問があれば、お気軽に
-        - 連絡してください。あるいは直接5xRubyに電話してください
-    notice:
-      payment_note: '支払い方法:'
-      note: 'ノート:'
-    form:
-      submit: 下一步 # TODO: translate it to jp
+    shared:
+      sales:
+        sale_title: 情報
+      feedback:
+        testimonials: 受講生の声
+      qnas:
+        title: Q & A
+        q_label: Q：
+        a_label: A：
+        contact_link: お問い合わせフォーム
+        more_questions:
+          - もし他の質問があれば、お気軽に
+          - 連絡してください。あるいは直接5xRubyに電話してください
+      notice:
+        payment_note: '支払い方法:'
+        note: 'ノート:'
+      form:
+        submit: 下一步 # TODO: translate it to jp
 
   pages:
     index:
