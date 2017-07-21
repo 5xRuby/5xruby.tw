@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  match '/users(/:id)' => redirect("/"), via: :all
+
   # application
   # devise does not support scoping OmniAuth callbacks under a dynamic segment
   devise_for :users,
