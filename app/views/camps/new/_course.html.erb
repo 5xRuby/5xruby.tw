@@ -1,41 +1,53 @@
-<div class="camp-list">
+<div class="address light-grey-bg">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= @camp.title %></span></h3>
-        <div class="text-center text-grey bottom-spacing">
-          <i class="fa fa-map-marker" aria-hidden="true"></i> <%= t('camps.course.location_label') %>
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block top-spacing-lg">
+        <h3 class="text-center bottom-spacing-sm title"><span><%= t('camps.course.location_label') %></span></h3>
+        <div class="text-center text-grey">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
           <%= link_to "#{t('company.address')} (#{t('company.name')})", t('company.gmap_url'), target: :_blank %>
         </div>
-        <% @activity_courses.each do |activity_course| %>
-          <% course = activity_course.course %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="camp-new-list light-grey-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 both-spacing-lg">
+        <h3 class="text-center bottom-spacing-sm title"><span><%= t('camps.course.you_will_learn') %></span></h3>
+        <div class="row">
+          <div class="col-sm-12 col-lg-6 col-md-6">
+            <% @activity_courses.each do |activity_course| %>
+              <% course = activity_course.course %>
 
-          <!--Start Camp-->
-          <p><%= activity_course.subtitle %></p>
-          <p><%= activity_course.title %></p>
-          <%= raw course.what_will_learn %>
-          <div class="small vex-dialog-opener" data-target="#camp-outline-dialog-<%= course.permalink %>">
-            <a><%= t('camps.course.view_outline') %></a>
-          </div>
-          <!--End Camp-->
-
-          <!-- Start Dialog -->
-          <div class="vex-dialog-content" id="camp-outline-dialog-<%= course.permalink %>" title="<%= course.title %>">
-            <% course.stages.each_with_index do |stage, index| %>
-              <div class="four-spacing">
-                <h4><%= t('camps.course.chapter_title', nth: index) %> <%= tr stage, :title %></h4>
-                <%= raw tr(stage, :description) %>
-                <ul class="date-time bottom-spacing-lg">
-                  <li><i class="fa fa-calendar text-grey" aria-hidden="true"></i> <%= stage.date %></li>
-                  <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= time_range stage %></li>
-                  <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= show_hours stage.hours %>h</li>
-                </ul>
+              <!--Start Camp-->
+              <p><%= activity_course.subtitle %></p>
+              <h4><%= activity_course.title %></h4>
+              <%= raw course.what_will_learn %>
+              <div class="small vex-dialog-opener" data-target="#camp-outline-dialog-<%= course.permalink %>">
+                <a><%= t('camps.course.view_outline') %></a>
               </div>
+              <!--End Camp-->
+
+              <!-- Start Dialog -->
+              <div class="vex-dialog-content" id="camp-outline-dialog-<%= course.permalink %>" title="<%= course.title %>">
+                <% course.stages.each_with_index do |stage, index| %>
+                  <div class="four-spacing">
+                    <h4><%= t('camps.course.chapter_title', nth: index) %> <%= tr stage, :title %></h4>
+                    <%= raw tr(stage, :description) %>
+                    <ul class="date-time bottom-spacing-lg">
+                      <li><i class="fa fa-calendar text-grey" aria-hidden="true"></i> <%= stage.date %></li>
+                      <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= time_range stage %></li>
+                      <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= show_hours stage.hours %>h</li>
+                    </ul>
+                  </div>
+                <% end %>
+              </div>
+              <!-- End Dialog -->
             <% end %>
           </div>
-          <!-- End Dialog -->
-
-        <% end %>
+        </div>
       </div>
     </div>
   </div>

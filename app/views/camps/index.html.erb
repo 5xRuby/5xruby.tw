@@ -5,23 +5,42 @@
         <%= fb_share_btn %>
       </div>
       <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
-        <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.camp_senior') %></small>
+        <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.camps') %></small>
       </div>
       <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white top-spacing bottom-spacing">
-        <h1 class="top-padding-lg"><%= t('site.camp_main_banner.title') %></h1>
-        <p class="line-height-lg top-spacing-sm"><%= raw t('site.camp_main_banner.subtitle') %></p>
+        <h1 class="top-padding-lg"><%= t('site.camps_main_banner.title') %></h1>
+        <p class="line-height-lg top-spacing-sm"><%= raw t('site.camps_main_banner.subtitle') %></p>
+        <p class="top-spacing-lg">
+          <a href="#which-section" class="text-white medium"><%= t('site.camps_main_banner.know_more') %>
+          <br><i class="fa fa-angle-down more-large" aria-hidden="true"></i>
+          </a>
+        </p>
       </div>
     </div>
   </div>
 </div>
 
-<% @camps.each do |camp| %>
-  <div>
-    <%= camp.title %>
-    <%= link_to '連結', camp_path(camp.permalink) %>
+<div id="which-section" class="which-section bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <h3 class="text-center top-spacing-lg title"><span><%= t('site.camp.which_title') %></span></h3>
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <div class="which-list top-spacing-lg">
+          <% @camps.each do |camp| %>
+            <div class="col-sm-6 col-lg-4 col-md-6 text-center bottom-spacing">
+              <p class="line-height-lg medium bottom-spacing">我已經有程式語言底子<br>想更專精於網站開發</p>
+              <%= image_tag "camps-which/feature-which-img1.png", class: "bottom-spacing" %>
+              <p>最適合你的是...</p>
+              <h3><%= camp.title %></h3>
+              <p class="line-height-lg">該課程的詳細介紹<br>詳細介紹詳細介紹</p>
+              <%= link_to '了解更多', camp_path(camp.permalink), class: 'btn btn-red-border top-spacing-sm' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
-
+</div>
 
 <%= render 'pages/index/testimonials' %>
 <%= render partial: "shared/speakers", locals: { speakers: @speakers } %>

@@ -437,6 +437,16 @@ a.text-grey:hover {
   background-color: #fff;
   color: #d90845;
 }
+.btn-red-border {
+  border: 3px solid #d90845;
+  padding: 15px 50px;
+  color: #d90845;
+  font-size: 18px;
+}
+.btn-red-border:hover {
+  background-color: #d90845;
+  color: #fff;
+}
 .btn-login {
   background: #d90845;
   padding: 10.5px 15px;

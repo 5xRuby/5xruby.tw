@@ -2,8 +2,10 @@ zh-TW:
   breadcrumb:
     home: 首頁
     talks: 講座資訊
-    camps: 專業課程
-    camp_senior: 全方位衝刺班
+    camps: 全方位衝刺班
+    camp_senior: 網頁前後端進階班
+    camp_junior: 初心者程式入門班
+    camp_girl: 女性網頁開發專班
     courses: 講座活動
     projects: 專案開發
     training: 企業代訓
@@ -68,10 +70,11 @@ zh-TW:
   camps:
     course:
       time_label: '課程時間：'
-      what_will_learn_label: '%{hours} 小時課程，您會學到：'
+      what_will_learn_label: '%{hours} 小時課程，你會學到：'
       view_outline: '...看課程大綱'
       chapter_title: 第 %{nth} 堂：
-      location_label: '上課地點：'
+      location_label: '上課地點'
+      you_will_learn: '你將會學到'
     shared:
       sales:
         sale_title: 好康逗相報
@@ -191,7 +194,7 @@ zh-TW:
     nav:
       login: 學員登入
       camp: 全方位衝刺班
-      talk: 講座/活動
+      talk: 講座活動
       showcases: 專案開發
       training: 企業代訓
       space: 空間租借
