@@ -28,11 +28,15 @@
         <div class="which-list top-spacing-lg">
           <% @camps.each do |camp| %>
             <div class="col-sm-6 col-lg-4 col-md-6 text-center bottom-spacing">
-              <p class="line-height-lg medium bottom-spacing">我已經有程式語言底子<br>想更專精於網站開發</p>
+              <p class="line-height-lg medium bottom-spacing"><%= raw t("site.camps.#{camp.template_type}.banner") %></p>
               <%= image_tag "camps-which/feature-which-img1.png", class: "bottom-spacing" %>
               <p>最適合你的是...</p>
               <h3><%= camp.title %></h3>
-              <p class="line-height-lg">該課程的詳細介紹<br>詳細介紹詳細介紹</p>
+              <p class="line-height-lg">
+                <% camp.courses.pluck(:title).each do |title| %>
+                  <%= title %><br>
+                <% end %>
+              </p>
               <%= link_to '了解更多', camp_path(camp.permalink), class: 'btn btn-red-border top-spacing-sm' %>
             </div>
           <% end %>
@@ -43,4 +47,4 @@
 </div>
 
 <%= render 'pages/index/testimonials' %>
-<%= render partial: "shared/speakers", locals: { speakers: @speakers } %>
+<%= render partial: 'shared/speakers', locals: { speakers: @speakers } %>

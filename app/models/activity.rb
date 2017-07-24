@@ -53,6 +53,10 @@ class Activity < ApplicationRecord
     self.rules.to_json
   end
 
+  def template_type
+    payload['template_type'] || "old" if is_camp?
+  end
+
   protected
   # callback methods
   def touch_if_needed(course)
