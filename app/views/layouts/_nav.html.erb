@@ -42,7 +42,7 @@
               <% end %>
 
               <ul class="dropdown-menu">
-                <%= nav_li t('.camp'), camps_path %>
+                <%= nav_li t('site.camps.which_title'), camps_path %>
                 <li role="separator" class="divider"></li>
                 <% @camps_online.each do |camp| %>
                   <%= nav_li camp.title, camp_path(camp.permalink) %>

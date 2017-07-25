@@ -20,31 +20,29 @@
   </div>
 </div>
 
-<div id="which-section" class="which-section bottom-padding-lg">
-  <div class="container">
-    <div class="row">
-      <h3 class="text-center top-spacing-lg title"><span><%= t('site.camp.which_title') %></span></h3>
-      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-        <div class="which-list top-spacing-lg">
-          <% @camps.each do |camp| %>
-            <div class="col-sm-6 col-lg-4 col-md-6 text-center bottom-spacing">
-              <p class="line-height-lg medium bottom-spacing"><%= raw t("site.camps.#{camp.template_type}.banner") %></p>
-              <%= image_tag "camps-which/feature-which-img1.png", class: "bottom-spacing" %>
-              <p>最適合你的是...</p>
-              <h3><%= camp.title %></h3>
-              <p class="line-height-lg">
-                <% camp.courses.pluck(:title).each do |title| %>
-                  <%= title %><br>
-                <% end %>
-              </p>
-              <%= link_to '了解更多', camp_path(camp.permalink), class: 'btn btn-red-border top-spacing-sm' %>
-            </div>
-          <% end %>
+<%= render 'pages/index/testimonials' %>
+
+<div id="which-section" class="top-padding-lg">
+  <div class="which-section top-padding-sm bottom-padding-lg">
+    <div class="container">
+      <div class="row">
+        <h3 class="text-center top-spacing-lg title"><span><%= t('site.camps.which_title') %></span></h3>
+        <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+          <div class="which-list top-spacing-lg">
+            <% @camps.each do |camp| %>
+              <div class="col-sm-6 col-lg-4 col-md-6 text-center bottom-spacing">
+                <p class="line-height-lg medium bottom-spacing"><%= raw t("site.camps.#{camp.template_type}.banner") %></p>
+                <%= image_tag t("site.camps.#{camp.template_type}.img"), class: "bottom-spacing" %>
+                <p><%= t('site.camps.suit_you') %></p>
+                <h3><%= camp.title %></h3>
+                <%= link_to '了解更多', camp_path(camp.permalink), class: 'btn btn-red-border top-spacing-sm' %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<%= render 'pages/index/testimonials' %>
 <%= render partial: 'shared/speakers', locals: { speakers: @speakers } %>
