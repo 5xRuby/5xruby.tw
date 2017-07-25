@@ -299,7 +299,7 @@ ja:
       main_features:
         - img: feature-list-img1.png
           title: 実戦講座
-          href_method: camp_path
+          href_method: camps_path
           description:
             - 業界の経験を生かしブートキャンプと実戦講座常に開催、初心者でも安心！
         - img: feature-list-img2.png

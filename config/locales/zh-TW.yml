@@ -292,7 +292,7 @@ zh-TW:
       main_features:
         - img: feature-list-img1.png
           title: 課程教學
-          href_method: camp_path
+          href_method: camps_path
           url: camp
           description:
             - 五倍規劃了一系列從入門到中高階的專業網站開發課程，不管是初學或已有基礎，都可以快速上手！

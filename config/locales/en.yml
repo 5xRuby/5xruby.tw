@@ -300,7 +300,7 @@ en:
       main_features:
         - img: feature-list-img1.png
           title: Courses
-          href_method: camp_path
+          href_method: camps_path
           description:
             - We have experts teaching these in either basic and advanced level, making you get on board eazily!
         - img: feature-list-img2.png
