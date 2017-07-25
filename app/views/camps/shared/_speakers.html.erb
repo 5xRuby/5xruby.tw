@@ -1,0 +1,27 @@
+<!-- Start Speakers -->
+<div class="feedback-section bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
+        <h3 class="title text-center both-spacing-lg"><span><%= t('.speakers') %></span></h3>
+        <% speakers.each do |speaker| %>
+          <%= render partial: "shared/member", locals: { item: {
+              type: 'speaker',
+              avatar: speaker.avatar.thumb,
+              name: tr(speaker, :name),
+              blog_url: speaker.blog_url,
+              facebook_url: speaker.facebook_url,
+              twitter_url: speaker.twitter_url,
+              google_url: speaker.google_url,
+              github_url: nil,
+              website_url: nil,
+              role_text: speaker.role_text,
+              summary: tr_and_convert_newline2br(speaker, :summary)
+            }} %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Speakers -->
+
