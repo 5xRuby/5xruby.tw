@@ -1,6 +1,6 @@
 class CampsController < ApplicationController
   def index
-    @camps = Activity::Camp.online
+    @camps = Activity::Camp.online.order(:id)
     @speakers = Speaker.online.includes(:translations).order(:sort_id)
   end
 
