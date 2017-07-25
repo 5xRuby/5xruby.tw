@@ -389,8 +389,18 @@ zh-TW:
       - name: 教育訓練
         img: edu.png
         content: 如果您對程式設計是完全的新手，或是本身已有其它程式語言的基礎也沒問題，<br>我們一系列從入門到中、高階的講座，將引導您有效率的掌握 Ruby/Rails 的重點。
-    camp:
+    camps:
       which_title: 哪種課程最適合我？
+      old:
+        banner: 我已經有程式語言底子<br>想更專精於網站開發
+        img: camps-which/feature-which-img1.png
+      new:
+        banner: 我完全沒有接觸過程式<br>想重頭建構良好基礎
+        img: camps-which/feature-which-img2.png
+      girl:
+        banner: 我是女性<br>想培養程式相關的一技之長
+        img: camps-which/feature-which-img3.png
+    camp:
       features:
         - img: feature-list-img1.png
           title: 第一線經驗直授
