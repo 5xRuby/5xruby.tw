@@ -375,7 +375,10 @@ zh-TW:
       subtitle: 網頁前後端進階班包含網站開發基礎概念詳解到實作經驗，<br>精心設計進階課程讓你不再似懂非懂！
     camp_junior_main_banner:
       title: 從零開始也能快速上手
-      subtitle: 帶領你初探網站架構的風光，<br>用 51 小時拉近你和前後端的距離。
+      subtitle: 帶領你初探網站架構的風光<br>用 66 小時拉近你和前後端的距離
+    camp_girl_main_banner:
+      title: Be a Rails Girl 就從這裡開始
+      subtitle: 專為技術女孩設計的網站開發課程，<br>成為職場耀眼的女性工程師再也不只是夢想！
     space_main_banner:
       title: 五倍紅寶石 台北出礦坑
       subtitle: 三鐵共構，300M/100M 高速網路，場地租借優質選擇
@@ -391,6 +394,7 @@ zh-TW:
         content: 如果您對程式設計是完全的新手，或是本身已有其它程式語言的基礎也沒問題，<br>我們一系列從入門到中、高階的講座，將引導您有效率的掌握 Ruby/Rails 的重點。
     camps:
       which_title: 哪種課程最適合我？
+      suit_you: 最適合你的是...
       old:
         banner: 我已經有程式語言底子<br>想更專精於網站開發
         img: camps-which/feature-which-img1.png
@@ -417,14 +421,31 @@ zh-TW:
     camp_new:
       features:
         - img: feature-list-img1.png
-          title: 標題一標題一
-          description: 五倍的師資都是業界資深前輩<br>讓你除了懂得理論<br>更學會學校不教的業界祕笈
+          title: 專業師資團隊帶領
+          description: 講師皆為授課多年的資深教師<br>除了幫你打穩扎實基礎<br>更讓你觸類旁通舉一反三！
         - img: feature-list-img2.png
-          title: 標題二標題二
-          description: 課程內容絕不灌水不教速成<br>除了打好扎實基礎<br>也知道如何在職場上運用自如
+          title: 課程扎實與時俱進
+          description: 包套課程打好初學基礎，掌握脈絡<br>課程內容不教速成<br>奠定 coding 的入門磚
         - img: feature-list-img3.png
-          title: 標題三標題三
-          description: 四種系列課程<br>讓你依自身狀況自由搭配<br>避免重複學習已經學會的東西
+          title: 搭配完善輔導系統
+          description: 社群24小時不打烊，100 % 回覆率<br>設有課堂助教、課後五倍讀書會<br>徹底解決放在心裡口難開的疑問
+        - img: feature-list-img4.png
+          title: 進階學習轉銜無礙
+          description: 透過穩紮穩打的教學系統<br>學習效率不打折扣<br>轉銜進階課程更容易！
+    camp_girl:
+      features:
+        - img: feature-list-img1.png
+          title: 專屬女性的學習環境
+          description: 藉著舉辦多屆Rails Girls的經驗<br>設計專屬女性的技術專班<br>讓妳更自在學習程式語言
+        - img: feature-list-img2.png
+          title: 業界資深講師陣容
+          description: 活躍於業界第一線的導師們<br>不只有豐富的教學經驗<br>還傳授妳實戰必備經驗！
+        - img: feature-list-img3.png
+          title: 實作購物車網站
+          description: 課堂上實際製作購物車網站<br>不是只有複製貼上程式碼<br>帶回成品更了解箇中奧妙
+        - img: feature-list-img4.png
+          title: 搭配完善輔導系統
+          description: 社群24小時不打烊，100 % 回覆率<br>設有課堂助教、課後五倍讀書會<br>徹底解決放在心裡口難開的疑問
     description: 「五倍紅寶石」是由幾位台灣 Ruby 社群的朋友共同成立的一家公司，希望透過教育訓練、企業培訓等講座，將 Ruby 推廣到校園、企業、開發者。提供的服務包括：程式教育訓練、企業技術培訓與諮詢、活動場地租借與專案委托製作。
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'
