@@ -19,7 +19,6 @@ zh-TW:
   talks:
     index:
       all_talks: 所有講座
-      speakers: 講師陣容 Speakers
     info:
       hours_label: '時數:'
       outdated: 講座已開始，不接受報名
@@ -93,6 +92,9 @@ zh-TW:
       notice:
         payment_note: 付款方式：
         note: 注意事項：
+      speakers: 
+        speakers: 講師陣容 Speakers
+
 
   pages:
     index:
@@ -234,3 +236,5 @@ zh-TW:
     profile_sidebar:
       profile: 會員資料
       password: 更改密碼
+    speakers:
+      speakers: 講師陣容 Speakers

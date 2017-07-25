@@ -23,6 +23,7 @@ class Activity < ApplicationRecord
   has_many :translations, as: :translatable
   has_many :activity_courses
   has_many :orders
+  has_many :speakers, -> { distinct }, through: :courses
   accepts_nested_attributes_for :activity_courses, allow_destroy: true
 
   # validation macros
