@@ -28,7 +28,7 @@ class Admin::ActivitiesController < AdminController
       @camp = activity
       @activity_courses = @camp.activity_courses.includes(:course, { course: [:translations, { speakers: [:translations] }, { stages: [:translations] }] })
       @order = @camp.orders.new
-      @speakers = Speaker.online.includes(:translations).order(:sort_id)
+      @speakers = @camp.speakers
       render 'camps/show', layout: 'application'
     else
       @talk = activity

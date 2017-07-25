@@ -8,6 +8,6 @@ class CampsController < ApplicationController
     @camp = Activity::Camp.find_by_permalink(params[:id])
     @activity_courses = @camp.activity_courses.includes(:course, { course: [:translations, { speakers: [:translations] }, { stages: [:translations] }] })
     @order = @camp.orders.new
-    @speakers = Speaker.online.includes(:translations).order(:sort_id)
+    @speakers = @camp.speakers
   end
 end
