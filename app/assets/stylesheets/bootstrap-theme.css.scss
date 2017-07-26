@@ -299,7 +299,19 @@ footer .fa-github:hover {
   padding-bottom: 2px;
 }
 .camp-top-banner {
+  background: image-url('camp-top-main-photo.jpg') no-repeat center center;
+  background-size: cover;
+}
+.camp-senior-banner {
   background: image-url('camp-senior-main-photo.jpg') no-repeat center center;
+  background-size: cover;
+}
+.camp-junior-banner {
+  background: image-url('camp-junior-main-photo.jpg') no-repeat center center;
+  background-size: cover;
+}
+.camp-girl-banner {
+  background: image-url('camp-girl-main-photo.jpg') no-repeat center center;
   background-size: cover;
 }
 .talks-top-banner {
