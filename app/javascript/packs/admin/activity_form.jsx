@@ -23,11 +23,27 @@ class ActivityFormCourseFields extends React.Component {
   }
 
   componentWillMount() {
+    // Create a empty object with default value 0, check priority is not null and not duplicate
+    const priorityActivityCourses = []
+
     // Reduce activityCourses to an object
     const activityCourses = _.reduce(this.props.activityCourses, (o, i) => {
+      priorityActivityCourses.push(i.priority)
       o[i.id] = i;
       return o;
     }, {});
+
+    // reorder activityCourses priority if have invalid value
+    var invalidPriority = _.filter(priorityActivityCourses, function (value, index, iteratee) {
+      return _.includes(iteratee, value, index + 1) || value === null;
+    });
+
+    if (invalidPriority.length !== 0) {
+      var i = 1;
+      for (var index in activityCourses) {
+        activityCourses[index].priority = i++;
+      }
+    }
 
     // Convert rule to an object
     const rules = _.reduce(this.props.rules, (obj, value, key) => {
