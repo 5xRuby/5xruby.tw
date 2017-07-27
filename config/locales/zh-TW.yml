@@ -339,10 +339,6 @@ zh-TW:
           title: "Agoda product owner"
           img: "testimonial_benlin.jpg"
           content: "「五倍紅寶石」的導師們都是業界經驗豐富的實戰高手，提供的講座及咨詢絕對能讓你大幅省去自行摸索的時間。"
-        - name: Max
-          title: "呂元鐘 Max Lu, Buyble 國際精品購物 創辦人"
-          img: "testimonial_max.jpg"
-          content: "曾有幸與徐曦與見龍一起工作，徐曦自我要求與向上進取的態度令人稱佩，見龍對危機處理與當責的責任感也值得稱許。「五倍紅寶石」的其他夥伴也是一時之選，相信這是一個很棒的組合。"
     talks_main_banner:
       title: 業界第一線直接傳授
       subtitle: 馬上掌握使用 Ruby 開發的快速與樂趣
@@ -399,10 +395,10 @@ zh-TW:
         banner: 我已經有程式語言底子<br>想更專精於網站開發
         img: camps-which/feature-which-img1.png
       new:
-        banner: 我完全沒有接觸過程式<br>想重頭建構良好基礎
+        banner: 我完全沒有接觸過程式<br>想從頭建構良好基礎
         img: camps-which/feature-which-img2.png
       girl:
-        banner: 我是女性<br>想培養程式相關的一技之長
+        banner: 我是有程式基礎的女生<br>想成為女性工程師
         img: camps-which/feature-which-img3.png
     camp:
       features:
