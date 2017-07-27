@@ -51,6 +51,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_nav_camp_online
-    @camps_online = Activity::Camp.online
+    @camps_online = Activity::Camp.online.order(:id)
   end
 end
