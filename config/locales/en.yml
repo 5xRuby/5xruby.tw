@@ -344,10 +344,6 @@ en:
           title: "CEO@POP"
           img: "testimonial_benlin.jpg"
           content: "The coaches in 5xRuby are the top players in the market. The courses they provided will save you a lot of time exploring Ruby/Rails on your own."
-        - name: Max Lu
-          title: "founder of Buyble, an international boutique shopping website"
-          img: "testimonial_max.jpg"
-          content: "I was very honered to have worked with Carol and Eddie. I admire Carol's self-discipline and aspiration. I praise Eddie for his exellence in crisis handling and sense of responsibility. The other partners in 5xRuby are also experts in this field. I beleive this is a great team!"
     lectures_main_banner:
       folder: lectures-main-banner/en
       sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]

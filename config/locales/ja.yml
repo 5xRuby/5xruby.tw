@@ -342,10 +342,6 @@ ja:
           title: "POP CEO"
           img: "testimonial_benlin.jpg"
           content: "5xRubyのコーチは、この業界のトッププレイヤーたちです。このコースに参加することは、あなた自身で学ぶより、大幅に時間をセーブしてくれることでしょう。"
-        - name: Max
-          title: "Buyble 創業者（インターナショナルブティックショッピングウェブサイト）"
-          img: "testimonial_max.jpg"
-          content: "私は、本当にCarolとEddieと一緒に学べたことを光栄に思います。Carolは、自己規律があり、熱心です。Eddieは、問題解決能力に優れており、本当に責任感があります。5xRubyの他のパートナーもこの分野のエキスパートです。このチームは最高です！"
     lectures_main_banner:
       folder: lectures-main-banner/ja
       sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]

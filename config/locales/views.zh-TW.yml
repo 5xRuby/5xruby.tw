@@ -4,7 +4,7 @@ zh-TW:
     talks: 講座資訊
     camps: 全方位衝刺班
     camp_senior: 網頁前後端進階班
-    camp_junior: 初心者程式入門班
+    camp_junior: 初心者網站架構入門班
     camp_girl: 女性網頁開發專班
     courses: 講座活動
     projects: 專案開發
@@ -92,7 +92,7 @@ zh-TW:
       notice:
         payment_note: 付款方式：
         note: 注意事項：
-      speakers: 
+      speakers:
         speakers: 講師陣容 Speakers
 
 
