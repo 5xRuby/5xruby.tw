@@ -5,7 +5,7 @@ Software Dependencies (OS X)
 ----------------------------
 
 ```bash
-$ brew install postgres redis imagemagick pkg-config
+$ brew install postgres redis imagemagick@6 pkg-config
 ```
 
 Setup
