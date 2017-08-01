@@ -476,6 +476,12 @@ footer .fa-github:hover {
 }
 
 /*camp list*/
+.camps-list .speakers {
+  background: #f7f7f7 !important;
+}
+.camps-list .feedback-section {
+  background: #fff !important;
+}
 .camp-wrap .speaker {
   width: 50px;
   height: 50px;
@@ -620,6 +626,7 @@ footer .fa-github:hover {
 .speaker-wrap {
   border: 1px solid #ddd;
   padding: 10px;
+  background: #fff;
 }
 .speaker-img-wrap {
   position: relative;

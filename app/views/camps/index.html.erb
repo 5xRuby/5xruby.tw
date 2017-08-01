@@ -1,47 +1,49 @@
-<div class="top-banner camp-top-banner red-bg both-padding-lg medium">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-lg-12 col-md-12 top-spacing-sm text-right">
-        <%= fb_share_btn %>
-      </div>
-      <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
-        <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.camps') %></small>
-      </div>
-      <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white top-spacing bottom-spacing">
-        <h1 class="top-padding-lg"><%= t('site.camps_main_banner.title') %></h1>
-        <p class="line-height-lg top-spacing-sm"><%= raw t('site.camps_main_banner.subtitle') %></p>
-        <p class="top-spacing-lg">
-          <a href="#which-section" class="text-white medium"><%= t('site.camps_main_banner.know_more') %>
-          <br><i class="fa fa-angle-down more-large" aria-hidden="true"></i>
-          </a>
-        </p>
+<div class="camps-list">
+  <div class="top-banner camp-top-banner red-bg both-padding-lg medium">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 col-md-12 top-spacing-sm text-right">
+          <%= fb_share_btn %>
+        </div>
+        <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
+          <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.camps') %></small>
+        </div>
+        <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white top-spacing bottom-spacing">
+          <h1 class="top-padding-lg"><%= t('site.camps_main_banner.title') %></h1>
+          <p class="line-height-lg top-spacing-sm"><%= raw t('site.camps_main_banner.subtitle') %></p>
+          <p class="top-spacing-lg">
+            <a href="#which-section" class="text-white medium"><%= t('site.camps_main_banner.know_more') %>
+            <br><i class="fa fa-angle-down more-large" aria-hidden="true"></i>
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id="which-section" class="top-padding-lg">
-  <div class="which-section top-padding-sm bottom-padding">
-    <div class="container">
-      <div class="row">
-        <h3 class="text-center top-spacing-lg title"><span><%= t('site.camps.which_title') %></span></h3>
-        <div class="col-sm-12 col-lg-12 col-md-12 center-block">
-          <div class="which-list top-spacing-lg">
-            <% @camps.each do |camp| %>
-              <div class="col-sm-4 col-lg-4 col-md-4 text-center bottom-spacing">
-                <p class="line-height-lg medium bottom-spacing"><%= raw t("site.camps.#{camp.template_type}.banner") %></p>
-                <%= image_tag t("site.camps.#{camp.template_type}.img"), class: "bottom-spacing" %>
-                <p><%= t('site.camps.suit_you') %></p>
-                <h3><%= camp.title %></h3>
-                <%= link_to '了解更多', camp_path(camp.permalink), class: 'btn btn-red-border top-spacing-sm bottom-spacing' %>
-              </div>
-            <% end %>
+  <div id="which-section" class="top-padding-lg">
+    <div class="which-section top-padding-sm bottom-padding">
+      <div class="container">
+        <div class="row">
+          <h3 class="text-center top-spacing-lg title"><span><%= t('site.camps.which_title') %></span></h3>
+          <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+            <div class="which-list top-spacing-lg">
+              <% @camps.each do |camp| %>
+                <div class="col-sm-4 col-lg-4 col-md-4 text-center bottom-spacing">
+                  <p class="line-height-lg medium bottom-spacing"><%= raw t("site.camps.#{camp.template_type}.banner") %></p>
+                  <%= image_tag t("site.camps.#{camp.template_type}.img"), class: "bottom-spacing" %>
+                  <p><%= t('site.camps.suit_you') %></p>
+                  <h3><%= camp.title %></h3>
+                  <%= link_to '了解更多', camp_path(camp.permalink), class: 'btn btn-red-border top-spacing-sm bottom-spacing' %>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<%= render partial: 'shared/speakers', locals: { speakers: @speakers } %>
-<%= render 'pages/index/testimonials' %>
+  <%= render partial: 'shared/speakers', locals: { speakers: @speakers } %>
+  <%= render 'pages/index/testimonials' %>
+</div>
