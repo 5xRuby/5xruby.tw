@@ -565,6 +565,13 @@ a.text-grey:hover {
   text-align: right;
   clear: both;
 }
+.timeline .event-wrap ul {
+  list-style: none;
+}
+.timeline .event-wrap li::before {
+  content: '•';
+  margin-right: 5px;
+}
 .timeline .event-wrap::before {
   position: absolute;
   top: 50%;
