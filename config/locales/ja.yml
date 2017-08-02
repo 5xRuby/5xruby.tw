@@ -271,6 +271,15 @@ ja:
       about: 「ダイヘン！USB Type-C ダ！」
       skills: C/C++ / Web / JavaScript / Python / free(wallet)
 
+    - name: Karl Li
+      title: プロのキーボード
+      avatar: karl.jpg
+      twitter: https://twitter.com/killtw
+      github: https://github.com/killtw
+      facebook: https://www.facebook.com/killtw
+      about: 「私は間違った場所にいますか？」
+      skills: PHP / Laravel
+
     # 實習生放正職後面
     - name: 文月
       title: 8皿食べる姫
