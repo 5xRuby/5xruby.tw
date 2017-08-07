@@ -1,0 +1,9 @@
+<%= simple_form_for @resource, url: profile_password_path, wrapper: :vertical_form do |f| %>
+  <%= f.input :current_password, required: true %>
+  <%= f.input :password, autocomplete: "off", required: true %>
+  <%= f.input :password_confirmation, required: true %>
+
+  <div class="form-group">
+    <%= f.button :submit, t('.edit_password'), class: 'btn btn-default btn btn-block btn-login both-spacing' %>
+  </div>
+<% end %>

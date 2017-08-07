@@ -1,0 +1,17 @@
+<div class="light-grey-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-6 col-md-6 top-spacing center-block white-bg">
+        <%= render "users/orders/detail" %>
+        <%= render "users/orders/progress_bar" %>
+
+        <h2 class="text-center"><%= t('.title')%></h2>
+
+        <%= simple_form_for(:credit_card, url: tappay_path) do |f| %>
+          <%= f.input :data, as: :tappay_card, label: false %>
+          <%= f.button :submit, t('.submit'), class: "btn btn-red center-block" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

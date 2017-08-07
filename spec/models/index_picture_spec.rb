@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'support/factory_girl'
 
 RSpec.describe IndexPicture, type: :model do
   it 'index_picture should at least has one img' do

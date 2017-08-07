@@ -1,0 +1,25 @@
+
+<div class="col-sm-6 col-lg-6 col-md-4 bottom-spacing">
+  <%= link_to talk_path(id: talk.permalink) do %>
+    <div class="lecture-wrap">
+      <%= image_tag talk.image.thumb, class: 'cover' %>
+      <h4 class="rl-padding"><%= tr talk, :title %></h4>
+      <div class="rl-padding bottom-padding">
+        <% if talk.outdated? %>
+          <span class="small"><%= t('.outdated') %></span>
+        <% elsif talk.about_to_begin? %>
+          <span class="yellow-tag small"><%= t('.about_to_begin') %></span>
+        <% else %>
+          <span class="orange-tag small"><%= t('.opening') %></span>
+        <% end %>
+        <%#<span class="orange-tag small">剩<span class="text-brown">2</span>名額</span>%>
+        <span class="date text-grey small"><%= talk.start_on %></span>
+        <p class="descri both-spacing-sm">
+          <%= tr talk.course, :summary %>
+        </p>
+        <span class="text-grey small"><%= t('.speaker_label') %> <%= speakers_name talk %>  | <%= t('.hours_label') %> <%= talk.hours %></span>
+      </div>
+    </div>
+  <% end %>
+</div>
+

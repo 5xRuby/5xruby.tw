@@ -1,0 +1,14 @@
+<%= simple_nested_form_for @order do |f| %>
+  <%= render_react_component(
+    id: "form",
+    data: {
+      "activity-courses": @camp.activity_courses.to_hash_with_title,
+      "rules": @camp.rules
+    }
+  )%>
+  <%= f.hidden_field :activity_id %>
+
+  <div class="text-center">
+    <%= f.button :submit, t('.submit'), class: "btn btn-red" %>
+  </div>
+<%end%>

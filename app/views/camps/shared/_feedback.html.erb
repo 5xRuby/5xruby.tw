@@ -1,0 +1,16 @@
+<div class="camp-feedback feedback-section bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
+        <h3 class="text-center top-spacing-lg bottom-spacing title">
+          <span><%= t('.testimonials') %></span>
+        </h3>
+        <%= render partial: 'shared/carousel', locals: { \
+          items: @camp.payload['testimonials'], \
+          item_partial: 'camps/shared/testimonial', \
+          latency: @camp.payload['testimonials_latency'], \
+          slides: 3 } %>
+      </div>
+    </div>
+  </div>
+</div>

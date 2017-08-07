@@ -1,0 +1,22 @@
+<div class="camp-qna light-grey-bg bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <h3 class="text-center top-spacing-lg title"><span><%= t('.title') %></span></h3>
+      <% base_index = 0; 2.times do %>
+        <div class="col-sm-6 col-lg-6 col-md-6 rl-padding-lg">
+          <div class="line-height-lg">
+            <% base_index = (configs.count/2).times do |i| %>
+              <h4 class="top-spacing"><%= "#{t('.q_label')}#{configs[base_index + i]['q']}" %></h4>
+              <p><%= "#{t('.a_label')}#{configs[base_index + i]['a']}" %></p>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+      <div class="col-sm-12 col-lg-12 col-md-12 text-center both-spacing">
+        <%= t('.more_questions')[0] %>
+        <%= link_to t('.contact_link'), contacts_path, target: :_blank %>
+        <%= t('.more_questions')[1] %>
+      </div>
+    </div>
+  </div>
+</div>

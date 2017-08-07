@@ -1,0 +1,71 @@
+#survey-form {
+  .no-form-group {
+    margin: 0 0 15px;
+  }
+
+  .gray-border {
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+  }
+
+  .gray-bg {
+    background-color: #fdfaf9;
+  }
+
+  .sortable-item {
+    margin-bottom: 15px;
+  }
+
+  .left-no-padding {
+    padding-left: 0;
+  }
+
+  .no-list-style {
+    list-style: none;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .bottom-spacing-xsm {
+    margin: 0 0 5px 0;
+  }
+
+  .bottom-spacing-sm {
+    margin: 0 0 15px 0;
+  }
+
+  .both-spacing-sm {
+    margin: 15px 0;
+  }
+
+  .both-padding {
+    padding: 15px 0;
+  }
+
+  .drag-handle {
+    height: 78px;
+    line-height: 78px;
+    text-align: center;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .vertical-middle {
+    &:before {
+      content:'';
+      width:0;
+      height:100%;
+      display:inline-block;
+      position:relative;
+      vertical-align:middle;
+    }
+
+    select {
+      display: inline-block;
+    }
+  }
+}

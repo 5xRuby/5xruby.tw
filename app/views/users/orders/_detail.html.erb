@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="col-md-8">活動/講座名稱</th>
+      <th class="col-md-4 text-right">價格</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @order.course_enrollments.each do |course_enrollment| %>
+      <tr>
+        <td><%= course_enrollment.activity_course.title %></td>
+        <td class="text-right">NT$ <%= course_enrollment.activity_course.price.to_i %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td></td>
+      <td class="text-right">小計 NT$ <%= @order.amount.to_i %></td>
+    </tr>
+  </tbody>
+</table>

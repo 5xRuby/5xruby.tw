@@ -308,7 +308,7 @@ ja:
       main_features:
         - img: feature-list-img1.png
           title: 実戦講座
-          href_method: camp_path
+          href_method: camps_path
           description:
             - 業界の経験を生かしブートキャンプと実戦講座常に開催、初心者でも安心！
         - img: feature-list-img2.png
@@ -355,9 +355,11 @@ ja:
           title: "Buyble 創業者（インターナショナルブティックショッピングウェブサイト）"
           img: "testimonial_max.jpg"
           content: "私は、本当にCarolとEddieと一緒に学べたことを光栄に思います。Carolは、自己規律があり、熱心です。Eddieは、問題解決能力に優れており、本当に責任感があります。5xRubyの他のパートナーもこの分野のエキスパートです。このチームは最高です！"
-    talks_main_banner:
-      title: Courses/Events
-      subtitle: 　
+    lectures_main_banner:
+      folder: lectures-main-banner/ja
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Lectures
     about_main_banner:
       title: About Us
     contacts_main_banner:
