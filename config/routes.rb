@@ -12,7 +12,6 @@ Rails.application.routes.draw do
     get :login, :press, :space, :training, :about, :members, :contacts, :faq, :sitemap, controller: :pages
     get 'privacy-policy', to: 'pages#privacy_policy'
     get 'terms-of-service', to: 'pages#terms_of_service'
-    get '/camp' => redirect('/camps')
     resources :posts, only: %i[index show]
     resources :talks, only: %i[index show]
     resources :contacts, only: :create
@@ -20,6 +19,7 @@ Rails.application.routes.draw do
     resources :camps, only: [:index, :show]
     resources :redactor_images, only: :create
     post 'rental/calculate'
+    get '/camp' => redirect('/camps')
 
     Settings.alias.each do |path|
       get path.from, to: redirect(path.to)
