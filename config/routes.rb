@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     get :login, :press, :space, :training, :about, :members, :contacts, :faq, :sitemap, controller: :pages
     get 'privacy-policy', to: 'pages#privacy_policy'
     get 'terms-of-service', to: 'pages#terms_of_service'
-    get :camp, to: 'camps#index'
+    get '/camp' => redirect('/camps')
     resources :posts, only: %i[index show]
     resources :talks, only: %i[index show]
     resources :contacts, only: :create
