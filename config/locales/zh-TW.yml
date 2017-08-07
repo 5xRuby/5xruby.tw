@@ -71,21 +71,13 @@ zh-TW:
     blog: http://kaochenlong.com/
     description: |
       我們是一群在台灣的 Ruby 程式語言的愛好者，每天的工作都是跟 Ruby/Rails 相關。
-
       Ruby on Rails 快速開發的優勢，在國外企業與創業圈極為熱門；而 Ruby 語言本身的自然與優雅簡潔，也讓工程師們工作起來更加快樂。但是，在台灣實際真的有使用 Ruby/Rails 做為主要開發工具的企業卻仍是少數。
-
       我們這幾年來持續的在台灣大專院校(成大、輔大、台北商專..等校)開授 Ruby 以及 Rails 講座，觀察學生們的學習狀況，大多覺得 Ruby 跟 Rails 並不難學，自己看書或是照著官網文件練習就能練到一定的程度。但要進階至滿足實戰需求，不容易藉由自學可以短期達成，需要更多的實戰經驗，或是導師的帶領。也因此，在台灣，較資深或有經驗的 Ruby/Rails 開發者相當難找。
-
       我們也訪問了一些企業為什麼不採用 Ruby/Rails 的原因，大多也是因為資深的 Ruby/Rails 的工程師難找，或是背後沒有商業公司的技術支援，遇到問題的時候不知道該找誰求救。
-
       近一、二年來，Ruby/Rails 的人才需求增加，年薪超過百萬的高薪職缺紛紛出現，吸引越來越多人想要進入 Ruby/Rails 的領域。除自行學習以外，也很積極參加社群舉辦的聚會與分享、交流。
-
       「如果有更快速、更有效的方法能夠成為即戰力就好了!」，這樣的需求聲音漸漸出現。
-
       於是，我們這幾位愛好 Ruby 的朋友便開始討論「也許我們應該來成立一間專門提供 Ruby/Rails 相關的技術諮詢或是教育訓練的公司」。
-
       我們最終的目的，是希望在台灣可以有越來越多的企業能了解或採用 Ruby 這個優雅、有趣，並且極具生產力的程式語言做為主要開發工具，更快速的實現您的想法。
-
       至於公司名稱為什麼是「五倍」紅寶石，不是三倍也不是一百倍? 這又是另一個有趣的故事了：）
   members:
     - <<: *ceo
@@ -300,7 +292,7 @@ zh-TW:
       main_features:
         - img: feature-list-img1.png
           title: 課程教學
-          href_method: camp_path
+          href_method: camps_path
           url: camp
           description:
             - 五倍規劃了一系列從入門到中高階的專業網站開發課程，不管是初學或已有基礎，都可以快速上手！
@@ -324,7 +316,7 @@ zh-TW:
             - 追求 Ruby 開發社群的永續經營，致力於舉辦各類活動，促進 Ruby 社群良好發展。
       testimonials:
         - name: Victor Lam
-          title: "GoGoVan 產品經理，Full Stack Developer."
+          title: "連續創業家，自由工作者"
           img: "testimonial_victor.jpg"
           content: "Programmer 最有價值的是經驗值，「五倍紅寶石」的導師都是社群內數一數二的資深 Rubyist，由他們來帶領學員一探 Ruby 世界的神奇之處，實在是最佳選擇。"
         - name: Jason Hsu
@@ -344,7 +336,7 @@ zh-TW:
           img: "testimonial_johnsie.jpg"
           content: "選擇程式語言很重要，但選擇優秀的導師更重要！能跟擁有多年 Ruby/Rails 實戰經驗、活躍於社群的頂尖 Rubyist 學習，將一窺程式開發殿堂之藝術！我堅信：專業事讓專業的來，而專業的「五倍紅寶石」是寶藏，就等大家來挖掘。"
         - name: Ben Lin
-          title: "CEO@POP"
+          title: "Agoda product owner"
           img: "testimonial_benlin.jpg"
           content: "「五倍紅寶石」的導師們都是業界經驗豐富的實戰高手，提供的講座及咨詢絕對能讓你大幅省去自行摸索的時間。"
         - name: Max
@@ -374,9 +366,19 @@ zh-TW:
     projects_main_banner:
       title: 以頂尖技術快速打造產品
       subtitle: 網羅各領域專業人才，為您提供最好的服務
-    camp_main_banner:
-      title: 網站開發全方位衝刺班
-      subtitle: 網站開發基礎概念到實作經驗，<br>全才師資讓你從零開始也能快速上手！
+    camps_main_banner:
+      title: 想成為超搶手的全端工程師？
+      subtitle: 加入五倍紅寶石的全方位衝刺班，<br>成為前後端都上手的全端工程師，讓你就業、創業都得心應手！
+      know_more: 了解更多
+    camp_senior_main_banner:
+      title: 想讓你的網頁技術更精進嗎？
+      subtitle: 網頁前後端進階班包含網站開發基礎概念詳解到實作經驗，<br>精心設計進階課程讓你不再似懂非懂！
+    camp_junior_main_banner:
+      title: 從零開始也能快速上手
+      subtitle: 帶領你初探網站架構的風光<br>用 66 小時拉近你和前後端的距離
+    camp_girl_main_banner:
+      title: Be a Rails Girl 就從這裡開始
+      subtitle: 專為技術女孩設計的網站開發課程，<br>成為職場耀眼的女性工程師再也不只是夢想！
     space_main_banner:
       title: 五倍紅寶石 台北出礦坑
       subtitle: 三鐵共構，300M/100M 高速網路，場地租借優質選擇
@@ -390,6 +392,18 @@ zh-TW:
       - name: 教育訓練
         img: edu.png
         content: 如果您對程式設計是完全的新手，或是本身已有其它程式語言的基礎也沒問題，<br>我們一系列從入門到中、高階的講座，將引導您有效率的掌握 Ruby/Rails 的重點。
+    camps:
+      which_title: 哪種課程最適合我？
+      suit_you: 最適合你的是...
+      old:
+        banner: 我已經有程式語言底子<br>想更專精於網站開發
+        img: camps-which/feature-which-img1.png
+      new:
+        banner: 我完全沒有接觸過程式<br>想從頭建構良好基礎
+        img: camps-which/feature-which-img2.png
+      girl:
+        banner: 我是有程式基礎的女生<br>想成為女性工程師
+        img: camps-which/feature-which-img3.png
     camp:
       features:
         - img: feature-list-img1.png
@@ -404,6 +418,34 @@ zh-TW:
         - img: feature-list-img3.png
           title: 職涯輔導社群交流
           description: 五倍致力於Ruby社群經營多年<br>不管想求職轉職想創業<br>都可以提供你最專業的建議
+    camp_new:
+      features:
+        - img: feature-list-img1.png
+          title: 專業師資團隊帶領
+          description: 講師皆為授課多年的資深教師<br>除了幫你打穩扎實基礎<br>更讓你觸類旁通舉一反三！
+        - img: feature-list-img2.png
+          title: 課程扎實與時俱進
+          description: 包套課程打好初學基礎，掌握脈絡<br>課程內容不教速成<br>奠定 coding 的入門磚
+        - img: feature-list-img3.png
+          title: 搭配完善輔導系統
+          description: 社群24小時不打烊，100 % 回覆率<br>設有課堂助教、課後五倍讀書會<br>徹底解決放在心裡口難開的疑問
+        - img: feature-list-img4.png
+          title: 進階學習轉銜無礙
+          description: 透過穩紮穩打的教學系統<br>學習效率不打折扣<br>轉銜進階課程更容易！
+    camp_girl:
+      features:
+        - img: feature-list-img1.png
+          title: 專屬女性的學習環境
+          description: 藉著舉辦多屆Rails Girls的經驗<br>設計專屬女性的技術專班<br>讓妳更自在學習程式語言
+        - img: feature-list-img2.png
+          title: 業界資深講師陣容
+          description: 活躍於業界第一線的導師們<br>不只有豐富的教學經驗<br>還傳授妳實戰必備經驗！
+        - img: feature-list-img3.png
+          title: 實作購物車網站
+          description: 課堂上實際製作購物車網站<br>不是只有複製貼上程式碼<br>帶回成品更了解箇中奧妙
+        - img: feature-list-img4.png
+          title: 搭配完善輔導系統
+          description: 社群24小時不打烊，100 % 回覆率<br>設有課堂助教、課後五倍讀書會<br>徹底解決放在心裡口難開的疑問
     description: 「五倍紅寶石」是由幾位台灣 Ruby 社群的朋友共同成立的一家公司，希望透過教育訓練、企業培訓等講座，將 Ruby 推廣到校園、企業、開發者。提供的服務包括：程式教育訓練、企業技術培訓與諮詢、活動場地租借與專案委托製作。
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'
@@ -480,6 +522,3 @@ zh-TW:
         origin: space-img8.jpg
         alt: image8
         size: 1200x900
-
-
-

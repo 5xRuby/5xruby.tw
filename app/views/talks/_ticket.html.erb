@@ -1,0 +1,18 @@
+<% if @talk.iframe_html.present? || @talk.apply_link.present? %>
+  <div class="tickets light-grey-bg bottom-padding-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+          <h3 class="top-spacing-lg left-spacing-sm"><span>&emsp;</span></h3>
+          <% if @talk.iframe_html.blank? && @talk.apply_link.present? %>
+            <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing text-center">
+              <%= link_to t('.apply_now'), @talk.apply_link, target: :_blank %>
+            </div>
+          <% else %>
+            <%= raw @talk.iframe_html %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

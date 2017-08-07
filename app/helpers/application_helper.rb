@@ -106,6 +106,18 @@ module ApplicationHelper
     end
   end
 
+  def active_link_to(text, path, options = {})
+    active_class = options[:active] || "active"
+    options.delete(:active)
+    options[:class] = "#{options[:class]} #{active_class}" if current_page?(path)
+    link_to(text, path, options)
+  end
+
+  def translate_record record, attribute
+    record.translations.find{ |t| t.column == attribute.to_s && t.locale == I18n.locale.to_s }.try(:text).presence || record.send(attribute)
+  end
+  alias :tr :translate_record
+
   def fb_pixel_track(action_type, action_params = {})
     render partial: "shared/fb_pixel_track", locals: {action_type: action_type, action_params: action_params}
   end

@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="both-spacing bottom-padding-lg">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+      <h2 class="both-spacing"><%= t('.title') %></h2>
+      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+        <%= f.error_notification class: 'alert alert-danger' %>
+
+        <%= f.input :reset_password_token, as: :hidden %>
+        <%= f.full_error :reset_password_token %>
+
+        <%= f.input :password, required: true %>
+        <%= f.input :password_confirmation, required: true %>
+
+        <div class="form-group">
+          <%= f.button :submit, t('.reset_password'), class: 'btn btn-default btn btn-block btn-login both-spacing' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

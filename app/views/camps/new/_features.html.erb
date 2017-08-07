@@ -1,0 +1,17 @@
+<div class="feature-section light-grey-bg bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <div class="feature-list top-spacing-lg">
+          <% t('site.camp_new.features').each do |f| %>
+            <div class="col-sm-6 col-lg-3 col-md-6 text-center bottom-spacing">
+              <%= image_tag "camp_new_features/#{f[:img]}", class: "bottom-spacing" %>
+              <h3><%= f[:title] %></h3>
+              <p class="line-height-lg"><%= raw f[:description] %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

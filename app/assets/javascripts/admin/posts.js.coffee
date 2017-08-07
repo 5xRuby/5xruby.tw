@@ -21,10 +21,15 @@ $(document).ready ->
           $('#redactor_image_image').trigger('click')
       }]
     }]]
-  set_editor = (it) ->
+
+  set_editor = (type) ->
     $('.content-editor').hide()
-    $(".admin_post_content_#{it}").show()
-  if $('.post-form').length > 0
-    $("[name='admin_post[markup_type]']").on 'click', (e) ->
+    $(".admin_post_content_#{type}").show()
+
+  post_form = $('.post-form')
+  markup_type = post_form.find("[name='admin_post[markup_type]']")
+
+  if post_form
+    markup_type.on 'change', (e) ->
       set_editor($(e.target).val())
     set_editor($("[name='admin_post[markup_type]']").val())

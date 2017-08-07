@@ -1,0 +1,5 @@
+<%= simple_form_for @survey, url: attendance_path, method: :post, wrapper: :vertical_form do |f| %>
+  <%= f.hidden_field :activity_id %>
+  <%= f.input_field :ans, as: :json_form_data, source: :questions %>
+  <%= f.submit t('.submit'), class: 'btn btn-red center-block top-spacing' %>
+<% end %>

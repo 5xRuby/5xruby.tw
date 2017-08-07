@@ -1,0 +1,22 @@
+<div class="lecture-outline-wrap feedback-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= t('.outline') %></span></h3>
+        <div class="col-sm-8 col-lg-8 col-md-8 center-block border-grey bottom-spacing-lg">
+          <% @talk.stages.includes(:translations).each_with_index do |stage, index| %>
+            <div class="four-spacing">
+              <h4><%= t('.chapter_title', nth: index) %> <%= tr stage, :title %></h4>
+              <%= raw tr(stage, :description) %>
+              <ul class="date-time bottom-spacing-lg">
+                <li><i class="fa fa-calendar text-grey" aria-hidden="true"></i> <%= stage.date %></li>
+                <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= time_range stage %></li>
+                <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= show_hours stage.hours %>h</li>
+              </ul>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

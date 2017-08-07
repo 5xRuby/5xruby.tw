@@ -25,9 +25,12 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.delivery_method = :file
-	ActionMailer::Base.file_settings = { location: Rails.root.join('tmp/mail') } 
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.delivery_method = Settings.action_mailer.delivery_method
+  config.action_mailer.default_options = Settings.action_mailer.default_options
+  config.action_mailer.default_url_options = Settings.action_mailer.default_url_options
+  config.action_mailer.asset_host = "http://" + Settings.action_mailer.default_url_options.host
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -38,13 +41,20 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true
+  config.assets.debug = false
+
+  # Suppress logger output for asset requests.
+  config.assets.quiet = false
+
+  config.logger = Logger.new(STDOUT)
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
   # Adds additional error checking when serving assets at runtime.
+  config.public_file_server.enabled = true
+
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
@@ -55,4 +65,13 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # bullet
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.bullet_logger = true
+    Bullet.console = true
+    Bullet.rails_logger = true
+    Bullet.add_footer = true
+  end
 end

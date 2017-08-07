@@ -24,11 +24,35 @@
               <%= locale_li '中文', :'zh-TW' %>
               <%= locale_li 'English', :en %>
               <%= locale_li '日本語', :ja %>
+              <% if false %>
+                <% if current_user.present? %>
+                  <%= nav_li ' | ', '#', class: 'hidden-xs' %>
+                  <br class="visible-xs-inline">
+                  <%= nav_li t('.hello_user', name: current_user.name), edit_user_registration_path %>
+                  <%= nav_li t('.logout'), destroy_user_session_path, link_method: :delete %>
+                <% else %>
+                  <%= nav_li t('.login'), new_user_session_path %>
+                <% end %>
+              <% end %>
             </ul>
           </div>
           <ul class="nav navbar-nav">
-            <%= nav_li t('.camp'), camp_path %>
-            <%= nav_li t('.course'), courses_path %>
+            <li class="dropdown">
+              <%= link_to camps_path, class: "dropdown-toggle", role: "button", data: { toggle: "dropdown" }, "aria-haspopup": true, "aria-expand": false do %>
+                <%= t('.camp') %>
+                <span class="caret"></span>
+              <% end %>
+
+              <ul class="dropdown-menu">
+                <%= nav_li t('site.camps.which_title'), camps_path %>
+                <li role="separator" class="divider"></li>
+                <% @camps_online.each do |camp| %>
+                  <%= nav_li camp.title, camp_path(camp.permalink) %>
+                <% end %>
+              </ul>
+            </li>
+
+            <%= nav_li t('.talk'), talks_path %>
             <%= nav_li t('.showcases'), showcases_path %>
             <%= nav_li t('.training'), training_path %>
             <%= nav_li t('.space'), space_path %>

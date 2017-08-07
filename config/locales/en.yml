@@ -300,7 +300,7 @@ en:
       main_features:
         - img: feature-list-img1.png
           title: Courses
-          href_method: camp_path
+          href_method: camps_path
           description:
             - We have experts teaching these in either basic and advanced level, making you get on board eazily!
         - img: feature-list-img2.png
@@ -348,9 +348,11 @@ en:
           title: "founder of Buyble, an international boutique shopping website"
           img: "testimonial_max.jpg"
           content: "I was very honered to have worked with Carol and Eddie. I admire Carol's self-discipline and aspiration. I praise Eddie for his exellence in crisis handling and sense of responsibility. The other partners in 5xRuby are also experts in this field. I beleive this is a great team!"
-    talks_main_banner:
-      title: Experience from first-line developers
-      subtitle: 　
+    lectures_main_banner:
+      folder: lectures-main-banner/en
+      sizes: [["400w", "400w.png"], ["600w", "600w.png"], ["1280w", "1280w.png"], ["1920w", "2560w.png"]]
+      default_size: "1280w.png"
+      alt: Lectures
     about_main_banner:
       title: 5 Times Professionalism
     contacts_main_banner:

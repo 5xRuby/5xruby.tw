@@ -4,6 +4,14 @@ ja:
       captcha_not_passed: 入力が正しくありません. もう一度入力お願い致します.
       must_be_greater_than_start_at: 開始時間より後にして下さい。
       time_must_be_in_available_range: 有効な時間帯内でお願い致します。
+      wrong_course_number: 講座數量錯誤 # TODO: change it to jp
+      course_duplicate: 課程的講座內容不得重複
+      talk_has_no_template: 講座不需要模板
+      talk_has_been_existed: 該講座已經開設課程了
+      camp_needs_template: 衝刺班需要模板
+      not_correct_email_format: '無效 Email'
+      no_course_enrollments_in_camp_registration: Select at least one course while registering for a boot camp
+      not_valid_process: Invalid process # TODO: translate
   activemodel:
     attributes:
       contact:
@@ -48,6 +56,8 @@ ja:
       video: 動画
       translation: 翻訳
       interview_question: 質問
+      survey: Survey # TODO: translate to jp
+      order: Order # TODO: translate to jp
     attributes:
       post:
         publish_at: 投稿日

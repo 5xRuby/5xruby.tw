@@ -1,0 +1,25 @@
+<div class="light-grey-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-6 col-md-6 top-spacing center-block white-bg">
+        <%= render "users/orders/detail" %>
+        <%= render "users/orders/progress_bar" %>
+
+        <h2 class="text-center"><%= t('.title')%></h2>
+        <h4 class="text-center text-red"><%= t('.warning')%></h2>
+
+        <div class="row">
+          <div class="col-md-6 col-xs-12 text-center">
+            <%# TODO: change the path %>
+            <%= link_to "ATM轉帳", root_path, class: "btn btn-red" %>
+          </div>
+
+          <div class="col-md-6 col-xs-12 text-center">
+            <%# TODO: change the path %>
+            <%= link_to "線上刷卡", new_tappay_path, class: "btn btn-red" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -21,6 +21,15 @@ docker-compose.yml
 tags
 *.DS_Store
 .idea
+.byebug_history
 /config/*.*.yml
 /postgres
 /vendor/bundle
+
+# db dump
+*.sql
+/public/packs
+/node_modules
+
+# vim swp
+*.swp
