@@ -1,0 +1,154 @@
+
+<!-- Start Breadcrumbs -->
+<div class="bread-crumbs-wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-6 col-md-6">
+        <ol class="breadcrumb">
+          <li><%= link_to t('breadcrumb.home'), root_path %></li>
+          <li><%= link_to t('breadcrumb.courses'), courses_path %></li>
+          <li class="active"><%= tr @course, :title %></li>
+        </ol>
+      </div>
+      <div class="col-sm-12 col-lg-6 col-md-6 text-right">
+        <div class="fb-button">
+          <%= fb_share_btn %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Breadcrumbs -->
+
+<!-- Start Lecture Info -->
+<div class="training-intro bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-5 col-md-7">
+        <%= image_tag @course.image.thumb %>
+      </div>
+      <div class="col-sm-6 col-lg-7 col-md-5 line-height-lg">
+        <small class="text-grey"><%= @course.category.name %></small>
+        <h1><small class="text-black"><%= tr @course, :title %></small></h1>
+        <span class="medium"><%= date_range @course %></span>
+        <br><small class="text-grey"><%= "#{speakers_name @course} | #{t('.hours_label')}#{@course.hours}" %></small>
+        <p>
+          <%= tr @course, :summary %>
+        </p>
+        <% if @course.outdated? %>
+          <p class="btn btn-block btn-red disabled"><%= t('.outdated') %></p>
+        <% else %>
+          <a href="#tickets" class="btn btn-block btn-red"><%= t('.opening') %></a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Lecture Info -->
+
+<!-- Start Lecture Details -->
+<div class="training-intro light-grey-bg bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <% @course.speakers.each do |s| %>
+        <div class="col-sm-6 col-lg-6 col-md-6 top-spacing-lg">
+          <div class="col-sm-4 col-lg-4 col-md-4">
+            <%= image_tag s.avatar.thumb, class: "avatar img-circle right-spacing" %>
+          </div>
+          <div class="col-sm-8 col-lg-8 col-md-8">
+            <h3 class="bottom-spacing-sm"><%= t('.lecturer') %></h3>
+            <strong><%= tr s, :name %></strong>
+            <br>
+            <%= tr_and_convert_newline2br s, :summary %>
+          </div>
+        </div>
+      <% end %>
+      <div id="will-learn" class="col-sm-<%= rwd_column = (@course.speakers.size.odd? ? '6' : '12') %> col-lg-<%= rwd_column %> col-md-<%= rwd_column %> top-spacing-lg line-height-lg">
+        <% if @course.suitable_for.present? %>
+          <h3 class="bottom-spacing-sm"><%= t('.suitable_for') %></h3>
+          <div class="bottom-spacing">
+            <%= raw @course.suitable_for %>
+          </div>
+          <br>
+        <% end %>
+        <% if @course.what_will_learn.present? %>
+          <h3 class="bottom-spacing-sm"><%= t('.what_you_will_learn') %></h3>
+          <div class="bottom-spacing">
+            <%= raw tr(@course, :what_will_learn) %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Lecture Details -->
+
+<!-- Start Lecture Outline -->
+<div class="lecture-outline-wrap feedback-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <h3 class="text-center top-spacing-lg bottom-spacing-sm"><span><%= t('.outline') %></span></h3>
+        <div class="col-sm-8 col-lg-8 col-md-8 center-block border-grey bottom-spacing-lg">
+          <% @course.stages.includes(:translations).each_with_index do |stage, index| %>
+            <div class="four-spacing">
+              <h4><%= t('.chapter_title', nth: index) %> <%= tr stage, :title %></h4>
+              <%= raw tr(stage, :description) %>
+              <ul class="date-time bottom-spacing-lg">
+                <li><i class="fa fa-calendar text-grey" aria-hidden="true"></i> <%= stage.date %></li>
+                <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= time_range stage %></li>
+                <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= show_hours stage.hours %>h</li>
+              </ul>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Lecture Outline -->
+
+<div id="tickets"></div>
+
+<!-- Start Tickets -->
+<% if @course.iframe_html.present? || @course.apply_link.present? %>
+  <div class="tickets light-grey-bg bottom-padding-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+          <h3 class="top-spacing-lg left-spacing-sm"><span>&emsp;</span></h3>
+          <% if @course.iframe_html.blank? && @course.apply_link.present? %>
+            <div class="col-sm-12 col-lg-12 col-md-12 bottom-spacing text-center">
+              <%= link_to t('.apply_now'), @course.apply_link, target: :_blank %>
+            </div>
+          <% else %>
+            <%= raw @course.iframe_html %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+<!-- End Tickets -->
+
+<!-- Start Lecture Notice -->
+<div class="training-intro bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-6 col-md-6">
+        <h3 class="top-spacing-lg bottom-spacing-sm"><%= t('.payment_note') %></h3>
+        <div class="rl-padding-lg line-height-lg">
+          <%= raw @course.payment_note %>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-6 col-md-6">
+        <h3 class="top-spacing-lg bottom-spacing-sm"><%= t('.note') %></h3>
+        <div class="rl-padding-lg line-height-lg">
+          <%= raw tr(@course, :note) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Lecture Notice -->
+<%= fb_pixel_track("ViewContent", {content_ids: [@course.permalink], content_type: 'course'})%>

@@ -23,4 +23,7 @@ class PagesController < ApplicationController
 
   def space
   end
+
+  def space
+  end
 end

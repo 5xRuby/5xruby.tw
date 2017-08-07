@@ -1,0 +1,91 @@
+
+<!-- Start Main Banner -->
+<div class="top-banner talks-top-banner red-bg both-padding-lg medium">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 top-spacing-sm text-right">
+        <%= fb_share_btn %>
+      </div>
+      <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
+        <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.courses') %></small>
+        <h1 class="title top-padding-lg"><%= t('site.talks_main_banner.title') %></h1>
+        <p class="line-height"><%= t('site.talks_main_banner.subtitle') %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Main Banner -->
+
+<!-- Start Lecture Category -->
+<div class="lecture-category">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12">
+        <ul class="nav nav-pills both-spacing">
+          <li class="<%= 'active' unless @category %>"><%= link_to t('.all_courses'), Course %></li>
+          <% @categories.each do |category| %>
+            <li class="<%= 'active' if @category == category %>">
+              <%= link_to courses_path(category: category.permalink) do %>
+                <%= "#{category.name} (#{category.courses_count })" %> <%= image_tag '/img/new.png', alt: 'New' if category.new_course? %>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Lecture Category -->
+
+<!-- Start Lectures -->
+<div class="lectures-list">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block">
+        <div class="lecture-list">
+          <%= render @courses %>
+          <div class="clear"></div>
+          <nav class="text-center">
+            <%= paginate @courses %>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Lectures -->
+
+<div class="feedback-section bottom-padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
+        <h3 class="title text-center both-spacing-lg"><span><%= t('.speakers') %></span></h3>
+        <%= render partial: 'shared/carousel', locals: {
+          items: @speakers.map do |s|
+            {
+              type: 'speaker',
+              avatar: s.avatar.thumb,
+              name: tr(s, :name),
+              blog_url: s.blog_url,
+              facebook_url: s.facebook_url,
+              twitter_url: s.twitter_url,
+              google_url: s.google_url,
+              github_url: nil,
+              website_url: nil,
+              role_text: s.role_text,
+              summary: tr_and_convert_newline2br(s, :summary)
+            }
+          end,
+          item_partial: 'shared/member',
+          slides: 3,
+          autoplay: 500,
+          slidesPerView: 1,
+          slidesPerGroup: 0,
+          loop: true,
+          gallery: false
+        } %>
+      </div>
+    </div>
+  </div>
+</div>
+
