@@ -14,7 +14,7 @@
     id: 'activity_form_rule_fields',
     data: {
       'activity-courses': current_object.activity_courses,
-      'course-select-options': Course.all_with_humanized_name,
+      'course-select-options': Course.all_with_humanized_name(time_range: 36),
       'rules': current_object.rules_to_json.presence || {}
     })%>
   <hr>
