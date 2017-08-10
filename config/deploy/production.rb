@@ -6,13 +6,13 @@ set :ssh_options, {
   forward_agent: true
 }
 
-
+set :default_env, { path: "/usr/local/ruby24/bin:$PATH" }
 # Supports bulk-adding hosts to roles, the primary server in each group
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
-role :app, %w{deploy@10.128.128.154}
-role :web, %w{deploy@10.128.128.154}
-role :db,  %w{deploy@10.128.128.154}
+role :app, %w{deploy@10.128.128.250:14159}
+role :web, %w{deploy@10.128.128.250:14159}
+role :db,  %w{deploy@10.128.128.250:14159}
 
 # Extended Server Syntax
 # ======================

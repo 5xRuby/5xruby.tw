@@ -11,7 +11,7 @@ set :ssh_options, {
 role :app, %w{deploy@10.128.128.153}
 role :web, %w{deploy@10.128.128.153}
 role :db,  %w{deploy@10.128.128.153}
-
+set :default_env, { path: "/usr/local/ruby-2.4.1/bin:$PATH" }
 set :deploy_to, '/home/deploy/5xruby-stg'
 # Extended Server Syntax
 # ======================
