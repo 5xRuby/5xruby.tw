@@ -69,7 +69,7 @@ zh-TW:
   camps:
     course:
       time_label: '課程時間：'
-      what_will_learn_label: '%{hours} 小時課程，你會學到：'
+      what_will_learn_label: '%{hours} 小時課程學到'
       view_outline: '...看課程大綱'
       chapter_title: 第 %{nth} 堂：
       location_label: '上課地點'

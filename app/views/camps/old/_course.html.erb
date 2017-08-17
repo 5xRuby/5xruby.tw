@@ -31,7 +31,7 @@
                   <br>
                   <%= raw course.time_description %>
                 </div>
-                <div class="col-sm-5 col-lg-5 col-md-5">
+                <div class="col-sm-5 col-lg-6 col-md-7">
                   <div class="media">
                     <% course.speakers.each do |s| %>
                       <div class="media-body">
@@ -41,7 +41,7 @@
                     <% end %>
                   </div>
                 </div>
-                <div id="will-learn" class="col-sm-7 col-lg-7 col-md-7">
+                <div id="will-learn" class="col-sm-7 col-lg-6 col-md-5 no-padding">
                   <b><%= t('camps.course.what_will_learn_label', hours: course.hours) %></b>
                   <div class="small text-overflow-auto-scroll">
                     <%= raw tr(course, :what_will_learn) %>
