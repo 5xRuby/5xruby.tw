@@ -122,6 +122,7 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    chronic (0.10.2)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -405,6 +406,8 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    whenever (0.9.7)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -473,6 +476,7 @@ DEPENDENCIES
   vex_rails (~> 0.2.0)
   web-console
   webpacker (~> 2.0)
+  whenever
 
 BUNDLED WITH
    1.14.6

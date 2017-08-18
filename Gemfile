@@ -62,6 +62,7 @@ gem 'simple_form'
 gem 'aasm'
 gem 'active_type'
 gem 'webpacker', '~> 2.0'
+gem 'whenever', require: false
 
 # 3rd party payment
 gem 'tappay-rails', github: '5xRuby/tappay-rails'

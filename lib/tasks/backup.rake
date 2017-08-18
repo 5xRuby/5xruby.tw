@@ -16,7 +16,8 @@ namespace :backup do
       dbfn = "#{dbconfigs[:database]}-#{Time.now.to_i}.sql"
       cmds << "#{pg_dump_cmd} #{dbconfigs[:database]} -f #{dbfn}"
       cmds << "rm -rf #{File.join Rails.root, 'public/uploads/tmp/*'}"
-      cmds << "rsync -av #{File.join(Rails.root, "public/uploads")} ."
+      cmds << "mkdir -p uploads"
+      cmds << "rsync -av #{File.join(Rails.root, "public/uploads/")} ./uploads/"
       cmds << "tar -jcvpf #{dst_file_path}.tar.bz2 *"
       cmds.each do |cmd|
         puts cmd
