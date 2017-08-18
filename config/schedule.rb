@@ -20,8 +20,6 @@
 # Learn more: http://github.com/javan/whenever
 
 env :PATH, "#{ENV['PATH']}:/usr/local/ruby24/bin:"
-if Rails.env.production?
-  every 1.day, at: "3:00 am" do
-    rake "backup:basic"
-  end
+every 1.day, at: "3:00 am" do
+  rake "backup:basic"
 end
