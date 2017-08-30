@@ -29,7 +29,7 @@ namespace :backup do
         File.ctime(f)
       end
       if files.size > Settings.backup.rotate_max_size
-        files.pop(files.size - Settings.backup.rotate_max_size).each do |fn|
+        files.shift(files.size - Settings.backup.rotate_max_size).each do |fn|
           puts "Delete file #{fn}"
           FileUtils.rm(fn)
         end
