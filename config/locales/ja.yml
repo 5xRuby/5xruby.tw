@@ -289,6 +289,14 @@ ja:
       facebook: https://www.facebook.com/ei.kudoryafuka
       github: https://github.com/requiemformemories
 
+    - name: Eileen
+      title: 高雄市民
+      avatar: eileen.jpg
+      about: "Be a man"
+      skills: Rails / HTML / CSS / Swift
+      facebook: https://www.facebook.com/terrapin8
+      github: https://github.com/Eileen0917
+
     # 貓放最後面
     - name: Xue Mei
       title: 暗黒 Ruby
