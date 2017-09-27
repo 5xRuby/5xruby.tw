@@ -390,6 +390,15 @@ ja:
     camp_main_banner:
       title: Webシステム開発ブートキャンプ
       subtitle: 経験豊富な現役エンジニア講師とゼロから学びましょう！
+    camp_senior_main_banner:
+      title: 想讓你的網頁技術更精進嗎？
+      subtitle: 網頁前後端進階班包含網站開發基礎概念詳解到實作經驗，<br>精心設計進階課程讓你不再似懂非懂！
+    camp_junior_main_banner:
+      title: 從零開始也能快速上手
+      subtitle: 帶領你初探網站架構的風光<br>用 66 小時拉近你和前後端的距離
+    camp_girl_main_banner:
+      title: Be a Rails Girl 就從這裡開始
+      subtitle: 專為技術女孩設計的網站開發課程，<br>成為職場耀眼的女性工程師再也不只是夢想！
     space_main_banner:
       title: Space Rental
       subtitle: 　
@@ -417,6 +426,21 @@ ja:
         - img: feature-list-img3.png
           title: キャリアサポート
           description: 5xRubyは長い間コミュニティを経営し、就職、転職、起業をしたい方にサポートします。
+      timeline:
+        - class: 程式邏輯入門課程
+          date: 10/18
+        - class: HTML 課程
+          date: 10/21 - 11/01
+        - class: GIT 課程
+          date: 11/4
+        - class: JS & jQuery 課程
+          date: 11/8 - 11/18
+        - class: Ruby on Rails 課程
+          date: 11/22 - 12/16
+        - class: 履歷講座
+          date: 12/8
+        - class: 履歷健檢面談
+          date: 12/20
     description: 5xRubyは、台湾Rubyコミュニティのコアメンバーが創設しましたRuby及びRuby on Railsの技術コンサルティングとトレーニング事業を行う会社です。
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'

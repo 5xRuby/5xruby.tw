@@ -435,6 +435,21 @@ zh-TW:
         - img: feature-list-img3.png
           title: 職涯輔導社群交流
           description: 五倍致力於Ruby社群經營多年<br>不管想求職轉職想創業<br>都可以提供你最專業的建議
+      timeline:
+        - class: 程式邏輯入門課程
+          date: 10/18
+        - class: HTML 課程
+          date: 10/21 - 11/01
+        - class: GIT 課程
+          date: 11/4
+        - class: JS & jQuery 課程
+          date: 11/8 - 11/18
+        - class: Ruby on Rails 課程
+          date: 11/22 - 12/16
+        - class: 履歷講座
+          date: 12/8
+        - class: 履歷健檢面談
+          date: 12/20
     camp_new:
       features:
         - img: feature-list-img1.png

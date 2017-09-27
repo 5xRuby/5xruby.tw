@@ -1,0 +1,20 @@
+<div class="camp-list">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12">
+        <ul class="timeline-horizontal">
+          <% t('site.camp.timeline').each do |f| %>
+            <li class="li">
+              <div class="timestamp">
+                <span class="author"><%= f[:class] %></span>
+              </div>
+            <div class="status">
+              <h4><%= f[:date] %></h4>
+            </div>
+            </li>
+          <% end %>
+         </ul>
+      </div>
+    </div>
+  </div>
+</div>
