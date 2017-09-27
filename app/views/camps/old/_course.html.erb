@@ -7,6 +7,7 @@
           <i class="fa fa-map-marker" aria-hidden="true"></i> <%= t('camps.course.location_label') %>
           <%= link_to "#{t('company.address')} (#{t('company.name')})", t('company.gmap_url'), target: :_blank %>
         </div>
+        <%= render partial: "camps/old/timeline" %>
         <% @activity_courses.each do |activity_course| %>
           <% course = activity_course.course %>
 
