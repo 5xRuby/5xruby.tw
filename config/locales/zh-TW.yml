@@ -271,6 +271,21 @@ zh-TW:
       facebook: https://www.facebook.com/killtw
       about: 「奇怪我是不是走錯地方了？」
       skills: PHP / Laravel
+    
+    - name: Eileen
+      title: 高雄人
+      avatar: eileen.jpg
+      about: 「Be a man」
+      skills: Rails / HTML / CSS / Swift
+      facebook: https://www.facebook.com/terrapin8
+      github: https://github.com/Eileen0917
+
+    - name: Telsa
+      title: SSR路痴
+      avatar: telsa.jpg
+      about: 「衡陽路在哪裡？」
+      skills: Ruby / Rails
+      twitter: https://twitter.com/telsaiori
 
     # 實習生放正職後面
 
@@ -281,14 +296,6 @@ zh-TW:
       skills: Rails / HTML / CSS
       facebook: https://www.facebook.com/ei.kudoryafuka
       github: https://github.com/requiemformemories
-
-    - name: Eileen
-      title: 高雄人
-      avatar: eileen.jpg
-      about: "Be a man"
-      skills: Rails / HTML / CSS / Swift
-      facebook: https://www.facebook.com/terrapin8
-      github: https://github.com/Eileen0917
 
     # 貓放最後面
     - name: 學妹

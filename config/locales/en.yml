@@ -281,6 +281,21 @@ en:
       about: 「Am I in the wrong place?」
       skills: PHP / Laravel
 
+    - name: Eileen
+      title: Kaohsiung + er = Kaohsiunger
+      avatar: eileen.jpg
+      about: 「Be a man」
+      skills: Rails / HTML / CSS / Swift
+      facebook: https://www.facebook.com/terrapin8
+      github: https://github.com/Eileen0917
+
+    - name: Telsa
+      title: google map lover
+      avatar: telsa.jpg
+      about: 「I can't live without google map」
+      skills: Ruby / Rails
+      twitter: https://twitter.com/telsaiori
+
     # 實習生放正職後面
     - name: Fumitsuki
       title: Eight plates eating hime
@@ -289,14 +304,6 @@ en:
       skills: Rails / HTML / CSS
       facebook: https://www.facebook.com/ei.kudoryafuka
       github: https://github.com/requiemformemories
-
-    - name: Eileen
-      title: Kaohsiung + er = Kaohsiunger
-      avatar: eileen.jpg
-      about: "Be a man"
-      skills: Rails / HTML / CSS / Swift
-      facebook: https://www.facebook.com/terrapin8
-      github: https://github.com/Eileen0917
 
     # 貓放最後面
     - name: Xue Mei

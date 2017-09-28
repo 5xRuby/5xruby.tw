@@ -280,6 +280,21 @@ ja:
       about: 「私は間違った場所にいますか？」
       skills: PHP / Laravel
 
+    - name: Eileen
+      title: 高雄市民
+      avatar: eileen.jpg
+      about: 「Be a man」
+      skills: Rails / HTML / CSS / Swift
+      facebook: https://www.facebook.com/terrapin8
+      github: https://github.com/Eileen0917
+
+    - name: Telsa
+      title: SSR方向音痴
+      avatar: telsa.jpg
+      about: 「新宿駅から出られないヾ(｡>﹏<｡)ﾉ」
+      skills: Ruby / Rails
+      twitter: https://twitter.com/telsaiori
+
     # 實習生放正職後面
     - name: 文月
       title: 8皿食べる姫
@@ -288,14 +303,6 @@ ja:
       skills: Rails / HTML / CSS
       facebook: https://www.facebook.com/ei.kudoryafuka
       github: https://github.com/requiemformemories
-
-    - name: Eileen
-      title: 高雄市民
-      avatar: eileen.jpg
-      about: "Be a man"
-      skills: Rails / HTML / CSS / Swift
-      facebook: https://www.facebook.com/terrapin8
-      github: https://github.com/Eileen0917
 
     # 貓放最後面
     - name: Xue Mei
