@@ -11,5 +11,25 @@ class CampsController < ApplicationController
     ).order(:priority)
     @order = @camp.orders.new
     @speakers = @camp.speakers
+    @seo = {
+      meta: {
+        description: @camp.payload["og"]["desc"]
+      },
+      google: {
+        name: @camp.title,
+        description: @camp.payload["og"]["desc"],
+        image: @camp.payload["og"]["img"],
+        item_type: :Article
+      },
+      og: {
+        title: @camp.title,
+        url: request.url,
+        type: :website,
+        description: @camp.payload["og"]["desc"],
+        image: @camp.payload["og"]["url"]
+      }
+    }
+
   end
+
 end
