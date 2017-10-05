@@ -26,7 +26,7 @@ class CampsController < ApplicationController
         url: request.url,
         type: :website,
         description: @camp.payload["og"]["desc"],
-        image: @camp.payload["og"]["url"]
+        image: @camp.payload["og"]["img"]
       }
     }
 
