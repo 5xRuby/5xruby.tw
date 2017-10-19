@@ -271,7 +271,7 @@ zh-TW:
       facebook: https://www.facebook.com/killtw
       about: 「奇怪我是不是走錯地方了？」
       skills: PHP / Laravel
-    
+
     - name: Eileen
       title: 高雄人
       avatar: eileen.jpg
@@ -286,6 +286,14 @@ zh-TW:
       about: 「衡陽路在哪裡？」
       skills: Ruby / Rails
       twitter: https://twitter.com/telsaiori
+
+    - name: 郭佳甯
+      title: 馴獸師
+      skills: Ruby / Rails
+      about: 「好哦～好哦～」
+      avatar: etrex.jpg
+      blog: https://etrex.blogspot.tw
+      facebook: https://www.facebook.com/etrex.kuo
 
     # 實習生放正職後面
 
