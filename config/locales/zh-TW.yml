@@ -409,8 +409,8 @@ zh-TW:
       title: 從零開始也能快速上手
       subtitle: 帶領你初探網站架構的風光<br>用 66 小時拉近你和前後端的距離
     camp_girl_main_banner:
-      title: Be a Rails Girl 就從這裡開始
-      subtitle: 專為技術女孩設計的網站開發課程，<br>成為職場耀眼的女性工程師再也不只是夢想！
+      title: 女孩，這就是因妳而生的舞台
+      subtitle: 專為女孩打造的網頁前端設計專班<br>一步步完成屬於妳的網頁藍圖<br>只管踏上，前方道路將會為妳開啟
     space_main_banner:
       title: 五倍紅寶石 台北出礦坑
       subtitle: 三鐵共構，300M/100M 高速網路，場地租借優質選擇
@@ -434,7 +434,7 @@ zh-TW:
         banner: 我完全沒有接觸過程式<br>想從頭建構良好基礎
         img: camps-which/feature-which-img2.png
       girl:
-        banner: 我是有程式基礎的女生<br>想成為女性工程師
+        banner: 我是對網頁前端有興趣的女生<br>想成為網頁設計師
         img: camps-which/feature-which-img3.png
     camp:
       features:
@@ -483,16 +483,16 @@ zh-TW:
       features:
         - img: feature-list-img1.png
           title: 專屬女性的學習環境
-          description: 藉著舉辦多屆Rails Girls的經驗<br>設計專屬女性的技術專班<br>讓妳更自在學習程式語言
+          description: 在彼此身旁都是女性的環境裡，女孩們一起交流討論，不再因為「男生才會寫程式」的想法而害怕與同學交流。
         - img: feature-list-img2.png
-          title: 業界資深講師陣容
-          description: 活躍於業界第一線的導師們<br>不只有豐富的教學經驗<br>還傳授妳實戰必備經驗！
+          title: 教學節奏與學生同步
+          description: 以活潑有趣的方式一步步耐心指導，穩紮穩打，不用擔心來不及吸收。用心肯學習，程式定會在您心中留下好印象！
         - img: feature-list-img3.png
-          title: 實作購物車網站
-          description: 課堂上實際製作購物車網站<br>不是只有複製貼上程式碼<br>帶回成品更了解箇中奧妙
+          title: 助教課幫助課後整理
+          description: 課堂交付的作業，除了在助教課讓學生們互相討論，並安排專業助教一同協助指導，給予學習問題快速的解決方法。
         - img: feature-list-img4.png
-          title: 搭配完善輔導系統
-          description: 社群24小時不打烊，100 % 回覆率<br>設有課堂助教、課後五倍讀書會<br>徹底解決放在心裡口難開的疑問
+          title: 課後同學會&線上社團
+          description: 課後將不定期舉辦同學會，並有FB線上社團，幫助學員聯絡感情與持續交流，成為學習階段的重要夥伴。
     description: 「五倍紅寶石」是由幾位台灣 Ruby 社群的朋友共同成立的一家公司，希望透過教育訓練、企業培訓等講座，將 Ruby 推廣到校園、企業、開發者。提供的服務包括：程式教育訓練、企業技術培訓與諮詢、活動場地租借與專案委托製作。
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'

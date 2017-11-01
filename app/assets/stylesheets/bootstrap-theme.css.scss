@@ -577,6 +577,10 @@ footer .fa-github:hover {
     font-size: 14px;
   }
 }
+.speaker .img-circle {
+  width: 100%;
+  max-width: 200px;
+}
 
 /*lectures*/
 .lecture-category .nav-pills > li > a, .lecture-category .nav-pills > li > a:focus, .nav-pills > li > a:hover {
@@ -1095,3 +1099,4 @@ footer .fa-github:hover {
 .vex-dialog-button-primary {
   background-color: #d90845 !important;
 }
+
