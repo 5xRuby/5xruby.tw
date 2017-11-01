@@ -303,6 +303,14 @@ ja:
       blog: https://etrex.blogspot.tw
       facebook: https://www.facebook.com/etrex.kuo
 
+    - name: 詹昇
+      title: 五倍新人
+      skills: Ruby / Rails
+      about: 「Finally, I completed my military service!!」
+      avatar: johnson.jpg
+      github: https://github.com/shes50103
+      facebook: https://www.facebook.com/shes50103
+
     # 實習生放正職後面
     - name: 文月
       title: 8皿食べる姫
