@@ -1,7 +1,7 @@
-<div class="address">
+<div class="address light-grey-bg">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-lg-12 col-md-12 center-block both-spacing-lg">
+      <div class="col-sm-12 col-lg-12 col-md-12 center-block top-spacing-lg">
         <h3 class="text-center bottom-spacing-sm title"><span><%= t('camps.course.location_label') %></span></h3>
         <div class="text-center text-grey">
           <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -17,11 +17,31 @@
       <div class="col-sm-12 col-lg-12 col-md-12 both-spacing-lg">
         <h3 class="text-center bottom-spacing-sm title"><span><%= t('camps.course.you_will_learn') %></span></h3>
         <div class="row">
-          <div class="col-sm-12 col-lg-12 col-md-12 both-spacing-lg text-center">
-            <p class="text-grey medium">課程研擬中</p>
-            <p class="text-grey more-large">
-              COMING SOON...
-            </p>
+          <div class="timeline top-spacing">
+            <% @activity_courses.each do |activity_course| %>
+              <% course = activity_course.course %>
+                <% course.stages.each_with_index do |stage, index| %>
+                <div class="event-wrap">
+                  <!--Start Camp-->
+                    <div class="four-spacing">
+                      <h4><%= t('camps.course.chapter_title', nth: index) %> <%= tr stage, :title %></h4>
+                      <%= raw tr(stage, :description) %>
+                      <ul class="date-time bottom-spacing-lg">
+                        <li><i class="fa fa-calendar text-grey" aria-hidden="true"></i> <%= stage.date %></li>
+                        <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= time_range stage %></li>
+                        <li><i class="fa fa-clock-o text-grey" aria-hidden="true"></i> <%= show_hours stage.hours %>h</li>
+                      </ul>
+                    </div>
+                  <!--End Camp-->
+                </div>
+              <% end %>
+            <div class="clear"></div>
+            <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-lg-8 col-md-8 center-block top-spacing-sm text-center">
+            除上述豐富內容 <b>36 小時</b> 課程外，<br>12/4、12/11、12/18、12/25 每週一的 19:00~22:00 也會安排共 <b>12 小時</b> 的助教課，<br>不怕上課有問題來不及問，更不怕回家作業不會寫唷！
           </div>
         </div>
       </div>

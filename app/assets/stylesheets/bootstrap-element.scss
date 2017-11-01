@@ -586,11 +586,11 @@ a.text-grey:hover {
   border: 3px solid #d90845;
   z-index: 10;
 }
-.timeline .event-wrap:nth-child(2), .timeline .event-wrap:nth-child(4), .timeline .event-wrap:nth-child(6) {
+.timeline .event-wrap:nth-child(2), .timeline .event-wrap:nth-child(4), .timeline .event-wrap:nth-child(6), .timeline .event-wrap:nth-child(8), .timeline .event-wrap:nth-child(10), .timeline .event-wrap:nth-child(12), .timeline .event-wrap:nth-child(14), .timeline .event-wrap:nth-child(16), .timeline .event-wrap:nth-child(18), .timeline .event-wrap:nth-child(20) {
   float: right;
   text-align: left;
 }
-.timeline .event-wrap:nth-child(2)::before, .timeline .event-wrap:nth-child(4)::before, .timeline .event-wrap:nth-child(6)::before {
+.timeline .event-wrap:nth-child(2)::before, .timeline .event-wrap:nth-child(4)::before, .timeline .event-wrap:nth-child(6)::before, .timeline .event-wrap:nth-child(8)::before, .timeline .event-wrap:nth-child(10)::before, .timeline .event-wrap:nth-child(12)::before, .timeline .event-wrap:nth-child(14)::before, .timeline .event-wrap:nth-child(16)::before, .timeline .event-wrap:nth-child(18)::before, .timeline .event-wrap:nth-child(20)::before {
   position: absolute;
   top: 50%;
   left: -5.5px;
