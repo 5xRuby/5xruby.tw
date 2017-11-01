@@ -294,6 +294,14 @@ zh-TW:
       avatar: etrex.jpg
       blog: https://etrex.blogspot.tw
       facebook: https://www.facebook.com/etrex.kuo
+      
+    - name: 詹昇
+      title: 五倍新人
+      skills: Ruby / Rails
+      about: 「終於退伍啦！」
+      avatar: johnson.jpg
+      github: https://github.com/shes50103
+      facebook: https://www.facebook.com/shes50103
 
     # 實習生放正職後面
 

@@ -304,6 +304,14 @@ en:
       blog: https://etrex.blogspot.tw
       facebook: https://www.facebook.com/etrex.kuo
 
+    - name: Johnson Zhan
+      title: newbie
+      skills: Ruby / Rails
+      about: 「Finally, I completed my military service!!」
+      avatar: johnson.jpg
+      github: https://github.com/shes50103
+      facebook: https://www.facebook.com/shes50103
+
     # 實習生放正職後面
     - name: Fumitsuki
       title: Eight plates eating hime
