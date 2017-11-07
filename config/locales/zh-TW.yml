@@ -158,13 +158,6 @@ zh-TW:
       twitter: https://twitter.com/roy_times_5
       facebook: http://facebook.com/roy.huang.963
 
-    - name: 張國銘
-      title: 台南畫家
-      avatar: ilake.jpg
-      about: 「人生阿~~」
-      skills: Ruby / Rails
-      facebook: http://facebook.com/ilake.chang
-
     - name: Nina
       title: 紅寶石工匠
       avatar: nina.jpg
@@ -180,14 +173,6 @@ zh-TW:
       twitter: https://twitter.com/elct9620
       facebook: http://fb.me/elct9620
       github: https://github.com/elct9620
-
-    - name: Ashton Lee
-      title: 醉拳無敵甘迺迪
-      avatar: ashtonlee.jpg
-      about: 「減肥專家 x Ashton 陪你一起做運動」
-      skills: HTML / CSS / Rails
-      facebook: https://www.facebook.com/eric.lee0210
-      github: https://github.com/Ericlee0210
 
     - name: Irene Chang
       title: 梅氏狂蕩姬
@@ -304,14 +289,6 @@ zh-TW:
       facebook: https://www.facebook.com/shes50103
 
     # 實習生放正職後面
-
-    - name: Meng-Ying Tsai
-      title: 八盤食姬
-      avatar: fumitsuki.jpg
-      about: 「文著八盤八，月下宵夜嚐；食前方丈味，記遊天下香。」
-      skills: Rails / HTML / CSS
-      facebook: https://www.facebook.com/ei.kudoryafuka
-      github: https://github.com/requiemformemories
 
     # 貓放最後面
     - name: 學妹

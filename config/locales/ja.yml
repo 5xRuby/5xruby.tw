@@ -167,13 +167,6 @@ ja:
       twitter: https://twitter.com/roy_times_5
       facebook: http://facebook.com/roy.huang.963
 
-    - name: ilake
-      title: 台南の画家
-      avatar: ilake.jpg
-      about: "それが人生だ"
-      skills: Ruby / Rails
-      facebook: http://facebook.com/ilake.chang
-
     - name: Nina Yeh
       title: Ruby職人
       avatar: nina.jpg
@@ -188,14 +181,6 @@ ja:
       twitter: https://twitter.com/elct9620
       facebook: http://fb.me/elct9620
       github: https://github.com/elct9620
-
-    - name: Ashton Lee
-      title: 無敵な酔拳ケネディ
-      avatar: ashtonlee.jpg
-      about: "ダイエットの達人 x Ashton と運動しようぜ"
-      skills: HTML / CSS / Rails
-      facebook: https://www.facebook.com/eric.lee0210
-      github: https://github.com/Ericlee0210
 
     - name: Irene Chang
       title: 梅氏の狂気姫
@@ -312,13 +297,6 @@ ja:
       facebook: https://www.facebook.com/shes50103
 
     # 實習生放正職後面
-    - name: 文月
-      title: 8皿食べる姫
-      avatar: fumitsuki.jpg
-      about: "落ち着いて8皿食べなさい"
-      skills: Rails / HTML / CSS
-      facebook: https://www.facebook.com/ei.kudoryafuka
-      github: https://github.com/requiemformemories
 
     # 貓放最後面
     - name: Xue Mei

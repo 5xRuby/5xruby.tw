@@ -167,13 +167,6 @@ en:
       twitter: https://twitter.com/roy_times_5
       facebook: http://facebook.com/roy.huang.963
 
-    - name: ilake
-      title: Tainan painter
-      avatar: ilake.jpg
-      about: "C’est la vie"
-      skills: Ruby / Rails
-      facebook: http://facebook.com/ilake.chang
-
     - name: Nina Yeh
       title: Ruby Artisan
       avatar: nina.jpg
@@ -189,14 +182,6 @@ en:
       twitter: https://twitter.com/elct9620
       facebook: http://fb.me/elct9620
       github: https://github.com/elct9620
-
-    - name: Ashton Lee
-      title: Invincible Drunken Master, Kennedy
-      avatar: ashtonlee.jpg
-      about: "Weight-losing expert x Let's work out with Ashton"
-      skills: HTML / CSS / Rails
-      facebook: https://www.facebook.com/eric.lee0210
-      github: https://github.com/Ericlee0210
 
     - name: Irene Chang
       title: Hysteria May
@@ -313,13 +298,6 @@ en:
       facebook: https://www.facebook.com/shes50103
 
     # 實習生放正職後面
-    - name: Fumitsuki
-      title: Eight plates eating hime
-      avatar: fumitsuki.jpg
-      about: "Keep calm and eat eight plates"
-      skills: Rails / HTML / CSS
-      facebook: https://www.facebook.com/ei.kudoryafuka
-      github: https://github.com/requiemformemories
 
     # 貓放最後面
     - name: Xue Mei
