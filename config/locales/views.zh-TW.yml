@@ -25,6 +25,7 @@ zh-TW:
       opening: 立即報名
     details:
       lecturer: 講師
+      sub_lecturer: 助教
       suitable_for: 本講座適合
       what_you_will_learn: 你將會學到
     outline:
@@ -74,6 +75,8 @@ zh-TW:
       chapter_title: 第 %{nth} 堂：
       location_label: '上課地點'
       you_will_learn: '你將會學到'
+      for_whom: '什麼人適合上這個課？'
+      purpose: '創辦初衷'
     shared:
       sales:
         sale_title: 好康逗相報

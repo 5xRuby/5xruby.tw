@@ -392,11 +392,33 @@ en:
       title: 從零開始也能快速上手
       subtitle: 帶領你初探網站架構的風光<br>用 66 小時拉近你和前後端的距離
     camp_girl_main_banner:
-      title: Be a Rails Girl 就從這裡開始
-      subtitle: 專為技術女孩設計的網站開發課程，<br>成為職場耀眼的女性工程師再也不只是夢想！
+      title: 女孩，這就是因妳而生的舞台
+      subtitle: 專為女孩打造的網頁前端設計專班<br>一步步完成屬於妳的網頁藍圖<br>只管踏上，前方道路將會為妳開啟
     space_main_banner:
       title: Looking for a space for your event?
       subtitle: 　
+    about_services:
+      - name: Technical Consulting
+        img: consult.png
+        content: The members and lecturers of 5xRuby are the first-line developers in the market and senior members from Taiwan's Ruby community, where actual developing experience and pragmatics come in hand with theoretical basis.
+      - name: Enterprise Internal Training
+        img: training.png
+        content: If your website or system is currently built with other programming languages (for instance PHP, Java or ASP.net), and you are considering changing to Ruby/Rails for high productivity, yet lack the technical capabilities to develop, we offer a series of training programs where the Ruby/Rails development team can be trained and built with your current staff. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
+      - name: Training
+        img: edu.png
+        content: if you are a fresh beginner to programming, or if you happen to have experience with other programming languages, we offer a series of lectures from entry level to intermediate and advanced, that will guide you efficiently to the core of Ruby/Rails.
+    camps:
+      which_title: 哪種課程最適合我？
+      suit_you: 最適合你的是...
+      old:
+        banner: 我已經有程式語言底子<br>想更專精於網站開發
+        img: camps-which/feature-which-img1.png
+      new:
+        banner: 我完全沒有接觸過程式<br>想從頭建構良好基礎
+        img: camps-which/feature-which-img2.png
+      girl:
+        banner: 我是對網頁前端有興趣的女生<br>想成為網頁設計師
+        img: camps-which/feature-which-img3.png
     camp:
       features:
         - img: feature-list-img1.png
@@ -426,16 +448,52 @@ en:
           date: 12/8
         - class: 履歷健檢面談
           date: 12/20
-    about_services:
-      - name: Technical Consulting
-        img: consult.png
-        content: The members and lecturers of 5xRuby are the first-line developers in the market and senior members from Taiwan's Ruby community, where actual developing experience and pragmatics come in hand with theoretical basis.
-      - name: Enterprise Internal Training
-        img: training.png
-        content: If your website or system is currently built with other programming languages (for instance PHP, Java or ASP.net), and you are considering changing to Ruby/Rails for high productivity, yet lack the technical capabilities to develop, we offer a series of training programs where the Ruby/Rails development team can be trained and built with your current staff. There is no need to go through the hassle of recruiting process, thus avoiding the problem of new-comers getting used to the team culture.
-      - name: Training
-        img: edu.png
-        content: if you are a fresh beginner to programming, or if you happen to have experience with other programming languages, we offer a series of lectures from entry level to intermediate and advanced, that will guide you efficiently to the core of Ruby/Rails.
+    camp_new:
+      features:
+        - img: feature-list-img1.png
+          title: 專業師資團隊帶領
+          description: 講師皆為授課多年的資深教師<br>除了幫你打穩扎實基礎<br>更讓你觸類旁通舉一反三！
+        - img: feature-list-img2.png
+          title: 課程扎實與時俱進
+          description: 包套課程打好初學基礎，掌握脈絡<br>課程內容不教速成<br>奠定 coding 的入門磚
+        - img: feature-list-img3.png
+          title: 搭配完善輔導系統
+          description: 社群24小時不打烊，100 % 回覆率<br>設有課堂助教、課後五倍讀書會<br>徹底解決放在心裡口難開的疑問
+        - img: feature-list-img4.png
+          title: 進階學習轉銜無礙
+          description: 透過穩紮穩打的教學系統<br>學習效率不打折扣<br>轉銜進階課程更容易！
+    camp_girl:
+      features:
+        - img: feature-list-img1.png
+          title: 專屬女性的學習環境
+          description: 在彼此身旁都是女性的環境裡，女孩們一起交流討論，不再因為「男生才會寫程式」的想法而害怕與同學交流。
+        - img: feature-list-img2.png
+          title: 教學節奏與學生同步
+          description: 以活潑有趣的方式一步步耐心指導，穩紮穩打，不用擔心來不及吸收。用心肯學習，程式定會在您心中留下好印象！
+        - img: feature-list-img3.png
+          title: 助教課幫助課後整理
+          description: 課堂交付的作業，除了在助教課讓學生們互相討論，並安排專業助教一同協助指導，給予學習問題快速的解決方法。
+        - img: feature-list-img4.png
+          title: 課後同學會&線上社團
+          description: 課後將不定期舉辦同學會，並有FB線上社團，幫助學員聯絡感情與持續交流，成為學習階段的重要夥伴。
+      for_whom_list:
+        - list: 想嘗試程式領域的女生
+        - list: 想找到一起進步的夥伴
+        - list: 想改變生活，尋找興趣的女性
+        - list: 想學會如何用 HTML / CSS 切版的人
+        - list: 想學會 jQuery 基礎運用的人
+      purpose_text: 許多傑出的女企業家，在背後都有艱辛努力的故事，<br>SOGAL 共同創辦人 Pocket Sun，在不畏懼前方道路時，勇往直前，大膽的去鑽研於 VC 的世界。<br><br>社會企業 Motherhouse 創辦人 山口繪理子，告訴大家一定要相信：「你的可能性，超越你自己的想像。」<br><br>Facebook 營運長雪柔·桑德伯格 Sheryl Sindberg 也說過：「請多嘗試，並期待這些嘗試可以被正確完成，若帶來失望，那是因為完美才是真正的敵人。」<br><br>她們骨子裡都有共通的想法：「只管踏上，前方道路會為我開啟。」<br><br>在職場前進的路途中，我們不求自己是個完美的人，不強求讓所有人喜歡，更期許自己面對未來無所畏懼。<br><br>女孩們，失戀了別嚎啕大哭，工作遇到挫折也別往肚裡吞。<br>妳不是一無是處，妳只是還沒發掘多面的自己。<br><br>「當妳真心想完成某件事情，全宇宙都會聯合起來幫妳。」在這裡，所有的女孩都沒有寫過程式的相關經驗，也沒有畏懼去嘗試接觸，大家都把對方視為夥伴，一同學習、一同探索、一同互相幫助，因為她們深信，努力會有所收穫。<br><br>「我的好夥伴呀，不要害怕，相信妳會成為更好的人，我會陪伴妳一同前進！」秉持著這樣的信念，五倍紅寶石為女孩們量身打造了女性專班，來帶領女孩們一步一步的完成夢想。
+      teacher:
+        name: 孫于婷 (Cat Sun)
+        experience: 嶺東科技大學－視覺傳達設計學系 畢業<br>現任五倍紅寶石－前端工程師、網頁設計師<br>2016 Rails Girls Weekly 從零開始的網頁設計－講師<br>2017 Rails Girls Weekly 從零開始的網頁設計－講師<br>Hahow 用程式構築的繪畫世界 — CSS 繪圖 講師
+        intro:
+          - text: Cat 是一名面對未來樂觀開朗的女孩，喜歡大笑，喜歡做自己。儘管不是程式相關背景畢業的女生，但是面對程式總是展露認真又好奇的心態。
+          - text: 以前想要表達腦中的想法，都是用平面設計實際去繪圖，現在則是會選擇使用 CSS 這樣的魔術展現出來。
+          - text: 自己平時也會多嘗試使用 CSS 練習畫不一樣的圖案，可以學習到很多小技巧，而這些小技巧累積越多，在商業用途上有特殊需求時就會很直接的反應，切不出來的板型也會越來越少。
+          - text: 這樣的堅持，是因為她跨出嘗試程式領域的那一步，因此愛上了程式，喜歡上 CSS，從此，程式界也多了 Cat 的笑聲。
+      sub_teacher:
+        name: 楊雅婷 (Ringo Yang)
+        experience: 現任五倍紅寶石 － 前端工程師、網頁設計師<br>曾任非常婚禮 － 前端工程師、網頁設計師<br>經手 Violet White － 前端設計<br>BOLT Lighting － 前端與網頁視覺設計
     description: 5xRuby is a Ruby/Rails technical consulting and training firm, founded by active core members of Taiwan's Ruby community.
     openfoundary_url: 'http://www.openfoundry.org/index.php?option=com_content&task=view&id=9256&Itemid=4;isletter=1'
     panx_url: 'https://panx.asia/archives/15525'

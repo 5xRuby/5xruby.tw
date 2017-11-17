@@ -24,6 +24,7 @@ en:
       opening: Sign up now
     details:
       lecturer: Lecturer
+      sub_lecturer: Sub Lecturer
       suitable_for: Suitable for
       what_you_will_learn: What you will learn
     outline:
@@ -72,6 +73,9 @@ en:
       view_outline: '...outline'
       chapter_title: "Lesson %{nth}:"
       location_label: 'Location:'
+      you_will_learn: 'You will learn'
+      for_whom: 'For whom?'
+      purpose: 'Purpose'
     shared:
       sales:
         sale_title: Good news!
