@@ -24,6 +24,7 @@ ja:
       opening: 申し込む
     details:
       lecturer: 講師
+      sub_lecturer: 副講師
       suitable_for: 誰向けの授業
       what_you_will_learn: 学ぶこと
     outline:
@@ -72,6 +73,9 @@ ja:
       view_outline: '...アウトライン'
       chapter_title: "レッスン %{nth}:"
       location_label: '場所:'
+      you_will_learn: '学ぶこと'
+      for_whom: 'どんな人に向け？'
+      purpose: '創辦初衷'
     shared:
       sales:
         sale_title: 情報
