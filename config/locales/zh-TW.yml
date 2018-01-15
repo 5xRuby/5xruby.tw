@@ -429,19 +429,19 @@ zh-TW:
           description: 五倍致力於Ruby社群經營多年<br>不管想求職轉職想創業<br>都可以提供你最專業的建議
       timeline:
         - class: 程式邏輯入門課程
-          date: 10/18
+          date: 3/14
         - class: HTML 課程
-          date: 10/21 - 11/01
-        - class: GIT 課程
-          date: 11/4
+          date: 3/17 - 3/28
         - class: JS & jQuery 課程
-          date: 11/8 - 11/18
+          date: 4/11 - 4/21
+        - class: GIT 課程
+          date: 4/22
         - class: Ruby on Rails 課程
-          date: 11/22 - 12/16
+          date: 5/2 - 5/26
         - class: 履歷講座
-          date: 12/8
+          date: coming soon
         - class: 履歷健檢面談
-          date: 12/20
+          date: coming soon
     camp_new:
       features:
         - img: feature-list-img1.png
