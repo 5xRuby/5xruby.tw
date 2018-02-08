@@ -61,6 +61,8 @@ defaults: &defaults
       app_id: needed_to_fill
       sandbox_app_key: needed_to_fill
       app_key: needed_to_fill
+  facebook:
+    pixel_id: needed_to_fill
 
 development:
   <<: *defaults
