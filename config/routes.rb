@@ -22,8 +22,9 @@ Rails.application.routes.draw do
     get '/camp' => redirect('/camps')
 
     Settings.alias.each do |path|
-      get path.from, to: redirect(path.to)
+      get path.from, to: path.to, id: path.id
     end
+    get '/reactjs', to: "courses#show", id: "react-redux-2017-1"
 
     devise_for :users,
       controllers: { registrations: 'users/registrations' },
