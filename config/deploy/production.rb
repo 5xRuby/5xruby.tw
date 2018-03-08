@@ -1,45 +1,7 @@
-# Simple Role Syntax
 set :stage, :production
-# ==================
-#
-set :ssh_options, {
-  forward_agent: true
-}
 
-set :default_env, { path: "/usr/local/ruby24/bin:$PATH" }
-# Supports bulk-adding hosts to roles, the primary server in each group
-# is considered to be the first unless any hosts have the primary
-# property set.  Don't declare `role :all`, it's a meta role.
-role :app, %w{deploy@10.128.128.250:14159}
-role :web, %w{deploy@10.128.128.250:14159}
-role :db,  %w{deploy@10.128.128.250:14159}
+set :default_env, { path: "/usr/local/ruby-2.3.6/bin:$PATH" }
 
-# Extended Server Syntax
-# ======================
-# This can be used to drop a more detailed server definition into the
-# server list. The second argument is a, or duck-types, Hash and is
-# used to set extended properties on the server.
+server '159.65.135.2', user: 'deploy', roles: %w{app web db}
 
 set :deploy_to, '/home/deploy/5xruby.tw'
-
-# Custom SSH Options
-# ==================
-# You may pass any option but keep in mind that net/ssh understands a
-# limited set of options, consult[net/ssh documentation](http://net-ssh.github.io/net-ssh/classes/Net/SSH.html#method-c-start).
-#
-# Global options
-# --------------
-
-#
-# And/or per server (overrides global)
-# ------------------------------------
-# server 'example.com',
-#   user: 'user_name',
-#   roles: %w{web app},
-#   ssh_options: {
-#     user: 'user_name', # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
-#     # password: 'please use keys'
-#   }
