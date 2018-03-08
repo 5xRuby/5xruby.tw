@@ -13,7 +13,7 @@ set :repo_url, 'git@github.com:5xRuby/5xruby.tw.git'
 set :branch, 'master'
 set :bundle_binstubs, false
 
-set :linked_files, %w{config/database.yml config/application.yml}
+set :linked_files, %w{config/database.yml config/application.yml config/secrets.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
 
 
