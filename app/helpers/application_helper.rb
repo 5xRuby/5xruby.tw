@@ -1,7 +1,22 @@
 module ApplicationHelper
 
-  def gen_course_breadcrumb(*items)
-    content_tag :ul, sanitize(items.map{|x| content_tag(:li, x) }.join, tags: %w(a li), attributes: %w(href title alt)), class: "camp breadcrumb"
+  def current_breadcrumbs
+    _breadcrumbs.each do |crumb|
+      name = format_name(crumb.name)
+      href = crumb.url.nil? ? nil : url_for(_expand_url(crumb.url))
+      yield name, href
+    end
+
+  end
+
+  def gen_course_breadcrumb
+    content_tag :ul, class: "camp breadcrumb" do
+      _breadcrumbs.each do |crumb|
+        name = format_name(crumb.name)
+        href = url_for(_expand_url(crumb.url))
+        concat content_tag :li, crumb.url.nil? ? crumb.name : link_to(name, href)
+      end
+    end
   end
 
   def sub_header title: nil, lead_box: nil, lead: nil

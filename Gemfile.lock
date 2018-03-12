@@ -208,6 +208,8 @@ GEM
       addressable (~> 2.3)
     letter_opener (1.4.1)
       launchy (~> 2.2)
+    loaf (0.6.0)
+      rails (>= 3.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.5)
@@ -446,6 +448,7 @@ DEPENDENCIES
   jquery-ui-rails
   kaminari (~> 1.0.1)
   letter_opener
+  loaf
   nested_form
   omniauth
   omniauth-facebook

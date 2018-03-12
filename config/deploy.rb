@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.1
-lock '3.7.1'
+lock '3.9.1'
 
 require 'yaml'
 settings = YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))['development']
