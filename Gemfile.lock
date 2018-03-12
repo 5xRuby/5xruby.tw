@@ -253,6 +253,9 @@ GEM
     orm_adapter (0.5.0)
     parser (2.4.0.0)
       ast (~> 2.2)
+    passenger (5.2.1)
+      rack
+      rake (>= 0.8.1)
     pg (0.20.0)
     photoswipe-rails (4.1.2)
     powerpack (0.1.1)
@@ -264,7 +267,6 @@ GEM
       byebug (~> 9.0)
       pry (~> 0.10)
     public_suffix (2.0.5)
-    puma (3.8.2)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -449,10 +451,10 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-github
   omniauth-google-oauth2
+  passenger
   pg
   photoswipe-rails
   pry-byebug
-  puma
   rack-mini-profiler!
   rails (~> 5.0.2)
   rails-i18n

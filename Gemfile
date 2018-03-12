@@ -96,7 +96,7 @@ group :development do
   gem 'capistrano-upload-config'
   gem 'web-console'
   gem 'letter_opener'
-  gem 'puma'
+  gem 'passenger'
   gem 'bullet'
 end
 

@@ -301,6 +301,24 @@ a.text-grey:hover {
   }
 }
 
+/* Only use in camps show   */
+.camp.breadcrumb{
+  background: none;
+  margin-bottom: 0px;
+  display: inline;
+  li+li:before{
+    content: "";
+    padding: 0;
+  }
+  li{
+    font-size: 85%;
+    color: #fff;
+    a{
+      color: #fff;
+    }
+  }
+}
+
 /*breadcrumb*/
 .breadcrumb, .fb-button {
   background: none;
