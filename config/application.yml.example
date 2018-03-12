@@ -15,11 +15,19 @@ defaults: &defaults
     - 心得分享
     - 其他消息
   index_pictures:
+    langs: ['zh-TW', 'en', 'ja']
     sizes: ['400w', '600w', '1280w', '1920w', '2560w']
     default_size: '1280w'
   alias:
-    - from: reactjs
-      to: /talks/react-redux-2017-1
+    - from: "class/reactjs"
+      to: "talks#show"
+      id: react-redux-2017-1
+    - from: "class/vuejs"
+      to: "talks#show"
+      id: vuejs-201706
+    - from: "class/fullstack"
+      to: "camps#show"
+      id: "camp2018-1"
   mailer_sender: noreply@5xruby.tw
   flowdock:
     flowdock_api_token: needed_to_fill
