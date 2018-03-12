@@ -1,4 +1,9 @@
 module ApplicationHelper
+
+  def gen_course_breadcrumb(*items)
+    content_tag :ul, sanitize(items.map{|x| content_tag(:li, x) }.join, tags: %w(a li), attributes: %w(href title alt)), class: "camp breadcrumb"
+  end
+
   def sub_header title: nil, lead_box: nil, lead: nil
     content_tag(:section, id: :'sub-header'){
       concat content_tag(:div, class: :container){

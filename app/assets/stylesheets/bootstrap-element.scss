@@ -307,8 +307,8 @@ a.text-grey:hover {
   margin-bottom: 0px;
   display: inline;
   li+li:before{
-    content: "";
-    padding: 0;
+    content: ">";
+    color: #fff;
   }
   li{
     font-size: 85%;
