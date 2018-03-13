@@ -49,6 +49,7 @@ ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 # set :keep_releases, 5
 
 after :'deploy:publishing', :'deploy:restart'
+after 'deploy:publishing', 'sitemap:create'
 namespace :deploy do
 
   desc 'Restart application'
