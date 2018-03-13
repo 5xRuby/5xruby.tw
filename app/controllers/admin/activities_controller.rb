@@ -25,12 +25,15 @@ class Admin::ActivitiesController < AdminController
 
   def preview
     if (activity = current_model.find_by(permalink: params[:activity_id])&.specialized) && activity.template
+      breadcrumb I18n.t('breadcrumb.home'), :root_path
+      breadcrumb I18n.t('breadcrumb.camps'), :camps_path
       @camp = activity
       @activity_courses = @camp.activity_courses.includes(
         :course, { course: [:translations, :speakers, :stages, { stages: :translations }] }
       ).order(:priority)
       @order = @camp.orders.new
       @speakers = @camp.speakers
+      set_camp_template
       render 'camps/show', layout: 'application'
     else
       @talk = activity

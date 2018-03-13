@@ -28,6 +28,20 @@ class ApplicationController < ActionController::Base
     }
   end
 
+  def set_camp_template
+    @template = @camp.payload
+    @template_name = @template['template_type'] || 'old'
+    btext = case @template_name
+    when 'girl'
+      I18n.t('breadcrumb.camp_girl')
+    when 'new'
+      I18n.t('breadcrumb.camp_junior')
+    else #預設衝刺班
+      I18n.t('breadcrumb.camp_senior')
+    end
+    breadcrumb btext, nil
+  end
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end

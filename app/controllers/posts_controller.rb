@@ -2,6 +2,9 @@ class PostsController < ApplicationController
   include PostViewable
   before_action :set_recent_posts, :set_tags
 
+  breadcrumb I18n.t('breadcrumb.home'), :root_path
+  breadcrumb I18n.t('breadcrumb.posts'), :camps_path
+
   def index
     respond_to do |format|
       format.html do
@@ -17,7 +20,9 @@ class PostsController < ApplicationController
   end
 
   def show
+
     @post = Post.includes(:translations).online.find_by!(permalink: params[:id])
+    breadcrumb @post.title, nil
     @seo = {
       meta: {
         description: tr(@post, :summary),
