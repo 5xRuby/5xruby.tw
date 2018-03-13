@@ -7,7 +7,8 @@
         <%= fb_share_btn %>
       </div>
       <div class="col-sm-12 col-lg-12 col-md-12 text-center text-white">
-        <small class="breadcrumb"><%= link_to t('breadcrumb.home'), root_path %> > <%= t('breadcrumb.courses') %></small>
+        <!-- 可能要在 controller 裡設 breadcrumb  -->
+        <%= gen_course_breadcrumb%>
         <h1 class="title top-padding-lg"><%= t('site.talks_main_banner.title') %></h1>
         <p class="line-height"><%= t('site.talks_main_banner.subtitle') %></p>
       </div>

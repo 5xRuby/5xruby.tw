@@ -1,4 +1,2 @@
-<% template = @camp.payload %>
-<% template_name = template['template_type'] || "old" %>
-<%= render partial: "camps/#{template_name}/index" , locals: { template: template } %>
+<%= render partial: "camps/#{@template_name}/index" , locals: { template: @template } %>
 

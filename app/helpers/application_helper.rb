@@ -1,7 +1,23 @@
 module ApplicationHelper
 
-  def gen_course_breadcrumb(*items)
-    content_tag :ul, sanitize(items.map{|x| content_tag(:li, x) }.join, tags: %w(a li), attributes: %w(href title alt)), class: "camp breadcrumb"
+  BreadcrumbListItemTypeUrl = "https://schema.org/BreadcrumbList"
+  ListItemTypeUrl = "https://schema.org/ListItem"
+  ThingItemTypeUrl = "https://schema.org/Thing"
+
+  def gen_course_breadcrumb
+    content_tag :ul, class: "camp breadcrumb", itemscope: true, itemtype: BreadcrumbListItemTypeUrl  do
+      _breadcrumbs.each do |crumb|
+        name = format_name(crumb.name)
+        href = url_for(_expand_url(crumb.url))
+        concat content_tag :li, microdata_link_with_name(name, href), itemprop: :itemListElement, itemscope: true, itemtype: ListItemTypeUrl
+      end
+    end
+  end
+
+  def microdata_link_with_name(name, href, item_type_url = ThingItemTypeUrl)
+    link_to href, itemscope: true, itemtype: item_type_url, itemprop: :item do
+      content_tag :span, name, itemprop: :name
+    end
   end
 
   def sub_header title: nil, lead_box: nil, lead: nil

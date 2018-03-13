@@ -1,4 +1,8 @@
 class CampsController < ApplicationController
+
+  breadcrumb I18n.t('breadcrumb.home'), :root_path
+  breadcrumb I18n.t('breadcrumb.camps'), :camps_path
+
   def index
     @camps = Activity::Camp.online.order(:id)
     @speakers = Speaker.online.includes(:translations).order(:sort_id)
@@ -6,6 +10,7 @@ class CampsController < ApplicationController
 
   def show
     @camp = Activity::Camp.find_by_permalink(params[:id])
+
     @activity_courses = @camp.activity_courses.includes(
       :course, { course: [:translations, :speakers, :stages, { stages: :translations }] }
     ).order(:priority)

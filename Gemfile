@@ -65,6 +65,8 @@ gem 'active_type'
 gem 'webpacker', '~> 2.0'
 gem 'whenever', require: false
 
+gem 'loaf'
+
 # 3rd party payment
 gem 'tappay-rails', github: '5xRuby/tappay-rails'
 
