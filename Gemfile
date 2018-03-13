@@ -92,7 +92,7 @@ gem 'photoswipe-rails'
 
 group :development do
   gem 'annotate'
-  gem 'capistrano', '3.7.1'
+  gem 'capistrano', '3.9.1'
   gem 'capistrano-flowdock'
   gem 'capistrano-rails'
   gem 'capistrano-sidekiq'

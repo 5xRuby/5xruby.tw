@@ -96,9 +96,8 @@ GEM
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.10.0)
     byebug (9.0.6)
-    capistrano (3.7.1)
+    capistrano (3.9.1)
       airbrussh (>= 1.0.0)
-      capistrano-harrow
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
@@ -109,7 +108,6 @@ GEM
       capistrano (~> 3.0)
       flowdock (~> 0.5.0)
       rugged (~> 0.19.0)
-    capistrano-harrow (0.5.3)
     capistrano-rails (1.2.3)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -174,7 +172,8 @@ GEM
     hashie (3.5.5)
     httparty (0.15.3)
       multi_xml (>= 0.5.2)
-    i18n (0.8.6)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     jbuilder (2.6.4)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2)
@@ -226,7 +225,7 @@ GEM
     nested_form (0.3.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (4.1.0)
+    net-ssh (4.2.0)
     nio4r (2.0.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
@@ -383,7 +382,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sshkit (1.14.0)
+    sshkit (1.16.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     swiper-rails (1.0.4)
@@ -426,7 +425,7 @@ DEPENDENCIES
   annotate
   bootstrap-sass
   bullet
-  capistrano (= 3.7.1)
+  capistrano (= 3.9.1)
   capistrano-flowdock
   capistrano-rails
   capistrano-sidekiq
