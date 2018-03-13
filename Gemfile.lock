@@ -369,6 +369,8 @@ GEM
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    sitemap_generator (6.0.1)
+      builder (~> 3.0)
     slop (3.6.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -471,6 +473,7 @@ DEPENDENCIES
   settingslogic
   shoulda
   simple_form
+  sitemap_generator
   spring
   swiper-rails
   tappay-rails!
