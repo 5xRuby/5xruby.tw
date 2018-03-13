@@ -10,6 +10,7 @@ class CampsController < ApplicationController
 
   def show
     @camp = Activity::Camp.find_by_permalink(params[:id])
+    set_camp_template
 
     @activity_courses = @camp.activity_courses.includes(
       :course, { course: [:translations, :speakers, :stages, { stages: :translations }] }
