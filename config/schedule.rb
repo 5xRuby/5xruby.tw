@@ -23,3 +23,7 @@ env :PATH, "#{ENV['PATH']}:/usr/local/ruby24/bin:"
 every 1.day, at: "3:00 am" do
   rake "backup:basic"
 end
+
+every 1.day, :at => '5:00 am' do
+  rake "-s sitemap:refresh"
+end

@@ -24,6 +24,8 @@ require 'capistrano/flowdock'
 require "capistrano/scm/git"
 require 'capistrano/upload-config'
 require "whenever/capistrano"
+require 'capistrano/sitemap_generator'
+
 install_plugin Capistrano::SCM::Git
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
