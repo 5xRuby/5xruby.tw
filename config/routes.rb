@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /en|ja/ do
     root 'pages#index'
-    get :login, :press, :space, :training, :about, :members, :contacts, :faq, :sitemap, controller: :pages
+    get :login, :press, :space, :training, :about, :members, :contacts, :faq, controller: :pages
+    get :sitemap, to: redirect('/sitemap.xml.gz', status: 301)
     get 'privacy-policy', to: 'pages#privacy_policy'
     get 'terms-of-service', to: 'pages#terms_of_service'
     resources :posts, only: %i[index show]
