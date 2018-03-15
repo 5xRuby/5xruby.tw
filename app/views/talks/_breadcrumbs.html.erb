@@ -2,11 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12 col-md-12">
-        <ol class="breadcrumb">
-          <li><%= link_to t('breadcrumb.home'), root_path %></li>
-          <li><%= link_to t('breadcrumb.talks'), talks_path %></li>
-          <li class="active"><%= tr @talk, :title %></li>
-        </ol>
+        <%=gen_course_breadcrumb "breadcrumb"%>
       </div>
     </div>
   </div>

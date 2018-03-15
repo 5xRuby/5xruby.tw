@@ -25,7 +25,8 @@ class CampsController < ApplicationController
         name: @camp.title,
         description: @camp.payload["og"]["desc"],
         image: @camp.payload["og"]["img"],
-        item_type: :Article
+        item_type: :Course,
+        provider: "5xRuby"
       },
       og: {
         title: @camp.title,

@@ -4,8 +4,8 @@ module ApplicationHelper
   ListItemTypeUrl = "https://schema.org/ListItem"
   ThingItemTypeUrl = "https://schema.org/Thing"
 
-  def gen_course_breadcrumb
-    content_tag :ul, class: "camp breadcrumb", itemscope: true, itemtype: BreadcrumbListItemTypeUrl  do
+  def gen_course_breadcrumb(olklass = "camp breadcrumb")
+    content_tag :ol, class: olklass, itemscope: true, itemtype: BreadcrumbListItemTypeUrl  do
       _breadcrumbs.each do |crumb|
         name = format_name(crumb.name)
         href = url_for(_expand_url(crumb.url))
@@ -40,6 +40,7 @@ module ApplicationHelper
     if @seo
       @html_tag_attributes.merge! prefix: 'og: http://ogp.me/ns#' if @seo[:og]
       @html_tag_attributes.merge! itemscope: true, itemtype: "http://schema.org/#{@seo[:google][:item_type]}" if @seo[:google] && @seo[:google][:item_type]
+      @html_tag_attributes.merge! provider: @seo[:google][:provider] if @seo.dig(:google, :provider)
     end
     @html_tag_attributes
   end

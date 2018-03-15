@@ -301,6 +301,16 @@ a.text-grey:hover {
   }
 }
 
+
+.bread-crumbs-wrap{
+  .breadcrumb{
+    li:last-child > a{
+      color: #777;
+    }
+  }
+}
+
+
 /* Only use in camps show   */
 .camp.breadcrumb{
   background: none;
