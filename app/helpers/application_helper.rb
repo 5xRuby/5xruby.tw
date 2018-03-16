@@ -4,6 +4,11 @@ module ApplicationHelper
   ListItemTypeUrl = "https://schema.org/ListItem"
   ThingItemTypeUrl = "https://schema.org/Thing"
 
+  def page_title
+    title = content_for(:title)
+    [title, t('company.name')].compact.join(' | ')
+  end
+
   def gen_course_breadcrumb(olklass = "camp breadcrumb")
     content_tag :ol, class: olklass, itemscope: true, itemtype: BreadcrumbListItemTypeUrl  do
       _breadcrumbs.each do |crumb|
