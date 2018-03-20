@@ -152,13 +152,6 @@ en:
       about: Worse is Better.
       skills: Ruby / Rails / HTML / CSS
 
-    - name: Cat Sun
-      title: Cat Poop Cleaner
-      avatar: cat-sun.jpg
-      facebook: https://www.facebook.com/black.cat.sun
-      about: Villain
-      skills: HTML / CSS / jQuery
-
     - name: Roy Huang
       title: Chaotic Evil Ruby
       avatar: roy.jpg
@@ -248,14 +241,6 @@ en:
       blog: https://taian.su/
       about: "Let it crash."
       skills: Elixir / Phoenix / JavaScript / Ruby
-
-    - name: Shang-Wei Tsai
-      title: MBPR2017 buyer
-      avatar: tsw.jpg
-      twitter: https://twitter.com/e39a562r1
-      github: https://github.com/e39a562rs
-      about: 「I need dongles! DESPERATELY!!」
-      skills: C/C++ / Web / JavaScript / Python / free(wallet)
 
     - name: Eileen
       title: Kaohsiung + er = Kaohsiunger

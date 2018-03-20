@@ -152,13 +152,6 @@ ja:
       about: "悪いことは、ベターだ"
       skills: Ruby / Rails / HTML / CSS
 
-    - name: Cat Sun
-      title: 猫の糞の掃除屋さん
-      avatar: cat-sun.jpg
-      facebook: https://www.facebook.com/black.cat.sun
-      about: "悪役"
-      skills: HTML / CSS / jQuery
-
     - name: Roy Huang
       title: カオスな邪悪なRuby
       avatar: roy.jpg
@@ -247,14 +240,6 @@ ja:
       blog: https://taian.su/
       about: 「バンバンクラッシュさせろ」
       skills: Elixir / Phoenix / JavaScript / Ruby
-
-    - name: 蔡尚維
-      title: MBPR2017 の被害人
-      avatar: tsw.jpg
-      twitter: https://twitter.com/e39a562r1
-      github: https://github.com/e39a562r
-      about: 「ダイヘン！USB Type-C ダ！」
-      skills: C/C++ / Web / JavaScript / Python / free(wallet)
 
     - name: Eileen
       title: 高雄市民
