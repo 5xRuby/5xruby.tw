@@ -272,6 +272,21 @@ ja:
       github: https://github.com/shes50103
       facebook: https://www.facebook.com/shes50103
 
+    - name: Mike
+      title: 独身浪人
+      skills: Java / JS / Ruby / Elixir
+      about: 「AIが世界を滅ぼすと聞いた、ならば僕は人類を救うしかない。」
+      avatar: mike.jpg
+      github: https://github.com/ccmikechen
+      facebook: https://www.facebook.com/ccmikechen
+
+    - name: 瞳
+      title: ルビーハッカー少女
+      skills: ゲームデザイン / ブランド活動計画 / Objective-C
+      about: 「no game no life!」
+      avatar: littleM.jpg
+      twitter: https://twitter.com/m1016ouo
+
     # 實習生放正職後面
 
     # 貓放最後面
