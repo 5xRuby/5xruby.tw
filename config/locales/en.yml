@@ -273,6 +273,14 @@ en:
       github: https://github.com/shes50103
       facebook: https://www.facebook.com/shes50103
 
+    - name: Mike
+      title: Single Ronin
+      skills: Java / JS / Ruby / Elixir
+      about: 「I heard that AI would destory the world, then I have no choice but to save humanity.」
+      avatar: mike.jpg
+      github: https://github.com/ccmikechen
+      facebook: https://www.facebook.com/ccmikechen
+
     # 實習生放正職後面
 
     # 貓放最後面
