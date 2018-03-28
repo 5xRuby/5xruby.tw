@@ -264,6 +264,14 @@ zh-TW:
       github: https://github.com/shes50103
       facebook: https://www.facebook.com/shes50103
 
+    - name: Mike
+      title: 單身浪客
+      skills: Java / JS / Ruby / Elixir
+      about: 「聽說AI會毀滅世界，那只好由我來拯救人類了。」
+      avatar: mike.jpg
+      github: https://github.com/ccmikechen
+      facebook: https://www.facebook.com/ccmikechen
+
     # 實習生放正職後面
 
     # 貓放最後面
