@@ -287,6 +287,13 @@ ja:
       avatar: littleM.jpg
       twitter: https://twitter.com/m1016ouo
 
+    - name: Chelong
+      title: 鉱坑二等兵
+      skills: Ruby / Rails
+      about: 「キーボードを下せ、箒こそあなたの武器だ！」
+      avatar: chelong.png
+      github: https://github.com/chelomg
+
     # 實習生放正職後面
 
     # 貓放最後面

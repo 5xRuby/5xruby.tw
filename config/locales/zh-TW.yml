@@ -255,7 +255,7 @@ zh-TW:
       avatar: etrex.jpg
       blog: https://etrex.blogspot.tw
       facebook: https://www.facebook.com/etrex.kuo
-      
+
     - name: 詹昇
       title: 五倍新人
       skills: Ruby / Rails
@@ -278,6 +278,13 @@ zh-TW:
       about: 「no game no life!」
       avatar: littleM.jpg
       twitter: https://twitter.com/m1016ouo
+
+    - name: Chelong
+      title: 礦坑役男
+      skills: Ruby / Rails
+      about: 「放下你的鍵盤，掃把才是你的武器!」
+      avatar: chelong.png
+      github: https://github.com/chelomg
 
     # 實習生放正職後面
 

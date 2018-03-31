@@ -288,6 +288,13 @@ en:
       avatar: littleM.jpg
       twitter: https://twitter.com/m1016ouo
 
+    - name: Chelong
+      title: 5xSoldier
+      skills: Ruby / Rails
+      about: 「no keyboard, take your broom! 」
+      avatar: chelong.png
+      github: https://github.com/chelomg
+
     # 實習生放正職後面
 
     # 貓放最後面
