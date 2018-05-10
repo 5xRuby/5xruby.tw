@@ -287,6 +287,12 @@ en:
       avatar: chelong.png
       github: https://github.com/chelomg
 
+    - name: Tim
+      title: 5xSwing
+      about: 「It Don’t Mean a Thing If It Ain’t Got That Swing」
+      skill: Rails / Javascript
+      avatar: tim.jpg
+      facebook: https://www.facebook.com/xiaofeng.zhao1
     # 實習生放正職後面
 
     # 貓放最後面
