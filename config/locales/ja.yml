@@ -241,14 +241,6 @@ ja:
       about: 「バンバンクラッシュさせろ」
       skills: Elixir / Phoenix / JavaScript / Ruby
 
-    - name: Eileen
-      title: 高雄市民
-      avatar: eileen.jpg
-      about: 「Be a man」
-      skills: Rails / HTML / CSS / Swift
-      facebook: https://www.facebook.com/terrapin8
-      github: https://github.com/Eileen0917
-
     - name: Telsa
       title: SSR方向音痴
       avatar: telsa.jpg

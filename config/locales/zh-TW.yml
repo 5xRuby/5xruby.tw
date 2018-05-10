@@ -233,14 +233,6 @@ zh-TW:
       about: 「Let it crash.」
       skills: Elixir / Phoenix / JavaScript / Ruby
 
-    - name: Eileen
-      title: 高雄人
-      avatar: eileen.jpg
-      about: 「Be a man」
-      skills: Rails / HTML / CSS / Swift
-      facebook: https://www.facebook.com/terrapin8
-      github: https://github.com/Eileen0917
-
     - name: Telsa
       title: SSR路痴
       avatar: telsa.jpg
