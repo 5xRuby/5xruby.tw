@@ -5,5 +5,6 @@
 <%= render "talks/details" %>
 <%= render "talks/outline" %>
 <%= render "talks/ticket" %>
+<%= render "talks/more" if @talk.course.more_desc.to_s.strip != ''%>
 <%= render "talks/notice" %>
 
