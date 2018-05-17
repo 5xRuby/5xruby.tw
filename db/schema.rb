@@ -10,12 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719113645) do
+ActiveRecord::Schema.define(version: 20180517082627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "uuid-ossp"
-  enable_extension "btree_gin"
 
   create_table "activities", force: :cascade do |t|
     t.string   "type"
@@ -107,6 +105,7 @@ ActiveRecord::Schema.define(version: 20170719113645) do
     t.text     "payment_note"
     t.text     "time_description"
     t.datetime "time_limit"
+    t.text     "more_desc"
     t.index ["category_id"], name: "index_courses_on_category_id", using: :btree
     t.index ["permalink"], name: "index_courses_on_permalink", unique: true, using: :btree
     t.index ["title"], name: "index_courses_on_title", using: :btree

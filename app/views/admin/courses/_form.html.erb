@@ -25,6 +25,7 @@
     <%= f.input :minimum_attendees %>
     <%= f.input :time_description, input_html: { class: :redactor }, hint: "請放 ul 清單" %>
     <%= f.input :time_limit, as: :date_time_picker %>
+    <%= f.input :more_desc, input_html: {class: :redactor}, hint: "特別說明文字，放在 iframe 之前，有文字才會顯示的欄位"%>
   </div>
 
   <%= render 'stages_fields', f: f %>
