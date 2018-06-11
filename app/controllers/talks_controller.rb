@@ -4,7 +4,7 @@ class TalksController < ApplicationController
   breadcrumb I18n.t('breadcrumb.talks'), :talks_path
 
   def index
-    @talks = Activity::Talk.includes(courses: [:translations, :category, :stages]).online.order(id: :desc).page(params[:page]).per(6)
+    @talks = Activity::Talk.online.includes(courses: [:translations, :category, :stages]).online.order(id: :desc).page(params[:page]).per(12)
     @talks = @talks.with_category(@category) if @category = Category.find_by(permalink: params[:category])
     @categories = Category.with_max_date.order(:sort_id)
     @speakers = Speaker.online.includes(:translations).order(:sort_id)

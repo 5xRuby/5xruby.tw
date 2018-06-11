@@ -25,9 +25,9 @@
         <ul class="nav nav-pills both-spacing">
           <li class="<%= 'active' unless @category %>"><%= link_to t('.all_talks'), talks_path %></li>
           <% @categories.each do |category| %>
-            <li class="<%= 'active' if @category == category %>">
+            <li class="<%= 'active' if @category == category %> <%='hide' if category.talks.online.count < 1%> ">
               <%= link_to talks_path(category: category.permalink) do %>
-                <%= "#{category.name} (#{category.courses_count })" %> <%= image_tag '/img/new.png', alt: 'New' if category.new_course? %>
+                <%= "#{category.name} (#{category.talks.online.count })" %> <%= image_tag '/img/new.png', alt: 'New' if category.new_course? %>
               <% end %>
             </li>
           <% end %>
