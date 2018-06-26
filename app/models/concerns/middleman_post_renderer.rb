@@ -2,22 +2,21 @@ module MiddlemanPostRenderer
   extend ActiveSupport::Concern
 
   Template = ERB.new <<-EOF
-  ---
+---
 
-  title: <%=title%>
-  date: <%=publish_at.utc.strftime("%Y-%m-%d %h:%m %Z")%>
-  slug: <%=permalink%>
-  author: <%=author.try(:name)%>
-  tags: <%=tag_list.join ", "%>
-  category: <%=main_cat%>
-  cover_image: <%=image.to_s.gsub("/uploads/","")%>
-  markup_type: <%=markup_type%>
+title: <%=title%>
+date: <%=publish_at.utc.strftime("%Y-%m-%d %h:%m %Z")%>
+slug: <%=permalink%>
+author: <%=author.try(:name)%>
+tags: <%=tag_list.join ", "%>
+category: <%=main_cat%>
+cover_image: <%=image.to_s.gsub("/uploads/","")%>
+markup_type: <%=markup_type%>
 
-  ---
+---
 
-  <%=content%>
-
-  EOF
+<%=content%>
+EOF
 
   def output_file_name
     mfn = [publish_at.utc.strftime('%Y-%m-%d'), permalink].join("-")
