@@ -183,14 +183,6 @@ ja:
       facebook: https://www.facebook.com/irene.chang.735
       github: https://github.com/irene84111
 
-    - name: Pokai Chang
-      title: 無駄な物生産機
-      avatar: pokaichang.jpg
-      about: "テクノロジーとリベラルアーツの交差点でのんびりする"
-      skills: HTML / CSS / JS / Rails
-      facebook: https://fb.me/pokaichang72
-      github: https://github.com/Neson
-
     - name: PastLeo
       title: '10 数字系を理解している人'
       avatar: pastleo.png
@@ -213,14 +205,6 @@ ja:
       about: 「メーメー」
       skills: HTML / CSS / 日本語
       facebook: https://fb.me/ringo.yang.90
-
-    - name: Henry Tseng
-      title: 少年陰陽師
-      avatar: henry.jpg
-      about: "全ては無から始まる"
-      skills: Ruby / Rails / システム管理
-      facebook: https://www.facebook.com/computerhenry321
-      github: https://github.com/lctseng
 
     - name: 侯大偉
       title: 日本採石職人
@@ -271,13 +255,6 @@ ja:
       avatar: mike.jpg
       github: https://github.com/ccmikechen
       facebook: https://www.facebook.com/ccmikechen
-
-    - name: 瞳
-      title: ルビーハッカー少女
-      skills: ゲームデザイン / ブランド活動計画 / Objective-C
-      about: 「no game no life!」
-      avatar: littleM.jpg
-      twitter: https://twitter.com/m1016ouo
 
     - name: Chelong
       title: 鉱坑二等兵
