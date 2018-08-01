@@ -175,14 +175,6 @@ zh-TW:
       facebook: https://www.facebook.com/irene.chang.735
       github: https://github.com/irene84111
 
-    - name: 張博凱
-      title: 無用產品製做仁
-      avatar: pokaichang.jpg
-      about: 「宅在人文和科技的交叉口」
-      skills: HTML / CSS / JS / Rails
-      facebook: https://fb.me/pokaichang72
-      github: https://github.com/Neson
-
     - name: PastLeo
       title: 懂 10 進位的人
       avatar: pastleo.png
@@ -205,14 +197,6 @@ zh-TW:
       about: 「咩~~咩~~」
       skills: HTML / CSS / 日文
       facebook: https://fb.me/ringo.yang.90
-
-    - name: Henry Tseng
-      title: 少年陰陽師
-      avatar: henry.jpg
-      about: 「通靈之術！！」
-      skills: Ruby / Rails / 系統管理
-      facebook: https://www.facebook.com/computerhenry321
-      github: https://github.com/lctseng
 
     - name: 侯大偉
       title: 日本採礦師
@@ -263,13 +247,6 @@ zh-TW:
       avatar: mike.jpg
       github: https://github.com/ccmikechen
       facebook: https://www.facebook.com/ccmikechen
-
-    - name: 小M
-      title: 紅寶石駭客少女
-      skills: 遊戲設計 / 品牌活動企劃 / Objective-C
-      about: 「no game no life!」
-      avatar: littleM.jpg
-      twitter: https://twitter.com/m1016ouo
 
     - name: Chelong
       title: 礦坑役男

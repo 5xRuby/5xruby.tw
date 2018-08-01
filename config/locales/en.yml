@@ -184,14 +184,6 @@ en:
       facebook: https://www.facebook.com/irene.chang.735
       github: https://github.com/irene84111
 
-    - name: Pokai Chang
-      title: Useless Things Maker
-      avatar: pokaichang.jpg
-      about: "Vegs out at the intersection of technology and liberal arts"
-      skills: HTML / CSS / JS / Rails
-      facebook: https://fb.me/pokaichang72
-      github: https://github.com/Neson
-
     - name: PastLeo
       title: 'a person who understand base-10 numeral system'
       avatar: pastleo.png
@@ -214,14 +206,6 @@ en:
       about: 「Baa~~Baa~~」
       skills: "HTML / CSS / Japanese"
       facebook: https://fb.me/ringo.yang.90
-
-    - name: Henry Tseng
-      title: Young Onmyoji
-      avatar: henry.jpg
-      about: "Everything is out of nothing"
-      skills: Ruby / Rails / System Administration
-      facebook: https://www.facebook.com/computerhenry321
-      github: https://github.com/lctseng
 
     - name: David Hou
       title: Japanese quarrying craftsman
@@ -272,13 +256,6 @@ en:
       avatar: mike.jpg
       github: https://github.com/ccmikechen
       facebook: https://www.facebook.com/ccmikechen
-
-    - name: M
-      title: Ruby Hacker Girl
-      skills: Game Design / Brand Design / Objective-C
-      about: 「no game no life!」
-      avatar: littleM.jpg
-      twitter: https://twitter.com/m1016ouo
 
     - name: Chelong
       title: 5xSoldier
