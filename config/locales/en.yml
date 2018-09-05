@@ -200,13 +200,6 @@ en:
       skills: "Office Assistant"
       facebook: https://fb.me/mengting.huang
 
-    - name: RingoYang
-      title: AppleSheep
-      avatar: ringoyang.png
-      about: 「Baa~~Baa~~」
-      skills: "HTML / CSS / Japanese"
-      facebook: https://fb.me/ringo.yang.90
-
     - name: David Hou
       title: Japanese quarrying craftsman
       avatar: davidhou.png
@@ -214,17 +207,6 @@ en:
       github: https://github.com/llmonkey
       about: Don’t forget your original intention.
       skills: Ruby / Rails / history | grep xxx
-
-    - name: Tai-An Su
-      title: Crash Alchemist
-      avatar: taiansu.png
-      facebook: https://www.facebook.com/sutaian
-      twitter: https://twitter.com/taiansu
-      github: https://github.com/taiansu
-      experience: Elixir.tw co-organizer
-      blog: https://taian.su/
-      about: "Let it crash."
-      skills: Elixir / Phoenix / JavaScript / Ruby
 
     - name: Telsa
       title: google map lover
@@ -264,12 +246,6 @@ en:
       avatar: chelong.png
       github: https://github.com/chelomg
 
-    - name: Tim
-      title: 5xSwing
-      about: 「It Don’t Mean a Thing If It Ain’t Got That Swing」
-      skill: Rails / Javascript
-      avatar: tim.jpg
-      facebook: https://www.facebook.com/xiaofeng.zhao1
     # 實習生放正職後面
 
     # 貓放最後面

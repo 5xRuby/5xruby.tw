@@ -191,13 +191,6 @@ zh-TW:
       skills: 課程推廣 / 活動宣傳 / 你們會的我都不會
       facebook: https://fb.me/mengting.huang
 
-    - name: RingoYang
-      title: 蘋果羊
-      avatar: ringoyang.png
-      about: 「咩~~咩~~」
-      skills: HTML / CSS / 日文
-      facebook: https://fb.me/ringo.yang.90
-
     - name: 侯大偉
       title: 日本採礦師
       avatar: davidhou.png
@@ -205,17 +198,6 @@ zh-TW:
       github: https://github.com/llmonkey
       about: 勿忘初心
       skills: Ruby / Rails / history | grep xxx
-
-    - name: 蘇泰安
-      title: 崩潰之鍊金術師
-      avatar: taiansu.png
-      facebook: https://www.facebook.com/sutaian
-      twitter: https://twitter.com/taiansu
-      github: https://github.com/taiansu
-      experience: Elixir.tw 協辦人
-      blog: https://taian.su/
-      about: 「Let it crash.」
-      skills: Elixir / Phoenix / JavaScript / Ruby
 
     - name: Telsa
       title: SSR路痴
@@ -254,13 +236,6 @@ zh-TW:
       about: 「放下你的鍵盤，掃把才是你的武器!」
       avatar: chelong.png
       github: https://github.com/chelomg
-
-    - name: Tim
-      title: 五倍搖擺
-      about: 「給我搖擺, 其餘免談!」
-      skill: Rails / Javascript
-      avatar: tim.jpg
-      facebook: https://www.facebook.com/xiaofeng.zhao1
 
     # 實習生放正職後面
 
