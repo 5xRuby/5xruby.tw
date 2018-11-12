@@ -135,15 +135,6 @@ en:
       about: Nothing ventured Nothing gained. agree and share
       skills: Ruby / Rails / HTML / CSS
 
-    - name: Alan
-      title: Ruby Blue
-      avatar: alan.jpg
-      facebook: https://www.facebook.com/spart.chou
-      twitter: https://twitter.com/spartchou
-      github: https://github.com/spartchou
-      about: "&."
-      skills: Ruby / Rails
-
     - name: Yusheng Li
       title: Mosquito Hacker
       avatar: yusheng.jpg
